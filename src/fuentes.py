@@ -1,9 +1,10 @@
 """
-Descarga de datos.
+Descarga de datos, liga por liga (ver LIGAS en config.py).
 
-- football-data.co.uk: resultados, xG, tiros, córners, tarjetas y cuotas (CSV por temporada).
+- football-data.co.uk: resultados, xG, tiros, córners, tarjetas y cuotas (CSV por temporada en Europa;
+  un solo CSV con resultados y cuotas para Liga MX y MLS).
 - ESPN (API pública no oficial): partidos próximos con momios de DraftKings, alineaciones confirmadas,
-  detalle de cada partido jugado (jugadores, posesión, minutos de los goles) y calendario de copas y Europa.
+  detalle de cada partido jugado (jugadores, tiros, córners, posesión, minutos de los goles) y calendario de copas.
 - API-Football (opcional, con la clave en API_FOOTBALL_KEY): lesiones y sanciones oficiales.
 
 Todo se guarda en data/ para no volver a descargar lo que ya está.
@@ -15,7 +16,7 @@ from datetime import timedelta
 
 import requests
 
-from config import RAW, ESPN_DIR, LIGA, COPAS_ESPN, ESPN_A_FD, ahora, temporadas, temporada_actual, DIAS_PROXIMOS
+from config import RAW, ESPN_DIR, LIGAS, ahora, temporadas, temporada_actual, inicio_temporada, DIAS_PROXIMOS
 
 UA = {'User-Agent': 'Mozilla/5.0 (laliga-analisis; uso personal)'}
 ESPN = 'https://site.api.espn.com/apis/site/v2/sports/soccer'
@@ -26,27 +27,45 @@ def _get(url, headers=None, params=None, tries=3, as_json=True):
         try:
             r = requests.get(url, headers={**UA, **(headers or {})}, params=params, timeout=30)
             if r.status_code == 200:
-                return r.json() if as_json else r.text
+                if as_json:
+                    return r.json()
+                try:
+                    return r.content.decode('utf-8')
+                except UnicodeDecodeError:
+                    return r.content.decode('cp1252', errors='replace')
             if r.status_code in (400, 404):
                 return None
-        except requests.RequestException as e:
+        except (requests.RequestException, ValueError) as e:
             print(f'  aviso: {url} -> {e}')
         time.sleep(2 * (k + 1))
     return None
 
 
 # ------------------------------------------------------------------ football-data
-def descargar_football_data():
-    """Baja las temporadas recientes de Primera y Segunda. La actual siempre; las viejas solo si faltan."""
+def descargar_football_data(liga):
+    """Temporadas recientes de primera y segunda división. La actual siempre; las viejas solo si faltan.
+    Para Liga MX y MLS, el archivo único con todas las temporadas."""
+    L = LIGAS[liga]
+    if L.get('fd_extra'):
+        code = L['fd_extra']
+        txt = _get(f'https://www.football-data.co.uk/new/{code}.csv', as_json=False)
+        if txt and 'Home' in txt.splitlines()[0]:
+            (RAW / f'{code}.csv').write_text(txt.lstrip('﻿').strip() + '\n', encoding='utf-8')
+            print(f'  football-data {code}: {txt.count(chr(10))} filas')
+        else:
+            print(f'  football-data {code}: sin datos')
+        return
     actual = temporada_actual()
-    for div in (LIGA['football_data'], LIGA['football_data_2']):
+    for div in (L['fd'], L.get('fd2')):
+        if not div:
+            continue
         for s in temporadas():
             p = RAW / f'{div}_{s}.csv'
             if p.exists() and s != actual:
                 continue
             txt = _get(f'https://www.football-data.co.uk/mmz4281/{s}/{div}.csv', as_json=False)
-            if txt and txt.startswith('Div'):
-                p.write_text(txt.strip() + '\n', encoding='utf-8')
+            if txt and txt.lstrip('﻿').startswith('Div'):
+                p.write_text(txt.lstrip('﻿').strip() + '\n', encoding='utf-8')
                 print(f'  football-data {div} {s}: {txt.count(chr(10))} filas')
             else:
                 print(f'  football-data {div} {s}: sin datos')
@@ -58,13 +77,13 @@ def _scoreboard(lg, dates):
     return (j or {}).get('events', [])
 
 
-def _resumen(event_id, lg=None):
-    return _get(f"{ESPN}/{lg or LIGA['espn']}/summary", params={'event': event_id})
+def _resumen(event_id, lg):
+    return _get(f'{ESPN}/{lg}/summary', params={'event': event_id})
 
 
-def _detalle_partido(s, event_id):
+def _detalle_partido(s, event_id, tipo=''):
     comp = s['header']['competitions'][0]
-    m = {'id': str(event_id), 'date': comp['date'], 'teams': {}}
+    m = {'id': str(event_id), 'date': comp['date'], 'tipo': tipo, 'teams': {}}
     for c in comp['competitors']:
         m['teams'][c['team']['id']] = {'name': c['team']['displayName'], 'ha': c['homeAway'], 'score': int(c.get('score') or 0)}
     for t in (s.get('boxscore') or {}).get('teams', []):
@@ -87,28 +106,35 @@ def _detalle_partido(s, event_id):
     return m
 
 
-def descargar_detalle_temporada():
-    """Detalle de cada partido ya jugado de la temporada actual (solo los que faltan)."""
-    s = temporada_actual()
-    y0 = 2000 + int(s[:2])
-    nuevos = 0
-    for y in (y0, y0 + 1):
-        for e in _scoreboard(LIGA['espn'], str(y)):
+def descargar_detalle_temporada(liga, hasta=None):
+    """Detalle de cada partido ya jugado de la temporada actual (solo los que faltan).
+    hasta: hora límite (time.time()) para no pasarse del tiempo de la corrida; lo que falte se baja después."""
+    L = LIGAS[liga]
+    carpeta = ESPN_DIR / liga
+    carpeta.mkdir(parents=True, exist_ok=True)
+    inicio = inicio_temporada(liga)
+    nuevos = faltan = 0
+    for y in range(inicio.year, ahora().year + 1):
+        for e in _scoreboard(L['espn'], str(y)):
             comp = e['competitions'][0]
-            if not comp['status']['type'].get('completed') or e['date'] < f'{y0}-07-01':
+            if not comp['status']['type'].get('completed') or e['date'] < inicio.strftime('%Y-%m-%d'):
                 continue
-            p = ESPN_DIR / f"{e['id']}.json"
+            p = carpeta / f"{e['id']}.json"
             if p.exists():
                 continue
-            s_ = _resumen(e['id'])
+            if hasta and time.time() > hasta:
+                faltan += 1
+                continue
+            s_ = _resumen(e['id'], L['espn'])
             if not s_:
                 continue
             try:
-                json.dump(_detalle_partido(s_, e['id']), open(p, 'w'), ensure_ascii=False, separators=(',', ':'))
+                tipo = ((e.get('season') or {}).get('slug') or '')
+                json.dump(_detalle_partido(s_, e['id'], tipo), open(p, 'w'), ensure_ascii=False, separators=(',', ':'))
                 nuevos += 1
             except (KeyError, IndexError, TypeError) as err:
                 print(f"  aviso: partido {e['id']} sin detalle ({err})")
-    print(f'  ESPN: {nuevos} partidos nuevos con detalle')
+    print(f"  ESPN {L['nombre']}: {nuevos} partidos nuevos con detalle" + (f', {faltan} quedan para la próxima corrida' if faltan else ''))
 
 
 def _momios(comp):
@@ -132,6 +158,8 @@ def _momios(comp):
         c = (ps.get(side) or {}).get('close') or {}
         if c.get('line') and num(c.get('odds')) is not None:
             out['spread'].append([str(c['line']), num(c['odds'])])
+    if len(out['spread']) != 2:
+        out['spread'] = []
     if None in out['ml']:
         out['ml'] = None
     if None in out['ou'] or out['ou_linea'] is None:
@@ -139,34 +167,43 @@ def _momios(comp):
     return out
 
 
-def descargar_proximos(buscar_alineaciones_min=120):
+def ruta_proximos(liga):
+    return RAW / f'proximos_{liga}.json'
+
+
+def descargar_proximos(liga, buscar_alineaciones_min=120):
     """Partidos de los próximos días con momios; alineación si ya fue publicada (cerca del inicio)."""
+    L = LIGAS[liga]
     hoy = ahora()
     eventos = {}
     for k in range(DIAS_PROXIMOS + 1):
         d = (hoy + timedelta(days=k)).strftime('%Y%m%d')
-        for e in _scoreboard(LIGA['espn'], d):
+        for e in _scoreboard(L['espn'], d):
             comp = e['competitions'][0]
             if comp['status']['type'].get('completed'):
                 continue
-            h = next(c for c in comp['competitors'] if c['homeAway'] == 'home')
-            a = next(c for c in comp['competitors'] if c['homeAway'] == 'away')
+            try:
+                h = next(c for c in comp['competitors'] if c['homeAway'] == 'home')
+                a = next(c for c in comp['competitors'] if c['homeAway'] == 'away')
+            except StopIteration:
+                continue
             eventos[e['id']] = {'id': e['id'], 'utc': e['date'], 'estadio': (comp.get('venue') or {}).get('fullName', ''),
                                 'local_espn': h['team']['displayName'], 'visita_espn': a['team']['displayName'],
-                                'estado': comp['status']['type'].get('name'), 'momios': _momios(comp)}
+                                'estado': comp['status']['type'].get('name'), 'tipo': ((e.get('season') or {}).get('slug') or ''),
+                                'momios': _momios(comp)}
     # conservar alineaciones ya guardadas
-    p = RAW / 'proximos.json'
+    p = ruta_proximos(liga)
     previos = {e['id']: e for e in json.load(open(p))} if p.exists() else {}
     for eid, ev in eventos.items():
         if previos.get(eid, {}).get('alineaciones'):
             ev['alineaciones'] = previos[eid]['alineaciones']
         minutos = (_iso(ev['utc']) - hoy).total_seconds() / 60
         if -30 <= minutos <= buscar_alineaciones_min and not ev.get('alineaciones'):
-            s = _resumen(eid)
+            s = _resumen(eid, L['espn'])
             xi = {}
             for r in (s or {}).get('rosters', []):
-                titulares = [[p['athlete']['id'], p['athlete']['displayName'], (p.get('position') or {}).get('abbreviation', '')]
-                             for p in r.get('roster', []) if p.get('starter')]
+                titulares = [[p_['athlete']['id'], p_['athlete']['displayName'], (p_.get('position') or {}).get('abbreviation', '')]
+                             for p_ in r.get('roster', []) if p_.get('starter')]
                 if len(titulares) >= 11:
                     xi[r['team']['displayName']] = titulares
             if len(xi) == 2:
@@ -174,67 +211,100 @@ def descargar_proximos(buscar_alineaciones_min=120):
                 print(f"  alineaciones confirmadas: {ev['local_espn']} vs {ev['visita_espn']}")
     lista = sorted(eventos.values(), key=lambda x: x['utc'])
     json.dump(lista, open(p, 'w'), ensure_ascii=False, indent=1)
-    print(f'  ESPN: {len(lista)} partidos próximos')
+    print(f"  ESPN {L['nombre']}: {len(lista)} partidos próximos")
     return lista
 
 
 def descargar_copas():
-    """Calendario de Champions, Europa League, Conference, Copa del Rey y Supercopa (equipos de La Liga)."""
+    """Calendario de las copas de todas las ligas (Champions, Europa, copas nacionales, Concachampions...).
+    Guarda todos los equipos; cada liga se queda después con los suyos."""
     y = ahora().year
+    copas = {}
+    for L in LIGAS.values():
+        copas.update(L.get('copas', {}))
     filas = set()
-    for lg, nom in COPAS_ESPN.items():
+    for lg, nom in copas.items():
         for yy in (y - 1, y, y + 1):
             for e in _scoreboard(lg, str(yy)):
                 comp = e['competitions'][0]
                 for c in comp['competitors']:
-                    if c['team']['displayName'] not in ESPN_A_FD:   # solo equipos españoles
-                        continue
                     filas.add(f"{nom}|{e['date']}|{c['team']['displayName']}|{int(bool(comp['status']['type'].get('completed')))}")
     if filas:
         (RAW / 'copas.txt').write_text('\n'.join(sorted(filas)) + '\n', encoding='utf-8')
     print(f'  ESPN copas: {len(filas)} filas')
 
 
+def diagnostico():
+    """Revisión de qué devuelve ESPN para cada copa y liga (se guarda para poder ajustar los códigos)."""
+    y = str(ahora().year)
+    out = {'fecha': ahora().isoformat(timespec='minutes'), 'copas': {}, 'tablas': {}, 'equipos': {}}
+    candidatas = set()
+    for L in LIGAS.values():
+        candidatas |= set(L.get('copas', {}))
+    candidatas |= {'eng.fa_cup', 'eng.carabao_cup', 'eng.league_cup', 'ita.coppa_italia', 'ger.dfb_pokal', 'fra.coupe_de_france',
+                   'concacaf.champions', 'concacaf.champions_cup', 'concacaf.leagues.cup', 'concacaf.leagues_cup', 'usa.open', 'usa.open_cup',
+                   'mex.copa_mx', 'ita.super_cup', 'esp.super_cup'}
+    for lg in sorted(candidatas):
+        ev = _scoreboard(lg, y)
+        out['copas'][lg] = {'eventos': len(ev), 'ejemplo': ev[0]['name'] if ev else None}
+    for liga, L in LIGAS.items():
+        j = _get(f"https://site.api.espn.com/apis/v2/sports/soccer/{L['espn']}/standings")
+        grupos = []
+        for ch in (j or {}).get('children', []) or []:
+            ents = ((ch.get('standings') or {}).get('entries') or [])
+            grupos.append({'nombre': ch.get('name'), 'equipos': len(ents),
+                           'stats': [s.get('name') for s in (ents[0].get('stats') or [])] if ents else [],
+                           'primeros': [e['team']['displayName'] for e in ents[:3]]})
+        out['tablas'][liga] = grupos
+    json.dump(out, open(RAW / 'diagnostico.json', 'w'), ensure_ascii=False, indent=1)
+    print('  diagnóstico guardado')
+
+
 # ------------------------------------------------------------------ API-Football (opcional)
 def descargar_lesiones():
-    """Parte de lesiones y sanciones de API-Football. Guarda el resultado de la consulta (sin la clave)
-    en data/raw/api_football_estado.json para poder revisar qué respondió."""
+    """Parte de lesiones y sanciones de API-Football para cada liga. Guarda el resultado de cada consulta
+    (sin la clave) en data/raw/api_football_estado.json para poder revisar qué respondió."""
     key = os.environ.get('API_FOOTBALL_KEY', '').strip()
-    p = RAW / 'lesiones.json'
     estado_p = RAW / 'api_football_estado.json'
-    estado = {'fecha': ahora().isoformat(timespec='minutes'), 'clave_presente': bool(key)}
+    estado = {'fecha': ahora().isoformat(timespec='minutes'), 'clave_presente': bool(key), 'ligas': {}}
     if not key:
         print('  API-Football: sin clave, se omiten las lesiones oficiales')
         json.dump(estado, open(estado_p, 'w'), ensure_ascii=False, indent=1)
         return
-    season = 2000 + int(temporada_actual()[:2])
-    estado['temporada_pedida'] = season
-    try:
-        r = requests.get('https://v3.football.api-sports.io/injuries', headers={**UA, 'x-apisports-key': key},
-                         params={'league': LIGA['api_football'], 'season': season}, timeout=30)
-        estado['http'] = r.status_code
-        j = r.json() if r.headers.get('content-type', '').startswith('application/json') else {}
-    except (requests.RequestException, ValueError) as e:
-        estado['error'] = repr(e)
-        j = {}
-    estado['errores'] = j.get('errors') if j else None
-    estado['resultados'] = j.get('results') if j else None
     hoy = ahora().date().isoformat()
-    out = []
-    for r_ in (j or {}).get('response', []) or []:
-        fecha = ((r_.get('fixture') or {}).get('date') or '')[:10]
-        if fecha and fecha < hoy:
+    for liga, L in LIGAS.items():
+        if not L.get('api_football'):
             continue
-        pl = r_.get('player') or {}
-        out.append({'equipo': (r_.get('team') or {}).get('name'), 'jugador': pl.get('name'), 'tipo': pl.get('type'),
-                    'motivo': pl.get('reason'), 'fecha': fecha})
-    estado['lesiones_proximas'] = len(out)
+        season = inicio_temporada(liga).year
+        e = {'temporada_pedida': season}
+        try:
+            r = requests.get('https://v3.football.api-sports.io/injuries', headers={**UA, 'x-apisports-key': key},
+                             params={'league': L['api_football'], 'season': season}, timeout=30)
+            e['http'] = r.status_code
+            j = r.json() if r.headers.get('content-type', '').startswith('application/json') else {}
+        except (requests.RequestException, ValueError) as err:
+            e['error'] = repr(err)
+            j = {}
+        e['errores'] = j.get('errors') if j else None
+        e['resultados'] = j.get('results') if j else None
+        out = []
+        for r_ in (j or {}).get('response', []) or []:
+            fecha = ((r_.get('fixture') or {}).get('date') or '')[:10]
+            if fecha and fecha < hoy:
+                continue
+            pl = r_.get('player') or {}
+            out.append({'equipo': (r_.get('team') or {}).get('name'), 'jugador': pl.get('name'), 'tipo': pl.get('type'),
+                        'motivo': pl.get('reason'), 'fecha': fecha})
+        e['lesiones_proximas'] = len(out)
+        estado['ligas'][liga] = e
+        if e['errores']:
+            print(f"  API-Football {L['nombre']}: {e['errores']}")
+            if 'requests' in json.dumps(e['errores']).lower():
+                break     # se acabó el límite diario
+            continue
+        json.dump(out, open(RAW / f'lesiones_{liga}.json', 'w'), ensure_ascii=False, indent=1)
+        print(f"  API-Football {L['nombre']}: {len(out)} lesiones o sanciones para próximos partidos")
     json.dump(estado, open(estado_p, 'w'), ensure_ascii=False, indent=1)
-    if estado['errores']:
-        print(f"  API-Football: {estado['errores']}")
-        return
-    json.dump(out, open(p, 'w'), ensure_ascii=False, indent=1)
-    print(f'  API-Football: {len(out)} lesiones o sanciones para próximos partidos')
 
 
 def _iso(s):

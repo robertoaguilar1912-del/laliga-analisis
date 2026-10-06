@@ -9,13 +9,16 @@ Escribe cambios=si/no en GITHUB_OUTPUT para que el flujo sepa si debe publicar.
 """
 import os
 import sys
+import time
 
 import fuentes
 import analizar
 import registro
 import construir
 import revisar
-from config import RAW, ESPN_DIR, ahora
+from config import RAW, ESPN_DIR, LIGAS, ahora
+
+LIMITE_DESCARGA_S = 11 * 60     # la corrida completa tiene 20 min; el detalle que falte se baja en la siguiente
 
 
 def salida(cambios):
@@ -25,29 +28,49 @@ def salida(cambios):
             f.write(f'cambios={cambios}\n')
 
 
+def _foto(ligas):
+    """Para saber si algo cambió: contenido de los próximos y número de partidos con detalle."""
+    out = []
+    for liga in ligas:
+        p = fuentes.ruta_proximos(liga)
+        out.append((p.read_text() if p.exists() else '', len(list((ESPN_DIR / liga).glob('*.json')))))
+    return out
+
+
+def _paso(nombre, f, *a, **k):
+    print(f'- {nombre}')
+    try:
+        f(*a, **k)
+    except Exception as e:   # una fuente caída no debe tumbar la página
+        print(f'  ERROR en {nombre}: {e!r}')
+
+
 def main(modo):
+    t0 = time.time()
     print(f'== {modo} · {ahora():%Y-%m-%d %H:%M} UTC')
     if modo in ('rapido', 'alineaciones'):
         tareas = revisar.pendientes()
-        if not tareas['alineaciones'] and not tareas['resultados']:
+        if not tareas:
             print('  nada pendiente')
             return salida('no')
-        antes = ((RAW / 'proximos.json').read_text(), len(list(ESPN_DIR.glob('*.json'))))
-        if tareas['resultados']:
-            print('- resultados'); fuentes.descargar_detalle_temporada()
-        print('- próximos partidos'); fuentes.descargar_proximos()
-        if ((RAW / 'proximos.json').read_text(), len(list(ESPN_DIR.glob('*.json')))) == antes:
+        ligas = [l for l in tareas if l in LIGAS]
+        antes = _foto(ligas)
+        for liga in ligas:
+            if tareas[liga]['resultados']:
+                _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
+            _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
+        if _foto(ligas) == antes:
             return salida('no')
     else:
-        pasos = [('football-data', fuentes.descargar_football_data), ('detalle de partidos', fuentes.descargar_detalle_temporada),
-                 ('copas y Europa', fuentes.descargar_copas), ('próximos partidos', fuentes.descargar_proximos),
-                 ('lesiones', fuentes.descargar_lesiones)]
-        for nombre, f in pasos:
-            print(f'- {nombre}')
-            try:
-                f()
-            except Exception as e:   # una fuente caída no debe tumbar la página
-                print(f'  ERROR en {nombre}: {e!r}')
+        for liga in LIGAS:
+            _paso(f'football-data {liga}', fuentes.descargar_football_data, liga)
+        for liga in LIGAS:
+            _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
+        for liga in LIGAS:
+            _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
+        _paso('copas', fuentes.descargar_copas)
+        _paso('lesiones', fuentes.descargar_lesiones)
+        _paso('diagnóstico', fuentes.diagnostico)
     print('- análisis'); analizar.main()
     print('- registro'); registro.actualizar()
     print('- página'); construir.main()

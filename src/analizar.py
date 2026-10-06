@@ -85,7 +85,7 @@ def minuto(clock):
 
 # ----------------------------------------------------------------- partidos
 def analizar_partidos(df, promo, modelo, corners_model, equipos_info):
-    prox = json.load(open(RAW / 'proximos.json')) if (RAW / 'proximos.json').exists() else []
+    prox = json.load(open(RAW / 'proximos_laliga.json')) if (RAW / 'proximos_laliga.json').exists() else []
     out = []
     for k, g in enumerate(prox):
         h, a = ESPN_A_FD.get(g['local_espn']), ESPN_A_FD.get(g['visita_espn'])
@@ -173,7 +173,7 @@ def analizar_partidos(df, promo, modelo, corners_model, equipos_info):
 
 # ----------------------------------------------------------------- equipos
 def analizar_equipos(df_season, hist_all, ref):
-    detalle = [json.load(open(p)) for p in ESPN_DIR.glob('*.json')]
+    detalle = [json.load(open(p)) for p in (ESPN_DIR / 'laliga').glob('*.json')]
     ematch, players, team_games, tramos = {}, {}, {}, {}
     for m in sorted(detalle, key=lambda x: x['date']):
         d = (pd.Timestamp(m['date']).tz_localize(None) + pd.Timedelta(hours=1)).normalize()
@@ -213,7 +213,7 @@ def analizar_equipos(df_season, hist_all, ref):
     cups = pd.read_csv(RAW / 'copas.txt', sep='|', names=['comp', 'utc', 'team', 'done']) if (RAW / 'copas.txt').exists() else pd.DataFrame(columns=['comp', 'utc', 'team', 'done'])
     cups['team'] = cups.team.map(ESPN_A_FD)
     cups['Date'] = (pd.to_datetime(cups.utc, utc=True).dt.tz_localize(None) + pd.Timedelta(hours=1)).dt.normalize()
-    lesiones = json.load(open(RAW / 'lesiones.json')) if (RAW / 'lesiones.json').exists() else []
+    lesiones = json.load(open(RAW / 'lesiones_laliga.json')) if (RAW / 'lesiones_laliga.json').exists() else []
 
     teams = sorted(set(df_season.HomeTeam) | set(df_season.AwayTeam))
     rows = []
@@ -326,7 +326,7 @@ def main():
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()),
            'n_sims': N_SIMS, 'tramos': TRAMOS, 'liga': liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': modelo_json, 'experimentos': json.load(open(DATOS / 'modelo' / 'experimentos.json')),
-           'con_lesiones': (RAW / 'lesiones.json').exists()}
+           'con_lesiones': (RAW / 'lesiones_laliga.json').exists()}
     json.dump(limpiar(out), open(DATOS / 'sitio.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f'  análisis: {len(partidos)} partidos próximos, {len(equipos)} equipos, datos hasta {out["datos_hasta"]}')
 

@@ -38,7 +38,7 @@ def _corners(t):
 def resultados():
     """{id de ESPN: [goles local, goles visita, córners local, córners visita]} de los partidos ya jugados."""
     out = {}
-    for f in ESPN_DIR.glob('*.json'):
+    for f in ESPN_DIR.glob('*/*.json'):
         m = _leer(f, None)
         if not m:
             continue
