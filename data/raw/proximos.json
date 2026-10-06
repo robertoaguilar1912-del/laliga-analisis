@@ -46,13 +46,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -180
     ],
     [
      "-0.5",
@@ -71,8 +71,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    300,
-    270,
+    310,
+    275,
     -120
    ],
    "ou_linea": 2.5,
@@ -87,7 +87,7 @@
     ],
     [
      "-0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -157,7 +157,7 @@
  {
   "id": "401882854",
   "utc": "2026-10-11T12:00Z",
-  "estadio": "Martínez Valero",
+  "estadio": "Estadio Martínez Valero",
   "local_espn": "Elche",
   "visita_espn": "Celta Vigo",
   "estado": "STATUS_SCHEDULED",
@@ -195,9 +195,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
+    -150,
     290,
-    350
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -207,11 +207,11 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -165
     ],
     [
      "+0.5",
-     105
+     115
     ]
    ]
   }
@@ -219,16 +219,16 @@
  {
   "id": "401882855",
   "utc": "2026-10-11T16:30Z",
-  "estadio": "La Cartuja",
+  "estadio": "Estadio La Cartuja",
   "local_espn": "Real Betis",
   "visita_espn": "Osasuna",
   "estado": "STATUS_SCHEDULED",
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    310,
-    380
+    -165,
+    320,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -238,11 +238,11 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -180
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -250,7 +250,7 @@
  {
   "id": "401882850",
   "utc": "2026-10-11T19:00Z",
-  "estadio": "El Sardinero",
+  "estadio": "El Sardineros",
   "local_espn": "Racing Santander",
   "visita_espn": "Valencia",
   "estado": "STATUS_SCHEDULED",
@@ -263,8 +263,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -150,
+    115
    ],
    "spread": [
     [
@@ -281,7 +281,7 @@
  {
   "id": "401882852",
   "utc": "2026-10-12T19:00Z",
-  "estadio": "Ciutat de València",
+  "estadio": "Estadi Ciutat de València",
   "local_espn": "Levante",
   "visita_espn": "Sevilla",
   "estado": "STATUS_SCHEDULED",
@@ -305,6 +305,37 @@
     [
      "+0.5",
      -220
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882844",
+  "utc": "2026-10-16T19:00Z",
+  "estadio": "Riazor",
+  "local_espn": "Deportivo",
+  "visita_espn": "Levante",
+  "estado": "STATUS_SCHEDULED",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    240,
+    240
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
     ]
    ]
   }
