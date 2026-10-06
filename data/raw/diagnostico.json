@@ -1,0 +1,302 @@
+{
+ "fecha": "2026-10-06T06:27+00:00",
+ "copas": {
+  "concacaf.champions": {
+   "eventos": 51,
+   "ejemplo": "Tigres UANL at Forge FC"
+  },
+  "concacaf.champions_cup": {
+   "eventos": 0,
+   "ejemplo": null
+  },
+  "concacaf.leagues.cup": {
+   "eventos": 62,
+   "ejemplo": "Atlas at Columbus Crew"
+  },
+  "concacaf.leagues_cup": {
+   "eventos": 0,
+   "ejemplo": null
+  },
+  "eng.carabao_cup": {
+   "eventos": 0,
+   "ejemplo": null
+  },
+  "eng.fa": {
+   "eventos": 63,
+   "ejemplo": "Oxford United at Milton Keynes Dons"
+  },
+  "eng.fa_cup": {
+   "eventos": 0,
+   "ejemplo": null
+  },
+  "eng.league_cup": {
+   "eventos": 89,
+   "ejemplo": "Manchester City at Newcastle United"
+  },
+  "esp.copa_del_rey": {
+   "eventos": 38,
+   "ejemplo": "Rayo Vallecano at Granada"
+  },
+  "esp.super_cup": {
+   "eventos": 3,
+   "ejemplo": "Athletic Club at Barcelona"
+  },
+  "fra.coupe_de_france": {
+   "eventos": 31,
+   "ejemplo": "Toulouse at Angers"
+  },
+  "ger.dfb_pokal": {
+   "eventos": 55,
+   "ejemplo": "St. Pauli at Bayer Leverkusen"
+  },
+  "ita.coppa_italia": {
+   "eventos": 44,
+   "ejemplo": "Torino at AS Roma"
+  },
+  "ita.super_cup": {
+   "eventos": 1,
+   "ejemplo": "Lazio at Internazionale"
+  },
+  "mex.copa_mx": {
+   "eventos": 0,
+   "ejemplo": null
+  },
+  "uefa.champions": {
+   "eventos": 189,
+   "ejemplo": "Club Brugge at Kairat Almaty"
+  },
+  "uefa.europa": {
+   "eventos": 189,
+   "ejemplo": "Celtic at Bologna"
+  },
+  "uefa.europa.conf": {
+   "eventos": 153,
+   "ejemplo": "AZ Alkmaar at FC Noah"
+  },
+  "usa.open": {
+   "eventos": 79,
+   "ejemplo": "FC America CFL Spurs at South Georgia Tormenta FC"
+  },
+  "usa.open_cup": {
+   "eventos": 0,
+   "ejemplo": null
+  }
+ },
+ "tablas": {
+  "laliga": [
+   {
+    "nombre": "2026-27 LALIGA",
+    "equipos": 20,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Barcelona",
+     "Atlético Madrid",
+     "Real Betis"
+    ]
+   }
+  ],
+  "premier": [
+   {
+    "nombre": "2026-27 English Premier League",
+    "equipos": 20,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Manchester City",
+     "Arsenal",
+     "Brighton & Hove Albion"
+    ]
+   }
+  ],
+  "seriea": [
+   {
+    "nombre": "2026-2027 Italian Serie A",
+    "equipos": 20,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "AS Roma",
+     "Internazionale",
+     "Lazio"
+    ]
+   }
+  ],
+  "bundesliga": [
+   {
+    "nombre": "2026-27 German Bundesliga",
+    "equipos": 18,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Borussia Dortmund",
+     "Bayern Munich",
+     "SC Freiburg"
+    ]
+   }
+  ],
+  "ligue1": [
+   {
+    "nombre": "French Ligue 1 2026-27",
+    "equipos": 18,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "AS Monaco",
+     "Lyon",
+     "Paris FC"
+    ]
+   }
+  ],
+  "ligamx": [
+   {
+    "nombre": "2026 Torneo Apertura",
+    "equipos": 18,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Toluca",
+     "América",
+     "Guadalajara"
+    ]
+   }
+  ],
+  "mls": [
+   {
+    "nombre": "Eastern Conference",
+    "equipos": 15,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Chicago Fire FC",
+     "Columbus Crew",
+     "New England Revolution"
+    ]
+   },
+   {
+    "nombre": "Western Conference",
+    "equipos": 15,
+    "stats": [
+     "gamesPlayed",
+     "losses",
+     "pointDifferential",
+     "points",
+     "pointsAgainst",
+     "pointsFor",
+     "ties",
+     "wins",
+     "advanced",
+     "deductions",
+     "ppg",
+     "rank",
+     "rankChange",
+     "overall"
+    ],
+    "primeros": [
+     "Colorado Rapids",
+     "FC Dallas",
+     "Sporting Kansas City"
+    ]
+   }
+  ]
+ },
+ "equipos": {}
+}
