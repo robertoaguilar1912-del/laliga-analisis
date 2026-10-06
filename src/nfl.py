@@ -362,7 +362,7 @@ def analizar():
     orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Injured Reserve': 3}
     corte = (ref - pd.Timedelta(days=45)).strftime('%Y-%m-%d')
     for t, e_ in equipos.items():
-        lst = [x for x in reporte.get(e_['nombre'], []) if x.get('fecha', '') >= corte or x['estado'] in orden]
+        lst = [x for x in reporte.get(e_['nombre'], []) if x['estado'] != 'Active' and (x.get('fecha', '') >= corte or x['estado'] in orden)]
         e_['lesiones'] = sorted(lst, key=lambda x: (orden.get(x['estado'], 4), x['pos'] != 'QB'))
     prox = json.load(open(RAW / 'proximos_nfl.json')) if (RAW / 'proximos_nfl.json').exists() else []
     espn_a = {v['espn']: k for k, v in info.items()}
