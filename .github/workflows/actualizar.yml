@@ -1,0 +1,80 @@
+name: Actualizar página
+
+on:
+  schedule:
+    - cron: '7 11 * * *'      # todos los días, 5:07 a. m. de Honduras: actualización completa
+    - cron: '*/30 * * * *'    # cada 30 minutos: buscar alineaciones de partidos por empezar
+  workflow_dispatch:          # botón "Run workflow" para actualizar a mano
+  push:
+    branches: [main]
+    paths: ['src/**', 'data/modelo/**', '.github/workflows/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      cambios: ${{ steps.run.outputs.cambios }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Elegir modo
+        id: modo
+        run: |
+          if [ "${{ github.event.schedule }}" = "*/30 * * * *" ]; then
+            echo "modo=alineaciones" >> "$GITHUB_OUTPUT"
+            python src/revisar.py
+          else
+            echo "modo=completo" >> "$GITHUB_OUTPUT"
+            echo "seguir=si" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Instalar dependencias
+        if: steps.modo.outputs.seguir == 'si'
+        run: pip install -r requirements.txt
+
+      - name: Descargar datos, recalcular y armar la página
+        id: run
+        if: steps.modo.outputs.seguir == 'si'
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python src/ejecutar.py ${{ steps.modo.outputs.modo }}
+
+      - name: Guardar los datos nuevos en el repositorio
+        if: steps.run.outputs.cambios == 'si'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site
+          git diff --cached --quiet || git commit -m "Datos actualizados $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash || true
+          git push || echo "No se pudo guardar; se intentará en la próxima corrida"
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.run.outputs.cambios == 'si'
+        with:
+          path: site
+
+  publicar:
+    needs: actualizar
+    if: needs.actualizar.outputs.cambios == 'si'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

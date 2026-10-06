@@ -1,0 +1,62 @@
+[
+ {
+  "prueba": "Modelo base: goles y tiros a puerta",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9858635261454068,
+  "casa": 0.9692992609721267,
+  "roi": -0.13363672338741592,
+  "n": 2527,
+  "nota": "Punto de partida."
+ },
+ {
+  "prueba": "+ forma reciente y días de descanso",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9878,
+  "casa": 0.9692992609721267,
+  "roi": -0.164,
+  "n": 2595,
+  "nota": "Darle más peso a las últimas semanas lo empeora: persigue rachas que son suerte."
+ },
+ {
+  "prueba": "+ bajas: titulares habituales que no juegan",
+  "periodo": "2020-26",
+  "contra": "Bet365 cierre",
+  "modelo": 0.9893,
+  "casa": 0.9686,
+  "roi": -0.092,
+  "n": 3063,
+  "nota": "Sin bajas perdía −10.3% al cierre. Contar ausencias no mide la calidad del que falta."
+ },
+ {
+  "prueba": "Valor por jugador según la alineación + cansancio con copas y Europa",
+  "periodo": "2021-26",
+  "contra": "Bet365 cierre",
+  "modelo": 0.9831652796845578,
+  "casa": 0.9657992163821107,
+  "roi": -0.1381773600326931,
+  "n": 2447,
+  "nota": "La versión más completa. Mejora un poco la precisión (de 0.9848 a 0.9832); el cansancio no aportó. Con el mejor momio: -7.6%."
+ },
+ {
+  "prueba": "Mismo modelo en la Segunda División",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 1.0501684704745982,
+  "casa": 1.0335678976835616,
+  "roi": -0.10743001555209951,
+  "n": 2572,
+  "nota": "Una liga con menos atención tampoco dejó ventaja; ahí el margen de Bet365 es mayor (6.4%)."
+ },
+ {
+  "prueba": "Córners (más/menos 9.5)",
+  "periodo": "2020-26",
+  "contra": "Promedio de la liga",
+  "modelo": 0.6807280739806006,
+  "casa": 0.6888447882757877,
+  "roi": null,
+  "n": null,
+  "nota": "Predice mejor que el promedio y sus porcentajes se cumplen, pero no hay momios históricos de córners para saber si le gana a la casa."
+ }
+]
