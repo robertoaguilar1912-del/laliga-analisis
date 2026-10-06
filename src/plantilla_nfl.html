@@ -388,12 +388,12 @@
   function showTeam(k) {
     selTeam = k; renderTeams();
     const t = E[k], prox = G.find(g => g.local_fd === k || g.visita_fd === k);
-    const les = prox ? (prox.local_fd === k ? prox.lesiones.local : prox.lesiones.visita) : null;
+    const les = t.lesiones || [];
     $('#team-profile').innerHTML = `
       <div class="dhead"><span class="eyebrow">${esc(t.division)} · ${t.pos_div}º de la división${t.rank_poder ? ' · ' + t.rank_poder + 'º en poder' : ''}</span><h2>${esc(t.nombre)}</h2>
         ${prox ? `<button class="back" id="go-next">Próximo: ${esc(prox.visita_es)} en ${esc(prox.local_es)} · ver ficha →</button>` : ''}</div>
       <div class="grid2"><div class="card"><h3>Cómo viene</h3>${equipoHTML(t)}</div>
-        <div class="card"><h3>Lesiones</h3>${les ? lesionesHTML(les) : '<p class="empty">Se muestran cuando tiene un juego en los próximos días.</p>'}</div></div>`;
+        <div class="card"><h3>Lesiones</h3>${lesionesHTML(les)}<p class="note">Reporte oficial de lesiones vía ESPN.</p></div></div>`;
     const gn = $('#go-next'); if (gn) gn.addEventListener('click', () => { const i = G.indexOf(prox); showGame(i); history.replaceState(null, '', '#j' + (i + 1)); });
     $('#team-profile').scrollIntoView({ block: 'start', behavior: 'smooth' });
   }

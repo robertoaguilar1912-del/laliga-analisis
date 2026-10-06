@@ -181,21 +181,6 @@ def _momios_nfl(comp):
     return out
 
 
-def _lesiones(s):
-    out = {}
-    for t in (s or {}).get('injuries', []) or []:
-        ab = (t.get('team') or {}).get('abbreviation')
-        lst = []
-        for x in t.get('injuries', []) or []:
-            ath = x.get('athlete') or {}
-            lst.append({'nombre': ath.get('displayName'), 'pos': ((ath.get('position') or {}).get('abbreviation') or ''),
-                        'estado': x.get('status') or '', 'fecha': (x.get('date') or '')[:10],
-                        'tipo': ((x.get('details') or {}).get('type') or '')})
-        if ab:
-            out[ab] = lst
-    return out
-
-
 def descargar():
     """nflverse (juegos y equipos) + ESPN (próximos con momios y lesiones, resultados recientes)."""
     from fuentes import _get
@@ -237,12 +222,23 @@ def descargar_espn(dias_atras=3):
                                 'neutral': bool(comp.get('neutralSite')), 'estado': comp['status']['type'].get('name'),
                                 'semana': (e.get('week') or {}).get('number'), 'tipo': ((e.get('season') or {}).get('slug') or ''),
                                 'momios': _momios_nfl(comp)}
-    for eid, ev in eventos.items():
-        if (pd.Timestamp(ev['utc']) - pd.Timestamp(hoy)).days <= 8:
-            ev['lesiones'] = _lesiones(_get(f'{ESPN_NFL}/summary', params={'event': eid}))
+    # reporte de lesiones de los 32 equipos (el mismo de la página de lesiones de ESPN)
+    j = _get(f'{ESPN_NFL}/injuries')
+    les = {}
+    for t in (j or {}).get('injuries', []) or []:
+        lst = []
+        for x in t.get('injuries', []) or []:
+            a = x.get('athlete') or {}
+            lst.append({'nombre': a.get('displayName') or f"{a.get('firstName', '')} {a.get('lastName', '')}".strip(),
+                        'pos': (a.get('position') or {}).get('abbreviation', ''), 'estado': x.get('status') or '',
+                        'fecha': (x.get('date') or '')[:10], 'tipo': (x.get('details') or {}).get('type') or ''})
+        if t.get('displayName'):
+            les[t['displayName']] = lst
+    if les:
+        json.dump(les, open(RAW / 'lesiones_nfl.json', 'w'), ensure_ascii=False, indent=1)
     lista = sorted(eventos.values(), key=lambda x: x['utc'])
     json.dump(lista, open(RAW / 'proximos_nfl.json', 'w'), ensure_ascii=False, indent=1)
-    print(f'  ESPN NFL: {len(lista)} juegos próximos, {nuevos} resultados nuevos')
+    print(f'  ESPN NFL: {len(lista)} juegos próximos, {nuevos} resultados nuevos, lesiones de {len(les)} equipos')
 
 
 def guardar_resultados_nflverse(g):
@@ -362,6 +358,12 @@ def analizar():
     clave = pesos_clave(g[(g.season >= 2010) & g.result.notna()])
     modelo = ModeloNFL().fit(hist, ref, clave)
     equipos = analizar_equipos(g, modelo, info, temporada)
+    reporte = json.load(open(RAW / 'lesiones_nfl.json')) if (RAW / 'lesiones_nfl.json').exists() else {}
+    orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Injured Reserve': 3}
+    corte = (ref - pd.Timedelta(days=45)).strftime('%Y-%m-%d')
+    for t, e_ in equipos.items():
+        lst = [x for x in reporte.get(e_['nombre'], []) if x.get('fecha', '') >= corte or x['estado'] in orden]
+        e_['lesiones'] = sorted(lst, key=lambda x: (orden.get(x['estado'], 4), x['pos'] != 'QB'))
     prox = json.load(open(RAW / 'proximos_nfl.json')) if (RAW / 'proximos_nfl.json').exists() else []
     espn_a = {v['espn']: k for k, v in info.items()}
     por_espn = {r.espn: r for r in g[g.espn != ''].itertuples()}
@@ -412,10 +414,7 @@ def analizar():
         lin_m = round(-m * 2) / 2
         sin = [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH / (pH + pA), 'justo': fair(pH / (pH + pA))},
                {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA / (pH + pA), 'justo': fair(pA / (pH + pA))}]
-        les = e.get('lesiones') or {}
-        corte = (ref - pd.Timedelta(days=21)).strftime('%Y-%m-%d')
-        lesiones = {lado: [x for x in les.get(e[f'{lado2}_abbr'], []) if x.get('fecha', '') >= corte or x['estado'] in ('Out', 'Injured Reserve', 'Doubtful')]
-                    for lado, lado2 in (('local', 'local'), ('visita', 'visita'))}
+        lesiones = {'local': equipos[h].get('lesiones', []), 'visita': equipos[a].get('lesiones', [])}
         partidos.append({
             'id': e['id'], 'liga': 'nfl', 'utc': e['utc'], 'estadio': e.get('estadio', ''), 'semana': e.get('semana'), 'tipo': e.get('tipo', ''),
             'local_es': L, 'visita_es': V, 'local_fd': h, 'visita_fd': a, 'neutral': neutral,
