@@ -230,7 +230,9 @@ table.data.min900 { min-width: 900px; }
 .calc select, .calc input, .sel { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; min-width: 0; }
 .calc select { flex: 1 1 220px; }
 .calc input { flex: 0 1 120px; font-family: var(--font-data); }
-.calc-out { font-size: 13.5px; color: var(--ink-2); min-height: 22px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.calc-out { font-size: 13.5px; color: var(--ink-2); min-height: 22px; line-height: 1.7; }
+.calc-out .pill { margin-right: 6px; }
+.calc #calc-monto { flex: 0 1 150px; }
 .h2h-sum { display: flex; flex-wrap: wrap; gap: 10px; }
 .h2h-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
 .h2h-row .d { font-family: var(--font-data); font-size: 11.5px; color: var(--ink-3); }
@@ -238,6 +240,39 @@ table.data.min900 { min-width: 900px; }
 .h2h-row .a { text-align: right; }
 .fatigue { display: grid; gap: 6px; font-size: 13.5px; color: var(--ink-2); }
 .fatigue b { color: var(--ink); }
+.btn { font-family: var(--font-data); font-size: 12.5px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 7px 12px; cursor: pointer; white-space: nowrap; }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.linkbtn { justify-self: start; border: 0; background: none; padding: 0; font-family: var(--font-data); font-size: 12.5px; color: var(--accent); cursor: pointer; text-align: left; }
+.calc-msg { font-size: 13px; color: var(--ink-2); min-height: 0; }
+.calc-msg:empty { display: none; }
+
+/* Mi registro */
+.pill.WIN { border-color: var(--good); background: color-mix(in srgb, var(--good) 16%, var(--surface)); }
+.pill.WIN::before { background: var(--good); }
+.pill.LOSS { border-color: var(--crit); background: color-mix(in srgb, var(--crit) 14%, var(--surface)); }
+.pill.LOSS::before { background: var(--crit); }
+.pill.PUSH { border-color: var(--warn); background: color-mix(in srgb, var(--warn) 18%, var(--surface)); }
+.pill.PUSH::before { background: var(--warn); }
+.pill.WAIT { border-color: var(--line); background: var(--surface); color: var(--ink-2); }
+.pill.WAIT::before { background: var(--ink-3); }
+.bets { display: grid; gap: 8px; }
+.bet { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; padding: 12px 14px; border-radius: 12px; background: var(--surface-2); }
+.bet .b-main { display: grid; gap: 2px; min-width: 0; }
+.bet .b-meta { font-family: var(--font-data); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.bet .b-name { font-weight: 650; font-size: 14.5px; }
+.bet .b-line { font-family: var(--font-data); font-size: 11.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.bet .b-side { display: grid; justify-items: end; align-content: start; gap: 6px; }
+.bet .b-pl { font-family: var(--font-display); font-weight: 850; font-stretch: 80%; font-size: 20px; font-variant-numeric: tabular-nums; }
+.bet .b-act { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.bet .b-act select { font: inherit; font-size: 12.5px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+.bet .b-act button { font-family: var(--font-data); font-size: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+.bet .b-act button.danger { border-color: var(--crit); color: var(--crit); }
+.up { color: var(--good); }
+.down { color: var(--crit); }
+.kv b.up { color: var(--good); }
+.kv b.down { color: var(--crit); }
+.backup { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
 /* El modelo */
 .verdict { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
@@ -259,6 +294,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 }
 @media (max-width: 480px) {
   .wrap { padding-inline: 16px; }
+  .tabs { gap: 0; }
+  .tabs button { padding-inline: 6px; font-size: 14px; }
   .dhead, .card { padding: 14px; }
   .cmp-head, .cmp-row { grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr); gap: 8px; }
 }
@@ -274,6 +311,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     <button role="tab" data-view="tabla" aria-selected="false">Tabla</button>
     <button role="tab" data-view="equipos" aria-selected="false">Equipos</button>
     <button role="tab" data-view="modelo" aria-selected="false">El modelo</button>
+    <button role="tab" data-view="registro" aria-selected="false">Registro</button>
   </nav>
 
   <!-- PARTIDOS -->
@@ -348,6 +386,21 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     </div>
   </section>
 
+  <!-- MI REGISTRO -->
+  <section class="view" id="v-registro" hidden>
+    <div class="intro">
+      <p class="eyebrow">Se liquida solo cuando termina el partido</p>
+      <h2>Mi registro</h2>
+      <p>Para guardar una apuesta abre el partido, ve a la pestaña Mercados, elige el mercado y escribe el momio de tu casa y cuánto apostaste. Cuando termina el partido la página revisa el resultado y la marca como ganada, perdida o nula.</p>
+    </div>
+    <div class="subtabs" role="tablist" id="reg-tabs">
+      <button role="tab" data-r="mias" aria-selected="true">Mis apuestas</button>
+      <button role="tab" data-r="modelo" aria-selected="false">Picks del modelo</button>
+    </div>
+    <div class="pane" id="reg-mias"></div>
+    <div class="pane" id="reg-modelo" hidden></div>
+  </section>
+
   <footer>
     <p id="foot-data"></p>
     <p>Análisis estadístico con fines informativos. No es una casa de apuestas ni asesoría. Juega responsable, solo +18.</p>
@@ -377,16 +430,25 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const posLabel = p => ({ G: 'POR', D: 'DEF', M: 'MED', F: 'DEL' })[(p || '?')[0] === 'C' && p.startsWith('CD') ? 'D' : (p || '?')[0]] || p;
   function grp(p) { p = (p || '').toUpperCase(); if (p.startsWith('G')) return 'POR'; if (/^(CD|CB|LB|RB|D|LWB|RWB|SW)/.test(p)) return 'DEF'; if (/^(DM|CM|LM|RM|M)/.test(p)) return 'MED'; return 'DEL'; }
 
+  // ---------------- apuestas guardadas en este navegador
+  const R = D.registro || { modelo: [], cierres: {}, resultados: {} };
+  const LS_KEY = 'laliga-mis-apuestas-v1';
+  let mias = [], lsOK = true;
+  try { const x = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); mias = Array.isArray(x) ? x : []; } catch (e) { lsOK = false; }
+  function guardarMias() { try { localStorage.setItem(LS_KEY, JSON.stringify(mias)); lsOK = true; } catch (e) { lsOK = false; } }
+
   const upd = new Date(D.actualizado);
   $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })} · resultados hasta el ${fdate(D.datos_hasta)}`;
   $('#j-eyebrow').textContent = `La Liga · ${M.length} partidos en los próximos días · ${num(D.n_sims)} simulaciones cada uno`;
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
   // ---------------- navegación
-  const views = ['partidos', 'tabla', 'equipos', 'modelo'];
+  const views = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   function showView(v) {
     views.forEach(x => { $('#v-' + x).hidden = x !== v; });
     $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
+    if (v === 'registro') renderRegistro();
+    const sel = $(`.tabs button[data-view="${v}"]`); if (sel && sel.scrollIntoView) sel.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }
   $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'partidos') showList(); history.replaceState(null, '', '#' + b.dataset.view); }));
 
@@ -397,7 +459,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const alerts = [...th.sancionados.map(s => `${m.local_es}: ${s.nombre} sancionado`), ...ta.sancionados.map(s => `${m.visita_es}: ${s.nombre} sancionado`),
                     ...(th.lesiones.length ? [`${m.local_es}: ${th.lesiones.length} en el parte médico`] : []), ...(ta.lesiones.length ? [`${m.visita_es}: ${ta.lesiones.length} en el parte médico`] : [])];
     const nextExtra = (t, name) => { const x = (t.proximos_extra || []).find(e => e.fecha > m.utc.slice(0, 10)); const d = x ? daysBetween(m.utc.slice(0, 10), x.fecha) : 99; return x && d <= 5 ? `${name} juega ${x.comp} ${d} días después` : null; };
-    const extra = [nextExtra(th, m.local_es), nextExtra(ta, m.visita_es), m.alineaciones && m.alineaciones.local ? 'Alineaciones confirmadas' : null].filter(Boolean);
+    const nMias = mias.filter(b => b.id === m.id).length;
+    const extra = [nextExtra(th, m.local_es), nextExtra(ta, m.visita_es), m.alineaciones && m.alineaciones.local ? 'Alineaciones confirmadas' : null,
+                   nMias ? `Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}` : null].filter(Boolean);
     const bar = (p, c) => `<span style="width:${(p * 100).toFixed(1)}%;background:${c}"></span>`;
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
       <span class="mmeta">${fdt(m.utc)} · ${esc(m.estadio)}</span>
@@ -527,7 +591,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push(r); });
     const extra = Object.entries(groups).map(([g, rs]) => `<div class="xgrp">${esc(g)}</div>` + rs.map(r => `<div class="xrow"><span>${esc(r.mercado)}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.justo}</span></div>`).join('')).join('');
     const opts = []; const seen = new Set();
-    [...m.con_momio, ...m.sin_momio].forEach(r => { if (!seen.has(r.mercado)) { seen.add(r.mercado); opts.push({ n: r.mercado, p: r.p }); } });
+    [...m.con_momio, ...m.sin_momio].forEach(r => { if (!seen.has(r.mercado)) { seen.add(r.mercado); opts.push({ n: r.mercado, p: r.p, k: r.k }); } });
     const xiConf = t => t === th ? (m.alineaciones || {}).local : t === ta ? (m.alineaciones || {}).visita : null;
     const h2h = m.h2h;
     const w = { l: 0, e: 0, v: 0 };
@@ -566,6 +630,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="card">
             <h3>Mercados con momio</h3>
             <div class="markets">${priced || '<p class="empty">La casa todavía no publica momios para este partido. Mientras tanto usa los momios justos de la pestaña Mercados.</p>'}</div>
+            <button class="linkbtn" id="to-calc">¿Tu mercado no está aquí o quieres guardar tu apuesta? Compáralo con tu casa →</button>
             <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
           </div>
         </div>
@@ -635,6 +700,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
                 <input id="calc-odds" placeholder="Ej. 2.50" inputmode="decimal" autocomplete="off">
               </div>
               <div class="calc-out" aria-live="polite"></div>
+              <div class="calc-row">
+                <label for="calc-monto" style="position:absolute;left:-9999px">Monto apostado</label>
+                <input id="calc-monto" placeholder="Monto" inputmode="decimal" autocomplete="off">
+                <button class="btn" id="calc-save" disabled>Guardar en mi registro</button>
+              </div>
+              <div class="calc-msg" aria-live="polite"></div>
             </div>
             <h4>Marcadores más probables</h4>
             <div class="scores">${m.marcadores.map(s => `<div class="score"><b>${s.m}</b><span>${pct(s.p, 1)}</span></div>`).join('')}</div>
@@ -659,7 +730,22 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const ev = o.p * dec - 1, v = verdictOf(ev);
       out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(o.p, 1)}</span> · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / o.p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
     };
-    sel.addEventListener('change', calc); inp.addEventListener('input', calc); calc();
+    const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
+    const listo = () => { save.disabled = !parseOdds(inp.value); };
+    sel.addEventListener('change', () => { calc(); msg.textContent = ''; }); inp.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; }); calc(); listo();
+    save.addEventListener('click', () => {
+      const o = opts[+sel.value], dec = parseOdds(inp.value), amt = parseFloat(String(monto.value).replace(',', '.'));
+      if (!dec) return;
+      if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
+      mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, utc: m.utc, local: m.local_es, visita: m.visita_es,
+                  mercado: o.n, k: o.k, p: o.p, momio: +dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+      guardarMias();
+      msg.innerHTML = lsOK ? `Guardada: ${esc(o.n)} a ${dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
+                           : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
+      const g = $('#go-reg', msg); if (g) g.addEventListener('click', () => { showView('registro'); history.replaceState(null, '', '#registro'); window.scrollTo(0, 0); });
+      inp.value = ''; monto.value = ''; calc(); listo();
+    });
+    $('#to-calc', el).addEventListener('click', () => { const b = $('.subtabs button[data-p="4"]', el); b.click(); b.scrollIntoView({ block: 'nearest' }); });
     window.scrollTo(0, 0);
   }
 
@@ -796,6 +882,215 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     el.appendChild(svg);
   })();
   $('#foot-data').textContent = `Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas y Europa)${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles con ${num(D.n_sims)} simulaciones por partido.`;
+
+  // ---------------- mi registro
+  const fmtM = v => num(v, Math.abs(v - Math.round(v)) > 0.005 ? 2 : 0);
+  const sM = v => (v >= 0 ? '+' : '−') + fmtM(Math.abs(v));
+  const EQ = { 'H1:-0.5': '1', 'H2:-0.5': '2', 'H1:+0.5': '1X', 'H2:+0.5': 'X2' };
+  const EQR = Object.fromEntries(Object.entries(EQ).map(([a, b]) => [b, a]));
+  // Cada apuesta se parte en dos mitades (por las líneas asiáticas de .25/.75): 1 gana, 0.5 nula, 0 pierde
+  const half = x => x > 1e-9 ? 1 : x < -1e-9 ? 0 : 0.5;
+  const linea = (f, L) => Math.round(Math.abs(L) * 4) % 2 === 1 ? [half(f(L - 0.25)), half(f(L + 0.25))] : [half(f(L)), half(f(L))];
+  function liquidar(k, r) {
+    if (!r || !k) return null;
+    const [gl, gv, cl, cv] = r, t = gl + gv, b = v => [v ? 1 : 0, v ? 1 : 0];
+    const [tipo, ln] = k.split(':'), L = parseFloat(ln), hayC = cl != null && cv != null;
+    switch (tipo) {
+      case '1': return b(gl > gv);
+      case 'X': return b(gl === gv);
+      case '2': return b(gv > gl);
+      case '1X': return b(gl >= gv);
+      case 'X2': return b(gv >= gl);
+      case '12': return b(gl !== gv);
+      case 'DNB1': return gl === gv ? [0.5, 0.5] : b(gl > gv);
+      case 'DNB2': return gl === gv ? [0.5, 0.5] : b(gv > gl);
+      case 'BTTS': return b((gl > 0 && gv > 0) === (ln === 'S'));
+      case 'A1': return b(gl > 0);
+      case 'A2': return b(gv > 0);
+      case 'CS1': return b(gv === 0);
+      case 'CS2': return b(gl === 0);
+      case 'O': return linea(x => t - x, L);
+      case 'U': return linea(x => x - t, L);
+      case 'H1': return linea(x => gl - gv + x, L);
+      case 'H2': return linea(x => gv - gl + x, L);
+      case 'CO': return hayC ? linea(x => cl + cv - x, L) : null;
+      case 'CU': return hayC ? linea(x => x - cl - cv, L) : null;
+      case 'C1O': return cl != null ? linea(x => cl - x, L) : null;
+      case 'C2O': return cv != null ? linea(x => cv - x, L) : null;
+    }
+    return null;
+  }
+  const MANUAL = { w: [1, 1], l: [0, 0], p: [0.5, 0.5] };
+  function estado(bet, stake) {
+    const r = R.resultados[bet.id];
+    const c = bet.manual ? MANUAL[bet.manual] : liquidar(bet.k, r);
+    const empezo = new Date(bet.utc) <= new Date();
+    if (!c) return { fin: false, label: !r ? (empezo ? 'Esperando resultado' : 'Pendiente') : 'Sin dato: márcala tú', cls: 'WAIT', r };
+    const pl = stake * (c.map(x => x === 1 ? bet.momio - 1 : x === 0.5 ? 0 : -1).reduce((a, b) => a + b) / 2);
+    const s = c[0] + c[1];
+    const label = s === 2 ? 'Ganada' : s === 0 ? 'Perdida' : (c[0] === 0.5 && c[1] === 0.5) ? 'Nula' : s > 1 ? 'Medio ganada' : 'Medio perdida';
+    return { fin: true, pl, label, cls: s === 2 || s === 1.5 ? 'WIN' : s === 0 || s === 0.5 ? 'LOSS' : 'PUSH', r };
+  }
+  function cierreDe(bet) {
+    const c = R.cierres[bet.id]; if (!c) return null;
+    const v = c[bet.k] || c[EQ[bet.k]] || c[EQR[bet.k]];
+    return v ? parseFloat(v) : null;
+  }
+  const niceStep = range => { const raw = Math.max(range, 1e-9) / 4, p = Math.pow(10, Math.floor(Math.log10(raw))); return [1, 2, 2.5, 5, 10].map(x => x * p).find(x => x >= raw); };
+  function cumChart(el, pts, unidad) {
+    // pts: [{u: saldo acumulado, txt: descripción}] en orden; empieza en 0
+    el.innerHTML = '';
+    // ancho real del contenedor, para que el texto no se encoja en el celular
+    const W = Math.max(300, Math.min(1000, Math.round(($('#v-registro').clientWidth || 960) - 40))), H = W < 600 ? 220 : 240, pad = { l: 52, r: 16, t: 16, b: 30 };
+    const all = [{ u: 0, txt: 'Inicio' }, ...pts], n = all.length - 1;
+    const minU = Math.min(0, ...all.map(p => p.u)), maxU = Math.max(0, ...all.map(p => p.u));
+    const step = niceStep(maxU - minU), yMin = Math.floor(minU / step) * step, yMax = Math.max(step, Math.ceil(maxU / step) * step);
+    const X = i => pad.l + i / n * (W - pad.l - pad.r), Y = u => pad.t + (yMax - u) / (yMax - yMin || 1) * (H - pad.t - pad.b);
+    const color = all[n].u >= 0 ? 'var(--pos)' : 'var(--neg)';
+    const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Ganancia acumulada' });
+    for (let v = yMin; v <= yMax + 1e-9; v += step) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const t = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); t.textContent = Math.abs(v) < 1e-9 ? '0' : sM(v); svg.appendChild(t); }
+    const tickEvery = Math.max(1, Math.ceil(n / 8));
+    for (let i = 1; i <= n; i++) if (i % tickEvery === 0 || i === n) { const t = svgEl('text', { x: X(i), y: H - 8, 'text-anchor': 'middle' }); t.textContent = i; svg.appendChild(t); }
+    svg.appendChild(svgEl('line', { class: 'zero', x1: pad.l, x2: W - pad.r, y1: Y(0), y2: Y(0) }));
+    const d = all.map((p, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(p.u).toFixed(1)).join('');
+    svg.appendChild(svgEl('path', { d: d + `L${X(n).toFixed(1)},${Y(0)}L${X(0)},${Y(0)}Z`, fill: color, 'fill-opacity': 0.1 }));
+    svg.appendChild(svgEl('path', { d, fill: 'none', stroke: color, 'stroke-width': 2, 'stroke-linejoin': 'round' }));
+    svg.appendChild(svgEl('circle', { cx: X(n), cy: Y(all[n].u), r: 4.5, fill: color, stroke: 'var(--surface)', 'stroke-width': 2 }));
+    const lab = svgEl('text', { x: X(n) - 8, y: Y(all[n].u) + (all[n].u >= 0 ? -10 : 22), 'text-anchor': 'end', class: 'lbl-strong' }); lab.textContent = sM(all[n].u) + (unidad ? ' ' + unidad : ''); svg.appendChild(lab);
+    const cross = svgEl('line', { y1: pad.t, y2: H - pad.b, stroke: 'var(--ink-3)', 'stroke-dasharray': '3 3', opacity: 0 }); svg.appendChild(cross);
+    const hit = svgEl('rect', { x: pad.l, y: pad.t, width: W - pad.l - pad.r, height: H - pad.t - pad.b, fill: 'transparent' });
+    hit.addEventListener('pointermove', ev => { const p = scaleToPx(svg, ev); const i = Math.max(0, Math.min(n, Math.round((p.x - pad.l) / (W - pad.l - pad.r) * n))); cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i)); cross.setAttribute('opacity', 1); showTip(el, X(i) * p.k, Y(all[i].u) * p.k, i ? `Apuesta ${i}: ${esc(all[i].txt)}<br>Saldo ${sM(all[i].u)}${unidad ? ' ' + unidad : ''}` : 'Inicio'); });
+    hit.addEventListener('pointerleave', () => { hideTip(el); cross.setAttribute('opacity', 0); });
+    svg.appendChild(hit); el.appendChild(svg);
+  }
+  function resumen(lista, unidad) {
+    const fin = lista.filter(x => x.e.fin), pend = lista.length - fin.length;
+    const apostado = fin.reduce((a, x) => a + x.stake, 0), pl = fin.reduce((a, x) => a + x.e.pl, 0);
+    const g = fin.filter(x => x.e.cls === 'WIN').length, p = fin.filter(x => x.e.cls === 'LOSS').length, nu = fin.length - g - p;
+    const u = unidad ? ' (' + unidad + ')' : '';
+    return `<div class="kv">
+      <div><span>Apuestas</span><b>${num(lista.length)}</b></div>
+      <div><span>Ganadas · perdidas${nu ? ' · nulas' : ''}</span><b>${g} · ${p}${nu ? ' · ' + nu : ''}</b></div>
+      <div><span>Pendientes</span><b>${num(pend)}</b></div>
+      <div><span>Apostado${u}</span><b>${fmtM(apostado)}</b></div>
+      <div><span>Ganancia${u}</span><b class="${pl > 0 ? 'up' : pl < 0 ? 'down' : ''}">${fin.length ? sM(pl) : '—'}</b></div>
+      <div><span>ROI</span><b class="${pl > 0 ? 'up' : pl < 0 ? 'down' : ''}">${apostado ? spct(pl / apostado, 1) : '—'}</b></div>
+    </div>`;
+  }
+  function filaHTML(x, mia) {
+    const b = x.bet, e = x.e, r = e.r, cie = cierreDe(b), empezo = new Date(b.utc) <= new Date();
+    const clv = cie ? b.momio / cie - 1 : null;
+    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct(b.p * b.momio - 1, 0)}` : ''}`
+                    : `momio ${b.momio.toFixed(2)} (${esc(b.casa || 'casa')}) · modelo ${pct(b.p, 1)} · EV ${spct(b.ev, 0)}`;
+    const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}` : '';
+    const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
+    const linea2 = [res, cl].filter(Boolean).join(' · ');
+    return `<div class="bet" data-uid="${esc(b.uid || '')}">
+      <div class="b-main">
+        <span class="b-meta">${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
+        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+        <span class="b-line">${det}</span>
+        ${linea2 ? `<span class="b-line">${linea2}</span>` : ''}
+      </div>
+      <div class="b-side"><span class="pill ${e.cls}">${esc(e.label.toUpperCase())}</span>${e.fin ? `<span class="b-pl ${e.pl > 0 ? 'up' : e.pl < 0 ? 'down' : ''}">${sM(e.pl)}</span>` : ''}</div>
+      ${mia ? `<div class="b-act">
+        <label class="muted" style="font-size:12px">Resultado
+          <select data-act="manual">${[['', 'Automático'], ['w', 'Ganada'], ['l', 'Perdida'], ['p', 'Nula (devuelta)']].map(([v, t]) => `<option value="${v}"${(b.manual || '') === v ? ' selected' : ''}>${t}</option>`).join('')}</select>
+        </label>
+        <button data-act="borrar">Borrar</button>
+      </div>` : ''}
+    </div>`;
+  }
+  const ordenar = lista => [...lista.filter(x => !x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)), ...lista.filter(x => x.e.fin).sort((a, b) => b.bet.utc.localeCompare(a.bet.utc))];
+  const curva = lista => { let s = 0; return lista.filter(x => x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)).map(x => ({ u: (s += x.e.pl), txt: `${x.bet.local}–${x.bet.visita}, ${x.bet.mercado} (${sM(x.e.pl)})` })); };
+
+  function renderMias() {
+    const el = $('#reg-mias');
+    const lista = mias.map(b => ({ bet: b, stake: b.monto, e: estado(b, b.monto) }));
+    const pts = curva(lista);
+    el.innerHTML = `
+      ${lsOK ? '' : '<p class="warning">Este navegador no permite guardar datos (puede ser modo privado). Lo que guardes se perderá al cerrar la página.</p>'}
+      <div class="card">
+        <h3>Resumen</h3>
+        ${resumen(lista, '')}
+        ${pts.length >= 2 ? '<h4>Ganancia acumulada</h4><div class="chart" id="chart-mias"></div><p class="note">Cada punto es una apuesta ya liquidada, en orden de fecha.</p>' : ''}
+      </div>
+      <div class="card">
+        <h3>Apuestas</h3>
+        ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, true)).join('')}</div>`
+          : '<p class="empty">Todavía no guardas ninguna apuesta. Abre un partido, ve a Mercados, escribe el momio de tu casa y el monto, y toca "Guardar en mi registro".</p>'}
+        <p class="note">Se liquidan solas con el resultado oficial, normalmente entre 30 minutos y 2 horas después del partido. Si algo no cuadra, cambia "Resultado" a mano. "Le ganaste al cierre" compara tu momio con el último de DraftKings antes del partido: si pasa seguido, es la mejor señal de que eliges bien.</p>
+      </div>
+      <div class="card">
+        <h3>Respaldo</h3>
+        <p class="note">Tus apuestas se guardan solo en este navegador. Si cambias de celular o borras los datos del navegador se pierden. Descarga un respaldo de vez en cuando; con "Cargar respaldo" las pasas a otro celular o computadora.</p>
+        <div class="backup">
+          <button class="btn ghost" id="bk-down"${mias.length ? '' : ' disabled'}>Descargar respaldo</button>
+          <button class="btn ghost" id="bk-up">Cargar respaldo</button>
+          <input type="file" id="bk-file" accept=".json,application/json" hidden>
+          <span class="muted" id="bk-msg" style="font-size:12.5px"></span>
+        </div>
+      </div>`;
+    if (pts.length >= 2) cumChart($('#chart-mias'), pts, '');
+    $$('.bet', el).forEach(row => {
+      const b = mias.find(x => x.uid === row.dataset.uid); if (!b) return;
+      const s = $('select[data-act="manual"]', row), del = $('button[data-act="borrar"]', row);
+      s.addEventListener('change', () => { b.manual = s.value || null; guardarMias(); renderMias(); });
+      del.addEventListener('click', () => {
+        if (del.dataset.ok) { mias = mias.filter(x => x !== b); guardarMias(); renderMias(); return; }
+        del.dataset.ok = '1'; del.textContent = '¿Seguro? Toca otra vez'; del.classList.add('danger');
+        setTimeout(() => { if (del.isConnected) { delete del.dataset.ok; del.textContent = 'Borrar'; del.classList.remove('danger'); } }, 4000);
+      });
+    });
+    $('#bk-down').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify({ app: 'laliga-analisis', version: 1, apuestas: mias }, null, 1)], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `mis-apuestas-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    });
+    $('#bk-up').addEventListener('click', () => $('#bk-file').click());
+    $('#bk-file').addEventListener('change', ev => {
+      const f = ev.target.files[0]; if (!f) return;
+      f.text().then(txt => {
+        const j = JSON.parse(txt), lst = Array.isArray(j) ? j : j.apuestas;
+        if (!Array.isArray(lst)) throw new Error('formato');
+        const ok = lst.filter(b => b && b.uid && b.id && b.utc && typeof b.momio === 'number' && typeof b.monto === 'number');
+        const ya = new Set(mias.map(b => b.uid)); const nuevas = ok.filter(b => !ya.has(b.uid));
+        mias = mias.concat(nuevas); guardarMias(); renderMias();
+        $('#bk-msg').textContent = `Listo: ${nuevas.length} apuesta${nuevas.length === 1 ? '' : 's'} nueva${nuevas.length === 1 ? '' : 's'} (${ok.length - nuevas.length} ya estaban).`;
+      }).catch(() => { $('#bk-msg').textContent = 'Ese archivo no es un respaldo válido.'; });
+    });
+  }
+
+  function renderModelo() {
+    const el = $('#reg-modelo');
+    const lista = (R.modelo || []).map(b => ({ bet: Object.assign({}, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
+    lista.forEach(x => { x.e = estado(x.bet, 1); });
+    const pts = curva(lista);
+    const conCierre = lista.filter(x => new Date(x.bet.utc) <= new Date() && cierreDe(x.bet));
+    const mejor = conCierre.filter(x => x.bet.momio > cierreDe(x.bet) + 1e-9).length;
+    const desde = (R.modelo || []).map(b => b.visto).sort()[0];
+    el.innerHTML = `
+      <div class="card">
+        <h3>Si hubieras apostado 1 unidad a cada PICK</h3>
+        <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no.</p>
+        ${resumen(lista, 'u')}
+        ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
+          return sub.length < lista.length ? `<p class="note">Sin los "Lejos del mercado" (EV de 20% o más, los que más perdieron en la prueba): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
+        ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
+        ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
+      </div>
+      <div class="card">
+        <h3>Picks</h3>
+        ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, false)).join('')}</div>` : '<p class="empty">Todavía no hay picks registrados. Se agregan solos en la próxima actualización.</p>'}
+      </div>`;
+    if (pts.length >= 2) cumChart($('#chart-modelo'), pts, 'u');
+  }
+
+  function renderRegistro() { renderMias(); renderModelo(); }
+  $$('#reg-tabs button').forEach(b => b.addEventListener('click', () => {
+    $$('#reg-tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+    $('#reg-mias').hidden = b.dataset.r !== 'mias'; $('#reg-modelo').hidden = b.dataset.r !== 'modelo';
+  }));
 
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);

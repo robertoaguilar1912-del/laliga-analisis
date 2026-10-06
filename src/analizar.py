@@ -102,39 +102,41 @@ def analizar_partidos(df, promo, modelo, corners_model, equipos_info):
         if mom.get('ml'):
             dec = [am_to_dec(x) for x in mom['ml']]
             imp = np.array([1 / d for d in dec]); mkt = (imp / imp.sum()).tolist()
-            for nm, p, d, am, pm in zip([f'Gana {L}', 'Empate', f'Gana {V}'], (pH, pD, pA), dec, mom['ml'], mkt):
+            for k_, nm, p, d, am, pm in zip(('1', 'X', '2'), [f'Gana {L}', 'Empate', f'Gana {V}'], (pH, pD, pA), dec, mom['ml'], mkt):
                 ev = p * d - 1
-                con_momio.append({'mercado': nm, 'grupo': 'Resultado', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': pm,
+                con_momio.append({'k': k_, 'mercado': nm, 'grupo': 'Resultado', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': pm,
                                   'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         if mom.get('ou'):
             line = mom['ou_linea']; pO = float(np.mean(tot > line))
             dec = [am_to_dec(x) for x in mom['ou']]
             imp = np.array([1 / d for d in dec]); pm2 = imp / imp.sum()
-            for nm, p, d, am, pm in ((f'Más de {line} goles', pO, dec[0], mom['ou'][0], pm2[0]), (f'Menos de {line} goles', 1 - pO, dec[1], mom['ou'][1], pm2[1])):
+            for k_, nm, p, d, am, pm in ((f'O:{line}', f'Más de {line} goles', pO, dec[0], mom['ou'][0], pm2[0]),
+                                          (f'U:{line}', f'Menos de {line} goles', 1 - pO, dec[1], mom['ou'][1], pm2[1])):
                 ev = p * d - 1
-                con_momio.append({'mercado': nm, 'grupo': 'Goles', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': float(pm),
+                con_momio.append({'k': k_, 'mercado': nm, 'grupo': 'Goles', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': float(pm),
                                   'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         for side, (ln, am) in enumerate(mom.get('spread') or []):
             margin = (hg - ag) if side == 0 else (ag - hg)
             p = float(np.mean(margin + float(ln) > 0)); ev = p * am_to_dec(am) - 1
-            con_momio.append({'mercado': f"Hándicap {L if side == 0 else V} {ln}", 'grupo': 'Hándicap', 'p': p, 'momio': f'{am_to_dec(am):.2f}',
+            con_momio.append({'k': f'H{side + 1}:{ln}', 'mercado': f"Hándicap {L if side == 0 else V} {ln}", 'grupo': 'Hándicap', 'p': p, 'momio': f'{am_to_dec(am):.2f}',
                               'p_mercado': None, 'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         sin = []
-        add = lambda nm, grp, p: sin.append({'mercado': nm, 'grupo': grp, 'p': float(p), 'justo': fair_dec(float(p))})
-        add(f'Gana {L}', 'Resultado', pH); add('Empate', 'Resultado', pD); add(f'Gana {V}', 'Resultado', pA)
-        add(f'{L} o empate (1X)', 'Doble oportunidad', pH + pD); add(f'{V} o empate (X2)', 'Doble oportunidad', pA + pD)
-        add('No hay empate (12)', 'Doble oportunidad', pH + pA)
-        add(f'{L} (empate no acción)', 'Empate no acción', pH / (pH + pA)); add(f'{V} (empate no acción)', 'Empate no acción', pA / (pH + pA))
+        # 'k' es la clave con la que la página liquida la apuesta cuando termina el partido
+        add = lambda k_, nm, grp, p: sin.append({'k': k_, 'mercado': nm, 'grupo': grp, 'p': float(p), 'justo': fair_dec(float(p))})
+        add('1', f'Gana {L}', 'Resultado', pH); add('X', 'Empate', 'Resultado', pD); add('2', f'Gana {V}', 'Resultado', pA)
+        add('1X', f'{L} o empate (1X)', 'Doble oportunidad', pH + pD); add('X2', f'{V} o empate (X2)', 'Doble oportunidad', pA + pD)
+        add('12', 'No hay empate (12)', 'Doble oportunidad', pH + pA)
+        add('DNB1', f'{L} (empate no acción)', 'Empate no acción', pH / (pH + pA)); add('DNB2', f'{V} (empate no acción)', 'Empate no acción', pA / (pH + pA))
         for ln in (1.5, 2.5, 3.5):
-            add(f'Más de {ln} goles', 'Goles', np.mean(tot > ln))
+            add(f'O:{ln}', f'Más de {ln} goles', 'Goles', np.mean(tot > ln)); add(f'U:{ln}', f'Menos de {ln} goles', 'Goles', np.mean(tot < ln))
         btts = np.mean((hg > 0) & (ag > 0))
-        add('Ambos anotan: Sí', 'Goles', btts); add('Ambos anotan: No', 'Goles', 1 - btts)
-        add(f'Anota {L}', 'Goles por equipo', np.mean(hg > 0)); add(f'Anota {V}', 'Goles por equipo', np.mean(ag > 0))
-        add(f'Portería en cero {L}', 'Goles por equipo', np.mean(ag == 0)); add(f'Portería en cero {V}', 'Goles por equipo', np.mean(hg == 0))
+        add('BTTS:S', 'Ambos anotan: Sí', 'Goles', btts); add('BTTS:N', 'Ambos anotan: No', 'Goles', 1 - btts)
+        add('A1', f'Anota {L}', 'Goles por equipo', np.mean(hg > 0)); add('A2', f'Anota {V}', 'Goles por equipo', np.mean(ag > 0))
+        add('CS1', f'Portería en cero {L}', 'Goles por equipo', np.mean(ag == 0)); add('CS2', f'Portería en cero {V}', 'Goles por equipo', np.mean(hg == 0))
         cn = corners_model.predict(h, a)
         for ln in (8.5, 9.5, 10.5):
-            add(f'Córners: más de {ln}', 'Córners', cn[f'O{ln}'])
-        add(f'Córners {L}: más de 4.5', 'Córners', cn['loc_O4.5']); add(f'Córners {V}: más de 3.5', 'Córners', cn['vis_O3.5'])
+            add(f'CO:{ln}', f'Córners: más de {ln}', 'Córners', cn[f'O{ln}']); add(f'CU:{ln}', f'Córners: menos de {ln}', 'Córners', 1 - cn[f'O{ln}'])
+        add('C1O:4.5', f'Córners {L}: más de 4.5', 'Córners', cn['loc_O4.5']); add('C2O:3.5', f'Córners {V}: más de 3.5', 'Córners', cn['vis_O3.5'])
         sc = pd.Series([f'{x}-{y}' for x, y in zip(hg, ag)]).value_counts().head(6)
         margen = np.clip(hg - ag, -4, 4)
         # texto

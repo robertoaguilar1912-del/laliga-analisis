@@ -1,20 +1,21 @@
 """
 Punto de entrada que corre GitHub Actions.
 
-    python src/ejecutar.py completo       # todos los días: descarga todo, recalcula y arma la página
-    python src/ejecutar.py alineaciones   # cada 30 min: solo si hay un partido por empezar sin alineación
+    python src/ejecutar.py completo   # todos los días: descarga todo, recalcula y arma la página
+    python src/ejecutar.py rapido     # cada 30 min: alineaciones de partidos por empezar y
+                                      # resultados de partidos recién terminados (para liquidar picks)
 
 Escribe cambios=si/no en GITHUB_OUTPUT para que el flujo sepa si debe publicar.
 """
-import json
 import os
 import sys
-from datetime import datetime
 
 import fuentes
 import analizar
+import registro
 import construir
-from config import RAW, ahora
+import revisar
+from config import RAW, ESPN_DIR, ahora
 
 
 def salida(cambios):
@@ -24,26 +25,18 @@ def salida(cambios):
             f.write(f'cambios={cambios}\n')
 
 
-def hay_partido_cerca(minutos=120):
-    p = RAW / 'proximos.json'
-    if not p.exists():
-        return False
-    for e in json.load(open(p)):
-        faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora()).total_seconds() / 60
-        if -30 <= faltan <= minutos and not e.get('alineaciones'):
-            return True
-    return False
-
-
 def main(modo):
     print(f'== {modo} · {ahora():%Y-%m-%d %H:%M} UTC')
-    if modo == 'alineaciones':
-        if not hay_partido_cerca():
-            print('  ningún partido por empezar sin alineación')
+    if modo in ('rapido', 'alineaciones'):
+        tareas = revisar.pendientes()
+        if not tareas['alineaciones'] and not tareas['resultados']:
+            print('  nada pendiente')
             return salida('no')
-        antes = (RAW / 'proximos.json').read_text()
-        fuentes.descargar_proximos()
-        if (RAW / 'proximos.json').read_text() == antes:
+        antes = ((RAW / 'proximos.json').read_text(), len(list(ESPN_DIR.glob('*.json'))))
+        if tareas['resultados']:
+            print('- resultados'); fuentes.descargar_detalle_temporada()
+        print('- próximos partidos'); fuentes.descargar_proximos()
+        if ((RAW / 'proximos.json').read_text(), len(list(ESPN_DIR.glob('*.json')))) == antes:
             return salida('no')
     else:
         pasos = [('football-data', fuentes.descargar_football_data), ('detalle de partidos', fuentes.descargar_detalle_temporada),
@@ -56,6 +49,7 @@ def main(modo):
             except Exception as e:   # una fuente caída no debe tumbar la página
                 print(f'  ERROR en {nombre}: {e!r}')
     print('- análisis'); analizar.main()
+    print('- registro'); registro.actualizar()
     print('- página'); construir.main()
     salida('si')
 

@@ -7,6 +7,9 @@ Página de análisis de La Liga que se actualiza sola. Por cada partido muestra:
 - bajas: parte oficial de lesiones, sanciones, titulares no convocados y alineaciones confirmadas;
 - cansancio por Champions, Europa League, Conference y Copa, e historial de enfrentamientos.
 
+La pestaña **Registro** guarda tus apuestas (desde la calculadora de cada partido) y las liquida sola cuando termina el partido;
+también lleva el registro automático de cada PICK del modelo para ver en vivo si gana o pierde.
+
 Incluye también la tabla, las estadísticas de los 20 equipos y el resultado honesto de la prueba del modelo con temporadas pasadas.
 
 ## Cómo se actualiza
@@ -16,7 +19,7 @@ GitHub Actions corre `.github/workflows/actualizar.yml`:
 | Cuándo | Qué hace |
 |---|---|
 | Todos los días, 5:07 a. m. (Honduras) | Baja resultados, detalle de partidos, copas, próximos partidos con momios y lesiones; recalcula y publica |
-| Cada 30 minutos | Si un partido empieza en menos de 2 horas y no tiene alineación guardada, la busca y vuelve a publicar |
+| Cada 30 minutos | Si un partido empieza en menos de 2 horas sin alineación guardada, la busca; si uno terminó y no tiene resultado, lo baja para liquidar los picks. Si hubo cambios, vuelve a publicar |
 | Al subir cambios de código | Actualización completa |
 | A mano | Pestaña **Actions → Actualizar página → Run workflow** |
 
@@ -43,13 +46,18 @@ src/model.py        modelo Dixon-Coles y simulación
 src/corners.py      modelo de córners
 src/analizar.py     arma data/sitio.json con todo lo que muestra la página
 src/construir.py    arma site/index.html desde src/plantilla.html
-src/ejecutar.py     punto de entrada (modos: completo, alineaciones)
-src/revisar.py      revisión rápida de partidos por empezar
+src/registro.py     registro de los PICK del modelo, momios de cierre y resultados para liquidar
+src/ejecutar.py     punto de entrada (modos: completo, rapido)
+src/revisar.py      revisión rápida: partidos por empezar sin alineación o terminados sin resultado
 data/raw, data/espn datos descargados (se guardan para no volver a bajarlos)
 data/modelo         resultado de la prueba del modelo (2020-2026)
+data/registro       picks del modelo (modelo.json) y últimos momios antes de cada partido (cierres.json)
 ```
 
 Correr en local: `pip install -r requirements.txt` y luego `python src/ejecutar.py completo`.
+
+Las apuestas que guardas en la pestaña Registro viven en tu navegador (no en el repositorio). Usa "Descargar respaldo"
+para no perderlas y "Cargar respaldo" para pasarlas a otro dispositivo.
 
 ## Aviso
 
