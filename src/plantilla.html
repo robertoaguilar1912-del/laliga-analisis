@@ -876,10 +876,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     $('#verdict').innerHTML = `
       <div><span class="eyebrow">ROI siguiendo los PICK</span><span class="big ${neg ? 'neg' : ''}">${spct(main.roi)}</span><span class="what">${num(main.n)} apuestas: ${sNum(main.ganancia_u)} unidades.${ic}</span></div>
       <div><span class="eyebrow">Meses en positivo</span><span class="big">${B.meses_positivos}<small style="font-size:20px;color:var(--ink-3)"> de ${B.meses_total}</small></span><span class="what">${B.meses_total - B.meses_positivos} meses terminaron en pérdida.</span></div>
-      <div><span class="eyebrow">Contra el momio de cierre</span><span class="big ${main.clv_medio < 0 ? 'neg' : ''}">${spct(main.clv_medio)}</span><span class="what">${pct(main.pct_gana_cierre)} de sus apuestas le ganaron al cierre.</span></div>
+      ${main.clv_medio == null
+        ? `<div><span class="eyebrow">Acierto</span><span class="big">${pct(main.aciertos)}</span><span class="what">Momio medio ${main.cuota_media.toFixed(2)}. Para esta liga solo hay cuotas de cierre, así que no se puede medir si le ganaba al cierre.</span></div>`
+        : `<div><span class="eyebrow">Contra el momio de cierre</span><span class="big ${main.clv_medio < 0 ? 'neg' : ''}">${spct(main.clv_medio)}</span><span class="what">${pct(main.pct_gana_cierre)} de sus apuestas le ganaron al cierre.</span></div>`}
       <div class="conclusion">${neg
         ? '<strong>El modelo informa, no adivina.</strong> Sus probabilidades y momios justos sirven para comparar y evitar momios malos, pero no le ganan a la casa de forma constante.'
-        : `<strong>Salió positivo, pero con cuidado.</strong> ${main.roi_ic95 && main.roi_ic95[0] < 0 ? 'El rango probable incluye perder, así que puede ser suerte.' : 'Aun así, lo pasado no garantiza lo que viene.'} ${main.clv_medio < 0 ? 'Además, sus momios fueron peores que los de cierre: la casa terminó corrigiendo la mayoría de sus PICK.' : ''} Compruébalo en vivo en la pestaña Registro antes de confiar en él.`}</div>`;
+        : `<strong>Salió positivo, pero con cuidado.</strong> ${main.roi_ic95 && main.roi_ic95[0] < 0 ? 'El rango probable incluye perder, así que puede ser suerte.' : 'Aun así, lo pasado no garantiza lo que viene.'} ${main.clv_medio != null && main.clv_medio < 0 ? 'Además, sus momios fueron peores que los de cierre: la casa terminó corrigiendo la mayoría de sus PICK.' : ''} Compruébalo en vivo en la pestaña Registro antes de confiar en él.`}</div>`;
     if (D.experimentos && D.experimentos.length) {
       const cls = v => v < 0 ? 'neg' : 'posv';
       $('#tbl-exp').innerHTML = `<thead><tr><th class="l">Prueba</th><th>Periodo</th><th class="l">Comparado con</th><th>Precisión modelo</th><th>Referencia</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>` +
@@ -892,7 +894,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     $('#why-title').textContent = neg ? 'Por qué pierde' : 'Por qué no hay que confiarse';
     $('#why').innerHTML = `
       <div><h4>La casa sabe más</h4><p class="note" style="color:var(--ink-2)">Usa alineaciones, lesiones y el dinero de miles de apostadores. Su margen es de cerca de 5%: para ganar hay que ser mejor que ella por más que eso.</p></div>
-      <div><h4>Cuando no coinciden, suele fallar el modelo</h4><p class="note" style="color:var(--ink-2)">El "valor" aparece donde el modelo se equivoca. Mira en la gráfica de abajo cómo le fue según cuánto valor veía.</p></div>
+      <div><h4>Cuando no coinciden, suele fallar el modelo</h4><p class="note" style="color:var(--ink-2)">El "valor" aparece donde el modelo se equivoca. En "¿Más valor es más ganancia?" se ve cómo le fue según cuánto valor veía.</p></div>
       ${fav.real - fav.pred > 0.02 ? `<div><h4>Subestima a algunos favoritos</h4><p class="note" style="color:var(--ink-2)">Cuando le dio ${pct(fav.pred)} a un equipo, ese equipo ganó ${pct(fav.real)} de las veces. Desconfía de los PICK contra grandes favoritos.</p></div>` : ''}
       <div><h4>Bajas y cansancio ya están en el momio</h4><p class="note" style="color:var(--ink-2)">El momio se mueve en minutos cuando sale la noticia; el modelo se entera hasta después.</p></div>`;
     curve(); evChart(); cal(fav);

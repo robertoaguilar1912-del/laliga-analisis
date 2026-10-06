@@ -45,9 +45,10 @@ class DixonColes:
         gy = matches.FTAG.values.astype(float)
         # Los tiros a puerta son menos "ruidosos" que los goles: mezclamos ambos.
         # c = goles por tiro a puerta en la ventana de datos (≈ 0.31 en La Liga)
-        if self.alpha < 1:
-            hst, ast = matches.HST.values.astype(float), matches.AST.values.astype(float)
-            ok = ~(np.isnan(hst) | np.isnan(ast))
+        hst = matches.HST.values.astype(float) if 'HST' in matches else np.full(len(matches), np.nan)
+        ast = matches.AST.values.astype(float) if 'AST' in matches else np.full(len(matches), np.nan)
+        ok = ~(np.isnan(hst) | np.isnan(ast))
+        if self.alpha < 1 and ok.sum() >= 30:
             c = (gx[ok].sum() + gy[ok].sum()) / (hst[ok].sum() + ast[ok].sum())
             # donde no hay tiros registrados se usan solo los goles
             x = np.where(ok, self.alpha * gx + (1 - self.alpha) * c * np.nan_to_num(hst), gx)
