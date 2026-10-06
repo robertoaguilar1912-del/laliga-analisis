@@ -14,7 +14,7 @@ igual para los picks del modelo que para las apuestas que guardas tú.
 import json
 from datetime import datetime
 
-from config import DATOS, ESPN_DIR, LIGAS, ahora
+from config import DATOS, ESPN_DIR, SECCIONES, ahora
 
 REG = DATOS / 'registro'
 
@@ -61,12 +61,12 @@ def actualizar():
     t = ahora()
     nuevos = 0
     ligas = []
-    for liga, L in LIGAS.items():
+    for liga, nombre in SECCIONES.items():
         datos = _leer(DATOS / 'ligas' / f'{liga}.json', None)
         if not datos:
             continue
         prox = [m for m in datos['partidos'] if datetime.fromisoformat(m['utc'].replace('Z', '+00:00')) > t]
-        ligas.append({'id': liga, 'nombre': L['nombre'], 'partidos': len(prox),
+        ligas.append({'id': liga, 'nombre': nombre, 'partidos': len(prox),
                       'siguiente': min((m['utc'] for m in prox), default=None)})
         for m in prox:
             if not m['con_momio']:

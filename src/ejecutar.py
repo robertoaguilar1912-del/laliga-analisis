@@ -13,6 +13,7 @@ import time
 
 import fuentes
 import analizar
+import nfl
 import registro
 import construir
 import revisar
@@ -47,7 +48,7 @@ def _paso(nombre, f, *a, **k):
 
 def main(modo):
     t0 = time.time()
-    ligas = None
+    ligas, tareas = None, {}
     print(f'== {modo} · {ahora():%Y-%m-%d %H:%M} UTC')
     if modo in ('rapido', 'alineaciones'):
         tareas = revisar.pendientes()
@@ -55,12 +56,14 @@ def main(modo):
             print('  nada pendiente')
             return salida('no')
         ligas = [l for l in tareas if l in LIGAS]
-        antes = _foto(ligas)
+        antes = _foto(list(tareas))
+        if 'nfl' in tareas:
+            _paso('NFL', nfl.descargar_espn)
         for liga in ligas:
             if tareas[liga]['resultados']:
                 _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
-        if _foto(ligas) == antes:
+        if _foto(list(tareas)) == antes:
             return salida('no')
     else:
         for liga in LIGAS:
@@ -73,7 +76,12 @@ def main(modo):
         _paso('lesiones', fuentes.descargar_lesiones)
         _paso('tablas', fuentes.descargar_tablas)
         _paso('historia', fuentes.descargar_historia)
-    print('- análisis'); analizar.main(ligas if modo in ('rapido', 'alineaciones') else None)
+        _paso('NFL', nfl.descargar)
+    print('- análisis')
+    if ligas is None or ligas:
+        analizar.main(ligas if modo in ('rapido', 'alineaciones') else None)
+    if ligas is None or 'nfl' in tareas:
+        _paso('análisis NFL', nfl.analizar)
     print('- registro'); registro.actualizar()
     print('- página'); construir.main()
     salida('si')

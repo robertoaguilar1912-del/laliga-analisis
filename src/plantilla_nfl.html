@@ -1,0 +1,478 @@
+<title>Laboratorio · NFL</title>
+<!--__ESTILOS__-->
+<style>
+/* NFL: misma base visual que las ligas de fútbol */
+.gcard { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; gap: 10px 20px; align-items: center; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; }
+.gcard:hover { border-color: var(--accent); }
+@media (max-width: 720px) { .gcard { grid-template-columns: minmax(0, 1fr); } .gcard .go { display: none; } }
+.lines { display: grid; grid-template-columns: auto 1fr 1fr; gap: 4px 12px; font-family: var(--font-data); font-size: 12px; color: var(--ink-2); align-items: baseline; }
+.lines .h { font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.lines b { color: var(--ink); font-weight: 700; }
+.rec { font-family: var(--font-data); font-size: 11px; color: var(--ink-3); flex: none; }
+.at { font-family: var(--font-data); font-size: 11px; color: var(--ink-3); margin: 0 2px; }
+.move { background: color-mix(in srgb, var(--warn) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--warn) 60%, var(--surface)); border-radius: 10px; padding: 9px 12px; font-size: 13px; }
+.divs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 760px) { .divs { grid-template-columns: minmax(0, 1fr); } }
+.qb { font-weight: 700; }
+.calc label.sm { font-size: 12px; color: var(--ink-3); display: grid; gap: 3px; }
+.calc .calc-row > label.sm { flex: 1 1 140px; }
+.calc .calc-row > label.sm select, .calc .calc-row > label.sm input { width: 100%; }
+.keybar rect.key { fill: var(--accent); }
+</style>
+
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Laboratorio <span class="liga">NFL</span></div>
+    <span class="status" id="status">Cargando…</span>
+  </header>
+  <nav class="ligas" id="ligas" aria-label="Ligas"></nav>
+  <nav class="tabs" role="tablist" aria-label="Secciones">
+    <button role="tab" data-view="juegos" aria-selected="true">Juegos</button>
+    <button role="tab" data-view="divisiones" aria-selected="false">Divisiones</button>
+    <button role="tab" data-view="equipos" aria-selected="false">Equipos</button>
+    <button role="tab" data-view="modelo" aria-selected="false">El modelo</button>
+    <button role="tab" data-view="registro" aria-selected="false">Registro</button>
+  </nav>
+
+  <section class="view" id="v-juegos">
+    <div id="list-wrap" class="view" style="padding:0">
+      <div class="intro">
+        <p class="eyebrow" id="j-eyebrow"></p>
+        <h2>Próximos juegos</h2>
+        <p>Toca un juego para ver su ficha: probabilidades, spread y total del modelo contra los de la casa, lesiones, cómo vienen los dos equipos y la calculadora para cualquier línea de tu casa. Horas de Honduras.</p>
+      </div>
+      <p class="warning" id="j-warning"></p>
+      <div class="mlist" id="glist"></div>
+    </div>
+    <div id="game-detail" class="view" style="padding:0" hidden></div>
+  </section>
+
+  <section class="view" id="v-divisiones" hidden>
+    <div class="intro">
+      <p class="eyebrow" id="d-eyebrow"></p>
+      <h2>Divisiones</h2>
+      <p>Récord ganados-perdidos-empatados de temporada regular. "Contra spread" es cuántas veces cubrió la línea de cierre de la casa. El orden usa récord y diferencia de puntos (desempate simplificado). Toca un equipo para ver su perfil.</p>
+    </div>
+    <div class="divs" id="divs"></div>
+  </section>
+
+  <section class="view" id="v-equipos" hidden>
+    <div class="intro">
+      <p class="eyebrow">Por juego · temporada actual</p>
+      <h2>Equipos</h2>
+      <p>"Poder" es cuántos puntos mejor (o peor) que un equipo promedio lo ve el modelo en cancha neutral. Toca el encabezado de una columna para ordenar y un equipo para ver su perfil.</p>
+    </div>
+    <div class="tbl-wrap"><table class="data min900" id="tbl-equipos"></table></div>
+    <div id="team-profile" class="pane"></div>
+  </section>
+
+  <section class="view" id="v-modelo" hidden></section>
+
+  <footer>
+    <p id="foot-data"></p>
+    <p>Análisis estadístico con fines informativos. No es una casa de apuestas ni asesoría. Juega responsable, solo +18.</p>
+  </footer>
+</div>
+
+<script>
+(async function () {
+  const LIGAS = /*__LIGAS__*/;
+  const $ = (s, el) => (el || document).querySelector(s);
+  const $$ = (s, el) => [...(el || document).querySelectorAll(s)];
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+  const pct = (v, d = 0) => v == null ? '—' : (v * 100).toFixed(d) + '%';
+  const spct = (v, d = 1) => (v >= 0 ? '+' : '−') + Math.abs(v * 100).toFixed(d) + '%';
+  const num = (v, d = 0) => v == null ? '—' : Number(v).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const sNum = (v, d = 0) => (v >= 0 ? '+' : '−') + num(Math.abs(v), d);
+  const sgn = (v, d = 1) => v == null ? '—' : (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(d).replace(/\.0$/, '');
+  const tz = 'America/Tegucigalpa';
+  const fdate = (iso, opts) => new Date(iso.length === 10 ? iso + 'T12:00:00Z' : iso).toLocaleDateString('es-HN', Object.assign({ timeZone: iso.length === 10 ? 'UTC' : tz }, opts || { day: 'numeric', month: 'short' }));
+  const fdt = iso => { const d = new Date(iso); return (d.toLocaleDateString('es-HN', { timeZone: tz, weekday: 'short', day: 'numeric', month: 'short' }) + ' · ' + d.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })).replace(/\./g, '').toUpperCase(); };
+  const amToDec = a => a > 0 ? 1 + a / 100 : 1 + 100 / Math.abs(a);
+  const parseOdds = s => { s = String(s).trim().replace(',', '.').replace('−', '-'); if (!s) return null; const v = parseFloat(s); if (!isFinite(v)) return null; if (/^[+-]/.test(s) || Math.abs(v) >= 100) return Math.abs(v) >= 100 ? amToDec(v) : null; if (v > 1 && v < 100) return v; return null; };
+  const verdictOf = ev => ev >= 0.05 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+  const rec = r => r ? `${r[0]}-${r[1]}${r[2] ? '-' + r[2] : ''}` : '—';
+  const corto = n => n.replace(' League', '');
+
+  // ---------------- selector de ligas
+  try { localStorage.setItem('laboratorio-liga', 'nfl'); } catch (e) { /* sin almacenamiento */ }
+  let futbol = 'laliga';
+  try { futbol = localStorage.getItem('laboratorio-futbol') || 'laliga'; } catch (e) { /* sin almacenamiento */ }
+  const chips = $('#ligas');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${id === 'nfl' ? 'nfl.html' : './?liga=' + id}" data-liga="${id}"${id === 'nfl' ? ' aria-current="page"' : ''}>${esc(corto(n))}<small></small></a>`).join('');
+  const actual = $('[aria-current]', chips);
+  const centrar = () => { if (actual) { const ra = actual.getBoundingClientRect(), rc = chips.getBoundingClientRect(); chips.scrollLeft += (ra.left + ra.width / 2) - (rc.left + rc.width / 2); } };
+  centrar();
+
+  const getJSON = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  let D, R;
+  try { [D, R] = await Promise.all([getJSON('datos/nfl.json'), getJSON('datos/registro.json').catch(() => null)]); }
+  catch (e) { $('#status').textContent = 'No se pudieron cargar los datos. Revisa tu conexión y recarga la página.'; return; }
+  R = R || { ligas: [] };
+  (R.ligas || []).forEach(l => { const x = $(`[data-liga="${l.id}"] small`, chips); if (x && l.partidos) x.textContent = l.partidos; });
+  centrar();
+  const G = D.partidos, E = D.equipos, B = D.backtest, I = D.info;
+  const upd = new Date(D.actualizado);
+  $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })}${D.datos_hasta ? ' · resultados hasta el ' + fdate(D.datos_hasta) : ''}`;
+
+  // apuestas guardadas (las mismas del registro de la página de fútbol)
+  const LS_KEY = 'laliga-mis-apuestas-v1';
+  let mias = [], lsOK = true;
+  try { const x = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); mias = Array.isArray(x) ? x : []; } catch (e) { lsOK = false; }
+  const guardarMias = () => { try { localStorage.setItem(LS_KEY, JSON.stringify(mias)); lsOK = true; } catch (e) { lsOK = false; } };
+
+  // ---------------- navegación
+  const views = ['juegos', 'divisiones', 'equipos', 'modelo'];
+  function showView(v) {
+    if (v === 'registro') { location.href = `./?liga=${futbol}#registro`; return; }
+    views.forEach(x => { $('#v-' + x).hidden = x !== v; });
+    $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
+  }
+  $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'juegos') showList(); if (b.dataset.view !== 'registro') history.replaceState(null, '', '#' + b.dataset.view); }));
+
+  // ---------------- probabilidades desde la distribución del modelo
+  // dist_m: diferencia local - visita de -50 a 50; dist_t: total de 10 a 90
+  const probM = (g, f) => g.dist_m.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0);
+  const probT = (g, f) => g.dist_t.reduce((a, p, i) => a + (f(i + 10) ? p : 0), 0);
+  function calcular(g, tipo, linea) {
+    let gana, push;
+    if (tipo === 'ML1') { gana = probM(g, k => k > 0); push = probM(g, k => k === 0); }
+    else if (tipo === 'ML2') { gana = probM(g, k => k < 0); push = probM(g, k => k === 0); }
+    else if (tipo === 'H1') { gana = probM(g, k => k + linea > 0); push = probM(g, k => k + linea === 0); }
+    else if (tipo === 'H2') { gana = probM(g, k => -k + linea > 0); push = probM(g, k => -k + linea === 0); }
+    else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
+    else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
+    const pierde = Math.max(0, 1 - gana - push);
+    return { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
+  }
+
+  // ---------------- lista de juegos
+  const principal = B ? B.estrategias[B.principal] : null;
+  $('#j-eyebrow').textContent = `NFL ${I.temporada} · ${G.length} juegos en los próximos días`;
+  $('#j-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (principal
+    ? `En la prueba con temporadas pasadas, seguirlos ${principal.roi < 0 ? 'perdió' : 'dio'} ${spct(principal.roi)} (pestaña "El modelo"). El modelo no sabe cuánto vale cada quarterback: si la línea se movió mucho, casi siempre es por una baja que él no ve.`
+    : 'Todavía no hay prueba con temporadas pasadas.');
+  const lejos = g => g.dk && g.dk.spread != null && Math.abs(g.dk.spread - g.linea_modelo) >= 4;
+  const movida = g => g.dk && g.dk.spread != null && g.dk.spread_abre != null && Math.abs(g.dk.spread - g.dk.spread_abre) >= 2.5;
+  const graves = l => (l || []).filter(x => /out|doubtful|reserve/i.test(x.estado));
+  $('#glist').innerHTML = G.map((g, i) => {
+    const th = E[g.local_fd], ta = E[g.visita_fd];
+    const best = g.con_momio.filter(r => r.veredicto === 'PICK').sort((a, b) => b.ev - a.ev)[0];
+    const qbDuda = [...(g.lesiones.local || []), ...(g.lesiones.visita || [])].filter(x => x.pos === 'QB' && !/active/i.test(x.estado));
+    const nMias = mias.filter(b => b.id === g.id).length;
+    const tags = [
+      best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (g.con_momio.length ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>'),
+      movida(g) ? `<span class="tag alert">La línea se movió de ${sgn(g.dk.spread_abre)} a ${sgn(g.dk.spread)}</span>` : '',
+      lejos(g) ? '<span class="tag alert">Modelo lejos del mercado</span>' : '',
+      ...qbDuda.map(x => `<span class="tag alert">QB ${esc(x.nombre)}: ${esc(x.estado)}</span>`),
+      nMias ? `<span class="tag">Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}</span>` : ''];
+    return `<button class="gcard" data-i="${i}" aria-label="Ver ${esc(g.visita_es)} en ${esc(g.local_es)}">
+      <span class="mmeta">${fdt(g.utc)} · ${g.semana ? 'Semana ' + g.semana + ' · ' : ''}${esc(g.estadio)}</span>
+      <span class="mteams">
+        <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(g.visita_es)}</span><span class="rec">${rec(ta.record)}</span></span>
+        <span class="mteam"><span class="at">en</span></span>
+        <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(g.local_es)}</span><span class="rec">${rec(th.record)}</span></span>
+      </span>
+      <span class="lines">
+        <span></span><span class="h">Modelo</span><span class="h">Casa</span>
+        <span class="h">Spread local</span><b>${sgn(g.linea_modelo)}</b><span>${g.dk.spread == null ? '—' : sgn(g.dk.spread)}</span>
+        <span class="h">Total</span><b>${g.total.toFixed(1)}</b><span>${g.dk.total == null ? '—' : g.dk.total}</span>
+        <span class="h">Gana local</span><b>${pct(g.pH / (g.pH + g.pA))}</b><span>${g.mercado ? pct(g.mercado[0]) : '—'}</span>
+      </span>
+      <span class="go">Ver ficha →</span>
+      <span class="tags">${tags.join('')}</span>
+    </button>`;
+  }).join('') || '<p class="empty">No hay juegos de la NFL en los próximos días. La página se actualiza sola cuando aparezcan.</p>';
+  $$('.gcard').forEach(b => b.addEventListener('click', () => { showGame(+b.dataset.i); history.replaceState(null, '', '#j' + (+b.dataset.i + 1)); }));
+  function showList() { $('#game-detail').hidden = true; $('#list-wrap').hidden = false; }
+
+  // ---------------- ficha del juego
+  function lesionesHTML(l) {
+    const xs = (l || []).slice().sort((a, b) => (b.pos === 'QB') - (a.pos === 'QB'));
+    return xs.length ? `<div class="plist">${xs.map(x => `<div class="pr"><span class="${x.pos === 'QB' ? 'qb' : ''}">${esc(x.nombre)} <small>${esc(x.pos)}${x.tipo ? ' · ' + esc(x.tipo) : ''}</small></span><span class="flag ${/out|reserve/i.test(x.estado) ? 'out' : /doubtful|questionable/i.test(x.estado) ? 'doubt' : ''}">${esc(x.estado)}</span></div>`).join('')}</div>`
+      : '<p class="empty">Sin lesionados reportados.</p>';
+  }
+  function equipoHTML(t) {
+    return `<div class="kv">
+        <div><span>Récord</span><b>${rec(t.record)}</b></div>
+        <div><span>Puntos a favor</span><b>${t.pf_pp}</b></div>
+        <div><span>Puntos en contra</span><b>${t.pa_pp}</b></div>
+        <div><span>Contra spread</span><b>${rec(t.ats)}</b></div>
+        <div><span>Más/menos</span><b>${rec(t.ou)}</b></div>
+        <div><span>Poder</span><b>${t.rating ? sgn(t.rating.neto) : '—'}</b></div>
+      </div>
+      <p class="note">Ataque ${t.rating ? sgn(t.rating.ataque) : '—'} y defensa ${t.rating ? sgn(t.rating.defensa) : '—'} puntos contra un equipo promedio · ${t.rank_poder ? t.rank_poder + 'º de 32 para el modelo' : ''} · casa ${rec(t.casa)}, fuera ${rec(t.fuera)}, división ${rec(t.div)}${t.racha ? ' · racha ' + t.racha : ''}${t.qb ? ' · QB del último juego: ' + esc(t.qb) : ''}</p>
+      ${ultimosHTML(t)}`;
+  }
+  function ultimosHTML(t) {
+    return t.ultimos.length ? `<div class="plist">${t.ultimos.map(u => `<div class="pr"><span><span class="form"><i class="${u.res}">${u.res}</i></span> ${u.local ? 'vs' : 'en'} ${esc(u.rival)} <small>S${u.semana} · ${fdate(u.fecha)}</small></span>
+      <span class="mono">${u.pf}-${u.pc} <small>${u.linea == null ? '' : 'línea ' + sgn(u.linea) + ' · ' + (u.cubrio === 'si' ? 'cubrió' : u.cubrio === 'no' ? 'no cubrió' : 'empate')}</small></span></div>`).join('')}</div>` : '<p class="empty">Todavía no juega esta temporada.</p>';
+  }
+  function margenSVG(g) {
+    const W = 360, H = 140, pad = { l: 6, r: 6, t: 24, b: 22 }, lo = -21, hi = 21;
+    const data = []; for (let k = lo; k <= hi; k++) data.push({ k, p: g.dist_m[k + 50] });
+    const maxP = Math.max(...data.map(d => d.p)), bw = (W - pad.l - pad.r) / data.length;
+    const KEY = [3, 7, 10, 14];
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diferencia de puntos esperada">`;
+    data.forEach((d, i) => {
+      const h = (H - pad.t - pad.b) * d.p / maxP, x = pad.l + i * bw, y = H - pad.b - h;
+      const col = d.k > 0 ? 'var(--home)' : d.k < 0 ? 'var(--away)' : 'var(--draw)';
+      s += `<rect x="${x + 0.5}" y="${y}" width="${Math.max(bw - 1, 1)}" height="${Math.max(h, 0.5)}" rx="1.5" fill="${col}" opacity="${KEY.includes(Math.abs(d.k)) ? 1 : 0.55}"><title>${d.k > 0 ? 'Local por ' + d.k : d.k < 0 ? 'Visita por ' + (-d.k) : 'Empate'}: ${pct(d.p, 1)}</title></rect>`;
+      if (KEY.includes(Math.abs(d.k)) || d.k === 0) s += `<text x="${x + bw / 2}" y="${H - 6}" text-anchor="middle">${d.k > 0 ? '+' : ''}${d.k}</text>`;
+    });
+    s += `<text x="${pad.l}" y="12">← gana ${esc(g.visita_es)}</text><text x="${W - pad.r}" y="12" text-anchor="end">gana ${esc(g.local_es)} →</text>`;
+    return s + '</svg>';
+  }
+  function showGame(i) {
+    const g = G[i], th = E[g.local_fd], ta = E[g.visita_fd];
+    showView('juegos');
+    $('#list-wrap').hidden = true;
+    const el = $('#game-detail'); el.hidden = false;
+    const pHn = g.pH / (g.pH + g.pA);
+    const filas = g.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+        <span class="pill ${r.veredicto}">${r.veredicto}</span>
+        <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}${r.empate ? ' · empate ' + pct(r.empate, 1) : ''}</span></div>`).join('');
+    const opciones = [['H1', `Spread ${g.local_es}`, g.dk.spread], ['H2', `Spread ${g.visita_es}`, g.dk.spread == null ? null : -g.dk.spread],
+                      ['O', 'Total: más de', g.dk.total], ['U', 'Total: menos de', g.dk.total], ['ML1', `Gana ${g.local_es}`, null], ['ML2', `Gana ${g.visita_es}`, null]];
+    el.innerHTML = `
+      <button class="back" id="back">← Todos los juegos</button>
+      <div class="dhead">
+        <span class="eyebrow">${fdt(g.utc)} · ${g.semana ? 'Semana ' + g.semana + ' · ' : ''}${esc(g.estadio)}${g.neutral ? ' · cancha neutral' : ''}</span>
+        <div class="vs">
+          <div class="side"><span class="tn" style="color:var(--away)">${esc(g.visita_es)}</span><span class="sub">${rec(ta.record)} · ${esc(ta.division)}</span></div>
+          <div class="mid"><b>${g.pts_visita.toFixed(1)} – ${g.pts_local.toFixed(1)}</b><span>puntos esperados</span></div>
+          <div class="side r"><span class="tn" style="color:var(--home)">${esc(g.local_es)}</span><span class="sub">${rec(th.record)} · ${esc(th.division)}</span></div>
+        </div>
+        <div class="subtabs" role="tablist">${['Resumen', 'Calculadora', 'Lesiones', 'Equipos', 'Historial'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}</div>
+      </div>
+
+      <div class="pane" data-pane="0">
+        ${movida(g) ? `<p class="move"><b>La línea se movió:</b> abrió ${esc(g.local_es)} ${sgn(g.dk.spread_abre)} y ahora está ${sgn(g.dk.spread)}${g.dk.total_abre != null && g.dk.total != null && g.dk.total_abre !== g.dk.total ? `; el total pasó de ${g.dk.total_abre} a ${g.dk.total}` : ''}. Un movimiento así casi siempre es por una noticia (lesión del QB, clima). El modelo no la conoce: desconfía de sus PICK en este juego.</p>` : ''}
+        <div class="grid2">
+          <div class="card">
+            <h3>Modelo contra casa</h3>
+            <div class="kv">
+              <div><span>Spread local · modelo</span><b>${sgn(g.linea_modelo)}</b></div>
+              <div><span>Spread local · casa</span><b>${g.dk.spread == null ? '—' : sgn(g.dk.spread)}</b></div>
+              <div><span>Total · modelo</span><b>${g.total.toFixed(1)}</b></div>
+              <div><span>Total · casa</span><b>${g.dk.total == null ? '—' : g.dk.total}</b></div>
+              <div><span>Gana local · modelo</span><b>${pct(pHn)}</b></div>
+              <div><span>Gana local · casa</span><b>${g.mercado ? pct(g.mercado[0]) : '—'}</b></div>
+            </div>
+            <div class="reading"><span class="eyebrow">Qué ve el modelo</span><p>${esc(g.texto)}</p></div>
+            <h4>Cómo cae la diferencia de puntos</h4>
+            <div class="chart keybar">${margenSVG(g)}</div>
+            <p class="note">Las barras más fuertes son los números clave (3, 7, 10 y 14): en la NFL se gana por esas diferencias mucho más seguido. Por eso pasar de −2.5 a −3.5 cambia tanto.</p>
+          </div>
+          <div class="card">
+            <h3>Mercados con momio</h3>
+            <div class="markets">${filas || '<p class="empty">La casa todavía no publica momios para este juego. Usa la calculadora con los de tu casa.</p>'}</div>
+            <button class="linkbtn" id="to-calc">¿Tu casa tiene otra línea o quieres guardar tu apuesta? Usa la calculadora →</button>
+            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo (sin contar el empate, que devuelve la apuesta). PICK: EV de +5% o más.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="1" hidden>
+        <div class="card">
+          <h3>Compara con tu casa</h3>
+          <div class="calc">
+            <div class="calc-row">
+              <label class="sm">Mercado<select id="c-tipo">${opciones.map(([k, n], j) => `<option value="${j}">${esc(n)}</option>`).join('')}</select></label>
+              <label class="sm">Línea<input id="c-linea" inputmode="decimal" autocomplete="off" placeholder="Ej. -3.5"></label>
+              <label class="sm">Momio (decimal)<input id="c-momio" inputmode="decimal" autocomplete="off" placeholder="Ej. 1.91"></label>
+            </div>
+            <div class="calc-out" aria-live="polite"></div>
+            <div class="calc-row">
+              <label for="calc-monto" style="position:absolute;left:-9999px">Monto apostado</label>
+              <input id="calc-monto" placeholder="Monto" inputmode="decimal" autocomplete="off">
+              <button class="btn" id="calc-save" disabled>Guardar en mi registro</button>
+            </div>
+            <div class="calc-msg" aria-live="polite"></div>
+          </div>
+          <p class="note">Escribe la línea tal como la da tu casa, desde el lado que apuestas: si tu casa pone a ${esc(g.local_es)} −3.5, elige "Spread ${esc(g.local_es)}" y escribe −3.5. El empate exacto (por ejemplo, ganar por 3 con línea −3) devuelve la apuesta.</p>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="2" hidden>
+        <p class="note">Reporte oficial de lesiones vía ESPN. Los inactivos definitivos se anuncian unos 90 minutos antes del juego: revísalo antes de apostar. Un QB en duda puede mover la línea varios puntos.</p>
+        <div class="grid2">
+          <div class="card"><h3 style="color:var(--away)">${esc(g.visita_es)}</h3>${lesionesHTML(g.lesiones.visita)}</div>
+          <div class="card"><h3 style="color:var(--home)">${esc(g.local_es)}</h3>${lesionesHTML(g.lesiones.local)}</div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="3" hidden>
+        ${g.descanso ? `<p class="note">Días de descanso: ${esc(g.visita_es)} ${g.descanso[1]}, ${esc(g.local_es)} ${g.descanso[0]}.${g.techo ? ' Estadio: ' + ({ outdoors: 'al aire libre', dome: 'techado', closed: 'techo cerrado', open: 'techo abierto' }[g.techo] || g.techo) + '.' : ''}</p>` : ''}
+        <div class="grid2">
+          <div class="card"><h3 style="color:var(--away)">${esc(g.visita_es)}</h3>${equipoHTML(ta)}</div>
+          <div class="card"><h3 style="color:var(--home)">${esc(g.local_es)}</h3>${equipoHTML(th)}</div>
+        </div>
+      </div>
+
+      <div class="pane" data-pane="4" hidden>
+        <div class="card"><h3>Últimos enfrentamientos</h3>
+          ${g.h2h.length ? g.h2h.map(x => `<div class="h2h-row"><span class="d">${fdate(x.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}</span><span>${esc(x.local)}</span><span class="s">${x.gl}-${x.gv}</span><span class="a">${esc(x.visita)}</span></div>`).join('') : '<p class="empty">No se enfrentaron en los datos disponibles.</p>'}
+          <p class="note">El historial pesa poco: los planteles cambian mucho de un año a otro.</p>
+        </div>
+      </div>`;
+    $('#back', el).addEventListener('click', () => { showList(); history.replaceState(null, '', '#juegos'); window.scrollTo(0, 0); });
+    $$('.subtabs button', el).forEach(b => b.addEventListener('click', () => {
+      $$('.subtabs button', el).forEach(x => x.setAttribute('aria-selected', String(x === b)));
+      $$('.pane[data-pane]', el).forEach(p => { p.hidden = p.dataset.pane !== b.dataset.p; });
+    }));
+    $('#to-calc', el).addEventListener('click', () => $('.subtabs button[data-p="1"]', el).click());
+    // calculadora
+    const tipo = $('#c-tipo', el), lin = $('#c-linea', el), mom = $('#c-momio', el), out = $('.calc-out', el);
+    const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
+    const leerLinea = () => { const v = parseFloat(String(lin.value).replace(',', '.').replace('−', '-')); return isFinite(v) ? v : null; };
+    const setDefault = () => { const o = opciones[+tipo.value]; lin.disabled = o[0].startsWith('ML'); lin.value = o[2] == null ? '' : o[2]; };
+    function calc() {
+      const o = opciones[+tipo.value], k = o[0], L = k.startsWith('ML') ? 0 : leerLinea(), dec = parseOdds(mom.value);
+      save.disabled = !(dec && (k.startsWith('ML') || L != null));
+      if (!k.startsWith('ML') && L == null) { out.textContent = 'Escribe la línea de tu casa.'; return null; }
+      const c = calcular(g, k, L);
+      const just = c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—';
+      if (!dec) { out.innerHTML = `Modelo: <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal.`; return null; }
+      const ev = c.gana * (dec - 1) - c.pierde, v = verdictOf(ev);
+      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      return { k, L, dec, c };
+    }
+    tipo.addEventListener('change', () => { setDefault(); calc(); msg.textContent = ''; });
+    lin.addEventListener('input', () => { calc(); msg.textContent = ''; }); mom.addEventListener('input', () => { calc(); msg.textContent = ''; });
+    setDefault(); calc();
+    save.addEventListener('click', () => {
+      const r = calc(); if (!r) return;
+      const amt = parseFloat(String(monto.value).replace(',', '.'));
+      if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
+      const o = opciones[+tipo.value];
+      const clave = r.k.startsWith('ML') ? r.k : `${r.k}:${r.L > 0 && r.k.startsWith('H') ? '+' : ''}${r.L}`;
+      const nombre = r.k === 'ML1' || r.k === 'ML2' ? o[1] : r.k === 'O' ? `Más de ${r.L} puntos` : r.k === 'U' ? `Menos de ${r.L} puntos` : `${r.k === 'H1' ? g.local_es : g.visita_es} ${r.L > 0 ? '+' : ''}${r.L}`;
+      mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: g.id, liga: 'nfl', utc: g.utc, local: g.local_es, visita: g.visita_es,
+                  mercado: nombre, k: clave, p: r.c.p, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+      guardarMias();
+      msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)} por ${num(amt, amt % 1 ? 2 : 0)}. <a class="linkbtn" href="./?liga=${futbol}#registro">Ver mi registro →</a>`
+                           : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
+      mom.value = ''; monto.value = ''; calc();
+    });
+    window.scrollTo(0, 0);
+  }
+
+  // ---------------- divisiones
+  $('#d-eyebrow').textContent = `Temporada ${I.temporada} · después de la semana ${I.semana}`;
+  $('#divs').innerHTML = Object.entries(D.divisiones).map(([d, ts]) => {
+    const fil = ts.map(t => E[t]).sort((a, b) => a.pos_div - b.pos_div);
+    return `<div class="card"><h3>${esc(d)}</h3><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Equipo</th><th>Récord</th><th>PF</th><th>PC</th><th>Dif.</th><th>Div.</th><th>Contra spread</th><th>Racha</th></tr></thead><tbody>` +
+      fil.map(e => `<tr class="click" data-team="${e.abbr}"><td class="nm l">${esc(e.nombre)}</td><td>${rec(e.record)}</td><td>${e.pf}</td><td>${e.pa}</td><td class="${e.pf - e.pa < 0 ? 'neg' : ''}">${sNum(e.pf - e.pa)}</td><td>${rec(e.div)}</td><td>${rec(e.ats)}</td><td>${esc(e.racha)}</td></tr>`).join('') + '</tbody></table></div></div>';
+  }).join('');
+  $$('#divs tr.click').forEach(tr => tr.addEventListener('click', () => { showView('equipos'); showTeam(tr.dataset.team); history.replaceState(null, '', '#equipos'); }));
+
+  // ---------------- equipos
+  const COLS = [
+    ['Récord', t => (t.record[0] + 0.5 * t.record[2]) / Math.max(1, t.record[0] + t.record[1] + t.record[2]), t => rec(t.record)],
+    ['Puntos a favor', t => t.pf_pp, t => t.pf_pp.toFixed(1)], ['Puntos en contra', t => t.pa_pp, t => t.pa_pp.toFixed(1)],
+    ['Dif. por juego', t => (t.pf - t.pa) / Math.max(1, t.pj), t => sgn((t.pf - t.pa) / Math.max(1, t.pj))],
+    ['Poder', t => t.rating ? t.rating.neto : null, t => t.rating ? sgn(t.rating.neto) : '—'],
+    ['Ataque', t => t.rating ? t.rating.ataque : null, t => t.rating ? sgn(t.rating.ataque) : '—'],
+    ['Defensa', t => t.rating ? t.rating.defensa : null, t => t.rating ? sgn(t.rating.defensa) : '—'],
+    ['Contra spread', t => t.ats[0] - t.ats[1], t => rec(t.ats)], ['Más/menos', t => t.ou[0] - t.ou[1], t => rec(t.ou)],
+  ];
+  let sortCol = 4, sortDir = -1, selTeam = null;
+  function renderTeams() {
+    const keys = Object.keys(E).sort((a, b) => sortDir * ((COLS[sortCol][1](E[a]) ?? -99) - (COLS[sortCol][1](E[b]) ?? -99)));
+    $('#tbl-equipos').innerHTML = `<thead><tr><th class="l">Equipo</th><th class="l">División</th>${COLS.map((c, k) => `<th class="sort" data-k="${k}" ${k === sortCol ? `aria-sort="${sortDir < 0 ? 'descending' : 'ascending'}"` : ''}>${c[0]}${k === sortCol ? (sortDir < 0 ? ' ↓' : ' ↑') : ''}</th>`).join('')}</tr></thead><tbody>` +
+      keys.map(k => `<tr class="click ${k === selTeam ? 'sel' : ''}" data-team="${k}"><td class="nm l">${esc(E[k].nombre)}</td><td class="l">${esc(E[k].division)}</td>${COLS.map(c => `<td>${c[2](E[k])}</td>`).join('')}</tr>`).join('') + '</tbody>';
+    $$('#tbl-equipos th.sort').forEach(th => th.addEventListener('click', () => { const k = +th.dataset.k; if (k === sortCol) sortDir = -sortDir; else { sortCol = k; sortDir = -1; } renderTeams(); }));
+    $$('#tbl-equipos tr.click').forEach(tr => tr.addEventListener('click', () => showTeam(tr.dataset.team)));
+  }
+  function showTeam(k) {
+    selTeam = k; renderTeams();
+    const t = E[k], prox = G.find(g => g.local_fd === k || g.visita_fd === k);
+    const les = prox ? (prox.local_fd === k ? prox.lesiones.local : prox.lesiones.visita) : null;
+    $('#team-profile').innerHTML = `
+      <div class="dhead"><span class="eyebrow">${esc(t.division)} · ${t.pos_div}º de la división${t.rank_poder ? ' · ' + t.rank_poder + 'º en poder' : ''}</span><h2>${esc(t.nombre)}</h2>
+        ${prox ? `<button class="back" id="go-next">Próximo: ${esc(prox.visita_es)} en ${esc(prox.local_es)} · ver ficha →</button>` : ''}</div>
+      <div class="grid2"><div class="card"><h3>Cómo viene</h3>${equipoHTML(t)}</div>
+        <div class="card"><h3>Lesiones</h3>${les ? lesionesHTML(les) : '<p class="empty">Se muestran cuando tiene un juego en los próximos días.</p>'}</div></div>`;
+    const gn = $('#go-next'); if (gn) gn.addEventListener('click', () => { const i = G.indexOf(prox); showGame(i); history.replaceState(null, '', '#j' + (i + 1)); });
+    $('#team-profile').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  renderTeams();
+
+  // ---------------- el modelo
+  (function modelo() {
+    const el = $('#v-modelo');
+    if (!B) { el.innerHTML = '<div class="intro"><h2>Cómo le habría ido al modelo</h2><p>La prueba con temporadas pasadas todavía no está.</p></div>'; return; }
+    const m = principal, neg = m.roi < 0, porMk = ['Spread', 'Total', 'Moneyline'].map(k => [k, B.estrategias[`modelo|cierre|${k}|0.05`]]);
+    el.innerHTML = `
+      <div class="intro"><p class="eyebrow">Prueba sin mirar al futuro · ${B.desde.slice(0, 4)}-${B.hasta.slice(0, 4)}</p><h2>Cómo le habría ido al modelo</h2>
+        <p>Para cada semana entre ${fdate(B.desde, { month: 'long', year: 'numeric' })} y ${fdate(B.hasta, { month: 'long', year: 'numeric' })}, el modelo solo vio juegos anteriores, calculó sus probabilidades y "apostó" 1 unidad donde veía EV de +5% o más (${B.mercados}), contra ${B.referencia}. Fueron ${num(B.partidos)} juegos.</p></div>
+      <div class="verdict">
+        <div><span class="eyebrow">ROI siguiendo los PICK</span><span class="big ${neg ? 'neg' : ''}">${spct(m.roi)}</span><span class="what">${num(m.n)} apuestas: ${sNum(m.ganancia_u)} unidades. Rango probable: ${spct(m.roi_ic95[0])} a ${spct(m.roi_ic95[1])}.</span></div>
+        <div><span class="eyebrow">Meses en positivo</span><span class="big">${B.meses_positivos}<small style="font-size:20px;color:var(--ink-3)"> de ${B.meses_total}</small></span><span class="what">${B.meses_total - B.meses_positivos} meses terminaron en pérdida.</span></div>
+        <div><span class="eyebrow">Error contra la casa</span><span class="big">${B.error.modelo_diferencia.toFixed(1)}<small style="font-size:20px;color:var(--ink-3)"> vs ${B.error.cierre_diferencia.toFixed(1)}</small></span><span class="what">Puntos de error típico en la diferencia: modelo contra la línea de cierre. Menos es mejor: la casa es más precisa.</span></div>
+        <div class="conclusion">${neg ? '<strong>El modelo informa, no adivina.</strong> El spread de la NFL es de los mercados más afinados del mundo: el modelo sirve para comparar líneas y momios, no para ganarle a la casa.' : '<strong>Salió positivo, pero con cuidado.</strong> Puede ser suerte; compruébalo en vivo en el Registro.'}</div>
+      </div>
+      <div class="card"><h3>Por mercado</h3><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Mercado</th><th>Apuestas</th><th>Acierto</th><th>ROI</th></tr></thead><tbody>
+        ${porMk.map(([k, s]) => `<tr><td class="nm l">${k}</td><td>${num(s.n)}</td><td>${pct(s.aciertos, 1)}</td><td class="${s.roi < 0 ? 'neg' : 'posv'}">${spct(s.roi)}</td></tr>`).join('')}
+        </tbody></table></div><p class="note">Para ganar con momios de −110 (1.91) hay que acertar más de 52.4% contra el spread o el total.</p></div>
+      <div class="card"><h3>Ganancia acumulada, en unidades</h3><div class="chart" id="chart-curve"></div></div>
+      <div class="two">
+        <div class="card"><h3>¿Más valor es más ganancia?</h3><p class="note">ROI según cuánto valor veía el modelo. Si tuviera ventaja, las barras subirían hacia la derecha.</p><div class="chart" id="chart-ev"></div></div>
+        <div class="card"><h3>¿Sus porcentajes se cumplen?</h3><p class="note">Probabilidad de que gane el local: lo que dijo el modelo contra lo que pasó. Línea punteada: calibración perfecta.</p><div class="chart" id="chart-cal"></div></div>
+      </div>`;
+    const svgEl = (tag, attrs) => { const e = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+    // curva
+    (() => {
+      const box = $('#chart-curve'), pts = B.curva.map(p => ({ t: new Date(p.d + 'T12:00:00Z').getTime(), u: p.u }));
+      const W = 960, H = 260, pad = { l: 52, r: 16, t: 14, b: 30 }, t0 = pts[0].t, t1 = pts[pts.length - 1].t;
+      const mn = Math.min(0, ...pts.map(p => p.u)), mx = Math.max(0, ...pts.map(p => p.u)), step = 50;
+      const y0 = Math.floor(mn / step) * step, y1 = Math.max(step, Math.ceil(mx / step) * step);
+      const X = t => pad.l + (t - t0) / (t1 - t0) * (W - pad.l - pad.r), Y = u => pad.t + (y1 - u) / (y1 - y0) * (H - pad.t - pad.b);
+      const col = pts[pts.length - 1].u >= 0 ? 'var(--pos)' : 'var(--neg)';
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Ganancia acumulada' });
+      for (let v = y0; v <= y1; v += step) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const tx = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); tx.textContent = v > 0 ? '+' + v : v; svg.appendChild(tx); }
+      for (let y = new Date(t0).getUTCFullYear() + 1; y <= new Date(t1).getUTCFullYear(); y++) { const t = Date.UTC(y, 0, 1); const tx = svgEl('text', { x: X(t), y: H - 8, 'text-anchor': 'middle' }); tx.textContent = y; svg.appendChild(tx); }
+      svg.appendChild(svgEl('line', { class: 'zero', x1: pad.l, x2: W - pad.r, y1: Y(0), y2: Y(0) }));
+      const d = pts.map((p, k) => (k ? 'L' : 'M') + X(p.t).toFixed(1) + ',' + Y(p.u).toFixed(1)).join('');
+      svg.appendChild(svgEl('path', { d: d + `L${X(t1).toFixed(1)},${Y(0)}L${X(t0).toFixed(1)},${Y(0)}Z`, fill: col, 'fill-opacity': 0.1 }));
+      svg.appendChild(svgEl('path', { d, fill: 'none', stroke: col, 'stroke-width': 2 }));
+      const last = pts[pts.length - 1]; const lb = svgEl('text', { x: X(last.t) - 4, y: Y(last.u) + 22, 'text-anchor': 'end', class: 'lbl-strong' }); lb.textContent = sNum(last.u) + ' u'; svg.appendChild(lb);
+      box.appendChild(svg);
+    })();
+    // por EV
+    (() => {
+      const box = $('#chart-ev'), data = B.por_ev, W = 440, H = 240, pad = { l: 46, r: 10, t: 20, b: 44 };
+      const y0 = Math.min(-0.05, Math.floor(Math.min(...data.map(d => d.roi)) * 20) / 20), y1 = Math.max(0.05, Math.ceil(Math.max(...data.map(d => d.roi)) * 20) / 20);
+      const Y = v => pad.t + (y1 - v) / (y1 - y0) * (H - pad.t - pad.b), bw = (W - pad.l - pad.r) / data.length;
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'ROI por tramo de EV' });
+      for (let v = y0; v <= y1 + 1e-9; v += 0.05) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const tx = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); tx.textContent = Math.round(v * 100) + '%'; svg.appendChild(tx); }
+      data.forEach((d, k) => { const x = pad.l + k * bw + bw * 0.2, w = bw * 0.6; svg.appendChild(svgEl('rect', { x, y: Math.min(Y(0), Y(d.roi)), width: w, height: Math.abs(Y(d.roi) - Y(0)), rx: 4, fill: d.roi < 0 ? 'var(--neg)' : 'var(--pos)' }));
+        const v = svgEl('text', { x: x + w / 2, y: d.roi < 0 ? Y(d.roi) + 16 : Y(d.roi) - 6, 'text-anchor': 'middle', class: 'lbl-strong' }); v.textContent = spct(d.roi); svg.appendChild(v);
+        const l = svgEl('text', { x: x + w / 2, y: H - 24, 'text-anchor': 'middle' }); l.textContent = 'EV ' + d.tramo; svg.appendChild(l);
+        const n = svgEl('text', { x: x + w / 2, y: H - 9, 'text-anchor': 'middle' }); n.textContent = num(d.n) + ' apuestas'; svg.appendChild(n); });
+      svg.appendChild(svgEl('line', { class: 'zero', x1: pad.l, x2: W - pad.r, y1: Y(0), y2: Y(0) }));
+      box.appendChild(svg);
+    })();
+    // calibración
+    (() => {
+      const box = $('#chart-cal'), data = B.calibracion, W = 440, H = 300, pad = { l: 46, r: 14, t: 12, b: 40 };
+      const X = v => pad.l + v * (W - pad.l - pad.r), Y = v => pad.t + (1 - v) * (H - pad.t - pad.b);
+      const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Calibración' });
+      for (let v = 0; v <= 1.0001; v += 0.2) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const t = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); t.textContent = Math.round(v * 100) + '%'; svg.appendChild(t); const tx = svgEl('text', { x: X(v), y: H - 22, 'text-anchor': 'middle' }); tx.textContent = Math.round(v * 100) + '%'; svg.appendChild(tx); }
+      const xl = svgEl('text', { x: (pad.l + W - pad.r) / 2, y: H - 4, 'text-anchor': 'middle' }); xl.textContent = 'lo que predijo el modelo'; svg.appendChild(xl);
+      svg.appendChild(svgEl('line', { x1: X(0), y1: Y(0), x2: X(1), y2: Y(1), stroke: 'var(--ink-3)', 'stroke-dasharray': '4 4' }));
+      const mx = Math.max(...data.map(d => d.n));
+      data.forEach(d => { const c = svgEl('circle', { cx: X(d.pred), cy: Y(d.real), r: 4 + 8 * Math.sqrt(d.n / mx), fill: 'var(--model)', 'fill-opacity': 0.85, stroke: 'var(--surface)', 'stroke-width': 2 }); const ti = svgEl('title', {}); ti.textContent = `Predijo ${pct(d.pred)} · pasó ${pct(d.real)} · ${num(d.n)} juegos`; c.appendChild(ti); svg.appendChild(c); });
+      box.appendChild(svg);
+    })();
+  })();
+
+  $('#foot-data').textContent = `Datos: nflverse (todos los juegos desde 1999 con líneas de cierre), ESPN (juegos próximos, momios de DraftKings, reporte de lesiones). Se actualiza sola todos los días y después de cada juego. Modelo de puntos con números clave; ventaja de local estimada en ${I.hfa} puntos.`;
+
+  // ---------------- enlace directo
+  const h = (location.hash || '').slice(1);
+  if (/^j\d+$/.test(h) && G[+h.slice(1) - 1]) showGame(+h.slice(1) - 1);
+  else if (views.includes(h)) showView(h);
+})();
+</script>

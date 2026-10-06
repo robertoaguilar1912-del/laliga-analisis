@@ -1,6 +1,6 @@
 # Laboratorio de fútbol
 
-Página de análisis que se actualiza sola para **La Liga, Premier League, Serie A, Bundesliga, Ligue 1, Liga MX y MLS**.
+Página de análisis que se actualiza sola para **La Liga, Premier League, Serie A, Bundesliga, Ligue 1, Liga MX, MLS y la NFL**.
 Arriba se elige la liga. Por cada partido muestra:
 - probabilidades de un modelo Dixon-Coles con 10,000 simulaciones;
 - comparación con los momios de la casa y momios justos de todos los mercados, incluidos los córners;
@@ -13,6 +13,18 @@ también lleva el registro automático de cada PICK del modelo para ver en vivo 
 
 Incluye también la tabla (por conferencia en la MLS; torneo actual en Liga MX), las estadísticas de los equipos y el resultado
 honesto de la prueba del modelo con temporadas pasadas de cada liga.
+
+## NFL
+
+Tiene su propia página (`nfl.html`, botón "NFL" en el selector):
+- juegos de la semana con spread, total y moneyline del modelo contra DraftKings, aviso cuando la línea se movió mucho
+  (casi siempre por una baja que el modelo no ve, como el quarterback);
+- calculadora para cualquier línea y momio de tu casa (el empate exacto devuelve la apuesta) y botón para guardar en el registro;
+- reporte oficial de lesiones (ESPN), divisiones, récord contra el spread y más/menos, poder de cada equipo;
+- modelo de puntos (ataque y defensa con más peso a lo reciente) y diferencia con "números clave" (3, 7, 10, 14);
+- prueba 2018-2026 contra la línea de cierre: −4.9% (spread −1.8%, total −5.6%, moneyline −7.3%).
+
+Datos: [nflverse](https://github.com/nflverse/nfldata) (todos los juegos desde 1999 con líneas de cierre) y ESPN.
 
 ## Cómo se actualiza
 
@@ -50,6 +62,10 @@ src/corners.py      modelo de córners
 src/analizar.py     arma data/ligas/<liga>.json con todo lo que muestra la página
 src/construir.py    copia los datos a site/datos/ y arma site/index.html desde src/plantilla.html
 src/registro.py     registro de los PICK del modelo, momios de cierre y resultados para liquidar
+src/prueba.py       prueba del modelo de fútbol en cada liga (data/modelo/<liga>/backtest.json)
+src/nfl.py          NFL: descargas, modelo y análisis (data/ligas/nfl.json)
+src/prueba_nfl.py   prueba del modelo de la NFL
+src/plantilla_nfl.html  página de la NFL (usa los estilos de plantilla.html)
 src/ejecutar.py     punto de entrada (modos: completo, rapido)
 src/revisar.py      revisión rápida: partidos por empezar sin alineación o terminados sin resultado
 data/raw, data/espn datos descargados (se guardan para no volver a bajarlos); data/espn/<liga>/

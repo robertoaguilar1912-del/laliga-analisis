@@ -20,10 +20,12 @@ def pendientes():
         for e in json.load(open(p)):
             faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
             nombre = f"{e['local_espn']} vs {e['visita_espn']}"
-            if -30 <= faltan <= 120 and not e.get('alineaciones'):
+            if liga != 'nfl' and -30 <= faltan <= 120 and not e.get('alineaciones'):
                 t['alineaciones'].append(f'{nombre} en {faltan:.0f} min')
-            # un partido dura ~115 min; se busca el resultado desde entonces y hasta un día después
-            if -24 * 60 <= faltan <= -110 and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
+            # un partido de fútbol dura ~115 min y uno de la NFL ~3 h 15 min; el resultado se busca desde entonces
+            # y hasta un día después
+            dura = 200 if liga == 'nfl' else 110
+            if -24 * 60 <= faltan <= -dura and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 t['resultados'].append(f'{nombre} empezó hace {-faltan:.0f} min')
         if t['alineaciones'] or t['resultados']:
             out[liga] = t

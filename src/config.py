@@ -53,6 +53,9 @@ LIGAS = {
             'calendario': 'anual', 'api_football': 253, 'copas': {**COPAS_CONCACAF, 'usa.open': 'US Open Cup'}, 'zonas': 'mls',
             'nuevo': 'es nuevo en la liga'},
 }
+# Todo lo que aparece en el selector de la página: las ligas de fútbol y la NFL (que tiene su propia página)
+SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL'}
+
 # Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
 # Son aproximadas: los cupos exactos cambian según copas y coeficientes.
 ZONAS = {
