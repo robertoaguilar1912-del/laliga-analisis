@@ -71,6 +71,28 @@ def descargar_football_data(liga):
                 print(f'  football-data {div} {s}: sin datos')
 
 
+def descargar_historia(desde='1718'):
+    """Temporadas viejas de primera división (solo para la prueba del modelo). Se bajan una vez."""
+    carpeta = RAW.parent / 'historia'
+    carpeta.mkdir(exist_ok=True)
+    actual = temporada_actual()
+    a0, a1 = int(desde[:2]), int(actual[:2])
+    nuevos = 0
+    for L in LIGAS.values():
+        if not L.get('fd'):
+            continue
+        for y in range(a0, a1):
+            s = f'{y % 100:02d}{(y + 1) % 100:02d}'
+            p = carpeta / f"{L['fd']}_{s}.csv"
+            if p.exists():
+                continue
+            txt = _get(f"https://www.football-data.co.uk/mmz4281/{s}/{L['fd']}.csv", as_json=False)
+            if txt and txt.lstrip('\ufeff').startswith('Div'):
+                p.write_text(txt.lstrip('\ufeff').strip() + '\n', encoding='utf-8')
+                nuevos += 1
+    print(f'  historia: {nuevos} temporadas nuevas')
+
+
 # ------------------------------------------------------------------ ESPN
 def _scoreboard(lg, dates):
     j = _get(f'{ESPN}/{lg}/scoreboard', params={'dates': dates, 'limit': 1000})
@@ -232,6 +254,22 @@ def descargar_copas():
     if filas:
         (RAW / 'copas.txt').write_text('\n'.join(sorted(filas)) + '\n', encoding='utf-8')
     print(f'  ESPN copas: {len(filas)} filas')
+
+
+def descargar_tablas():
+    """Tabla oficial de ESPN de cada liga: sirve para saber los grupos (conferencias de la MLS)."""
+    out = {}
+    for liga, L in LIGAS.items():
+        j = _get(f"https://site.api.espn.com/apis/v2/sports/soccer/{L['espn']}/standings")
+        grupos = []
+        for ch in (j or {}).get('children', []) or []:
+            ents = ((ch.get('standings') or {}).get('entries') or [])
+            grupos.append({'grupo': ch.get('name') or '', 'equipos': [e['team']['displayName'] for e in ents]})
+        if grupos:
+            out[liga] = grupos
+    if out:
+        json.dump(out, open(RAW / 'tablas_espn.json', 'w'), ensure_ascii=False, indent=1)
+    print(f'  ESPN tablas: {len(out)} ligas')
 
 
 def diagnostico():

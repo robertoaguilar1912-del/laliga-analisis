@@ -1,4 +1,4 @@
-<title>Laboratorio La Liga</title>
+<title>Laboratorio de fútbol</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap">
@@ -63,6 +63,16 @@ button { font: inherit; color: inherit; }
 .brand-mark::before { content: ""; position: absolute; inset: 5px 12px; background: var(--bg); width: 2px; }
 .brand-mark::after { content: ""; position: absolute; width: 10px; height: 10px; border: 2px solid var(--bg); border-radius: 50%; top: 6px; left: 6px; }
 .status { font-family: var(--font-data); font-size: 11.5px; color: var(--ink-2); }
+.brand .liga { color: var(--accent); }
+.ligas { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 10px; }
+.ligas::-webkit-scrollbar { display: none; }
+.ligas a { flex: none; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-family: var(--font-data); font-size: 12.5px; white-space: nowrap; }
+.ligas a:hover { border-color: var(--accent); }
+.ligas a[aria-current="page"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.ligas a small { font-size: 10.5px; opacity: .7; }
+.ligas a small:empty { display: none; }
+.tag.liga { background: var(--accent-soft); color: var(--ink); }
+.grp-row th { background: var(--surface) !important; color: var(--ink) !important; font-family: var(--font-display) !important; font-size: 14px !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; padding-top: 14px !important; }
 .tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--line); padding-block: 6px 0; scrollbar-width: none; }
 .tabs button { border: 0; background: none; padding: 10px 14px 11px; font-family: var(--font-display); font-weight: 750; font-stretch: 85%; font-size: 15.5px; color: var(--ink-3); border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap; }
 .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
@@ -294,6 +304,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 }
 @media (max-width: 480px) {
   .wrap { padding-inline: 16px; }
+  .brand { font-size: 19px; }
   .tabs { gap: 0; }
   .tabs button { padding-inline: 6px; font-size: 14px; }
   .dhead, .card { padding: 14px; }
@@ -303,9 +314,10 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
 <div class="wrap">
   <header class="topbar">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Laboratorio La Liga</div>
-    <span class="status" id="status"></span>
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Laboratorio <span class="liga" id="brand-liga"></span></div>
+    <span class="status" id="status">Cargando…</span>
   </header>
+  <nav class="ligas" id="ligas" aria-label="Ligas"></nav>
   <nav class="tabs" role="tablist" aria-label="Secciones">
     <button role="tab" data-view="partidos" aria-selected="true">Partidos</button>
     <button role="tab" data-view="tabla" aria-selected="false">Tabla</button>
@@ -322,7 +334,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h2>Próximos partidos</h2>
         <p>Toca un partido para ver su ficha completa: probabilidades, estadísticas de los dos equipos, bajas, cansancio, historial y todos los mercados con su momio justo. Horas de Honduras.</p>
       </div>
-      <p class="warning">Los PICK son lo que ve el modelo, no una recomendación. En la prueba con temporadas pasadas seguirlos perdió dinero (pestaña "El modelo"). Úsalos como información y compara siempre con el momio de tu casa.</p>
+      <p class="warning" id="p-warning"></p>
       <div class="mlist" id="mlist"></div>
     </div>
     <div id="match-detail" class="view" style="padding:0" hidden></div>
@@ -332,17 +344,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   <section class="view" id="v-tabla" hidden>
     <div class="intro">
       <p class="eyebrow" id="t-eyebrow"></p>
-      <h2>Tabla de posiciones 2026-27</h2>
-      <p>Orden por puntos, diferencia de goles y goles a favor. "xG dif." compara los goles esperados a favor y en contra: si es mucho mejor que la diferencia real, el equipo ha tenido mala suerte, y al revés. Toca un equipo para ver su perfil.</p>
+      <h2 id="t-title">Tabla de posiciones</h2>
+      <p id="t-text"></p>
     </div>
     <div class="tbl-wrap"><table class="data min560" id="tbl-tabla"></table></div>
-    <div class="legend"><span><i style="background:var(--home)"></i>Champions</span><span><i style="background:var(--draw)"></i>Europa / Conference</span><span><i style="background:var(--neg)"></i>Descenso</span></div>
+    <div class="legend" id="t-legend"></div>
   </section>
 
   <!-- EQUIPOS -->
   <section class="view" id="v-equipos" hidden>
     <div class="intro">
-      <p class="eyebrow">Estadísticas por partido · 2026-27</p>
+      <p class="eyebrow" id="e-eyebrow">Estadísticas por partido</p>
       <h2>Equipos</h2>
       <p>Toca el encabezado de una columna para ordenar. Toca un equipo para ver su perfil completo abajo.</p>
     </div>
@@ -353,17 +365,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   <!-- EL MODELO -->
   <section class="view" id="v-modelo" hidden>
     <div class="intro">
-      <p class="eyebrow">Prueba sin mirar al futuro · 2020-2026</p>
+      <p class="eyebrow" id="m-eyebrow">Prueba sin mirar al futuro</p>
       <h2>Cómo le habría ido al modelo</h2>
       <p id="prueba-text"></p>
     </div>
     <div class="verdict" id="verdict"></div>
     <div class="card">
       <h3>Ganancia acumulada, en unidades</h3>
-      <p class="note">Una unidad por apuesta con EV de +5% o más, a la cuota de apertura de Bet365.</p>
+      <p class="note" id="m-curve-note"></p>
       <div class="chart" id="chart-curve"></div>
     </div>
-    <div class="card">
+    <div class="card" id="exp-card">
       <h3>Forma, bajas, cansancio y otros mercados</h3>
       <p class="note">Cada idea se probó igual: solo con partidos anteriores. Las bajas y el cansancio se comparan contra el momio de cierre, porque las alineaciones salen una hora antes del partido. Precisión: pérdida logarítmica (menos es mejor).</p>
       <div class="tbl-wrap"><table class="data" id="tbl-exp" style="min-width:980px"></table></div>
@@ -380,8 +392,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="chart" id="chart-cal"></div>
       </div>
     </div>
-    <div class="card">
-      <h3>Por qué pierde</h3>
+    <div class="card" id="why-card">
+      <h3 id="why-title">Por qué pierde</h3>
       <div class="two" id="why"></div>
     </div>
   </section>
@@ -407,11 +419,38 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   </footer>
 </div>
 
-<script type="application/json" id="data">/*__DATA__*/</script>
 <script>
-(function () {
-  const D = JSON.parse(document.getElementById('data').textContent);
-  const B = D.backtest, E = D.equipos, M = D.partidos;
+(async function () {
+  // ---------------- liga elegida y carga de datos
+  const LIGAS = /*__LIGAS__*/;
+  const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
+  let liga = new URLSearchParams(location.search).get('liga');
+  if (!LIGAS[liga]) { try { liga = localStorage.getItem('laboratorio-liga'); } catch (e) { liga = null; } }
+  if (!LIGAS[liga]) liga = 'laliga';
+  try { localStorage.setItem('laboratorio-liga', liga); } catch (e) { /* sin almacenamiento */ }
+  const corto = n => n.replace(' League', '');
+  const chips = document.getElementById('ligas');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="?liga=${id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
+  chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
+    ev.preventDefault();
+    const h = location.hash.slice(1);
+    location.href = `?liga=${a.dataset.liga}` + (VISTAS.includes(h) && h !== 'partidos' ? '#' + h : '');
+  }));
+  const actual = chips.querySelector('[aria-current]');
+  if (actual) chips.scrollLeft = actual.offsetLeft - chips.clientWidth / 2 + actual.offsetWidth / 2;
+  document.getElementById('brand-liga').textContent = corto(LIGAS[liga]);
+  const getJSON = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  let D, R;
+  try {
+    [D, R] = await Promise.all([getJSON(`datos/${liga}.json`), getJSON('datos/registro.json').catch(() => null)]);
+  } catch (e) {
+    document.getElementById('status').textContent = 'No se pudieron cargar los datos. Revisa tu conexión y recarga la página.';
+    return;
+  }
+  R = R || { modelo: [], cierres: {}, resultados: {}, ligas: [] };
+  (R.ligas || []).forEach(l => { const x = chips.querySelector(`[data-liga="${l.id}"] small`); if (x && l.partidos) x.textContent = l.partidos; });
+  const B = D.backtest, E = D.equipos, M = D.partidos, I = D.info;
+  document.title = `Laboratorio · ${I.nombre}`;
   const $ = (s, el) => (el || document).querySelector(s);
   const $$ = (s, el) => [...(el || document).querySelectorAll(s)];
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
@@ -431,7 +470,6 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function grp(p) { p = (p || '').toUpperCase(); if (p.startsWith('G')) return 'POR'; if (/^(CD|CB|LB|RB|D|LWB|RWB|SW)/.test(p)) return 'DEF'; if (/^(DM|CM|LM|RM|M)/.test(p)) return 'MED'; return 'DEL'; }
 
   // ---------------- apuestas guardadas en este navegador
-  const R = D.registro || { modelo: [], cierres: {}, resultados: {} };
   const LS_KEY = 'laliga-mis-apuestas-v1';
   let mias = [], lsOK = true;
   try { const x = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); mias = Array.isArray(x) ? x : []; } catch (e) { lsOK = false; }
@@ -439,7 +477,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   const upd = new Date(D.actualizado);
   $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })} · resultados hasta el ${fdate(D.datos_hasta)}`;
-  $('#j-eyebrow').textContent = `La Liga · ${M.length} partidos en los próximos días · ${num(D.n_sims)} simulaciones cada uno`;
+  $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días · ${num(D.n_sims)} simulaciones cada uno`;
+  const PRINCIPAL = B ? B.estrategias[B.principal || 'modelo|B365|1x2+ou|0.05'] : null;
+  $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
+    ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
+    : PRINCIPAL.roi < 0
+      ? `En la prueba con temporadas pasadas de ${I.nombre}, seguirlos perdió dinero (${spct(PRINCIPAL.roi)}; pestaña "El modelo"). Úsalos como información y compara siempre con el momio de tu casa.`
+      : `En la prueba con temporadas pasadas de ${I.nombre} salió ${spct(PRINCIPAL.roi)}, ${PRINCIPAL.roi_ic95 && PRINCIPAL.roi_ic95[0] < 0 ? 'pero el rango probable incluye perder: puede ser suerte' : 'aunque lo pasado no garantiza lo que viene'} (pestaña "El modelo"). Compara siempre con el momio de tu casa.`);
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
   // ---------------- navegación
@@ -478,14 +522,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <span class="go">Ver ficha →</span>
       <span class="tags">
         <span class="tag">Goles esp. ${m.xg_local.toFixed(1)}–${m.xg_visita.toFixed(1)}</span>
-        <span class="tag">Córners esp. ${(m.corners[0] + m.corners[1]).toFixed(1)}</span>
+        ${m.corners ? `<span class="tag">Córners esp. ${(m.corners[0] + m.corners[1]).toFixed(1)}</span>` : ''}
         ${best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (m.mercado ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>')}
         ${alerts.map(a => `<span class="tag alert">${esc(a)}</span>`).join('')}
         ${extra.map(a => `<span class="tag">${esc(a)}</span>`).join('')}
       </span>
     </button>`;
   }).join('');
-  if (!M.length) $('#mlist').innerHTML = '<p class="empty">No hay partidos de La Liga en los próximos días (puede ser una pausa por selecciones). La página se actualiza sola cuando aparezcan.</p>';
+  if (!M.length) $('#mlist').innerHTML = `<p class="empty">No hay partidos de ${esc(I.nombre)} en los próximos días (puede ser una pausa por selecciones o el fin de la temporada). La página se actualiza sola cuando aparezcan.</p>`;
   $$('.mcard').forEach(b => b.addEventListener('click', () => { showMatch(+b.dataset.i); history.replaceState(null, '', '#p' + (+b.dataset.i + 1)); }));
   function showList() { $('#match-detail').hidden = true; $('#match-list-wrap').hidden = false; }
 
@@ -536,7 +580,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
   function lastGamesHTML(t) {
     return `<div class="plist">${t.forma.map(g => `<div class="pr"><span>${formHTML(g.res)} ${g.local ? 'vs' : 'en'} ${esc(g.rival)} <small>${fdate(g.fecha)}</small></span>
-      <span class="mono">${g.gf}-${g.gc} <small>xG ${g.xf == null ? '—' : g.xf.toFixed(1)}-${g.xc == null ? '—' : g.xc.toFixed(1)}</small></span></div>`).join('')}</div>`;
+      <span class="mono">${g.gf}-${g.gc}${g.xf == null ? '' : ` <small>xG ${g.xf.toFixed(1)}-${g.xc == null ? '—' : g.xc.toFixed(1)}</small>`}</span></div>`).join('')}</div>`;
   }
   function absencesHTML(t) {
     const rows = [];
@@ -621,7 +665,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             </tbody></table>
             <div class="kv">
               <div><span>Goles esperados</span><b>${(m.xg_local + m.xg_visita).toFixed(1)}</b></div>
-              <div><span>Córners esperados</span><b>${(m.corners[0] + m.corners[1]).toFixed(1)}</b></div>
+              <div><span>Córners esperados</span><b>${m.corners ? (m.corners[0] + m.corners[1]).toFixed(1) : '—'}</b></div>
               <div><span>Ambos anotan</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Ambos anotan: Sí') || {}).p)}</b></div>
               <div><span>Más de 2.5</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Más de 2.5 goles') || {}).p)}</b></div>
             </div>
@@ -663,7 +707,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
 
       <div class="pane" data-pane="2" hidden>
-        <p class="note">${D.con_lesiones ? 'El parte oficial de lesiones viene de API-Football.' : 'Para ver el parte oficial de lesiones agrega la clave de API-Football al repositorio.'} Además se estiman bajas así: sancionado si vio roja o llegó a 5 amarillas en el último partido; "no convocado" si es titular habitual y no estuvo en la lista del último partido (suele ser lesión o descarte). Confírmalo antes de apostar.</p>
+        <p class="note">${D.con_lesiones ? 'El parte oficial de lesiones viene de API-Football.' : 'Para ver el parte oficial de lesiones agrega la clave de API-Football al repositorio.'} Además se estiman bajas así: sancionado si vio roja${I.liga === 'laliga' ? ' o llegó a 5 amarillas' : ''} en el último partido; "no convocado" si es titular habitual y no estuvo en la lista del último partido (suele ser lesión o descarte). Confírmalo antes de apostar.</p>
         <div class="grid2">
           ${[[th, m.local_es, 'var(--home)', 'local'], [ta, m.visita_es, 'var(--away)', 'visita']].map(([t, n, c, lado]) => `<div class="card">
             <h3 style="color:${c}">${esc(n)}</h3>
@@ -678,9 +722,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="card">
           <h3>Últimos enfrentamientos</h3>
           ${h2h.length ? `<div class="h2h-sum"><span class="tag">${esc(m.local_es)} ganó ${w.l}</span><span class="tag">Empates ${w.e}</span><span class="tag">${esc(m.visita_es)} ganó ${w.v}</span></div>
-          <div>${h2h.map(g => `<div class="h2h-row"><span class="d">${fdate(g.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}${g.div !== 'La Liga' ? ' · ' + g.div : ''}</span><span>${esc(g.local)}</span><span class="s">${g.gl}-${g.gv}</span><span class="a">${esc(g.visita)}</span></div>`).join('')}</div>`
-          : '<p class="empty">No se enfrentaron en Primera ni en Segunda desde 2016.</p>'}
-          <p class="note">Liga desde 2016-17, Primera y Segunda División. El historial pesa poco en el modelo: los planteles cambian mucho.</p>
+          <div>${h2h.map(g => `<div class="h2h-row"><span class="d">${fdate(g.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}${g.div !== I.nombre ? ' · ' + esc(g.div) : ''}</span><span>${esc(g.local)}</span><span class="s">${g.gl}-${g.gv}</span><span class="a">${esc(g.visita)}</span></div>`).join('')}</div>`
+          : `<p class="empty">No se enfrentaron en ${esc(I.h2h_divs.join(' ni en '))} desde ${I.h2h_desde}.</p>`}
+          <p class="note">Partidos desde ${I.h2h_desde} (${esc(I.h2h_divs.join(' y '))}). El historial pesa poco en el modelo: los planteles cambian mucho.</p>
         </div>
       </div>
 
@@ -737,7 +781,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const o = opts[+sel.value], dec = parseOdds(inp.value), amt = parseFloat(String(monto.value).replace(',', '.'));
       if (!dec) return;
       if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
-      mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, utc: m.utc, local: m.local_es, visita: m.visita_es,
+      mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, liga: I.liga, utc: m.utc, local: m.local_es, visita: m.visita_es,
                   mercado: o.n, k: o.k, p: o.p, momio: +dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(o.n)} a ${dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
@@ -750,14 +794,23 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
 
   // ---------------- tabla
-  const zone = p => p <= 4 ? 'var(--home)' : p <= 7 ? 'var(--draw)' : p >= D.tabla.length - 2 ? 'var(--neg)' : 'transparent';
-  $('#tbl-tabla').innerHTML = `<thead><tr><th>#</th><th class="l">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Goles</th><th>DG</th><th>xG dif.</th><th>Pts</th><th class="l">Forma</th></tr></thead><tbody>` +
-    D.tabla.map(r => `<tr class="click" data-team="${r.equipo}"><td><span class="zone" style="background:${zone(r.posicion)}"></span>${r.posicion}</td><td class="nm l">${esc(r.nombre)}</td><td>${r.pj}</td><td>${r.g}</td><td>${r.e}</td><td>${r.p}</td><td>${r.gf}:${r.gc}</td><td class="${r.dg < 0 ? 'neg' : ''}">${r.dg > 0 ? '+' : ''}${r.dg}</td><td class="${r.xdg < 0 ? 'neg' : ''}">${r.xdg > 0 ? '+' : ''}${r.xdg.toFixed(1)}</td><td><b>${r.pts}</b></td><td class="l">${formHTML(r.forma)}</td></tr>`).join('') + '</tbody>';
+  const ZCOL = { cl: 'var(--home)', eu: 'var(--draw)', pro: 'var(--warn)', des: 'var(--neg)' };
+  const tamGrupo = g => D.tabla.filter(r => r.grupo === g).length;
+  const zone = (p, n) => { const z = I.zonas.find(([a, b]) => (a < 0 ? n + a + 1 : a) <= p && p <= (b < 0 ? n + b + 1 : b)); return z ? ZCOL[z[2]] : 'transparent'; };
+  $('#t-title').textContent = `Tabla de posiciones ${I.temporada}`;
+  $('#t-text').textContent = 'Orden por puntos, diferencia de goles y goles a favor.' + (I.hay_xg ? ' "xG dif." compara los goles esperados a favor y en contra: si es mucho mejor que la diferencia real, el equipo ha tenido mala suerte, y al revés.' : '') + (I.grupos.length ? ' Una tabla por conferencia.' : '') + ' Toca un equipo para ver su perfil.';
+  $('#t-legend').innerHTML = I.zonas.filter((z, k, a) => a.findIndex(y => y[3] === z[3]) === k).map(z => `<span><i style="background:${ZCOL[z[2]]}"></i>${esc(z[3])}</span>`).join('') + (I.zonas.length ? '<span class="muted">Zonas aproximadas</span>' : '');
+  const filaTabla = r => `<tr class="click" data-team="${esc(r.equipo)}"><td><span class="zone" style="background:${zone(r.posicion, tamGrupo(r.grupo))}"></span>${r.posicion}</td><td class="nm l">${esc(r.nombre)}</td><td>${r.pj}</td><td>${r.g}</td><td>${r.e}</td><td>${r.p}</td><td>${r.gf}:${r.gc}</td><td class="${r.dg < 0 ? 'neg' : ''}">${r.dg > 0 ? '+' : ''}${r.dg}</td>${I.hay_xg ? `<td class="${r.xdg < 0 ? 'neg' : ''}">${r.xdg == null ? '—' : (r.xdg > 0 ? '+' : '') + r.xdg.toFixed(1)}</td>` : ''}<td><b>${r.pts}</b></td><td class="l">${formHTML(r.forma)}</td></tr>`;
+  const nCols = I.hay_xg ? 11 : 10;
+  $('#tbl-tabla').innerHTML = `<thead><tr><th>#</th><th class="l">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Goles</th><th>DG</th>${I.hay_xg ? '<th>xG dif.</th>' : ''}<th>Pts</th><th class="l">Forma</th></tr></thead><tbody>` +
+    (I.grupos.length ? I.grupos.map(g => `<tr class="grp-row"><th colspan="${nCols}">${esc(g)}</th></tr>` + D.tabla.filter(r => r.grupo === g).map(filaTabla).join('')).join('') : D.tabla.map(filaTabla).join('')) + '</tbody>';
   $$('#tbl-tabla tr.click').forEach(tr => tr.addEventListener('click', () => { showView('equipos'); showTeam(tr.dataset.team); history.replaceState(null, '', '#equipos'); }));
 
   // ---------------- equipos (tabla ordenable + perfil)
+  $('#e-eyebrow').textContent = `Estadísticas por partido · ${I.temporada}`;
+  const fx = (v, d) => v == null || isNaN(v) ? '—' : v.toFixed(d);
   const COLS = [
-    ['Goles', t => t.total.gf_pp, 2], ['Goles en contra', t => t.total.gc_pp, 2], ['xG', t => t.total.xf_pp, 2], ['xG en contra', t => t.total.xc_pp, 2],
+    ['Goles', t => t.total.gf_pp, 2], ['Goles en contra', t => t.total.gc_pp, 2], ...(I.hay_xg ? [['xG', t => t.total.xf_pp, 2], ['xG en contra', t => t.total.xc_pp, 2]] : []),
     ['Tiros a puerta', t => t.total.puerta_pp, 1], ['Córners', t => t.total.corners_pp, 1], ['Córners en contra', t => t.total.corners_contra_pp, 1],
     ['Córners totales', t => t.total.corners_total_pp, 1], ['Amarillas', t => t.total.amarillas_pp, 1], ['Posesión %', t => t.total.posesion, 1],
     ['+2.5 goles %', t => t.total.over25 * 100, 0], ['Ambos anotan %', t => t.total.btts * 100, 0], ['A cero %', t => t.total.cero * 100, 0],
@@ -773,17 +826,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function showTeam(k) {
     selTeam = k; renderTeams();
     const t = E[k];
-    const split = s => s ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${s.corners_pp.toFixed(1)}</td><td>${s.corners_contra_pp.toFixed(1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
+    const split = s => s ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${fx(s.corners_pp, 1)}</td><td>${fx(s.corners_contra_pp, 1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
     const nextMatch = M.find(m => m.local_fd === k || m.visita_fd === k);
     $('#team-profile').innerHTML = `
       <div class="dhead">
-        <span class="eyebrow">${t.posicion}º en la tabla · ${t.total.pts} puntos</span>
+        <span class="eyebrow">${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos</span>
         <h2>${esc(t.nombre)}</h2>
         <div class="kv">
           <div><span>Goles por partido</span><b>${t.total.gf_pp.toFixed(2)}</b></div>
           <div><span>xG por partido</span><b>${t.total.xf_pp == null ? '—' : t.total.xf_pp.toFixed(2)}</b></div>
           <div><span>Recibe por partido</span><b>${t.total.gc_pp.toFixed(2)}</b></div>
-          <div><span>Córners por partido</span><b>${t.total.corners_pp.toFixed(1)}</b></div>
+          <div><span>Córners por partido</span><b>${fx(t.total.corners_pp, 1)}</b></div>
           <div><span>Posesión</span><b>${t.total.posesion == null ? '—' : t.total.posesion.toFixed(0) + '%'}</b></div>
         </div>
         ${nextMatch ? `<button class="back" id="go-next">Próximo: ${esc(nextMatch.local_es)} vs ${esc(nextMatch.visita_es)} · ver ficha →</button>` : ''}
@@ -808,66 +861,84 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   renderTeams();
 
   // ---------------- el modelo
-  const strat = B.estrategias, main = strat['modelo|B365|1x2+ou|0.05'];
-  $('#prueba-text').textContent = `Para cada día de partido entre ${fdate(B.desde, { month: 'long', year: 'numeric' })} y ${fdate(B.hasta, { month: 'long', year: 'numeric' })}, el modelo solo vio partidos anteriores, calculó sus probabilidades y "apostó" 1 unidad donde veía EV de +5% o más. Fueron ${num(B.partidos)} partidos de La Liga.`;
-  $('#verdict').innerHTML = `
-    <div><span class="eyebrow">ROI siguiendo los PICK</span><span class="big neg">${spct(main.roi)}</span><span class="what">${num(main.n)} apuestas: ${sNum(main.ganancia_u)} unidades.</span></div>
-    <div><span class="eyebrow">Meses en positivo</span><span class="big">${B.meses_positivos}<small style="font-size:20px;color:var(--ink-3)"> de ${B.meses_total}</small></span><span class="what">${B.meses_total - B.meses_positivos} meses terminaron en pérdida.</span></div>
-    <div><span class="eyebrow">Contra el momio de cierre</span><span class="big neg">${spct(main.clv_medio)}</span><span class="what">Solo ${pct(main.pct_gana_cierre)} de sus apuestas le ganaron al cierre.</span></div>
-    <div class="conclusion"><strong>El modelo informa, no adivina.</strong> Sus probabilidades y momios justos sirven para comparar y evitar momios malos, pero no le ganan a la casa de forma constante.</div>`;
-  const cls = v => v < 0 ? 'neg' : 'posv';
-  $('#tbl-exp').innerHTML = `<thead><tr><th class="l">Prueba</th><th>Periodo</th><th class="l">Comparado con</th><th>Precisión modelo</th><th>Referencia</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>` +
-    D.experimentos.map(e => `<tr><td class="nm l" style="white-space:normal;min-width:200px">${esc(e.prueba)}</td><td>${e.periodo}</td><td class="l">${esc(e.contra)}</td>
-      <td class="${e.modelo > e.casa ? 'neg' : 'posv'}">${e.modelo.toFixed(4)}</td><td>${e.casa.toFixed(4)}</td>
-      <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? 'sin momios' : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
-      <td class="wrap">${esc(e.nota)}</td></tr>`).join('') + '</tbody>';
-  const fav = B.calibracion.reduce((a, b) => (b.real - b.pred > a.real - a.pred ? b : a));
-  $('#why').innerHTML = `
-    <div><h4>La casa sabe más</h4><p class="note" style="color:var(--ink-2)">Usa alineaciones, lesiones y el dinero de miles de apostadores. Su margen es de cerca de 5%: para ganar hay que ser mejor que ella por más que eso.</p></div>
-    <div><h4>Cuando no coinciden, suele fallar el modelo</h4><p class="note" style="color:var(--ink-2)">El "valor" aparece donde el modelo se equivoca. Los PICK más alejados del mercado fueron los que más perdieron.</p></div>
-    <div><h4>Subestima a los favoritos</h4><p class="note" style="color:var(--ink-2)">Cuando le dio ${pct(fav.pred)} a un equipo, ese equipo ganó ${pct(fav.real)} de las veces. Desconfía de los PICK contra grandes favoritos.</p></div>
-    <div><h4>Bajas y cansancio ya están en el momio</h4><p class="note" style="color:var(--ink-2)">Agregarlas mejoró poco la precisión y nada el resultado: el momio se mueve en minutos cuando sale la noticia.</p></div>`;
+  function renderModeloTab() {
+    if (!B) {
+      $('#v-modelo').innerHTML = `<div class="intro"><p class="eyebrow">Prueba sin mirar al futuro</p><h2>Cómo le habría ido al modelo</h2>
+        <p>Para ${esc(I.nombre)} todavía no está la prueba con temporadas pasadas. Mientras tanto, la pestaña Registro lleva la cuenta en vivo de cada PICK del modelo.</p></div>`;
+      return;
+    }
+    const main = PRINCIPAL, neg = main.roi < 0;
+    const y0 = B.desde.slice(0, 4), y1 = B.hasta.slice(0, 4);
+    $('#m-eyebrow').textContent = `Prueba sin mirar al futuro · ${y0}-${y1}`;
+    $('#m-curve-note').textContent = `Una unidad por apuesta con EV de +5% o más, a ${B.referencia || 'la cuota de apertura de Bet365'}.`;
+    $('#prueba-text').textContent = `Para cada día de partido entre ${fdate(B.desde, { month: 'long', year: 'numeric' })} y ${fdate(B.hasta, { month: 'long', year: 'numeric' })}, el modelo solo vio partidos anteriores, calculó sus probabilidades y "apostó" 1 unidad donde veía EV de +5% o más${B.mercados ? ' (' + B.mercados + ')' : ''}. Fueron ${num(B.partidos)} partidos de ${I.nombre}.`;
+    const ic = main.roi_ic95 ? ` Rango probable: ${spct(main.roi_ic95[0])} a ${spct(main.roi_ic95[1])}.` : '';
+    $('#verdict').innerHTML = `
+      <div><span class="eyebrow">ROI siguiendo los PICK</span><span class="big ${neg ? 'neg' : ''}">${spct(main.roi)}</span><span class="what">${num(main.n)} apuestas: ${sNum(main.ganancia_u)} unidades.${ic}</span></div>
+      <div><span class="eyebrow">Meses en positivo</span><span class="big">${B.meses_positivos}<small style="font-size:20px;color:var(--ink-3)"> de ${B.meses_total}</small></span><span class="what">${B.meses_total - B.meses_positivos} meses terminaron en pérdida.</span></div>
+      <div><span class="eyebrow">Contra el momio de cierre</span><span class="big ${main.clv_medio < 0 ? 'neg' : ''}">${spct(main.clv_medio)}</span><span class="what">${pct(main.pct_gana_cierre)} de sus apuestas le ganaron al cierre.</span></div>
+      <div class="conclusion">${neg
+        ? '<strong>El modelo informa, no adivina.</strong> Sus probabilidades y momios justos sirven para comparar y evitar momios malos, pero no le ganan a la casa de forma constante.'
+        : `<strong>Salió positivo, pero con cuidado.</strong> ${main.roi_ic95 && main.roi_ic95[0] < 0 ? 'El rango probable incluye perder, así que puede ser suerte.' : 'Aun así, lo pasado no garantiza lo que viene.'} ${main.clv_medio < 0 ? 'Además, sus momios fueron peores que los de cierre: la casa terminó corrigiendo la mayoría de sus PICK.' : ''} Compruébalo en vivo en la pestaña Registro antes de confiar en él.`}</div>`;
+    if (D.experimentos && D.experimentos.length) {
+      const cls = v => v < 0 ? 'neg' : 'posv';
+      $('#tbl-exp').innerHTML = `<thead><tr><th class="l">Prueba</th><th>Periodo</th><th class="l">Comparado con</th><th>Precisión modelo</th><th>Referencia</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>` +
+        D.experimentos.map(e => `<tr><td class="nm l" style="white-space:normal;min-width:200px">${esc(e.prueba)}</td><td>${e.periodo}</td><td class="l">${esc(e.contra)}</td>
+          <td class="${e.modelo > e.casa ? 'neg' : 'posv'}">${e.modelo.toFixed(4)}</td><td>${e.casa.toFixed(4)}</td>
+          <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? 'sin momios' : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
+          <td class="wrap">${esc(e.nota)}</td></tr>`).join('') + '</tbody>';
+    } else $('#exp-card').hidden = true;
+    const fav = B.calibracion.reduce((a, b) => (b.real - b.pred > a.real - a.pred ? b : a));
+    $('#why-title').textContent = neg ? 'Por qué pierde' : 'Por qué no hay que confiarse';
+    $('#why').innerHTML = `
+      <div><h4>La casa sabe más</h4><p class="note" style="color:var(--ink-2)">Usa alineaciones, lesiones y el dinero de miles de apostadores. Su margen es de cerca de 5%: para ganar hay que ser mejor que ella por más que eso.</p></div>
+      <div><h4>Cuando no coinciden, suele fallar el modelo</h4><p class="note" style="color:var(--ink-2)">El "valor" aparece donde el modelo se equivoca. Mira en la gráfica de abajo cómo le fue según cuánto valor veía.</p></div>
+      ${fav.real - fav.pred > 0.02 ? `<div><h4>Subestima a algunos favoritos</h4><p class="note" style="color:var(--ink-2)">Cuando le dio ${pct(fav.pred)} a un equipo, ese equipo ganó ${pct(fav.real)} de las veces. Desconfía de los PICK contra grandes favoritos.</p></div>` : ''}
+      <div><h4>Bajas y cansancio ya están en el momio</h4><p class="note" style="color:var(--ink-2)">El momio se mueve en minutos cuando sale la noticia; el modelo se entera hasta después.</p></div>`;
+    curve(); evChart(); cal(fav);
+  }
 
   function svgEl(tag, attrs) { const e = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
   function tipFor(c) { let t = $('.tip', c); if (!t) { t = document.createElement('div'); t.className = 'tip'; c.appendChild(t); } return t; }
   function showTip(c, x, y, html) { const t = tipFor(c); t.innerHTML = html; const w = c.clientWidth; t.style.left = Math.max(70, Math.min(w - 70, x)) + 'px'; t.style.top = y + 'px'; t.classList.add('on'); }
   function hideTip(c) { const t = $('.tip', c); if (t) t.classList.remove('on'); }
   function scaleToPx(svg, ev) { const r = svg.getBoundingClientRect(); const vb = svg.viewBox.baseVal; return { x: (ev.clientX - r.left) * vb.width / r.width, k: r.width / vb.width }; }
-  (function curve() {
+  function curve() {
     const el = $('#chart-curve');
     const pts = B.curva.map(p => ({ t: new Date(p.d + 'T12:00:00Z').getTime(), u: p.u }));
     const W = 960, H = 280, pad = { l: 52, r: 16, t: 14, b: 30 };
     const t0 = pts[0].t, t1 = pts[pts.length - 1].t;
     const minU = Math.min(0, ...pts.map(p => p.u)), maxU = Math.max(0, ...pts.map(p => p.u));
-    const step = 50, yMin = Math.floor(minU / step) * step - step, yMax = Math.max(step, Math.ceil(maxU / step) * step);
+    const step = niceStep(maxU - minU), yMin = Math.floor(minU / step) * step - step, yMax = Math.max(step, Math.ceil(maxU / step) * step);
+    const color = pts[pts.length - 1].u >= 0 ? 'var(--pos)' : 'var(--neg)';
     const X = t => pad.l + (t - t0) / (t1 - t0) * (W - pad.l - pad.r), Y = u => pad.t + (yMax - u) / (yMax - yMin) * (H - pad.t - pad.b);
     const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Ganancia acumulada' });
     for (let v = yMin; v <= yMax; v += step) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const t = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); t.textContent = v > 0 ? '+' + v : v === 0 ? '0' : '−' + Math.abs(v); svg.appendChild(t); }
-    for (let y = 2021; y <= 2026; y++) { const t = Date.UTC(y, 0, 1); if (t < t0 || t > t1) continue; const l = svgEl('text', { x: X(t), y: H - 8, 'text-anchor': 'middle' }); l.textContent = y; svg.appendChild(l); }
+    for (let y = new Date(t0).getUTCFullYear() + 1; y <= new Date(t1).getUTCFullYear(); y++) { const t = Date.UTC(y, 0, 1); if (t < t0 || t > t1) continue; const l = svgEl('text', { x: X(t), y: H - 8, 'text-anchor': 'middle' }); l.textContent = y; svg.appendChild(l); }
     svg.appendChild(svgEl('line', { class: 'zero', x1: pad.l, x2: W - pad.r, y1: Y(0), y2: Y(0) }));
     const d = pts.map((p, k) => (k ? 'L' : 'M') + X(p.t).toFixed(1) + ',' + Y(p.u).toFixed(1)).join('');
-    svg.appendChild(svgEl('path', { d: d + `L${X(t1).toFixed(1)},${Y(0)}L${X(t0).toFixed(1)},${Y(0)}Z`, fill: 'var(--neg)', 'fill-opacity': 0.1 }));
-    svg.appendChild(svgEl('path', { d, fill: 'none', stroke: 'var(--neg)', 'stroke-width': 2 }));
+    svg.appendChild(svgEl('path', { d: d + `L${X(t1).toFixed(1)},${Y(0)}L${X(t0).toFixed(1)},${Y(0)}Z`, fill: color, 'fill-opacity': 0.1 }));
+    svg.appendChild(svgEl('path', { d, fill: 'none', stroke: color, 'stroke-width': 2 }));
     const last = pts[pts.length - 1];
-    svg.appendChild(svgEl('circle', { cx: X(last.t), cy: Y(last.u), r: 4.5, fill: 'var(--neg)', stroke: 'var(--surface)', 'stroke-width': 2 }));
+    svg.appendChild(svgEl('circle', { cx: X(last.t), cy: Y(last.u), r: 4.5, fill: color, stroke: 'var(--surface)', 'stroke-width': 2 }));
     const el2 = svgEl('text', { x: X(last.t) - 4, y: Y(last.u) + 24, 'text-anchor': 'end', class: 'lbl-strong' }); el2.textContent = sNum(last.u) + ' u'; svg.appendChild(el2);
     const hit = svgEl('rect', { x: pad.l, y: pad.t, width: W - pad.l - pad.r, height: H - pad.t - pad.b, fill: 'transparent' });
     hit.addEventListener('pointermove', ev => { const p = scaleToPx(svg, ev); const t = t0 + (p.x - pad.l) / (W - pad.l - pad.r) * (t1 - t0); let lo = 0, hi = pts.length - 1; while (lo < hi) { const mid = (lo + hi) >> 1; if (pts[mid].t < t) lo = mid + 1; else hi = mid; } const q = pts[lo]; showTip(el, X(q.t) * p.k, Y(q.u) * p.k, `${new Date(q.t).toLocaleDateString('es-HN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}<br>Apuesta ${num(lo + 1)} · saldo ${sNum(q.u, 1)} u`); });
     hit.addEventListener('pointerleave', () => hideTip(el));
     svg.appendChild(hit); el.appendChild(svg);
-  })();
-  (function evChart() {
+  }
+  function evChart() {
     const el = $('#chart-ev'), data = B.por_ev;
     const W = 440, H = 240, pad = { l: 46, r: 10, t: 20, b: 44 };
-    const yMin = Math.floor(Math.min(...data.map(d => d.roi)) * 100 / 5) * 5 / 100, yMax = 0.05;
+    const yMin = Math.min(-0.05, Math.floor(Math.min(...data.map(d => d.roi)) * 100 / 5) * 5 / 100), yMax = Math.max(0.05, Math.ceil(Math.max(...data.map(d => d.roi)) * 100 / 5) * 5 / 100);
     const Y = v => pad.t + (yMax - v) / (yMax - yMin) * (H - pad.t - pad.b), bw = (W - pad.l - pad.r) / data.length;
     const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'ROI por tramo de EV' });
     for (let v = yMin; v <= yMax + 1e-9; v += 0.05) { svg.appendChild(svgEl('line', { x1: pad.l, x2: W - pad.r, y1: Y(v), y2: Y(v), stroke: 'var(--line)' })); const t = svgEl('text', { x: pad.l - 8, y: Y(v) + 4, 'text-anchor': 'end' }); t.textContent = Math.round(v * 100) + '%'; svg.appendChild(t); }
-    data.forEach((d, k) => { const x = pad.l + k * bw + bw * 0.2, w = bw * 0.6; svg.appendChild(svgEl('rect', { x, y: Y(0), width: w, height: Y(d.roi) - Y(0), rx: 4, fill: 'var(--neg)' })); const v = svgEl('text', { x: x + w / 2, y: Y(d.roi) + 16, 'text-anchor': 'middle', class: 'lbl-strong' }); v.textContent = spct(d.roi); svg.appendChild(v); const l = svgEl('text', { x: x + w / 2, y: H - 24, 'text-anchor': 'middle' }); l.textContent = 'EV ' + d.tramo; svg.appendChild(l); const n = svgEl('text', { x: x + w / 2, y: H - 9, 'text-anchor': 'middle' }); n.textContent = num(d.n) + ' apuestas'; svg.appendChild(n); });
+    data.forEach((d, k) => { const x = pad.l + k * bw + bw * 0.2, w = bw * 0.6; svg.appendChild(svgEl('rect', { x, y: Math.min(Y(0), Y(d.roi)), width: w, height: Math.abs(Y(d.roi) - Y(0)), rx: 4, fill: d.roi < 0 ? 'var(--neg)' : 'var(--pos)' })); const v = svgEl('text', { x: x + w / 2, y: d.roi < 0 ? Y(d.roi) + 16 : Y(d.roi) - 6, 'text-anchor': 'middle', class: 'lbl-strong' }); v.textContent = spct(d.roi); svg.appendChild(v); const l = svgEl('text', { x: x + w / 2, y: H - 24, 'text-anchor': 'middle' }); l.textContent = 'EV ' + d.tramo; svg.appendChild(l); const n = svgEl('text', { x: x + w / 2, y: H - 9, 'text-anchor': 'middle' }); n.textContent = num(d.n) + ' apuestas'; svg.appendChild(n); });
     svg.appendChild(svgEl('line', { class: 'zero', x1: pad.l, x2: W - pad.r, y1: Y(0), y2: Y(0) }));
     el.appendChild(svg);
-  })();
-  (function cal() {
+  }
+  function cal(fav) {
     const el = $('#chart-cal'), data = B.calibracion;
     const W = 440, H = 300, pad = { l: 46, r: 14, t: 12, b: 40 };
     const X = v => pad.l + v / 0.9 * (W - pad.l - pad.r), Y = v => pad.t + (0.9 - v) / 0.9 * (H - pad.t - pad.b);
@@ -880,8 +951,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const an = svgEl('text', { x: X(fav.pred) - 14, y: Y(fav.real) - 4, 'text-anchor': 'end', class: 'lbl-strong' }); an.textContent = `dijo ${pct(fav.pred)}, ganó ${pct(fav.real)}`; svg.appendChild(an);
     const yl = svgEl('text', { x: pad.l + 6, y: pad.t + 12 }); yl.textContent = 'lo que pasó'; svg.appendChild(yl);
     el.appendChild(svg);
-  })();
-  $('#foot-data').textContent = `Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas y Europa)${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles con ${num(D.n_sims)} simulaciones por partido.`;
+  }
+  $('#foot-data').textContent = (I.fuente_fd === 'por temporada'
+    ? 'Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas, cuotas históricas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas)'
+    : 'Datos: football-data.co.uk (resultados y cuotas históricas), ESPN (tiros, córners, tarjetas, posesión, jugadores, partidos próximos, momios de DraftKings, alineaciones, copas)')
+    + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles con ${num(D.n_sims)} simulaciones por partido.`;
 
   // ---------------- mi registro
   const fmtM = v => num(v, Math.abs(v - Math.round(v)) > 0.005 ? 2 : 0);
@@ -987,7 +1061,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const linea2 = [res, cl].filter(Boolean).join(' · ');
     return `<div class="bet" data-uid="${esc(b.uid || '')}">
       <div class="b-main">
-        <span class="b-meta">${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
+        <span class="b-meta">${b.liga && LIGAS[b.liga] ? esc(corto(LIGAS[b.liga])) + ' · ' : ''}${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
         <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
         <span class="b-line">${det}</span>
         ${linea2 ? `<span class="b-line">${linea2}</span>` : ''}
@@ -1061,17 +1135,25 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     });
   }
 
+  let filtroModelo = (R.modelo || []).some(b => (b.liga || 'laliga') === I.liga) ? I.liga : '';
   function renderModelo() {
     const el = $('#reg-modelo');
-    const lista = (R.modelo || []).map(b => ({ bet: Object.assign({}, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
-    lista.forEach(x => { x.e = estado(x.bet, 1); });
+    const todos = (R.modelo || []).map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
+    todos.forEach(x => { x.e = estado(x.bet, 1); });
+    const ligasCon = Object.keys(LIGAS).filter(id => todos.some(x => x.bet.liga === id));
+    if (filtroModelo && !ligasCon.includes(filtroModelo)) filtroModelo = '';
+    const lista = filtroModelo ? todos.filter(x => x.bet.liga === filtroModelo) : todos;
     const pts = curva(lista);
     const conCierre = lista.filter(x => new Date(x.bet.utc) <= new Date() && cierreDe(x.bet));
     const mejor = conCierre.filter(x => x.bet.momio > cierreDe(x.bet) + 1e-9).length;
     const desde = (R.modelo || []).map(b => b.visto).sort()[0];
+    const nomFiltro = filtroModelo ? LIGAS[filtroModelo] : 'todas las ligas';
+    const porLiga = ligasCon.map(id => { const sub = todos.filter(x => x.bet.liga === id), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
+      return { id, n: sub.length, fin: fin.length, pl, roi: fin.length ? pl / fin.length : null }; });
     el.innerHTML = `
+      ${ligasCon.length > 1 ? `<div class="subtabs" id="mod-filtro">${[['', 'Todas'], ...ligasCon.map(id => [id, corto(LIGAS[id])])].map(([id, n]) => `<button data-l="${id}" aria-selected="${id === filtroModelo}">${esc(n)}</button>`).join('')}</div>` : ''}
       <div class="card">
-        <h3>Si hubieras apostado 1 unidad a cada PICK</h3>
+        <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)}</h3>
         <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no.</p>
         ${resumen(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
@@ -1079,11 +1161,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
       </div>
+      ${porLiga.length > 1 ? `<div class="card"><h3>Por liga</h3><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Liga</th><th>Picks</th><th>Liquidados</th><th>Ganancia</th><th>ROI</th></tr></thead><tbody>
+        ${porLiga.map(r => `<tr><td class="nm l">${esc(LIGAS[r.id])}</td><td>${num(r.n)}</td><td>${num(r.fin)}</td><td class="${r.pl < 0 ? 'neg' : r.pl > 0 ? 'posv' : ''}">${r.fin ? sM(r.pl) + ' u' : '—'}</td><td class="${r.pl < 0 ? 'neg' : r.pl > 0 ? 'posv' : ''}">${r.roi == null ? '—' : spct(r.roi, 1)}</td></tr>`).join('')}
+        </tbody></table></div><p class="note">Con pocos partidos liquidados, la diferencia entre ligas es casi pura suerte.</p></div>` : ''}
       <div class="card">
         <h3>Picks</h3>
         ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, false)).join('')}</div>` : '<p class="empty">Todavía no hay picks registrados. Se agregan solos en la próxima actualización.</p>'}
       </div>`;
     if (pts.length >= 2) cumChart($('#chart-modelo'), pts, 'u');
+    $$('#mod-filtro button', el).forEach(btn => btn.addEventListener('click', () => { filtroModelo = btn.dataset.l; renderModelo(); }));
   }
 
   function renderRegistro() { renderMias(); renderModelo(); }
@@ -1091,6 +1177,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     $$('#reg-tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
     $('#reg-mias').hidden = b.dataset.r !== 'mias'; $('#reg-modelo').hidden = b.dataset.r !== 'modelo';
   }));
+
+  renderModeloTab();
 
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);

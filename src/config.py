@@ -34,23 +34,32 @@ COPAS_CONCACAF = {'concacaf.champions': 'Concachampions', 'concacaf.leagues.cup'
 LIGAS = {
     'laliga': {'nombre': 'La Liga', 'pais': 'España', 'espn': 'esp.1', 'fd': 'SP1', 'fd2': 'SP2', 'fd2_nombre': 'Segunda',
                'calendario': 'europa', 'api_football': 140,
-               'copas': {**COPAS_UEFA, 'esp.copa_del_rey': 'Copa del Rey', 'esp.super_cup': 'Supercopa'}},
+               'copas': {**COPAS_UEFA, 'esp.copa_del_rey': 'Copa del Rey', 'esp.super_cup': 'Supercopa'}, 'zonas': 'europa20'},
     'premier': {'nombre': 'Premier League', 'pais': 'Inglaterra', 'espn': 'eng.1', 'fd': 'E0', 'fd2': 'E1', 'fd2_nombre': 'Championship',
                 'calendario': 'europa', 'api_football': 39,
-                'copas': {**COPAS_UEFA, 'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'}},
+                'copas': {**COPAS_UEFA, 'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'}, 'zonas': 'europa20'},
     'seriea': {'nombre': 'Serie A', 'pais': 'Italia', 'espn': 'ita.1', 'fd': 'I1', 'fd2': 'I2', 'fd2_nombre': 'Serie B',
                'calendario': 'europa', 'api_football': 135,
-               'copas': {**COPAS_UEFA, 'ita.coppa_italia': 'Copa de Italia', 'ita.super_cup': 'Supercopa'}},
+               'copas': {**COPAS_UEFA, 'ita.coppa_italia': 'Copa de Italia', 'ita.super_cup': 'Supercopa'}, 'zonas': 'europa20'},
     'bundesliga': {'nombre': 'Bundesliga', 'pais': 'Alemania', 'espn': 'ger.1', 'fd': 'D1', 'fd2': 'D2', 'fd2_nombre': '2. Bundesliga',
                    'calendario': 'europa', 'api_football': 78,
-                   'copas': {**COPAS_UEFA, 'ger.dfb_pokal': 'Copa de Alemania'}},
+                   'copas': {**COPAS_UEFA, 'ger.dfb_pokal': 'Copa de Alemania'}, 'zonas': 'europa18'},
     'ligue1': {'nombre': 'Ligue 1', 'pais': 'Francia', 'espn': 'fra.1', 'fd': 'F1', 'fd2': 'F2', 'fd2_nombre': 'Ligue 2',
                'calendario': 'europa', 'api_football': 61,
-               'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}},
+               'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
     'ligamx': {'nombre': 'Liga MX', 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
-               'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF)},
+               'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
-            'calendario': 'anual', 'api_football': 253, 'copas': {**COPAS_CONCACAF, 'usa.open': 'US Open Cup'}},
+            'calendario': 'anual', 'api_football': 253, 'copas': {**COPAS_CONCACAF, 'usa.open': 'US Open Cup'}, 'zonas': 'mls',
+            'nuevo': 'es nuevo en la liga'},
+}
+# Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
+# Son aproximadas: los cupos exactos cambian según copas y coeficientes.
+ZONAS = {
+    'europa20': [[1, 4, 'cl', 'Champions'], [5, 7, 'eu', 'Europa / Conference'], [-3, -1, 'des', 'Descenso']],
+    'europa18': [[1, 4, 'cl', 'Champions'], [5, 6, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
+    'ligamx': [[1, 6, 'cl', 'Liguilla directa'], [7, 10, 'eu', 'Play-in']],
+    'mls': [[1, 7, 'cl', 'Playoffs'], [8, 9, 'eu', 'Wild card']],
 }
 
 # Nombres: ESPN -> football-data

@@ -1,16 +1,18 @@
-# Laboratorio La Liga
+# Laboratorio de fútbol
 
-Página de análisis de La Liga que se actualiza sola. Por cada partido muestra:
+Página de análisis que se actualiza sola para **La Liga, Premier League, Serie A, Bundesliga, Ligue 1, Liga MX y MLS**.
+Arriba se elige la liga. Por cada partido muestra:
 - probabilidades de un modelo Dixon-Coles con 10,000 simulaciones;
 - comparación con los momios de la casa y momios justos de todos los mercados, incluidos los córners;
 - estadísticas de los dos equipos (xG, tiros, córners, posesión, tarjetas, en casa y fuera);
 - bajas: parte oficial de lesiones, sanciones, titulares no convocados y alineaciones confirmadas;
-- cansancio por Champions, Europa League, Conference y Copa, e historial de enfrentamientos.
+- cansancio por copas y torneos internacionales (Champions, Europa, copas nacionales, Concachampions, Leagues Cup), e historial de enfrentamientos.
 
 La pestaña **Registro** guarda tus apuestas (desde la calculadora de cada partido) y las liquida sola cuando termina el partido;
 también lleva el registro automático de cada PICK del modelo para ver en vivo si gana o pierde.
 
-Incluye también la tabla, las estadísticas de los 20 equipos y el resultado honesto de la prueba del modelo con temporadas pasadas.
+Incluye también la tabla (por conferencia en la MLS; torneo actual en Liga MX), las estadísticas de los equipos y el resultado
+honesto de la prueba del modelo con temporadas pasadas de cada liga.
 
 ## Cómo se actualiza
 
@@ -32,25 +34,28 @@ GitHub Actions corre `.github/workflows/actualizar.yml`:
 
 | Fuente | Datos | Costo |
 |---|---|---|
-| [football-data.co.uk](https://www.football-data.co.uk) | Resultados, xG, tiros, córners, tarjetas, cuotas históricas | Gratis |
-| ESPN (API pública no oficial) | Próximos partidos, momios de DraftKings, alineaciones, jugadores, posesión, copas | Gratis; puede cambiar sin aviso |
+| [football-data.co.uk](https://www.football-data.co.uk) | Europa: resultados, xG, tiros, córners, tarjetas, cuotas. Liga MX y MLS: resultados y cuotas | Gratis |
+| ESPN (API pública no oficial) | Próximos partidos, momios de DraftKings, alineaciones, jugadores, tiros, córners, posesión, copas, conferencias | Gratis; puede cambiar sin aviso |
 | [API-Football](https://www.api-football.com) | Parte oficial de lesiones y sanciones | Plan gratis o Pro ($19/mes) |
 
 ## Estructura
 
 ```
-src/config.py       nombres de equipos, temporadas, ajustes
+src/config.py       ligas (LIGAS), zonas de la tabla, temporadas, ajustes
+src/liga.py         une football-data con ESPN y arma el mapa de nombres de cada liga
 src/fuentes.py      descargas (football-data, ESPN, API-Football)
 src/datos.py        lectura de los CSV
 src/model.py        modelo Dixon-Coles y simulación
 src/corners.py      modelo de córners
-src/analizar.py     arma data/sitio.json con todo lo que muestra la página
-src/construir.py    arma site/index.html desde src/plantilla.html
+src/analizar.py     arma data/ligas/<liga>.json con todo lo que muestra la página
+src/construir.py    copia los datos a site/datos/ y arma site/index.html desde src/plantilla.html
 src/registro.py     registro de los PICK del modelo, momios de cierre y resultados para liquidar
 src/ejecutar.py     punto de entrada (modos: completo, rapido)
 src/revisar.py      revisión rápida: partidos por empezar sin alineación o terminados sin resultado
-data/raw, data/espn datos descargados (se guardan para no volver a bajarlos)
-data/modelo         resultado de la prueba del modelo (2020-2026)
+data/raw, data/espn datos descargados (se guardan para no volver a bajarlos); data/espn/<liga>/
+data/historia       temporadas viejas de Europa, solo para la prueba del modelo
+data/nombres        mapa de nombres ESPN -> football-data que se aprende solo, por liga
+data/modelo/<liga>  resultado de la prueba del modelo
 data/registro       picks del modelo (modelo.json) y últimos momios antes de cada partido (cierres.json)
 ```
 
@@ -61,5 +66,5 @@ para no perderlas y "Cargar respaldo" para pasarlas a otro dispositivo.
 
 ## Aviso
 
-Análisis estadístico con fines informativos. En la prueba con seis temporadas, seguir los PICK del modelo perdió dinero
-(−13% contra Bet365). No es una casa de apuestas ni asesoría. Juega responsable, solo +18.
+Análisis estadístico con fines informativos. En la prueba de La Liga con seis temporadas, seguir los PICK del modelo perdió dinero
+(−13% contra Bet365); la pestaña "El modelo" muestra la prueba de cada liga. No es una casa de apuestas ni asesoría. Juega responsable, solo +18.

@@ -47,6 +47,7 @@ def _paso(nombre, f, *a, **k):
 
 def main(modo):
     t0 = time.time()
+    ligas = None
     print(f'== {modo} · {ahora():%Y-%m-%d %H:%M} UTC')
     if modo in ('rapido', 'alineaciones'):
         tareas = revisar.pendientes()
@@ -70,8 +71,9 @@ def main(modo):
             _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
         _paso('copas', fuentes.descargar_copas)
         _paso('lesiones', fuentes.descargar_lesiones)
-        _paso('diagnóstico', fuentes.diagnostico)
-    print('- análisis'); analizar.main()
+        _paso('tablas', fuentes.descargar_tablas)
+        _paso('historia', fuentes.descargar_historia)
+    print('- análisis'); analizar.main(ligas if modo in ('rapido', 'alineaciones') else None)
     print('- registro'); registro.actualizar()
     print('- página'); construir.main()
     salida('si')
