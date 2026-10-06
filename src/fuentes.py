@@ -15,7 +15,7 @@ from datetime import timedelta
 
 import requests
 
-from config import RAW, ESPN_DIR, LIGA, COPAS_ESPN, ahora, temporadas, temporada_actual, DIAS_PROXIMOS
+from config import RAW, ESPN_DIR, LIGA, COPAS_ESPN, ESPN_A_FD, ahora, temporadas, temporada_actual, DIAS_PROXIMOS
 
 UA = {'User-Agent': 'Mozilla/5.0 (laliga-analisis; uso personal)'}
 ESPN = 'https://site.api.espn.com/apis/site/v2/sports/soccer'
@@ -187,6 +187,8 @@ def descargar_copas():
             for e in _scoreboard(lg, str(yy)):
                 comp = e['competitions'][0]
                 for c in comp['competitors']:
+                    if c['team']['displayName'] not in ESPN_A_FD:   # solo equipos españoles
+                        continue
                     filas.add(f"{nom}|{e['date']}|{c['team']['displayName']}|{int(bool(comp['status']['type'].get('completed')))}")
     if filas:
         (RAW / 'copas.txt').write_text('\n'.join(sorted(filas)) + '\n', encoding='utf-8')
