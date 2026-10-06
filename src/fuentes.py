@@ -197,29 +197,42 @@ def descargar_copas():
 
 # ------------------------------------------------------------------ API-Football (opcional)
 def descargar_lesiones():
-    key = os.environ.get('API_FOOTBALL_KEY')
+    """Parte de lesiones y sanciones de API-Football. Guarda el resultado de la consulta (sin la clave)
+    en data/raw/api_football_estado.json para poder revisar qué respondió."""
+    key = os.environ.get('API_FOOTBALL_KEY', '').strip()
     p = RAW / 'lesiones.json'
+    estado_p = RAW / 'api_football_estado.json'
+    estado = {'fecha': ahora().isoformat(timespec='minutes'), 'clave_presente': bool(key)}
     if not key:
         print('  API-Football: sin clave, se omiten las lesiones oficiales')
+        json.dump(estado, open(estado_p, 'w'), ensure_ascii=False, indent=1)
         return
     season = 2000 + int(temporada_actual()[:2])
-    j = _get('https://v3.football.api-sports.io/injuries', headers={'x-apisports-key': key},
-             params={'league': LIGA['api_football'], 'season': season})
-    if not j:
-        print('  API-Football: sin respuesta')
-        return
-    if j.get('errors'):
-        print(f"  API-Football: {j['errors']}")
-        return
+    estado['temporada_pedida'] = season
+    try:
+        r = requests.get('https://v3.football.api-sports.io/injuries', headers={**UA, 'x-apisports-key': key},
+                         params={'league': LIGA['api_football'], 'season': season}, timeout=30)
+        estado['http'] = r.status_code
+        j = r.json() if r.headers.get('content-type', '').startswith('application/json') else {}
+    except (requests.RequestException, ValueError) as e:
+        estado['error'] = repr(e)
+        j = {}
+    estado['errores'] = j.get('errors') if j else None
+    estado['resultados'] = j.get('results') if j else None
     hoy = ahora().date().isoformat()
     out = []
-    for r in j.get('response', []):
-        fecha = ((r.get('fixture') or {}).get('date') or '')[:10]
+    for r_ in (j or {}).get('response', []) or []:
+        fecha = ((r_.get('fixture') or {}).get('date') or '')[:10]
         if fecha and fecha < hoy:
             continue
-        pl = r.get('player') or {}
-        out.append({'equipo': (r.get('team') or {}).get('name'), 'jugador': pl.get('name'), 'tipo': pl.get('type'),
+        pl = r_.get('player') or {}
+        out.append({'equipo': (r_.get('team') or {}).get('name'), 'jugador': pl.get('name'), 'tipo': pl.get('type'),
                     'motivo': pl.get('reason'), 'fecha': fecha})
+    estado['lesiones_proximas'] = len(out)
+    json.dump(estado, open(estado_p, 'w'), ensure_ascii=False, indent=1)
+    if estado['errores']:
+        print(f"  API-Football: {estado['errores']}")
+        return
     json.dump(out, open(p, 'w'), ensure_ascii=False, indent=1)
     print(f'  API-Football: {len(out)} lesiones o sanciones para próximos partidos')
 
