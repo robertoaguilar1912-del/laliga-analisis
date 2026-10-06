@@ -422,22 +422,30 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 <script>
 (async function () {
   // ---------------- liga elegida y carga de datos
-  const LIGAS = {"laliga": "La Liga", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "ligamx": "Liga MX", "mls": "MLS"};
+  const LIGAS = {"laliga": "La Liga", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "ligamx": "Liga MX", "mls": "MLS", "nfl": "NFL"};
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
+  const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
   let liga = new URLSearchParams(location.search).get('liga');
-  if (!LIGAS[liga]) { try { liga = localStorage.getItem('laboratorio-liga'); } catch (e) { liga = null; } }
-  if (!LIGAS[liga]) liga = 'laliga';
-  try { localStorage.setItem('laboratorio-liga', liga); } catch (e) { /* sin almacenamiento */ }
+  if (!LIGAS[liga]) liga = leer('laboratorio-liga');
+  if (liga === 'nfl') {             // la NFL tiene su propia página; aquí solo se ve su registro
+    if (location.hash !== '#registro') { location.replace('nfl.html'); return; }
+    liga = leer('laboratorio-futbol');
+  }
+  if (!LIGAS[liga] || liga === 'nfl') liga = 'laliga';
+  guardar('laboratorio-liga', liga); guardar('laboratorio-futbol', liga);
   const corto = n => n.replace(' League', '');
   const chips = document.getElementById('ligas');
-  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="?liga=${id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${id === 'nfl' ? 'nfl.html' : '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
   chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
     ev.preventDefault();
     const h = location.hash.slice(1);
+    if (a.dataset.liga === 'nfl') { location.href = 'nfl.html' + (['equipos', 'modelo'].includes(h) ? '#' + h : ''); return; }
     location.href = `?liga=${a.dataset.liga}` + (VISTAS.includes(h) && h !== 'partidos' ? '#' + h : '');
   }));
   const actual = chips.querySelector('[aria-current]');
-  if (actual) chips.scrollLeft = actual.offsetLeft - chips.clientWidth / 2 + actual.offsetWidth / 2;
+  const centrar = () => { if (actual) { const ra = actual.getBoundingClientRect(), rc = chips.getBoundingClientRect(); chips.scrollLeft += (ra.left + ra.width / 2) - (rc.left + rc.width / 2); } };
+  centrar();
   document.getElementById('brand-liga').textContent = corto(LIGAS[liga]);
   const getJSON = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   let D, R;
@@ -449,6 +457,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
   R = R || { modelo: [], cierres: {}, resultados: {}, ligas: [] };
   (R.ligas || []).forEach(l => { const x = chips.querySelector(`[data-liga="${l.id}"] small`); if (x && l.partidos) x.textContent = l.partidos; });
+  centrar();
   const B = D.backtest, E = D.equipos, M = D.partidos, I = D.info;
   document.title = `Laboratorio · ${I.nombre}`;
   const $ = (s, el) => (el || document).querySelector(s);
@@ -978,6 +987,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       case '1X': return b(gl >= gv);
       case 'X2': return b(gv >= gl);
       case '12': return b(gl !== gv);
+      case 'ML1': return gl === gv ? [0.5, 0.5] : b(gl > gv);    // NFL: el empate devuelve la apuesta
+      case 'ML2': return gl === gv ? [0.5, 0.5] : b(gv > gl);
       case 'DNB1': return gl === gv ? [0.5, 0.5] : b(gl > gv);
       case 'DNB2': return gl === gv ? [0.5, 0.5] : b(gv > gl);
       case 'BTTS': return b((gl > 0 && gv > 0) === (ln === 'S'));
