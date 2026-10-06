@@ -566,7 +566,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="card">
             <h3>Mercados con momio</h3>
             <div class="markets">${priced || '<p class="empty">La casa todavía no publica momios para este partido. Mientras tanto usa los momios justos de la pestaña Mercados.</p>'}</div>
-            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')}. PICK: EV de +5% o más. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
+            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
           </div>
         </div>
         <div class="grid2">
@@ -632,7 +632,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
                 <label for="calc-sel" style="position:absolute;left:-9999px">Mercado</label>
                 <select id="calc-sel">${opts.map((o, k) => `<option value="${k}">${esc(o.n)}</option>`).join('')}</select>
                 <label for="calc-odds" style="position:absolute;left:-9999px">Momio</label>
-                <input id="calc-odds" placeholder="+150 o 2.50" autocomplete="off">
+                <input id="calc-odds" placeholder="Ej. 2.50" inputmode="decimal" autocomplete="off">
               </div>
               <div class="calc-out" aria-live="polite"></div>
             </div>
@@ -654,10 +654,10 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const sel = $('#calc-sel', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
     const calc = () => {
       const o = opts[+sel.value]; const dec = parseOdds(inp.value);
-      if (!inp.value.trim()) { out.innerHTML = `Modelo: <span class="mono">${pct(o.p, 1)}</span> · momio justo <span class="mono">${o.p > 0 && o.p < 1 ? (1 / o.p >= 2 ? '+' + Math.round((1 / o.p - 1) * 100) : '−' + Math.round(100 / (1 / o.p - 1))) : '—'}</span>. Escribe el momio de tu casa (+150, −120 o 2.50).`; return; }
-      if (!dec) { out.textContent = 'Ese momio no se entiende. Usa +150, −120 o 2.50.'; return; }
+      if (!inp.value.trim()) { out.innerHTML = `Modelo: <span class="mono">${pct(o.p, 1)}</span> · momio justo <span class="mono">${o.p > 0 && o.p < 1 ? (1 / o.p).toFixed(2) : '—'}</span>. Escribe el momio de tu casa en decimal (por ejemplo 2.50).`; return; }
+      if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return; }
       const ev = o.p * dec - 1, v = verdictOf(ev);
-      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(o.p, 1)}</span> · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(o.p, 1)}</span> · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / o.p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
     };
     sel.addEventListener('change', calc); inp.addEventListener('input', calc); calc();
     window.scrollTo(0, 0);

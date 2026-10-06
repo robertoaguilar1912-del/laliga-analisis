@@ -34,6 +34,11 @@ def fair_am(p):
     return dec_to_am(1 / p) if 0 < p < 1 else '—'
 
 
+def fair_dec(p):
+    """Momio justo en decimal: lo que paga por cada 1 apostado (incluida la apuesta)."""
+    return f'{1 / p:.2f}' if 0 < p < 1 else '—'
+
+
 def veredicto(ev):
     return 'PICK' if ev >= PICK_EV else ('MAYBE' if ev >= MAYBE_EV else 'SKIP')
 
@@ -99,23 +104,23 @@ def analizar_partidos(df, promo, modelo, corners_model, equipos_info):
             imp = np.array([1 / d for d in dec]); mkt = (imp / imp.sum()).tolist()
             for nm, p, d, am, pm in zip([f'Gana {L}', 'Empate', f'Gana {V}'], (pH, pD, pA), dec, mom['ml'], mkt):
                 ev = p * d - 1
-                con_momio.append({'mercado': nm, 'grupo': 'Resultado', 'p': p, 'momio': f'{am:+d}', 'p_mercado': pm,
-                                  'justo': fair_am(p), 'ev': ev, 'veredicto': veredicto(ev)})
+                con_momio.append({'mercado': nm, 'grupo': 'Resultado', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': pm,
+                                  'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         if mom.get('ou'):
             line = mom['ou_linea']; pO = float(np.mean(tot > line))
             dec = [am_to_dec(x) for x in mom['ou']]
             imp = np.array([1 / d for d in dec]); pm2 = imp / imp.sum()
             for nm, p, d, am, pm in ((f'Más de {line} goles', pO, dec[0], mom['ou'][0], pm2[0]), (f'Menos de {line} goles', 1 - pO, dec[1], mom['ou'][1], pm2[1])):
                 ev = p * d - 1
-                con_momio.append({'mercado': nm, 'grupo': 'Goles', 'p': p, 'momio': f'{am:+d}', 'p_mercado': float(pm),
-                                  'justo': fair_am(p), 'ev': ev, 'veredicto': veredicto(ev)})
+                con_momio.append({'mercado': nm, 'grupo': 'Goles', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': float(pm),
+                                  'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         for side, (ln, am) in enumerate(mom.get('spread') or []):
             margin = (hg - ag) if side == 0 else (ag - hg)
             p = float(np.mean(margin + float(ln) > 0)); ev = p * am_to_dec(am) - 1
-            con_momio.append({'mercado': f"Hándicap {L if side == 0 else V} {ln}", 'grupo': 'Hándicap', 'p': p, 'momio': f'{am:+d}',
-                              'p_mercado': None, 'justo': fair_am(p), 'ev': ev, 'veredicto': veredicto(ev)})
+            con_momio.append({'mercado': f"Hándicap {L if side == 0 else V} {ln}", 'grupo': 'Hándicap', 'p': p, 'momio': f'{am_to_dec(am):.2f}',
+                              'p_mercado': None, 'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
         sin = []
-        add = lambda nm, grp, p: sin.append({'mercado': nm, 'grupo': grp, 'p': float(p), 'justo': fair_am(float(p))})
+        add = lambda nm, grp, p: sin.append({'mercado': nm, 'grupo': grp, 'p': float(p), 'justo': fair_dec(float(p))})
         add(f'Gana {L}', 'Resultado', pH); add('Empate', 'Resultado', pD); add(f'Gana {V}', 'Resultado', pA)
         add(f'{L} o empate (1X)', 'Doble oportunidad', pH + pD); add(f'{V} o empate (X2)', 'Doble oportunidad', pA + pD)
         add('No hay empate (12)', 'Doble oportunidad', pH + pA)
