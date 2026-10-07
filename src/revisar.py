@@ -19,12 +19,15 @@ def pendientes():
         t = {'alineaciones': [], 'resultados': []}
         for e in json.load(open(p)):
             faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
-            nombre = f"{e['local_espn']} vs {e['visita_espn']}"
-            if liga != 'nfl' and -30 <= faltan <= 120 and not e.get('alineaciones'):
+            nombre = f"{e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}"
+            if liga not in ('nfl', 'nba') and -30 <= faltan <= 120 and not e.get('alineaciones'):
                 t['alineaciones'].append(f'{nombre} en {faltan:.0f} min')
-            # un partido de fútbol dura ~115 min y uno de la NFL ~3 h 15 min; el resultado se busca desde entonces
-            # y hasta un día después
-            dura = 200 if liga == 'nfl' else 110
+            # NBA: el reporte de lesiones se vuelve a bajar en la última hora y media (descansos de último momento)
+            if liga == 'nba' and -10 <= faltan <= 90 and not e.get('revisado'):
+                t['alineaciones'].append(f'{nombre} en {faltan:.0f} min (lesiones)')
+            # un partido de fútbol dura ~115 min, uno de la NBA ~2 h 20 min y uno de la NFL ~3 h 15 min;
+            # el resultado se busca desde entonces y hasta un día después
+            dura = {'nfl': 200, 'nba': 150}.get(liga, 110)
             if -24 * 60 <= faltan <= -dura and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 t['resultados'].append(f'{nombre} empezó hace {-faltan:.0f} min')
         if t['alineaciones'] or t['resultados']:

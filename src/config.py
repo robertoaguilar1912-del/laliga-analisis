@@ -70,8 +70,8 @@ LIGAS = {
                  'calendario': 'anual', 'torneos': {1: 'Apertura', 7: 'Finalización'}, 'api_football': 239,
                  'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
 }
-# Todo lo que aparece en el selector de la página: las ligas de fútbol y la NFL (que tiene su propia página)
-SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL'}
+# Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
+SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL', 'nba': 'NBA'}
 
 # Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
 # Son aproximadas: los cupos exactos cambian según copas y coeficientes.

@@ -14,6 +14,7 @@ import time
 import fuentes
 import analizar
 import nfl
+import nba
 import registro
 import construir
 import revisar
@@ -59,11 +60,14 @@ def main(modo):
         antes = _foto(list(tareas))
         if 'nfl' in tareas:
             _paso('NFL', nfl.descargar_espn)
+        if 'nba' in tareas:
+            _paso('NBA', nba.descargar_espn)
+            _paso('NBA minutos', nba.descargar_boxscores)
         for liga in ligas:
             if tareas[liga]['resultados']:
                 _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
-        if _foto(list(tareas)) == antes:
+        if _foto(list(tareas)) == antes and 'nba' not in tareas:    # en la NBA cambian las lesiones aunque no cambie lo demás
             return salida('no')
     else:
         for liga in LIGAS:
@@ -77,11 +81,14 @@ def main(modo):
         _paso('tablas', fuentes.descargar_tablas)
         _paso('historia', fuentes.descargar_historia)
         _paso('NFL', nfl.descargar)
+        _paso('NBA', nba.descargar)
     print('- análisis')
     if ligas is None or ligas:
         analizar.main(ligas if modo in ('rapido', 'alineaciones') else None)
     if ligas is None or 'nfl' in tareas:
         _paso('análisis NFL', nfl.analizar)
+    if ligas is None or 'nba' in tareas:
+        _paso('análisis NBA', nba.analizar)
     print('- registro'); registro.actualizar()
     print('- página'); construir.main()
     salida('si')

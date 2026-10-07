@@ -28,13 +28,14 @@ def main():
     ligas = json.dumps(SECCIONES, ensure_ascii=False)
     SITIO.mkdir(exist_ok=True)
     (SITIO / 'index.html').write_text(pagina(plantilla.replace('/*__LIGAS__*/', ligas),
-                                             'Análisis de fútbol: probabilidades, estadísticas, bajas y momios justos de La Liga, '
-                                             'Premier, Serie A, Bundesliga, Ligue 1, Liga MX y MLS.'), encoding='utf-8')
-    # la NFL usa los mismos estilos que la página de fútbol
+                                             'Análisis de fútbol, NFL y NBA: probabilidades, estadísticas, bajas y momios justos.'), encoding='utf-8')
+    # la NFL y la NBA usan los mismos estilos que la página de fútbol
     i0, i1 = plantilla.index('<link rel="preconnect"'), plantilla.index('</style>') + len('</style>')
-    nfl = (RAIZ / 'src' / 'plantilla_nfl.html').read_text(encoding='utf-8')
-    nfl = nfl.replace('<!--__ESTILOS__-->', plantilla[i0:i1]).replace('/*__LIGAS__*/', ligas)
-    (SITIO / 'nfl.html').write_text(pagina(nfl, 'NFL: spread, total y moneyline del modelo contra la casa, lesiones y estadísticas.'), encoding='utf-8')
+    for dep, desc in (('nfl', 'NFL: spread, total y moneyline del modelo contra la casa, lesiones y estadísticas.'),
+                      ('nba', 'NBA: spread, total y moneyline del modelo contra la casa, bajas, cansancio y estadísticas.')):
+        html = (RAIZ / 'src' / f'plantilla_{dep}.html').read_text(encoding='utf-8')
+        html = html.replace('<!--__ESTILOS__-->', plantilla[i0:i1]).replace('/*__LIGAS__*/', ligas)
+        (SITIO / f'{dep}.html').write_text(pagina(html, desc), encoding='utf-8')
     (SITIO / '.nojekyll').write_text('')
     for p in (RAIZ / 'src' / 'estatico').iterdir():      # ícono, manifiesto y service worker (para instalar como app)
         shutil.copyfile(p, SITIO / p.name)
