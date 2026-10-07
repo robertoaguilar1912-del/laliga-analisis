@@ -449,19 +449,19 @@
   "estadio": "Estadio Manoel Barradas",
   "local_espn": "Vitória",
   "visita_espn": "Chapecoense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
+    -175,
     310,
     475
    ],
    "ou_linea": 2.5,
    "ou": [
     -130,
-    -105
+    100
    ],
    "spread": [
     [
@@ -603,12 +603,12 @@
    "casa": "DraftKings",
    "ml": [
     200,
-    265,
+    255,
     125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     125
    ],
    "spread": [
@@ -619,6 +619,122 @@
     [
      "-0.5",
      115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Botafogo": [
+    [
+     "228401",
+     "Gabriel Batista",
+     "G"
+    ],
+    [
+     "199734",
+     "Alex Telles",
+     "D"
+    ],
+    [
+     "268700",
+     "Vitinho",
+     "D"
+    ],
+    [
+     "245291",
+     "Nahuel Ferraresi",
+     "D"
+    ],
+    [
+     "319530",
+     "Arthur Chaves",
+     "D"
+    ],
+    [
+     "314841",
+     "Matheus Martins",
+     "M"
+    ],
+    [
+     "297056",
+     "Cristian Medina",
+     "M"
+    ],
+    [
+     "306764",
+     "Danilo Santos",
+     "M"
+    ],
+    [
+     "176733",
+     "Hakim Ziyech",
+     "M"
+    ],
+    [
+     "398719",
+     "Victor Hugo",
+     "M"
+    ],
+    [
+     "224103",
+     "Arthur Cabral",
+     "F"
+    ]
+   ],
+   "Vasco da Gama": [
+    [
+     "201717",
+     "Thiago Mendes",
+     "SUB"
+    ],
+    [
+     "337099",
+     "Robert Renan",
+     "SUB"
+    ],
+    [
+     "317383",
+     "Alan Saldivia",
+     "SUB"
+    ],
+    [
+     "285203",
+     "Marino Hinestroza",
+     "SUB"
+    ],
+    [
+     "275941",
+     "Facundo Colidio",
+     "SUB"
+    ],
+    [
+     "234842",
+     "Paulo Henrique",
+     "SUB"
+    ],
+    [
+     "292259",
+     "Bruno Duarte",
+     "SUB"
+    ],
+    [
+     "271473",
+     "Santiago Sosa",
+     "SUB"
+    ],
+    [
+     "336485",
+     "Alan Lescano",
+     "SUB"
+    ],
+    [
+     "334756",
+     "Cuiabano",
+     "SUB"
+    ],
+    [
+     "205464",
+     "Léo Jardim",
+     "SUB"
     ]
    ]
   }
@@ -635,8 +751,8 @@
    "casa": "DraftKings",
    "ml": [
     -135,
-    265,
-    370
+    270,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -699,13 +815,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    220,
-    260
+    225,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -135
+    100,
+    -130
    ],
    "spread": [
     [
@@ -714,7 +830,7 @@
     ],
     [
      "+0.5",
-     -145
+     -140
     ]
    ]
   }
