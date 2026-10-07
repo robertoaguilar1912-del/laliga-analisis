@@ -1,0 +1,28 @@
+name: Explorar fuentes
+
+on:
+  push:
+    branches: [explorar]
+
+permissions:
+  contents: write
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python explorar/correr.py
+      - name: Guardar salida
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f salida
+          git commit -m "salida $(date -u +%H:%M)" || true
+          git push || true
