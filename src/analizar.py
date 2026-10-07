@@ -313,12 +313,13 @@ ELIMINATORIA = re.compile(r'playoff|play-off|play-in|liguilla|final|knockout|wil
 
 def etiqueta_temporada(liga, temporada):
     cal = LIGAS[liga].get('calendario')
+    if cal == 'torneos' or LIGAS[liga].get('torneos'):
+        f = inicio_torneo(liga)
+        nombres = LIGAS[liga].get('torneos') if isinstance(LIGAS[liga].get('torneos'), dict) else {7: 'Apertura', 1: 'Clausura'}
+        return f"{nombres[f.month]} {f.year}"
     if cal == 'anual':
         return temporada
     t = f'20{temporada[:2]}-{temporada[2:]}'
-    if cal == 'torneos':
-        f = inicio_torneo(liga)
-        return f"{'Apertura' if f.month == 7 else 'Clausura'} {f.year}"
     return t
 
 
@@ -331,12 +332,14 @@ def analizar_liga(liga):
     nombre = lambda t: NOM.get(t, t)
     promo = ascendidos(df)
     nuevos = promo.get(temporada, set())
+    if L.get('prior_nuevos'):           # Série B: los nuevos pueden venir de arriba (descendidos) o de abajo
+        nuevos = {t: tuple(L['prior_nuevos']) for t in nuevos}
     hist = df[(df.Date < ref) & (df.Date >= ref - pd.Timedelta(days=3 * 365))]
     modelo = DixonColes().fit(hist, ref, promoted=nuevos)
     hc = hist.dropna(subset=['HC', 'AC'])
     cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
     season = df[df.Season == temporada]
-    if L.get('calendario') == 'torneos':
+    if L.get('calendario') == 'torneos' or L.get('torneos'):
         season = season[season.Date >= pd.Timestamp(inicio_torneo(liga).date())]
     season = season[~season.tipo.fillna('').str.contains(ELIMINATORIA)]
     if season.empty:   # pretemporada: usar la última temporada completa

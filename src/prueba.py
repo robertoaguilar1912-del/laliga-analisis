@@ -19,7 +19,7 @@ import pandas as pd
 
 from config import RAW, DATOS, LIGAS, temporada_actual
 from datos import ascendidos, RENAME_OLD
-from liga import cargar_extra
+from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix
 
 VENTANA = 3 * 365
@@ -36,7 +36,8 @@ def cargar_historia(liga):
     if L.get('fd_extra'):
         df = pd.read_csv(RAW / f"{L['fd_extra']}.csv", encoding='utf-8', encoding_errors='replace')
         df = df.rename(columns={'Home': 'HomeTeam', 'Away': 'AwayTeam', 'HG': 'FTHG', 'AG': 'FTAG'})
-        df['Season'] = df.Season.astype(str).map(lambda s: f'{s[2:4]}{s[7:9]}' if '/' in s else s)
+        anual = all('/' not in x for x in df.Season.astype(str).tail(200))
+        df['Season'] = df.Season.astype(str).map(lambda x: codigo_extra(x, anual))
         df = df.dropna(subset=['HomeTeam', 'FTHG'])
         df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, format='mixed')
         df['HST'] = np.nan; df['AST'] = np.nan

@@ -31,6 +31,7 @@ COPAS_ESPN = {'uefa.champions': 'Champions League', 'uefa.europa': 'Europa Leagu
 # calendario: 'europa' (jul-jun), 'anual' (ene-dic) o 'torneos' (Apertura jul-dic y Clausura ene-jun)
 COPAS_UEFA = {'uefa.champions': 'Champions League', 'uefa.europa': 'Europa League', 'uefa.europa.conf': 'Conference League'}
 COPAS_CONCACAF = {'concacaf.champions': 'Concachampions', 'concacaf.leagues.cup': 'Leagues Cup'}
+COPAS_CONMEBOL = {'conmebol.libertadores': 'Libertadores', 'conmebol.sudamericana': 'Sudamericana'}
 LIGAS = {
     'laliga': {'nombre': 'La Liga', 'pais': 'España', 'espn': 'esp.1', 'fd': 'SP1', 'fd2': 'SP2', 'fd2_nombre': 'Segunda',
                'calendario': 'europa', 'api_football': 140,
@@ -52,6 +53,18 @@ LIGAS = {
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
             'calendario': 'anual', 'api_football': 253, 'copas': {**COPAS_CONCACAF, 'usa.open': 'US Open Cup'}, 'zonas': 'mls',
             'nuevo': 'es nuevo en la liga'},
+    # solo_espn: sin archivo de football-data; los resultados de temporadas pasadas salen de ESPN
+    # segunda: liga de la que se toman los enfrentamientos de segunda división (historial)
+    # torneos: la tabla es del semestre (Apertura/Clausura) aunque la temporada sea el año completo
+    'brasil': {'nombre': 'Brasileirão', 'pais': 'Brasil', 'espn': 'bra.1', 'fd_extra': 'BRA', 'calendario': 'anual',
+               'api_football': 71, 'segunda': 'brasil2', 'fd2_nombre': 'Série B', 'zonas': 'brasil',
+               'copas': {**COPAS_CONMEBOL, 'bra.copa_do_brazil': 'Copa de Brasil'}},
+    'brasil2': {'nombre': 'Brasileirão B', 'pais': 'Brasil', 'espn': 'bra.2', 'solo_espn': True, 'calendario': 'anual',
+                'api_football': 72, 'zonas': 'brasil2', 'prior_nuevos': (0.0, 0.0), 'nuevo': 'es nuevo en la Série B',
+                'copas': {**COPAS_CONMEBOL, 'bra.copa_do_brazil': 'Copa de Brasil'}},
+    'argentina': {'nombre': 'Liga Argentina', 'pais': 'Argentina', 'espn': 'arg.1', 'fd_extra': 'ARG', 'calendario': 'anual',
+                  'torneos': {1: 'Apertura', 7: 'Clausura'}, 'api_football': 128, 'zonas': 'argentina',
+                  'copas': {**COPAS_CONMEBOL, 'arg.copa': 'Copa Argentina'}},
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol y la NFL (que tiene su propia página)
 SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL'}
@@ -63,6 +76,9 @@ ZONAS = {
     'europa18': [[1, 4, 'cl', 'Champions'], [5, 6, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
     'ligamx': [[1, 6, 'cl', 'Liguilla directa'], [7, 10, 'eu', 'Play-in']],
     'mls': [[1, 7, 'cl', 'Playoffs'], [8, 9, 'eu', 'Wild card']],
+    'brasil': [[1, 6, 'cl', 'Libertadores'], [7, 12, 'eu', 'Sudamericana'], [-4, -1, 'des', 'Descenso']],
+    'brasil2': [[1, 4, 'cl', 'Ascenso'], [-4, -1, 'des', 'Descenso']],
+    'argentina': [[1, 8, 'cl', 'Playoffs']],
 }
 
 # Nombres: ESPN -> football-data
@@ -117,6 +133,6 @@ def inicio_temporada(liga, fecha=None):
 def inicio_torneo(liga, fecha=None):
     """Primer día del torneo que cuenta para la tabla (en Liga MX, Apertura o Clausura)."""
     f = fecha or ahora()
-    if LIGAS[liga].get('calendario') == 'torneos':
+    if LIGAS[liga].get('calendario') == 'torneos' or LIGAS[liga].get('torneos'):
         return datetime(f.year, 7 if f.month >= 7 else 1, 1, tzinfo=timezone.utc)
     return inicio_temporada(liga, f)

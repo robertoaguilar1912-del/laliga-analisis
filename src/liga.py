@@ -61,12 +61,32 @@ def _num(v):
 
 
 # ----------------------------------------------------------------- football-data
+def codigo_extra(s, anual):
+    """Temporada de football-data a código: '2025/2026' -> '2526'; en ligas que hoy juegan por año calendario
+    (Argentina cambió de formato) '2019/2020' -> '2020', para que el orden de las temporadas no se mezcle."""
+    s = str(s)
+    if '/' in s:
+        return s[5:9] if anual else f'{s[2:4]}{s[7:9]}'
+    return s
+
+
+def cargar_solo_espn(liga):
+    """Resultados de temporadas pasadas sacados de ESPN (ligas sin archivo de football-data), con los nombres de ESPN."""
+    p = RAW / f'espn_{liga}.csv'
+    if not p.exists():
+        raise FileNotFoundError(p)
+    df = pd.read_csv(p, dtype={'Season': str})
+    df['Date'] = pd.to_datetime(df.Date)
+    return df.sort_values(['Date', 'HomeTeam']).reset_index(drop=True)
+
+
 def cargar_extra(code, n_temporadas=4):
     """Archivo único de football-data (Liga MX, MLS) con el mismo formato que los de Europa."""
     df = pd.read_csv(RAW / f'{code}.csv', encoding='utf-8', encoding_errors='replace')
     df = df.rename(columns={'Home': 'HomeTeam', 'Away': 'AwayTeam', 'HG': 'FTHG', 'AG': 'FTAG',
                             'AvgCH': 'AvgH', 'AvgCD': 'AvgD', 'AvgCA': 'AvgA'})
-    df['Season'] = df.Season.astype(str).map(lambda s: f'{s[2:4]}{s[7:9]}' if '/' in s else s)
+    anual = all('/' not in x for x in df.Season.astype(str).tail(200))
+    df['Season'] = df.Season.astype(str).map(lambda x: codigo_extra(x, anual))
     df = df.dropna(subset=['HomeTeam', 'FTHG'])
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, format='mixed')
     df['FTHG'] = df.FTHG.astype(int)
@@ -78,8 +98,16 @@ def cargar_extra(code, n_temporadas=4):
 
 def cargar_fd(liga):
     L = LIGAS[liga]
+    if L.get('solo_espn'):
+        return cargar_solo_espn(liga), None
     if L.get('fd_extra'):
-        return cargar_extra(L['fd_extra']), None
+        df2 = None
+        if L.get('segunda'):
+            try:
+                df2 = cargar_solo_espn(L['segunda'])
+            except FileNotFoundError:
+                pass
+        return cargar_extra(L['fd_extra']), df2
     df = cargar(L['fd'])
     try:
         df2 = cargar(L['fd2']) if L.get('fd2') else None

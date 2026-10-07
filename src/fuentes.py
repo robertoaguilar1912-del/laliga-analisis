@@ -12,7 +12,7 @@ Todo se guarda en data/ para no volver a descargar lo que ya está.
 import json
 import os
 import time
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 import requests
 
@@ -46,6 +46,8 @@ def descargar_football_data(liga):
     """Temporadas recientes de primera y segunda división. La actual siempre; las viejas solo si faltan.
     Para Liga MX y MLS, el archivo único con todas las temporadas."""
     L = LIGAS[liga]
+    if L.get('solo_espn'):
+        return descargar_resultados_espn(liga)
     if L.get('fd_extra'):
         code = L['fd_extra']
         txt = _get(f'https://www.football-data.co.uk/new/{code}.csv', as_json=False)
@@ -69,6 +71,39 @@ def descargar_football_data(liga):
                 print(f'  football-data {div} {s}: {txt.count(chr(10))} filas')
             else:
                 print(f'  football-data {div} {s}: sin datos')
+
+
+def descargar_resultados_espn(liga, temporadas_atras=3):
+    """Resultados de las últimas temporadas desde ESPN, para ligas sin archivo de football-data (p. ej. Série B).
+    Las temporadas viejas se bajan una vez; la actual, siempre."""
+    import csv
+    L = LIGAS[liga]
+    p = RAW / f'espn_{liga}.csv'
+    filas = list(csv.DictReader(open(p, encoding='utf-8'))) if p.exists() else []
+    hay = {f['Season'] for f in filas}
+    y1 = ahora().year
+    for y in range(y1 - temporadas_atras, y1 + 1):
+        if str(y) in hay and y != y1:
+            continue
+        nuevas = []
+        for e in _scoreboard(L['espn'], str(y)):
+            comp = e['competitions'][0]
+            if not comp['status']['type'].get('completed'):
+                continue
+            cs = {c['homeAway']: c for c in comp['competitors']}
+            if 'home' not in cs or 'away' not in cs:
+                continue
+            fecha = (datetime.fromisoformat(e['date'].replace('Z', '+00:00')) + timedelta(hours=1)).date().isoformat()
+            nuevas.append({'Season': str(y), 'Date': fecha, 'HomeTeam': cs['home']['team']['displayName'],
+                           'AwayTeam': cs['away']['team']['displayName'], 'FTHG': int(cs['home'].get('score') or 0),
+                           'FTAG': int(cs['away'].get('score') or 0), 'tipo': ((e.get('season') or {}).get('slug') or '')})
+        if nuevas:
+            filas = [f for f in filas if f['Season'] != str(y)] + nuevas
+            print(f"  ESPN {L['nombre']} {y}: {len(nuevas)} resultados")
+    if filas:
+        with open(p, 'w', newline='', encoding='utf-8') as f:
+            w = csv.DictWriter(f, fieldnames=['Season', 'Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'tipo'])
+            w.writeheader(); w.writerows(sorted(filas, key=lambda x: (x['Date'], x['HomeTeam'])))
 
 
 def descargar_historia(desde='1718'):
