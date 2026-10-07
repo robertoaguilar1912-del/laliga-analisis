@@ -1,5 +1,5 @@
 {
- "fecha": "2026-10-07T05:48+00:00",
+ "fecha": "2026-10-07T08:21+00:00",
  "clave_presente": true,
  "ligas": {
   "laliga": {
@@ -84,6 +84,15 @@
    "lesiones_proximas": 0
   },
   "argentina": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": {
+    "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+   },
+   "resultados": 0,
+   "lesiones_proximas": 0
+  },
+  "colombia": {
    "temporada_pedida": 2026,
    "http": 200,
    "errores": {
