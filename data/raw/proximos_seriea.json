@@ -11,13 +11,13 @@
    "casa": "DraftKings",
    "ml": [
     205,
-    220,
-    120
+    210,
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -130
+    -135
    ],
    "spread": [
     [
@@ -58,7 +58,7 @@
     ],
     [
      "+2.5",
-     -150
+     -145
     ]
    ]
   }
@@ -112,8 +112,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    120
+    -165,
+    125
    ],
    "spread": [
     [
@@ -176,17 +176,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -140
+    110,
+    -145
    ],
    "spread": [
     [
      "+0.5",
-     -125
+     -120
     ],
     [
      "-0.5",
-     -115
+     -120
     ]
    ]
   }
@@ -214,7 +214,7 @@
    "spread": [
     [
      "+0.5",
-     100
+     -105
     ],
     [
      "-0.5",
@@ -266,23 +266,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
+    -185,
     295,
     425
    ],
    "ou_linea": 3.5,
    "ou": [
     135,
-    -180
+    -175
    ],
    "spread": [
     [
-     "-0.5",
-     -190
+     "-1.5",
+     135
     ],
     [
-     "+0.5",
-     130
+     "+1.5",
+     -200
     ]
    ]
   }
@@ -347,6 +347,102 @@
     [
      "+0.5",
      -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874760",
+  "utc": "2026-10-17T13:00Z",
+  "estadio": "Stadio Pier Luigi Penzo",
+  "local_espn": "Venezia",
+  "visita_espn": "Napoli",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    310,
+    280,
+    -150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     105
+    ],
+    [
+     "-0.5",
+     -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874953",
+  "utc": "2026-10-17T16:00Z",
+  "estadio": "Renato Dall'Ara",
+  "local_espn": "Bologna",
+  "visita_espn": "Internazionale",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    285,
+    -165
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     115
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874935",
+  "utc": "2026-10-17T18:45Z",
+  "estadio": "Olimpico",
+  "local_espn": "AS Roma",
+  "visita_espn": "Genoa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -330,
+    390,
+    650
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -165,
+    115
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -120
+    ],
+    [
+     "+1.5",
+     -125
     ]
    ]
   }

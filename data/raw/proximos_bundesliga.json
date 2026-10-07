@@ -10,23 +10,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -270,
+    -275,
     400,
-    500
+    550
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -130
+    100,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     -115
+     -110
     ],
     [
      "+1.5",
-     -130
+     -125
     ]
    ]
   }
@@ -54,11 +54,11 @@
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
@@ -76,7 +76,7 @@
    "ml": [
     750,
     650,
-    -525
+    -550
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -86,11 +86,11 @@
    "spread": [
     [
      "+2.5",
-     -145
+     -140
     ],
     [
      "-2.5",
-     100
+     -105
     ]
    ]
   }
@@ -112,17 +112,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -145
+    105,
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -155
     ],
     [
      "-0.5",
-     110
+     105
     ]
    ]
   }
@@ -139,22 +139,22 @@
    "casa": "DraftKings",
    "ml": [
     360,
-    330,
-    -180
+    350,
+    -185
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -125
+    -115,
+    -120
    ],
    "spread": [
     [
-     "+0.5",
-     130
+     "+1.5",
+     -190
     ],
     [
-     "-0.5",
-     -195
+     "-1.5",
+     130
     ]
    ]
   }
@@ -186,9 +186,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    360,
-    380
+    -190,
+    350,
+    360
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -198,7 +198,7 @@
    "spread": [
     [
      "-1.5",
-     120
+     125
     ],
     [
      "+1.5",
@@ -288,7 +288,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
+    -115,
     -125
    ],
    "spread": [
@@ -298,9 +298,169 @@
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
+  }
+ },
+ {
+  "id": "401884769",
+  "utc": "2026-10-17T13:30Z",
+  "estadio": "Stadion An der Alten Försterei",
+  "local_espn": "1. FC Union Berlin",
+  "visita_espn": "Borussia Dortmund",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    310,
+    300,
+    -160
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -160
+   ],
+   "spread": [
+    [
+     "+0.5",
+     110
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884767",
+  "utc": "2026-10-17T13:30Z",
+  "estadio": "Volksparkstadion",
+  "local_espn": "Hamburg SV",
+  "visita_espn": "VfB Stuttgart",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401884765",
+  "utc": "2026-10-17T13:30Z",
+  "estadio": "Veltins Arena",
+  "local_espn": "Schalke 04",
+  "visita_espn": "Mainz",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    240,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884764",
+  "utc": "2026-10-17T13:30Z",
+  "estadio": "URSAPHARM-Arena an der Kaiserlinde",
+  "local_espn": "SV Elversberg",
+  "visita_espn": "FC Augsburg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    260,
+    145
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884766",
+  "utc": "2026-10-17T13:30Z",
+  "estadio": "Weserstadion",
+  "local_espn": "Werder Bremen",
+  "visita_espn": "SC Paderborn 07",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -130,
+    285,
+    265
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -145
+    ],
+    [
+     "+0.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884772",
+  "utc": "2026-10-17T16:30Z",
+  "estadio": "Allianz Arena",
+  "local_espn": "Bayern Munich",
+  "visita_espn": "RB Leipzig",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   }
  }
 ]

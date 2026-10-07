@@ -10,23 +10,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -275,
-    400,
-    700
+    -265,
+    390,
+    650
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -130,
+    100
    ],
    "spread": [
     [
      "-1.5",
-     100
+     105
     ],
     [
      "+1.5",
-     -150
+     -155
     ]
    ]
   }
@@ -42,14 +42,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    255,
-    155
+    170,
+    250,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    110
+    115
    ],
    "spread": [
     [
@@ -106,9 +106,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
+    180,
     255,
-    150
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -118,11 +118,11 @@
    "spread": [
     [
      "+0.5",
-     -200
+     -190
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   }
@@ -138,7 +138,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
+    190,
     250,
     135
    ],
@@ -150,7 +150,7 @@
    "spread": [
     [
      "+0.5",
-     -180
+     -175
     ],
     [
      "-0.5",
@@ -170,23 +170,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
+    -140,
     320,
-    340
+    320
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -160
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }
@@ -209,7 +209,7 @@
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -125
+    -120
    ],
    "spread": [
     [
@@ -240,8 +240,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -135
+    100,
+    -130
    ],
    "spread": [
     [
@@ -266,23 +266,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    265,
-    160
+    155,
+    270,
+    150
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -180,
-    140
+    135,
+    -180
    ],
    "spread": [
     [
-     "-0.5",
-     135
+     "+0.5",
+     -200
     ],
     [
-     "+0.5",
-     -195
+     "-0.5",
+     135
     ]
    ]
   }
@@ -315,6 +315,166 @@
     [
      "-0.5",
      100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878771",
+  "utc": "2026-10-17T11:30Z",
+  "estadio": "Hill Dickinson Stadium",
+  "local_espn": "Everton",
+  "visita_espn": "Chelsea",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    275,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -165,
+    120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -175
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879262",
+  "utc": "2026-10-17T14:00Z",
+  "estadio": "Gtech Community Stadium",
+  "local_espn": "Brentford",
+  "visita_espn": "Liverpool",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    255,
+    135
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -175
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -185
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878770",
+  "utc": "2026-10-17T14:00Z",
+  "estadio": "Craven Cottage",
+  "local_espn": "Fulham",
+  "visita_espn": "Hull City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    300,
+    370
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879259",
+  "utc": "2026-10-17T14:00Z",
+  "estadio": "Etihad Stadium",
+  "local_espn": "Manchester City",
+  "visita_espn": "Ipswich Town",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -475,
+    550,
+    900
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -120
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -175
+    ],
+    [
+     "+1.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879258",
+  "utc": "2026-10-17T16:30Z",
+  "estadio": "St. James' Park",
+  "local_espn": "Newcastle United",
+  "visita_espn": "Aston Villa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    270,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
     ]
    ]
   }

@@ -10,23 +10,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    220,
+    190,
+    225,
     140
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -120
    ],
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
@@ -42,13 +42,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    240,
-    125
+    190,
+    245,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     105
    ],
    "spread": [
@@ -58,7 +58,7 @@
     ],
     [
      "-0.5",
-     115
+     120
     ]
    ]
   }
@@ -167,7 +167,29 @@
   "visita_espn": "Monterrey",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    245,
+    310
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -165,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -135
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
+  }
  },
  {
   "id": "401876948",
@@ -291,6 +313,56 @@
   "estadio": "Estadio Caliente",
   "local_espn": "Tijuana",
   "visita_espn": "Puebla",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "momios": null
+ },
+ {
+  "id": "401876942",
+  "utc": "2026-10-17T23:00Z",
+  "estadio": "Estadio Corona",
+  "local_espn": "Santos",
+  "visita_espn": "Querétaro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "momios": null
+ },
+ {
+  "id": "401876943",
+  "utc": "2026-10-17T23:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Tigres UANL",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "momios": null
+ },
+ {
+  "id": "401876941",
+  "utc": "2026-10-18T01:00Z",
+  "estadio": "Estadio León",
+  "local_espn": "León",
+  "visita_espn": "América",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "momios": null
+ },
+ {
+  "id": "401876940",
+  "utc": "2026-10-18T01:00Z",
+  "estadio": "Estadio Nemesio Díez Riega",
+  "local_espn": "Toluca",
+  "visita_espn": "Atlético de San Luis",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "momios": null
+ },
+ {
+  "id": "401876939",
+  "utc": "2026-10-18T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Cruz Azul",
+  "visita_espn": "FC Juárez",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "momios": null

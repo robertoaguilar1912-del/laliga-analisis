@@ -40,11 +40,27 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    260,
+    240
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -125
+    ]
+   ]
   }
  },
  {
@@ -58,9 +74,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    135,
     270,
-    155
+    150
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -186,9 +202,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    285,
-    200
+    105,
+    280,
+    195
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -202,7 +218,7 @@
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -407,7 +423,29 @@
   "visita_espn": "Vancouver Whitecaps",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    250,
+    135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -190
+    ],
+    [
+     "-0.5",
+     130
+    ]
+   ]
+  }
  },
  {
   "id": "761859",

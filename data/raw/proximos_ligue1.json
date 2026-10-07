@@ -11,22 +11,22 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    280,
-    165
+    285,
+    170
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -175
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
@@ -81,7 +81,7 @@
    "ou_linea": 2.5,
    "ou": [
     -175,
-    135
+    130
    ],
    "spread": [
     [
@@ -106,13 +106,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    270,
-    260
+    100,
+    265,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -140,
     105
    ],
    "spread": [
@@ -144,8 +144,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
@@ -182,7 +182,7 @@
    "spread": [
     [
      "-2.5",
-     -165
+     -160
     ],
     [
      "+2.5",
@@ -203,12 +203,12 @@
    "casa": "DraftKings",
    "ml": [
     130,
-    250,
-    185
+    255,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
+    -150,
     110
    ],
    "spread": [
@@ -218,7 +218,7 @@
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -234,14 +234,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    380,
+    -225,
+    390,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -165
+    120,
+    -160
    ],
    "spread": [
     [
@@ -266,13 +266,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    275,
-    285,
+    280,
+    290,
     -115
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     130
    ],
    "spread": [
@@ -282,7 +282,7 @@
     ],
     [
      "-0.5",
-     -130
+     -125
     ]
    ]
   }
@@ -315,6 +315,102 @@
     [
      "-0.5",
      110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876432",
+  "utc": "2026-10-17T15:15Z",
+  "estadio": "Stade de la Meinau",
+  "local_espn": "Strasbourg",
+  "visita_espn": "Paris Saint-Germain",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    500,
+    425,
+    -245
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -145
+    ],
+    [
+     "-1.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876436",
+  "utc": "2026-10-17T18:45Z",
+  "estadio": "Decathlon Arena - Stade Pierre-Mauroy",
+  "local_espn": "Lille",
+  "visita_espn": "Brest",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -170,
+    310,
+    400
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -190
+    ],
+    [
+     "+0.5",
+     125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876431",
+  "utc": "2026-10-17T18:45Z",
+  "estadio": "Stade de l'Aube",
+  "local_espn": "Troyes",
+  "visita_espn": "Lens",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    290,
+    290,
+    -125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -185,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -110
+    ],
+    [
+     "-0.5",
+     -140
     ]
    ]
   }
