@@ -1,0 +1,489 @@
+[
+ {
+  "team": {
+   "id": "20",
+   "uid": "s:40~l:46~t:20",
+   "displayName": "Philadelphia 76ers",
+   "abbreviation": "PHI",
+   "links": [
+    {
+     "href": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers",
+     "text": "Clubhouse"
+    },
+    {
+     "href": "https://www.espn.com/nba/team/schedule/_/name/phi",
+     "text": "Schedule"
+    }
+   ],
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "default"
+     ],
+     "lastUpdated": "2024-06-25T21:17Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "dark"
+     ],
+     "lastUpdated": "2024-06-25T21:13Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "scoreboard"
+     ],
+     "lastUpdated": "2024-06-25T21:18Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "scoreboard",
+      "dark"
+     ],
+     "lastUpdated": "2024-06-25T21:14Z"
+    }
+   ]
+  },
+  "injuries": [
+   {
+    "status": "Day-To-Day",
+    "date": "2026-10-07T17:04Z",
+    "athlete": {
+     "id": "4870562",
+     "uid": "s:40~l:46~a:4870562",
+     "guid": "b6f6857f-9a83-30a6-85a7-2e02c49d5ae5",
+     "lastName": "Barlow",
+     "fullName": "Dominick Barlow",
+     "displayName": "Dominick Barlow",
+     "shortName": "D. Barlow",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/4870562/dominick-barlow",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/4870562.png",
+      "alt": "Dominick Barlow"
+     },
+     "jersey": "25",
+     "position": {
+      "name": "Forward",
+      "displayName": "Forward",
+      "abbreviation": "F"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "6",
+     "name": "INJURY_STATUS_DAYTODAY",
+     "description": "day-to-day",
+     "abbreviation": "DD"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "GTD",
+      "abbreviation": "GTD",
+      "displayDescription": "GTD"
+     },
+     "type": "Back",
+     "location": "Torso",
+     "returnDate": "2026-10-16"
+    }
+   },
+   {
+    "status": "Day-To-Day",
+    "date": "2026-10-07T17:00Z",
+    "athlete": {
+     "id": "4351851",
+     "uid": "s:40~l:46~a:4351851",
+     "guid": "95170b60-db18-eac2-dca0-6cbf4bc24884",
+     "lastName": "Simons",
+     "fullName": "Anfernee Simons",
+     "displayName": "Anfernee Simons",
+     "shortName": "A. Simons",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/4351851/anfernee-simons",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/4351851.png",
+      "alt": "Anfernee Simons"
+     },
+     "jersey": "5",
+     "position": {
+      "name": "Guard",
+      "displayName": "Guard",
+      "abbreviation": "G"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "6",
+     "name": "INJURY_STATUS_DAYTODAY",
+     "description": "day-to-day",
+     "abbreviation": "DD"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "GTD",
+      "abbreviation": "GTD",
+      "displayDescription": "GTD"
+     },
+     "type": "Undisclosed",
+     "location": "Other",
+     "returnDate": "2026-10-16"
+    }
+   },
+   {
+    "status": "Day-To-Day",
+    "date": "2026-10-07T16:56Z",
+    "athlete": {
+     "id": "5105637",
+     "uid": "s:40~l:46~a:5105637",
+     "guid": "edd470bb-ce90-30b4-9a2e-2cd43662b19a",
+     "lastName": "Bona",
+     "fullName": "Adem Bona",
+     "displayName": "Adem Bona",
+     "shortName": "A. Bona",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/5105637/adem-bona",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/5105637.png",
+      "alt": "Adem Bona"
+     },
+     "jersey": "30",
+     "position": {
+      "name": "Center",
+      "displayName": "Center",
+      "abbreviation": "C"
+     },
+     "collegeAthlete": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/athletes/5105637?lang=en&region=us"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "6",
+     "name": "INJURY_STATUS_DAYTODAY",
+     "description": "day-to-day",
+     "abbreviation": "DD"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "GTD",
+      "abbreviation": "GTD",
+      "displayDescription": "GTD"
+     },
+     "type": "Foot",
+     "location": "Leg",
+     "detail": "Sprain",
+     "side": "Not Specified",
+     "returnDate": "2026-10-16"
+    }
+   },
+   {
+    "status": "Out",
+    "date": "2026-10-06T19:17Z",
+    "athlete": {
+     "id": "4871141",
+     "uid": "s:40~l:46~a:4871141",
+     "guid": "a6049cfa-a67e-3f3b-b609-5dba889ec7a6",
+     "lastName": "Hukporti",
+     "fullName": "Ariel Hukporti",
+     "displayName": "Ariel Hukporti",
+     "shortName": "A. Hukporti",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/4871141/ariel-hukporti",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/4871141.png",
+      "alt": "Ariel Hukporti"
+     },
+     "jersey": "55",
+     "position": {
+      "name": "Center",
+      "displayName": "Center",
+      "abbreviation": "C"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "4",
+     "name": "INJURY_STATUS_OUT",
+     "description": "out",
+     "abbreviation": "O"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "OUT",
+      "abbreviation": "OUT",
+      "displayDescription": "Out"
+     },
+     "type": "Achilles",
+     "location": "Leg",
+     "detail": "Ruptured",
+     "side": "Right",
+     "returnDate": "2027-10-01"
+    }
+   },
+   {
+    "status": "Day-To-Day",
+    "date": "2026-10-05T17:54Z",
+    "athlete": {
+     "id": "4431678",
+     "uid": "s:40~l:46~a:4431678",
+     "guid": "4a24e9cd-a7a5-371b-9148-bef246046609",
+     "lastName": "Maxey",
+     "fullName": "Tyrese Maxey",
+     "displayName": "Tyrese Maxey",
+     "shortName": "T. Maxey",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/4431678/tyrese-maxey",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/4431678.png",
+      "alt": "Tyrese Maxey"
+     },
+     "jersey": "0",
+     "position": {
+      "name": "Guard",
+      "displayName": "Guard",
+      "abbreviation": "G"
+     },
+     "collegeAthlete": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/athletes/4431678?lang=en&region=us"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "6",
+     "name": "INJURY_STATUS_DAYTODAY",
+     "description": "day-to-day",
+     "abbreviation": "DD"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "GTD",
+      "abbreviation": "GTD",
+      "displayDescription": "GTD"
+     },
+     "type": "Rest",
+     "location": "Other",
+     "returnDate": "2026-10-08"
+    }
+   }
+  ]
+ },
+ {
+  "team": {
+   "id": "18",
+   "uid": "s:40~l:46~t:18",
+   "displayName": "New York Knicks",
+   "abbreviation": "NY",
+   "links": [
+    {
+     "href": "https://www.espn.com/nba/team/_/name/ny/new-york-knicks",
+     "text": "Clubhouse"
+    },
+    {
+     "href": "https://www.espn.com/nba/team/schedule/_/name/ny",
+     "text": "Schedule"
+    }
+   ],
+   "logo": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "default"
+     ],
+     "lastUpdated": "2024-06-25T21:17Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/ny.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "dark"
+     ],
+     "lastUpdated": "2024-06-25T21:13Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "scoreboard"
+     ],
+     "lastUpdated": "2024-06-25T21:18Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ny.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "scoreboard",
+      "dark"
+     ],
+     "lastUpdated": "2024-06-25T21:14Z"
+    }
+   ]
+  },
+  "injuries": [
+   {
+    "status": "Day-To-Day",
+    "date": "2026-10-05T21:45Z",
+    "athlete": {
+     "id": "4277869",
+     "uid": "s:40~l:46~a:4277869",
+     "guid": "18344833-a108-3e67-e097-893870b766ce",
+     "lastName": "Alvarado",
+     "fullName": "Jose Alvarado",
+     "displayName": "Jose Alvarado",
+     "shortName": "J. Alvarado",
+     "links": [
+      {
+       "rel": [
+        "playercard",
+        "desktop",
+        "athlete"
+       ],
+       "href": "https://www.espn.com/nba/player/_/id/4277869/jose-alvarado",
+       "text": "Player Card"
+      }
+     ],
+     "headshot": {
+      "href": "https://a.espncdn.com/i/headshots/nba/players/full/4277869.png",
+      "alt": "Jose Alvarado"
+     },
+     "jersey": "5",
+     "position": {
+      "name": "Guard",
+      "displayName": "Guard",
+      "abbreviation": "G"
+     },
+     "collegeAthlete": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/athletes/4277869?lang=en&region=us"
+     },
+     "status": {
+      "id": "1",
+      "name": "Active",
+      "type": "active",
+      "abbreviation": "Active"
+     }
+    },
+    "type": {
+     "id": "6",
+     "name": "INJURY_STATUS_DAYTODAY",
+     "description": "day-to-day",
+     "abbreviation": "DD"
+    },
+    "details": {
+     "fantasyStatus": {
+      "description": "GTD",
+      "abbreviation": "GTD",
+      "displayDescription": "GTD"
+     },
+     "type": "Knee",
+     "location": "Leg",
+     "detail": "Bruise",
+     "side": "Left",
+     "returnDate": "2026-10-08"
+    }
+   }
+  ]
+ }
+]
