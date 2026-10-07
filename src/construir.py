@@ -14,8 +14,13 @@ def pagina(cuerpo, descripcion):
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
             f'<link rel="icon" href="{ICONO}">'
             f'<meta name="description" content="{descripcion}">'
+            '<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0e5a3c">'
+            '<link rel="apple-touch-icon" href="icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes">'
+            '<meta name="apple-mobile-web-app-title" content="Laboratorio">'
             '<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>'
-            '</head><body>' + cuerpo + '</body></html>')
+            '</head><body>' + cuerpo +
+            "<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>"
+            '</body></html>')
 
 
 def main():
@@ -31,6 +36,8 @@ def main():
     nfl = nfl.replace('<!--__ESTILOS__-->', plantilla[i0:i1]).replace('/*__LIGAS__*/', ligas)
     (SITIO / 'nfl.html').write_text(pagina(nfl, 'NFL: spread, total y moneyline del modelo contra la casa, lesiones y estadísticas.'), encoding='utf-8')
     (SITIO / '.nojekyll').write_text('')
+    for p in (RAIZ / 'src' / 'estatico').iterdir():      # ícono, manifiesto y service worker (para instalar como app)
+        shutil.copyfile(p, SITIO / p.name)
     salida = SITIO / 'datos'
     salida.mkdir(exist_ok=True)
     total = 0
