@@ -5,7 +5,7 @@
   "estadio": "Estadio Beira-Rio",
   "local_espn": "Internacional",
   "visita_espn": "Corinthians",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -16,7 +16,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    145,
+    140,
     -190
    ],
    "spread": [
@@ -153,18 +153,18 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Mirassol",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    295,
-    360
+    -140,
+    290,
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
@@ -301,7 +301,7 @@
   "estadio": "Mangueirão",
   "local_espn": "Remo",
   "visita_espn": "Grêmio",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -322,7 +322,7 @@
     ],
     [
      "+0.5",
-     -135
+     -130
     ]
    ]
   },
@@ -466,11 +466,127 @@
    "spread": [
     [
      "-0.5",
-     -195
+     -190
     ],
     [
      "+0.5",
-     140
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vitória": [
+    [
+     "287941",
+     "Lucas Arcanjo",
+     "G"
+    ],
+    [
+     "266676",
+     "Luan Cândido",
+     "CD-L"
+    ],
+    [
+     "271773",
+     "Cacá",
+     "CD-R"
+    ],
+    [
+     "284450",
+     "Jamerson",
+     "LB"
+    ],
+    [
+     "315766",
+     "Matheusinho",
+     "RB"
+    ],
+    [
+     "218972",
+     "Matheus",
+     "AM"
+    ],
+    [
+     "252315",
+     "Caique",
+     "LM"
+    ],
+    [
+     "218649",
+     "Emmanuel Martínez",
+     "RM"
+    ],
+    [
+     "379359",
+     "Renê",
+     "F"
+    ],
+    [
+     "379661",
+     "Diego Tarzia",
+     "AM-L"
+    ],
+    [
+     "256044",
+     "Erick",
+     "AM-R"
+    ]
+   ],
+   "Chapecoense": [
+    [
+     "276217",
+     "Anderson Paixão",
+     "G"
+    ],
+    [
+     "319649",
+     "Eduardo Doma",
+     "CD-L"
+    ],
+    [
+     "338663",
+     "Kauan",
+     "CD-R"
+    ],
+    [
+     "236283",
+     "Bruno Pacheco",
+     "LB"
+    ],
+    [
+     "234012",
+     "Bruno",
+     "RB"
+    ],
+    [
+     "140012",
+     "Giovanni Augusto",
+     "AM"
+    ],
+    [
+     "202554",
+     "Yago Felipe",
+     "LM"
+    ],
+    [
+     "285089",
+     "Camilo",
+     "RM"
+    ],
+    [
+     "3108270",
+     "Túlio Eduardo Silva De Oliveira",
+     "F"
+    ],
+    [
+     "307717",
+     "Maurício Garcez",
+     "AM-L"
+    ],
+    [
+     "64671",
+     "Marcinho",
+     "AM-R"
     ]
    ]
   }
@@ -551,22 +667,22 @@
    "casa": "DraftKings",
    "ml": [
     300,
-    270,
+    275,
     -120
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    100
+    -135,
+    105
    ],
    "spread": [
     [
      "+0.5",
-     -110
+     -105
     ],
     [
      "-0.5",
-     -135
+     -130
     ]
    ]
   }

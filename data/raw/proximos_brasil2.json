@@ -5,7 +5,7 @@
   "estadio": "Estádio da Ressacada",
   "local_espn": "Avaí",
   "visita_espn": "Londrina",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "momios": {
    "casa": "DraftKings",
@@ -16,17 +16,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
+    130,
     -170
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -160
+     -165
     ]
    ]
   },
@@ -153,28 +153,28 @@
   "estadio": "Germano Krüger",
   "local_espn": "Operário PR",
   "visita_espn": "Botafogo-SP",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
+    130,
     220,
-    240
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -155
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -160
+     -170
     ]
    ]
   },
@@ -357,6 +357,122 @@
      -110
     ]
    ]
+  },
+  "alineaciones": {
+   "CRB": [
+    [
+     "272529",
+     "Vitor Caetano",
+     "G"
+    ],
+    [
+     "357310",
+     "Lyncon",
+     "D"
+    ],
+    [
+     "201848",
+     "Hereda",
+     "D"
+    ],
+    [
+     "199061",
+     "Bressan",
+     "D"
+    ],
+    [
+     "225857",
+     "Lucas Lovat",
+     "D"
+    ],
+    [
+     "233429",
+     "Danielzinho",
+     "M"
+    ],
+    [
+     "252805",
+     "Crystopher",
+     "M"
+    ],
+    [
+     "301523",
+     "Thiago Fernandes",
+     "M"
+    ],
+    [
+     "191412",
+     "Pedro Castro",
+     "M"
+    ],
+    [
+     "143849",
+     "Dadá",
+     "M"
+    ],
+    [
+     "293875",
+     "Mikael",
+     "F"
+    ]
+   ],
+   "Atlético Goianiense": [
+    [
+     "279349",
+     "Paulo Vítor",
+     "G"
+    ],
+    [
+     "292255",
+     "Ewerton",
+     "D"
+    ],
+    [
+     "302596",
+     "Adriano Martins",
+     "D"
+    ],
+    [
+     "334077",
+     "Junior Barreto",
+     "D"
+    ],
+    [
+     "216107",
+     "Guilherme Almeida",
+     "D"
+    ],
+    [
+     "270193",
+     "Marrony",
+     "M"
+    ],
+    [
+     "303568",
+     "Gustavo Maia",
+     "M"
+    ],
+    [
+     "271302",
+     "José Domingo Moraes Neto",
+     "M"
+    ],
+    [
+     "384200",
+     "Peixoto",
+     "M"
+    ],
+    [
+     "420775",
+     "Geovany Soares",
+     "M"
+    ],
+    [
+     "288461",
+     "Gustavo Coutinho",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -376,8 +492,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    145,
-    -195
+    140,
+    -190
    ],
    "spread": [
     [
@@ -387,6 +503,122 @@
     [
      "+0.5",
      -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vila Nova": [
+    [
+     "186507",
+     "Helton Leite",
+     "G"
+    ],
+    [
+     "169716",
+     "Tiago",
+     "CD-L"
+    ],
+    [
+     "204133",
+     "Douglas Mendes",
+     "CD-R"
+    ],
+    [
+     "396038",
+     "Higor Luiz De Souza",
+     "LB"
+    ],
+    [
+     "224674",
+     "Hayner",
+     "RB"
+    ],
+    [
+     "131532",
+     "Marquinhos Gabriel",
+     "AM"
+    ],
+    [
+     "420672",
+     "Dudu",
+     "LM"
+    ],
+    [
+     "270363",
+     "João Pedro Vieira",
+     "RM"
+    ],
+    [
+     "222200",
+     "André Luis",
+     "F"
+    ],
+    [
+     "249846",
+     "Janderson",
+     "AM-L"
+    ],
+    [
+     "214192",
+     "Everton",
+     "AM-R"
+    ]
+   ],
+   "Cuiabá": [
+    [
+     "119069",
+     "João Carlos",
+     "G"
+    ],
+    [
+     "345704",
+     "Calebe",
+     "CD"
+    ],
+    [
+     "290099",
+     "Vitor Mendes",
+     "CD-L"
+    ],
+    [
+     "231850",
+     "Joao Basso",
+     "CD-R"
+    ],
+    [
+     "395391",
+     "David Miguel De Souza Arcanjo",
+     "CM-L"
+    ],
+    [
+     "224731",
+     "Raul",
+     "CM-R"
+    ],
+    [
+     "402827",
+     "Lorenzo",
+     "LM"
+    ],
+    [
+     "298951",
+     "Igor Maduro De Oliveira",
+     "RM"
+    ],
+    [
+     "267575",
+     "Fábio",
+     "F"
+    ],
+    [
+     "155056",
+     "Jean Dias",
+     "CF-L"
+    ],
+    [
+     "382994",
+     "Kauan",
+     "CF-R"
     ]
    ]
   }
@@ -403,22 +635,22 @@
    "casa": "DraftKings",
    "ml": [
     135,
-    210,
-    210
+    215,
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -185
+    135,
+    -180
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -180
+     -170
     ]
    ]
   }
@@ -434,23 +666,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    230,
+    215,
+    235,
     125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -120
+    -115,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -160
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   }
