@@ -348,7 +348,8 @@ def analizar_liga(liga):
     else:
         temporada_tabla = temporada
     tablas_espn = json.load(open(RAW / 'tablas_espn.json')) if (RAW / 'tablas_espn.json').exists() else {}
-    grupos = [g for g in tablas_espn.get(liga, []) if g.get('equipos')]
+    traduce = {'Eastern Conference': 'Conferencia Este', 'Western Conference': 'Conferencia Oeste', 'Group A': 'Zona A', 'Group B': 'Zona B'}
+    grupos = [{**g, 'grupo': traduce.get(g.get('grupo'), g.get('grupo'))} for g in tablas_espn.get(liga, []) if g.get('equipos')]
     grupos = grupos if len(grupos) > 1 else []
     equipos, tabla, resumen_liga, hay_xg = analizar_equipos(liga, season, ref, det, mapa, nombre, grupos)
     partidos = analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, cmodel, equipos)

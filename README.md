@@ -1,6 +1,6 @@
 # Laboratorio de fútbol
 
-Página de análisis que se actualiza sola para **La Liga, Premier League, Serie A, Bundesliga, Ligue 1, Liga MX, MLS y la NFL**.
+Página de análisis que se actualiza sola para **La Liga, Premier League, Serie A, Bundesliga, Ligue 1, Liga MX, MLS, Brasileirão (Série A y B), Liga Argentina y la NFL**.
 Arriba se elige la liga. Por cada partido muestra:
 - probabilidades de un modelo Dixon-Coles con 10,000 simulaciones;
 - comparación con los momios de la casa y momios justos de todos los mercados, incluidos los córners;
@@ -11,7 +11,7 @@ Arriba se elige la liga. Por cada partido muestra:
 La pestaña **Registro** guarda tus apuestas (desde la calculadora de cada partido) y las liquida sola cuando termina el partido;
 también lleva el registro automático de cada PICK del modelo para ver en vivo si gana o pierde.
 
-Incluye también la tabla (por conferencia en la MLS; torneo actual en Liga MX), las estadísticas de los equipos y el resultado
+Incluye también la tabla (por conferencia en la MLS; torneo actual en Liga MX; torneo actual y por zona en Argentina), las estadísticas de los equipos y el resultado
 honesto de la prueba del modelo con temporadas pasadas de cada liga.
 
 ## NFL
