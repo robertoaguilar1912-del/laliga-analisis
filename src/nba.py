@@ -355,7 +355,8 @@ SIGMA_T = 18.8       # desviación del total de puntos
 VENTANA_DIAS = 3 * 365
 PICK_EV = 0.05
 DIAS_NBA = 4         # la casa publica líneas de la NBA uno o dos días antes
-MIN_DEFECTO = 10.0   # minutos que se le suponen a un jugador sin historial (novato)
+MIN_DEFECTO = 10.0   # minutos de costumbre de un jugador en su primer juego (prueba)
+MIN_NUEVO = 4.0      # minutos que se le suponen a alguien de la plantilla sin juegos (novato, invitado al campamento)
 
 
 def _descansos(df):
@@ -613,7 +614,7 @@ def plantilla(t, plantillas, hab, ref):
 
 def minutos_esperados(ids, estados, hab):
     """{jugador: minutos de costumbre} de los que pueden jugar."""
-    return {x: float(hab['min'].get(x, MIN_DEFECTO)) for x in ids if estados.get(x) not in FUERA}
+    return {x: float(hab['min'].get(x, MIN_NUEVO)) for x in ids if estados.get(x) not in FUERA}
 
 
 def analizar_equipos(g, modelo, temporada):
@@ -718,7 +719,7 @@ def analizar():
             """Puntos que pierde el equipo sin el jugador (positivo = el equipo es peor sin él)."""
             if mj is None or x not in hab.index:
                 return None
-            con = dict(mins); con[x] = float(hab['min'].get(x, MIN_DEFECTO))
+            con = dict(mins); con[x] = float(hab['min'].get(x, MIN_NUEVO))
             sin = {k: v for k, v in mins.items() if k != x}
             return round(mj.fuerza(con) - mj.fuerza(sin), 1)
         les = []
