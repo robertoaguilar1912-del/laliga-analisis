@@ -309,7 +309,7 @@ def h2h(hist, a, b, nombre, n=6):
 
 
 # fases de eliminación que no cuentan para la tabla ('final' como palabra suelta: 'finalizacion' sí cuenta)
-ELIMINATORIA = re.compile(r'playoff|play-off|play-in|liguilla|\bfinal(es)?\b|semifinal|knockout|wild|post|cuadrangular', re.I)
+ELIMINATORIA = re.compile(r'playoff|play-off|play-in|liguilla|\bfinal(es|s)?\b|semifinal|quarterfinal|cuartos|knockout|wild|post|cuadrangular', re.I)
 
 
 def etiqueta_temporada(liga, temporada):
