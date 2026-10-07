@@ -86,7 +86,11 @@ def descargar_resultados_espn(liga, temporadas_atras=3):
         if str(y) in hay and y != y1:
             continue
         nuevas = []
-        for e in _scoreboard(L['espn'], str(y)):
+        desde = None
+        previas = [f for f in filas if f['Season'] == str(y)]
+        if L.get('por_fecha') and previas:
+            desde = (datetime.fromisoformat(max(f['Date'] for f in previas)) - timedelta(days=7)).strftime('%Y%m%d')
+        for e in _eventos_anio(L, y, desde):
             comp = e['competitions'][0]
             if not comp['status']['type'].get('completed'):
                 continue
@@ -98,7 +102,11 @@ def descargar_resultados_espn(liga, temporadas_atras=3):
                            'AwayTeam': cs['away']['team']['displayName'], 'FTHG': int(cs['home'].get('score') or 0),
                            'FTAG': int(cs['away'].get('score') or 0), 'tipo': ((e.get('season') or {}).get('slug') or '')})
         if nuevas:
-            filas = [f for f in filas if f['Season'] != str(y)] + nuevas
+            if desde:     # se revisaron solo los últimos días: se reemplazan esas filas y se conservan las demás
+                corte = f'{desde[:4]}-{desde[4:6]}-{desde[6:]}'
+                filas = [f for f in filas if f['Season'] != str(y) or f['Date'] < corte] + [n for n in nuevas if n['Date'] >= corte]
+            else:
+                filas = [f for f in filas if f['Season'] != str(y)] + nuevas
             print(f"  ESPN {L['nombre']} {y}: {len(nuevas)} resultados")
     if filas:
         with open(p, 'w', newline='', encoding='utf-8') as f:
@@ -132,6 +140,24 @@ def descargar_historia(desde='1718'):
 def _scoreboard(lg, dates):
     j = _get(f'{ESPN}/{lg}/scoreboard', params={'dates': dates, 'limit': 1000})
     return (j or {}).get('events', [])
+
+
+def _eventos_anio(L, y, desde=None):
+    """Partidos de un año. En algunas ligas (Colombia) ESPN solo devuelve la primera fecha al pedir el año completo;
+    ahí se usa su calendario y se pide día por día (desde: 'AAAAMMDD' para no repetir días ya revisados)."""
+    if not L.get('por_fecha'):
+        return _scoreboard(L['espn'], str(y))
+    j = _get(f"{ESPN}/{L['espn']}/scoreboard", params={'dates': f'{y}0701'})
+    cal = (((j or {}).get('leagues') or [{}])[0].get('calendar') or [])
+    hoy = ahora().strftime('%Y%m%d')
+    fechas = sorted({c[:10].replace('-', '') for c in cal if isinstance(c, str) and c.startswith(str(y))})
+    out = {}
+    for d in fechas:
+        if d > hoy or (desde and d < desde):
+            continue
+        for e in _scoreboard(L['espn'], d):
+            out[e['id']] = e
+    return list(out.values())
 
 
 def _resumen(event_id, lg):
@@ -171,8 +197,13 @@ def descargar_detalle_temporada(liga, hasta=None):
     carpeta.mkdir(parents=True, exist_ok=True)
     inicio = inicio_temporada(liga)
     nuevos = faltan = 0
+    desde = None
+    if L.get('por_fecha'):     # solo los días después del último partido que ya tiene detalle
+        fechas = sorted(json.load(open(f)).get('date', '')[:10] for f in carpeta.glob('*.json'))
+        if fechas:
+            desde = (datetime.fromisoformat(fechas[-1]) - timedelta(days=7)).strftime('%Y%m%d')
     for y in range(inicio.year, ahora().year + 1):
-        for e in _scoreboard(L['espn'], str(y)):
+        for e in _eventos_anio(L, y, desde):
             comp = e['competitions'][0]
             if not comp['status']['type'].get('completed') or e['date'] < inicio.strftime('%Y-%m-%d'):
                 continue

@@ -65,6 +65,10 @@ LIGAS = {
     'argentina': {'nombre': 'Liga Argentina', 'pais': 'Argentina', 'espn': 'arg.1', 'fd_extra': 'ARG', 'calendario': 'anual',
                   'torneos': {1: 'Apertura', 7: 'Clausura'}, 'api_football': 128, 'zonas': 'argentina',
                   'copas': {**COPAS_CONMEBOL, 'arg.copa': 'Copa Argentina'}},
+    # por_fecha: ESPN no da el año completo de una vez; se pide día por día con su calendario
+    'colombia': {'nombre': 'Liga Colombiana', 'pais': 'Colombia', 'espn': 'col.1', 'solo_espn': True, 'por_fecha': True,
+                 'calendario': 'anual', 'torneos': {1: 'Apertura', 7: 'Finalización'}, 'api_football': 239,
+                 'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol y la NFL (que tiene su propia página)
 SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL'}
@@ -79,6 +83,7 @@ ZONAS = {
     'brasil': [[1, 6, 'cl', 'Libertadores'], [7, 12, 'eu', 'Sudamericana'], [-4, -1, 'des', 'Descenso']],
     'brasil2': [[1, 4, 'cl', 'Ascenso'], [-4, -1, 'des', 'Descenso']],
     'argentina': [[1, 8, 'cl', 'Playoffs']],
+    'colombia': [[1, 8, 'cl', 'Cuadrangulares']],
 }
 
 # Nombres: ESPN -> football-data
