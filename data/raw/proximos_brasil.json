@@ -5,7 +5,7 @@
   "estadio": "Estadio Beira-Rio",
   "local_espn": "Internacional",
   "visita_espn": "Corinthians",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -153,7 +153,7 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Mirassol",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -301,7 +301,7 @@
   "estadio": "Mangueirão",
   "local_espn": "Remo",
   "visita_espn": "Grêmio",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -597,7 +597,7 @@
   "estadio": "Joao Havelange Stadium",
   "local_espn": "Botafogo",
   "visita_espn": "Vasco da Gama",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -608,17 +608,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -165,
     125
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -165
     ],
     [
      "-0.5",
-     115
+     120
     ]
    ]
   },
@@ -750,23 +750,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    270,
-    380
+    -120,
+    255,
+    340
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -130
     ],
     [
      "+0.5",
-     105
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cruzeiro": [
+    [
+     "212077",
+     "William",
+     "SUB"
+    ],
+    [
+     "363020",
+     "Jonathan Jesus",
+     "SUB"
+    ],
+    [
+     "337996",
+     "Otávio Costa",
+     "SUB"
+    ],
+    [
+     "77577",
+     "Lucas Romero",
+     "SUB"
+    ],
+    [
+     "286558",
+     "João Marcelo",
+     "SUB"
+    ],
+    [
+     "404202",
+     "Felipe Morais",
+     "SUB"
+    ],
+    [
+     "210135",
+     "Gerson",
+     "SUB"
+    ],
+    [
+     "238734",
+     "Gabriel Rojas",
+     "SUB"
+    ],
+    [
+     "216098",
+     "Matheus Pereira",
+     "SUB"
+    ],
+    [
+     "280978",
+     "Kaio Jorge",
+     "SUB"
+    ],
+    [
+     "227737",
+     "Bruno Rodrigues",
+     "SUB"
+    ]
+   ],
+   "São Paulo": [
+    [
+     "215961",
+     "Carlos Coronel",
+     "G"
+    ],
+    [
+     "199065",
+     "Wendell",
+     "D"
+    ],
+    [
+     "196855",
+     "Rafael Tolói",
+     "D"
+    ],
+    [
+     "285010",
+     "Sabino",
+     "D"
+    ],
+    [
+     "201531",
+     "Robert Arboleda",
+     "D"
+    ],
+    [
+     "266282",
+     "Marcos Antonio",
+     "M"
+    ],
+    [
+     "301516",
+     "Damián Bobadilla",
+     "M"
+    ],
+    [
+     "376489",
+     "Pedro Lima",
+     "M"
+    ],
+    [
+     "236596",
+     "Artur",
+     "M"
+    ],
+    [
+     "319168",
+     "Pablo Maia",
+     "M"
+    ],
+    [
+     "162558",
+     "Jonathan Calleri",
+     "F"
     ]
    ]
   }
