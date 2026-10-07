@@ -1,153 +1,5 @@
 [
  {
-  "id": "761660",
-  "utc": "2026-10-07T00:30Z",
-  "estadio": "Soldier Field",
-  "local_espn": "Chicago Fire FC",
-  "visita_espn": "Vancouver Whitecaps",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    275,
-    115
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    105,
-    -135
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -155
-    ],
-    [
-     "-0.5",
-     110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Chicago Fire FC": [
-    [
-     "254291",
-     "Josh Cohen",
-     "SUB"
-    ],
-    [
-     "193105",
-     "Anton Saletros",
-     "SUB"
-    ],
-    [
-     "293671",
-     "Jonathan Dean",
-     "SUB"
-    ],
-    [
-     "400594",
-     "Mbekezeli Mbokazi",
-     "SUB"
-    ],
-    [
-     "335605",
-     "D'Avilla Dje Tah",
-     "SUB"
-    ],
-    [
-     "364592",
-     "Johan Gómez",
-     "SUB"
-    ],
-    [
-     "210538",
-     "Jonathan Bamba",
-     "SUB"
-    ],
-    [
-     "399516",
-     "Leonardo Barroso",
-     "SUB"
-    ],
-    [
-     "233813",
-     "Jack Elliott",
-     "SUB"
-    ],
-    [
-     "186466",
-     "Philip Zinckernagel",
-     "SUB"
-    ],
-    [
-     "259951",
-     "Maren Haile-Selassie",
-     "SUB"
-    ]
-   ],
-   "Vancouver Whitecaps": [
-    [
-     "272338",
-     "Yohei Takaoka",
-     "G"
-    ],
-    [
-     "338836",
-     "Tate Johnson",
-     "D"
-    ],
-    [
-     "286523",
-     "Mathías Laborda",
-     "D"
-    ],
-    [
-     "322100",
-     "Rui Modesto",
-     "D"
-    ],
-    [
-     "256476",
-     "Tristan Blackmon",
-     "D"
-    ],
-    [
-     "3111934",
-     "Aleksa Cvetković",
-     "M"
-    ],
-    [
-     "173404",
-     "Ryan Gauld",
-     "M"
-    ],
-    [
-     "276451",
-     "Cheick Sabaly",
-     "M"
-    ],
-    [
-     "256209",
-     "Emmanuel Sabbi",
-     "M"
-    ],
-    [
-     "315920",
-     "Oliver Larraz",
-     "M"
-    ],
-    [
-     "249490",
-     "Brian White",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "761845",
   "utc": "2026-10-10T17:00Z",
   "estadio": "BMO Field",
@@ -218,11 +70,11 @@
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -185
+     -190
     ]
    ]
   }
@@ -238,14 +90,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
+    115,
     265,
-    185
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
     135,
-    -175
+    -180
    ],
    "spread": [
     [
@@ -308,8 +160,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -170
+    125,
+    -165
    ],
    "spread": [
     [
@@ -735,6 +587,146 @@
   "estadio": "Snapdragon Stadium",
   "local_espn": "San Diego FC",
   "visita_espn": "Houston Dynamo FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761875",
+  "utc": "2026-10-17T18:30Z",
+  "estadio": "Subaru Park",
+  "local_espn": "Philadelphia Union",
+  "visita_espn": "Charlotte FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761876",
+  "utc": "2026-10-17T20:30Z",
+  "estadio": "Allianz Field",
+  "local_espn": "Minnesota United FC",
+  "visita_espn": "St. Louis CITY SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761880",
+  "utc": "2026-10-17T23:30Z",
+  "estadio": "Mercedes-Benz Stadium",
+  "local_espn": "Atlanta United FC",
+  "visita_espn": "Inter Miami CF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761879",
+  "utc": "2026-10-17T23:30Z",
+  "estadio": "Gillette Stadium",
+  "local_espn": "New England Revolution",
+  "visita_espn": "Chicago Fire FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761877",
+  "utc": "2026-10-17T23:30Z",
+  "estadio": "Citi Field",
+  "local_espn": "New York City FC",
+  "visita_espn": "LAFC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761881",
+  "utc": "2026-10-17T23:30Z",
+  "estadio": "Inter&Co Stadium",
+  "local_espn": "Orlando City SC",
+  "visita_espn": "D.C. United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761878",
+  "utc": "2026-10-17T23:30Z",
+  "estadio": "Sports Illustrated Stadium",
+  "local_espn": "Red Bull New York",
+  "visita_espn": "Toronto FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761882",
+  "utc": "2026-10-18T00:30Z",
+  "estadio": "Q2 Stadium",
+  "local_espn": "Austin FC",
+  "visita_espn": "Vancouver Whitecaps",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761883",
+  "utc": "2026-10-18T00:30Z",
+  "estadio": "Shell Energy Stadium",
+  "local_espn": "Houston Dynamo FC",
+  "visita_espn": "FC Dallas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761884",
+  "utc": "2026-10-18T00:30Z",
+  "estadio": "Sporting Park",
+  "local_espn": "Sporting Kansas City",
+  "visita_espn": "Real Salt Lake",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761887",
+  "utc": "2026-10-18T02:30Z",
+  "estadio": "Dignity Health Sports Park",
+  "local_espn": "LA Galaxy",
+  "visita_espn": "San Diego FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761888",
+  "utc": "2026-10-18T02:30Z",
+  "estadio": "Providence Park",
+  "local_espn": "Portland Timbers",
+  "visita_espn": "Colorado Rapids",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761886",
+  "utc": "2026-10-18T02:30Z",
+  "estadio": "PayPal Park",
+  "local_espn": "San Jose Earthquakes",
+  "visita_espn": "Nashville SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "761885",
+  "utc": "2026-10-18T02:30Z",
+  "estadio": "Lumen Field",
+  "local_espn": "Seattle Sounders FC",
+  "visita_espn": "CF Montréal",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "momios": null
