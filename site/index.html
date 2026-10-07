@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e5a3c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='2.5'/%3E%3Cpath d='M16 4v24' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E"><meta name="description" content="Análisis de fútbol: probabilidades, estadísticas, bajas y momios justos de La Liga, Premier, Serie A, Bundesliga, Ligue 1, Liga MX y MLS."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0e5a3c"><link rel="apple-touch-icon" href="icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Laboratorio"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Laboratorio de fútbol</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e5a3c'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='2.5'/%3E%3Cpath d='M16 4v24' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E"><meta name="description" content="Análisis de fútbol, NFL y NBA: probabilidades, estadísticas, bajas y momios justos."><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0e5a3c"><link rel="apple-touch-icon" href="icon-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Laboratorio"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Laboratorio de fútbol</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap">
@@ -422,25 +422,26 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 <script>
 (async function () {
   // ---------------- liga elegida y carga de datos
-  const LIGAS = {"laliga": "La Liga", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "nfl": "NFL"};
+  const LIGAS = {"laliga": "La Liga", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "nfl": "NFL", "nba": "NBA"};
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
   let liga = new URLSearchParams(location.search).get('liga');
   if (!LIGAS[liga]) liga = leer('laboratorio-liga');
-  if (liga === 'nfl') {             // la NFL tiene su propia página; aquí solo se ve su registro
-    if (location.hash !== '#registro') { location.replace('nfl.html'); return; }
+  const PAGINAS = { nfl: 'nfl.html', nba: 'nba.html' };   // deportes con página propia
+  if (PAGINAS[liga]) {               // aquí solo se ve su registro
+    if (location.hash !== '#registro') { location.replace(PAGINAS[liga]); return; }
     liga = leer('laboratorio-futbol');
   }
-  if (!LIGAS[liga] || liga === 'nfl') liga = 'laliga';
+  if (!LIGAS[liga] || PAGINAS[liga]) liga = 'laliga';
   guardar('laboratorio-liga', liga); guardar('laboratorio-futbol', liga);
   const corto = n => n.replace(' League', '');
   const chips = document.getElementById('ligas');
-  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${id === 'nfl' ? 'nfl.html' : '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${PAGINAS[id] || '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
   chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
     ev.preventDefault();
     const h = location.hash.slice(1);
-    if (a.dataset.liga === 'nfl') { location.href = 'nfl.html' + (['equipos', 'modelo'].includes(h) ? '#' + h : ''); return; }
+    if (PAGINAS[a.dataset.liga]) { location.href = PAGINAS[a.dataset.liga] + (['equipos', 'modelo'].includes(h) ? '#' + h : ''); return; }
     location.href = `?liga=${a.dataset.liga}` + (VISTAS.includes(h) && h !== 'partidos' ? '#' + h : '');
   }));
   const actual = chips.querySelector('[aria-current]');
