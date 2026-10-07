@@ -1,1 +1,5 @@
-python explorar/nba.py
+python explorar/nba2.py
+python src/nba.py historia
+python src/nba.py jugadores
+python src/nba.py espn
+cp data/raw/nba_juegos.csv data/raw/nba_jugadores.json data/raw/lesiones_nba.json data/raw/proximos_nba.json salida/ ; ls data/espn/nba | wc -l
