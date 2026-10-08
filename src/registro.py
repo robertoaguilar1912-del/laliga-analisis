@@ -29,16 +29,17 @@ def _leer(p, defecto):
         return defecto
 
 
-def _corners(t):
-    v = (t.get('stats') or {}).get('wonCorners')
+def _stat(t, clave):
+    v = (t.get('stats') or {}).get(clave)
     try:
-        return int(v)
+        return int(float(v))
     except (TypeError, ValueError):
         return None
 
 
 def resultados():
-    """{id de ESPN: [goles local, goles visita, córners local, córners visita]} de los partidos ya jugados."""
+    """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita]}
+    de los partidos ya jugados."""
     out = {}
     for f in ESPN_DIR.glob('*/*.json'):
         m = _leer(f, None)
@@ -47,7 +48,8 @@ def resultados():
         lados = {t['ha']: t for t in m.get('teams', {}).values()}
         if 'home' in lados and 'away' in lados:
             h, a = lados['home'], lados['away']
-            out[str(m['id'])] = [h['score'], a['score'], _corners(h), _corners(a)]
+            out[str(m['id'])] = [h['score'], a['score'], _stat(h, 'wonCorners'), _stat(a, 'wonCorners'),
+                                 _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')]
     return out
 
 

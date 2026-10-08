@@ -1,6 +1,7 @@
 """
 Arma los datos de la página para cada liga (data/ligas/<liga>.json):
-- próximos partidos con probabilidades (10,000 simulaciones), mercados, momios y momios justos
+- próximos partidos con probabilidades (de la matriz de marcadores del modelo), mercados, momios y momios justos;
+  más las distribuciones (goles, córners, remates a puerta) con las que la página calcula cualquier línea
 - estadísticas de cada equipo (total, casa, fuera), tabla, forma, goles por tramo, figuras
 - bajas: sanciones, titulares no convocados, lesiones oficiales (API-Football) y alineaciones confirmadas
 - cansancio (copas y torneos internacionales) e historial de enfrentamientos
@@ -13,11 +14,11 @@ import unicodedata
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, ZONAS, N_SIMS, ahora, inicio_torneo
+from config import RAW, DATOS, LIGAS, ZONAS, ahora, inicio_torneo
 from datos import ascendidos
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
-from model import DixonColes, simulate
-from corners import CornerModel
+from model import DixonColes
+from corners import CornerModel, RematesModel
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -86,7 +87,34 @@ def minuto(clock):
 
 
 # ----------------------------------------------------------------- partidos
-def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, equipos_info):
+def mitades(L):
+    """Una línea asiática de cuarto (.25 / .75) es media apuesta en cada línea vecina."""
+    return (L - 0.25, L + 0.25) if round(abs(L) * 4) % 2 == 1 else (L, L)
+
+
+def gana_pierde(x, p, L, signo=1):
+    """Probabilidad de ganar y de perder (lo que falta es nula) la apuesta "signo·x + L > 0" sobre la
+    distribución discreta (x, p). Para "más de L" usar signo=1 y -L; para "menos de L", signo=-1 y L."""
+    W = Lo = 0.0
+    for h in mitades(L):
+        v = signo * x + h
+        W += p[v > 1e-9].sum() / 2
+        Lo += p[v < -1e-9].sum() / 2
+    return float(W), float(Lo)
+
+
+def fila_momio(k_, nm, grupo, W, Lo, dec, pm):
+    """Mercado con momio de la casa: EV = gana·(momio − 1) − pierde (la nula devuelve la apuesta)."""
+    pc = W / (W + Lo) if W + Lo > 0 else 0.0
+    ev = W * (dec - 1) - Lo
+    r = {'k': k_, 'mercado': nm, 'grupo': grupo, 'p': pc, 'momio': f'{dec:.2f}', 'p_mercado': pm,
+         'justo': fair_dec(pc), 'ev': ev, 'veredicto': veredicto(ev)}
+    if W + Lo < 0.9995:
+        r['empate'] = 1 - W - Lo
+    return r
+
+
+def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, equipos_info, remates_model=None):
     out = []
     for k, g in enumerate(prox):
         h, a = mapa.get(g['local_espn']), mapa.get(g['visita_espn'])
@@ -94,33 +122,29 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
             print(f"  aviso: sin datos de {g['local_espn']} o {g['visita_espn']}")
             continue
         lam, mu = modelo.rates(h, a)
-        hg, ag = simulate(modelo.score_matrix(h, a), N_SIMS, seed=k)
-        pH, pD, pA = float(np.mean(hg > ag)), float(np.mean(hg == ag)), float(np.mean(hg < ag))
-        tot = hg + ag
+        M = modelo.score_matrix(h, a)                       # probabilidad exacta de cada marcador
+        gi = np.arange(M.shape[0])
+        dif = (gi[:, None] - gi[None, :]).ravel(); tot_ = (gi[:, None] + gi[None, :]).ravel(); pM = M.ravel()
+        pH, pD, pA = float(pM[dif > 0].sum()), float(pM[dif == 0].sum()), float(pM[dif < 0].sum())
         L, V = nombre(h), nombre(a)
         mom = g.get('momios') or {}
         con_momio, mkt = [], None
         if mom.get('ml'):
             dec = [am_to_dec(x) for x in mom['ml']]
             imp = np.array([1 / d for d in dec]); mkt = (imp / imp.sum()).tolist()
-            for k_, nm, p, d, am, pm in zip(('1', 'X', '2'), [f'Gana {L}', 'Empate', f'Gana {V}'], (pH, pD, pA), dec, mom['ml'], mkt):
-                ev = p * d - 1
-                con_momio.append({'k': k_, 'mercado': nm, 'grupo': 'Resultado', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': pm,
-                                  'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
+            for k_, nm, p, d, pm in zip(('1', 'X', '2'), [f'Gana {L}', 'Empate', f'Gana {V}'], (pH, pD, pA), dec, mkt):
+                con_momio.append(fila_momio(k_, nm, 'Resultado', p, 1 - p, d, pm))
         if mom.get('ou'):
-            line = mom['ou_linea']; pO = float(np.mean(tot > line))
+            line = mom['ou_linea']
             dec = [am_to_dec(x) for x in mom['ou']]
             imp = np.array([1 / d for d in dec]); pm2 = imp / imp.sum()
-            for k_, nm, p, d, am, pm in ((f'O:{line}', f'Más de {line} goles', pO, dec[0], mom['ou'][0], pm2[0]),
-                                          (f'U:{line}', f'Menos de {line} goles', 1 - pO, dec[1], mom['ou'][1], pm2[1])):
-                ev = p * d - 1
-                con_momio.append({'k': k_, 'mercado': nm, 'grupo': 'Goles', 'p': p, 'momio': f'{am_to_dec(am):.2f}', 'p_mercado': float(pm),
-                                  'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
+            Wo, Lo_ = gana_pierde(tot_, pM, -float(line))
+            Wu, Lu = gana_pierde(tot_, pM, float(line), signo=-1)
+            con_momio.append(fila_momio(f'O:{line}', f'Más de {line} goles', 'Goles', Wo, Lo_, dec[0], float(pm2[0])))
+            con_momio.append(fila_momio(f'U:{line}', f'Menos de {line} goles', 'Goles', Wu, Lu, dec[1], float(pm2[1])))
         for side, (ln, am) in enumerate(mom.get('spread') or []):
-            margin = (hg - ag) if side == 0 else (ag - hg)
-            p = float(np.mean(margin + float(ln) > 0)); ev = p * am_to_dec(am) - 1
-            con_momio.append({'k': f'H{side + 1}:{ln}', 'mercado': f"Hándicap {L if side == 0 else V} {ln}", 'grupo': 'Hándicap', 'p': p, 'momio': f'{am_to_dec(am):.2f}',
-                              'p_mercado': None, 'justo': fair_dec(p), 'ev': ev, 'veredicto': veredicto(ev)})
+            W, Lo = gana_pierde(dif, pM, float(ln), signo=1 if side == 0 else -1)
+            con_momio.append(fila_momio(f'H{side + 1}:{ln}', f"Hándicap {L if side == 0 else V} {ln}", 'Hándicap', W, Lo, am_to_dec(am), None))
         sin = []
         # 'k' es la clave con la que la página liquida la apuesta cuando termina el partido
         add = lambda k_, nm, grp, p: sin.append({'k': k_, 'mercado': nm, 'grupo': grp, 'p': float(p), 'justo': fair_dec(float(p))})
@@ -128,19 +152,20 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         add('1X', f'{L} o empate (1X)', 'Doble oportunidad', pH + pD); add('X2', f'{V} o empate (X2)', 'Doble oportunidad', pA + pD)
         add('12', 'No hay empate (12)', 'Doble oportunidad', pH + pA)
         add('DNB1', f'{L} (empate no acción)', 'Empate no acción', pH / (pH + pA)); add('DNB2', f'{V} (empate no acción)', 'Empate no acción', pA / (pH + pA))
-        for ln in (1.5, 2.5, 3.5):
-            add(f'O:{ln}', f'Más de {ln} goles', 'Goles', np.mean(tot > ln)); add(f'U:{ln}', f'Menos de {ln} goles', 'Goles', np.mean(tot < ln))
-        btts = np.mean((hg > 0) & (ag > 0))
+        for ln in (1.5, 2.5, 3.5, 4.5):
+            add(f'O:{ln}', f'Más de {ln} goles', 'Goles', pM[tot_ > ln].sum()); add(f'U:{ln}', f'Menos de {ln} goles', 'Goles', pM[tot_ < ln].sum())
+        btts = float(M[1:, 1:].sum())
         add('BTTS:S', 'Ambos anotan: Sí', 'Goles', btts); add('BTTS:N', 'Ambos anotan: No', 'Goles', 1 - btts)
-        add('A1', f'Anota {L}', 'Goles por equipo', np.mean(hg > 0)); add('A2', f'Anota {V}', 'Goles por equipo', np.mean(ag > 0))
-        add('CS1', f'Portería en cero {L}', 'Goles por equipo', np.mean(ag == 0)); add('CS2', f'Portería en cero {V}', 'Goles por equipo', np.mean(hg == 0))
-        cn = corners_model.predict(h, a) if corners_model and h in corners_model.m.idx and a in corners_model.m.idx else None
-        if cn:
-            for ln in (8.5, 9.5, 10.5):
-                add(f'CO:{ln}', f'Córners: más de {ln}', 'Córners', cn[f'O{ln}']); add(f'CU:{ln}', f'Córners: menos de {ln}', 'Córners', 1 - cn[f'O{ln}'])
-            add('C1O:4.5', f'Córners {L}: más de 4.5', 'Córners', cn['loc_O4.5']); add('C2O:3.5', f'Córners {V}: más de 3.5', 'Córners', cn['vis_O3.5'])
-        sc = pd.Series([f'{x}-{y}' for x, y in zip(hg, ag)]).value_counts().head(6)
-        margen = np.clip(hg - ag, -4, 4)
+        add('A1', f'Anota {L}', 'Goles por equipo', 1 - M[0, :].sum()); add('A2', f'Anota {V}', 'Goles por equipo', 1 - M[:, 0].sum())
+        add('CS1', f'Portería en cero {L}', 'Goles por equipo', M[:, 0].sum()); add('CS2', f'Portería en cero {V}', 'Goles por equipo', M[0, :].sum())
+        # córners y remates a puerta: la página arma todas las líneas con estas distribuciones
+        cn = corners_model.predict(h, a) if corners_model and corners_model.tiene(h, a) else None
+        dist_c = corners_model.dist(h, a) if cn else None
+        dist_r = remates_model.dist(h, a) if remates_model and remates_model.tiene(h, a) else None
+        Mt = M[:9, :9] / M[:9, :9].sum()
+        orden = np.argsort(-pM)[:6]
+        sc = {f'{gi[i // M.shape[1]]}-{gi[i % M.shape[1]]}': float(pM[i]) for i in orden}
+        dclip = np.clip(dif, -4, 4)
         # texto
         txt = f"El modelo espera {lam:.2f} goles de {L} y {mu:.2f} de {V} ({lam + mu:.1f} en total). Le da {pH:.0%} al local, {pD:.0%} al empate y {pA:.0%} a la visita"
         if mkt:
@@ -168,8 +193,10 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     'xg_local': float(lam), 'xg_visita': float(mu), 'corners': [cn['c_local'], cn['c_visita']] if cn else None, 'tipo': g.get('tipo', ''),
                     'forma_local': equipos_info[h]['forma_str'] if h in equipos_info else '', 'forma_visita': equipos_info[a]['forma_str'] if a in equipos_info else '',
                     'pH': pH, 'pD': pD, 'pA': pA, 'mercado': mkt, 'casa_momios': mom.get('casa'),
-                    'con_momio': con_momio, 'sin_momio': sin, 'marcadores': [{'m': s, 'p': float(c / N_SIMS)} for s, c in sc.items()],
-                    'margen': [{'m': int(v), 'p': float(np.mean(margen == v))} for v in range(-4, 5)],
+                    'con_momio': con_momio, 'sin_momio': sin, 'marcadores': [{'m': s_, 'p': p_} for s_, p_ in sc.items()],
+                    'margen': [{'m': int(v), 'p': float(pM[dclip == v].sum())} for v in range(-4, 5)],
+                    'remates': [dist_r['ml'], dist_r['mv']] if dist_r else None,
+                    'dist': {'goles': [[round(float(x), 5) for x in fila] for fila in Mt], 'corners': dist_c, 'remates': dist_r},
                     'texto': txt, 'alineaciones': ali})
     return out
 
@@ -339,6 +366,8 @@ def analizar_liga(liga):
     modelo = DixonColes().fit(hist, ref, promoted=nuevos)
     hc = hist.dropna(subset=['HC', 'AC'])
     cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
+    hs = hist.dropna(subset=['HST', 'AST'])
+    rmodel = RematesModel().fit(hs, ref, {t for t in nuevos if t in set(hs.HomeTeam) | set(hs.AwayTeam)}) if len(hs) >= 80 else None
     season = df[df.Season == temporada]
     if L.get('calendario') == 'torneos' or L.get('torneos'):
         season = season[season.Date >= pd.Timestamp(inicio_torneo(liga).date())]
@@ -353,7 +382,7 @@ def analizar_liga(liga):
     grupos = [{**g, 'grupo': traduce.get(g.get('grupo'), g.get('grupo'))} for g in tablas_espn.get(liga, []) if g.get('equipos')]
     grupos = grupos if len(grupos) > 1 else []
     equipos, tabla, resumen_liga, hay_xg = analizar_equipos(liga, season, ref, det, mapa, nombre, grupos)
-    partidos = analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, cmodel, equipos)
+    partidos = analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, cmodel, equipos, rmodel)
     partidos = [p for p in partidos if p['local_fd'] in equipos and p['visita_fd'] in equipos]
     hist_h2h = df.assign(div=L['nombre'])
     if df2 is not None:
@@ -369,10 +398,11 @@ def analizar_liga(liga):
     info = {'liga': liga, 'nombre': L['nombre'], 'pais': L['pais'], 'temporada': etiqueta_temporada(liga, temporada_tabla),
             'zonas': ZONAS.get(L.get('zonas'), []), 'grupos': [g['grupo'] for g in grupos],
             'h2h_desde': str(hist_h2h.Date.min().year), 'h2h_divs': [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else []),
-            'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'fuente_fd': 'por temporada' if L.get('fd') else 'resultados y cuotas',
+            'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'hay_remates': rmodel is not None,
+            'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': 'por temporada' if L.get('fd') else 'resultados y cuotas',
             'n_espn_extra': n_espn}
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
-           'n_sims': N_SIMS, 'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
+           'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],
            'con_lesiones': (RAW / f'lesiones_{liga}.json').exists()}
     (DATOS / 'ligas').mkdir(exist_ok=True)

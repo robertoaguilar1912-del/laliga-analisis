@@ -127,7 +127,7 @@ button { font: inherit; color: inherit; }
 .subtabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .pane { display: grid; gap: 16px; }
 .pane[hidden] { display: none; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; gap: 12px; min-width: 0; align-content: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-width: 0; align-content: start; }
 .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 @media (max-width: 760px) { .grid2 { grid-template-columns: minmax(0, 1fr); } }
 
@@ -235,10 +235,30 @@ table.data.min900 { min-width: 900px; }
 .xrow .p, .xrow .j { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 12.5px; text-align: right; }
 .xrow .j { color: var(--ink-3); min-width: 54px; }
 .xgrp { font-family: var(--font-data); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 10px; }
+details.xdet { border-bottom: 1px solid var(--line); }
+details.xdet > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 10px 0 8px; font-family: var(--font-data); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+details.xdet > summary::-webkit-details-marker { display: none; }
+details.xdet > summary::after { content: '+'; font-size: 15px; color: var(--ink-3); }
+details.xdet[open] > summary::after { content: '−'; }
+details.xdet .xrow:last-child { border-bottom: 0; }
+.xrow.xpick { cursor: pointer; }
+.xrow.xpick:hover { background: var(--surface-2); }
+.xrow small { font-family: var(--font-data); font-size: 10.5px; color: var(--ink-3); margin-left: 4px; }
+.calc #calc-linea { flex: 0 1 110px; }
+.calc #calc-odds { flex: 1 1 130px; }
+.ltab { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 4px 8px; align-items: stretch; padding: 4px 0 12px; }
+.ltab .lh { font-family: var(--font-data); font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; padding: 2px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ltab .ll { font-family: var(--font-data); font-size: 13px; font-weight: 700; align-self: center; min-width: 44px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ltab .ll small { font-weight: 400; color: var(--ink-3); font-size: 11px; }
+.lcell { font: inherit; font-family: var(--font-data); font-size: 12px; color: var(--ink-3); text-align: left; background: var(--surface-2); border: 1px solid transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.lcell b { color: var(--ink); font-size: 13.5px; margin-right: 4px; }
+.lcell small { display: block; font-size: 10px; }
+.lcell:hover { border-color: var(--accent); }
+.lsub { font-weight: 700; font-size: 13.5px; padding: 6px 0 2px; }
 .calc { display: grid; gap: 8px; background: var(--surface-2); border-radius: 12px; padding: 12px 14px; }
 .calc-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .calc select, .calc input, .sel { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; min-width: 0; }
-.calc select { flex: 1 1 220px; }
+.calc select { flex: 1 1 220px; width: 100%; max-width: 100%; }
 .calc input { flex: 0 1 120px; font-family: var(--font-data); }
 .calc-out { font-size: 13.5px; color: var(--ink-2); min-height: 22px; line-height: 1.7; }
 .calc-out .pill { margin-right: 6px; }
@@ -487,7 +507,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   const upd = new Date(D.actualizado);
   $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })} · resultados hasta el ${fdate(D.datos_hasta)}`;
-  $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días · ${num(D.n_sims)} simulaciones cada uno`;
+  $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días`;
   const PRINCIPAL = B ? B.estrategias[B.principal || 'modelo|B365|1x2+ou|0.05'] : null;
   $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
     ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
@@ -616,10 +636,59 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (x) parts.push(`próximo partido de ${esc(x.comp)} el ${fdate(x.fecha)}, ${daysBetween(dateIso, x.fecha)} días después${daysBetween(dateIso, x.fecha) <= 4 ? ': posible rotación' : ''}`);
     return `<p>${parts.join('; ')}.</p>`;
   }
+  // ---------------- cualquier línea: distribuciones del modelo (goles, córners y remates a puerta)
+  const nbPmf = (m, k, n = 45) => { const out = [], q = m / (k + m); let p = Math.pow(k / (k + m), k); for (let x = 0; x <= n; x++) { out.push([x, p]); p *= (x + k) / (x + 1) * q; } return out; };
+  const mitades = L => Math.round(Math.abs(L) * 4) % 2 === 1 ? [L - 0.25, L + 0.25] : [L, L];
+  // apuesta "signo·x + h > 0" (las líneas de cuarto son media apuesta en cada línea vecina): probabilidad de ganar y de perder
+  function ganaPierde(P, L, signo) {
+    let W = 0, Lo = 0;
+    for (const h of mitades(L)) for (const [x, p] of P) { const v = signo * x + h; if (v > 1e-9) W += p / 2; else if (v < -1e-9) Lo += p / 2; }
+    return { W, Lo };
+  }
+  function paresDe(m) {
+    if (m._pares) return m._pares;
+    const d = m.dist || {}, out = {};
+    if (d.goles) {
+      const dif = {}, tot = {};
+      d.goles.forEach((fila, i) => fila.forEach((p, j) => { dif[i - j] = (dif[i - j] || 0) + p; tot[i + j] = (tot[i + j] || 0) + p; }));
+      out.dif = Object.entries(dif).map(([x, p]) => [+x, p]); out.tot = Object.entries(tot).map(([x, p]) => [+x, p]);
+    }
+    for (const [nm, c] of [['c', d.corners], ['r', d.remates]]) if (c) { out[nm + 'T'] = nbPmf(c.ml + c.mv, c.kt); out[nm + '1'] = nbPmf(c.ml, c.k); out[nm + '2'] = nbPmf(c.mv, c.k); }
+    return (m._pares = out);
+  }
+  // mercados con línea: [clave, nombre, grupo, distribución, forma ('h' hándicap, 'o' más de, 'u' menos de), líneas que se listan]
+  const LIN_AH = [-2.5, -2, -1.5, -1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5];
+  const rango = (a, b) => { const r = []; for (let x = a; x <= b + 1e-9; x++) r.push(x); return r; };
+  const tiposDe = m => [
+    ['H1', `Hándicap asiático ${m.local_es}`, 'Hándicap asiático', 'dif', 'h', LIN_AH], ['H2', `Hándicap asiático ${m.visita_es}`, 'Hándicap asiático', 'dif', 'h2', LIN_AH],
+    ['O', 'Goles: más de', 'Goles', 'tot', 'o', []], ['U', 'Goles: menos de', 'Goles', 'tot', 'u', []],
+    ['CO', 'Córners del partido: más de', 'Córners del partido', 'cT', 'o', rango(6.5, 13.5)], ['CU', 'Córners del partido: menos de', 'Córners del partido', 'cT', 'u', rango(6.5, 13.5)],
+    ['C1O', `Córners de ${m.local_es}: más de`, 'Córners por equipo', 'c1', 'o', rango(1.5, 8.5)], ['C1U', `Córners de ${m.local_es}: menos de`, 'Córners por equipo', 'c1', 'u', rango(1.5, 8.5)],
+    ['C2O', `Córners de ${m.visita_es}: más de`, 'Córners por equipo', 'c2', 'o', rango(1.5, 8.5)], ['C2U', `Córners de ${m.visita_es}: menos de`, 'Córners por equipo', 'c2', 'u', rango(1.5, 8.5)],
+    ['RO', 'Remates a puerta del partido: más de', 'Remates a puerta del partido', 'rT', 'o', rango(4.5, 12.5)], ['RU', 'Remates a puerta del partido: menos de', 'Remates a puerta del partido', 'rT', 'u', rango(4.5, 12.5)],
+    ['R1O', `Remates a puerta de ${m.local_es}: más de`, 'Remates a puerta por equipo', 'r1', 'o', rango(0.5, 7.5)], ['R1U', `Remates a puerta de ${m.local_es}: menos de`, 'Remates a puerta por equipo', 'r1', 'u', rango(0.5, 7.5)],
+    ['R2O', `Remates a puerta de ${m.visita_es}: más de`, 'Remates a puerta por equipo', 'r2', 'o', rango(0.5, 7.5)], ['R2U', `Remates a puerta de ${m.visita_es}: menos de`, 'Remates a puerta por equipo', 'r2', 'u', rango(0.5, 7.5)],
+  ].filter(t => paresDe(m)[t[3]]);
+  function probLinea(m, tipo, L) {
+    const t = tiposDe(m).find(x => x[0] === tipo); if (!t) return null;
+    const P = paresDe(m)[t[3]];
+    const { W, Lo } = t[4] === 'h' ? ganaPierde(P, L, 1) : t[4] === 'h2' ? ganaPierde(P, L, -1) : t[4] === 'o' ? ganaPierde(P, -L, 1) : ganaPierde(P, L, -1);
+    return { W, Lo, push: Math.max(0, 1 - W - Lo), p: W / Math.max(W + Lo, 1e-12) };
+  }
+  const fmtLinea = (tipo, L) => tipo[0] === 'H' ? (L > 0 ? '+' : '') + L : String(L);
+  const nombreLinea = (m, tipo, L) => tipo[0] === 'H' ? `Hándicap ${tipo === 'H1' ? m.local_es : m.visita_es} ${fmtLinea(tipo, L)}` : `${tiposDe(m).find(x => x[0] === tipo)[1]} ${L}`;
+  const ES_LINEA = /^(H1|H2|O|U|CO|CU|C1O|C1U|C2O|C2U|RO|RU|R1O|R1U|R2O|R2U):/;
+  function lineaPorDefecto(m, tipo) {
+    const t = tiposDe(m).find(x => x[0] === tipo), P = paresDe(m)[t[3]], media = P.reduce((a, [x, p]) => a + x * p, 0);
+    if (t[4] === 'h') return media >= 0 ? -0.5 : 0.5;
+    if (t[4] === 'h2') return media >= 0 ? 0.5 : -0.5;
+    return Math.floor(media) + 0.5;
+  }
+
   function marginSVG(m) {
     const W = 360, H = 136, pad = { l: 6, r: 6, t: 34, b: 22 };
     const data = m.margen; const maxP = Math.max(...data.map(d => d.p)); const bw = (W - pad.l - pad.r) / data.length;
-    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diferencia de goles en las simulaciones">`;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diferencia de goles">`;
     data.forEach((d, k) => {
       const bh = (H - pad.t - pad.b) * d.p / maxP, x = pad.l + k * bw + 2, y = H - pad.b - bh;
       const color = d.m > 0 ? 'var(--home)' : d.m < 0 ? 'var(--away)' : 'var(--draw)';
@@ -641,11 +710,45 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
+    const conLinea = tiposDe(m);
+    // todos los mercados: los fijos que manda el modelo y, con sus distribuciones, tablas de líneas
+    // (hándicap asiático, córners y remates a puerta): cada línea con sus dos lados
     const groups = {};
-    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push(r); });
-    const extra = Object.entries(groups).map(([g, rs]) => `<div class="xgrp">${esc(g)}</div>` + rs.map(r => `<div class="xrow"><span>${esc(r.mercado)}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.justo}</span></div>`).join('')).join('');
-    const opts = []; const seen = new Set();
-    [...m.con_momio, ...m.sin_momio].forEach(r => { if (!seen.has(r.mercado)) { seen.add(r.mercado); opts.push({ n: r.mercado, p: r.p, k: r.k }); } });
+    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push({ n: r.mercado, p: r.p, push: r.k.startsWith('DNB') ? m.pD : 0, k: r.k }); });
+    const abiertos = ['Resultado', 'Goles'];
+    const det = (g, n, cuerpo) => `<details class="xdet"${abiertos.includes(g) ? ' open' : ''}><summary><span>${esc(g)}</span><span>${n}</span></summary>${cuerpo}</details>`;
+    const fijosHTML = Object.entries(groups).map(([g, rs]) => det(g, rs.length,
+      rs.map(r => `<div class="xrow xpick" data-k="${esc(r.k)}" title="Comparar con mi casa"><span>${esc(r.n)}${r.push > 0.005 ? `<small>nula ${pct(r.push, 0)}</small>` : ''}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.p > 0 && r.p < 1 ? (1 / r.p).toFixed(2) : '—'}</span></div>`).join(''))).join('');
+    const celda = (tipo, L) => { const c = probLinea(m, tipo, L); return c ? `<button class="lcell xpick" data-k="${tipo}:${fmtLinea(tipo, L)}" title="Comparar con mi casa"><b>${pct(c.p, 0)}</b> ${c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—'}${c.push > 0.005 ? `<small>nula ${pct(c.push, 0)}</small>` : ''}</button>` : '<span></span>'; };
+    const vale = (tipo, L) => { const c = probLinea(m, tipo, L); return c && c.p > 0.04 && c.p < 0.96 && c.W + c.Lo > 0.02; };
+    // [grupo, subtítulo, tipo izquierda, tipo derecha, encabezados, líneas, línea de la derecha]
+    const tablas = [
+      ['Hándicap asiático', '', 'H1', 'H2', [m.local_es, m.visita_es], LIN_AH, L => -L],
+      ['Córners del partido', '', 'CO', 'CU', ['Más de', 'Menos de'], rango(6.5, 13.5), L => L],
+      ['Córners por equipo', m.local_es, 'C1O', 'C1U', ['Más de', 'Menos de'], rango(1.5, 8.5), L => L],
+      ['Córners por equipo', m.visita_es, 'C2O', 'C2U', ['Más de', 'Menos de'], rango(1.5, 8.5), L => L],
+      ['Remates a puerta del partido', '', 'RO', 'RU', ['Más de', 'Menos de'], rango(4.5, 12.5), L => L],
+      ['Remates a puerta por equipo', m.local_es, 'R1O', 'R1U', ['Más de', 'Menos de'], rango(0.5, 7.5), L => L],
+      ['Remates a puerta por equipo', m.visita_es, 'R2O', 'R2U', ['Más de', 'Menos de'], rango(0.5, 7.5), L => L],
+    ].filter(t => conLinea.some(x => x[0] === t[2]));
+    const porGrupo = {};
+    tablas.forEach(([g, sub, ti, td, enc, lineas, otra]) => {
+      const ls = lineas.filter(L => vale(ti, L) || vale(td, otra(L)));
+      if (!ls.length) return;
+      const ah = ti === 'H1';
+      (porGrupo[g] = porGrupo[g] || []).push(`${sub ? `<div class="lsub">${esc(sub)}</div>` : ''}<div class="ltab"><span class="lh">Línea</span><span class="lh">${esc(enc[0])}</span><span class="lh">${esc(enc[1])}</span>` +
+        ls.map(L => `<span class="ll">${ah ? fmtLinea('H1', L) + '<small> / ' + fmtLinea('H2', -L) + '</small>' : L}</span>${celda(ti, L)}${celda(td, otra(L))}`).join('') + '</div>');
+    });
+    const lineasHTML = Object.entries(porGrupo).map(([g, partes]) => det(g, '', partes.join(''))).join('');
+    const extra = fijosHTML + lineasHTML;
+    // calculadora: mercados sin línea (de la lista del modelo) y mercados con línea (cualquier línea)
+    const fijos = []; const seen = new Set();
+    [...m.con_momio, ...m.sin_momio].forEach(r => {
+      if (seen.has(r.k) || ES_LINEA.test(r.k)) return; seen.add(r.k);
+      const W = r.k === 'DNB1' ? m.pH : r.k === 'DNB2' ? m.pA : r.p, Lo = r.k === 'DNB1' ? m.pA : r.k === 'DNB2' ? m.pH : 1 - r.p;
+      fijos.push({ n: r.mercado, k: r.k, W, Lo, grupo: r.grupo });
+    });
+
     const xiConf = t => t === th ? (m.alineaciones || {}).local : t === ta ? (m.alineaciones || {}).visita : null;
     const h2h = m.h2h;
     const w = { l: 0, e: 0, v: 0 };
@@ -676,6 +779,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <div class="kv">
               <div><span>Goles esperados</span><b>${(m.xg_local + m.xg_visita).toFixed(1)}</b></div>
               <div><span>Córners esperados</span><b>${m.corners ? (m.corners[0] + m.corners[1]).toFixed(1) : '—'}</b></div>
+              <div><span>Remates a puerta esperados</span><b>${m.remates ? (m.remates[0] + m.remates[1]).toFixed(1) : '—'}</b></div>
               <div><span>Ambos anotan</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Ambos anotan: Sí') || {}).p)}</b></div>
               <div><span>Más de 2.5</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Más de 2.5 goles') || {}).p)}</b></div>
             </div>
@@ -743,15 +847,23 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="card"><h3>Todos los mercados</h3>
             <div class="xrow" style="font-family:var(--font-data);font-size:10.5px;color:var(--ink-3)"><span>MERCADO</span><span class="p">MODELO</span><span class="j">JUSTO</span></div>
             <div class="xlist">${extra}</div>
+            <p class="note">Toca un mercado para compararlo con el momio de tu casa. "Nula" es la probabilidad de que te devuelvan la apuesta (o la mitad, en las líneas de .25 y .75); el porcentaje del modelo y el momio justo ya la descuentan.${m.dist && (m.dist.corners || m.dist.remates) ? ` Córners y remates a puerta: en la prueba con 2023-2026 de las cinco grandes ligas, sus porcentajes se cumplieron en promedio (por ejemplo, "más de 3.5 remates" de un equipo: el modelo dijo 60% y pasó 60%), pero no hay momios históricos de estos mercados para saber si dejan ganancia.${(m.dist.remates || m.dist.corners).n < 300 ? ` En esta liga el modelo de córners y remates tiene pocos partidos (${(m.dist.remates || m.dist.corners).n}): tómalo con más cuidado.` : ''}` : ''}</p>
           </div>
           <div class="card">
             <h3>Compara con el momio de tu casa</h3>
             <div class="calc">
               <div class="calc-row">
                 <label for="calc-sel" style="position:absolute;left:-9999px">Mercado</label>
-                <select id="calc-sel">${opts.map((o, k) => `<option value="${k}">${esc(o.n)}</option>`).join('')}</select>
+                <select id="calc-sel">
+                  <optgroup label="Sin línea">${fijos.map((o, k) => `<option value="f${k}">${esc(o.n)}</option>`).join('')}</optgroup>
+                  <optgroup label="Con línea (escribe la de tu casa)">${conLinea.map(t => `<option value="l${t[0]}">${esc(t[1])}</option>`).join('')}</optgroup>
+                </select>
+              </div>
+              <div class="calc-row">
+                <label for="calc-linea" style="position:absolute;left:-9999px">Línea</label>
+                <input id="calc-linea" placeholder="Línea" inputmode="decimal" autocomplete="off">
                 <label for="calc-odds" style="position:absolute;left:-9999px">Momio</label>
-                <input id="calc-odds" placeholder="Ej. 2.50" inputmode="decimal" autocomplete="off">
+                <input id="calc-odds" placeholder="Momio, ej. 1.90" inputmode="decimal" autocomplete="off">
               </div>
               <div class="calc-out" aria-live="polite"></div>
               <div class="calc-row">
@@ -776,25 +888,52 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const renderCmp = split => { $('#cmp', el).innerHTML = split === 'ha' ? cmpHTML(th.casa, ta.fuera, m.local_es + ' (casa)', m.visita_es + ' (fuera)') : cmpHTML(th.total, ta.total, m.local_es, m.visita_es); };
     $$('.toggle button', el).forEach(b => b.addEventListener('click', () => { $$('.toggle button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderCmp(b.dataset.split); }));
     renderCmp('total');
-    const sel = $('#calc-sel', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
+    const sel = $('#calc-sel', el), lin = $('#calc-linea', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
+    const leerL = () => { const v = parseFloat(String(lin.value).replace(',', '.').replace('−', '-')); return isFinite(v) ? v : null; };
+    // lo elegido: {n, k, W, Lo} o null si falta la línea
+    const elegido = () => {
+      const v = sel.value;
+      if (v[0] === 'f') return fijos[+v.slice(1)];
+      const tipo = v.slice(1), L = leerL();
+      if (L == null) return null;
+      const c = probLinea(m, tipo, L);
+      return c && { n: nombreLinea(m, tipo, L), k: `${tipo}:${fmtLinea(tipo, L)}`, W: c.W, Lo: c.Lo };
+    };
+    const ponerLinea = () => { const v = sel.value; lin.disabled = v[0] === 'f'; lin.value = v[0] === 'f' ? '' : lineaPorDefecto(m, v.slice(1)); };
     const calc = () => {
-      const o = opts[+sel.value]; const dec = parseOdds(inp.value);
-      if (!inp.value.trim()) { out.innerHTML = `Modelo: <span class="mono">${pct(o.p, 1)}</span> · momio justo <span class="mono">${o.p > 0 && o.p < 1 ? (1 / o.p).toFixed(2) : '—'}</span>. Escribe el momio de tu casa en decimal (por ejemplo 2.50).`; return; }
-      if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return; }
-      const ev = o.p * dec - 1, v = verdictOf(ev);
-      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(o.p, 1)}</span> · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / o.p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      const o = elegido();
+      if (!o) { out.textContent = 'Escribe la línea de tu casa (por ejemplo −1.5, 0.75 o 9.5).'; return null; }
+      const p = o.W / Math.max(o.W + o.Lo, 1e-12), push = Math.max(0, 1 - o.W - o.Lo), just = p > 0 && p < 1 ? (1 / p).toFixed(2) : '—';
+      const nula = push > 0.005 ? ` (nula ${pct(push, 0)})` : '';
+      const dec = parseOdds(inp.value);
+      if (!inp.value.trim()) { out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`; return null; }
+      if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
+      const ev = o.W * (dec - 1) - o.Lo, v = verdictOf(ev);
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      return { o, p, push, dec };
     };
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
-    const listo = () => { save.disabled = !parseOdds(inp.value); };
-    sel.addEventListener('change', () => { calc(); msg.textContent = ''; }); inp.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; }); calc(); listo();
+    const listo = () => { save.disabled = !(parseOdds(inp.value) && elegido()); };
+    sel.addEventListener('change', () => { ponerLinea(); calc(); listo(); msg.textContent = ''; });
+    lin.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; });
+    inp.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; });
+    ponerLinea(); calc(); listo();
+    // tocar un mercado de la lista lo carga en la calculadora
+    $$('.xpick', el).forEach(row => row.addEventListener('click', () => {
+      const k = row.dataset.k, mt = k.match(ES_LINEA);
+      if (mt) { sel.value = 'l' + k.split(':')[0]; lin.disabled = false; lin.value = parseFloat(k.split(':')[1]); }
+      else { const i = fijos.findIndex(f => f.k === k); if (i < 0) return; sel.value = 'f' + i; lin.disabled = true; lin.value = ''; }
+      calc(); listo(); msg.textContent = '';
+      $('.calc', el).scrollIntoView({ block: 'nearest', behavior: 'smooth' }); inp.focus({ preventScroll: true });
+    }));
     save.addEventListener('click', () => {
-      const o = opts[+sel.value], dec = parseOdds(inp.value), amt = parseFloat(String(monto.value).replace(',', '.'));
-      if (!dec) return;
+      const r = calc(), amt = parseFloat(String(monto.value).replace(',', '.'));
+      if (!r) return;
       if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, liga: I.liga, utc: m.utc, local: m.local_es, visita: m.visita_es,
-                  mercado: o.n, k: o.k, p: o.p, momio: +dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+                  mercado: r.o.n, k: r.o.k, p: r.p, nula: r.push > 0.005 ? +r.push.toFixed(4) : undefined, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
       guardarMias();
-      msg.innerHTML = lsOK ? `Guardada: ${esc(o.n)} a ${dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
+      msg.innerHTML = lsOK ? `Guardada: ${esc(r.o.n)} a ${r.dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
                            : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       const g = $('#go-reg', msg); if (g) g.addEventListener('click', () => { showView('registro'); history.replaceState(null, '', '#registro'); window.scrollTo(0, 0); });
       inp.value = ''; monto.value = ''; calc(); listo();
@@ -967,7 +1106,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   $('#foot-data').textContent = (I.fuente_fd === 'por temporada'
     ? 'Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas, cuotas históricas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas)'
     : 'Datos: football-data.co.uk (resultados y cuotas históricas), ESPN (tiros, córners, tarjetas, posesión, jugadores, partidos próximos, momios de DraftKings, alineaciones, copas)')
-    + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles con ${num(D.n_sims)} simulaciones por partido.`;
+    + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles (probabilidad de cada marcador) y modelos de córners y remates a puerta por equipo.`;
 
   // ---------------- mi registro
   const fmtM = v => num(v, Math.abs(v - Math.round(v)) > 0.005 ? 2 : 0);
@@ -979,8 +1118,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const linea = (f, L) => Math.round(Math.abs(L) * 4) % 2 === 1 ? [half(f(L - 0.25)), half(f(L + 0.25))] : [half(f(L)), half(f(L))];
   function liquidar(k, r) {
     if (!r || !k) return null;
-    const [gl, gv, cl, cv] = r, t = gl + gv, b = v => [v ? 1 : 0, v ? 1 : 0];
-    const [tipo, ln] = k.split(':'), L = parseFloat(ln), hayC = cl != null && cv != null;
+    const [gl, gv, cl, cv, sl, sv] = r, t = gl + gv, b = v => [v ? 1 : 0, v ? 1 : 0];
+    const [tipo, ln] = k.split(':'), L = parseFloat(ln), hayC = cl != null && cv != null, hayR = sl != null && sv != null;
     switch (tipo) {
       case '1': return b(gl > gv);
       case 'X': return b(gl === gv);
@@ -1005,6 +1144,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       case 'CU': return hayC ? linea(x => x - cl - cv, L) : null;
       case 'C1O': return cl != null ? linea(x => cl - x, L) : null;
       case 'C2O': return cv != null ? linea(x => cv - x, L) : null;
+      case 'C1U': return cl != null ? linea(x => x - cl, L) : null;
+      case 'C2U': return cv != null ? linea(x => x - cv, L) : null;
+      case 'RO': return hayR ? linea(x => sl + sv - x, L) : null;
+      case 'RU': return hayR ? linea(x => x - sl - sv, L) : null;
+      case 'R1O': return sl != null ? linea(x => sl - x, L) : null;
+      case 'R1U': return sl != null ? linea(x => x - sl, L) : null;
+      case 'R2O': return sv != null ? linea(x => sv - x, L) : null;
+      case 'R2U': return sv != null ? linea(x => x - sv, L) : null;
     }
     return null;
   }
@@ -1068,7 +1215,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function filaHTML(x, mia) {
     const b = x.bet, e = x.e, r = e.r, cie = cierreDe(b), empezo = new Date(b.utc) <= new Date();
     const clv = cie ? b.momio / cie - 1 : null;
-    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct(b.p * b.momio - 1, 0)}` : ''}`
+    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct((1 - (b.nula || 0)) * (b.p * b.momio - 1), 0)}` : ''}`
                     : `momio ${b.momio.toFixed(2)} (${esc(b.casa || 'casa')}) · modelo ${pct(b.p, 1)} · EV ${spct(b.ev, 0)}`;
     const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}` : '';
     const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
