@@ -17,7 +17,7 @@
    "ou_linea": 2.5,
    "ou": [
     105,
-    -130
+    -135
    ],
    "spread": [
     [
@@ -80,7 +80,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    115,
     -150
    ],
    "spread": [
@@ -154,7 +154,7 @@
     ],
     [
      "+0.5",
-     135
+     130
     ]
    ]
   }
@@ -170,14 +170,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    300,
-    210,
-    -110
+    310,
+    215,
+    -115
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -140
+    -145
    ],
    "spread": [
     [
@@ -208,7 +208,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
+    -135,
     105
    ],
    "spread": [
@@ -272,8 +272,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    135,
-    -180
+    130,
+    -175
    ],
    "spread": [
     [
@@ -394,9 +394,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
-    285,
-    -165
+    390,
+    275,
+    -170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -406,11 +406,11 @@
    "spread": [
     [
      "+0.5",
-     115
+     120
     ],
     [
      "-0.5",
-     -175
+     -180
     ]
    ]
   }
@@ -443,6 +443,134 @@
     [
      "+1.5",
      -125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874771",
+  "utc": "2026-10-18T10:30Z",
+  "estadio": "Stadio Friuli",
+  "local_espn": "Udinese",
+  "visita_espn": "Lecce",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    240,
+    280
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874774",
+  "utc": "2026-10-18T13:00Z",
+  "estadio": "Stadio Artemio Franchi",
+  "local_espn": "Fiorentina",
+  "visita_espn": "Como",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    210,
+    250,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874978",
+  "utc": "2026-10-18T16:00Z",
+  "estadio": "San Siro",
+  "local_espn": "AC Milan",
+  "visita_espn": "Atalanta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    245,
+    275
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874765",
+  "utc": "2026-10-18T18:45Z",
+  "estadio": "Allianz Stadium",
+  "local_espn": "Juventus",
+  "visita_espn": "Lazio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -170,
+    265,
+    390
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     115
     ]
    ]
   }

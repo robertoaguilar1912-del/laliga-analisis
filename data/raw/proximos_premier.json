@@ -10,23 +10,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -260,
-    400,
-    700
+    -275,
+    425,
+    750
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
      "-1.5",
-     110
+     105
     ],
     [
      "+1.5",
-     -155
+     -145
     ]
    ]
   }
@@ -213,12 +213,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -220
-    ],
-    [
      "-0.5",
      145
+    ],
+    [
+     "+0.5",
+     -220
     ]
    ]
   }
@@ -273,7 +273,7 @@
    "ou_linea": 3.5,
    "ou": [
     135,
-    -175
+    -180
    ],
    "spread": [
     [
@@ -475,6 +475,134 @@
     [
      "+0.5",
      -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879263",
+  "utc": "2026-10-18T13:00Z",
+  "estadio": "Vitality Stadium",
+  "local_espn": "AFC Bournemouth",
+  "visita_espn": "Sunderland",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    250,
+    250
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -110
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879261",
+  "utc": "2026-10-18T13:00Z",
+  "estadio": "American Express Stadium",
+  "local_espn": "Brighton & Hove Albion",
+  "visita_espn": "Crystal Palace",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    320,
+    370
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -180
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879260",
+  "utc": "2026-10-18T13:00Z",
+  "estadio": "Elland Road",
+  "local_espn": "Leeds United",
+  "visita_espn": "Manchester United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    260,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878769",
+  "utc": "2026-10-18T15:30Z",
+  "estadio": "The City Ground",
+  "local_espn": "Nottingham Forest",
+  "visita_espn": "Arsenal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    475,
+    280,
+    -170
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     125
+    ],
+    [
+     "-0.5",
+     -190
     ]
    ]
   }

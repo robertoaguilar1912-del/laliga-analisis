@@ -16,7 +16,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
+    105,
     -135
    ],
    "spread": [
@@ -49,7 +49,7 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -110
+    -115
    ],
    "spread": []
   }
@@ -71,7 +71,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -105
    ],
    "spread": [
@@ -81,7 +81,7 @@
     ],
     [
      "-0.5",
-     -130
+     -125
     ]
    ]
   }
@@ -199,7 +199,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -140,
     105
    ],
    "spread": [
@@ -225,23 +225,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    330,
-    450
+    -190,
+    340,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
     -140,
-    105
+    110
    ],
    "spread": [
     [
-     "-0.5",
-     -200
+     "-1.5",
+     145
     ],
     [
-     "+0.5",
-     135
+     "+1.5",
+     -215
     ]
    ]
   }
@@ -466,6 +466,134 @@
     [
      "-0.5",
      -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882840",
+  "utc": "2026-10-18T12:00Z",
+  "estadio": "El Sadar",
+  "local_espn": "Osasuna",
+  "visita_espn": "Racing Santander",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    250,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882845",
+  "utc": "2026-10-18T14:15Z",
+  "estadio": "Balaidos",
+  "local_espn": "Celta Vigo",
+  "visita_espn": "Alavés",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    235,
+    275
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882841",
+  "utc": "2026-10-18T16:30Z",
+  "estadio": "La Rosaleda",
+  "local_espn": "Málaga",
+  "visita_espn": "Real Sociedad",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    210,
+    245,
+    120
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -160
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882839",
+  "utc": "2026-10-18T19:00Z",
+  "estadio": "Santiago Bernabéu",
+  "local_espn": "Real Madrid",
+  "visita_espn": "Sevilla",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -380,
+    500,
+    800
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -170
+    ],
+    [
+     "+1.5",
+     110
     ]
    ]
   }
