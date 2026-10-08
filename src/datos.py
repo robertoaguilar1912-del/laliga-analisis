@@ -33,7 +33,7 @@ def ascendidos(df):
     return {cur: set(df[df.Season == cur].HomeTeam) - set(df[df.Season == prev].HomeTeam) for prev, cur in zip(ss, ss[1:])}
 
 
-PREVIO_DESCENDIDO = (0.10, -0.10)   # ataque algo mejor y defensa algo mejor que el promedio de la categoría
+PREVIO_DESCENDIDO = (0.20, -0.20)   # ataque y defensa mejores que el promedio de la categoría (elegido con la prueba de Segunda 2020-2026)
 
 
 def previos_nuevos(nuevos, temporada, arriba):
