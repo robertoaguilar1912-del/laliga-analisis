@@ -188,6 +188,12 @@ def mapa_nombres(liga, fd_actual, fd_todas, E, otros_espn=()):
     # respaldo: parecido del nombre (no se guarda; sirve al inicio de temporada o para equipos nuevos)
     todos_e = set(E.home_e) | set(E.away_e) if len(E) else set()
     todos_e |= set(otros_espn)
+    # si ESPN cambia el nombre de un equipo (p. ej. "Athletico Paranaense" pasó a "Athletico-PR"), el nombre nuevo
+    # puede ser igual al de football-data aunque ese ya tenga otro nombre de ESPN: se aceptan los dos
+    for e in sorted(todos_e - set(mapa)):
+        igual = [f for f in fd_todas if parecido(e, f) >= 0.97]
+        if len(igual) == 1:
+            mapa[e] = igual[0]
     libres = sorted(set(fd_todas) - set(mapa.values()))
     for e in sorted(todos_e - set(mapa)):
         if not libres:
