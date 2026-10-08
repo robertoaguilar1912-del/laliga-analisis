@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 from config import RAW, DATOS, LIGAS, ZONAS, ahora, inicio_torneo
-from datos import ascendidos
+from datos import ascendidos, previos_nuevos
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes
 from corners import CornerModel, RematesModel
@@ -362,6 +362,8 @@ def analizar_liga(liga):
     nuevos = promo.get(temporada, set())
     if L.get('prior_nuevos'):           # Série B: los nuevos pueden venir de arriba (descendidos) o de abajo
         nuevos = {t: tuple(L['prior_nuevos']) for t in nuevos}
+    elif L.get('descienden_de'):        # Segunda: los descendidos de La Liga no son recién ascendidos
+        nuevos = previos_nuevos(nuevos, temporada, df2)
     hist = df[(df.Date < ref) & (df.Date >= ref - pd.Timedelta(days=3 * 365))]
     modelo = DixonColes().fit(hist, ref, promoted=nuevos)
     hc = hist.dropna(subset=['HC', 'AC'])

@@ -31,3 +31,16 @@ def ascendidos(df):
     """Equipos nuevos en cada temporada respecto a la anterior."""
     ss = sorted(df.Season.unique())
     return {cur: set(df[df.Season == cur].HomeTeam) - set(df[df.Season == prev].HomeTeam) for prev, cur in zip(ss, ss[1:])}
+
+
+PREVIO_DESCENDIDO = (0.10, -0.10)   # ataque algo mejor y defensa algo mejor que el promedio de la categoría
+
+
+def previos_nuevos(nuevos, temporada, arriba):
+    """{equipo: (ataque, defensa)} para los nuevos de una temporada: los que bajan de la división de arriba
+    ('arriba': DataFrame de esa división con columna Season) parten como equipo fuerte; los que suben, como
+    recién ascendidos."""
+    from model import PROMOTED_ATT, PROMOTED_DEF
+    ss = sorted(s for s in arriba.Season.unique() if s < temporada) if arriba is not None and len(arriba) else []
+    bajan = set(arriba[arriba.Season == ss[-1]].HomeTeam) if ss else set()
+    return {t: (PREVIO_DESCENDIDO if t in bajan else (PROMOTED_ATT, PROMOTED_DEF)) for t in nuevos}

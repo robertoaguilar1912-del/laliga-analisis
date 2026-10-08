@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 
 from config import RAW, DATOS, LIGAS, temporada_actual
-from datos import ascendidos, RENAME_OLD
+from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix
 
@@ -64,9 +64,24 @@ def cargar_historia(liga):
     return df.sort_values(['Date', 'HomeTeam']).reset_index(drop=True)
 
 
+def cargar_historia_div(div):
+    """Equipos de otra división por temporada (para saber quién bajó)."""
+    frames = []
+    for y in range(17, int(temporada_actual()[:2]) + 1):
+        s = f'{y % 100:02d}{(y + 1) % 100:02d}'
+        p = DATOS / 'historia' / f'{div}_{s}.csv'
+        if not p.exists():
+            p = RAW / f'{div}_{s}.csv'
+        if p.exists():
+            d = pd.read_csv(p, encoding='utf-8', encoding_errors='replace', usecols=lambda c: c in ('HomeTeam', 'AwayTeam'))
+            frames.append(d.assign(Season=s))
+    return pd.concat(frames, ignore_index=True) if frames else None
+
+
 def predecir(liga):
     df = cargar_historia(liga)
     promo = ascendidos(df)
+    arriba = cargar_historia_div(LIGAS[liga]['descienden_de']) if LIGAS[liga].get('descienden_de') else None
     desde = pd.Timestamp(DESDE[LIGAS[liga].get('calendario', 'europa')])
     test = df[df.Date >= desde]
     rows = []
@@ -79,6 +94,8 @@ def predecir(liga):
         dia = test[test.Date.isin(bloque)]
         hist = df[(df.Date < d0) & (df.Date >= d0 - pd.Timedelta(days=VENTANA))]
         nuevos = promo.get(dia.Season.iloc[0], set())
+        if arriba is not None:
+            nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba)
         m = DixonColes().fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:
