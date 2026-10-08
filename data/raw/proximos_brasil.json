@@ -5,7 +5,7 @@
   "estadio": "Estádio Vila Belmiro (Urbano Caldeira)",
   "local_espn": "Santos",
   "visita_espn": "Flamengo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "momios": {
    "casa": "DraftKings",
@@ -159,22 +159,138 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    230,
-    270
+    240,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -120,
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
      -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Athletico Paranaense": [
+    [
+     "322655",
+     "Mycael",
+     "G"
+    ],
+    [
+     "309499",
+     "Lucas Esquivel",
+     "CD"
+    ],
+    [
+     "381170",
+     "Arthur Dias",
+     "CD-L"
+    ],
+    [
+     "192080",
+     "Carlos Terán",
+     "CD-R"
+    ],
+    [
+     "113352",
+     "Luiz Gustavo",
+     "CM-L"
+    ],
+    [
+     "173351",
+     "Jádson",
+     "CM-R"
+    ],
+    [
+     "361359",
+     "João Cruz",
+     "LM"
+    ],
+    [
+     "198761",
+     "Gilberto",
+     "RM"
+    ],
+    [
+     "268476",
+     "Kevin Viveros",
+     "F"
+    ],
+    [
+     "197049",
+     "Stiven Mendoza",
+     "CF-L"
+    ],
+    [
+     "340596",
+     "Kerwin Vargas",
+     "CF-R"
+    ]
+   ],
+   "Atlético-MG": [
+    [
+     "318191",
+     "Gabriel Delfim",
+     "G"
+    ],
+    [
+     "245858",
+     "Renan Lodi",
+     "D"
+    ],
+    [
+     "398934",
+     "Vitão",
+     "D"
+    ],
+    [
+     "220747",
+     "Lyanco",
+     "D"
+    ],
+    [
+     "304699",
+     "Natanael",
+     "D"
+    ],
+    [
+     "417570",
+     "Mamady Cissé",
+     "M"
+    ],
+    [
+     "233416",
+     "Maycon",
+     "M"
+    ],
+    [
+     "158272",
+     "Bernard",
+     "M"
+    ],
+    [
+     "161559",
+     "Fred",
+     "M"
+    ],
+    [
+     "252197",
+     "Tomás Cuello",
+     "M"
+    ],
+    [
+     "286703",
+     "Reiner",
+     "F"
     ]
    ]
   }
@@ -338,9 +454,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
+    175,
     220,
-    160
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -350,11 +466,11 @@
    "spread": [
     [
      "+0.5",
-     -220
+     -210
     ],
     [
      "-0.5",
-     145
+     140
     ]
    ]
   }
