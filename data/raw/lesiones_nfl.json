@@ -888,9 +888,16 @@
   {
    "nombre": "Anthony Johnson Jr.",
    "pos": "S",
-   "estado": "Injured Reserve",
+   "estado": "Out",
    "fecha": "2026-10-08",
    "tipo": "Undisclosed"
+  },
+  {
+   "nombre": "Caleb Williams",
+   "pos": "QB",
+   "estado": "Out",
+   "fecha": "2026-10-08",
+   "tipo": "Hamstring"
   },
   {
    "nombre": "Kyler Gordon",
@@ -975,13 +982,6 @@
    "estado": "Active",
    "fecha": "2026-10-06",
    "tipo": ""
-  },
-  {
-   "nombre": "Caleb Williams",
-   "pos": "QB",
-   "estado": "Out",
-   "fecha": "2026-10-05",
-   "tipo": "Hamstring"
   },
   {
    "nombre": "Ozzy Trapilo",
@@ -1242,9 +1242,9 @@
   {
    "nombre": "Elgton Jenkins",
    "pos": "C",
-   "estado": "Questionable",
+   "estado": "Active",
    "fecha": "2026-10-08",
-   "tipo": "Concussion"
+   "tipo": ""
   },
   {
    "nombre": "Tylan Wallace",
@@ -4603,10 +4603,17 @@
  ],
  "Pittsburgh Steelers": [
   {
+   "nombre": "Rico Dowdle",
+   "pos": "RB",
+   "estado": "Questionable",
+   "fecha": "2026-10-08",
+   "tipo": "Toe"
+  },
+  {
    "nombre": "Michael Pittman Jr.",
    "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-10-07",
+   "estado": "Out",
+   "fecha": "2026-10-08",
    "tipo": "Foot"
   },
   {
@@ -4615,13 +4622,6 @@
    "estado": "Questionable",
    "fecha": "2026-10-07",
    "tipo": "Wrist"
-  },
-  {
-   "nombre": "Rico Dowdle",
-   "pos": "RB",
-   "estado": "Questionable",
-   "fecha": "2026-10-07",
-   "tipo": "Toe"
   },
   {
    "nombre": "Terell Smith",
@@ -5488,6 +5488,27 @@
  ],
  "Washington Commanders": [
   {
+   "nombre": "Terry McLaurin",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-10-08",
+   "tipo": "Hamstring"
+  },
+  {
+   "nombre": "Stefon Diggs",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-10-08",
+   "tipo": "Hamstring"
+  },
+  {
+   "nombre": "Jayden Daniels",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-10-08",
+   "tipo": ""
+  },
+  {
    "nombre": "Jeremy Reaves",
    "pos": "S",
    "estado": "Active",
@@ -5565,13 +5586,6 @@
    "tipo": "Hamstring"
   },
   {
-   "nombre": "Stefon Diggs",
-   "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-10-07",
-   "tipo": "Hamstring"
-  },
-  {
    "nombre": "Rachaad White",
    "pos": "RB",
    "estado": "Questionable",
@@ -5579,25 +5593,11 @@
    "tipo": "Shoulder"
   },
   {
-   "nombre": "Jayden Daniels",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-10-07",
-   "tipo": ""
-  },
-  {
    "nombre": "Jacory Croskey-Merritt",
    "pos": "RB",
    "estado": "Questionable",
    "fecha": "2026-10-07",
    "tipo": "Groin"
-  },
-  {
-   "nombre": "Terry McLaurin",
-   "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-10-07",
-   "tipo": "Hamstring"
   },
   {
    "nombre": "Marcus Mariota",
