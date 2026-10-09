@@ -415,6 +415,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="chart" id="chart-cal"></div>
       </div>
     </div>
+    <div class="card" id="ligas-card" hidden>
+      <h3>Qué tan fuerte es cada liga, según el modelo</h3>
+      <p class="note" id="ligas-note"></p>
+      <div class="tbl-wrap"><table class="data" id="tbl-ligas"></table></div>
+    </div>
     <div class="card" id="why-card">
       <h3 id="why-title">Por qué pierde</h3>
       <div class="two" id="why"></div>
@@ -445,7 +450,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 <script>
 (async function () {
   // ---------------- liga elegida y carga de datos
-  const LIGAS = {"laliga": "La Liga", "segunda": "Segunda División", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "portugal": "Liga Portugal", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "nfl": "NFL", "nba": "NBA"};
+  const LIGAS = {"laliga": "La Liga", "segunda": "Segunda División", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "portugal": "Liga Portugal", "champions": "Champions League", "europa": "Europa League", "conference": "Conference League", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "nfl": "NFL", "nba": "NBA"};
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
@@ -984,16 +989,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function showTeam(k) {
     selTeam = k; renderTeams();
     const t = E[k];
-    const split = s => s ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${fx(s.corners_pp, 1)}</td><td>${fx(s.corners_contra_pp, 1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
+    const split = s => s && s.pj ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${fx(s.corners_pp, 1)}</td><td>${fx(s.corners_contra_pp, 1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
     const nextMatch = M.find(m => m.local_fd === k || m.visita_fd === k);
     $('#team-profile').innerHTML = `
       <div class="dhead">
         <span class="eyebrow">${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos</span>
         <h2>${esc(t.nombre)}</h2>
         <div class="kv">
-          <div><span>Goles por partido</span><b>${t.total.gf_pp.toFixed(2)}</b></div>
+          <div><span>Goles por partido</span><b>${fx(t.total.gf_pp, 2)}</b></div>
           <div><span>xG por partido</span><b>${t.total.xf_pp == null ? '—' : t.total.xf_pp.toFixed(2)}</b></div>
-          <div><span>Recibe por partido</span><b>${t.total.gc_pp.toFixed(2)}</b></div>
+          <div><span>Recibe por partido</span><b>${fx(t.total.gc_pp, 2)}</b></div>
           <div><span>Córners por partido</span><b>${fx(t.total.corners_pp, 1)}</b></div>
           <div><span>Posesión</span><b>${t.total.posesion == null ? '—' : t.total.posesion.toFixed(0) + '%'}</b></div>
         </div>
@@ -1056,6 +1061,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       ${fav.real - fav.pred > 0.02 ? `<div><h4>Subestima a algunos favoritos</h4><p class="note" style="color:var(--ink-2)">Cuando le dio ${pct(fav.pred)} a un equipo, ese equipo ganó ${pct(fav.real)} de las veces. Desconfía de los PICK contra grandes favoritos.</p></div>` : ''}
       <div><h4>Bajas y cansancio ya están en el momio</h4><p class="note" style="color:var(--ink-2)">El momio se mueve en minutos cuando sale la noticia; el modelo se entera hasta después.</p></div>`;
     curve(); evChart(); cal(fav);
+    const FL = I.fuerza_ligas;
+    if (FL && FL.ligas && FL.ligas.length) {
+      $('#ligas-card').hidden = false;
+      $('#ligas-note').textContent = `Un equipo promedio de cada liga contra uno promedio de la ${FL.contra}, en cancha neutral. Solo las ligas y países con equipos en esta copa. Sale de los partidos europeos de los últimos tres años; es lo que usa el modelo cuando se cruzan equipos de ligas distintas. "Sin liga en los datos": no hay resultados de esa liga, así que el nivel sale solo de sus partidos europeos y el "equipo promedio" es el de los que juegan en Europa (los mejores de su país), no el de toda la liga.`;
+      $('#tbl-ligas').innerHTML = `<thead><tr><th class="l">Liga</th><th>Gana</th><th>Empata</th><th>Pierde</th><th>Goles</th></tr></thead><tbody>` +
+        FL.ligas.map(r => `<tr><td class="nm l" style="white-space:normal">${esc(r.liga)}</td><td>${pct(r.g)}</td><td>${pct(r.e)}</td><td>${pct(r.p)}</td><td>${r.gf.toFixed(2)}-${r.gc.toFixed(2)}</td></tr>`).join('') + '</tbody>';
+    }
   }
 
   function svgEl(tag, attrs) { const e = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
@@ -1112,7 +1124,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const yl = svgEl('text', { x: pad.l + 6, y: pad.t + 12 }); yl.textContent = 'lo que pasó'; svg.appendChild(yl);
     el.appendChild(svg);
   }
-  $('#foot-data').textContent = (I.fuente_fd === 'por temporada'
+  $('#foot-data').textContent = I.fuente_fd === 'uefa'
+    ? 'Datos: ESPN (resultados desde 2020 de 21 ligas de Europa y de las tres copas de la UEFA con sus previas, partidos próximos, momios de DraftKings, alineaciones, jugadores, estadísticas). Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Un solo modelo para toda Europa: la fuerza de cada liga sale de los partidos europeos y la de cada equipo, de su liga; con eso, la probabilidad de cada marcador (Dixon-Coles). Aquí no hay modelo de córners ni de remates a puerta.'
+    : (I.fuente_fd === 'por temporada'
     ? 'Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas, cuotas históricas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas)'
     : 'Datos: football-data.co.uk (resultados y cuotas históricas), ESPN (tiros, córners, tarjetas, posesión, jugadores, partidos próximos, momios de DraftKings, alineaciones, copas)')
     + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles (probabilidad de cada marcador) y modelos de córners y remates a puerta por equipo.`;
