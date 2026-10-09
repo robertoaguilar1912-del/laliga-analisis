@@ -1,3 +1,15 @@
-$ python explorar/ligas_mas.py
+$ python explorar/sede.py
+[exit 0]
+
+
+
+$ python src/europa.py descargar
+[exit 0]
+  Europa: 43033 partidos (5424 de copas UEFA), 84 consultas
+  Europa: liga de 0 equipos sin liga en los datos
+
+
+
+$ cp data/raw/europa_partidos.csv data/raw/europa_bajados.json salida/
 [exit 0]
 
