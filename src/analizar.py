@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 from config import RAW, DATOS, LIGAS, ZONAS, ahora, inicio_torneo
-from datos import ascendidos, previos_nuevos
+from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes
 from corners import CornerModel, RematesModel
@@ -179,6 +179,7 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     else 'Ningún mercado con momio supera +5% de valor esperado.')
         else:
             txt += '. Todavía no hay momios publicados para este partido.'
+        bajaron = [nombre(t) for t in (h, a) if isinstance(nuevos, dict) and nuevos.get(t) == PREVIO_DESCENDIDO]
         nv = [t for t in (h, a) if t in nuevos]
         if nv:
             verbo = LIGAS[liga].get('nuevo', 'subió esta temporada')
@@ -197,7 +198,7 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     'margen': [{'m': int(v), 'p': float(pM[dclip == v].sum())} for v in range(-4, 5)],
                     'remates': [dist_r['ml'], dist_r['mv']] if dist_r else None,
                     'dist': {'goles': [[round(float(x), 5) for x in fila] for fila in Mt], 'corners': dist_c, 'remates': dist_r},
-                    'texto': txt, 'alineaciones': ali})
+                    'texto': txt, 'alineaciones': ali, 'descendidos': bajaron})
     return out
 
 
@@ -402,7 +403,7 @@ def analizar_liga(liga):
             'h2h_desde': str(hist_h2h.Date.min().year), 'h2h_divs': [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else []),
             'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'hay_remates': rmodel is not None,
             'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': 'por temporada' if L.get('fd') else 'resultados y cuotas',
-            'n_espn_extra': n_espn}
+            'n_espn_extra': n_espn, 'aviso': L.get('aviso'), 'cuidado': L.get('cuidado') or {}}
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
            'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],

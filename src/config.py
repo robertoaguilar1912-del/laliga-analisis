@@ -39,7 +39,10 @@ LIGAS = {
     # descienden_de: división de arriba (sus descendidos parten con previo de equipo fuerte, no de recién ascendido)
     'segunda': {'nombre': 'Segunda División', 'pais': 'España', 'espn': 'esp.2', 'fd': 'SP2', 'fd2': 'SP1', 'fd2_nombre': 'La Liga',
                 'calendario': 'europa', 'api_football': 141, 'descienden_de': 'SP1', 'nuevo': 'es nuevo en Segunda',
-                'copas': {'esp.copa_del_rey': 'Copa del Rey'}, 'zonas': 'segunda22'},
+                'copas': {'esp.copa_del_rey': 'Copa del Rey'}, 'zonas': 'segunda22',
+                'aviso': 'Cuidado con los equipos que bajaron de La Liga esta temporada. Al inicio el modelo los ve más débiles que '
+                         'la casa: tiene pocos partidos suyos en Segunda y no sabe que conservan plantel de Primera. En sus partidos '
+                         'confía más en la casa que en el modelo; la diferencia se va cerrando con las jornadas.'},
     'premier': {'nombre': 'Premier League', 'pais': 'Inglaterra', 'espn': 'eng.1', 'fd': 'E0', 'fd2': 'E1', 'fd2_nombre': 'Championship',
                 'calendario': 'europa', 'api_football': 39,
                 'copas': {**COPAS_UEFA, 'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'}, 'zonas': 'europa20'},
@@ -53,7 +56,12 @@ LIGAS = {
                'calendario': 'europa', 'api_football': 61,
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
     'portugal': {'nombre': 'Liga Portugal', 'pais': 'Portugal', 'espn': 'por.1', 'fd': 'P1', 'calendario': 'europa', 'api_football': 94,
-                 'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18'},
+                 'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18',
+                 'aviso': 'Esta es la liga donde peor le fue al modelo en la prueba 2020-2026 (−21.9% siguiendo los PICK). '
+                          'Sobre todo, cuidado con los PICK de empate: perdieron −50%. El modelo le da al empate más probabilidad '
+                          'de la que tiene, en especial cuando Porto, Benfica o Sporting juegan contra equipos chicos. Usa la '
+                          'página para ver estadísticas y momios justos; más/menos de 2.5 goles se comporta como en las otras ligas.',
+                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron −50% en la prueba'}},
     'ligamx': {'nombre': 'Liga MX', 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
