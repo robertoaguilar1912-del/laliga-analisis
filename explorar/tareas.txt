@@ -1,3 +1,1 @@
-python src/nba.py box
-cp data/raw/nba_box_*.csv salida/
-python -c "import json,requests; j=requests.get('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary',params={'event':'401705127'},headers={'User-Agent':'Mozilla/5.0'}).json(); b=j['boxscore']['players'][0]; b['statistics'][0]['athletes']=b['statistics'][0]['athletes'][:2]+[a for a in b['statistics'][0]['athletes'] if a.get('didNotPlay')][:2]; json.dump(b,open('salida/box_muestra.json','w'),indent=1)"
+python explorar/slugs.py
