@@ -5,7 +5,7 @@
   "estadio": "Juan Carmelo Zerillo (El Bosque)",
   "local_espn": "Gimnasia La Plata",
   "visita_espn": "Atlético Tucumán",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -160,14 +160,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
-    195,
+    220,
+    200,
     140
    ],
-   "ou_linea": 1.5,
+   "ou_linea": 2.5,
    "ou": [
-    -185,
-    140
+    145,
+    -195
    ],
    "spread": [
     [
@@ -177,6 +177,122 @@
     [
      "-0.5",
      130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Instituto (Córdoba)": [
+    [
+     "213108",
+     "Marcos Ledesma",
+     "G"
+    ],
+    [
+     "157910",
+     "Fernando Alarcón",
+     "D"
+    ],
+    [
+     "229641",
+     "Leonel Mosevich",
+     "D"
+    ],
+    [
+     "157500",
+     "Jonathan Galván",
+     "D"
+    ],
+    [
+     "361003",
+     "Matías Gallardo",
+     "M"
+    ],
+    [
+     "335865",
+     "Giuliano Cerato",
+     "M"
+    ],
+    [
+     "70912",
+     "Alex Luna",
+     "M"
+    ],
+    [
+     "76156",
+     "Diego Sosa",
+     "M"
+    ],
+    [
+     "379598",
+     "Jeremías Lázaro",
+     "M"
+    ],
+    [
+     "242672",
+     "Gustavo Abregú",
+     "M"
+    ],
+    [
+     "241622",
+     "Matias Tissera",
+     "F"
+    ]
+   ],
+   "Boca Juniors": [
+    [
+     "166323",
+     "Álvaro Montero",
+     "G"
+    ],
+    [
+     "303633",
+     "Marco Pellegrino",
+     "CD-L"
+    ],
+    [
+     "341457",
+     "Lautaro Di Lollo",
+     "CD-R"
+    ],
+    [
+     "290542",
+     "Lautaro Blanco",
+     "LB"
+    ],
+    [
+     "259166",
+     "Malcom Braida",
+     "RB"
+    ],
+    [
+     "202025",
+     "Carlos Palacios",
+     "CM"
+    ],
+    [
+     "382978",
+     "Milton Delgado",
+     "LM"
+    ],
+    [
+     "274298",
+     "William Alarcón",
+     "RM"
+    ],
+    [
+     "171771",
+     "Enner Valencia",
+     "F"
+    ],
+    [
+     "141790",
+     "Sebastián Villa",
+     "LF"
+    ],
+    [
+     "400360",
+     "Leonel Flores",
+     "RF"
     ]
    ]
   }
