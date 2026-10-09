@@ -5,7 +5,7 @@
   "estadio": "Estádio Comendador Joaquim de Almeida Freitas",
   "local_espn": "Moreirense",
   "visita_espn": "Gil Vicente",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
-    220,
-    145
+    200,
+    210,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -130
+    110,
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -190
     ],
     [
      "-0.5",
-     130
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Braga": [
+    [
+     "340560",
+     "Bernardo",
+     "G"
+    ],
+    [
+     "310231",
+     "Sergio Barcia",
+     "D"
+    ],
+    [
+     "250906",
+     "Vítor Carvalho",
+     "D"
+    ],
+    [
+     "338057",
+     "Adrian Bajrami",
+     "D"
+    ],
+    [
+     "343969",
+     "Denis Huseinbasic",
+     "M"
+    ],
+    [
+     "184423",
+     "Ricardo Horta",
+     "M"
+    ],
+    [
+     "326029",
+     "Gorby",
+     "M"
+    ],
+    [
+     "265984",
+     "Víctor Gómez",
+     "M"
+    ],
+    [
+     "297080",
+     "Gabriel Silva",
+     "M"
+    ],
+    [
+     "50959",
+     "João Moutinho",
+     "M"
+    ],
+    [
+     "303808",
+     "Pau Víctor",
+     "F"
+    ]
+   ],
+   "Sporting CP": [
+    [
+     "333209",
+     "Iván Fresneda",
+     "SUB"
+    ],
+    [
+     "266318",
+     "Fotis Ioannidis",
+     "SUB"
+    ],
+    [
+     "177898",
+     "Rui Silva",
+     "SUB"
+    ],
+    [
+     "304106",
+     "Gonçalo Inácio",
+     "SUB"
+    ],
+    [
+     "331426",
+     "Sergi Altimira",
+     "SUB"
+    ],
+    [
+     "290590",
+     "Eduardo Quaresma",
+     "SUB"
+    ],
+    [
+     "355408",
+     "Silas Andersen",
+     "SUB"
+    ],
+    [
+     "300514",
+     "Georgios Vagiannidis",
+     "SUB"
+    ],
+    [
+     "296969",
+     "Geny Catamo",
+     "SUB"
+    ],
+    [
+     "386592",
+     "Issa Doumbia",
+     "SUB"
+    ],
+    [
+     "328535",
+     "Nestory Irankunda",
+     "SUB"
     ]
    ]
   }
