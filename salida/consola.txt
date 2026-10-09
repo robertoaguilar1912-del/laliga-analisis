@@ -1,0 +1,21 @@
+$ python explorar/odds_uefa.py
+[exit 0]
+
+
+
+$ python src/europa.py descargar
+[exit 0]
+  Europa: 43033 partidos (5424 de copas UEFA), 189 consultas
+  Europa: liga de 279 equipos sin liga en los datos
+
+
+
+$ python src/europa.py momios
+[exit 0]
+  Europa: momios de 5424 partidos más; con momios: 3389 de 5424
+
+
+
+$ cp data/raw/europa_partidos.csv data/raw/europa_equipos.json data/raw/europa_momios.csv data/raw/europa_bajados.json salida/
+[exit 0]
+
