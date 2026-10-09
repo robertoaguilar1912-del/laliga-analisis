@@ -53,7 +53,7 @@ LIGAS = {
                'calendario': 'europa', 'api_football': 61,
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
     'portugal': {'nombre': 'Liga Portugal', 'pais': 'Portugal', 'espn': 'por.1', 'fd': 'P1', 'calendario': 'europa', 'api_football': 94,
-                 'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal', 'por.liga_cup': 'Copa de la Liga'}, 'zonas': 'portugal18'},
+                 'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18'},
     'ligamx': {'nombre': 'Liga MX', 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
