@@ -1,0 +1,362 @@
+{
+ "ligas": {
+  "cze.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "cro.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "srb.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "pol.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "ukr.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "hun.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "bul.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "svk.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "svn.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "aze.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "kaz.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "fin.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "isl.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "bih.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "mda.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "geo.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "arm.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "blr.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "ltu.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "lva.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "est.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "lux.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "alb.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "mkd.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "mne.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "kos.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "rus.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "nir.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "wal.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "mlt.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  },
+  "fro.1": {
+   "n": 0,
+   "liga": null,
+   "ej": null
+  }
+ },
+ "sedes": [],
+ "equipo": {
+  "id": "2994",
+  "uid": "s:600~t:2994",
+  "slug": "por.braga",
+  "location": "Braga",
+  "name": "Braga",
+  "abbreviation": "SCB",
+  "displayName": "Braga",
+  "shortDisplayName": "Braga",
+  "color": "de1f26",
+  "alternateColor": "2b6a36",
+  "isActive": true,
+  "defaultLeague": {
+   "id": "715",
+   "alternateId": "14",
+   "name": "Portuguese Primeira Liga",
+   "abbreviation": "Portuguese Liga",
+   "shortName": "Liga Portugal",
+   "midsizeName": "POR.1",
+   "slug": "por.1",
+   "season": {
+    "type": {
+     "hasStandings": true
+    }
+   },
+   "links": [
+    {
+     "language": "en-US",
+     "rel": [
+      "index",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/league/_/name/por.1",
+     "text": "Index",
+     "shortText": "Index",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "index",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:715",
+     "text": "Index",
+     "shortText": "Index",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "schedule",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/schedule/_/league/por.1",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "schedule",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:715&section=scores",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "standings",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/table/_/league/por.1",
+     "text": "Standings",
+     "shortText": "Standings",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "standings",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:715&section=standings",
+     "text": "Standings",
+     "shortText": "Standings",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "scores",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/scoreboard/_/league/por.1",
+     "text": "Scores",
+     "shortText": "Scores",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "scores",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:715&section=scores",
+     "text": "Scores",
+     "shortText": "Scores",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "stats",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/stats/_/league/por.1",
+     "text": "Stats",
+     "shortText": "Stats",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "stats",
+      "sportscenter",
+      "app",
+      "league"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~l:715&section=stats",
+     "text": "Stats",
+     "shortText": "Stats",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en-US",
+     "rel": [
+      "teams",
+      "desktop",
+      "league"
+     ],
+     "href": "https://www.espn.com/soccer/teams/_/league/por.1",
+     "text": "Teams",
+     "shortText": "Teams",
+     "isExternal": false,
+     "isPremium": false
+    }
+   ],
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500/14.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "default"
+     ],
+     "lastUpdated": "2019-05-08T16:07Z"
+    },
+    {
+     "href": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/14.png",
+     "width": 500,
+     "height": 500,
+     "alt": "",
+     "rel": [
+      "full",
+      "dark"
+     ],
+     "lastUpdated": "2019-05-08T16:07Z"
+    }
+   ]
+  },
+  "leagueAbbrev": "por.1"
+ }
+}

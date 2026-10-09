@@ -1,22 +1,3 @@
-$ python explorar/uefa_prox.py
-[exit 0]
-
-
-
-$ python src/europa.py descargar
-[exit 0]
-  aviso: https://site.api.espn.com/apis/site/v2/sports/soccer/isr.1/scoreboard -> HTTPSConnectionPool(host='site.api.espn.com', port=443): Read timed out. (read timeout=30)
-  Europa: 43033 partidos (5424 de copas UEFA), 2052 consultas
-  Europa: liga de 0 equipos sin liga en los datos
-
-
-
-$ python src/europa.py momios
-[exit 0]
-  Europa: momios de 0 partidos más; con momios: 3389 de 5424
-
-
-
-$ cp data/raw/europa_partidos.csv data/raw/europa_equipos.json data/raw/europa_momios.csv data/raw/europa_bajados.json salida/
+$ python explorar/ligas_mas.py
 [exit 0]
 
