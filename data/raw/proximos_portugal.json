@@ -5,15 +5,31 @@
   "estadio": "Estádio Comendador Joaquim de Almeida Freitas",
   "local_espn": "Moreirense",
   "visita_espn": "Gil Vicente",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    240,
+    210,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -170
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -165
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
   },
   "alineaciones": {
    "Moreirense": [
@@ -144,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    225,
-    135
+    195,
+    220,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -156,11 +172,11 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -185
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
