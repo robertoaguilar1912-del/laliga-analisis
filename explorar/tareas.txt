@@ -1,1 +1,4 @@
-python explorar/uefa.py
+python explorar/odds_uefa.py
+python src/europa.py descargar
+python src/europa.py momios
+cp data/raw/europa_partidos.csv data/raw/europa_equipos.json data/raw/europa_momios.csv data/raw/europa_bajados.json salida/
