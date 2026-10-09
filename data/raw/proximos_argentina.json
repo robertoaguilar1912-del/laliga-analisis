@@ -43,12 +43,12 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    230,
-    310
+    235,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
+    130,
     -175
    ],
    "spread": [
@@ -74,13 +74,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
     195,
-    155
+    195,
+    160
    ],
    "ou_linea": 1.5,
    "ou": [
-    -185,
+    -180,
     135
    ],
    "spread": [
@@ -90,7 +90,7 @@
     ],
     [
      "-0.5",
-     140
+     150
     ]
    ]
   }
@@ -106,23 +106,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    125,
     220,
-    230
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -155
+    115,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -234,7 +234,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -525,
+    -550,
     550,
     1400
    ],
@@ -246,11 +246,11 @@
    "spread": [
     [
      "-1.5",
-     -170
+     -175
     ],
     [
      "+1.5",
-     115
+     120
     ]
    ]
   }
@@ -266,23 +266,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    165,
-    235
+    150,
+    175,
+    230
    ],
    "ou_linea": 1.5,
    "ou": [
-    -150,
-    105
+    -155,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -205
+     -200
     ]
    ]
   }
@@ -298,23 +298,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    185,
+    205,
+    190,
     150
    ],
    "ou_linea": 1.5,
    "ou": [
-    -180,
-    120
+    -175,
+    125
    ],
    "spread": [
     [
      "+0.5",
-     -210
+     -205
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -330,14 +330,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    220,
-    285
+    100,
+    225,
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
     125,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -363,22 +363,22 @@
    "casa": "DraftKings",
    "ml": [
     135,
-    195,
+    200,
     220
    ],
    "ou_linea": 2.5,
    "ou": [
     130,
-    -190
+    -185
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
@@ -395,18 +395,18 @@
    "casa": "DraftKings",
    "ml": [
     130,
-    205,
+    210,
     220
    ],
    "ou_linea": 2.5,
    "ou": [
     125,
-    -180
+    -175
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
@@ -605,6 +605,36 @@
   "estadio": "El Gigante de Alberdi",
   "local_espn": "Belgrano (Córdoba)",
   "visita_espn": "River Plate",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "momios": null
+ },
+ {
+  "id": "401841620",
+  "utc": "2026-10-19T22:00Z",
+  "estadio": "Marcelo Bielsa",
+  "local_espn": "Newell's Old Boys",
+  "visita_espn": "Central Córdoba (Santiago del Estero)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "momios": null
+ },
+ {
+  "id": "401841617",
+  "utc": "2026-10-19T22:00Z",
+  "estadio": "Eva Perón",
+  "local_espn": "Sarmiento (Junín)",
+  "visita_espn": "Barracas Central",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "momios": null
+ },
+ {
+  "id": "401841625",
+  "utc": "2026-10-20T00:15Z",
+  "estadio": "Guillermo Laza",
+  "local_espn": "Deportivo Riestra",
+  "visita_espn": "Unión (Santa Fe)",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "momios": null

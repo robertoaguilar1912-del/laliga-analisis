@@ -49,7 +49,7 @@
    "ou_linea": 3.5,
    "ou": [
     -115,
-    -110
+    -115
    ],
    "spread": [
     [
@@ -145,7 +145,7 @@
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -110
+    -105
    ],
    "spread": [
     [
@@ -214,11 +214,11 @@
    "spread": [
     [
      "+0.5",
-     100
+     -105
     ],
     [
      "-0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -234,23 +234,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    285,
-    -195
+    500,
+    290,
+    -190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -125
    ],
    "spread": [
     [
      "+0.5",
-     135
+     140
     ],
     [
      "-0.5",
-     -200
+     -195
     ]
    ]
   }
@@ -330,14 +330,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    230,
-    170
+    135,
+    235,
+    175
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -346,7 +346,7 @@
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -571,6 +571,70 @@
     [
      "+0.5",
      115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874762",
+  "utc": "2026-10-19T16:30Z",
+  "estadio": "U-Power Stadium",
+  "local_espn": "Monza",
+  "visita_espn": "Cagliari",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    210,
+    225
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874784",
+  "utc": "2026-10-19T18:45Z",
+  "estadio": "Ennio Tardini",
+  "local_espn": "Parma",
+  "visita_espn": "Torino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    195,
+    195,
+    135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -195
+    ],
+    [
+     "-0.5",
+     125
     ]
    ]
   }

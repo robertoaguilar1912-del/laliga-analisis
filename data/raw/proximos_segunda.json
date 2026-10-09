@@ -84,23 +84,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    240,
-    120
+    200,
+    245,
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
-    125
+    -165,
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -165
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   }
@@ -181,13 +181,13 @@
    "casa": "DraftKings",
    "ml": [
     150,
-    215,
+    220,
     180
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -150
+    -145
    ],
    "spread": [
     [
@@ -196,7 +196,7 @@
     ],
     [
      "+0.5",
-     -205
+     -200
     ]
    ]
   }
@@ -214,7 +214,7 @@
    "ml": [
     -105,
     225,
-    285
+    275
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -224,11 +224,11 @@
    "spread": [
     [
      "-0.5",
-     -120
+     -115
     ],
     [
      "+0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -276,23 +276,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    220,
-    240
+    120,
+    210,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -160
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     100
+     110
     ],
     [
      "+0.5",
-     -155
+     -165
     ]
    ]
   }
@@ -425,6 +425,16 @@
   "estadio": "Estadio Municipal de El Plantío",
   "local_espn": "Burgos",
   "visita_espn": "CD Sabadell",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "401883309",
+  "utc": "2026-10-19T18:30Z",
+  "estadio": "Balaidos",
+  "local_espn": "RC Celta Fortuna",
+  "visita_espn": "Tenerife",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "momios": null
