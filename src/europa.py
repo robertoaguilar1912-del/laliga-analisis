@@ -46,7 +46,7 @@ DESDE = 2020                    # primer año que se baja
 PARTIDOS = RAW / 'europa_partidos.csv'
 EQUIPOS = RAW / 'europa_equipos.json'
 MOMIOS = RAW / 'europa_momios.csv'
-COLS = ['id', 'utc', 'fecha', 'comp', 'temporada', 'tipo', 'local_id', 'local', 'visita_id', 'visita', 'gl', 'gv', 'neutral']
+COLS = ['id', 'utc', 'fecha', 'comp', 'temporada', 'tipo', 'local_id', 'local', 'visita_id', 'visita', 'gl', 'gv', 'neutral', 'pais']
 
 
 def _get(url, params=None):
@@ -72,7 +72,8 @@ def _filas(slug, eventos):
                     'temporada': f'{y % 100:02d}{(y + 1) % 100:02d}', 'tipo': (e.get('season') or {}).get('slug') or '',
                     'local_id': str(cs['home']['team']['id']), 'local': cs['home']['team'].get('displayName'),
                     'visita_id': str(cs['away']['team']['id']), 'visita': cs['away']['team'].get('displayName'),
-                    'gl': gl, 'gv': gv, 'neutral': bool(comp.get('neutralSite'))})
+                    'gl': gl, 'gv': gv, 'neutral': bool(comp.get('neutralSite')),
+                    'pais': (((comp.get('venue') or {}).get('address') or {}).get('country') or '')})
     return out
 
 
@@ -82,40 +83,28 @@ def cargar_partidos():
     return pd.read_csv(PARTIDOS, dtype={'id': str, 'local_id': str, 'visita_id': str, 'temporada': str})
 
 
-def _meses(desde, hasta):
-    """[('2024-09', '20240901-20240930'), ...] desde julio del año 'desde' hasta el mes de 'hasta'."""
-    out, y, m = [], desde, 7
-    while (y, m) <= (hasta.year, hasta.month):
-        fin = (pd.Timestamp(y, m, 1) + pd.offsets.MonthEnd(0)).day
-        out.append((f'{y}-{m:02d}', f'{y}{m:02d}01-{y}{m:02d}{fin:02d}'))
-        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
-    return out
-
-
 def descargar(hilos=6):
-    """Resultados de ligas y copas, mes por mes (al pedir el año completo ESPN a veces corta la temporada o la deja
-    incompleta). Los meses que terminaron hace más de 10 días no se vuelven a pedir."""
+    """Resultados de ligas y copas, año por año (ESPN devuelve el año completo con dates=AAAA; pedido por rangos
+    de fechas no devolvió nada en la prueba). Los años ya cerrados no se repiten; el actual y el anterior, siempre."""
     viejo = cargar_partidos()
     hechos = set()
     reg = RAW / 'europa_bajados.json'
     if reg.exists():
         hechos = set(json.load(open(reg)))
-    hoy = ahora()
-    meses = _meses(DESDE, hoy)
-    cerrado = lambda mes: pd.Timestamp(mes + '-01') + pd.offsets.MonthEnd(0) < pd.Timestamp(hoy.date()) - pd.Timedelta(days=10)
-    tareas = [(slug, mes, rango) for slug in list(LIGAS_EUROPA) + list(COPAS) for mes, rango in meses
-              if f'{slug}|{mes}' not in hechos or not cerrado(mes)]
+    y1 = ahora().year
+    tareas = [(slug, y) for slug in list(LIGAS_EUROPA) + list(COPAS) for y in range(DESDE, y1 + 1)
+              if f'{slug}|{y}' not in hechos or y >= y1 - 1]
 
     def uno(t):
-        slug, mes, rango = t
-        j = _get(f'{ESPN}/{slug}/scoreboard', params={'dates': rango, 'limit': 1000})
+        slug, y = t
+        j = _get(f'{ESPN}/{slug}/scoreboard', params={'dates': str(y), 'limit': 1000})
         return t, _filas(slug, (j or {}).get('events', []) or []), j is not None
     filas = []
     with ThreadPoolExecutor(hilos) as ex:
-        for (slug, mes, _), fs, ok in ex.map(uno, tareas):
+        for (slug, y), fs, ok in ex.map(uno, tareas):
             filas += fs
-            if ok and cerrado(mes):
-                hechos.add(f'{slug}|{mes}')
+            if ok and y < y1 - 1:
+                hechos.add(f'{slug}|{y}')
     nuevo = pd.concat([viejo, pd.DataFrame(filas, columns=COLS)], ignore_index=True)
     nuevo['id'] = nuevo.id.astype(str)
     nuevo = nuevo.drop_duplicates('id', keep='last').sort_values(['utc', 'id'])
@@ -219,14 +208,56 @@ def descargar_momios(hilos=8, limite=None):
     print(f'  Europa: momios de {len(falta)} partidos más; con momios: {(out.casa.fillna("") != "").sum()} de {len(out)}')
 
 
+# ----------------------------------------------------------------- para la página de cada copa
+def nombres_comp():
+    from config import LIGAS
+    out = {slug: f'liga de {pais}' for slug, pais in LIGAS_EUROPA.items()}
+    out['esp.2'] = 'Segunda División'
+    out.update({L['espn']: L['nombre'] for L in LIGAS.values() if L['espn'] in LIGAS_EUROPA})
+    out.update(COPAS)
+    return out
+
+
+def _dia(utc):
+    """Día del partido en hora de Europa (como el resto de la página)."""
+    return (pd.to_datetime(utc, utc=True).dt.tz_localize(None) + pd.Timedelta(hours=1)).dt.normalize()
+
+
+def calendario_equipos(ref):
+    """Partidos de cada equipo en todas sus competiciones, para el cansancio: los jugados (ligas y copas) y los próximos
+    de las ligas que tienen página. Columnas como copas.txt: comp, Date, team."""
+    from config import LIGAS
+    nom = nombres_comp()
+    df = cargar_partidos()
+    df = df[pd.to_datetime(df.fecha) >= pd.Timestamp(ref) - pd.Timedelta(days=60)]
+    filas = [pd.DataFrame({'comp': df.comp.map(nom), 'Date': _dia(df.utc), 'team': df[c]}) for c in ('local', 'visita')]
+    for liga, L in LIGAS.items():
+        p = RAW / f'proximos_{liga}.json'
+        if L['espn'] not in LIGAS_EUROPA or not p.exists():
+            continue
+        prox = pd.DataFrame(json.load(open(p)))
+        if len(prox):
+            for c in ('local_espn', 'visita_espn'):
+                filas.append(pd.DataFrame({'comp': L['nombre'], 'Date': _dia(prox.utc), 'team': prox[c]}))
+    return pd.concat(filas, ignore_index=True).dropna()
+
+
+def historial():
+    """Todos los partidos (ligas y copas) para los enfrentamientos directos, con el formato de football-data."""
+    df = cargar_partidos()
+    return pd.DataFrame({'Date': _dia(df.utc), 'HomeTeam': df.local, 'AwayTeam': df.visita, 'FTHG': df.gl, 'FTAG': df.gv,
+                         'div': df.comp.map(nombres_comp())})
+
+
 # ----------------------------------------------------------------- modelo
-HALF_LIFE = 365
+# Elegidos con la temporada 2023-24 (log loss del 1X2 contra el resultado); la prueba es de 2024-25 en adelante
+HALF_LIFE = 540
 VENTANA = 3 * 365
-SD_EQUIPO = 0.35            # cuánto puede separarse un equipo de la media de su liga
+SD_EQUIPO = 0.50            # cuánto puede separarse un equipo de la media de su liga
 SD_LIGA = 1.0               # las ligas con datos: casi libres (los partidos europeos las ubican)
-PREVIO_OTRAS = (-0.25, 0.25)  # ligas sin datos propios (Chequia, Croacia...): parten como liga chica
+PREVIO_OTRAS = (-0.40, 0.40)  # ligas sin datos propios (Chequia, Croacia...): parten como liga chica
 SD_OTRAS = 0.30
-SD_EQUIPO_OTRAS = 0.50      # en el grupo 'otra' hay de todo (del Shakhtar a campeones de Andorra): más libertad
+SD_EQUIPO_OTRAS = 0.70      # en el grupo 'otra' hay de todo (del Shakhtar a campeones de Andorra): más libertad
 
 
 def ligas_de_equipos(df, ref=None):
@@ -336,10 +367,31 @@ class ModeloEuropa:
     def rates(self, home, away, neutral=False):
         return self._eta(self.idx[home], self.idx[away], neutral)
 
+    acepta_neutral = True
+
     def score_matrix(self, home, away, neutral=False):
         from model import score_matrix
         lam, mu = self.rates(home, away, neutral)
         return score_matrix(lam, mu, self.rho)
+
+    def tabla_ligas(self):
+        """Qué tan fuerte es cada liga: un equipo promedio de esa liga contra uno promedio de la más fuerte, en cancha neutral."""
+        from model import score_matrix
+        nom = {**nombres_comp(), 'otra': 'Resto de Europa (Chequia, Croacia, Serbia, Polonia, Ucrania...)'}
+        nom.update({'nir.1': 'liga de Irlanda del Norte', 'wal.1': 'liga de Gales', 'mlt.1': 'liga de Malta', 'rus.1': 'liga de Rusia'})
+        fuerza = {g: self.att_g[i] - self.dfn_g[i] for g, i in self.gidx.items()}
+        top = max(fuerza, key=fuerza.get)
+        t = self.gidx[top]
+        out = []
+        for g, i in sorted(self.gidx.items(), key=lambda kv: -fuerza[kv[0]]):
+            n = int((self.grupo == i).sum())
+            if n < 5:
+                continue
+            lam = np.exp(self.c + self.att_g[i] + self.dfn_g[t]); mu = np.exp(self.c + self.att_g[t] + self.dfn_g[i])
+            M = score_matrix(lam, mu, self.rho)
+            out.append({'liga': nom.get(g, g), 'equipos': n, 'g': float(np.tril(M, -1).sum()), 'e': float(np.trace(M)),
+                        'p': float(np.triu(M, 1).sum()), 'gf': float(lam), 'gc': float(mu)})
+        return {'contra': nom.get(top, top), 'ligas': out}
 
     def fuerza_ligas(self):
         """Ataque y defensa de cada liga (puntos de goles por partido frente a la media, aproximado)."""

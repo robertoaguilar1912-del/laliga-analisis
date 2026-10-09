@@ -1,1 +1,3 @@
-python explorar/ligas_mas.py
+python explorar/sede.py
+python src/europa.py descargar
+cp data/raw/europa_partidos.csv data/raw/europa_bajados.json salida/
