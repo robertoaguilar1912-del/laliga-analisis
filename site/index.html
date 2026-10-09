@@ -83,6 +83,8 @@ button { font: inherit; color: inherit; }
 .intro { display: grid; gap: 6px; }
 .intro p { color: var(--ink-2); max-width: 72ch; font-size: 14.5px; }
 .warning { background: color-mix(in srgb, var(--warn) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--warn) 60%, var(--surface)); border-radius: 12px; padding: 10px 14px; font-size: 13.5px; color: var(--ink); }
+.warning.aviso { background: color-mix(in srgb, var(--crit) 10%, var(--surface)); border-color: color-mix(in srgb, var(--crit) 45%, var(--surface)); margin-bottom: 10px; }
+.warning.aviso b { display: block; margin-bottom: 2px; }
 .mlist { display: grid; gap: 10px; }
 .mcard { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) auto; gap: 10px 20px; align-items: center; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; }
 .mcard:hover { border-color: var(--accent); }
@@ -354,6 +356,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h2>Próximos partidos</h2>
         <p>Toca un partido para ver su ficha completa: probabilidades, estadísticas de los dos equipos, bajas, cansancio, historial y todos los mercados con su momio justo. Horas de Honduras.</p>
       </div>
+      <p class="warning aviso" id="p-aviso" hidden></p>
       <p class="warning" id="p-warning"></p>
       <div class="mlist" id="mlist"></div>
     </div>
@@ -509,6 +512,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })} · resultados hasta el ${fdate(D.datos_hasta)}`;
   $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días`;
   const PRINCIPAL = B ? B.estrategias[B.principal || 'modelo|B365|1x2+ou|0.05'] : null;
+  if (I.aviso) { const av = $('#p-aviso'); av.innerHTML = `<b>Aviso para ${esc(I.nombre)}</b>${esc(I.aviso)}`; av.hidden = false; }
+  const CUIDADO = I.cuidado || {};
   $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
     ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
     : PRINCIPAL.roi < 0
@@ -536,6 +541,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const nMias = mias.filter(b => b.id === m.id).length;
     const extra = [nextExtra(th, m.local_es), nextExtra(ta, m.visita_es), m.alineaciones && m.alineaciones.local ? 'Alineaciones confirmadas' : null,
                    nMias ? `Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}` : null].filter(Boolean);
+    (m.descendidos || []).forEach(t => alerts.push(`${t} bajó de La Liga: confía más en la casa`));
+    if (m.con_momio.some(r => r.veredicto === 'PICK' && CUIDADO[r.k])) alerts.push('PICK de empate: cuidado en esta liga');
     const bar = (p, c) => `<span style="width:${(p * 100).toFixed(1)}%;background:${c}"></span>`;
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
       <span class="mmeta">${fdt(m.utc)} · ${esc(m.estadio)}</span>
@@ -707,7 +714,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const el = $('#match-detail'); el.hidden = false;
     const cell = (v, color) => `<div class="cellbar"><span class="v">${pct(v)}</span><span class="track"><span class="fill" style="width:${(v * 100).toFixed(1)}%;background:${color}"></span></span></div>`;
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
-    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
     const conLinea = tiposDe(m);
@@ -768,6 +775,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
 
       <div class="pane" data-pane="0">
+        ${(m.descendidos || []).length ? `<p class="warning aviso">${m.descendidos.map(esc).join(' y ')} ${m.descendidos.length > 1 ? 'bajaron' : 'bajó'} de La Liga esta temporada. Al inicio el modelo ${m.descendidos.length > 1 ? 'los' : 'lo'} ve más débil${m.descendidos.length > 1 ? 'es' : ''} que la casa: en este partido confía más en la casa que en el modelo.</p>` : ''}
+        ${m.con_momio.some(r => CUIDADO[r.k] && r.veredicto === 'PICK') ? `<p class="warning aviso">${esc(Object.values(CUIDADO)[0])}. Tómalo con mucho cuidado.</p>` : ''}
         <div class="grid2">
           <div class="card">
             <h3>Probabilidades</h3>

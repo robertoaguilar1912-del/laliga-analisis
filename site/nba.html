@@ -83,6 +83,8 @@ button { font: inherit; color: inherit; }
 .intro { display: grid; gap: 6px; }
 .intro p { color: var(--ink-2); max-width: 72ch; font-size: 14.5px; }
 .warning { background: color-mix(in srgb, var(--warn) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--warn) 60%, var(--surface)); border-radius: 12px; padding: 10px 14px; font-size: 13.5px; color: var(--ink); }
+.warning.aviso { background: color-mix(in srgb, var(--crit) 10%, var(--surface)); border-color: color-mix(in srgb, var(--crit) 45%, var(--surface)); margin-bottom: 10px; }
+.warning.aviso b { display: block; margin-bottom: 2px; }
 .mlist { display: grid; gap: 10px; }
 .mcard { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) auto; gap: 10px 20px; align-items: center; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; }
 .mcard:hover { border-color: var(--accent); }
