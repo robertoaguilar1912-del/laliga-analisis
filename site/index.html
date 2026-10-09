@@ -552,8 +552,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
       <span class="mmeta">${fdt(m.utc)} · ${esc(m.estadio)}</span>
       <span class="mteams">
-        <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(m.local_es)}</span><span class="ps">${th.posicion}º</span>${formHTML(m.forma_local)}</span>
-        <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(m.visita_es)}</span><span class="ps">${ta.posicion}º</span>${formHTML(m.forma_visita)}</span>
+        <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(m.local_es)}</span><span class="ps">${th.total && th.total.pj ? th.posicion + 'º' : ''}</span>${formHTML(m.forma_local)}</span>
+        <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(m.visita_es)}</span><span class="ps">${ta.total && ta.total.pj ? ta.posicion + 'º' : ''}</span>${formHTML(m.forma_visita)}</span>
       </span>
       <span class="prob3">
         <span class="row"><span class="who">Modelo</span><span class="bar">${bar(m.pH, 'var(--home)')}${bar(m.pD, 'var(--draw)')}${bar(m.pA, 'var(--away)')}</span></span>
@@ -770,9 +770,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="dhead">
         <span class="eyebrow">${fdt(m.utc)} · ${esc(m.estadio)}</span>
         <div class="vs">
-          <div class="side"><span class="tn" style="color:var(--home)">${esc(m.local_es)}</span><span class="sub">${th.posicion}º · ${th.total.pts} pts</span>${formHTML(m.forma_local)}</div>
+          <div class="side"><span class="tn" style="color:var(--home)">${esc(m.local_es)}</span><span class="sub">${th.total.pj ? th.posicion + 'º · ' + th.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_local)}</div>
           <div class="mid"><b>${m.xg_local.toFixed(2)} – ${m.xg_visita.toFixed(2)}</b><span>goles esperados</span></div>
-          <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.posicion}º · ${ta.total.pts} pts</span>${formHTML(m.forma_visita)}</div>
+          <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.total.pj ? ta.posicion + 'º · ' + ta.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_visita)}</div>
         </div>
         <div class="subtabs" role="tablist">
           ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'Historial', 'Mercados'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
@@ -993,7 +993,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const nextMatch = M.find(m => m.local_fd === k || m.visita_fd === k);
     $('#team-profile').innerHTML = `
       <div class="dhead">
-        <span class="eyebrow">${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos</span>
+        <span class="eyebrow">${t.total.pj ? `${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos` : 'Todavía no juega en esta temporada'}</span>
         <h2>${esc(t.nombre)}</h2>
         <div class="kv">
           <div><span>Goles por partido</span><b>${fx(t.total.gf_pp, 2)}</b></div>
