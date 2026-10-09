@@ -15,6 +15,7 @@ import fuentes
 import analizar
 import nfl
 import nba
+import europa
 import registro
 import construir
 import revisar
@@ -72,6 +73,8 @@ def main(modo):
     else:
         for liga in LIGAS:
             _paso(f'football-data {liga}', fuentes.descargar_football_data, liga)
+        _paso('Europa (ligas y copas UEFA)', europa.descargar)
+        _paso('Europa momios', europa.descargar_momios)
         for liga in LIGAS:
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
         for liga in LIGAS:

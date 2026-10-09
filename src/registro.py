@@ -12,6 +12,7 @@ La liquidación (ganada, perdida, nula) la hace la página con los resultados de
 igual para los picks del modelo que para las apuestas que guardas tú.
 """
 import json
+import re
 from datetime import datetime
 
 from config import DATOS, ESPN_DIR, SECCIONES, ahora
@@ -37,6 +38,21 @@ def _stat(t, clave):
         return None
 
 
+def noventa(m, h, a):
+    """Marcador a los 90 minutos (las apuestas se liquidan así): en eliminatorias con prórroga ESPN da el final con la
+    prórroga, así que se le restan los goles de los minutos 91 a 120 (no los del tiempo añadido, que salen como 90'+3')."""
+    gl, gv = h['score'], a['score']
+    for equipo, reloj, tipo in m.get('goals') or []:
+        r = re.match(r"(\d+)'", reloj or '')
+        if not r or not 90 < int(r.group(1)) <= 120 or 'shootout' in (tipo or '').lower():
+            continue
+        if equipo == h['name'] and gl > 0:
+            gl -= 1
+        elif equipo == a['name'] and gv > 0:
+            gv -= 1
+    return gl, gv
+
+
 def resultados():
     """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita]}
     de los partidos ya jugados."""
@@ -48,7 +64,8 @@ def resultados():
         lados = {t['ha']: t for t in m.get('teams', {}).values()}
         if 'home' in lados and 'away' in lados:
             h, a = lados['home'], lados['away']
-            out[str(m['id'])] = [h['score'], a['score'], _stat(h, 'wonCorners'), _stat(a, 'wonCorners'),
+            gl, gv = noventa(m, h, a)
+            out[str(m['id'])] = [gl, gv, _stat(h, 'wonCorners'), _stat(a, 'wonCorners'),
                                  _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')]
     return out
 

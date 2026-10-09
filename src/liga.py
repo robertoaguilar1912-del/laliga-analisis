@@ -216,7 +216,7 @@ def unir(df, E, mapa, temporada):
     for c in ('HPOS', 'APOS', 'HPASS', 'APASS'):
         df[c] = np.nan
     df['espn_id'] = None
-    df['tipo'] = ''
+    df['tipo'] = df['tipo'].fillna('') if 'tipo' in df else ''     # los archivos de ESPN ya traen la fase
     if not len(E):
         return df
     E = E.assign(HomeTeam=E.home_e.map(mapa), AwayTeam=E.away_e.map(mapa)).dropna(subset=['HomeTeam', 'AwayTeam'])
@@ -258,7 +258,11 @@ def cargar_liga(liga):
         prox = json.load(open(pp))
     otros = {e['local_espn'] for e in prox} | {e['visita_espn'] for e in prox}
     candidatos = set(df.HomeTeam) | set(df.AwayTeam) | (set(df2.HomeTeam) if df2 is not None else set())
-    mapa = mapa_nombres(liga, actual, candidatos, E, otros)
+    if LIGAS[liga].get('uefa'):     # todo viene de ESPN con el mismo nombre: no hay nada que emparejar
+        todos = candidatos | otros | (set(E.home_e) | set(E.away_e) if len(E) else set())
+        mapa = {t: t for t in todos}
+    else:
+        mapa = mapa_nombres(liga, actual, candidatos, E, otros)
     n0 = len(df)
     df = unir(df, E, mapa, temporada)
     return df, df2, mapa, det, prox, len(df) - n0
