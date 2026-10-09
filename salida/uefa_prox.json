@@ -1,0 +1,4578 @@
+{
+ "uefa.champions": {
+  "proximos": [
+   {
+    "id": "401915418",
+    "date": "2026-10-13T16:45Z",
+    "name": "Sporting CP at Lens",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "175",
+      "Lens"
+     ],
+     [
+      "away",
+      "2250",
+      "Sporting CP"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1,
+       "displayName": "DraftKings",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+         "rel": [
+          "light"
+         ]
+        },
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+         "rel": [
+          "dark"
+         ]
+        }
+       ]
+      },
+      "drawOdds": {
+       "moneyLine": 275,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0ML86264674_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-180"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-180",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0OU86264996O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+135"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+140",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0OU86264996U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+120"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+135",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0HC86265001N50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:RCL-0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-185"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-195",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0HC86265001P50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:SCP+0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+135"
+        },
+        "close": {
+         "odds": "+150",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0ML86264674_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+170"
+        },
+        "close": {
+         "odds": "+155",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0ML86264674_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+270"
+        },
+        "close": {
+         "odds": "+275",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654793%3Foutcomes%3D0ML86264674_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915418,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "RCL +150"
+     }
+    ]
+   },
+   {
+    "id": "401915436",
+    "date": "2026-10-13T16:45Z",
+    "name": "Slavia Prague at Sabah FK",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "21922",
+      "Sabah FK"
+     ],
+     [
+      "away",
+      "494",
+      "Slavia Prague"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 270,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0ML86264675_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-160"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-160",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0OU86264804O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+120"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0OU86264804U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-135"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-130",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0HC86264809P50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:SAB+0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "-110"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "-115",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0HC86264809N50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:SLP-0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+235"
+        },
+        "close": {
+         "odds": "+250",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0ML86264675_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+105"
+        },
+        "close": {
+         "odds": "+100",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0ML86264675_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+260"
+        },
+        "close": {
+         "odds": "+270",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654789%3Foutcomes%3D0ML86264675_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915436,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "SLP +100"
+     }
+    ]
+   },
+   {
+    "id": "401915417",
+    "date": "2026-10-13T19:00Z",
+    "name": "Lille at Arsenal",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "359",
+      "Arsenal"
+     ],
+     [
+      "away",
+      "166",
+      "Lille"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 500,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0ML86264666_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "+130"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-180",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0OU86264820O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "-180"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+135",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0OU86264820U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-1.5",
+         "odds": "-180"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "-145",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0HC86264835N150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:ARS-1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+1.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "+100",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0HC86264835P150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:LILL+1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "-525"
+        },
+        "close": {
+         "odds": "-390",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0ML86264666_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+1100"
+        },
+        "close": {
+         "odds": "+950",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0ML86264666_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+550"
+        },
+        "close": {
+         "odds": "+500",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654782%3Foutcomes%3D0ML86264666_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915417,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "ARS -390"
+     }
+    ]
+   },
+   {
+    "id": "401915412",
+    "date": "2026-10-13T19:00Z",
+    "name": "Manchester United at Atlético Madrid",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "1068",
+      "Atlético Madrid"
+     ],
+     [
+      "away",
+      "360",
+      "Manchester United"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 3.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 280,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0ML86264667_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "+110"
+        },
+        "close": {
+         "line": "o3.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0OU86264859O350_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:3.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "-150"
+        },
+        "close": {
+         "line": "u3.5",
+         "odds": "-155",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0OU86264859U350_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:3.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+100",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0HC86264890N50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:ATM-0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-145",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0HC86264890P50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:MAN+0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+130"
+        },
+        "close": {
+         "odds": "+110",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0ML86264667_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+175"
+        },
+        "close": {
+         "odds": "+215",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0ML86264667_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+270"
+        },
+        "close": {
+         "odds": "+280",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654783%3Foutcomes%3D0ML86264667_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915412,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "ATM +110"
+     }
+    ]
+   },
+   {
+    "id": "401915435",
+    "date": "2026-10-13T19:00Z",
+    "name": "Barcelona at Galatasaray",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "432",
+      "Galatasaray"
+     ],
+     [
+      "away",
+      "83",
+      "Barcelona"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 4.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 550,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0ML86264676_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "-150"
+        },
+        "close": {
+         "line": "o4.5",
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0OU86264980O450_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:4.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "+110"
+        },
+        "close": {
+         "line": "u4.5",
+         "odds": "-150",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0OU86264980U450_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:4.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+1.5",
+         "odds": "-110"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "+105",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0HC86264985P150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:GAL+1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-1.5",
+         "odds": "-140"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "-155",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0HC86264985N150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:BAR-1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+600"
+        },
+        "close": {
+         "odds": "+650",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0ML86264676_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "-320"
+        },
+        "close": {
+         "odds": "-350",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0ML86264676_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+500"
+        },
+        "close": {
+         "odds": "+550",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654791%3Foutcomes%3D0ML86264676_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915435,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "BAR -350"
+     }
+    ]
+   },
+   {
+    "id": "401915413",
+    "date": "2026-10-13T19:00Z",
+    "name": "Club Brugge at Internazionale",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "110",
+      "Internazionale"
+     ],
+     [
+      "away",
+      "570",
+      "Club Brugge"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 3.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 500,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0ML86264683_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "+130"
+        },
+        "close": {
+         "line": "o3.5",
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0OU86265043O350_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:3.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "u3.5",
+         "odds": "-150",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0OU86265043U350_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:3.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-1.5",
+         "odds": "-135"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "-140",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0HC86265049N150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:INT-1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+1.5",
+         "odds": "-115"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "-105",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0HC86265049P150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:BRU+1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "-340"
+        },
+        "close": {
+         "odds": "-370",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0ML86264683_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+750"
+        },
+        "close": {
+         "odds": "+850",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0ML86264683_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+450"
+        },
+        "close": {
+         "odds": "+500",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34654799%3Foutcomes%3D0ML86264683_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.champions",
+            "sport": "soccer",
+            "gameId": 401915413,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "INT -370"
+     }
+    ]
+   }
+  ],
+  "n_proximos": 36,
+  "tabla": [
+   {
+    "nombre": "League Phase",
+    "n": 36
+   }
+  ],
+  "tabla_top": [
+   "Paris Saint-Germain",
+   "Bayern Munich",
+   "Barcelona",
+   "Manchester United",
+   "Como"
+  ]
+ },
+ "uefa.europa": {
+  "proximos": [
+   {
+    "id": "401915573",
+    "date": "2026-10-15T16:45Z",
+    "name": "Hapoel Be'er at AZ Alkmaar",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "140",
+      "AZ Alkmaar"
+     ],
+     [
+      "away",
+      "13083",
+      "Hapoel Be'er"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 3.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1,
+       "displayName": "DraftKings",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+         "rel": [
+          "light"
+         ]
+        },
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+         "rel": [
+          "dark"
+         ]
+        }
+       ]
+      },
+      "drawOdds": {
+       "moneyLine": 475,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0ML86441294_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "+130"
+        },
+        "close": {
+         "line": "o3.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0OU86441523O350_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:3.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "u3.5",
+         "odds": "-155",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0OU86441523U350_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:3.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-1.5",
+         "odds": "-125"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "-135",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0HC86441528N150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:AZ-1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+1.5",
+         "odds": "-120"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "-110",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0HC86441528P150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:HBE+1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "-310"
+        },
+        "close": {
+         "odds": "-330",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0ML86441294_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+700"
+        },
+        "close": {
+         "odds": "+750",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0ML86441294_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+425"
+        },
+        "close": {
+         "odds": "+475",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716985%3Foutcomes%3D0ML86441294_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915573,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "AZ -330"
+     }
+    ]
+   },
+   {
+    "id": "401915576",
+    "date": "2026-10-15T16:45Z",
+    "name": "Bayer Leverkusen at Lech Poznan",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "2990",
+      "Lech Poznan"
+     ],
+     [
+      "away",
+      "131",
+      "Bayer Leverkusen"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 3.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 330,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0ML86441291_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o3.5",
+         "odds": "+125"
+        },
+        "close": {
+         "line": "o3.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0OU86441421O350_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:3.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u3.5",
+         "odds": "-170"
+        },
+        "close": {
+         "line": "u3.5",
+         "odds": "-160",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0OU86441421U350_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:3.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0HC86441426P50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:LECH+0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "-165",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0HC86441426N50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:B04-0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+360"
+        },
+        "close": {
+         "odds": "+350",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0ML86441291_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "-160"
+        },
+        "close": {
+         "odds": "-150",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0ML86441291_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+320"
+        },
+        "close": {
+         "odds": "+330",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716982%3Foutcomes%3D0ML86441291_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915576,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "B04 -150"
+     }
+    ]
+   },
+   {
+    "id": "401915566",
+    "date": "2026-10-15T16:45Z",
+    "name": "Crystal Palace at Lyon",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "167",
+      "Lyon"
+     ],
+     [
+      "away",
+      "384",
+      "Crystal Palace"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 265,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0ML86441292_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-160"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-150",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0OU86441455O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+120"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0OU86441455U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+100"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+105",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0HC86441460N50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:LYON-0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-155"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-150",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0HC86441460P50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:CRY+0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+115"
+        },
+        "close": {
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0ML86441292_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+205"
+        },
+        "close": {
+         "odds": "+210",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0ML86441292_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+265"
+        },
+        "close": {
+         "odds": "+265",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716983%3Foutcomes%3D0ML86441292_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915566,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "LYON +115"
+     }
+    ]
+   },
+   {
+    "id": "401915577",
+    "date": "2026-10-15T16:45Z",
+    "name": "Omonia Nicosia at NK Celje",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "3362",
+      "NK Celje"
+     ],
+     [
+      "away",
+      "617",
+      "Omonia Nicosia"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 245,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0ML86441293_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-120"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-125",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0OU86441489O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "-115"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+100",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0OU86441489U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+125"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+130",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0HC86441494N50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:NKC-0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-190"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-190",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0HC86441494P50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:OMON+0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+140"
+        },
+        "close": {
+         "odds": "+145",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0ML86441293_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+185"
+        },
+        "close": {
+         "odds": "+175",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0ML86441293_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+230"
+        },
+        "close": {
+         "odds": "+245",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716984%3Foutcomes%3D0ML86441293_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915577,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "NKC +145"
+     }
+    ]
+   },
+   {
+    "id": "401915568",
+    "date": "2026-10-15T16:45Z",
+    "name": "AC Milan at RB Salzburg",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "2790",
+      "RB Salzburg"
+     ],
+     [
+      "away",
+      "103",
+      "AC Milan"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 295,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0ML86441289_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-155"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-165",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0OU86441319O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+125",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0OU86441319U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-115"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-110",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0HC86441324P50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:SLZ+0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "-135"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "-135",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0HC86441324N50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:MIL-0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+295"
+        },
+        "close": {
+         "odds": "+290",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0ML86441289_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "-125"
+        },
+        "close": {
+         "odds": "-120",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0ML86441289_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+280"
+        },
+        "close": {
+         "odds": "+295",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716979%3Foutcomes%3D0ML86441289_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915568,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "MIL -120"
+     }
+    ]
+   },
+   {
+    "id": "401915567",
+    "date": "2026-10-15T16:45Z",
+    "name": "Lillestrom at Sparta Prague",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "433",
+      "Sparta Prague"
+     ],
+     [
+      "away",
+      "987",
+      "Lillestrom"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 400,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0ML86441290_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-185",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0OU86441387O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+125"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+140",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0OU86441387U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-1.5",
+         "odds": "-115"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "-110",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0HC86441392N150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:SPP-1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+1.5",
+         "odds": "-135"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "-130",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0HC86441392P150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:LSK+1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "-280"
+        },
+        "close": {
+         "odds": "-275",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0ML86441290_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+650"
+        },
+        "close": {
+         "odds": "+700",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0ML86441290_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+400"
+        },
+        "close": {
+         "odds": "+400",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34716981%3Foutcomes%3D0ML86441290_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa",
+            "sport": "soccer",
+            "gameId": 401915567,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "SPP -275"
+     }
+    ]
+   }
+  ],
+  "n_proximos": 36,
+  "tabla": [
+   {
+    "nombre": "League Phase",
+    "n": 36
+   }
+  ],
+  "tabla_top": [
+   "Juventus",
+   "Crystal Palace",
+   "Sparta Prague",
+   "Besiktas",
+   "Union St.-Gilloise"
+  ]
+ },
+ "uefa.europa.conf": {
+  "proximos": [
+   {
+    "id": "401915855",
+    "date": "2026-10-15T16:45Z",
+    "name": "AS Monaco at CSKA Sofia",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "10834",
+      "CSKA Sofia"
+     ],
+     [
+      "away",
+      "174",
+      "AS Monaco"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1,
+       "displayName": "DraftKings",
+       "logos": [
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+         "rel": [
+          "light"
+         ]
+        },
+        {
+         "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+         "rel": [
+          "dark"
+         ]
+        }
+       ]
+      },
+      "drawOdds": {
+       "moneyLine": 350,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0ML86214631_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-160"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-155",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0OU86215610O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+110",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0OU86215610U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+1.5",
+         "odds": "-175"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "-195",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0HC86215615P150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:CSKA+1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-1.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "+125",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0HC86215615N150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:MON-1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+500"
+        },
+        "close": {
+         "odds": "+450",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0ML86214631_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "-215"
+        },
+        "close": {
+         "odds": "-200",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0ML86214631_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+350"
+        },
+        "close": {
+         "odds": "+350",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637987%3Foutcomes%3D0ML86214631_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915855,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "MON -200"
+     }
+    ]
+   },
+   {
+    "id": "401915854",
+    "date": "2026-10-15T16:45Z",
+    "name": "Getafe at CSU Craiova",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "8089",
+      "CSU Craiova"
+     ],
+     [
+      "away",
+      "2922",
+      "Getafe"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 220,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0ML86214632_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0OU86215632O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "-160"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "-170",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0OU86215632U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-155"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-180",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0HC86215642P50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:UCRA+0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+100"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0HC86215642N50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:GET-0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+245"
+        },
+        "close": {
+         "odds": "+205",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0ML86214632_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+115"
+        },
+        "close": {
+         "odds": "+135",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0ML86214632_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+215"
+        },
+        "close": {
+         "odds": "+220",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637988%3Foutcomes%3D0ML86214632_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915854,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "GET +135"
+     }
+    ]
+   },
+   {
+    "id": "401915859",
+    "date": "2026-10-15T16:45Z",
+    "name": "FC Midtjylland at Egnatia",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "21943",
+      "Egnatia"
+     ],
+     [
+      "away",
+      "572",
+      "FC Midtjylland"
+     ]
+    ],
+    "odds": [
+     null
+    ]
+   },
+   {
+    "id": "401915748",
+    "date": "2026-10-15T16:45Z",
+    "name": "Red Star Belgrade at FC Lugano",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "7672",
+      "FC Lugano"
+     ],
+     [
+      "away",
+      "2290",
+      "Red Star Belgrade"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 265,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0ML86201902_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-155"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-155",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0OU86202344O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+110"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "+110",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0OU86202344U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-185"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "-185",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0HC86202349P50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:LUG+0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "+120"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "+120",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0HC86202349N50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:RSB-0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+175"
+        },
+        "close": {
+         "odds": "+175",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0ML86201902_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+135"
+        },
+        "close": {
+         "odds": "+135",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0ML86201902_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+260"
+        },
+        "close": {
+         "odds": "+265",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633438%3Foutcomes%3D0ML86201902_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915748,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "RSB +135"
+     }
+    ]
+   },
+   {
+    "id": "401915861",
+    "date": "2026-10-15T16:45Z",
+    "name": "Ajax Amsterdam at Hajduk Split",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "489",
+      "Hajduk Split"
+     ],
+     [
+      "away",
+      "139",
+      "Ajax Amsterdam"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 3.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 380,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0ML86201909_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-155"
+        },
+        "close": {
+         "line": "o3.5",
+         "odds": "+130",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0OU86202206O350_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:3.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "+115"
+        },
+        "close": {
+         "line": "u3.5",
+         "odds": "-185",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0OU86202206U350_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:3.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "+0.5",
+         "odds": "-115"
+        },
+        "close": {
+         "line": "+1.5",
+         "odds": "-160",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0HC86202211P150_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:HAJ+1.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "-0.5",
+         "odds": "-135"
+        },
+        "close": {
+         "line": "-1.5",
+         "odds": "+105",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0HC86202211N150_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:AJA-1.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "+300"
+        },
+        "close": {
+         "odds": "+500",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0ML86201909_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "-120"
+        },
+        "close": {
+         "odds": "-230",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0ML86201909_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+265"
+        },
+        "close": {
+         "odds": "+380",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34633445%3Foutcomes%3D0ML86201909_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915861,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "AJA -230"
+     }
+    ]
+   },
+   {
+    "id": "401915860",
+    "date": "2026-10-15T16:45Z",
+    "name": "AGF at KAA Gent",
+    "slug": "league-phase",
+    "neutral": null,
+    "status": "STATUS_SCHEDULED",
+    "teams": [
+     [
+      "home",
+      "3611",
+      "KAA Gent"
+     ],
+     [
+      "away",
+      "7853",
+      "AGF"
+     ]
+    ],
+    "odds": [
+     {
+      "overUnder": 2.5,
+      "link": {
+       "language": "en-US",
+       "rel": [
+        "game",
+        "desktop",
+        "bets"
+       ],
+       "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984",
+       "text": "Game",
+       "shortText": "Game",
+       "isExternal": true,
+       "isPremium": false,
+       "isHidden": false
+      },
+      "provider": {
+       "id": "100",
+       "name": "DraftKings",
+       "priority": 1
+      },
+      "drawOdds": {
+       "moneyLine": 300,
+       "link": {
+        "language": "en-US",
+        "rel": [
+         "draw",
+         "desktop",
+         "bets",
+         "draftkings"
+        ],
+        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0ML86214628_2",
+        "text": "Draw Bet",
+        "shortText": "Draw Bet",
+        "isExternal": true,
+        "isPremium": false,
+        "isHidden": false
+       }
+      },
+      "total": {
+       "displayName": "Total",
+       "shortDisplayName": "Total",
+       "over": {
+        "open": {
+         "line": "o2.5",
+         "odds": "-125"
+        },
+        "close": {
+         "line": "o2.5",
+         "odds": "-125",
+         "link": {
+          "rel": [
+           "over",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0OU86215578O250_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "over",
+            "betType": "straight",
+            "betDetails": "Over:2.5"
+           }
+          }
+         }
+        }
+       },
+       "under": {
+        "open": {
+         "line": "u2.5",
+         "odds": "-110"
+        },
+        "close": {
+         "line": "u2.5",
+         "odds": "-115",
+         "link": {
+          "rel": [
+           "under",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0OU86215578U250_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "under",
+            "betType": "straight",
+            "betDetails": "Under:2.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "pointSpread": {
+       "displayName": "Spread",
+       "shortDisplayName": "Spread",
+       "home": {
+        "open": {
+         "line": "-0.5",
+         "odds": "-185"
+        },
+        "close": {
+         "line": "-0.5",
+         "odds": "-175",
+         "link": {
+          "rel": [
+           "homeSpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0HC86215583N50_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "home",
+            "betType": "straight",
+            "betDetails": "Spread:GENT-0.5"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "line": "+0.5",
+         "odds": "+120"
+        },
+        "close": {
+         "line": "+0.5",
+         "odds": "+115",
+         "link": {
+          "rel": [
+           "awaySpread",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0HC86215583P50_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "away",
+            "betType": "straight",
+            "betDetails": "Spread:AGF+0.5"
+           }
+          }
+         }
+        }
+       }
+      },
+      "moneyline": {
+       "displayName": "Moneyline",
+       "shortDisplayName": "ML",
+       "home": {
+        "open": {
+         "odds": "-160"
+        },
+        "close": {
+         "odds": "-160",
+         "link": {
+          "rel": [
+           "home",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0ML86214628_1",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "home",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "away": {
+        "open": {
+         "odds": "+390"
+        },
+        "close": {
+         "odds": "+380",
+         "link": {
+          "rel": [
+           "away",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0ML86214628_3",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "away",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       },
+       "draw": {
+        "open": {
+         "odds": "+310"
+        },
+        "close": {
+         "odds": "+300",
+         "link": {
+          "rel": [
+           "draw",
+           "bets"
+          ],
+          "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34637984%3Foutcomes%3D0ML86214628_2",
+          "tracking": {
+           "campaign": "betting-integrations",
+           "tags": {
+            "league": "uefa.europa.conf",
+            "sport": "soccer",
+            "gameId": 401915860,
+            "betSide": "draw",
+            "betType": "straight"
+           }
+          }
+         }
+        }
+       }
+      },
+      "details": "GENT -160"
+     }
+    ]
+   }
+  ],
+  "n_proximos": 36,
+  "tabla": [
+   {
+    "nombre": "League Phase",
+    "n": 36
+   }
+  ],
+  "tabla_top": [
+   "AGF",
+   "Ajax Amsterdam",
+   "Atalanta",
+   "Borac Banja Luka",
+   "SK Brann"
+  ]
+ }
+}
