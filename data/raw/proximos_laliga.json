@@ -132,7 +132,7 @@
   "estadio": "Mendizorrotza",
   "local_espn": "Alavés",
   "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -287,23 +287,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -1000,
-    1000,
-    2000
+    -900,
+    900,
+    1900
    ],
    "ou_linea": 3.5,
    "ou": [
-    -145,
-    115
+    -135,
+    110
    ],
    "spread": [
     [
      "-2.5",
-     -135
+     -120
     ],
     [
      "+2.5",
-     -105
+     -110
     ]
    ]
   }
