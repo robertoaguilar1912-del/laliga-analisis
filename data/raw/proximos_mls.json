@@ -5,7 +5,7 @@
   "estadio": "BMO Field",
   "local_espn": "Toronto FC",
   "visita_espn": "CF Montréal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   },
@@ -166,8 +166,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -160
+    130,
+    -165
    ],
    "spread": [
     [
@@ -226,14 +226,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    275,
+    110,
+    285,
     185
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -165
+    120,
+    -150
    ],
    "spread": [
     [
@@ -242,7 +242,7 @@
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   }
@@ -325,9 +325,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
+    105,
     285,
-    210
+    205
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -358,9 +358,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -285,
+    -300,
     425,
-    550
+    600
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -370,11 +370,11 @@
    "spread": [
     [
      "-1.5",
-     -115
+     -120
     ],
     [
      "+1.5",
-     -120
+     -115
     ]
    ]
   }
@@ -502,11 +502,11 @@
    "spread": [
     [
      "+0.5",
-     -180
+     -175
     ],
     [
      "-0.5",
-     130
+     125
     ]
    ]
   }
