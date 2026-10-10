@@ -404,8 +404,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="chart" id="chart-curve"></div>
     </div>
     <div class="card" id="exp-card">
-      <h3>Forma, bajas, cansancio y otros mercados</h3>
-      <p class="note">Cada idea se probó igual: solo con partidos anteriores. Las bajas y el cansancio se comparan contra el momio de cierre, porque las alineaciones salen una hora antes del partido. Precisión: pérdida logarítmica (menos es mejor).</p>
+      <h3>Ideas que se probaron</h3>
+      <p class="note">Cada idea se probó igual: solo con partidos anteriores. Las bajas y el cansancio se comparan contra el momio de cierre, porque las alineaciones salen una hora antes del partido. Precisión: pérdida logarítmica (menos es mejor); "Referencia" es la del momio de la casa.</p>
       <div class="tbl-wrap"><table class="data" id="tbl-exp" style="min-width:980px"></table></div>
     </div>
     <div class="two">
@@ -529,6 +529,18 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   if (I.aviso) { const av = $('#p-aviso'); av.innerHTML = `<b>Aviso para ${esc(I.nombre)}</b>${esc(I.aviso)}`; av.hidden = false; }
   const CUIDADO = I.cuidado || {};
   // probabilidad de cobrar "Gana local / visita" con el pago anticipado (si la liga está marcada en el registro)
+  // Lo que dice el mercado (DraftKings sin su margen). En el 1X2 se corrige el sesgo del favorito: la casa cobra de más en los
+  // que pagan mucho (en 2020-23, elevar a 1.07 y volver a repartir acercaba esas probabilidades a lo que pasó).
+  const POT_MERCADO = 1.07;
+  function mercadoDe(m, k) {
+    if (m.mercado) {
+      const q = m.mercado.map(p => Math.pow(p, POT_MERCADO)), s = q[0] + q[1] + q[2], [h, d, a] = q.map(x => x / s);
+      const t = { '1': [h, d + a], 'X': [d, h + a], '2': [a, h + d], '1X': [h + d, a], 'X2': [a + d, h], '12': [h + a, d], 'DNB1': [h, a], 'DNB2': [a, h], 'H1:-0.5': [h, d + a], 'H2:-0.5': [a, h + d], 'H1:+0.5': [h + d, a], 'H2:+0.5': [a + d, h] }[k];
+      if (t) return { W: t[0], Lo: t[1] };
+    }
+    const r = m.con_momio.find(x => x.k === k && x.p_mercado != null && /^[OU]:/.test(k));
+    return r ? { W: r.p_mercado, Lo: 1 - r.p_mercado } : null;
+  }
   const paDe = (m, k) => (m.pa && PA.has(I.liga) && (k === '1' || k === '2')) ? m.pa[k === '1' ? 0 : 1] : null;
   $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
     ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
@@ -932,16 +944,30 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const nula = push > 0.005 ? ` (nula ${pct(push, 0)})` : '';
       const pa = paDe(m, o.k);
       const dec = parseOdds(inp.value);
-      if (!inp.value.trim()) { out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`; return null; }
+      if (!inp.value.trim()) {
+        const mk0 = mercadoDe(m, o.k), pm0 = mk0 ? mk0.W / Math.max(mk0.W + mk0.Lo, 1e-12) : null;
+        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`;
+        return null;
+      }
       if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
       const ev = o.W * (dec - 1) - o.Lo;
+      // y contra el mercado: si tu casa paga más que el precio justo del mercado, eso es valor aunque el modelo no lo vea
+      const mk = mercadoDe(m, o.k);
+      const linMk = () => {
+        if (!mk) return '';
+        let W = mk.W, Lo = mk.Lo;
+        if (pa != null) { const extra = pa - p; W += extra; Lo -= extra; }     // el pago anticipado suma lo mismo que en el modelo
+        const pm = W / Math.max(W + Lo, 1e-12), evM = W * (dec - 1) - Lo, ambos = evM >= 0 && (pa != null ? pa * dec - 1 : ev) >= 0;
+        return `<br>Mercado (${esc(m.casa_momios || 'casa')} sin margen${pa != null ? ', con pago anticipado' : ''}): <span class="mono">${pct(pm, 1)}</span> · justo <span class="mono">${(1 / pm).toFixed(2)}</span> · EV <span class="mono">${spct(evM, 1)}</span>. `
+          + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? 'Solo el modelo ve valor; el mercado no. En la prueba, en esos casos casi siempre se equivocaba el modelo.' : '');
+      };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
         const evPA = pa * dec - 1, v = verdictOf(evPA);
-        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})`;
+        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}`;
         return { o, p: pa, push, dec, pa: true };
       }
       const v = verdictOf(ev);
-      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}`;
       return { o, p, push, dec };
     };
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
@@ -1069,7 +1095,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       $('#tbl-exp').innerHTML = `<thead><tr><th class="l">Prueba</th><th>Periodo</th><th class="l">Comparado con</th><th>Precisión modelo</th><th>Referencia</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>` +
         D.experimentos.map(e => `<tr><td class="nm l" style="white-space:normal;min-width:200px">${esc(e.prueba)}</td><td>${e.periodo}</td><td class="l">${esc(e.contra)}</td>
           <td class="${e.modelo > e.casa ? 'neg' : 'posv'}">${e.modelo.toFixed(4)}</td><td>${e.casa.toFixed(4)}</td>
-          <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? 'sin momios' : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
+          <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? esc(e.sin_roi || 'sin momios') : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
           <td class="wrap">${esc(e.nota)}</td></tr>`).join('') + '</tbody>';
     } else $('#exp-card').hidden = true;
     const fav = B.calibracion.reduce((a, b) => (b.real - b.pred > a.real - a.pred ? b : a));
