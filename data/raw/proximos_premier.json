@@ -5,7 +5,7 @@
   "estadio": "Villa Park",
   "local_espn": "Aston Villa",
   "visita_espn": "Brentford",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Chelsea",
   "visita_espn": "AFC Bournemouth",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Portman Road",
   "local_espn": "Ipswich Town",
   "visita_espn": "Fulham",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Stadium of Light",
   "local_espn": "Sunderland",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -607,9 +607,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    320,
-    330
+    -130,
+    310,
+    310
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -619,11 +619,11 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -140
     ],
     [
      "+0.5",
-     110
+     100
     ]
    ]
   }
