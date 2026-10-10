@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841610",
-  "utc": "2026-10-10T20:00Z",
-  "estadio": "Alfredo Terrera",
-  "local_espn": "Central Córdoba (Santiago del Estero)",
-  "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    190,
-    195,
-    165
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -200,
-    150
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -210
-    ],
-    [
-     "-0.5",
-     150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Central Córdoba (Santiago del Estero)": [
-    [
-     "149387",
-     "Alan Aguerre",
-     "G"
-    ],
-    [
-     "181496",
-     "Felipe Aguilar",
-     "CD-L"
-    ],
-    [
-     "262493",
-     "Alejandro Maciel",
-     "CD-R"
-    ],
-    [
-     "269809",
-     "Dario Cáceres",
-     "LB"
-    ],
-    [
-     "317313",
-     "Fernando Martínez",
-     "RB"
-    ],
-    [
-     "276229",
-     "Lucas González",
-     "AM"
-    ],
-    [
-     "266508",
-     "Diego Barrera",
-     "LM"
-    ],
-    [
-     "218440",
-     "Matías Vera",
-     "RM"
-    ],
-    [
-     "131758",
-     "Michael Santos",
-     "F"
-    ],
-    [
-     "292018",
-     "Marco Iacobellis",
-     "AM-L"
-    ],
-    [
-     "216663",
-     "Leonardo Sequeira",
-     "AM-R"
-    ]
-   ],
-   "Estudiantes de La Plata": [
-    [
-     "336441",
-     "Fabricio Iacovich",
-     "G"
-    ],
-    [
-     "154748",
-     "Leandro González Pírez",
-     "D"
-    ],
-    [
-     "151953",
-     "Ramiro Funes Mori",
-     "D"
-    ],
-    [
-     "250467",
-     "Santiago Arzamendia",
-     "D"
-    ],
-    [
-     "403329",
-     "Tomás Palacios",
-     "D"
-    ],
-    [
-     "309429",
-     "Bautista Kociubinski",
-     "M"
-    ],
-    [
-     "264844",
-     "Edwin Cetre",
-     "M"
-    ],
-    [
-     "307659",
-     "Miguel Monsalve",
-     "M"
-    ],
-    [
-     "234873",
-     "Alexis Castro",
-     "M"
-    ],
-    [
-     "316649",
-     "Fabricio Pérez",
-     "M"
-    ],
-    [
-     "276024",
-     "Adolfo Gaich",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841599",
   "utc": "2026-10-10T22:15Z",
   "estadio": "Monumental de Victoria (José Dellagiovanna)",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    250,
-    390
+    -125,
+    235,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
-    -165
+    130,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -130
     ],
     [
      "+0.5",
-     100
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Tigre": [
+    [
+     "292055",
+     "Felipe Zenobio",
+     "G"
+    ],
+    [
+     "315722",
+     "Alan Barrionuevo",
+     "CD-L"
+    ],
+    [
+     "215871",
+     "Joaquín Laso",
+     "CD-R"
+    ],
+    [
+     "186572",
+     "Federico Álvarez",
+     "LB"
+    ],
+    [
+     "361651",
+     "Valentin Moreno",
+     "RB"
+    ],
+    [
+     "323250",
+     "Bruno Leyes",
+     "CM-L"
+    ],
+    [
+     "361648",
+     "Santiago González",
+     "CM-R"
+    ],
+    [
+     "362880",
+     "Santiago López",
+     "LM"
+    ],
+    [
+     "351815",
+     "Jabes Saralegui",
+     "RM"
+    ],
+    [
+     "309475",
+     "Ignacio Russo",
+     "CF-L"
+    ],
+    [
+     "339007",
+     "Jerónimo Domina",
+     "CF-R"
+    ]
+   ],
+   "Banfield": [
+    [
+     "200275",
+     "Diego Rodríguez",
+     "G"
+    ],
+    [
+     "390387",
+     "Lisandro Piñero",
+     "CD-L"
+    ],
+    [
+     "387389",
+     "Santiago Daniele",
+     "CD-R"
+    ],
+    [
+     "335674",
+     "Luis Abraham",
+     "LB"
+    ],
+    [
+     "215564",
+     "Juan Alfaro",
+     "RB"
+    ],
+    [
+     "379901",
+     "Federico Medina",
+     "AM"
+    ],
+    [
+     "302033",
+     "Nicolás Meriano",
+     "LM"
+    ],
+    [
+     "393533",
+     "Santiago Esquivel",
+     "RM"
+    ],
+    [
+     "208638",
+     "Adrián Balboa",
+     "F"
+    ],
+    [
+     "338907",
+     "Tomás Adoryan",
+     "AM-L"
+    ],
+    [
+     "163064",
+     "David Salazar",
+     "AM-R"
     ]
    ]
   }
