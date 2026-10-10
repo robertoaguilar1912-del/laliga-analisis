@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841262",
-  "utc": "2026-10-10T21:00Z",
-  "estadio": "Estádio São Januário",
-  "local_espn": "Vasco da Gama",
-  "visita_espn": "Remo",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -370,
-    475,
-    950
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    125,
-    -170
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -135
-    ],
-    [
-     "+1.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Vasco da Gama": [
-    [
-     "205464",
-     "Léo Jardim",
-     "G"
-    ],
-    [
-     "337099",
-     "Robert Renan",
-     "CD-L"
-    ],
-    [
-     "317383",
-     "Alan Saldivia",
-     "CD-R"
-    ],
-    [
-     "287862",
-     "Lucas Piton",
-     "LB"
-    ],
-    [
-     "43711",
-     "José Luis Rodríguez",
-     "RB"
-    ],
-    [
-     "336485",
-     "Alan Lescano",
-     "AM"
-    ],
-    [
-     "201717",
-     "Thiago Mendes",
-     "LM"
-    ],
-    [
-     "196873",
-     "Jair",
-     "RM"
-    ],
-    [
-     "219005",
-     "David",
-     "F"
-    ],
-    [
-     "275941",
-     "Facundo Colidio",
-     "AM-L"
-    ],
-    [
-     "330924",
-     "Andrés Gómez",
-     "AM-R"
-    ]
-   ],
-   "Remo": [
-    [
-     "206952",
-     "Marcelo Rangel",
-     "G"
-    ],
-    [
-     "319270",
-     "Zé Ivaldo",
-     "CD-L"
-    ],
-    [
-     "157743",
-     "Marllon",
-     "CD-R"
-    ],
-    [
-     "215815",
-     "Marlon Lopes",
-     "LB"
-    ],
-    [
-     "304826",
-     "Marcelinho",
-     "RB"
-    ],
-    [
-     "276661",
-     "Zé Ricardo",
-     "AM"
-    ],
-    [
-     "198362",
-     "Patrick",
-     "LM"
-    ],
-    [
-     "201793",
-     "José Welison",
-     "RM"
-    ],
-    [
-     "338668",
-     "Eduardo",
-     "F"
-    ],
-    [
-     "235385",
-     "Gabriel Taliari",
-     "AM-L"
-    ],
-    [
-     "186832",
-     "Yago Pikachu",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841259",
   "utc": "2026-10-11T00:00Z",
   "estadio": "Estádio Cícero Pompeu de Toledo",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    280,
-    425
+    -140,
+    260,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -135
+    110,
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -155
     ],
     [
      "+0.5",
-     120
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "São Paulo": [
+    [
+     "199013",
+     "Rafael",
+     "G"
+    ],
+    [
+     "285010",
+     "Sabino",
+     "D"
+    ],
+    [
+     "201531",
+     "Robert Arboleda",
+     "D"
+    ],
+    [
+     "357362",
+     "Newton",
+     "D"
+    ],
+    [
+     "252800",
+     "Iago",
+     "M"
+    ],
+    [
+     "206953",
+     "Lucas Ramon",
+     "M"
+    ],
+    [
+     "402686",
+     "Djhordney Ferreira",
+     "M"
+    ],
+    [
+     "402683",
+     "Gustavo Santana",
+     "M"
+    ],
+    [
+     "236596",
+     "Artur",
+     "M"
+    ],
+    [
+     "301516",
+     "Damián Bobadilla",
+     "M"
+    ],
+    [
+     "162558",
+     "Jonathan Calleri",
+     "F"
+    ]
+   ],
+   "Vitória": [
+    [
+     "287941",
+     "Lucas Arcanjo",
+     "G"
+    ],
+    [
+     "266676",
+     "Luan Cândido",
+     "D"
+    ],
+    [
+     "315766",
+     "Matheusinho",
+     "D"
+    ],
+    [
+     "284450",
+     "Jamerson",
+     "D"
+    ],
+    [
+     "271773",
+     "Cacá",
+     "D"
+    ],
+    [
+     "256044",
+     "Erick",
+     "M"
+    ],
+    [
+     "218649",
+     "Emmanuel Martínez",
+     "M"
+    ],
+    [
+     "218972",
+     "Matheus",
+     "M"
+    ],
+    [
+     "252315",
+     "Caique",
+     "M"
+    ],
+    [
+     "253009",
+     "Lucas",
+     "M"
+    ],
+    [
+     "379359",
+     "Renê",
+     "F"
     ]
    ]
   }
@@ -226,23 +193,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    360,
-    600
+    -220,
+    350,
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     110
    ],
    "spread": [
     [
      "-1.5",
-     115
+     120
     ],
     [
      "+1.5",
-     -160
+     -170
     ]
    ]
   }
