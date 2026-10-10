@@ -132,7 +132,7 @@
   "estadio": "Mendizorrotza",
   "local_espn": "Alavés",
   "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -288,8 +288,8 @@
    "casa": "DraftKings",
    "ml": [
     -900,
-    900,
-    1900
+    850,
+    2000
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -299,11 +299,127 @@
    "spread": [
     [
      "-2.5",
-     -120
+     -115
     ],
     [
      "+2.5",
-     -110
+     -115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Barcelona": [
+    [
+     "297362",
+     "Joan García",
+     "G"
+    ],
+    [
+     "312015",
+     "Gerard Martín",
+     "CD-L"
+    ],
+    [
+     "128714",
+     "Eric García",
+     "CD-R"
+    ],
+    [
+     "403582",
+     "Xavi Espart",
+     "LB"
+    ],
+    [
+     "231692",
+     "Jules Koundé",
+     "RB"
+    ],
+    [
+     "231828",
+     "Rodri",
+     "CM"
+    ],
+    [
+     "227765",
+     "Dani Olmo",
+     "LM"
+    ],
+    [
+     "323702",
+     "Gavi",
+     "RM"
+    ],
+    [
+     "217289",
+     "Gabriel Jesus",
+     "F"
+    ],
+    [
+     "268782",
+     "Anthony Gordon",
+     "LF"
+    ],
+    [
+     "362150",
+     "Lamine Yamal",
+     "RF"
+    ]
+   ],
+   "Getafe": [
+    [
+     "196339",
+     "David Soria",
+     "G"
+    ],
+    [
+     "136673",
+     "Nemanja Gudelj",
+     "CD"
+    ],
+    [
+     "300111",
+     "Zaid Romero",
+     "CD-L"
+    ],
+    [
+     "181355",
+     "Djené",
+     "CD-R"
+    ],
+    [
+     "173247",
+     "Johan Mojica",
+     "LB"
+    ],
+    [
+     "125749",
+     "Kiko Femenía",
+     "RB"
+    ],
+    [
+     "357147",
+     "Mario Martín",
+     "CM-L"
+    ],
+    [
+     "307186",
+     "Francho Serrano",
+     "CM-R"
+    ],
+    [
+     "309838",
+     "Ramón Terrats",
+     "LM"
+    ],
+    [
+     "356080",
+     "Andrés García",
+     "RM"
+    ],
+    [
+     "310259",
+     "Ivan Azón",
+     "F"
     ]
    ]
   }
@@ -426,7 +542,7 @@
    "ou_linea": 2.5,
    "ou": [
     -135,
-    110
+    105
    ],
    "spread": [
     [
