@@ -5,7 +5,7 @@
   "estadio": "Estadio Claudio Chiqui Tapia",
   "local_espn": "Barracas Central",
   "visita_espn": "Huracán",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
+    190,
     195,
-    185
+    165
    ],
    "ou_linea": 1.5,
    "ou": [
-    -195,
-    145
+    -200,
+    150
    ],
    "spread": [
     [
-     "-0.5",
-     160
+     "+0.5",
+     -210
     ],
     [
-     "+0.5",
-     -225
+     "-0.5",
+     150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Central Córdoba (Santiago del Estero)": [
+    [
+     "149387",
+     "Alan Aguerre",
+     "G"
+    ],
+    [
+     "181496",
+     "Felipe Aguilar",
+     "CD-L"
+    ],
+    [
+     "262493",
+     "Alejandro Maciel",
+     "CD-R"
+    ],
+    [
+     "269809",
+     "Dario Cáceres",
+     "LB"
+    ],
+    [
+     "317313",
+     "Fernando Martínez",
+     "RB"
+    ],
+    [
+     "276229",
+     "Lucas González",
+     "AM"
+    ],
+    [
+     "266508",
+     "Diego Barrera",
+     "LM"
+    ],
+    [
+     "218440",
+     "Matías Vera",
+     "RM"
+    ],
+    [
+     "131758",
+     "Michael Santos",
+     "F"
+    ],
+    [
+     "292018",
+     "Marco Iacobellis",
+     "AM-L"
+    ],
+    [
+     "216663",
+     "Leonardo Sequeira",
+     "AM-R"
+    ]
+   ],
+   "Estudiantes de La Plata": [
+    [
+     "336441",
+     "Fabricio Iacovich",
+     "G"
+    ],
+    [
+     "154748",
+     "Leandro González Pírez",
+     "D"
+    ],
+    [
+     "151953",
+     "Ramiro Funes Mori",
+     "D"
+    ],
+    [
+     "250467",
+     "Santiago Arzamendia",
+     "D"
+    ],
+    [
+     "403329",
+     "Tomás Palacios",
+     "D"
+    ],
+    [
+     "309429",
+     "Bautista Kociubinski",
+     "M"
+    ],
+    [
+     "264844",
+     "Edwin Cetre",
+     "M"
+    ],
+    [
+     "307659",
+     "Miguel Monsalve",
+     "M"
+    ],
+    [
+     "234873",
+     "Alexis Castro",
+     "M"
+    ],
+    [
+     "316649",
+     "Fabricio Pérez",
+     "M"
+    ],
+    [
+     "276024",
+     "Adolfo Gaich",
+     "F"
     ]
    ]
   }
