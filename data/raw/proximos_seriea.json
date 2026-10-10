@@ -5,7 +5,7 @@
   "estadio": "San Siro",
   "local_espn": "Internazionale",
   "visita_espn": "Parma",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -17,8 +17,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    100,
+    -125
    ],
    "spread": [
     [
@@ -193,9 +193,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
+    145,
     245,
-    160
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -623,22 +623,22 @@
    "casa": "DraftKings",
    "ml": [
     -120,
-    245,
-    275
+    250,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
+    -135,
     100
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -125
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
