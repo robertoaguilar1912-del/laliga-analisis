@@ -1,154 +1,5 @@
 [
  {
-  "id": "401878004",
-  "utc": "2026-10-10T20:30Z",
-  "estadio": "Estadio Santiago de Las Atalayas",
-  "local_espn": "Deportivo Pereira",
-  "visita_espn": "Deportivo Cali",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    350,
-    275,
-    -145
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -120,
-    -110
-   ],
-   "spread": [
-    [
-     "+0.5",
-     105
-    ],
-    [
-     "-0.5",
-     -150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Deportivo Pereira": [
-    [
-     "259658",
-     "Yimy Gómez",
-     "G"
-    ],
-    [
-     "228693",
-     "Jordy Monroy",
-     "CD-L"
-    ],
-    [
-     "320086",
-     "Santiago Aguilar",
-     "CD-R"
-    ],
-    [
-     "357491",
-     "Tobías Bovone",
-     "LB"
-    ],
-    [
-     "197652",
-     "Walmer Pacheco",
-     "RB"
-    ],
-    [
-     "413593",
-     "Miguel Aguirre",
-     "CM-L"
-    ],
-    [
-     "379435",
-     "Nicolas Rengifo",
-     "CM-R"
-    ],
-    [
-     "151412",
-     "Marco Pérez",
-     "LM"
-    ],
-    [
-     "417839",
-     "Luis Moreno",
-     "RM"
-    ],
-    [
-     "379518",
-     "Jhon Largacha",
-     "CF-L"
-    ],
-    [
-     "206553",
-     "Sebastian Acosta",
-     "CF-R"
-    ]
-   ],
-   "Deportivo Cali": [
-    [
-     "312614",
-     "Alejandro Rodríguez",
-     "G"
-    ],
-    [
-     "324044",
-     "Fernando Álvarez",
-     "CD-L"
-    ],
-    [
-     "178817",
-     "Edwin Velasco",
-     "CD-R"
-    ],
-    [
-     "132555",
-     "José David Moya",
-     "LB"
-    ],
-    [
-     "202474",
-     "Fabián Viáfara",
-     "RB"
-    ],
-    [
-     "233326",
-     "Emanuel Reynoso",
-     "AM"
-    ],
-    [
-     "157256",
-     "Daniel Giraldo",
-     "LM"
-    ],
-    [
-     "251881",
-     "Leyser Chaverra",
-     "RM"
-    ],
-    [
-     "193755",
-     "Juan Dinenno",
-     "F"
-    ],
-    [
-     "144157",
-     "Eduard Bello",
-     "AM-L"
-    ],
-    [
-     "348929",
-     "Johan Andrés Martínez",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401877899",
   "utc": "2026-10-10T23:10Z",
   "estadio": "Romelio Martínez",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    300,
+    -170,
+    290,
     425
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -140,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -190
+     -175
     ],
     [
      "+0.5",
-     135
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Junior": [
+    [
+     "197535",
+     "Jefersson Martínez",
+     "G"
+    ],
+    [
+     "204833",
+     "Pablo Ortíz",
+     "CD-L"
+    ],
+    [
+     "295070",
+     "Jermein Peña",
+     "CD-R"
+    ],
+    [
+     "224023",
+     "Jeison Suárez",
+     "LB"
+    ],
+    [
+     "419303",
+     "Daniel Socarras",
+     "RB"
+    ],
+    [
+     "281017",
+     "Kevin Pérez",
+     "AM"
+    ],
+    [
+     "256877",
+     "Jesús Rivas",
+     "LM"
+    ],
+    [
+     "266584",
+     "Fabián Ángel",
+     "RM"
+    ],
+    [
+     "98576",
+     "Teófilo Gutiérrez",
+     "F"
+    ],
+    [
+     "266579",
+     "Deiber Caicedo",
+     "AM-L"
+    ],
+    [
+     "151510",
+     "Luis Muriel",
+     "AM-R"
+    ]
+   ],
+   "Internacional de Bogotá": [
+    [
+     "220056",
+     "Wuilker Faríñez",
+     "G"
+    ],
+    [
+     "252022",
+     "Mateo Rodas",
+     "CD"
+    ],
+    [
+     "315810",
+     "Agustín Irazoque",
+     "CD-L"
+    ],
+    [
+     "217454",
+     "Joan Castro",
+     "CD-R"
+    ],
+    [
+     "197568",
+     "Larry Vásquez",
+     "CM-L"
+    ],
+    [
+     "331702",
+     "Dewar Victoria",
+     "CM-R"
+    ],
+    [
+     "359505",
+     "Miguel Pernía",
+     "LM"
+    ],
+    [
+     "403073",
+     "Ronaldo Julio",
+     "RM"
+    ],
+    [
+     "119532",
+     "Diego Duarte",
+     "F"
+    ],
+    [
+     "379730",
+     "Fabricio Sanguinetti",
+     "CF-L"
+    ],
+    [
+     "222678",
+     "Cristián Dájome",
+     "CF-R"
     ]
    ]
   }
