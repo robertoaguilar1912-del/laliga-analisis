@@ -1,154 +1,5 @@
 [
  {
-  "id": "401885424",
-  "utc": "2026-10-10T17:00Z",
-  "estadio": "Estádio do Marítimo",
-  "local_espn": "Maritimo",
-  "visita_espn": "FC Porto",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-portuguese-primeira-liga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    900,
-    400,
-    -330
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    -105
-   ],
-   "spread": [
-    [
-     "+1.5",
-     -130
-    ],
-    [
-     "-1.5",
-     -110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Maritimo": [
-    [
-     "271914",
-     "Fran Vieites",
-     "G"
-    ],
-    [
-     "274283",
-     "Romain Correia",
-     "CD-L"
-    ],
-    [
-     "363445",
-     "Gábor Szalai",
-     "CD-R"
-    ],
-    [
-     "222217",
-     "Paulo Henrique",
-     "LB"
-    ],
-    [
-     "288899",
-     "Tomas Tavares",
-     "RB"
-    ],
-    [
-     "233707",
-     "Maxime Dominguez",
-     "AM"
-    ],
-    [
-     "219235",
-     "Raphael Guzzo",
-     "LM"
-    ],
-    [
-     "403460",
-     "Ibrahim Alani",
-     "RM"
-    ],
-    [
-     "300872",
-     "Adrián Butzke",
-     "F"
-    ],
-    [
-     "367656",
-     "Martín Tejón",
-     "AM-L"
-    ],
-    [
-     "200659",
-     "Igor Julião",
-     "AM-R"
-    ]
-   ],
-   "FC Porto": [
-    [
-     "238903",
-     "Diogo Costa",
-     "G"
-    ],
-    [
-     "304965",
-     "Jakub Kiwior",
-     "CD-L"
-    ],
-    [
-     "221788",
-     "Jan Bednarek",
-     "CD-R"
-    ],
-    [
-     "274289",
-     "Moura",
-     "LB"
-    ],
-    [
-     "346111",
-     "Alberto Costa",
-     "RB"
-    ],
-    [
-     "307601",
-     "Alan Varela",
-     "CM"
-    ],
-    [
-     "280061",
-     "Hwang In-Beom",
-     "LM"
-    ],
-    [
-     "373520",
-     "Victor Froholdt",
-     "RM"
-    ],
-    [
-     "3368",
-     "André Silva",
-     "F"
-    ],
-    [
-     "256909",
-     "Pepê",
-     "LF"
-    ],
-    [
-     "376664",
-     "William Gomes",
-     "RF"
-    ]
-   ]
-  }
- },
- {
   "id": "401885429",
   "utc": "2026-10-10T19:30Z",
   "estadio": "Estádio do Fontelo",
@@ -162,7 +13,7 @@
    "ml": [
     120,
     240,
-    220
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -309,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    275,
-    225,
-    105
+    270,
+    220,
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -321,11 +172,127 @@
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     100
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Casa Pia": [
+    [
+     "358088",
+     "Ivan Mandic",
+     "G"
+    ],
+    [
+     "301593",
+     "David Sousa",
+     "CD-L"
+    ],
+    [
+     "386143",
+     "Kaly",
+     "CD-R"
+    ],
+    [
+     "373713",
+     "Pedro Rosas",
+     "LB"
+    ],
+    [
+     "149660",
+     "André Geraldes",
+     "RB"
+    ],
+    [
+     "384419",
+     "João Rêgo",
+     "AM"
+    ],
+    [
+     "285846",
+     "Lawrence Ofori",
+     "LM"
+    ],
+    [
+     "367661",
+     "Silvi Clua",
+     "RM"
+    ],
+    [
+     "334530",
+     "Henrique Araújo",
+     "F"
+    ],
+    [
+     "385189",
+     "Benjamin Pauwels",
+     "AM-L"
+    ],
+    [
+     "345624",
+     "Mohamed Salah El Boukammiri",
+     "AM-R"
+    ]
+   ],
+   "Santa Clara": [
+    [
+     "236200",
+     "Lucas França",
+     "G"
+    ],
+    [
+     "3100806",
+     "Emanuel Moreira",
+     "CD-L"
+    ],
+    [
+     "141692",
+     "Pedro Pacheco",
+     "CD-R"
+    ],
+    [
+     "256866",
+     "Guilherme Romão",
+     "LB"
+    ],
+    [
+     "271772",
+     "Lucas Soares",
+     "RB"
+    ],
+    [
+     "306663",
+     "Pedro Ferreira",
+     "CM"
+    ],
+    [
+     "334366",
+     "Tiago Ribeiro",
+     "LM"
+    ],
+    [
+     "403567",
+     "Djé",
+     "RM"
+    ],
+    [
+     "215726",
+     "Gonçalo Paciência",
+     "F"
+    ],
+    [
+     "338644",
+     "Brenner",
+     "LF"
+    ],
+    [
+     "298067",
+     "Vinícius Lopes",
+     "RF"
     ]
    ]
   }
