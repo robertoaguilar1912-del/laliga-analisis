@@ -5,7 +5,7 @@
   "estadio": "Stadion An der Alten Försterei",
   "local_espn": "1. FC Union Berlin",
   "visita_espn": "SV Elversberg",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    135
+    -165,
+    130
    ],
    "spread": [
     [
@@ -154,7 +154,7 @@
   "estadio": "WWK Arena",
   "local_espn": "FC Augsburg",
   "visita_espn": "Bayern Munich",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -303,29 +303,29 @@
   "estadio": "MEWA ARENA",
   "local_espn": "Mainz",
   "visita_espn": "Bayer Leverkusen",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
+    195,
     255,
-    115
+    120
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -180,
-    140
+    140,
+    -175
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -155
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   },
@@ -452,15 +452,15 @@
   "estadio": "Home Deluxe Arena",
   "local_espn": "SC Paderborn 07",
   "visita_espn": "VfB Stuttgart",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
+    350,
     340,
-    -160
+    -170
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -470,11 +470,11 @@
    "spread": [
     [
      "+0.5",
-     120
+     130
     ],
     [
      "-0.5",
-     -170
+     -180
     ]
    ]
   },
@@ -601,7 +601,7 @@
   "estadio": "PreZero Arena",
   "local_espn": "TSG Hoffenheim",
   "visita_espn": "Hamburg SV",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -740,9 +740,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    360,
-    360
+    -170,
+    350,
+    330
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -751,12 +751,12 @@
    ],
    "spread": [
     [
-     "-1.5",
-     130
+     "-0.5",
+     -175
     ],
     [
-     "+1.5",
-     -180
+     "+0.5",
+     125
     ]
    ]
   }

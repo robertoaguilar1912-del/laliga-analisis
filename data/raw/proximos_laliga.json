@@ -5,7 +5,7 @@
   "estadio": "Estadio de Vallecas",
   "local_espn": "Rayo Vallecano",
   "visita_espn": "Athletic Club",
-  "estado": "STATUS_SUSPENDED",
+  "estado": "STATUS_ABANDONED",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": null,
@@ -132,7 +132,7 @@
   "estadio": "Mendizorrotza",
   "local_espn": "Alavés",
   "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -144,8 +144,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -125
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -293,7 +293,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
+    -145,
     115
    ],
    "spread": [
@@ -718,21 +718,21 @@
    "ml": [
     100,
     235,
-    275
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -145
+    110,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -115
+     -110
     ],
     [
      "+0.5",
-     -135
+     -130
     ]
    ]
   }
