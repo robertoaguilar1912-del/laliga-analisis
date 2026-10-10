@@ -20,7 +20,7 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
-from model import DixonColes, markets_from_matrix
+from model import DixonColes, markets_from_matrix, RECAL_1X2
 
 VENTANA = 3 * 365
 DESDE = {'europa': '2020-08-01', 'torneos': '2020-07-01', 'anual': '2021-01-01'}
@@ -96,7 +96,7 @@ def predecir(liga):
         nuevos = promo.get(dia.Season.iloc[0], set())
         if arriba is not None:
             nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba)
-        m = DixonColes().fit(hist, d0, promoted=nuevos)
+        m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None).fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:
                 continue

@@ -1,0 +1,23 @@
+[
+ {
+  "prueba": "Corrección de favoritos y empates (en uso desde el 10 oct 2026)",
+  "periodo": "2023-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9591575645673587,
+  "casa": 0.9510384220681569,
+  "roi": 0.013261589403973498,
+  "n": 604,
+  "nota": "Elegida con 2020-23 en las 7 ligas de Europa y probada aquí en 2023-26. Sin la corrección: precisión 0.9624, ROI −9.2% (787 apuestas). El modelo apretaba de más la diferencia entre equipos y daba demasiado empate cuando uno es mucho mejor. Solo 1X2."
+ },
+ {
+  "prueba": "Combinar el modelo con el momio del mercado",
+  "periodo": "2023-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9506569479751297,
+  "casa": 0.9510384220681569,
+  "roi": null,
+  "n": 3,
+  "sin_roi": "casi sin apuestas",
+  "nota": "Al mezclar los dos, el peso del modelo sale en cero o negativo (modelo −0.10, mercado 1.16): el mercado ya sabe todo lo que sabe el modelo, y donde no coinciden suele acertar el mercado. La mezcla casi nunca encuentra valor contra la misma casa."
+ }
+]

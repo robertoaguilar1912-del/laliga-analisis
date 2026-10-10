@@ -1,6 +1,6 @@
 [
  {
-  "prueba": "Modelo base: goles y tiros a puerta",
+  "prueba": "Modelo base: goles y tiros a puerta (hasta el 9 oct 2026)",
   "periodo": "2020-26",
   "contra": "Bet365 apertura",
   "modelo": 0.9858635261454068,
@@ -58,5 +58,26 @@
   "roi": null,
   "n": null,
   "nota": "Predice mejor que el promedio y sus porcentajes se cumplen, pero no hay momios históricos de córners para saber si le gana a la casa."
+ },
+ {
+  "prueba": "Corrección de favoritos y empates (en uso desde el 10 oct 2026)",
+  "periodo": "2023-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9629445480219825,
+  "casa": 0.9489207129699647,
+  "roi": -0.22786561264822133,
+  "n": 506,
+  "nota": "Elegida con 2020-23 en las 7 ligas de Europa y probada aquí en 2023-26. Sin la corrección: precisión 0.9705, ROI −27.0% (689 apuestas). El modelo apretaba de más la diferencia entre equipos y daba demasiado empate cuando uno es mucho mejor. Solo 1X2."
+ },
+ {
+  "prueba": "Combinar el modelo con el momio del mercado",
+  "periodo": "2023-26",
+  "contra": "Bet365 apertura",
+  "modelo": 0.9457106197651948,
+  "casa": 0.9489207129699647,
+  "roi": null,
+  "n": 2,
+  "sin_roi": "casi sin apuestas",
+  "nota": "Al mezclar los dos, el peso del modelo sale en cero o negativo (modelo −0.10, mercado 1.16): el mercado ya sabe todo lo que sabe el modelo, y donde no coinciden suele acertar el mercado. La mezcla casi nunca encuentra valor contra la misma casa."
  }
 ]

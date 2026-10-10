@@ -17,7 +17,7 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, ZONAS, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
-from model import DixonColes
+from model import DixonColes, RECAL_1X2
 from corners import CornerModel, RematesModel
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
@@ -414,7 +414,8 @@ def analizar_liga(liga):
         cmodel = rmodel = None
         calendario = europa.calendario_equipos(ref)
     else:
-        modelo = DixonColes().fit(hist, ref, promoted=nuevos)
+        # ligas de Europa: con la corrección de favoritos y empates (ver RECAL_1X2 en model.py)
+        modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None).fit(hist, ref, promoted=nuevos)
         hc = hist.dropna(subset=['HC', 'AC'])
         cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
         hs = hist.dropna(subset=['HST', 'AST'])

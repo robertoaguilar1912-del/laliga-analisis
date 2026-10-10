@@ -57,11 +57,11 @@ LIGAS = {
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
     'portugal': {'nombre': 'Liga Portugal', 'pais': 'Portugal', 'espn': 'por.1', 'fd': 'P1', 'calendario': 'europa', 'api_football': 94,
                  'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18',
-                 'aviso': 'Esta es la liga donde peor le fue al modelo en la prueba 2020-2026 (−21.9% siguiendo los PICK). '
-                          'Sobre todo, cuidado con los PICK de empate: perdieron −50%. El modelo le da al empate más probabilidad '
-                          'de la que tiene, en especial cuando Porto, Benfica o Sporting juegan contra equipos chicos. Usa la '
-                          'página para ver estadísticas y momios justos; más/menos de 2.5 goles se comporta como en las otras ligas.',
-                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron −50% en la prueba'}},
+                 'aviso': 'Una de las ligas donde peor le fue al modelo en la prueba 2020-2026: −13.3% siguiendo los PICK (era −21.9% '
+                          'antes de la corrección de favoritos y empates del 10 oct 2026). El modelo le daba al empate de más cuando '
+                          'Porto, Benfica o Sporting juegan contra equipos chicos; con la corrección los PICK de empate casi desaparecen '
+                          '(60 en seis años), pero los que quedan perdieron −67%. Usa la página para ver estadísticas y momios justos.',
+                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron −67% en la prueba (60 apuestas)'}},
     # uefa: copa europea. Equipos de ligas distintas: se usa el modelo de toda Europa (src/europa.py), que mide cuánto vale
     # cada liga con los partidos europeos. Sus resultados (y los de 21 ligas) los baja europa.py, no football-data.
     'champions': {'nombre': 'Champions League', 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'uefa': True,
