@@ -512,7 +512,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const formHTML = f => `<span class="form" aria-label="Últimos 5: ${f}">${[...f].map(c => `<i class="${c}" title="${c === 'G' ? 'Ganó' : c === 'E' ? 'Empató' : 'Perdió'}">${c}</i>`).join('')}</span>`;
   const amToDec = a => a > 0 ? 1 + a / 100 : 1 + 100 / Math.abs(a);
   const parseOdds = s => { s = String(s).trim().replace(',', '.').replace('−', '-'); if (!s) return null; const v = parseFloat(s); if (!isFinite(v)) return null; if (/^[+-]/.test(s) || Math.abs(v) >= 100) return Math.abs(v) >= 100 ? amToDec(v) : null; if (v > 1 && v < 100) return v; return null; };
-  const verdictOf = ev => ev >= 0.05 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+  const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   const posLabel = p => ({ G: 'POR', D: 'DEF', M: 'MED', F: 'DEL' })[(p || '?')[0] === 'C' && p.startsWith('CD') ? 'D' : (p || '?')[0]] || p;
   function grp(p) { p = (p || '').toUpperCase(); if (p.startsWith('G')) return 'POR'; if (/^(CD|CB|LB|RB|D|LWB|RWB|SW)/.test(p)) return 'DEF'; if (/^(DM|CM|LM|RM|M)/.test(p)) return 'MED'; return 'DEL'; }
 
@@ -742,7 +742,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const el = $('#match-detail'); el.hidden = false;
     const cell = (v, color) => `<div class="cellbar"><span class="v">${pct(v)}</span><span class="track"><span class="fill" style="width:${(v * 100).toFixed(1)}%;background:${color}"></span></span></div>`;
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
-    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}</span>
+    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
     const conLinea = tiposDe(m);
@@ -826,7 +826,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <h3>Mercados con momio</h3>
             <div class="markets">${priced || '<p class="empty">La casa todavía no publica momios para este partido. Mientras tanto usa los momios justos de la pestaña Mercados.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu mercado no está aquí o quieres guardar tu apuesta? Compáralo con tu casa →</button>
-            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
+            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más y el modelo le da al menos 30%. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
           </div>
         </div>
         <div class="grid2">
@@ -962,11 +962,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? 'Solo el modelo ve valor; el mercado no. En la prueba, en esos casos casi siempre se equivocaba el modelo.' : '');
       };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
-        const evPA = pa * dec - 1, v = verdictOf(evPA);
+        const evPA = pa * dec - 1, v = verdictOf(evPA, pa);
         out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}`;
         return { o, p: pa, push, dec, pa: true };
       }
-      const v = verdictOf(ev);
+      const v = verdictOf(ev, p);
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}`;
       return { o, p, push, dec };
     };
@@ -1416,6 +1416,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         ${notaPA(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
           return sub.length < lista.length ? `<p class="note">Sin los "Lejos del mercado" (EV de 20% o más, los que más perdieron en la prueba): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
+        ${(() => { const sub = lista.filter(x => x.bet.p >= 0.30), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
+          return sub.length < lista.length ? `<p class="note">Solo los que el modelo daba en 30% o más (la regla de PICK desde el 10 oct 2026; los de antes se guardaron con la regla vieja): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
       </div>

@@ -19,5 +19,15 @@
   "n": 11,
   "sin_roi": "casi sin apuestas",
   "nota": "Al mezclar los dos, el peso del modelo sale en cero o negativo (modelo −0.10, mercado 1.16): el mercado ya sabe todo lo que sabe el modelo, y donde no coinciden suele acertar el mercado. La mezcla casi nunca encuentra valor contra la misma casa."
+ },
+ {
+  "prueba": "PICK solo si el modelo da 30% o más (en uso desde el 10 oct 2026)",
+  "periodo": "2020-26",
+  "contra": "la misma referencia de la prueba",
+  "modelo": 0.9970005728436899,
+  "casa": 0.9733821107640171,
+  "roi": -0.13430358632193495,
+  "n": 1199,
+  "nota": "Sin la regla: 1,762 apuestas, ROI −11.1%. En esta liga la regla no ayudó: los \"PICK\" de menos de 30% salieron mejor que el resto. En el conjunto de las ligas sí ayuda (fútbol de −9.8% a −8.0%, con la mitad de las pérdidas), por eso se usa en todas."
  }
 ]

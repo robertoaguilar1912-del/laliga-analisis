@@ -17,7 +17,7 @@ import warnings
 import numpy as np
 import pandas as pd
 
-from config import DATOS
+from config import DATOS, PICK_P_MIN
 from nba import (cargar_juegos, cargar_box, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
                  HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES)
 
@@ -96,7 +96,7 @@ def apuestas(d, sigma):
                     ('Moneyline', 'visita', a / (h + a), 0, h / (h + a), am_to_dec(r.ml_v), -r.margen)]
         for mk, lado, gana, push, pierde, dec, x in sel:
             ev = gana * (dec - 1) - pierde
-            if ev < 0:
+            if ev < 0 or gana / max(gana + pierde, 1e-9) < PICK_P_MIN:     # con menos de 30% no es PICK (config.py)
                 continue
             res = 1 if x > 0 else (0.5 if x == 0 else 0)
             filas.append({'Date': r.fecha_dt, 'Season': int(r.temporada), 'mercado': mk, 'lado': lado, 'odds': dec, 'ev': ev,

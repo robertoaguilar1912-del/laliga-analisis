@@ -9,6 +9,11 @@ ESPN_DIR = DATOS / 'espn'
 SITIO = RAIZ / 'site'
 
 ZONA = 'America/Tegucigalpa'
+# Un PICK necesita EV de +5% o más Y que el modelo le dé al menos 30% de probabilidad. En la prueba, los "PICK" de menos
+# de 30% (momio medio ~6, aciertan 1 de cada 6) perdieron mucho más: ligas de Europa 2023-26 −23% (sin ellos el resto
+# pasó de −12.2% a −7.6%), NBA −21%, América −13%. En las copas europeas y la NFL daba casi igual.
+# (Quitar los momios menores a 1.70 se probó y empeoraba: en Europa y en las copas eran de los mejores PICK.)
+PICK_P_MIN = 0.30
 DIAS_PROXIMOS = 10          # cuántos días hacia adelante mostrar partidos
 N_SIMS = 10_000
 TEMPORADAS_HISTORIA = 3     # temporadas anteriores que usa el modelo
@@ -57,35 +62,35 @@ LIGAS = {
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
     'portugal': {'nombre': 'Liga Portugal', 'pais': 'Portugal', 'espn': 'por.1', 'fd': 'P1', 'calendario': 'europa', 'api_football': 94,
                  'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18',
-                 'aviso': 'Una de las ligas donde peor le fue al modelo en la prueba 2020-2026: −13.3% siguiendo los PICK (era −21.9% '
-                          'antes de la corrección de favoritos y empates del 10 oct 2026). El modelo le daba al empate de más cuando '
-                          'Porto, Benfica o Sporting juegan contra equipos chicos; con la corrección los PICK de empate casi desaparecen '
-                          '(60 en seis años), pero los que quedan perdieron −67%. Usa la página para ver estadísticas y momios justos.',
-                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron −67% en la prueba (60 apuestas)'}},
+                 'aviso': 'Una de las ligas donde peor le fue al modelo en la prueba 2020-2026: −9.7% siguiendo los PICK (era −21.9% '
+                          'antes de las correcciones del 10 oct 2026: favoritos y empates, y PICK solo con 30% o más). El modelo le daba '
+                          'al empate de más cuando Porto, Benfica o Sporting juegan contra equipos chicos; ahora casi no marca PICK de '
+                          'empate (10 en seis años, y perdieron). Usa la página para ver estadísticas y momios justos.',
+                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron mucho en la prueba'}},
     # uefa: copa europea. Equipos de ligas distintas: se usa el modelo de toda Europa (src/europa.py), que mide cuánto vale
     # cada liga con los partidos europeos. Sus resultados (y los de 21 ligas) los baja europa.py, no football-data.
     'champions': {'nombre': 'Champions League', 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'uefa': True,
                   'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (396 partidos) quedó casi igual de '
-                           'preciso que el momio de cierre y los PICK dieron +3% (rango probable −14% a +22%: puede ser suerte). '
+                           'preciso que el momio de cierre y los PICK dieron +7.2% (208 apuestas, rango probable −9% a +24%: puede ser suerte). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
-                           'vuelta de las eliminatorias. Los PICK con EV de +20% o más perdieron en las tres copas: ahí casi siempre se equivoca '
-                           'el modelo. No hay córners ni remates a puerta.'},
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
     'europa': {'nombre': 'Europa League', 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'uefa': True,
                'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (395 partidos) fue menos preciso '
-                           'que el momio de cierre y los PICK dieron −1.4% (rango probable −15% a +13%). '
+                           'que el momio de cierre y los PICK dieron +1.6% (315 apuestas, rango probable −11% a +15%). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
-                           'vuelta de las eliminatorias. Los PICK con EV de +20% o más perdieron en las tres copas: ahí casi siempre se equivoca '
-                           'el modelo. No hay córners ni remates a puerta.'},
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
     'conference': {'nombre': 'Conference League', 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'uefa': True,
                    'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (301 partidos) fue menos preciso '
-                           'que el momio de cierre y los PICK dieron +0.8% (rango probable −16% a +17%). Muchos equipos son de países sin liga en '
+                           'que el momio de cierre y los PICK dieron −6.7% (266 apuestas, rango probable −20% a +6%). Muchos equipos son de países sin liga en '
                            'los datos (Chequia, Croacia, Polonia...): de ellos sabe menos. '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
-                           'vuelta de las eliminatorias. Los PICK con EV de +20% o más perdieron en las tres copas: ahí casi siempre se equivoca '
-                           'el modelo. No hay córners ni remates a puerta.'},
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
     'ligamx': {'nombre': 'Liga MX', 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',

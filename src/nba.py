@@ -29,7 +29,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, ahora
+from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
 CORE_NBA = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba'
@@ -553,8 +553,11 @@ def am_to_dec(a):
     return 1 + a / 100 if a > 0 else 1 + 100 / abs(a)
 
 
-def veredicto(ev):
-    return 'PICK' if ev >= PICK_EV else ('MAYBE' if ev >= 0 else 'SKIP')
+def veredicto(ev, p=1.0):
+    """PICK: EV ≥ +5% y probabilidad del modelo ≥ 30% (ver PICK_P_MIN en config.py); con menos, MAYBE."""
+    if ev >= PICK_EV and p >= PICK_P_MIN:
+        return 'PICK'
+    return 'MAYBE' if ev >= 0 else 'SKIP'
 
 
 def fair(pc):
@@ -778,7 +781,7 @@ def analizar():
         def fila(k_, nm, grupo, gana, push, pierde, d, pmk):
             pc = gana / (gana + pierde) if gana + pierde > 0 else 0
             ev = gana * (d - 1) - pierde
-            v = veredicto(ev)
+            v = veredicto(ev, pc)
             if v == 'PICK' and alerta:
                 v = 'REVISAR'              # depende de un jugador en duda: no cuenta como PICK
             r = {'k': k_, 'mercado': nm, 'grupo': grupo, 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),

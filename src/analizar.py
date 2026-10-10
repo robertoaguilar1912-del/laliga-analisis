@@ -14,7 +14,7 @@ import unicodedata
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, ZONAS, ahora, inicio_torneo
+from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2
@@ -42,8 +42,11 @@ def fair_dec(p):
     return f'{1 / p:.2f}' if 0 < p < 1 else '—'
 
 
-def veredicto(ev):
-    return 'PICK' if ev >= PICK_EV else ('MAYBE' if ev >= MAYBE_EV else 'SKIP')
+def veredicto(ev, p=1.0):
+    """PICK: EV ≥ +5% y probabilidad del modelo ≥ 30% (ver PICK_P_MIN en config.py); con menos, MAYBE."""
+    if ev >= PICK_EV and p >= PICK_P_MIN:
+        return 'PICK'
+    return 'MAYBE' if ev >= MAYBE_EV else 'SKIP'
 
 
 def norm(s):
@@ -132,7 +135,7 @@ def fila_momio(k_, nm, grupo, W, Lo, dec, pm):
     pc = W / (W + Lo) if W + Lo > 0 else 0.0
     ev = W * (dec - 1) - Lo
     r = {'k': k_, 'mercado': nm, 'grupo': grupo, 'p': pc, 'momio': f'{dec:.2f}', 'p_mercado': pm,
-         'justo': fair_dec(pc), 'ev': ev, 'veredicto': veredicto(ev)}
+         'justo': fair_dec(pc), 'ev': ev, 'veredicto': veredicto(ev, pc)}
     if W + Lo < 0.9995:
         r['empate'] = 1 - W - Lo
     return r

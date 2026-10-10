@@ -17,7 +17,7 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, temporada_actual
+from config import RAW, DATOS, LIGAS, PICK_P_MIN, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix, RECAL_1X2
@@ -143,7 +143,7 @@ def apuestas(df, book, thr, mercados, con_clv):
     for outcome, oc, pm, pc in sel:
         p, odds = df[pm], df[oc]
         ev = p * odds - 1
-        m = (ev >= thr) & odds.notna() & p.notna()
+        m = (ev >= thr) & odds.notna() & p.notna() & (p >= PICK_P_MIN)     # con menos de 30% no es PICK (config.py)
         sub = df[m]
         won = (sub.res == outcome) if outcome in 'HDA' else (sub.over if outcome == 'O' else ~sub.over)
         out.append(pd.DataFrame({'Date': sub.Date, 'Season': sub.Season, 'sel': outcome, 'odds': odds[m], 'p': p[m], 'ev': ev[m],

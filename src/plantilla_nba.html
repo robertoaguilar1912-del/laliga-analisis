@@ -99,7 +99,7 @@
   const fdia = iso => new Date(iso).toLocaleDateString('es-HN', { timeZone: tz, weekday: 'long', day: 'numeric', month: 'long' });
   const amToDec = a => a > 0 ? 1 + a / 100 : 1 + 100 / Math.abs(a);
   const parseOdds = s => { s = String(s).trim().replace(',', '.').replace('−', '-'); if (!s) return null; const v = parseFloat(s); if (!isFinite(v)) return null; if (/^[+-]/.test(s) || Math.abs(v) >= 100) return Math.abs(v) >= 100 ? amToDec(v) : null; if (v > 1 && v < 100) return v; return null; };
-  const verdictOf = ev => ev >= 0.05 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+  const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   const rec = r => r ? r.slice(0, r[2] ? 3 : 2).join('-') : '—';
   const corto = n => n.replace(' League', '');
 
@@ -248,7 +248,7 @@
     showView('juegos');
     $('#list-wrap').hidden = true;
     const el = $('#game-detail'); el.hidden = false;
-    const filas = g.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+    const filas = g.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}${r.empate ? ' · empate ' + pct(r.empate, 1) : ''}</span></div>`).join('');
     const opciones = [['H1', `Spread ${g.local_es}`, g.dk.spread], ['H2', `Spread ${g.visita_es}`, g.dk.spread == null ? null : -g.dk.spread],
@@ -290,7 +290,7 @@
             <h3>Mercados con momio</h3>
             <div class="markets">${filas || '<p class="empty">La casa todavía no publica momios para este juego (en la NBA suelen salir el día anterior). Usa la calculadora con los de tu casa.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu casa tiene otra línea o quieres guardar tu apuesta? Usa la calculadora →</button>
-            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo. PICK: EV de +5% o más. REVISAR: el modelo ve valor, pero hay un jugador importante en duda.</p>
+            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo. PICK: EV de +5% o más y el modelo le da al menos 30%. REVISAR: el modelo ve valor, pero hay un jugador importante en duda.</p>
           </div>
         </div>
       </div>
@@ -357,7 +357,7 @@
       const c = calcular(g, k, L);
       const just = c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—';
       if (!dec) { out.innerHTML = `Modelo: <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal.`; return null; }
-      const ev = c.gana * (dec - 1) - c.pierde, v = verdictOf(ev);
+      const ev = c.gana * (dec - 1) - c.pierde, v = verdictOf(ev, c.gana / Math.max(c.gana + c.pierde, 1e-12));
       out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
       return { k, L, dec, c };
     }
