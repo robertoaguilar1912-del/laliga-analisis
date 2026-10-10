@@ -5,15 +5,15 @@
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "FC Cincinnati",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    115,
     290,
-    175
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   },
@@ -154,7 +154,7 @@
   "estadio": "Bank of America Stadium",
   "local_espn": "Charlotte FC",
   "visita_espn": "FC Dallas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -166,8 +166,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -145
+    110,
+    -140
    ],
    "spread": [
     [
@@ -303,25 +303,25 @@
   "estadio": "Nu Stadium",
   "local_espn": "Inter Miami CF",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -270,
+    -285,
     425,
     550
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
     [
      "-1.5",
-     -110
+     -115
     ],
     [
      "+1.5",
@@ -452,15 +452,15 @@
   "estadio": "Gillette Stadium",
   "local_espn": "New England Revolution",
   "visita_espn": "Seattle Sounders FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    270,
-    205
+    115,
+    265,
+    195
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -470,11 +470,11 @@
    "spread": [
     [
      "-0.5",
-     105
+     110
     ],
     [
      "+0.5",
-     -145
+     -150
     ]
    ]
   },
@@ -601,7 +601,7 @@
   "estadio": "Inter&Co Stadium",
   "local_espn": "Orlando City SC",
   "visita_espn": "Columbus Crew",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -613,7 +613,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    -105,
     -125
    ],
    "spread": [
@@ -750,13 +750,13 @@
   "estadio": "Subaru Park",
   "local_espn": "Philadelphia Union",
   "visita_espn": "Real Salt Lake",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -300,
+    -295,
     425,
     600
    ],
@@ -899,7 +899,7 @@
   "estadio": "Sports Illustrated Stadium",
   "local_espn": "Red Bull New York",
   "visita_espn": "San Diego FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1054,23 +1054,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    270,
-    -115
+    295,
+    275,
+    -130
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
      "+0.5",
-     -115
+     100
     ],
     [
      "-0.5",
-     -120
+     -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Austin FC": [
+    [
+     "183780",
+     "Brad Stuver",
+     "G"
+    ],
+    [
+     "257193",
+     "Jon Bell",
+     "CD"
+    ],
+    [
+     "304696",
+     "Guilherme Biro",
+     "CD-L"
+    ],
+    [
+     "213250",
+     "Mikkel Desler",
+     "CD-R"
+    ],
+    [
+     "150185",
+     "Ilie Sánchez",
+     "CM-L"
+    ],
+    [
+     "381219",
+     "Ervin Torres",
+     "CM-R"
+    ],
+    [
+     "275500",
+     "Myrto Uzuni",
+     "LM"
+    ],
+    [
+     "67518",
+     "Facundo Torres",
+     "RM"
+    ],
+    [
+     "228620",
+     "Brandon Vázquez",
+     "F"
+    ],
+    [
+     "231047",
+     "Jon Gallagher",
+     "CF-L"
+    ],
+    [
+     "374611",
+     "Jorge Alastuey",
+     "CF-R"
+    ]
+   ],
+   "Nashville SC": [
+    [
+     "296695",
+     "Brian Schwake",
+     "G"
+    ],
+    [
+     "146355",
+     "Andy Nájar",
+     "D"
+    ],
+    [
+     "304120",
+     "Reed Baker-Whiting",
+     "D"
+    ],
+    [
+     "290031",
+     "Maxwell Woledzi",
+     "D"
+    ],
+    [
+     "167061",
+     "Jeisson Palacios",
+     "D"
+    ],
+    [
+     "318341",
+     "Matthew Corcoran",
+     "M"
+    ],
+    [
+     "315524",
+     "Patrick Yazbek",
+     "M"
+    ],
+    [
+     "323950",
+     "Elias Saad",
+     "M"
+    ],
+    [
+     "174548",
+     "Hany Mukhtar",
+     "F"
+    ],
+    [
+     "73200",
+     "Cristian Espinoza",
+     "F"
+    ],
+    [
+     "227627",
+     "Sam Surridge",
+     "F"
     ]
    ]
   }
@@ -1120,9 +1236,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    180,
     295,
-    120
+    115
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1159,7 +1275,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -165,
     130
    ],
    "spread": [
