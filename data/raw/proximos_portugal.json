@@ -5,7 +5,7 @@
   "estadio": "Estádio do Marítimo",
   "local_espn": "Maritimo",
   "visita_espn": "FC Porto",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    235,
-    205
+    120,
+    240,
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-0.5",
-     125
+     110
     ],
     [
      "+0.5",
-     -170
+     -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Académico de Viseu": [
+    [
+     "286700",
+     "Ewerton",
+     "G"
+    ],
+    [
+     "278901",
+     "Niklaos Michelis",
+     "CD-L"
+    ],
+    [
+     "303126",
+     "Anthony Correia",
+     "CD-R"
+    ],
+    [
+     "340205",
+     "Miguel Ángel Brau",
+     "LB"
+    ],
+    [
+     "286966",
+     "Robinho",
+     "RB"
+    ],
+    [
+     "321256",
+     "Soufiane Messeguem",
+     "AM"
+    ],
+    [
+     "192419",
+     "Luís Silva",
+     "LM"
+    ],
+    [
+     "233987",
+     "Cihan Kahraman",
+     "RM"
+    ],
+    [
+     "270648",
+     "André Clóvis",
+     "F"
+    ],
+    [
+     "384207",
+     "João Guilherme",
+     "AM-L"
+    ],
+    [
+     "411406",
+     "Lorougnon Gohi",
+     "AM-R"
+    ]
+   ],
+   "Estoril": [
+    [
+     "141624",
+     "Joel Robles",
+     "G"
+    ],
+    [
+     "297364",
+     "Xavier Sintes",
+     "CD-L"
+    ],
+    [
+     "294295",
+     "Antef Tsoungui",
+     "CD-R"
+    ],
+    [
+     "310038",
+     "Roko Jurišic",
+     "LB"
+    ],
+    [
+     "290047",
+     "Ricard Sánchez",
+     "RB"
+    ],
+    [
+     "185343",
+     "João Carvalho",
+     "AM"
+    ],
+    [
+     "332827",
+     "Milan Robin",
+     "LM"
+    ],
+    [
+     "243734",
+     "Jordan Holsgrove",
+     "RM"
+    ],
+    [
+     "379981",
+     "André Lacximicant",
+     "F"
+    ],
+    [
+     "365953",
+     "Samuel Amissah",
+     "AM-L"
+    ],
+    [
+     "245913",
+     "Rafik Guitane",
+     "AM-R"
     ]
    ]
   }
