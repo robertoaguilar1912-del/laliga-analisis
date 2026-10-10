@@ -53,9 +53,34 @@ def noventa(m, h, a):
     return gl, gv
 
 
+def _minuto(reloj):
+    """"45'+2'" -> (45, 2), para ordenar los goles (el tiempo añadido del primer tiempo va antes del 46')."""
+    r = re.match(r"(\d+)'(?:\+(\d+)')?", reloj or '')
+    return (int(r.group(1)), int(r.group(2) or 0)) if r else None
+
+
+def ventajas(m, h, a):
+    """Mayor ventaja que tuvo cada equipo en los 90 minutos [local, visita], para el pago anticipado (la casa paga como
+    ganada la apuesta a ganador si su equipo se pone 2 goles arriba). None si la lista de goles de ESPN no cuadra con el
+    marcador (pasa en muy pocos partidos: goles repetidos)."""
+    goles = [(_minuto(reloj), equipo) for equipo, reloj, tipo in m.get('goals') or [] if 'shootout' not in (tipo or '').lower()]
+    if any(t is None for t, _ in goles):
+        return [None, None]
+    goles.sort(key=lambda x: x[0])
+    if (sum(e == h['name'] for _, e in goles), sum(e == a['name'] for _, e in goles)) != (h['score'], a['score']):
+        return [None, None]
+    d = vl = vv = 0
+    for (mi, _), e in goles:
+        if mi > 90:             # prórroga: no cuenta
+            break
+        d += 1 if e == h['name'] else -1
+        vl, vv = max(vl, d), max(vv, -d)
+    return [vl, vv]
+
+
 def resultados():
-    """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita]}
-    de los partidos ya jugados."""
+    """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita,
+    mayor ventaja del local, mayor ventaja de la visita]} de los partidos ya jugados (goles y ventajas a los 90 minutos)."""
     out = {}
     for f in ESPN_DIR.glob('*/*.json'):
         m = _leer(f, None)
@@ -66,7 +91,7 @@ def resultados():
             h, a = lados['home'], lados['away']
             gl, gv = noventa(m, h, a)
             out[str(m['id'])] = [gl, gv, _stat(h, 'wonCorners'), _stat(a, 'wonCorners'),
-                                 _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')]
+                                 _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')] + ventajas(m, h, a)
     return out
 
 

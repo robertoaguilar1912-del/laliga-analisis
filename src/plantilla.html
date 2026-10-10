@@ -305,6 +305,11 @@ details.xdet .xrow:last-child { border-bottom: 0; }
 .kv b.up { color: var(--good); }
 .kv b.down { color: var(--crit); }
 .backup { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pa-ligas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.pa-ligas label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; cursor: pointer; background: var(--surface); }
+.pa-ligas label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.pa-ligas input { margin: 0; accent-color: var(--accent); }
+.tag-pa { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--accent-soft); color: var(--ink); vertical-align: 1px; }
 
 /* El modelo */
 .verdict { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
@@ -433,6 +438,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <h2>Mi registro</h2>
       <p>Para guardar una apuesta abre el partido, ve a la pestaña Mercados, elige el mercado y escribe el momio de tu casa y cuánto apostaste. Cuando termina el partido la página revisa el resultado y la marca como ganada, perdida o nula.</p>
     </div>
+    <div class="card" id="pa-card"></div>
     <div class="subtabs" role="tablist" id="reg-tabs">
       <button role="tab" data-r="mias" aria-selected="true">Mis apuestas</button>
       <button role="tab" data-r="modelo" aria-selected="false">Picks del modelo</button>
@@ -454,6 +460,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
+  // Pago anticipado: en estas ligas la casa de Roberto paga como ganada la apuesta a ganador si su equipo se pone 2 goles arriba
+  const PA_DEF = ['ligamx', 'mls', 'brasil', 'laliga', 'ligue1', 'premier', 'seriea'];
+  let PA = new Set((() => { try { const v = JSON.parse(leer('laboratorio-pago-anticipado')); return Array.isArray(v) ? v : PA_DEF; } catch (e) { return PA_DEF; } })());
   let liga = new URLSearchParams(location.search).get('liga');
   if (!LIGAS[liga]) liga = leer('laboratorio-liga');
   const PAGINAS = { nfl: 'nfl.html', nba: 'nba.html' };   // deportes con página propia
@@ -519,6 +528,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const PRINCIPAL = B ? B.estrategias[B.principal || 'modelo|B365|1x2+ou|0.05'] : null;
   if (I.aviso) { const av = $('#p-aviso'); av.innerHTML = `<b>Aviso para ${esc(I.nombre)}</b>${esc(I.aviso)}`; av.hidden = false; }
   const CUIDADO = I.cuidado || {};
+  // probabilidad de cobrar "Gana local / visita" con el pago anticipado (si la liga está marcada en el registro)
+  const paDe = (m, k) => (m.pa && PA.has(I.liga) && (k === '1' || k === '2')) ? m.pa[k === '1' ? 0 : 1] : null;
   $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
     ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
     : PRINCIPAL.roi < 0
@@ -721,16 +732,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
     const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
-        <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
+        <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
     const conLinea = tiposDe(m);
     // todos los mercados: los fijos que manda el modelo y, con sus distribuciones, tablas de líneas
     // (hándicap asiático, córners y remates a puerta): cada línea con sus dos lados
     const groups = {};
-    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push({ n: r.mercado, p: r.p, push: r.k.startsWith('DNB') ? m.pD : 0, k: r.k }); });
+    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push({ n: r.mercado, p: r.p, push: r.k.startsWith('DNB') ? m.pD : 0, k: r.k, pa: paDe(m, r.k) }); });
     const abiertos = ['Resultado', 'Goles'];
     const det = (g, n, cuerpo) => `<details class="xdet"${abiertos.includes(g) ? ' open' : ''}><summary><span>${esc(g)}</span><span>${n}</span></summary>${cuerpo}</details>`;
     const fijosHTML = Object.entries(groups).map(([g, rs]) => det(g, rs.length,
-      rs.map(r => `<div class="xrow xpick" data-k="${esc(r.k)}" title="Comparar con mi casa"><span>${esc(r.n)}${r.push > 0.005 ? `<small>nula ${pct(r.push, 0)}</small>` : ''}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.p > 0 && r.p < 1 ? (1 / r.p).toFixed(2) : '—'}</span></div>`).join(''))).join('');
+      rs.map(r => `<div class="xrow xpick" data-k="${esc(r.k)}" title="Comparar con mi casa"><span>${esc(r.n)}${r.push > 0.005 ? `<small>nula ${pct(r.push, 0)}</small>` : ''}${r.pa != null ? `<small>con pago anticipado ${pct(r.pa, 1)} · justo ${(1 / r.pa).toFixed(2)}</small>` : ''}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.p > 0 && r.p < 1 ? (1 / r.p).toFixed(2) : '—'}</span></div>`).join(''))).join('');
     const celda = (tipo, L) => { const c = probLinea(m, tipo, L); return c ? `<button class="lcell xpick" data-k="${tipo}:${fmtLinea(tipo, L)}" title="Comparar con mi casa"><b>${pct(c.p, 0)}</b> ${c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—'}${c.push > 0.005 ? `<small>nula ${pct(c.push, 0)}</small>` : ''}</button>` : '<span></span>'; };
     const vale = (tipo, L) => { const c = probLinea(m, tipo, L); return c && c.p > 0.04 && c.p < 0.96 && c.W + c.Lo > 0.02; };
     // [grupo, subtítulo, tipo izquierda, tipo derecha, encabezados, líneas, línea de la derecha]
@@ -919,10 +930,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       if (!o) { out.textContent = 'Escribe la línea de tu casa (por ejemplo −1.5, 0.75 o 9.5).'; return null; }
       const p = o.W / Math.max(o.W + o.Lo, 1e-12), push = Math.max(0, 1 - o.W - o.Lo), just = p > 0 && p < 1 ? (1 / p).toFixed(2) : '—';
       const nula = push > 0.005 ? ` (nula ${pct(push, 0)})` : '';
+      const pa = paDe(m, o.k);
       const dec = parseOdds(inp.value);
-      if (!inp.value.trim()) { out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`; return null; }
+      if (!inp.value.trim()) { out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`; return null; }
       if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
-      const ev = o.W * (dec - 1) - o.Lo, v = verdictOf(ev);
+      const ev = o.W * (dec - 1) - o.Lo;
+      if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
+        const evPA = pa * dec - 1, v = verdictOf(evPA);
+        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})`;
+        return { o, p: pa, push, dec, pa: true };
+      }
+      const v = verdictOf(ev);
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
       return { o, p, push, dec };
     };
@@ -945,7 +963,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       if (!r) return;
       if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, liga: I.liga, utc: m.utc, local: m.local_es, visita: m.visita_es,
-                  mercado: r.o.n, k: r.o.k, p: r.p, nula: r.push > 0.005 ? +r.push.toFixed(4) : undefined, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+                  mercado: r.o.n, k: r.o.k, p: r.p, nula: r.push > 0.005 ? +r.push.toFixed(4) : undefined, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null,
+                  pa: r.pa || undefined });
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(r.o.n)} a ${r.dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
                            : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
@@ -1179,15 +1198,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return null;
   }
   const MANUAL = { w: [1, 1], l: [0, 0], p: [0.5, 0.5] };
-  function estado(bet, stake) {
+  // ¿Se cobra por pago anticipado? Apuesta a ganador (en los picks del modelo también su igual "hándicap −0.5") en una liga
+  // marcada, y su equipo llegó a ir 2 goles arriba en los 90 minutos. r[6] y r[7]: mayor ventaja del local y de la visita.
+  function cobraPA(bet, r, modelo) {
+    if (!r || r[6] == null || !PA.has(bet.liga || 'laliga')) return false;
+    const k = modelo ? (EQ[bet.k] || bet.k) : bet.k;
+    return (k === '1' && r[6] >= 2) || (k === '2' && r[7] >= 2);
+  }
+  const gananciaDe = (c, bet, stake) => stake * (c.map(x => x === 1 ? bet.momio - 1 : x === 0.5 ? 0 : -1).reduce((a, b) => a + b) / 2);
+  function estado(bet, stake, modelo) {
     const r = R.resultados[bet.id];
-    const c = bet.manual ? MANUAL[bet.manual] : liquidar(bet.k, r);
+    let c = bet.manual ? MANUAL[bet.manual] : liquidar(bet.k, r), pa = false, plSin = null;
+    if (c && !bet.manual && c[0] + c[1] < 2 && cobraPA(bet, r, modelo)) { plSin = gananciaDe(c, bet, stake); c = [1, 1]; pa = true; }
     const empezo = new Date(bet.utc) <= new Date();
     if (!c) return { fin: false, label: !r ? (empezo ? 'Esperando resultado' : 'Pendiente') : 'Sin dato: márcala tú', cls: 'WAIT', r };
-    const pl = stake * (c.map(x => x === 1 ? bet.momio - 1 : x === 0.5 ? 0 : -1).reduce((a, b) => a + b) / 2);
+    const pl = gananciaDe(c, bet, stake);
     const s = c[0] + c[1];
-    const label = s === 2 ? 'Ganada' : s === 0 ? 'Perdida' : (c[0] === 0.5 && c[1] === 0.5) ? 'Nula' : s > 1 ? 'Medio ganada' : 'Medio perdida';
-    return { fin: true, pl, label, cls: s === 2 || s === 1.5 ? 'WIN' : s === 0 || s === 0.5 ? 'LOSS' : 'PUSH', r };
+    const label = pa ? 'Ganada' : s === 2 ? 'Ganada' : s === 0 ? 'Perdida' : (c[0] === 0.5 && c[1] === 0.5) ? 'Nula' : s > 1 ? 'Medio ganada' : 'Medio perdida';
+    return { fin: true, pl, label, cls: s === 2 || s === 1.5 ? 'WIN' : s === 0 || s === 0.5 ? 'LOSS' : 'PUSH', r, pa, plSin };
   }
   function cierreDe(bet) {
     const c = R.cierres[bet.id]; if (!c) return null;
@@ -1240,13 +1268,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const clv = cie ? b.momio / cie - 1 : null;
     const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct((1 - (b.nula || 0)) * (b.p * b.momio - 1), 0)}` : ''}`
                     : `momio ${b.momio.toFixed(2)} (${esc(b.casa || 'casa')}) · modelo ${pct(b.p, 1)} · EV ${spct(b.ev, 0)}`;
-    const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}` : '';
+    const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}${e.pa ? ` · llegó a ir 2 goles arriba: se cobra por pago anticipado (sin él, ${sM(e.plSin)})` : ''}` : '';
     const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
     const linea2 = [res, cl].filter(Boolean).join(' · ');
     return `<div class="bet" data-uid="${esc(b.uid || '')}">
       <div class="b-main">
         <span class="b-meta">${b.liga && LIGAS[b.liga] ? esc(corto(LIGAS[b.liga])) + ' · ' : ''}${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
-        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${e.pa ? '<span class="tag-pa">Pago anticipado</span>' : ''}</span>
         <span class="b-line">${det}</span>
         ${linea2 ? `<span class="b-line">${linea2}</span>` : ''}
       </div>
@@ -1262,6 +1290,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const ordenar = lista => [...lista.filter(x => !x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)), ...lista.filter(x => x.e.fin).sort((a, b) => b.bet.utc.localeCompare(a.bet.utc))];
   const curva = lista => { let s = 0; return lista.filter(x => x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)).map(x => ({ u: (s += x.e.pl), txt: `${x.bet.local}–${x.bet.visita}, ${x.bet.mercado} (${sM(x.e.pl)})` })); };
 
+  // cuánto cambió el pago anticipado en una lista de apuestas
+  const notaPA = (lista, u) => {
+    const x = lista.filter(y => y.e.pa); if (!x.length) return '';
+    const extra = x.reduce((a, y) => a + y.e.pl - y.e.plSin, 0);
+    return `<p class="note">Pago anticipado: ${x.length === 1 ? '1 apuesta se cobró' : x.length + ' apuestas se cobraron'} como ganada${x.length === 1 ? '' : 's'} aunque el equipo no ganó al final (<b>${sM(extra)}${u ? ' ' + u : ''}</b> más que sin pago anticipado).</p>`;
+  };
+  function renderPA() {
+    const futbol = Object.keys(LIGAS).filter(id => !PAGINAS[id]);
+    $('#pa-card').innerHTML = `<h3>Pago anticipado de tu casa</h3>
+      <p class="note">En las ligas marcadas, una apuesta a ganador ("Gana" local o visita) se cuenta como ganada si ese equipo llega a ir 2 goles arriba en los 90 minutos, aunque después le empaten o le den la vuelta. Se aplica a tus apuestas y a los picks del modelo cuando termina el partido, y la calculadora usa la probabilidad con pago anticipado. Marca solo las ligas donde tu casa lo ofrece.</p>
+      <div class="pa-ligas">${futbol.map(id => `<label><input type="checkbox" value="${id}"${PA.has(id) ? ' checked' : ''}>${esc(corto(LIGAS[id]))}</label>`).join('')}</div>`;
+    $$('#pa-card input').forEach(cb => cb.addEventListener('change', () => {
+      PA = new Set($$('#pa-card input').filter(x => x.checked).map(x => x.value));
+      guardar('laboratorio-pago-anticipado', JSON.stringify([...PA]));
+      renderMias(); renderModelo();
+    }));
+  }
+
   function renderMias() {
     const el = $('#reg-mias');
     const lista = mias.map(b => ({ bet: b, stake: b.monto, e: estado(b, b.monto) }));
@@ -1271,6 +1317,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="card">
         <h3>Resumen</h3>
         ${resumen(lista, '')}
+        ${notaPA(lista, '')}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada</h4><div class="chart" id="chart-mias"></div><p class="note">Cada punto es una apuesta ya liquidada, en orden de fecha.</p>' : ''}
       </div>
       <div class="card">
@@ -1323,7 +1370,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function renderModelo() {
     const el = $('#reg-modelo');
     const todos = (R.modelo || []).map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
-    todos.forEach(x => { x.e = estado(x.bet, 1); });
+    todos.forEach(x => { x.e = estado(x.bet, 1, true); });
     const ligasCon = Object.keys(LIGAS).filter(id => todos.some(x => x.bet.liga === id));
     if (filtroModelo && !ligasCon.includes(filtroModelo)) filtroModelo = '';
     const lista = filtroModelo ? todos.filter(x => x.bet.liga === filtroModelo) : todos;
@@ -1340,6 +1387,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)}</h3>
         <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no.</p>
         ${resumen(lista, 'u')}
+        ${notaPA(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
           return sub.length < lista.length ? `<p class="note">Sin los "Lejos del mercado" (EV de 20% o más, los que más perdieron en la prueba): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
@@ -1356,7 +1404,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     $$('#mod-filtro button', el).forEach(btn => btn.addEventListener('click', () => { filtroModelo = btn.dataset.l; renderModelo(); }));
   }
 
-  function renderRegistro() { renderMias(); renderModelo(); }
+  function renderRegistro() { renderPA(); renderMias(); renderModelo(); }
   $$('#reg-tabs button').forEach(b => b.addEventListener('click', () => {
     $$('#reg-tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
     $('#reg-mias').hidden = b.dataset.r !== 'mias'; $('#reg-modelo').hidden = b.dataset.r !== 'modelo';
