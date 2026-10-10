@@ -1,71 +1,5 @@
 [
  {
-  "id": "401876954",
-  "utc": "2026-10-10T01:00Z",
-  "estadio": "Estadio Cuauhtémoc",
-  "local_espn": "Puebla",
-  "visita_espn": "León",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    195,
-    235,
-    140
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -115,
-    -115
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -175
-    ],
-    [
-     "-0.5",
-     125
-    ]
-   ]
-  }
- },
- {
-  "id": "401876953",
-  "utc": "2026-10-10T03:00Z",
-  "estadio": "Estadio Universitario",
-  "local_espn": "Tigres UANL",
-  "visita_espn": "Toluca",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    250,
-    135
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -150,
-    110
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -175
-    ],
-    [
-     "-0.5",
-     125
-    ]
-   ]
-  }
- },
- {
   "id": "401876952",
   "utc": "2026-10-10T23:00Z",
   "estadio": "Estadio Olímpico Benito Juárez",
@@ -390,6 +324,50 @@
   "estadio": "Estadio BBVA",
   "local_espn": "Monterrey",
   "visita_espn": "Pachuca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876934",
+  "utc": "2026-10-21T00:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Necaxa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876937",
+  "utc": "2026-10-21T01:00Z",
+  "estadio": "Estadio Libertad Financiera",
+  "local_espn": "Atlético de San Luis",
+  "visita_espn": "Querétaro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876936",
+  "utc": "2026-10-21T01:00Z",
+  "estadio": "Estadio Olímpico Benito Juárez",
+  "local_espn": "FC Juárez",
+  "visita_espn": "Atlante",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876935",
+  "utc": "2026-10-21T03:00Z",
+  "estadio": "Estadio Universitario",
+  "local_espn": "Tigres UANL",
+  "visita_espn": "León",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

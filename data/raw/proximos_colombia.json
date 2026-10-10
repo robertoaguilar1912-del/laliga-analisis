@@ -1,187 +1,5 @@
 [
  {
-  "id": "401877775",
-  "utc": "2026-10-09T23:00Z",
-  "estadio": "Armando Maestre Pavajeau",
-  "local_espn": "Alianza FC",
-  "visita_espn": "Águilas Doradas",
-  "estado": "STATUS_FIRST_HALF",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    170,
-    205,
-    160
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    115,
-    -155
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -215
-    ],
-    [
-     "-0.5",
-     150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Alianza FC": [
-    [
-     "398879",
-     "Eduar Esteban",
-     "G"
-    ],
-    [
-     "31750",
-     "Juan Viveros",
-     "CD-L"
-    ],
-    [
-     "322983",
-     "Jesús Figueroa",
-     "CD-R"
-    ],
-    [
-     "366879",
-     "Jhildrey Lasso",
-     "LB"
-    ],
-    [
-     "215752",
-     "Israel Alba",
-     "RB"
-    ],
-    [
-     "272557",
-     "Wiston Fernández",
-     "AM"
-    ],
-    [
-     "301336",
-     "Jair Castillo",
-     "LM"
-    ],
-    [
-     "401095",
-     "Charly Villegas",
-     "RM"
-    ],
-    [
-     "398890",
-     "Cristian Vergara",
-     "F"
-    ],
-    [
-     "336820",
-     "Jesús Muñoz",
-     "AM-L"
-    ],
-    [
-     "197479",
-     "Deiner Quiñónez",
-     "AM-R"
-    ]
-   ],
-   "Águilas Doradas": [
-    [
-     "216564",
-     "Jorge Soto",
-     "G"
-    ],
-    [
-     "336013",
-     "John Ontaneda",
-     "CD-L"
-    ],
-    [
-     "148264",
-     "Andres Mosquera",
-     "CD-R"
-    ],
-    [
-     "381438",
-     "Javier Mena",
-     "LB"
-    ],
-    [
-     "327120",
-     "Dylan Lozano",
-     "RB"
-    ],
-    [
-     "197551",
-     "Andrés Ricaurte",
-     "AM"
-    ],
-    [
-     "234941",
-     "Iván Rojas",
-     "LM"
-    ],
-    [
-     "181800",
-     "Frank Lozano",
-     "RM"
-    ],
-    [
-     "131197",
-     "Ricardo Márquez",
-     "F"
-    ],
-    [
-     "399239",
-     "Eduar Arízalas",
-     "AM-L"
-    ],
-    [
-     "345359",
-     "Fabián Suárez",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
-  "id": "401877911",
-  "utc": "2026-10-10T01:10Z",
-  "estadio": "Palogrande",
-  "local_espn": "Once Caldas",
-  "visita_espn": "Llaneros FC",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -185,
-    295,
-    450
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -110,
-    -120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -195
-    ],
-    [
-     "+0.5",
-     140
-    ]
-   ]
-  }
- },
- {
   "id": "401878004",
   "utc": "2026-10-10T20:30Z",
   "estadio": "Estadio Santiago de Las Atalayas",
@@ -561,6 +379,39 @@
   "estadio": "Departamental Libertad",
   "local_espn": "Deportivo Pasto",
   "visita_espn": "Alianza FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878040",
+  "utc": "2026-10-20T21:30Z",
+  "estadio": "",
+  "local_espn": "Deportivo Pereira",
+  "visita_espn": "Boyacá Chicó FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878033",
+  "utc": "2026-10-20T23:00Z",
+  "estadio": "Metropolitano de Techo",
+  "local_espn": "Internacional de Bogotá",
+  "visita_espn": "Fortaleza CEIF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878021",
+  "utc": "2026-10-20T23:30Z",
+  "estadio": "General Santander",
+  "local_espn": "Cúcuta Deportivo",
+  "visita_espn": "Atlético Nacional",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
