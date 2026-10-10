@@ -305,6 +305,11 @@ details.xdet .xrow:last-child { border-bottom: 0; }
 .kv b.up { color: var(--good); }
 .kv b.down { color: var(--crit); }
 .backup { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pa-ligas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.pa-ligas label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; cursor: pointer; background: var(--surface); }
+.pa-ligas label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.pa-ligas input { margin: 0; accent-color: var(--accent); }
+.tag-pa { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--accent-soft); color: var(--ink); vertical-align: 1px; }
 
 /* El modelo */
 .verdict { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }

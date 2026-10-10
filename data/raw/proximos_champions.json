@@ -83,7 +83,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     135
    ],
    "spread": [
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    310,
-    210
+    -110,
+    320,
+    230
    ],
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -125
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -120
     ],
     [
      "+0.5",
-     -135
+     -120
     ]
    ]
   }
@@ -276,13 +276,13 @@
    "casa": "DraftKings",
    "ml": [
     120,
-    255,
+    265,
     205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    115
+    -165,
+    125
    ],
    "spread": [
     [
@@ -341,9 +341,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    950,
-    600,
-    -450
+    900,
+    550,
+    -425
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -353,11 +353,11 @@
    "spread": [
     [
      "+1.5",
-     115
+     110
     ],
     [
      "-1.5",
-     -165
+     -160
     ]
    ]
   }
@@ -572,9 +572,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    700,
-    475,
-    -320
+    800,
+    500,
+    -350
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -584,13 +584,112 @@
    "spread": [
     [
      "+1.5",
-     -110
+     100
     ],
     [
      "-1.5",
-     -135
+     -145
     ]
    ]
   }
+ },
+ {
+  "id": "401915403",
+  "utc": "2026-10-20T16:45Z",
+  "estadio": "Şükrü Saracoğlu Stadium",
+  "local_espn": "Fenerbahce",
+  "visita_espn": "Slavia Prague",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915404",
+  "utc": "2026-10-20T16:45Z",
+  "estadio": "Baku Olympic Stadium",
+  "local_espn": "Sabah FK",
+  "visita_espn": "Borussia Dortmund",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915402",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Olimpico",
+  "local_espn": "AS Roma",
+  "visita_espn": "Slovan Bratislava",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915398",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Estádio do Dragão",
+  "local_espn": "FC Porto",
+  "visita_espn": "PSV Eindhoven",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915397",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Anfield",
+  "local_espn": "Liverpool",
+  "visita_espn": "Villarreal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915401",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Etihad Stadium",
+  "local_espn": "Manchester City",
+  "visita_espn": "AEK Athens",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915400",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Stadio Diego Armando Maradona",
+  "local_espn": "Napoli",
+  "visita_espn": "Bodo/Glimt",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915399",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "Parc des Princes",
+  "local_espn": "Paris Saint-Germain",
+  "visita_espn": "Barcelona",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915392",
+  "utc": "2026-10-20T19:00Z",
+  "estadio": "MHPArena",
+  "local_espn": "VfB Stuttgart",
+  "visita_espn": "Atlético Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
  }
 ]

@@ -18,7 +18,7 @@
    "ou_linea": 2.5,
    "ou": [
     105,
-    -150
+    -155
    ],
    "spread": [
     [
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    270,
-    370
+    -135,
+    265,
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -56,11 +56,11 @@
    "spread": [
     [
      "-0.5",
-     -155
+     -150
     ],
     [
      "+0.5",
-     105
+     100
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    220,
-    195
+    155,
+    215,
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -140
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     125
+     140
     ],
     [
      "+0.5",
-     -185
+     -210
     ]
    ]
   }
@@ -177,13 +177,13 @@
    "casa": "DraftKings",
    "ml": [
     -130,
-    255,
-    320
+    260,
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -145
+    -140
    ],
    "spread": [
     [
@@ -192,7 +192,7 @@
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -222,12 +222,12 @@
    "ml": [
     -320,
     380,
-    800
+    850
    ],
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -120
+    -115
    ],
    "spread": [
     [
@@ -236,7 +236,7 @@
     ],
     [
      "+1.5",
-     -145
+     -140
     ]
    ]
   }
@@ -254,8 +254,8 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    225,
-    260
+    230,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -310,7 +310,7 @@
  {
   "id": "401860398",
   "utc": "2026-10-16T22:30Z",
-  "estadio": "Moisés Lucarelli",
+  "estadio": "Estádio Italo Mário Limongi",
   "local_espn": "Ponte Preta",
   "visita_espn": "Atlético Goianiense",
   "estado": "STATUS_SCHEDULED",
@@ -401,6 +401,17 @@
   "estadio": "Estádio da Serrinha",
   "local_espn": "Goiás",
   "visita_espn": "Náutico",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860397",
+  "utc": "2026-10-20T22:30Z",
+  "estadio": "Estadio VGD",
+  "local_espn": "Londrina",
+  "visita_espn": "Cuiabá",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
