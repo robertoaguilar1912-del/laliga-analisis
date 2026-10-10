@@ -5,7 +5,7 @@
   "estadio": "Estadio Claudio Chiqui Tapia",
   "local_espn": "Barracas Central",
   "visita_espn": "Huracán",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Alfredo Terrera",
   "local_espn": "Central Córdoba (Santiago del Estero)",
   "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -408,23 +408,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    190,
-    150
+    210,
+    195,
+    155
    ],
    "ou_linea": 1.5,
    "ou": [
     -175,
-    125
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -200
+     -195
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -442,8 +442,8 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    225,
-    290
+    230,
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -453,11 +453,11 @@
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -135
+     -130
     ]
    ]
   }

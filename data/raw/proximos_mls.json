@@ -5,7 +5,7 @@
   "estadio": "Soldier Field",
   "local_espn": "Chicago Fire FC",
   "visita_espn": "New York City FC",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -232,17 +232,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
-    110
+    -135,
+    105
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     100
     ],
     [
      "+1.5",
-     -135
+     -140
     ]
    ]
   }
@@ -293,8 +293,8 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    285,
-    205
+    280,
+    200
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -457,23 +457,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    300,
-    135
+    170,
+    295,
+    120
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -115,
     -110
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -155
     ],
     [
      "-0.5",
-     125
+     110
     ]
    ]
   }
