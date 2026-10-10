@@ -5,7 +5,7 @@
   "estadio": "BMO Field",
   "local_espn": "Toronto FC",
   "visita_espn": "CF Montréal",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    285,
-    265
+    -130,
+    290,
+    280
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-0.5",
-     -125
+     -135
     ],
     [
      "+0.5",
-     -110
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Chicago Fire FC": [
+    [
+     "303693",
+     "Chris Brady",
+     "G"
+    ],
+    [
+     "400594",
+     "Mbekezeli Mbokazi",
+     "CD-L"
+    ],
+    [
+     "233813",
+     "Jack Elliott",
+     "CD-R"
+    ],
+    [
+     "399516",
+     "Leonardo Barroso",
+     "LB"
+    ],
+    [
+     "293671",
+     "Jonathan Dean",
+     "RB"
+    ],
+    [
+     "335605",
+     "D'Avilla Dje Tah",
+     "CM-L"
+    ],
+    [
+     "193105",
+     "Anton Saletros",
+     "CM-R"
+    ],
+    [
+     "210538",
+     "Jonathan Bamba",
+     "LM"
+    ],
+    [
+     "186466",
+     "Philip Zinckernagel",
+     "RM"
+    ],
+    [
+     "259951",
+     "Maren Haile-Selassie",
+     "CF-L"
+    ],
+    [
+     "125824",
+     "Robert Lewandowski",
+     "CF-R"
+    ]
+   ],
+   "New York City FC": [
+    [
+     "252974",
+     "Matt Freese",
+     "G"
+    ],
+    [
+     "258855",
+     "James Sands",
+     "CD-L"
+    ],
+    [
+     "185792",
+     "Thiago Martins",
+     "CD-R"
+    ],
+    [
+     "400718",
+     "Nico Cavallo",
+     "LB"
+    ],
+    [
+     "297380",
+     "Tayvon Gray",
+     "RB"
+    ],
+    [
+     "108107",
+     "Nicolás Fernández",
+     "AM"
+    ],
+    [
+     "259199",
+     "Andrés Perea",
+     "LM"
+    ],
+    [
+     "241031",
+     "Aiden O'Neill",
+     "RM"
+    ],
+    [
+     "310827",
+     "Alonso Martínez",
+     "F"
+    ],
+    [
+     "250852",
+     "Hannes Wolf",
+     "AM-L"
+    ],
+    [
+     "337149",
+     "Agustin Ojeda",
+     "AM-R"
     ]
    ]
   }

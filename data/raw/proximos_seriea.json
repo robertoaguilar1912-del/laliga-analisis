@@ -1,154 +1,5 @@
 [
  {
-  "id": "401875021",
-  "utc": "2026-10-10T16:00Z",
-  "estadio": "San Siro",
-  "local_espn": "Internazionale",
-  "visita_espn": "Parma",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-italian-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -650,
-    600,
-    1200
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    100,
-    -125
-   ],
-   "spread": [
-    [
-     "-2.5",
-     125
-    ],
-    [
-     "+2.5",
-     -175
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Internazionale": [
-    [
-     "240533",
-     "Josep Martínez",
-     "G"
-    ],
-    [
-     "266660",
-     "Yann Bisseck",
-     "CD"
-    ],
-    [
-     "271769",
-     "Carlos Augusto",
-     "CD-L"
-    ],
-    [
-     "215378",
-     "Benjamin Pavard",
-     "CD-R"
-    ],
-    [
-     "147625",
-     "Henrikh Mkhitaryan",
-     "CM-L"
-    ],
-    [
-     "341494",
-     "Petar Sucic",
-     "CM-R"
-    ],
-    [
-     "170785",
-     "Hakan Çalhanoglu",
-     "AM"
-    ],
-    [
-     "194748",
-     "Federico Dimarco",
-     "LM"
-    ],
-    [
-     "319167",
-     "Andy Diouf",
-     "RM"
-    ],
-    [
-     "217331",
-     "Marcus Thuram",
-     "CF-L"
-    ],
-    [
-     "362674",
-     "Pio Esposito",
-     "CF-R"
-    ]
-   ],
-   "Parma": [
-    [
-     "290792",
-     "Edoardo Corvi",
-     "G"
-    ],
-    [
-     "196860",
-     "Diego Carlos",
-     "CD"
-    ],
-    [
-     "366526",
-     "Mariano Troilo",
-     "CD-L"
-    ],
-    [
-     "272694",
-     "Enrico Del Prato",
-     "CD-R"
-    ],
-    [
-     "218857",
-     "Vincent Sierro",
-     "CM-L"
-    ],
-    [
-     "316609",
-     "Mandela Keita",
-     "CM-R"
-    ],
-    [
-     "261274",
-     "Emanuele Valeri",
-     "LM"
-    ],
-    [
-     "308939",
-     "Franco Carboni",
-     "RM"
-    ],
-    [
-     "361749",
-     "Nesta Elphege",
-     "F"
-    ],
-    [
-     "323118",
-     "Giovanni Fabbian",
-     "CF-L"
-    ],
-    [
-     "287430",
-     "El Bilal Toure",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401874754",
   "utc": "2026-10-10T18:45Z",
   "estadio": "Stadio Diego Armando Maradona",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    340,
-    450
+    -195,
+    330,
+    425
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    105,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     125
+     140
     ],
     [
      "+1.5",
-     -175
+     -195
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Napoli": [
+    [
+     "209746",
+     "Alex Meret",
+     "G"
+    ],
+    [
+     "205576",
+     "Amir Rrahmani",
+     "CD"
+    ],
+    [
+     "282585",
+     "Benoît Badiashile",
+     "CD-L"
+    ],
+    [
+     "297360",
+     "Rafa Marín",
+     "CD-R"
+    ],
+    [
+     "188412",
+     "Stanislav Lobotka",
+     "CM-L"
+    ],
+    [
+     "134947",
+     "Kevin De Bruyne",
+     "CM-R"
+    ],
+    [
+     "148974",
+     "Leonardo Spinazzola",
+     "LM"
+    ],
+    [
+     "155904",
+     "Giovanni Di Lorenzo",
+     "RM"
+    ],
+    [
+     "309273",
+     "Rasmus Højlund",
+     "F"
+    ],
+    [
+     "255344",
+     "Noa Lang",
+     "CF-L"
+    ],
+    [
+     "245637",
+     "David Neres",
+     "CF-R"
+    ]
+   ],
+   "Frosinone": [
+    [
+     "325056",
+     "Lorenzo Palmisani",
+     "G"
+    ],
+    [
+     "333598",
+     "Giorgio Cittadini",
+     "CD-L"
+    ],
+    [
+     "352751",
+     "Gabriele Calvani",
+     "CD-R"
+    ],
+    [
+     "346974",
+     "Gabriele Bracaglia",
+     "LB"
+    ],
+    [
+     "315213",
+     "Anthony Oyono",
+     "RB"
+    ],
+    [
+     "356536",
+     "Farès Ghedjemis",
+     "AM"
+    ],
+    [
+     "238296",
+     "Romano Schmid",
+     "LM"
+    ],
+    [
+     "346840",
+     "Patrizio Masini",
+     "RM"
+    ],
+    [
+     "319265",
+     "Antonio Raimondo",
+     "F"
+    ],
+    [
+     "360714",
+     "Giorgi Kvernadze",
+     "AM-L"
+    ],
+    [
+     "236038",
+     "Giacomo Calo",
+     "AM-R"
     ]
    ]
   }
