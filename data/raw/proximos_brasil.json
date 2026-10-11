@@ -5,7 +5,7 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Flamengo",
   "visita_espn": "Fluminense",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Arena do Grêmio",
   "local_espn": "Grêmio",
   "visita_espn": "Internacional",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Allianz Parque",
   "local_espn": "Palmeiras",
   "visita_espn": "Corinthians",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -475,6 +475,122 @@
     [
      "+0.5",
      120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Bahia": [
+    [
+     "224106",
+     "Ronaldo",
+     "G"
+    ],
+    [
+     "304757",
+     "Luciano Juba",
+     "D"
+    ],
+    [
+     "294932",
+     "Marco Moreno",
+     "D"
+    ],
+    [
+     "219090",
+     "David Duarte",
+     "D"
+    ],
+    [
+     "334243",
+     "Marcos Victor",
+     "D"
+    ],
+    [
+     "299932",
+     "Caio Alexandre",
+     "M"
+    ],
+    [
+     "266664",
+     "Rodrigo Nestor",
+     "M"
+    ],
+    [
+     "269910",
+     "Jean Lucas",
+     "M"
+    ],
+    [
+     "333907",
+     "Erick Pulga",
+     "F"
+    ],
+    [
+     "318291",
+     "Alejo Veliz",
+     "F"
+    ],
+    [
+     "124439",
+     "Cristian Olivera",
+     "F"
+    ]
+   ],
+   "Mirassol": [
+    [
+     "203715",
+     "Neto Moura",
+     "SUB"
+    ],
+    [
+     "325101",
+     "Denilson",
+     "SUB"
+    ],
+    [
+     "250388",
+     "Alesson",
+     "SUB"
+    ],
+    [
+     "196851",
+     "Walter",
+     "SUB"
+    ],
+    [
+     "270797",
+     "Willian Machado",
+     "SUB"
+    ],
+    [
+     "233888",
+     "Lucas Oliveira",
+     "SUB"
+    ],
+    [
+     "115379",
+     "Reinaldo",
+     "SUB"
+    ],
+    [
+     "299967",
+     "Igor Marques",
+     "SUB"
+    ],
+    [
+     "314915",
+     "Bruno Santos",
+     "SUB"
+    ],
+    [
+     "198273",
+     "Chico",
+     "SUB"
+    ],
+    [
+     "250904",
+     "Gustavo Mosquito",
+     "SUB"
     ]
    ]
   }
