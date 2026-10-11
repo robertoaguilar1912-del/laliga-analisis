@@ -950,20 +950,25 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const dec = parseOdds(inp.value);
       if (!inp.value.trim()) {
         const mk0 = mercadoDe(m, o.k), pm0 = mk0 ? mk0.W / Math.max(mk0.W + mk0.Lo, 1e-12) : null;
-        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).`;
+        // momio mínimo para que sea PICK: EV = W·(m − 1) − Lo ≥ 5%  →  m ≥ (1.05 − (1 − W − Lo)) / W   (la nula devuelve la apuesta)
+        const W0 = pa != null ? pa : o.W, L0 = pa != null ? 1 - pa : o.Lo, pp = W0 / Math.max(W0 + L0, 1e-12);
+        const minimo = pp >= 0.30 ? `<br><b>Para que sea PICK tu momio tiene que ser de ${((0.05 + W0 + L0) / W0).toFixed(2)} o más.</b>` : '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
+        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${minimo}`;
         return null;
       }
       if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
       const ev = o.W * (dec - 1) - o.Lo;
       // y contra el mercado: si tu casa paga más que el precio justo del mercado, eso es valor aunque el modelo no lo vea
       const mk = mercadoDe(m, o.k);
+      const dkr = m.con_momio.find(r => r.k === o.k), dkm = dkr ? parseFloat(dkr.momio) : null;
+      const peorQueDK = dkm && dec < dkm - 0.005 ? `<br><b>Ojo: ${esc(m.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Apostar a un momio peor que el del mercado es la forma más segura de perder valor; si puedes, búscalo en otra casa.` : '';
       const linMk = () => {
-        if (!mk) return '';
+        if (!mk) return peorQueDK;
         let W = mk.W, Lo = mk.Lo;
         if (pa != null) { const extra = pa - p; W += extra; Lo -= extra; }     // el pago anticipado suma lo mismo que en el modelo
         const pm = W / Math.max(W + Lo, 1e-12), evM = W * (dec - 1) - Lo, ambos = evM >= 0 && (pa != null ? pa * dec - 1 : ev) >= 0;
         return `<br>Mercado (${esc(m.casa_momios || 'casa')} sin margen${pa != null ? ', con pago anticipado' : ''}): <span class="mono">${pct(pm, 1)}</span> · justo <span class="mono">${(1 / pm).toFixed(2)}</span> · EV <span class="mono">${spct(evM, 1)}</span>. `
-          + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? 'Solo el modelo ve valor; el mercado no. En la prueba, en esos casos casi siempre se equivocaba el modelo.' : '');
+          + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? 'Solo el modelo ve valor; el mercado no. En la prueba, en esos casos casi siempre se equivocaba el modelo.' : '') + peorQueDK;
       };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
         const evPA = pa * dec - 1, v = verdictOf(evPA, pa);
