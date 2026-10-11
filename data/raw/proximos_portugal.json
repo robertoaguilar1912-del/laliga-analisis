@@ -5,7 +5,7 @@
   "estadio": "Estádio da Luz",
   "local_espn": "Benfica",
   "visita_espn": "Vitória de Guimaraes",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -161,8 +161,8 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    245,
-    225
+    250,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-0.5",
-     110
+     105
     ],
     [
      "+0.5",
-     -150
+     -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Arouca": [
+    [
+     "217556",
+     "Ignacio De Arruabarrena",
+     "SUB"
+    ],
+    [
+     "316899",
+     "Taichi Fukui",
+     "SUB"
+    ],
+    [
+     "284853",
+     "Alfonso Trezza",
+     "SUB"
+    ],
+    [
+     "300121",
+     "Pablo Gozálbez",
+     "SUB"
+    ],
+    [
+     "286545",
+     "Orest Lebedenko",
+     "SUB"
+    ],
+    [
+     "291193",
+     "Tiago Esgaio",
+     "SUB"
+    ],
+    [
+     "367717",
+     "Espen Van Ee",
+     "SUB"
+    ],
+    [
+     "301904",
+     "José Fontán",
+     "SUB"
+    ],
+    [
+     "281113",
+     "Näis Djouahra",
+     "SUB"
+    ],
+    [
+     "178579",
+     "Barbero",
+     "SUB"
+    ],
+    [
+     "191899",
+     "Javi Sánchez",
+     "SUB"
+    ]
+   ],
+   "Estrela": [
+    [
+     "310822",
+     "Leo Linck",
+     "G"
+    ],
+    [
+     "219663",
+     "Rafa Soares",
+     "D"
+    ],
+    [
+     "352178",
+     "Max Scholze",
+     "D"
+    ],
+    [
+     "297764",
+     "Luan Patrick",
+     "D"
+    ],
+    [
+     "342146",
+     "Stefan Lekovic",
+     "D"
+    ],
+    [
+     "267578",
+     "Ianis Stoica",
+     "M"
+    ],
+    [
+     "403376",
+     "Santiago Serra",
+     "M"
+    ],
+    [
+     "346760",
+     "Lovro Zvonarek",
+     "M"
+    ],
+    [
+     "319827",
+     "Abraham Marcus",
+     "M"
+    ],
+    [
+     "418107",
+     "Eddy Doué",
+     "M"
+    ],
+    [
+     "332252",
+     "Leandro Antonetti",
+     "F"
     ]
    ]
   }
