@@ -537,6 +537,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const q = m.mercado.map(p => Math.pow(p, POT_MERCADO)), s = q[0] + q[1] + q[2], [h, d, a] = q.map(x => x / s);
       const t = { '1': [h, d + a], 'X': [d, h + a], '2': [a, h + d], '1X': [h + d, a], 'X2': [a + d, h], '12': [h + a, d], 'DNB1': [h, a], 'DNB2': [a, h], 'H1:-0.5': [h, d + a], 'H2:-0.5': [a, h + d], 'H1:+0.5': [h + d, a], 'H2:+0.5': [a + d, h] }[k];
       if (t) return { W: t[0], Lo: t[1] };
+      // hándicap asiático de −0.25, 0 y +0.25: solo depende de gana/empate/pierde, así que sale del 1X2 del mercado
+      const mh = k.match(/^H([12]):([+-]?[\d.]+)$/);
+      if (mh) {
+        const L = parseFloat(mh[2]), [w, l] = mh[1] === '1' ? [h, a] : [a, h];
+        if (Math.abs(L + 0.25) < 1e-9) return { W: w, Lo: l + d / 2 };
+        if (Math.abs(L) < 1e-9) return { W: w, Lo: l };
+        if (Math.abs(L - 0.25) < 1e-9) return { W: w + d / 2, Lo: l };
+      }
     }
     const r = m.con_momio.find(x => x.k === k && x.p_mercado != null && /^[OU]:/.test(k));
     return r ? { W: r.p_mercado, Lo: 1 - r.p_mercado } : null;
