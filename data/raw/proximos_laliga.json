@@ -16,7 +16,7 @@
   "estadio": "Reale Arena",
   "local_espn": "Real Sociedad",
   "visita_espn": "Deportivo",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -172,22 +172,138 @@
    "casa": "DraftKings",
    "ml": [
     -210,
-    360,
+    350,
     550
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -170,
+    140
    ],
    "spread": [
     [
      "-1.5",
-     125
+     115
     ],
     [
      "+1.5",
-     -170
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Real Betis": [
+    [
+     "283892",
+     "Álvaro Valles",
+     "G"
+    ],
+    [
+     "213050",
+     "Fran García",
+     "D"
+    ],
+    [
+     "301526",
+     "Natan",
+     "D"
+    ],
+    [
+     "181530",
+     "Diego Llorente",
+     "D"
+    ],
+    [
+     "178978",
+     "Héctor Bellerín",
+     "D"
+    ],
+    [
+     "227714",
+     "Pablo Fornals",
+     "M"
+    ],
+    [
+     "143564",
+     "Isco",
+     "M"
+    ],
+    [
+     "70224",
+     "Rodrigo Riquelme",
+     "M"
+    ],
+    [
+     "242008",
+     "Marc Roca",
+     "M"
+    ],
+    [
+     "300912",
+     "Abde Ezzalzouli",
+     "M"
+    ],
+    [
+     "336809",
+     "Cucho Hernández",
+     "F"
+    ]
+   ],
+   "Osasuna": [
+    [
+     "144759",
+     "Aitor Fernández",
+     "G"
+    ],
+    [
+     "300284",
+     "Abel Bretones",
+     "D"
+    ],
+    [
+     "415867",
+     "Unai Santos",
+     "D"
+    ],
+    [
+     "264175",
+     "Alejandro Catena",
+     "D"
+    ],
+    [
+     "380918",
+     "Iñigo Arguibide",
+     "D"
+    ],
+    [
+     "178328",
+     "Rubén García",
+     "M"
+    ],
+    [
+     "170154",
+     "Lucas Torró",
+     "M"
+    ],
+    [
+     "286176",
+     "Jon Moncayola",
+     "M"
+    ],
+    [
+     "169089",
+     "Moi Gómez",
+     "M"
+    ],
+    [
+     "296163",
+     "Raúl García",
+     "F"
+    ],
+    [
+     "207288",
+     "Ante Budimir",
+     "F"
     ]
    ]
   }
@@ -270,9 +386,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
+    115,
     245,
-    245
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -282,11 +398,11 @@
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -140
+     -150
     ]
    ]
   }
