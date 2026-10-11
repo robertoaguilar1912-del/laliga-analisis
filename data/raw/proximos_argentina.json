@@ -239,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    400,
+    245,
+    -145
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "+0.5",
+     105
+    ],
+    [
+     "-0.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "401841622",
