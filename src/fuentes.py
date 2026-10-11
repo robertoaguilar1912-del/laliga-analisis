@@ -266,7 +266,9 @@ def descargar_proximos(liga, buscar_alineaciones_min=120):
     L = LIGAS[liga]
     hoy = ahora()
     eventos = {}
-    for k in range(DIAS_PROXIMOS + 1):
+    # desde ayer: ESPN arma cada día con la hora del este de EE. UU., así que después de las 00:00 UTC (6 p. m. en Honduras)
+    # los partidos de esa noche en América quedan en el día "de ayer" y, sin esto, desaparecían de la página sin haber empezado
+    for k in range(-1, DIAS_PROXIMOS + 1):
         d = (hoy + timedelta(days=k)).strftime('%Y%m%d')
         for e in _scoreboard(L['espn'], d):
             comp = e['competitions'][0]
