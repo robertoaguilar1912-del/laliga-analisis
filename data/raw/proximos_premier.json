@@ -5,7 +5,7 @@
   "estadio": "Selhurst Park",
   "local_espn": "Crystal Palace",
   "visita_espn": "Nottingham Forest",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -18,7 +18,7 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -115
+    -110
    ],
    "spread": [
     [
@@ -154,29 +154,29 @@
   "estadio": "The MKM Stadium",
   "local_espn": "Hull City",
   "visita_espn": "Everton",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    290,
-    235,
-    105
+    320,
+    240,
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -130
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -130
+     -120
     ],
     [
      "-0.5",
-     -105
+     -115
     ]
    ]
   },
@@ -310,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     225,
-    275,
-    110
+    270,
+    115
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    145,
-    -180
+    -165,
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -348,7 +348,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     120
    ],
    "spread": [
