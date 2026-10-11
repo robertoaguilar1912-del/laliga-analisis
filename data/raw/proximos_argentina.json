@@ -5,7 +5,7 @@
   "estadio": "Estadio Pedro Bidegain",
   "local_espn": "San Lorenzo",
   "visita_espn": "Deportivo Riestra",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -160,8 +160,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    190,
+    225,
+    185,
     150
    ],
    "ou_linea": 1.5,
@@ -292,23 +292,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    195,
-    255
+    125,
+    200,
+    260
    ],
    "ou_linea": 1.5,
    "ou": [
-    -200,
+    -195,
     145
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -165
+     -160
     ]
    ]
   }
