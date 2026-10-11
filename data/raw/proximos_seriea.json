@@ -5,7 +5,7 @@
   "estadio": "Giuseppe Sinigaglia",
   "local_espn": "Como",
   "visita_espn": "AS Roma",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -167,7 +167,7 @@
    "ou_linea": 2.5,
    "ou": [
     -135,
-    110
+    105
    ],
    "spread": [
     [
@@ -523,23 +523,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
+    235,
     255,
-    100
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    115
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -130
     ],
     [
      "-0.5",
-     -105
+     -110
     ]
    ]
   }
