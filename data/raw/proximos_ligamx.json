@@ -1,182 +1,149 @@
 [
  {
-  "id": "401876951",
-  "utc": "2026-10-11T01:00Z",
-  "estadio": "Estadio Jalisco",
-  "local_espn": "Atlas",
-  "visita_espn": "Guadalajara",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    230,
-    245,
-    115
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -130,
-    100
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -145
-    ],
-    [
-     "-0.5",
-     105
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Atlas": [
-    [
-     "185147",
-     "Camilo Vargas",
-     "G"
-    ],
-    [
-     "233688",
-     "Milton Valenzuela",
-     "CD"
-    ],
-    [
-     "263224",
-     "Juanjo Purata",
-     "CD-L"
-    ],
-    [
-     "234447",
-     "Adonis Frias",
-     "CD-R"
-    ],
-    [
-     "388094",
-     "Paulo Ramírez",
-     "CM-L"
-    ],
-    [
-     "364455",
-     "Elías Montiel",
-     "CM-R"
-    ],
-    [
-     "219646",
-     "Ryan Mmaee",
-     "LM"
-    ],
-    [
-     "178746",
-     "Jorge Sánchez",
-     "RM"
-    ],
-    [
-     "309574",
-     "Florián Monzón",
-     "F"
-    ],
-    [
-     "312549",
-     "Luís Esteves",
-     "CF-L"
-    ],
-    [
-     "290593",
-     "Kevin Zenón",
-     "CF-R"
-    ]
-   ],
-   "Guadalajara": [
-    [
-     "290899",
-     "Raúl Rangel",
-     "G"
-    ],
-    [
-     "290889",
-     "Diego Campillo",
-     "CD"
-    ],
-    [
-     "147715",
-     "Luis Gabriel Rey",
-     "CD-L"
-    ],
-    [
-     "133111",
-     "Daniel Aguirre",
-     "CD-R"
-    ],
-    [
-     "131697",
-     "Fernando Gonzalez",
-     "CM-L"
-    ],
-    [
-     "303577",
-     "Brian Gutiérrez",
-     "CM-R"
-    ],
-    [
-     "3113343",
-     "Leonel Calderón Oviedo",
-     "LM"
-    ],
-    [
-     "271844",
-     "Richard Ledezma",
-     "RM"
-    ],
-    [
-     "151850",
-     "Ángel Sepúlveda",
-     "F"
-    ],
-    [
-     "228352",
-     "Ricardo Marín",
-     "CF-L"
-    ],
-    [
-     "194308",
-     "Roberto Alvarado",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401876950",
   "utc": "2026-10-11T03:10Z",
   "estadio": "Estadio Banorte",
   "local_espn": "América",
   "visita_espn": "Monterrey",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     -120,
-    275,
-    310
+    270,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    135
+    -175,
+    130
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -130
     ],
     [
      "+0.5",
      -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "América": [
+    [
+     "200101",
+     "Ángel Malagón",
+     "G"
+    ],
+    [
+     "241225",
+     "Santiago Bueno",
+     "CD-L"
+    ],
+    [
+     "82782",
+     "Santiago Ramos",
+     "CD-R"
+    ],
+    [
+     "132676",
+     "Cristian Borja",
+     "LB"
+    ],
+    [
+     "363021",
+     "Dagoberto Espinoza",
+     "RB"
+    ],
+    [
+     "236321",
+     "Raphael Veiga",
+     "AM"
+    ],
+    [
+     "290414",
+     "Israel Reyes",
+     "LM"
+    ],
+    [
+     "129421",
+     "Érick Sánchez",
+     "RM"
+    ],
+    [
+     "93184",
+     "Henry Martín",
+     "F"
+    ],
+    [
+     "144325",
+     "Brian Rodríguez",
+     "AM-L"
+    ],
+    [
+     "212824",
+     "Alejandro Zendejas",
+     "AM-R"
+    ]
+   ],
+   "Monterrey": [
+    [
+     "138328",
+     "Esteban Andrada",
+     "G"
+    ],
+    [
+     "245848",
+     "Gerardo Arteaga",
+     "CD-L"
+    ],
+    [
+     "290348",
+     "Víctor Guzmán",
+     "CD-R"
+    ],
+    [
+     "184299",
+     "Carlos Salcedo",
+     "LB"
+    ],
+    [
+     "202106",
+     "Ricardo Chávez",
+     "RB"
+    ],
+    [
+     "375061",
+     "Cesar Garza",
+     "CM"
+    ],
+    [
+     "207011",
+     "Orbelín Pineda",
+     "LM"
+    ],
+    [
+     "173233",
+     "Óliver Torres",
+     "RM"
+    ],
+    [
+     "235511",
+     "Hugo Cuypers",
+     "F"
+    ],
+    [
+     "235817",
+     "Diego Rossi",
+     "LF"
+    ],
+    [
+     "117977",
+     "Jesús Corona",
+     "RF"
     ]
    ]
   }
