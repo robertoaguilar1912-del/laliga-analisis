@@ -1,103 +1,5 @@
 [
  {
-  "id": "401872990",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Lambeau Field",
-  "local_espn": "Green Bay Packers",
-  "visita_espn": "Chicago Bears",
-  "local_abbr": "GB",
-  "visita_abbr": "CHI",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872984",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Nissan Stadium",
-  "local_espn": "Tennessee Titans",
-  "visita_espn": "Houston Texans",
-  "local_abbr": "TEN",
-  "visita_abbr": "HOU",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872982",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Hard Rock Stadium",
-  "local_espn": "Miami Dolphins",
-  "visita_espn": "Cincinnati Bengals",
-  "local_abbr": "MIA",
-  "visita_abbr": "CIN",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872986",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Gillette Stadium",
-  "local_espn": "New England Patriots",
-  "visita_espn": "Las Vegas Raiders",
-  "local_abbr": "NE",
-  "visita_abbr": "LV",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872987",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Caesars Superdome",
-  "local_espn": "New Orleans Saints",
-  "visita_espn": "Minnesota Vikings",
-  "local_abbr": "NO",
-  "visita_abbr": "MIN",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872983",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "MetLife Stadium",
-  "local_espn": "New York Jets",
-  "visita_espn": "Cleveland Browns",
-  "local_abbr": "NYJ",
-  "visita_abbr": "CLE",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872985",
-  "utc": "2026-10-11T17:00Z",
-  "estadio": "Acrisure Stadium",
-  "local_espn": "Pittsburgh Steelers",
-  "visita_espn": "Indianapolis Colts",
-  "local_abbr": "PIT",
-  "visita_abbr": "IND",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401872988",
   "utc": "2026-10-11T17:00Z",
   "estadio": "Northwest Stadium",
@@ -120,33 +22,10 @@
   "local_abbr": "LAC",
   "visita_abbr": "DEN",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 5,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    160,
-    -192
-   ],
-   "ml_abre": [
-    -142,
-    120
-   ],
-   "spread": [
-    3.5,
-    -112,
-    -3.5,
-    -108
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    41.5,
-    -115,
-    -105
-   ],
-   "total_abre": 44.5
-  }
+  "momios": null
  },
  {
   "id": "401872991",
@@ -157,33 +36,10 @@
   "local_abbr": "ARI",
   "visita_abbr": "DET",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 5,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    205,
-    -250
-   ],
-   "ml_abre": [
-    310,
-    -395
-   ],
-   "spread": [
-    5.5,
-    -112,
-    -5.5,
-    -108
-   ],
-   "spread_abre": 8.5,
-   "total": [
-    54.5,
-    -118,
-    -102
-   ],
-   "total_abre": 49.5
-  }
+  "momios": null
  },
  {
   "id": "401872992",
@@ -194,33 +50,10 @@
   "local_abbr": "SEA",
   "visita_abbr": "SF",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 5,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -166,
-    140
-   ],
-   "ml_abre": [
-    -198,
-    164
-   ],
-   "spread": [
-    -3.0,
-    -115,
-    3.0,
-    -105
-   ],
-   "spread_abre": -3.5,
-   "total": [
-    46.5,
-    -105,
-    -115
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401872993",
@@ -235,7 +68,7 @@
   "semana": 5,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -175,
     145
@@ -253,8 +86,8 @@
    "spread_abre": 4.5,
    "total": [
     43.5,
-    -105,
-    -115
+    -110,
+    -110
    ],
    "total_abre": 48.5
   }
@@ -272,7 +105,7 @@
   "semana": 5,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -175,
     145

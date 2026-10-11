@@ -154,7 +154,7 @@
   "estadio": "Estádio Antônio Accioly",
   "local_espn": "Atlético Goianiense",
   "visita_espn": "Sport",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Estádio dos Aflitos",
   "local_espn": "Náutico",
   "visita_espn": "Vila Nova",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -458,23 +458,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
+    -160,
     270,
-    450
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -160
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -170
+     -175
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -497,7 +497,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -135
    ],
    "spread": [
@@ -508,6 +508,122 @@
     [
      "+0.5",
      -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Operário PR": [
+    [
+     "44189",
+     "Vagner da Silva",
+     "G"
+    ],
+    [
+     "357387",
+     "Gabriel Feliciano",
+     "D"
+    ],
+    [
+     "270195",
+     "Miranda",
+     "D"
+    ],
+    [
+     "203967",
+     "Maguinho",
+     "D"
+    ],
+    [
+     "250809",
+     "Joseph",
+     "D"
+    ],
+    [
+     "246812",
+     "Trindade",
+     "M"
+    ],
+    [
+     "202529",
+     "Paraíba",
+     "M"
+    ],
+    [
+     "183601",
+     "Juan Pablo Zuluaga",
+     "M"
+    ],
+    [
+     "300106",
+     "Pedro Veronez",
+     "M"
+    ],
+    [
+     "227228",
+     "Hildeberto Pereira",
+     "M"
+    ],
+    [
+     "198283",
+     "Caio Dantas",
+     "F"
+    ]
+   ],
+   "Goiás": [
+    [
+     "202304",
+     "Tadeu",
+     "G"
+    ],
+    [
+     "277436",
+     "Lucas Ribeiro",
+     "CD-L"
+    ],
+    [
+     "218909",
+     "Luiz Felipe",
+     "CD-R"
+    ],
+    [
+     "236729",
+     "Nicolas",
+     "LB"
+    ],
+    [
+     "285068",
+     "Silva",
+     "RB"
+    ],
+    [
+     "175092",
+     "Lucas Lima",
+     "AM"
+    ],
+    [
+     "240051",
+     "Machado",
+     "LM"
+    ],
+    [
+     "256021",
+     "Lourenco",
+     "RM"
+    ],
+    [
+     "338970",
+     "Cadu",
+     "F"
+    ],
+    [
+     "285058",
+     "Felipe Clemente",
+     "AM-L"
+    ],
+    [
+     "400935",
+     "Luquinhas",
+     "AM-R"
     ]
    ]
   }
