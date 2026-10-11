@@ -5,29 +5,29 @@
   "estadio": "Estadi Mallorca Son Moix",
   "local_espn": "Mallorca",
   "visita_espn": "Las Palmas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    330,
+    -195,
+    320,
     500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -110
+    -115,
+    -115
    ],
    "spread": [
     [
      "-1.5",
-     140
+     145
     ],
     [
      "+1.5",
-     -195
+     -205
     ]
    ]
   },
@@ -259,23 +259,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    210,
-    225
+    130,
+    215,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -165
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
@@ -322,7 +322,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    125,
+    230,
+    200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
  },
  {
   "id": "401883133",
@@ -333,7 +355,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    240,
+    105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -150
+    ],
+    [
+     "-0.5",
+     -105
+    ]
+   ]
+  }
  },
  {
   "id": "401883178",
