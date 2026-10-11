@@ -5,10 +5,32 @@
   "estadio": "Estadio Jalisco",
   "local_espn": "Atlas",
   "visita_espn": "Guadalajara",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    245,
+    115
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  },
   "alineaciones": {
    "Atlas": [
     [

@@ -560,7 +560,10 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'partidos') showList(); history.replaceState(null, '', '#' + b.dataset.view); }));
 
   // ---------------- lista de partidos
-  $('#mlist').innerHTML = M.map((m, i) => {
+  // los que ya empezaron (siguen en la lista hasta que ESPN los da por terminados) van al final, marcados
+  const yaEmpezo = m => new Date(m.utc) <= new Date();
+  const tarjetas = M.map((m, i) => {
+    const emp = yaEmpezo(m);
     const th = E[m.local_fd], ta = E[m.visita_fd];
     const best = m.con_momio.filter(r => r.veredicto === 'PICK').sort((a, b) => b.ev - a.ev)[0];
     const alerts = [...th.sancionados.map(s => `${m.local_es}: ${s.nombre} sancionado`), ...ta.sancionados.map(s => `${m.visita_es}: ${s.nombre} sancionado`),
@@ -573,7 +576,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (m.con_momio.some(r => r.veredicto === 'PICK' && CUIDADO[r.k])) alerts.push('PICK de empate: cuidado en esta liga');
     const bar = (p, c) => `<span style="width:${(p * 100).toFixed(1)}%;background:${c}"></span>`;
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
-      <span class="mmeta">${fdt(m.utc)} · ${esc(m.estadio)}</span>
+      <span class="mmeta">${emp ? '<b>Ya empezó</b> · ' : ''}${fdt(m.utc)} · ${esc(m.estadio)}</span>
       <span class="mteams">
         <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(m.local_es)}</span><span class="ps">${th.total && th.total.pj ? th.posicion + 'º' : ''}</span>${formHTML(m.forma_local)}</span>
         <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(m.visita_es)}</span><span class="ps">${ta.total && ta.total.pj ? ta.posicion + 'º' : ''}</span>${formHTML(m.forma_visita)}</span>
@@ -588,12 +591,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <span class="tags">
         <span class="tag">Goles esp. ${m.xg_local.toFixed(1)}–${m.xg_visita.toFixed(1)}</span>
         ${m.corners ? `<span class="tag">Córners esp. ${(m.corners[0] + m.corners[1]).toFixed(1)}</span>` : ''}
-        ${best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (m.mercado ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>')}
+        ${emp ? '<span class="tag alert">Ya empezó: los momios y los PICK son de antes del partido</span>' : best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (m.mercado ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>')}
         ${alerts.map(a => `<span class="tag alert">${esc(a)}</span>`).join('')}
         ${extra.map(a => `<span class="tag">${esc(a)}</span>`).join('')}
       </span>
     </button>`;
-  }).join('');
+  });
+  $('#mlist').innerHTML = [...M.keys()].sort((a, b) => yaEmpezo(M[a]) - yaEmpezo(M[b]) || a - b).map(i => tarjetas[i]).join('');
   if (!M.length) $('#mlist').innerHTML = `<p class="empty">No hay partidos de ${esc(I.nombre)} en los próximos días (puede ser una pausa por selecciones o el fin de la temporada). La página se actualiza sola cuando aparezcan.</p>`;
   $$('.mcard').forEach(b => b.addEventListener('click', () => { showMatch(+b.dataset.i); history.replaceState(null, '', '#p' + (+b.dataset.i + 1)); }));
   function showList() { $('#match-detail').hidden = true; $('#match-list-wrap').hidden = false; }
