@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -380,
+    -400,
     500,
     1000
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -175,
     140
    ],
    "spread": [
     [
      "-1.5",
-     -140
+     -145
     ],
     [
      "+1.5",
-     100
+     105
     ]
    ]
   }
@@ -126,7 +126,7 @@
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
   }
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -360,
+    -370,
     500,
     900
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -140
+    110,
+    -135
    ],
    "spread": [
     [
      "-1.5",
-     -140
+     -145
     ],
     [
      "+1.5",
-     100
+     105
     ]
    ]
   }
@@ -209,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    330,
-    250
+    -120,
+    340,
+    265
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -221,11 +221,11 @@
    "spread": [
     [
      "-0.5",
-     -125
+     -130
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -687,6 +687,105 @@
   "estadio": "MHPArena",
   "local_espn": "VfB Stuttgart",
   "visita_espn": "Atlético Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915395",
+  "utc": "2026-10-21T16:45Z",
+  "estadio": "Giuseppe Sinigaglia",
+  "local_espn": "Como",
+  "visita_espn": "Manchester United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915396",
+  "utc": "2026-10-21T16:45Z",
+  "estadio": "Decathlon Arena - Stade Pierre-Mauroy",
+  "local_espn": "Lille",
+  "visita_espn": "Galatasaray",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915394",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Villa Park",
+  "local_espn": "Aston Villa",
+  "visita_espn": "Viking FK",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915312",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Allianz Arena",
+  "local_espn": "Bayern Munich",
+  "visita_espn": "Arsenal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915388",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Jan Breydel Stadium",
+  "local_espn": "Club Brugge",
+  "visita_espn": "Lens",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915390",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "San Siro",
+  "local_espn": "Internazionale",
+  "visita_espn": "Shakhtar Donetsk",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915389",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Estadio La Cartuja",
+  "local_espn": "Real Betis",
+  "visita_espn": "Feyenoord Rotterdam",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915313",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Santiago Bernabéu",
+  "local_espn": "Real Madrid",
+  "visita_espn": "RB Leipzig",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915391",
+  "utc": "2026-10-21T19:00Z",
+  "estadio": "Estádio José Alvalade",
+  "local_espn": "Sporting CP",
+  "visita_espn": "LASK Linz",
   "estado": "STATUS_SCHEDULED",
   "tipo": "league-phase",
   "neutral": false,

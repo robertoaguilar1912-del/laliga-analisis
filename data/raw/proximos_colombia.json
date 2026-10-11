@@ -5,15 +5,15 @@
   "estadio": "Romelio Martínez",
   "local_espn": "Atlético Junior",
   "visita_espn": "Internacional de Bogotá",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    290,
-    425
+    -160,
+    285,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     125
+     120
     ]
    ]
   },
@@ -259,7 +259,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
+    105,
     200,
     265
    ],
@@ -517,6 +517,17 @@
   "estadio": "General Santander",
   "local_espn": "Cúcuta Deportivo",
   "visita_espn": "Atlético Nacional",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878012",
+  "utc": "2026-10-21T23:15Z",
+  "estadio": "Estadio Bello Horizonte - Rey Pele",
+  "local_espn": "Llaneros FC",
+  "visita_espn": "Deportivo Cali",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
