@@ -5,7 +5,7 @@
   "estadio": "Estadio Jaraguay (Municipal de Montería)",
   "local_espn": "Jaguares de Córdoba",
   "visita_espn": "Deportes Tolima",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    215,
-    260
+    100,
+    220,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -145
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
-     -140
+     -130
     ]
    ]
   }
