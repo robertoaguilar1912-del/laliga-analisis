@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841601",
-  "utc": "2026-10-11T17:45Z",
-  "estadio": "Estadio Pedro Bidegain",
-  "local_espn": "San Lorenzo",
-  "visita_espn": "Deportivo Riestra",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    175,
-    170,
-    210
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -140,
-    105
-   ],
-   "spread": [
-    [
-     "-0.5",
-     155
-    ],
-    [
-     "+0.5",
-     -225
-    ]
-   ]
-  },
-  "alineaciones": {
-   "San Lorenzo": [
-    [
-     "195679",
-     "José Devecchi",
-     "G"
-    ],
-    [
-     "215932",
-     "Danilo Arboleda",
-     "CD"
-    ],
-    [
-     "214198",
-     "Emiliano Amor",
-     "CD-L"
-    ],
-    [
-     "383076",
-     "Alejo Cordoba",
-     "CD-R"
-    ],
-    [
-     "406931",
-     "Facundo Gulli",
-     "CM-L"
-    ],
-    [
-     "312188",
-     "Gonzalo Alassia",
-     "CM-R"
-    ],
-    [
-     "401538",
-     "Teo Rodríguez",
-     "LM"
-    ],
-    [
-     "195337",
-     "Nicolas Tripichio",
-     "RM"
-    ],
-    [
-     "364366",
-     "Rodrigo Auzmendi",
-     "F"
-    ],
-    [
-     "298592",
-     "Facundo Farías",
-     "CF-L"
-    ],
-    [
-     "283675",
-     "Alexis Cuello",
-     "CF-R"
-    ]
-   ],
-   "Deportivo Riestra": [
-    [
-     "146637",
-     "Ignacio Arce",
-     "G"
-    ],
-    [
-     "206671",
-     "Cristian Paz",
-     "CD"
-    ],
-    [
-     "190565",
-     "Juan Cruz Randazzo",
-     "CD-L"
-    ],
-    [
-     "233726",
-     "Nicolás Sansotre",
-     "CD-R"
-    ],
-    [
-     "194848",
-     "Pedro Ramirez",
-     "LB"
-    ],
-    [
-     "278608",
-     "Mariano Bracamonte",
-     "RB"
-    ],
-    [
-     "195672",
-     "Milton Céliz",
-     "CM"
-    ],
-    [
-     "337014",
-     "Pablo Monje",
-     "CM-L"
-    ],
-    [
-     "213487",
-     "Brian Sánchez",
-     "CM-R"
-    ],
-    [
-     "310778",
-     "Antony Alonso",
-     "CF-L"
-    ],
-    [
-     "114767",
-     "Alexander Díaz",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841605",
   "utc": "2026-10-11T20:00Z",
   "estadio": "Ciudad de Vicente López",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    185,
-    150
+    175,
+    195,
+    180
    ],
    "ou_linea": 1.5,
    "ou": [
-    -160,
-    120
+    -145,
+    110
    ],
    "spread": [
     [
-     "+0.5",
-     -195
+     "-0.5",
+     160
     ],
     [
-     "-0.5",
-     140
+     "+0.5",
+     -225
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Platense": [
+    [
+     "271254",
+     "Juan Pablo Cozzani",
+     "G"
+    ],
+    [
+     "200303",
+     "Víctor Cuesta",
+     "CD-L"
+    ],
+    [
+     "382974",
+     "Mateo Mendia",
+     "CD-R"
+    ],
+    [
+     "335100",
+     "Tomas Silva",
+     "LB"
+    ],
+    [
+     "292394",
+     "Agustín Lagos",
+     "RB"
+    ],
+    [
+     "233948",
+     "Bautista Merlini",
+     "AM"
+    ],
+    [
+     "287496",
+     "Martín Barrios",
+     "LM"
+    ],
+    [
+     "379729",
+     "Maximiliano Amarfil",
+     "RM"
+    ],
+    [
+     "287687",
+     "Bruno Sepúlveda",
+     "F"
+    ],
+    [
+     "310736",
+     "Nicolas Retamar",
+     "AM-L"
+    ],
+    [
+     "213170",
+     "Guido Mainero",
+     "AM-R"
+    ]
+   ],
+   "Argentinos Juniors": [
+    [
+     "200687",
+     "Brayan Cortés",
+     "G"
+    ],
+    [
+     "290507",
+     "Franco Paredes",
+     "D"
+    ],
+    [
+     "269818",
+     "Francisco Álvarez",
+     "D"
+    ],
+    [
+     "118787",
+     "Franco Vázquez",
+     "D"
+    ],
+    [
+     "218629",
+     "Sebastián Prieto",
+     "D"
+    ],
+    [
+     "142172",
+     "Facundo Gutiérrez",
+     "M"
+    ],
+    [
+     "414355",
+     "Facundo Carrizo",
+     "M"
+    ],
+    [
+     "195711",
+     "Nicolás Oroz",
+     "M"
+    ],
+    [
+     "233932",
+     "Tomas Molina",
+     "F"
+    ],
+    [
+     "382948",
+     "Diego Porcel",
+     "F"
+    ],
+    [
+     "270364",
+     "Gastón Verón",
+     "F"
     ]
    ]
   }
@@ -193,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
+    100,
     225,
-    285
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
-    -165
+    130,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
      -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Rosario Central": [
+    [
+     "195621",
+     "Jeremias Ledesma",
+     "G"
+    ],
+    [
+     "307599",
+     "Agustín Sández",
+     "D"
+    ],
+    [
+     "285885",
+     "Gastón Ávila",
+     "D"
+    ],
+    [
+     "400123",
+     "Ignacio Ovando",
+     "D"
+    ],
+    [
+     "262567",
+     "Emanuel Coronel",
+     "D"
+    ],
+    [
+     "108223",
+     "Ángel Di María",
+     "M"
+    ],
+    [
+     "300115",
+     "Franco Ibarra",
+     "M"
+    ],
+    [
+     "255295",
+     "Jáminton Campaz",
+     "M"
+    ],
+    [
+     "279977",
+     "Federico Navarro",
+     "M"
+    ],
+    [
+     "289076",
+     "Vicente Pizarro",
+     "M"
+    ],
+    [
+     "241544",
+     "Enzo Copetti",
+     "F"
+    ]
+   ],
+   "Independiente Rivadavia": [
+    [
+     "414351",
+     "Nicolás Bolcato",
+     "G"
+    ],
+    [
+     "301978",
+     "Sheyko Studer",
+     "CD-L"
+    ],
+    [
+     "358754",
+     "Leonard Costa",
+     "CD-R"
+    ],
+    [
+     "236006",
+     "Juan Manuel Elordi",
+     "LB"
+    ],
+    [
+     "233841",
+     "Luciano Gómez",
+     "RB"
+    ],
+    [
+     "185434",
+     "Matías Fernández",
+     "M"
+    ],
+    [
+     "302053",
+     "Tomás Bottari",
+     "CM"
+    ],
+    [
+     "213509",
+     "Luis Sequeira",
+     "AM"
+    ],
+    [
+     "217153",
+     "José Florentín",
+     "LM"
+    ],
+    [
+     "315719",
+     "Gonzalo Rios",
+     "RM"
+    ],
+    [
+     "257754",
+     "Alex Arce",
+     "CF-R"
     ]
    ]
   }
