@@ -5,7 +5,7 @@
   "estadio": "RheinEnergieStadion",
   "local_espn": "FC Cologne",
   "visita_espn": "Borussia Mönchengladbach",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    285,
-    360
+    -160,
+    290,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    130
+    -170,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -170
     ],
     [
      "+0.5",
-     115
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "SC Freiburg": [
+    [
+     "338852",
+     "Mio Backhaus",
+     "G"
+    ],
+    [
+     "170209",
+     "Matthias Ginter",
+     "D"
+    ],
+    [
+     "367558",
+     "Jordy Makengo",
+     "D"
+    ],
+    [
+     "364596",
+     "Philipp Treu",
+     "D"
+    ],
+    [
+     "219316",
+     "Philipp Lienhart",
+     "D"
+    ],
+    [
+     "303031",
+     "Yuito Suzuki",
+     "M"
+    ],
+    [
+     "346619",
+     "Derry Scherhant",
+     "M"
+    ],
+    [
+     "231190",
+     "Niklas Beste",
+     "M"
+    ],
+    [
+     "337079",
+     "Yannick Engelhardt",
+     "M"
+    ],
+    [
+     "214203",
+     "Maximilian Eggestein",
+     "M"
+    ],
+    [
+     "310883",
+     "Igor Matanovic",
+     "F"
+    ]
+   ],
+   "Schalke 04": [
+    [
+     "165764",
+     "Loris Karius",
+     "G"
+    ],
+    [
+     "220538",
+     "Nikola Katic",
+     "D"
+    ],
+    [
+     "246560",
+     "Hasan Kurucay",
+     "D"
+    ],
+    [
+     "231674",
+     "Maximilian Wöber",
+     "D"
+    ],
+    [
+     "326766",
+     "Adrian Gantenbein",
+     "M"
+    ],
+    [
+     "318343",
+     "Soufian El-Faouzi",
+     "M"
+    ],
+    [
+     "198087",
+     "Robin Gosens",
+     "M"
+    ],
+    [
+     "188057",
+     "Kenan Karaman",
+     "M"
+    ],
+    [
+     "297565",
+     "Satoshi Tanaka",
+     "M"
+    ],
+    [
+     "305957",
+     "Junior Adamu",
+     "M"
+    ],
+    [
+     "40791",
+     "Moussa Sylla",
+     "F"
     ]
    ]
   }

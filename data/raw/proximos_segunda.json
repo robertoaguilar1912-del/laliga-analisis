@@ -5,7 +5,7 @@
   "estadio": "Power Horse Stadium",
   "local_espn": "Almería",
   "visita_espn": "Leganés",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -190,
+    -200,
     330,
     500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -130,
     -105
    ],
    "spread": [
     [
      "-1.5",
-     145
+     140
     ],
     [
      "+1.5",
-     -205
+     -195
     ]
    ]
   }
@@ -259,14 +259,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    215,
-    195
+    145,
+    220,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -155
+    115,
+    -150
    ],
    "spread": [
     [
@@ -275,7 +275,7 @@
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
