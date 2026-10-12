@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841606",
-  "utc": "2026-10-12T19:00Z",
-  "estadio": "Ciudad de Lanús",
-  "local_espn": "Lanús",
-  "visita_espn": "Vélez Sarsfield",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    235,
-    330
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    130,
-    -170
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -120
-    ],
-    [
-     "+0.5",
-     -115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Lanús": [
-    [
-     "307981",
-     "Allan Wlk",
-     "SUB"
-    ],
-    [
-     "246213",
-     "Agustín Cardozo",
-     "SUB"
-    ],
-    [
-     "309456",
-     "Lucas Besozzi",
-     "SUB"
-    ],
-    [
-     "255944",
-     "Tomás Guidara",
-     "SUB"
-    ],
-    [
-     "199651",
-     "Marcelino Moreno",
-     "SUB"
-    ],
-    [
-     "227682",
-     "José Canale",
-     "SUB"
-    ],
-    [
-     "124364",
-     "Eduardo Salvio",
-     "SUB"
-    ],
-    [
-     "292050",
-     "Sasha Marcich",
-     "SUB"
-    ],
-    [
-     "382831",
-     "Agustín Medina",
-     "SUB"
-    ],
-    [
-     "142720",
-     "Carlos Izquierdoz",
-     "SUB"
-    ],
-    [
-     "199641",
-     "Nahuel Losada",
-     "SUB"
-    ]
-   ],
-   "Vélez Sarsfield": [
-    [
-     "216697",
-     "Tomás Marchiori",
-     "G"
-    ],
-    [
-     "213346",
-     "Joaquín García",
-     "D"
-    ],
-    [
-     "195714",
-     "Lisandro Magallán",
-     "D"
-    ],
-    [
-     "196592",
-     "Elias Gomez",
-     "D"
-    ],
-    [
-     "387781",
-     "Thiago Silvero",
-     "D"
-    ],
-    [
-     "241823",
-     "Lucas Robertone",
-     "M"
-    ],
-    [
-     "172387",
-     "Rodrigo Aliendro",
-     "M"
-    ],
-    [
-     "422210",
-     "Thiago Aguirre",
-     "M"
-    ],
-    [
-     "407157",
-     "Matías Arias",
-     "M"
-    ],
-    [
-     "422531",
-     "Juan Policella",
-     "M"
-    ],
-    [
-     "252617",
-     "Ronaldo Martínez",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841608",
   "utc": "2026-10-12T21:30Z",
   "estadio": "Estadio Víctor Antonio Legrotaglie",
@@ -160,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    210,
-    225
+    145,
+    205,
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -175
+     -180
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Gimnasia (Mendoza)": [
+    [
+     "122884",
+     "César Rigamonti",
+     "G"
+    ],
+    [
+     "263351",
+     "Diego Mondino",
+     "CD-L"
+    ],
+    [
+     "117843",
+     "Ezequiel Muñoz",
+     "CD-R"
+    ],
+    [
+     "319190",
+     "Matías Recalde",
+     "LB"
+    ],
+    [
+     "339037",
+     "Luciano Paredes",
+     "RB"
+    ],
+    [
+     "309461",
+     "Luciano Cingolani",
+     "AM"
+    ],
+    [
+     "234996",
+     "Fermín Antonini",
+     "LM"
+    ],
+    [
+     "307334",
+     "Esteban Fernández",
+     "RM"
+    ],
+    [
+     "371423",
+     "Agustín Módica",
+     "F"
+    ],
+    [
+     "318398",
+     "Facundo Lencioni",
+     "AM-L"
+    ],
+    [
+     "196613",
+     "Matias Vargas",
+     "AM-R"
+    ]
+   ],
+   "Newell's Old Boys": [
+    [
+     "361297",
+     "Josué Reinatti",
+     "G"
+    ],
+    [
+     "240430",
+     "Lucas Carrizo",
+     "CD-L"
+    ],
+    [
+     "420806",
+     "Bruno Cabrera",
+     "CD-R"
+    ],
+    [
+     "199690",
+     "Franco Escobar",
+     "LB"
+    ],
+    [
+     "270402",
+     "Martín Ortega",
+     "RB"
+    ],
+    [
+     "400805",
+     "Facundo Gauch",
+     "CM"
+    ],
+    [
+     "121876",
+     "Rodrigo Herrera",
+     "LM"
+    ],
+    [
+     "397602",
+     "Luca Regiardo",
+     "RM"
+    ],
+    [
+     "263095",
+     "Matías Cóccaro",
+     "F"
+    ],
+    [
+     "315926",
+     "Santiago Solari",
+     "LF"
+    ],
+    [
+     "250387",
+     "Walter Mazzantti",
+     "RF"
     ]
    ]
   }
