@@ -5,7 +5,7 @@
   "estadio": "Estádio Dr. Jorge Ismael de Biasi",
   "local_espn": "Novorizontino",
   "visita_espn": "Ponte Preta",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -138,7 +138,7 @@
   "estadio": "Heriberto Hülse",
   "local_espn": "Criciúma",
   "visita_espn": "América Mineiro",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -293,23 +293,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    220,
-    240
+    130,
+    205,
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    140,
+    -190
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -155
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Botafogo-SP": [
+    [
+     "234906",
+     "Victor Souza",
+     "G"
+    ],
+    [
+     "340088",
+     "Vilar",
+     "D"
+    ],
+    [
+     "304538",
+     "Gabriel Inocencio",
+     "D"
+    ],
+    [
+     "268695",
+     "Ericson",
+     "D"
+    ],
+    [
+     "236284",
+     "Patrick Brey",
+     "D"
+    ],
+    [
+     "164298",
+     "Kelvin",
+     "M"
+    ],
+    [
+     "216090",
+     "Rafael Gava",
+     "M"
+    ],
+    [
+     "198365",
+     "Jonathan Lemos",
+     "M"
+    ],
+    [
+     "271563",
+     "Everton Morelli",
+     "M"
+    ],
+    [
+     "212315",
+     "Matheus Sales",
+     "M"
+    ],
+    [
+     "182646",
+     "Hygor",
+     "F"
+    ]
+   ],
+   "Ceará": [
+    [
+     "170456",
+     "Richard",
+     "G"
+    ],
+    [
+     "201054",
+     "Luiz Otavio",
+     "CD-L"
+    ],
+    [
+     "218895",
+     "Luiz Otávio",
+     "CD-R"
+    ],
+    [
+     "218891",
+     "Sanchez",
+     "LB"
+    ],
+    [
+     "336417",
+     "Júlio César",
+     "RB"
+    ],
+    [
+     "418256",
+     "Melk",
+     "AM"
+    ],
+    [
+     "418257",
+     "João Gabriel",
+     "LM"
+    ],
+    [
+     "285116",
+     "Vinicius",
+     "RM"
+    ],
+    [
+     "252956",
+     "Saulo",
+     "F"
+    ],
+    [
+     "297761",
+     "Matheus Andrade",
+     "AM-L"
+    ],
+    [
+     "418255",
+     "Enzo",
+     "AM-R"
     ]
    ]
   }
