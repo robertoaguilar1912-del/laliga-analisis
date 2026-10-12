@@ -11,14 +11,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    205,
-    265
+    115,
+    210,
+    275
    ],
-   "ou_linea": 1.5,
+   "ou_linea": 2.5,
    "ou": [
-    -195,
-    145
+    140,
+    -185
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -150
+     -145
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    205,
-    245
+    135,
+    210,
+    225
    ],
-   "ou_linea": 1.5,
+   "ou_linea": 2.5,
    "ou": [
-    -195,
-    145
+    130,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     115
+     125
     ],
     [
      "+0.5",
-     -165
+     -175
     ]
    ]
   }
@@ -107,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    165,
+    240
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -205,
+    140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401841626",
@@ -118,7 +140,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    170,
+    200,
+    165
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -230
+    ],
+    [
+     "-0.5",
+     145
+    ]
+   ]
+  }
  },
  {
   "id": "401841627",
@@ -129,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    265,
+    400
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401841615",
@@ -140,7 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    265,
+    220,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401841621",
