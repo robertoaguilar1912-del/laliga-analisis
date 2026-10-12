@@ -12,22 +12,22 @@
    "casa": "DraftKings",
    "ml": [
     475,
-    360,
-    -195
+    370,
+    -205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
     [
      "+1.5",
-     -190
+     -185
     ],
     [
      "-1.5",
-     130
+     125
     ]
    ]
   }
@@ -121,23 +121,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    380,
-    -225
+    475,
+    360,
+    -205
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    -185,
+    135
    ],
    "spread": [
     [
      "+1.5",
-     -160
+     -175
     ],
     [
      "-1.5",
-     110
+     120
     ]
    ]
   }
@@ -154,9 +154,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    310,
-    390
+    -160,
+    320,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -166,11 +166,11 @@
    "spread": [
     [
      "-0.5",
-     -170
+     -180
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   }
@@ -189,7 +189,7 @@
    "ml": [
     500,
     360,
-    -205
+    -210
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -226,7 +226,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
@@ -253,23 +253,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -295,
-    425,
-    700
+    -330,
+    475,
+    800
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
-    130
+    -180,
+    135
    ],
    "spread": [
     [
      "-1.5",
-     -130
+     -140
     ],
     [
      "+1.5",
-     -115
+     -105
     ]
    ]
   }
@@ -319,23 +319,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    350,
-    500
+    -250,
+    390,
+    600
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    135
+    135,
+    -180
    ],
    "spread": [
     [
      "-1.5",
-     110
+     -105
     ],
     [
      "+1.5",
-     -160
+     -140
     ]
    ]
   }
@@ -352,23 +352,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -4000,
-    1900,
+    -5000,
+    2000,
     3000
    ],
    "ou_linea": 4.5,
    "ou": [
-    115,
-    -155
+    -110,
+    -120
    ],
    "spread": [
     [
      "-3.5",
-     -105
+     -150
     ],
     [
      "+3.5",
-     -135
+     100
     ]
    ]
   }
@@ -385,23 +385,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    225,
-    200
+    150,
+    220,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     125
+     135
     ],
     [
      "+0.5",
-     -180
+     -200
     ]
    ]
   }
@@ -451,23 +451,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    270,
-    130
+    190,
+    275,
+    125
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -175
+    -170
    ],
    "spread": [
     [
      "+0.5",
-     -170
+     -160
     ],
     [
      "-0.5",
-     120
+     110
     ]
    ]
   }
@@ -484,9 +484,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -300,
+    -280,
     425,
-    750
+    700
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -496,11 +496,11 @@
    "spread": [
     [
      "-1.5",
-     -130
+     -125
     ],
     [
      "+1.5",
-     -115
+     -120
     ]
    ]
   }
@@ -570,5 +570,203 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401915846",
+  "utc": "2026-10-22T14:30Z",
+  "estadio": "Almaty Ortalyk Stadium",
+  "local_espn": "Kairat Almaty",
+  "visita_espn": "Panathinaikos",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915844",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Right to Dream Park",
+  "local_espn": "FC Nordsjælland",
+  "visita_espn": "CSKA Sofia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915840",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Estadio Coliseum",
+  "local_espn": "Getafe",
+  "visita_espn": "FC Lugano",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915845",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Mikheil Meskhi Stadioni",
+  "local_espn": "Iberia 1999",
+  "visita_espn": "Mjällby AIF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915839",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Estadi de la FAF d'Encamp",
+  "local_espn": "Inter D'Escaldes",
+  "visita_espn": "CSU Craiova",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915842",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Stadion Strelnice",
+  "local_espn": "Jablonec",
+  "visita_espn": "Brighton & Hove Albion",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915841",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "S. Darius and S. Gireno Stadium",
+  "local_espn": "Kauno Zalgiris",
+  "visita_espn": "SK Brann",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915838",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Alphamega Stadium",
+  "local_espn": "Pafos",
+  "visita_espn": "Riga FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915843",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Rajko Mitic Stadium",
+  "local_espn": "Red Star Belgrade",
+  "visita_espn": "F.C. København",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915745",
+  "utc": "2026-10-22T16:45Z",
+  "estadio": "Papara Park",
+  "local_espn": "Trabzonspor",
+  "visita_espn": "Heart of Midlothian",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915744",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Cepheus Park Randers",
+  "local_espn": "AGF",
+  "visita_espn": "Egnatia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915837",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Johan Cruijff Arena",
+  "local_espn": "Ajax Amsterdam",
+  "visita_espn": "Atalanta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915836",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Stade Louis II",
+  "local_espn": "AS Monaco",
+  "visita_espn": "SC Freiburg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915743",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Gradski Stadion Banja Luka",
+  "local_espn": "Borac Banja Luka",
+  "visita_espn": "KuPS Kuopio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915832",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Estádio Municipal de Braga",
+  "local_espn": "Braga",
+  "visita_espn": "KAA Gent",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915835",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "MCH Arena",
+  "local_espn": "FC Midtjylland",
+  "visita_espn": "Sint-Truidense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915834",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Stockhorn Arena",
+  "local_espn": "FC Thun",
+  "visita_espn": "Hajduk Split",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401915833",
+  "utc": "2026-10-22T19:00Z",
+  "estadio": "Europa Point Stadium",
+  "local_espn": "Lincoln Red Imps",
+  "visita_espn": "FC Twente",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "league-phase",
+  "neutral": false,
+  "momios": null
  }
 ]

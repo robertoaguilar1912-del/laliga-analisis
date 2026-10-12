@@ -45,8 +45,8 @@
    "spread_abre": -2.5,
    "total": [
     220.5,
-    -110,
-    -110
+    -115,
+    -105
    ],
    "total_abre": 224.5
   }
@@ -185,8 +185,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    110
+    -135,
+    114
    ],
    "ml_abre": [
     -135,
@@ -253,8 +253,8 @@
    "spread_abre": -6.5,
    "total": [
     238.5,
-    -112,
-    -108
+    -110,
+    -110
    ],
    "total_abre": 238.5
   }
@@ -297,16 +297,16 @@
     130
    ],
    "spread": [
-    -1.5,
-    -115,
-    1.5,
-    -105
+    -2.5,
+    -105,
+    2.5,
+    -115
    ],
    "spread_abre": -3.5,
    "total": [
-    243.5,
-    -105,
-    -115
+    242.5,
+    -115,
+    -105
    ],
    "total_abre": 236.5
   }
@@ -505,16 +505,16 @@
     -175
    ],
    "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
+    4.5,
+    -115,
+    -4.5,
+    -105
    ],
    "spread_abre": 4.5,
    "total": [
-    243.5,
-    -105,
-    -115
+    242.5,
+    -115,
+    -105
    ],
    "total_abre": 240.5
   }
@@ -557,16 +557,16 @@
     270
    ],
    "spread": [
-    -8.5,
-    -102,
-    8.5,
-    -118
+    -7.5,
+    -118,
+    7.5,
+    -102
    ],
    "spread_abre": -8.5,
    "total": [
-    226.5,
-    -115,
-    -105
+    227.5,
+    -105,
+    -115
    ],
    "total_abre": 226.5
   }
@@ -725,6 +725,110 @@
     -110
    ],
    "total_abre": 230.5
+  }
+ },
+ {
+  "id": "401909093",
+  "utc": "2026-10-22T23:00Z",
+  "fecha": "2026-10-22",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "PHI",
+  "visita": "CLE",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Philadelphia 76ers",
+  "visita_espn": "Cleveland Cavaliers",
+  "revisado": false,
+  "estadio": "Xfinity Mobile Arena",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    130
+   ],
+   "ml_abre": [
+    -175,
+    145
+   ],
+   "spread": [
+    -4.5,
+    -105,
+    4.5,
+    -115
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    233.5,
+    -110,
+    -110
+   ],
+   "total_abre": 233.5
+  }
+ },
+ {
+  "id": "401909094",
+  "utc": "2026-10-23T01:30Z",
+  "fecha": "2026-10-22",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "OKC",
+  "visita": "DEN",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Oklahoma City Thunder",
+  "visita_espn": "Denver Nuggets",
+  "revisado": false,
+  "estadio": "Paycom Center",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -278,
+    225
+   ],
+   "ml_abre": [
+    -278,
+    225
+   ],
+   "spread": [
+    -7.5,
+    -110,
+    7.5,
+    -110
+   ],
+   "spread_abre": -7.5,
+   "total": [
+    232.5,
+    -110,
+    -110
+   ],
+   "total_abre": 231.5
   }
  }
 ]

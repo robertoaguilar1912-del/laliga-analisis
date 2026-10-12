@@ -178,6 +178,41 @@
  ],
  "Atlanta Falcons": [
   {
+   "nombre": "Kyle Pitts Sr.",
+   "pos": "TE",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Tua Tagovailoa",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Drake London",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Bijan Robinson",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Michael Penix Jr.",
+   "pos": "QB",
+   "estado": "Questionable",
+   "fecha": "2026-10-12",
+   "tipo": "Ribs"
+  },
+  {
    "nombre": "C.J. Henderson",
    "pos": "CB",
    "estado": "Questionable",
@@ -316,44 +351,37 @@
    "estado": "Active",
    "fecha": "2026-10-06",
    "tipo": ""
-  },
-  {
-   "nombre": "Kyle Pitts Sr.",
-   "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": ""
-  },
-  {
-   "nombre": "Nick Folk",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": ""
-  },
-  {
-   "nombre": "Brian Robinson Jr.",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": ""
-  },
-  {
-   "nombre": "Michael Penix Jr.",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": "Ribs"
-  },
-  {
-   "nombre": "Drake London",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": ""
   }
  ],
  "Baltimore Ravens": [
+  {
+   "nombre": "Mark Andrews",
+   "pos": "TE",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Tyler Huntley",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Zay Flowers",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Derrick Henry",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
   {
    "nombre": "Broderick Washington Jr.",
    "pos": "DT",
@@ -418,13 +446,6 @@
    "tipo": "Finger"
   },
   {
-   "nombre": "Zay Flowers",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-11",
-   "tipo": ""
-  },
-  {
    "nombre": "John Simpson",
    "pos": "G",
    "estado": "Active",
@@ -437,13 +458,6 @@
    "estado": "Injured Reserve",
    "fecha": "2026-10-09",
    "tipo": "Wrist"
-  },
-  {
-   "nombre": "Tyler Huntley",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-10-09",
-   "tipo": ""
   },
   {
    "nombre": "Chris Moore",
@@ -513,20 +527,6 @@
    "pos": "RB",
    "estado": "Active",
    "fecha": "2026-10-06",
-   "tipo": ""
-  },
-  {
-   "nombre": "Joe Fagnano",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-10-05",
-   "tipo": ""
-  },
-  {
-   "nombre": "Tyler Loop",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-05",
    "tipo": ""
   }
  ],
@@ -888,7 +888,7 @@
   {
    "nombre": "Anthony Johnson Jr.",
    "pos": "S",
-   "estado": "Out",
+   "estado": "Injured Reserve",
    "fecha": "2026-10-12",
    "tipo": "Undisclosed"
   },
@@ -2125,6 +2125,20 @@
  ],
  "Houston Texans": [
   {
+   "nombre": "Dalton Schultz",
+   "pos": "TE",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
+   "nombre": "Xavier Hutchinson",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
    "nombre": "Jaylin Noel",
    "pos": "WR",
    "estado": "Active",
@@ -2284,20 +2298,6 @@
    "estado": "Injured Reserve",
    "fecha": "2026-10-09",
    "tipo": "Knee - ACL + MCL"
-  },
-  {
-   "nombre": "Jamal Hill",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-10-09",
-   "tipo": ""
-  },
-  {
-   "nombre": "Jadeveon Clowney",
-   "pos": "DE",
-   "estado": "Active",
-   "fecha": "2026-10-08",
-   "tipo": ""
   }
  ],
  "Indianapolis Colts": [
@@ -2833,6 +2833,13 @@
  ],
  "Las Vegas Raiders": [
   {
+   "nombre": "Tre Tucker",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
    "nombre": "Dylan Laube",
    "pos": "RB",
    "estado": "Active",
@@ -2984,13 +2991,6 @@
    "pos": "LB",
    "estado": "Active",
    "fecha": "2026-10-07",
-   "tipo": ""
-  },
-  {
-   "nombre": "Tre Tucker",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-06",
    "tipo": ""
   },
   {
@@ -3718,6 +3718,13 @@
  ],
  "New England Patriots": [
   {
+   "nombre": "Efton Chism III",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
    "nombre": "Hunter Henry",
    "pos": "TE",
    "estado": "Active",
@@ -3884,13 +3891,6 @@
    "estado": "Injured Reserve",
    "fecha": "2026-10-10",
    "tipo": "Calf"
-  },
-  {
-   "nombre": "Eli Raridon",
-   "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-10-07",
-   "tipo": ""
   }
  ],
  "New Orleans Saints": [
@@ -4076,7 +4076,7 @@
    "pos": "OT",
    "estado": "Questionable",
    "fecha": "2026-10-12",
-   "tipo": ""
+   "tipo": "Calf"
   },
   {
    "nombre": "Isaiah Likely",
@@ -5311,6 +5311,13 @@
  ],
  "Tennessee Titans": [
   {
+   "nombre": "Tyjae Spears",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-10-12",
+   "tipo": ""
+  },
+  {
    "nombre": "Wan'Dale Robinson",
    "pos": "WR",
    "estado": "Active",
@@ -5460,13 +5467,6 @@
   {
    "nombre": "Calvin Ridley",
    "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-06",
-   "tipo": ""
-  },
-  {
-   "nombre": "Tyjae Spears",
-   "pos": "RB",
    "estado": "Active",
    "fecha": "2026-10-06",
    "tipo": ""
