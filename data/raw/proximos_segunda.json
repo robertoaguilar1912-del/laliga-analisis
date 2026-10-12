@@ -1,154 +1,5 @@
 [
  {
-  "id": "401883159",
-  "utc": "2026-10-12T12:00Z",
-  "estadio": "Estadio José Zorrilla",
-  "local_espn": "Real Valladolid",
-  "visita_espn": "Albacete",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    240,
-    320
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -130
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -120
-    ],
-    [
-     "+0.5",
-     -115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Real Valladolid": [
-    [
-     "347431",
-     "Álvaro Aceves",
-     "G"
-    ],
-    [
-     "347433",
-     "David Torres",
-     "CD-L"
-    ],
-    [
-     "324949",
-     "Pablo Tomeo",
-     "CD-R"
-    ],
-    [
-     "276578",
-     "Stanko Juric",
-     "SW"
-    ],
-    [
-     "367677",
-     "Iván Garriel",
-     "LB"
-    ],
-    [
-     "206473",
-     "Iván Alejo",
-     "RB"
-    ],
-    [
-     "367679",
-     "Víctor Fernández",
-     "CM"
-    ],
-    [
-     "276450",
-     "Julien Ponceau",
-     "LM"
-    ],
-    [
-     "318125",
-     "Thiago Ojeda",
-     "RM"
-    ],
-    [
-     "371617",
-     "Adrián Arnun",
-     "CF-L"
-    ],
-    [
-     "335235",
-     "Juan Latasa",
-     "CF-R"
-    ]
-   ],
-   "Albacete": [
-    [
-     "140342",
-     "Diego Mariño",
-     "G"
-    ],
-    [
-     "236153",
-     "Lluis López",
-     "CD-L"
-    ],
-    [
-     "209592",
-     "Jesús Vallejo",
-     "CD-R"
-    ],
-    [
-     "283862",
-     "Carlos Neva",
-     "LB"
-    ],
-    [
-     "276637",
-     "Fran Gamez",
-     "RB"
-    ],
-    [
-     "297361",
-     "Antonio Pacheco Ruiz",
-     "CM-L"
-    ],
-    [
-     "264181",
-     "José Corpas",
-     "CM-R"
-    ],
-    [
-     "356770",
-     "Víctor Valverde Da Silva",
-     "LM"
-    ],
-    [
-     "282682",
-     "Roberto González",
-     "RM"
-    ],
-    [
-     "279697",
-     "Mario Soberón",
-     "CF-L"
-    ],
-    [
-     "274015",
-     "Victor San Bartolomé",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401883187",
   "utc": "2026-10-12T14:15Z",
   "estadio": "Estadio Municipal de El Plantío",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
+    150,
     210,
-    185
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
     125,
-    -165
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     145
+     135
     ],
     [
      "+0.5",
-     -205
+     -190
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Burgos": [
+    [
+     "189960",
+     "Ander Cantero",
+     "G"
+    ],
+    [
+     "375963",
+     "Álex Lizancos",
+     "D"
+    ],
+    [
+     "259821",
+     "Gregorio Sierra",
+     "D"
+    ],
+    [
+     "331721",
+     "Brais Martínez",
+     "D"
+    ],
+    [
+     "245822",
+     "Oier Luengo",
+     "D"
+    ],
+    [
+     "331154",
+     "Javi Llabrés",
+     "M"
+    ],
+    [
+     "346404",
+     "David González",
+     "M"
+    ],
+    [
+     "34390",
+     "Pablo Galdames",
+     "M"
+    ],
+    [
+     "302945",
+     "Unai Vencedor",
+     "M"
+    ],
+    [
+     "231344",
+     "Curro",
+     "F"
+    ],
+    [
+     "343629",
+     "Alex Fores",
+     "F"
+    ]
+   ],
+   "Granada": [
+    [
+     "185100",
+     "Alberto Flores",
+     "G"
+    ],
+    [
+     "312144",
+     "Manu Lama",
+     "D"
+    ],
+    [
+     "173611",
+     "Sergio López",
+     "D"
+    ],
+    [
+     "264488",
+     "Diego Pampín",
+     "D"
+    ],
+    [
+     "412251",
+     "Juanjo",
+     "D"
+    ],
+    [
+     "330246",
+     "Pedro Alemañ",
+     "M"
+    ],
+    [
+     "186181",
+     "Gerard Gumbau",
+     "M"
+    ],
+    [
+     "214317",
+     "Rubén Alcaraz",
+     "M"
+    ],
+    [
+     "229522",
+     "José Arnaiz",
+     "F"
+    ],
+    [
+     "409385",
+     "Mario Jiménez Gambin",
+     "F"
+    ],
+    [
+     "384447",
+     "Sergio Rodelas",
+     "F"
     ]
    ]
   }
@@ -193,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
+    145,
     205,
-    220
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
+    115,
     -155
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -180
+     -185
     ]
    ]
   }
