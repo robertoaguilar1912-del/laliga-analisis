@@ -5,7 +5,7 @@
   "estadio": "La Independencia",
   "local_espn": "Boyacá Chicó FC",
   "visita_espn": "Cúcuta Deportivo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -176,7 +176,7 @@
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -462,6 +462,17 @@
   "estadio": "Estadio Bello Horizonte - Rey Pele",
   "local_espn": "Llaneros FC",
   "visita_espn": "Deportivo Cali",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877877",
+  "utc": "2026-10-23T01:00Z",
+  "estadio": "Atanasio Girardot",
+  "local_espn": "Atlético Nacional",
+  "visita_espn": "Deportivo Pasto",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
