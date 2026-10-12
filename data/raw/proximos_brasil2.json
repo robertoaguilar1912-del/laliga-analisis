@@ -5,10 +5,16 @@
   "estadio": "Estádio Dr. Jorge Ismael de Biasi",
   "local_espn": "Novorizontino",
   "visita_espn": "Ponte Preta",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
   "alineaciones": {
    "Novorizontino": [
     [
@@ -138,23 +144,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -320,
-    400,
-    900
+    -350,
+    425,
+    1000
    ],
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -110
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     -110
     ],
     [
      "+1.5",
-     -130
+     -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Criciúma": [
+    [
+     "172879",
+     "Airton",
+     "G"
+    ],
+    [
+     "251863",
+     "Willean Lepu",
+     "CD"
+    ],
+    [
+     "143962",
+     "Luciano Castan",
+     "CD-L"
+    ],
+    [
+     "182303",
+     "César",
+     "CD-R"
+    ],
+    [
+     "402780",
+     "Gui Lobo",
+     "CM-L"
+    ],
+    [
+     "253276",
+     "Ronald",
+     "CM-R"
+    ],
+    [
+     "214399",
+     "Marcelo Hermes",
+     "LM"
+    ],
+    [
+     "198435",
+     "Waguininho",
+     "RM"
+    ],
+    [
+     "161871",
+     "Nicolás",
+     "F"
+    ],
+    [
+     "198569",
+     "Fellipe Mateus",
+     "CF-L"
+    ],
+    [
+     "296570",
+     "Jhonata Robert",
+     "CF-R"
+    ]
+   ],
+   "América Mineiro": [
+    [
+     "201680",
+     "Bruno Brigido",
+     "G"
+    ],
+    [
+     "202294",
+     "Lucas Sosa",
+     "CD-L"
+    ],
+    [
+     "187381",
+     "Ricardo Silva",
+     "CD-R"
+    ],
+    [
+     "292036",
+     "Tobías Ostchega",
+     "LB"
+    ],
+    [
+     "361584",
+     "Rafael Barcelos",
+     "RB"
+    ],
+    [
+     "289868",
+     "Matías Segovia",
+     "AM"
+    ],
+    [
+     "194600",
+     "Jorge Roa",
+     "LM"
+    ],
+    [
+     "211347",
+     "Barreto",
+     "RM"
+    ],
+    [
+     "119170",
+     "Willian",
+     "F"
+    ],
+    [
+     "422132",
+     "Luidy",
+     "AM-L"
+    ],
+    [
+     "334161",
+     "Paulo Victor",
+     "AM-R"
     ]
    ]
   }
@@ -178,7 +300,7 @@
    "ou_linea": 2.5,
    "ou": [
     130,
-    -170
+    -175
    ],
    "spread": [
     [
