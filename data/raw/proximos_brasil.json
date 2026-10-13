@@ -5,7 +5,7 @@
   "estadio": "Arena Condá",
   "local_espn": "Chapecoense",
   "visita_espn": "Athletico-PR",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,29 +154,29 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Cruzeiro",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    125,
     265,
-    205
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    125
+    -160,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -155
+     -160
     ]
    ]
   },
@@ -490,6 +490,17 @@
   "estadio": "Neo Química Arena",
   "local_espn": "Corinthians",
   "visita_espn": "Vitória",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841287",
+  "utc": "2026-10-23T23:00Z",
+  "estadio": "Estadio Mineirão",
+  "local_espn": "Cruzeiro",
+  "visita_espn": "Remo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
