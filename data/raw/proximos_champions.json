@@ -5,7 +5,7 @@
   "estadio": "Stade Bollaert-Delelis",
   "local_espn": "Lens",
   "visita_espn": "Sporting CP",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Baku Olympic Stadium",
   "local_espn": "Sabah FK",
   "visita_espn": "Slavia Prague",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -525,
-    600,
-    1400
+    -475,
+    550,
+    1300
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -150
+    -145
    ],
    "spread": [
     [
-     "-2.5",
-     130
+     "-1.5",
+     -175
     ],
     [
-     "+2.5",
-     -185
+     "+1.5",
+     125
     ]
    ]
   }
@@ -342,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    275,
-    300
+    -120,
+    285,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    120
+    -155,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -135
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -381,8 +381,8 @@
    ],
    "ou_linea": 4.5,
    "ou": [
-    120,
-    -145
+    125,
+    -155
    ],
    "spread": [
     [
@@ -414,8 +414,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -135,
-    105
+    -140,
+    115
    ],
    "spread": [
     [
@@ -441,13 +441,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -185,
+    -190,
     400,
     400
    ],
    "ou_linea": 3.5,
    "ou": [
-    -160,
+    -165,
     130
    ],
    "spread": [
@@ -476,7 +476,7 @@
    "ml": [
     1600,
     950,
-    -900
+    -800
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -513,8 +513,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    120
+    -140,
+    115
    ],
    "spread": [
     [
@@ -523,7 +523,7 @@
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -645,7 +645,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -165,
     130
    ],
    "spread": [
