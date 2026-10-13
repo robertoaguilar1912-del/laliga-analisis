@@ -17,7 +17,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
+    125,
     -180
    ],
    "spread": [
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    220,
-    100
+    255,
+    225,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,11 +155,11 @@
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -280,6 +280,39 @@
   "estadio": "Guillermo Laza",
   "local_espn": "Deportivo Riestra",
   "visita_espn": "Unión (Santa Fe)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841637",
+  "utc": "2026-10-23T21:30Z",
+  "estadio": "Estadio Víctor Antonio Legrotaglie",
+  "local_espn": "Gimnasia (Mendoza)",
+  "visita_espn": "Platense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841638",
+  "utc": "2026-10-23T22:00Z",
+  "estadio": "Juan Carmelo Zerillo (El Bosque)",
+  "local_espn": "Gimnasia La Plata",
+  "visita_espn": "Sarmiento (Junín)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841643",
+  "utc": "2026-10-24T00:15Z",
+  "estadio": "Monumental de Victoria (José Dellagiovanna)",
+  "local_espn": "Tigre",
+  "visita_espn": "Atlético Tucumán",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,

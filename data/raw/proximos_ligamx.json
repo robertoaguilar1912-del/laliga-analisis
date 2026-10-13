@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    240,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401876945",
@@ -19,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    240,
+    170
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
  },
  {
   "id": "401876944",
@@ -110,8 +154,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    230,
+    205,
+    240,
     120
    ],
    "ou_linea": 2.5,
@@ -140,7 +184,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -310,
+    425,
+    600
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -120
+    ],
+    [
+     "+1.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401876939",
@@ -151,7 +217,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -320,
+    425,
+    700
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -115
+    ],
+    [
+     "+1.5",
+     -130
+    ]
+   ]
+  }
  },
  {
   "id": "401876938",
@@ -258,6 +346,28 @@
   "estadio": "Estadio Corona",
   "local_espn": "Santos",
   "visita_espn": "Pumas UNAM",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876928",
+  "utc": "2026-10-24T01:00Z",
+  "estadio": "Estadio Victoria",
+  "local_espn": "Necaxa",
+  "visita_espn": "FC Juárez",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876927",
+  "utc": "2026-10-24T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Atlante",
+  "visita_espn": "Atlético de San Luis",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

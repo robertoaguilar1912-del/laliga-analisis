@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
+    140,
     260,
-    170
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
     135,
-    -175
+    -180
    ],
    "spread": [
     [
      "-0.5",
-     130
+     125
     ],
     [
      "+0.5",
-     -190
+     -180
     ]
    ]
   }
@@ -149,7 +149,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     130
    ],
    "spread": [
@@ -325,6 +325,39 @@
     [
      "+1.5",
      -170
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879253",
+  "utc": "2026-10-23T19:00Z",
+  "estadio": "Portman Road",
+  "local_espn": "Ipswich Town",
+  "visita_espn": "Nottingham Forest",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    240,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -190
+    ],
+    [
+     "-0.5",
+     120
     ]
    ]
   }

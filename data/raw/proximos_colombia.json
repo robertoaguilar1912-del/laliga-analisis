@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    220,
-    270
+    100,
+    215,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -145
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    250,
-    360
+    -145,
+    255,
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -60,7 +60,7 @@
     ],
     [
      "+0.5",
-     105
+     100
     ]
    ]
   }
@@ -84,16 +84,16 @@
    "ou_linea": 3.5,
    "ou": [
     125,
-    -175
+    -180
    ],
    "spread": [
     [
      "-1.5",
-     -155
+     -150
     ],
     [
      "+1.5",
-     105
+     100
     ]
    ]
   }
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -320,
-    350,
-    800
+    -310,
+    360,
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -115
+    -135,
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     100
     ],
     [
      "+1.5",
-     -145
+     -150
     ]
    ]
   }
@@ -163,17 +163,6 @@
     ]
    ]
   }
- },
- {
-  "id": "401878048",
-  "utc": "2026-10-17T23:05Z",
-  "estadio": "Estadio Nemesio Camacho El Campín",
-  "local_espn": "Millonarios",
-  "visita_espn": "Jaguares de Córdoba",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
  },
  {
   "id": "401878030",
@@ -225,6 +214,17 @@
   "estadio": "Deportivo Cali",
   "local_espn": "Deportivo Cali",
   "visita_espn": "Atlético Junior",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878048",
+  "utc": "2026-10-19T23:30Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Millonarios",
+  "visita_espn": "Jaguares de Córdoba",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
@@ -291,6 +291,28 @@
   "estadio": "Atanasio Girardot",
   "local_espn": "Atlético Nacional",
   "visita_espn": "Deportivo Pasto",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877907",
+  "utc": "2026-10-23T23:00Z",
+  "estadio": "La Independencia",
+  "local_espn": "Boyacá Chicó FC",
+  "visita_espn": "Atlético Bucaramanga",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877773",
+  "utc": "2026-10-24T01:10Z",
+  "estadio": "Romelio Martínez",
+  "local_espn": "Atlético Junior",
+  "visita_espn": "Águilas Doradas",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,

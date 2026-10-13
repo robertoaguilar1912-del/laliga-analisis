@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    320,
-    270,
-    -125
+    330,
+    280,
+    -130
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -112,7 +112,7 @@
    "ml": [
     500,
     450,
-    -245
+    -240
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -122,7 +122,7 @@
    "spread": [
     [
      "+1.5",
-     -130
+     -135
     ],
     [
      "-1.5",
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    250,
     235,
-    110
+    235,
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,11 +155,11 @@
    "spread": [
     [
      "+0.5",
-     -145
+     -155
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    235,
+    105,
+    230,
     280
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -140
+    120,
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -281,17 +281,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     -160
+     -155
     ],
     [
      "+1.5",
-     110
+     105
     ]
    ]
   }
@@ -335,6 +335,17 @@
   "estadio": "Estadi Ciutat de València",
   "local_espn": "Levante",
   "visita_espn": "Athletic Club",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882836",
+  "utc": "2026-10-23T19:00Z",
+  "estadio": "Mendizorrotza",
+  "local_espn": "Alavés",
+  "visita_espn": "Málaga",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
