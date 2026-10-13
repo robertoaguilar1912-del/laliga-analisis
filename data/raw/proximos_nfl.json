@@ -1,42 +1,5 @@
 [
  {
-  "id": "401872994",
-  "utc": "2026-10-13T00:15Z",
-  "estadio": "SoFi Stadium",
-  "local_espn": "Los Angeles Rams",
-  "visita_espn": "Buffalo Bills",
-  "local_abbr": "LAR",
-  "visita_abbr": "BUF",
-  "neutral": false,
-  "estado": "STATUS_SCHEDULED",
-  "semana": 5,
-  "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -180,
-    150
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -3.5,
-    -102,
-    3.5,
-    -118
-   ],
-   "spread_abre": -3.0,
-   "total": [
-    54.5,
-    -118,
-    -102
-   ],
-   "total_abre": 53.5
-  }
- },
- {
   "id": "401872995",
   "utc": "2026-10-16T00:15Z",
   "estadio": "Empower Field at Mile High",
@@ -60,15 +23,15 @@
    ],
    "spread": [
     3.0,
-    -112,
+    -118,
     -3.0,
-    -108
+    -102
    ],
    "spread_abre": 2.5,
    "total": [
-    41.5,
-    -112,
-    -108
+    40.5,
+    -118,
+    -102
    ],
    "total_abre": 43.5
   }
@@ -97,15 +60,15 @@
    ],
    "spread": [
     -3.0,
-    -102,
+    100,
     3.0,
-    -118
+    -120
    ],
    "spread_abre": 1.5,
    "total": [
-    43.5,
-    -115,
-    -105
+    42.5,
+    -118,
+    -102
    ],
    "total_abre": 41.5
   }
@@ -134,15 +97,15 @@
    ],
    "spread": [
     3.0,
-    -102,
+    100,
     -3.0,
-    -118
+    -120
    ],
    "spread_abre": 3.0,
    "total": [
-    47.5,
-    -110,
-    -110
+    49.5,
+    -108,
+    -112
    ],
    "total_abre": 47.5
   }
@@ -162,18 +125,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    -225
+    195,
+    -238
    ],
    "ml_abre": [
     220,
     -270
    ],
    "spread": [
-    3.5,
-    -102,
-    -3.5,
-    -118
+    4.5,
+    -115,
+    -4.5,
+    -105
    ],
    "spread_abre": 6.5,
    "total": [
@@ -199,8 +162,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -325,
-    260
+    -340,
+    270
    ],
    "ml_abre": [
     -192,
@@ -214,9 +177,9 @@
    ],
    "spread_abre": -3.5,
    "total": [
-    43.5,
-    -118,
-    -102
+    44.5,
+    -102,
+    -118
    ],
    "total_abre": 48.5
   }
@@ -236,24 +199,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -345,
-    275
+    -355,
+    280
    ],
    "ml_abre": [
     -455,
     350
    ],
    "spread": [
-    -7.0,
-    -112,
-    7.0,
-    -108
+    -7.5,
+    -105,
+    7.5,
+    -115
    ],
    "spread_abre": -9.5,
    "total": [
-    44.5,
-    -110,
-    -110
+    43.5,
+    -115,
+    -105
    ],
    "total_abre": 42.5
   }
@@ -273,24 +236,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -108,
-    -112
+    -110,
+    -110
    ],
    "ml_abre": [
     -148,
     124
    ],
    "spread": [
-    1.5,
-    -122,
     -1.5,
-    102
+    100,
+    1.5,
+    -120
    ],
    "spread_abre": -2.5,
    "total": [
     45.5,
-    -105,
-    -115
+    -108,
+    -112
    ],
    "total_abre": 45.5
   }
@@ -310,8 +273,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -118,
-    -102
+    -115,
+    -105
    ],
    "ml_abre": [
     -285,
@@ -325,9 +288,9 @@
    ],
    "spread_abre": -6.5,
    "total": [
-    42.5,
-    -105,
-    -115
+    41.5,
+    -115,
+    -105
    ],
    "total_abre": 43.5
   }
@@ -381,30 +344,7 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 6,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -650,
-    470
-   ],
-   "ml_abre": [
-    -700,
-    500
-   ],
-   "spread": [
-    -12.5,
-    -110,
-    12.5,
-    -110
-   ],
-   "spread_abre": -13.5,
-   "total": [
-    52.5,
-    -105,
-    -115
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401873006",
@@ -421,8 +361,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -380,
-    300
+    -440,
+    340
    ],
    "ml_abre": [
     -135,
@@ -436,9 +376,9 @@
    ],
    "spread_abre": -2.5,
    "total": [
-    43.5,
-    -105,
-    -115
+    42.5,
+    -108,
+    -112
    ],
    "total_abre": 46.5
   }
@@ -455,30 +395,7 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 6,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    220,
-    -270
-   ],
-   "ml_abre": [
-    230,
-    -285
-   ],
-   "spread": [
-    6.0,
-    -110,
-    -6.0,
-    -110
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    52.5,
-    -112,
-    -108
-   ],
-   "total_abre": 47.5
-  }
+  "momios": null
  },
  {
   "id": "401873007",
@@ -495,8 +412,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -112,
-    -108
+    -115,
+    -105
    ],
    "ml_abre": [
     -166,
@@ -504,15 +421,15 @@
    ],
    "spread": [
     -1.5,
-    100,
+    -102,
     1.5,
-    -120
+    -118
    ],
    "spread_abre": -3.0,
    "total": [
     52.5,
-    -110,
-    -110
+    -115,
+    -105
    ],
    "total_abre": 51.5
   }
@@ -532,8 +449,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -455,
-    350
+    -410,
+    320
    ],
    "ml_abre": [
     -250,
