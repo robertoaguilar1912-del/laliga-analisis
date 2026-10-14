@@ -1,7 +1,7 @@
 {
 "401878771": {
 "fotmob": 5795478,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -21,6 +21,15 @@
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Reece James",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 60613262.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Jamie Gittens",
 "tipo": "Lesión",
@@ -47,7 +56,7 @@
 },
 "401879262": {
 "fotmob": 5795476,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -174,7 +183,7 @@
 },
 "401878770": {
 "fotmob": 5795479,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -265,7 +274,7 @@
 },
 "401879259": {
 "fotmob": 5795481,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -302,7 +311,7 @@
 },
 "401879258": {
 "fotmob": 5795482,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -379,11 +388,20 @@
 {
 "nombre": "Matteo Ruggeri",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de octubre",
+"duda": false,
 "valor": 25511311.0,
 "titular": true,
 "importante": true
+},
+{
+"nombre": "George Hemmings",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 8500000.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Modou Kéba Cissé",
@@ -391,15 +409,6 @@
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 8078347.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "George Hemmings",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 8500000.0,
 "titular": false,
 "importante": false
 },
@@ -414,14 +423,14 @@
 }
 ],
 "valor_xi": 306825097.0,
-"perdida": 0.28721744036473,
-"perdida_duda": 0.083146102614937
+"perdida": 0.370363542979667,
+"perdida_duda": 0.0
 }
 },
 "401879263": {
 "fotmob": 5795475,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -431,7 +440,7 @@
 "duda": false,
 "valor": 55772556.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Junior Kroupi",
@@ -440,7 +449,7 @@
 "duda": false,
 "valor": 44505006.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Justin Kluivert",
@@ -449,7 +458,25 @@
 "duda": false,
 "valor": 24480211.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Veljko Milosavljević",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 29696246.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Amine Adli",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 24875171.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Julián Araujo",
@@ -459,29 +486,11 @@
 "valor": 10880388.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Veljko Milosavljević",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 29696246.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Amine Adli",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 24875171.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 275996514.0,
+"perdida": 0.45202662595948584,
+"perdida_duda": 0.19772502271532313
 },
 "visita": {
 "faltan": [
@@ -492,7 +501,7 @@
 "duda": false,
 "valor": 45896674.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Brian Brobbey",
@@ -501,7 +510,7 @@
 "duda": false,
 "valor": 40558471.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Daniel Ballard",
@@ -510,7 +519,7 @@
 "duda": false,
 "valor": 25281244.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Romaine Mundle",
@@ -522,15 +531,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 235746678.0,
+"perdida": 0.4739680319058409,
 "perdida_duda": 0.0
 }
 },
 "401879261": {
 "fotmob": 5795477,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -540,7 +549,7 @@
 "duda": false,
 "valor": 59393353.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mats Wieffer",
@@ -549,7 +558,7 @@
 "duda": false,
 "valor": 26954717.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Evan Ferguson",
@@ -558,7 +567,7 @@
 "duda": false,
 "valor": 26364096.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Pascal Struijk",
@@ -566,8 +575,17 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 25758329.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Jack Hinshelwood",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 27483929.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Stefanos Tzimas",
@@ -604,20 +622,11 @@
 "valor": 2379052.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Jack Hinshelwood",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 27483929.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 295252672.0,
+"perdida": 0.4689898115469045,
+"perdida_duda": 0.09308613132551091
 },
 "visita": {
 "faltan": [
@@ -628,7 +637,7 @@
 "duda": false,
 "valor": 34320034.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jean-Philippe Mateta",
@@ -637,7 +646,7 @@
 "duda": false,
 "valor": 26968341.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Chadi Riad",
@@ -646,7 +655,7 @@
 "duda": false,
 "valor": 24605311.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Axel Disasi",
@@ -660,22 +669,22 @@
 {
 "nombre": "Takehiro Tomiyasu",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de octubre",
+"duda": false,
 "valor": 2281539.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 314922950.0,
+"perdida": 0.27274508256702157,
 "perdida_duda": 0.0
 }
 },
 "401879260": {
 "fotmob": 5795480,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -706,7 +715,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 246295813.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -719,7 +728,7 @@
 "duda": false,
 "valor": 79664956.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Benjamin Šeško",
@@ -728,7 +737,7 @@
 "duda": false,
 "valor": 75917475.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Patrick Dorgu",
@@ -737,7 +746,7 @@
 "duda": false,
 "valor": 48201401.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Manuel Ugarte",
@@ -776,15 +785,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 486153521.0,
+"perdida": 0.4191758841545035,
 "perdida_duda": 0.0
 }
 },
 "401878769": {
 "fotmob": 5795483,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -794,7 +803,7 @@
 "duda": false,
 "valor": 34479237.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Igor Jesus",
@@ -815,8 +824,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 368131504.0,
+"perdida": 0.0936601095678027,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -828,7 +837,16 @@
 "duda": false,
 "valor": 78983208.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "William Saliba",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 120390607.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Piero Hincapié",
@@ -847,25 +865,16 @@
 "valor": 47942738.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "William Saliba",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 120390607.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 667251838.0,
+"perdida": 0.11837091110418192,
+"perdida_duda": 0.18042753896468097
 }
 },
 "401879257": {
 "fotmob": 5795484,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

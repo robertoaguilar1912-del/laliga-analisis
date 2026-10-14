@@ -1,7 +1,7 @@
 {
 "401884770": {
 "fotmob": 5881191,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -101,7 +101,7 @@
 },
 "401884769": {
 "fotmob": 5881195,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -201,7 +201,7 @@
 },
 "401884767": {
 "fotmob": 5881193,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -346,7 +346,7 @@
 },
 "401884765": {
 "fotmob": 5881194,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -446,7 +446,7 @@
 },
 "401884764": {
 "fotmob": 5881192,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -528,7 +528,7 @@
 },
 "401884766": {
 "fotmob": 5881196,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -664,7 +664,7 @@
 },
 "401884772": {
 "fotmob": 5881189,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -678,8 +678,8 @@
 "importante": true
 }
 ],
-"valor_xi": 670410641.0,
-"perdida": 0.2056286767679751,
+"valor_xi": 663180624.0,
+"perdida": 0.20787044737302215,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -700,7 +700,7 @@
 "duda": false,
 "valor": 23794034.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Marc Guiu",
@@ -709,18 +709,18 @@
 "duda": false,
 "valor": 20186451.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 254330344.0,
-"perdida": 0.268285026186258,
+"valor_xi": 274951205.0,
+"perdida": 0.08820669834853061,
 "perdida_duda": 0.0
 }
 },
 "401884771": {
 "fotmob": 5881188,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -730,7 +730,7 @@
 "duda": false,
 "valor": 39155513.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Eliesse Ben Seghir",
@@ -739,7 +739,7 @@
 "duda": false,
 "valor": 27308348.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Guéla Doué",
@@ -748,7 +748,7 @@
 "duda": false,
 "valor": 18775914.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kennet Eichhorn",
@@ -769,8 +769,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 225665026.0,
+"perdida": 0.3777270076400762,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -781,8 +781,8 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 17157038.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Rihito Yamamoto",
@@ -803,15 +803,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 99839102.0,
+"perdida": 0.17184687819007025,
 "perdida_duda": 0.0
 }
 },
 "401884768": {
 "fotmob": 5881190,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -821,7 +821,7 @@
 "duda": false,
 "valor": 12689921.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Nicolas-Gerrit Kühn",
@@ -830,7 +830,7 @@
 "duda": false,
 "valor": 10921619.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Franck Honorat",
@@ -839,7 +839,25 @@
 "duda": false,
 "valor": 5914761.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Ko Itakura",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 6921409.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Tim Kleindienst",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 6499408.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Enzo Leopold",
@@ -849,29 +867,11 @@
 "valor": 3789943.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Ko Itakura",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6921409.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Tim Kleindienst",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6499408.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 55871717.0,
+"perdida": 0.528465967852751,
+"perdida_duda": 0.24020770652170936
 },
 "visita": {
 "faltan": [
@@ -882,7 +882,7 @@
 "duda": false,
 "valor": 13520437.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Bernardo",
@@ -890,12 +890,12 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 2168649.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 129620819.0,
+"perdida": 0.12103831869786288,
 "perdida_duda": 0.0
 }
 }

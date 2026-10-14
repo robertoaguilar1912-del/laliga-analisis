@@ -1,7 +1,7 @@
 {
 "401876437": {
 "fotmob": 5802957,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -46,7 +46,7 @@
 },
 "401876432": {
 "fotmob": 5802962,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -119,7 +119,7 @@
 },
 "401876436": {
 "fotmob": 5802958,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -138,8 +138,8 @@
 "regreso": "finales de junio de 2027",
 "duda": false,
 "valor": 12804286.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Ethan Mbappé",
@@ -151,8 +151,8 @@
 "importante": false
 }
 ],
-"valor_xi": 109992364.0,
-"perdida": 0.2746351737653352,
+"valor_xi": 146654370.0,
+"perdida": 0.11867008122567367,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -192,7 +192,7 @@
 },
 "401876431": {
 "fotmob": 5802963,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -246,16 +246,7 @@
 "duda": false,
 "valor": 5670089.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Jonathan Gradit",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1673302.0,
-"titular": true,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Jhoanner Chávez",
@@ -263,6 +254,15 @@
 "regreso": "mediados de octubre",
 "duda": false,
 "valor": 1919250.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jonathan Gradit",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1673302.0,
 "titular": false,
 "importante": false
 },
@@ -276,15 +276,15 @@
 "importante": false
 }
 ],
-"valor_xi": 65870056.0,
-"perdida": 0.21913060161964945,
+"valor_xi": 96325155.0,
+"perdida": 0.07361269234396768,
 "perdida_duda": 0.0
 }
 },
 "401876439": {
 "fotmob": 5802955,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -293,8 +293,17 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 1260685.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Ousmane Camara",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5640290.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Usman Simbakoli",
@@ -304,20 +313,11 @@
 "valor": 737160.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Ousmane Camara",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5640290.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 36297629.0,
+"perdida": 0.03473188290067101,
+"perdida_duda": 0.15539003938797213
 },
 "visita": {
 "faltan": [
@@ -328,7 +328,7 @@
 "duda": false,
 "valor": 14020317.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Derek Cornelius",
@@ -340,15 +340,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 129587749.0,
+"perdida": 0.10819168561991149,
 "perdida_duda": 0.0
 }
 },
 "401876438": {
 "fotmob": 5802956,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -358,7 +358,7 @@
 "duda": false,
 "valor": 4713020.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ayumu Seko",
@@ -366,8 +366,8 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 3762270.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Stephan Zagadou",
@@ -376,7 +376,7 @@
 "duda": false,
 "valor": 3012339.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Timothée Pembélé",
@@ -385,7 +385,7 @@
 "duda": false,
 "valor": 1614661.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Felix Mambimbi",
@@ -406,8 +406,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 24483040.0,
+"perdida": 0.5351578072004131,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -419,7 +419,7 @@
 "duda": false,
 "valor": 2941924.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Marvin Senaya",
@@ -428,7 +428,7 @@
 "duda": false,
 "valor": 2504967.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sékou Fofana",
@@ -467,15 +467,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 65807606.0,
+"perdida": 0.08276993088002624,
 "perdida_duda": 0.0
 }
 },
 "401876435": {
 "fotmob": 5802959,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -485,7 +485,7 @@
 "duda": false,
 "valor": 2133158.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Panos Katseris",
@@ -494,7 +494,7 @@
 "duda": false,
 "valor": 1764135.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mohamed Bamba",
@@ -515,8 +515,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 35711780.0,
+"perdida": 0.1091318606913461,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -540,15 +540,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 152569629.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401876433": {
 "fotmob": 5802961,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -558,24 +558,24 @@
 "duda": false,
 "valor": 13664176.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 67745700.0,
+"perdida": 0.2016980561127865,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 112722918.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401876434": {
 "fotmob": 5802960,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -584,8 +584,8 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 24871232.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Moussa Niakhaté",
@@ -594,7 +594,7 @@
 "duda": false,
 "valor": 16316617.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mohamed Ouédraogo",
@@ -606,8 +606,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 159339158.0,
+"perdida": 0.2584916948036088,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -619,7 +619,7 @@
 "duda": false,
 "valor": 12084322.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Moïse Bombito",
@@ -628,7 +628,16 @@
 "duda": false,
 "valor": 2393737.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Djibril Coulibaly",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1880067.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Morgan Sanson",
@@ -647,20 +656,11 @@
 "valor": 1419707.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Djibril Coulibaly",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1880067.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 68974909.0,
+"perdida": 0.20990327076763524,
+"perdida_duda": 0.027257259592760028
 }
 }
 }

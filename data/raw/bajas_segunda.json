@@ -1,7 +1,7 @@
 {
 "401883158": {
 "fotmob": 5868498,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -56,7 +56,7 @@
 },
 "401883133": {
 "fotmob": 5868500,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -101,7 +101,7 @@
 },
 "401883178": {
 "fotmob": 5868495,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +156,7 @@
 },
 "401883155": {
 "fotmob": 5868501,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -292,7 +292,7 @@
 },
 "401883157": {
 "fotmob": 5868499,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -410,8 +410,8 @@
 },
 "401883179": {
 "fotmob": 5868494,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -421,12 +421,12 @@
 "duda": true,
 "valor": 500472.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 3030368.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.16515221913642172
 },
 "visita": {
 "faltan": [
@@ -437,7 +437,7 @@
 "duda": false,
 "valor": 1733394.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Estanis Pedrola",
@@ -446,7 +446,7 @@
 "duda": false,
 "valor": 1086037.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Carlos Fernández",
@@ -455,16 +455,7 @@
 "duda": false,
 "valor": 1040169.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Alexandru Ișfan",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 960260.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ilyas Chaira",
@@ -472,6 +463,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 2850518.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Alexandru Ișfan",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 960260.0,
 "titular": false,
 "importante": false
 },
@@ -494,15 +494,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 12135494.0,
+"perdida": 0.3180422651109217,
+"perdida_duda": 0.23489097353597638
 }
 },
 "401883156": {
 "fotmob": 5868497,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -512,12 +512,12 @@
 "duda": true,
 "valor": 1126421.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 6869255.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.16398008226510735
 },
 "visita": {
 "faltan": [
@@ -528,7 +528,7 @@
 "duda": false,
 "valor": 963778.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Giorgi Gocholeishvili",
@@ -537,7 +537,7 @@
 "duda": true,
 "valor": 1665474.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Manuel Rivera",
@@ -549,15 +549,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 8684995.0,
+"perdida": 0.11097047263700209,
+"perdida_duda": 0.1917645318160805
 }
 },
 "401883177": {
 "fotmob": 5868496,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -566,8 +566,8 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 16076500.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Paulo Gazzaniga",
@@ -575,8 +575,8 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 1111168.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Cristhian Stuani",
@@ -597,21 +597,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 44114620.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.38961387403994413
 },
 "visita": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 5500168.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401883154": {
 "fotmob": 5868502,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -621,7 +621,7 @@
 "duda": false,
 "valor": 1259656.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Dani Pérez",
@@ -633,8 +633,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 9413629.0,
+"perdida": 0.1338119443627957,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -646,7 +646,7 @@
 "duda": false,
 "valor": 469640.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Pau Cabanes",
@@ -655,7 +655,7 @@
 "duda": true,
 "valor": 1018140.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "David Ruiz",
@@ -676,15 +676,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 4477939.0,
+"perdida": 0.10487860598369027,
+"perdida_duda": 0.22736799228395027
 }
 },
 "401883180": {
 "fotmob": 5868492,
-"visto": "2026-10-14T05:15+00:00",
-"xi": "unavailable",
+"visto": "2026-10-14T11:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -697,7 +697,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 8965503.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -709,8 +709,8 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 630224.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Nicholas Gioacchini",
@@ -719,17 +719,17 @@
 "duda": false,
 "valor": 360652.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 2933639.0,
+"perdida": 0.33776343987791274,
 "perdida_duda": 0.0
 }
 },
 "401883309": {
 "fotmob": 5868493,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

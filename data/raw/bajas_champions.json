@@ -1,7 +1,7 @@
 {
 "401915416": {
 "fotmob": 6106309,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -24,6 +24,15 @@
 "importante": true
 },
 {
+"nombre": "Reiss Nelson",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 9351526.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Thomas Beelen",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -38,6 +47,15 @@
 "regreso": "Day to day",
 "duda": false,
 "valor": 3633901.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Shaqueel van Persie",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 2500000.0,
 "titular": false,
 "importante": false
 },
@@ -74,25 +92,25 @@
 },
 "401915415": {
 "fotmob": 6106405,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Moses Usor",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 3993951.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "George Bello",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 1934490.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Moses Usor",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3993951.0,
 "titular": false,
 "importante": true
 },
@@ -107,8 +125,8 @@
 }
 ],
 "valor_xi": 20052961.0,
-"perdida": 0.29563918266235095,
-"perdida_duda": 0.0
+"perdida": 0.09646904514500378,
+"perdida_duda": 0.1991701375173472
 },
 "visita": {
 "faltan": [
@@ -174,7 +192,7 @@
 },
 "401915414": {
 "fotmob": 6106274,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -247,7 +265,7 @@
 },
 "401915409": {
 "fotmob": 6106284,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -272,11 +290,20 @@
 {
 "nombre": "Matteo Ruggeri",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de octubre",
+"duda": false,
 "valor": 25511311.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "George Hemmings",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 8500000.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Modou Kéba Cissé",
@@ -284,15 +311,6 @@
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 8078347.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "George Hemmings",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 8500000.0,
 "titular": false,
 "importante": false
 },
@@ -307,8 +325,8 @@
 }
 ],
 "valor_xi": 315263842.0,
-"perdida": 0.2795294203132879,
-"perdida_duda": 0.08092051038317297
+"perdida": 0.3604499306964609,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -347,7 +365,7 @@
 },
 "401915393": {
 "fotmob": 6106315,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -420,7 +438,7 @@
 },
 "401915407": {
 "fotmob": 6106254,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [],
@@ -447,7 +465,7 @@
 },
 "401915408": {
 "fotmob": 6106299,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -502,7 +520,7 @@
 },
 "401915406": {
 "fotmob": 6106337,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -516,11 +534,29 @@
 "importante": false
 },
 {
+"nombre": "Irakli Azarovi",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 1953329.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Marlon",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 1558195.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kiril Fesyun",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 1367003.0,
 "titular": false,
 "importante": false
 },
@@ -550,20 +586,20 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Barnabás Varga",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 2184432.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Thomas Strakosha",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 1873692.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Barnabás Varga",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2184432.0,
 "titular": false,
 "importante": false
 }
@@ -575,7 +611,7 @@
 },
 "401915405": {
 "fotmob": 6106396,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [],
@@ -656,7 +692,7 @@
 },
 "401915403": {
 "fotmob": 6106333,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -756,7 +792,7 @@
 },
 "401915404": {
 "fotmob": 6106422,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -801,7 +837,7 @@
 },
 "401915402": {
 "fotmob": 6106277,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -837,7 +873,7 @@
 },
 "401915398": {
 "fotmob": 6106287,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -946,7 +982,7 @@
 },
 "401915397": {
 "fotmob": 6106248,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1037,7 +1073,7 @@
 },
 "401915401": {
 "fotmob": 6106257,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -1048,20 +1084,20 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Barnabás Varga",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 2184432.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Thomas Strakosha",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 1873692.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Barnabás Varga",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2184432.0,
 "titular": false,
 "importante": false
 }
@@ -1073,7 +1109,7 @@
 },
 "401915400": {
 "fotmob": 6106320,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1173,7 +1209,7 @@
 },
 "401915399": {
 "fotmob": 6106234,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1237,7 +1273,7 @@
 },
 "401915392": {
 "fotmob": 6106397,
-"visto": "2026-10-14T05:15+00:00",
+"visto": "2026-10-14T11:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
