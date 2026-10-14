@@ -1,50 +1,21 @@
 $ python explorar/sudam2.py
-[exit 2]
+[exit 0]
 
-python: can't open file '/home/runner/work/laliga-analisis/laliga-analisis/explorar/sudam2.py': [Errno 2] No such file or directory
 
 
 $ python src/europa.py descargar sudamerica
-[exit 1]
+[exit 0]
+  Sudamérica: 29577 partidos (2121 de copas CONMEBOL), 98 consultas
+  Sudamérica: liga de 1 equipos sin liga en los datos
 
-Traceback (most recent call last):
-  File "/home/runner/work/laliga-analisis/laliga-analisis/src/europa.py", line 573, in <module>
-    descargar(region)
-  File "/home/runner/work/laliga-analisis/laliga-analisis/src/europa.py", line 144, in descargar
-    for (slug, y), fs, ok in ex.map(uno, tareas):
-                             ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
-    yield _result_or_cancel(fs.pop())
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
-    return fut.result(timeout)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 449, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/laliga-analisis/laliga-analisis/src/europa.py", line 141, in uno
-    return t, _filas(slug, (j or {}).get('events', []) or [], region), j is not None
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/laliga-analisis/laliga-analisis/src/europa.py", line 91, in _filas
-    comp = e['competitions'][0]
-           ~^^^^^^^^^^^^^^^^
-KeyError: 'competitions'
 
 
 $ python src/europa.py momios sudamerica
 [exit 0]
-  Sudamérica: momios de 0 partidos más; con momios: 0 de 0
+  Sudamérica: momios de 2121 partidos más; con momios: 1454 de 2121
 
 
 
 $ cp data/raw/sudamerica_partidos.csv data/raw/sudamerica_momios.csv data/raw/sudamerica_equipos.json data/raw/sudamerica_bajados.json salida/
-[exit 1]
+[exit 0]
 
-cp: cannot stat 'data/raw/sudamerica_partidos.csv': No such file or directory
-cp: cannot stat 'data/raw/sudamerica_equipos.json': No such file or directory
-cp: cannot stat 'data/raw/sudamerica_bajados.json': No such file or directory
