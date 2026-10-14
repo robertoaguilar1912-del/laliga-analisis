@@ -239,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    210,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -225
+    ],
+    [
+     "-0.5",
+     145
+    ]
+   ]
+  }
  },
  {
   "id": "401860401",
