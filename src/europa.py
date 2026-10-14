@@ -325,8 +325,10 @@ SD_EQUIPO_OTRAS = 0.35      # equipos de países sin liga en los datos: sin part
 PARAMS = {
     'europa': dict(half_life=HALF_LIFE, sd_equipo=SD_EQUIPO, sd_liga=SD_LIGA, previo_otras=PREVIO_OTRAS, sd_otras=SD_OTRAS,
                    sd_equipo_otras=SD_EQUIPO_OTRAS, altitud=None, sd_hfa=None),
-    'sudamerica': dict(half_life=730, sd_equipo=0.70, sd_liga=1.0, previo_otras=(-0.55, 0.55), sd_otras=0.60,
-                       sd_equipo_otras=0.35, altitud='km', sd_hfa=None),
+    # Sudamérica: elegidos con 2022 y 2023 (624 partidos de copa); la prueba es de 2024 en adelante. La altura es lo que más
+    # ayudó (log loss 0.9462 -> 0.9416); lo demás mueve poco (0.9400 al final).
+    'sudamerica': dict(half_life=540, sd_equipo=0.35, sd_liga=1.0, previo_otras=(-0.55, 0.55), sd_otras=0.60,
+                       sd_equipo_otras=0.35, altitud='sobre1500', sd_hfa=0.2),
 }
 
 # Altura (m) de las ciudades con equipos en Primera que pasan de ~900 m (el resto cuenta como 0)
@@ -336,17 +338,18 @@ ALTITUD = {
     'sacaba': 2700, 'tarija': 1860, 'villa tunari': 300,
     # Ecuador
     'quito': 2850, 'sangolqui': 2500, 'ambato': 2580, 'riobamba': 2750, 'cuenca': 2560, 'latacunga': 2750, 'ibarra': 2225,
-    'loja': 2060, 'pujili': 2900, 'echaleche': 2900, 'machachi': 2950, 'pelileo': 2600,
+    'loja': 2060, 'pujili': 2900, 'echaleche': 2900, 'machachi': 2950, 'pelileo': 2600, 'azogues': 2520,
     # Colombia
     'bogota': 2640, 'tunja': 2780, 'pasto': 2530, 'manizales': 2150, 'rionegro': 2125, 'zipaquira': 2650, 'chia': 2560,
     'medellin': 1495, 'envigado': 1575, 'itagui': 1550, 'pereira': 1410, 'armenia': 1480, 'popayan': 1740,
-    'fusagasuga': 1730, 'ibague': 1285, 'cali': 1000, 'palmira': 1000, 'bucaramanga': 960, 'floridablanca': 925,
+    'fusagasuga': 1730, 'ibague': 1285, 'cali': 1000, 'palmira': 1000, 'bucaramanga': 960, 'floridablanca': 925, 'tulua': 970,
     # Perú
     'cusco': 3400, 'cuzco': 3400, 'juliaca': 3825, 'puno': 3830, 'huancayo': 3260, 'arequipa': 2335, 'cajamarca': 2750,
     'ayacucho': 2760, 'huanuco': 1900, 'andahuaylas': 2900, 'tarma': 3050, 'cerro de pasco': 4330, 'moquegua': 1410,
-    'abancay': 2380, 'huaraz': 3050,
+    'abancay': 2380, 'huaraz': 3050, 'cajabamba': 2650, 'apurimac': 2900, 'cutervo': 2650,
     # Chile, Venezuela, Argentina, Brasil
-    'calama': 2260, 'merida': 1630, 'los teques': 1170, 'caracas': 900, 'jujuy': 1260, 'san salvador de jujuy': 1260,
+    'calama': 2260, 'el salvador': 2300, 'merida': 1630, 'los teques': 1170, 'caracas': 900, 'san cristobal': 825,
+    'jujuy': 1260, 'san salvador de jujuy': 1260,
     'salta': 1150, 'brasilia': 1170,
 }
 
@@ -382,6 +385,17 @@ def _x_altura(m, modo):
     return m / 1000
 
 
+_PAIS_COD = {'Brazil': 'bra', 'Argentina': 'arg', 'Colombia': 'col', 'Chile': 'chi', 'Uruguay': 'uru', 'Paraguay': 'par',
+             'Peru': 'per', 'Ecuador': 'ecu', 'Bolivia': 'bol', 'Venezuela': 'ven', 'Spain': 'esp', 'England': 'eng'}
+
+
+def _pais_grupo(g):
+    """País de un grupo del modelo: 'bra.2' -> 'bra', 'pais:Colombia' -> 'col'."""
+    if g.startswith('pais:'):
+        return _PAIS_COD.get(g[5:], g[5:])
+    return g.split('.')[0]
+
+
 def ligas_de_equipos(df, ref=None, region='europa'):
     """{id: grupo}. El grupo es la liga de su último partido de liga en los datos; los equipos de países sin liga en los
     datos van por país (el del estadio donde juegan de local en las copas, p. ej. 'pais:Czechia'); si no, 'otra'."""
@@ -407,11 +421,12 @@ def ligas_de_equipos(df, ref=None, region='europa'):
 
 class ModeloEuropa:
     def __init__(self, region='europa', **params):
-        P = {**PARAMS[region], **{k: v for k, v in params.items() if v is not None}}
+        P = {**PARAMS[region], **params}
         self.region = region
         self.half_life, self.sd_equipo, self.sd_liga = P['half_life'], P['sd_equipo'], P['sd_liga']
         self.previo_otras, self.sd_otras, self.sd_equipo_otras = P['previo_otras'], P['sd_otras'], P['sd_equipo_otras']
-        self.altitud, self.sd_hfa = P.get('altitud'), P.get('sd_hfa')
+        self.altitud, self.sd_hfa, self.alt_copa = P.get('altitud'), P.get('sd_hfa'), P.get('alt_copa', False)
+        self.hfa_viaje, self.escala_copa = P.get('hfa_viaje', False), P.get('escala_copa', False)
 
     def fit(self, df, ref, liga_de=None):
         from scipy.optimize import minimize
@@ -444,20 +459,29 @@ class ModeloEuropa:
         xt = _x_altura(self.alt_m, self.altitud) if self.altitud else np.zeros(n)
         xa = np.maximum(0, xt[h] - xt[a]) * loc
         self._xt = xt
-        K = 5                                        # constante, local en liga, local en copa, altura (goles local / visita)
+        # 0 constante, 1 local en liga, 2 local en copa, 3-6 altura (goles del local / de la visita) en liga y en copa
+        # (alt_copa: la altura se mide aparte en las copas; si no, el mismo efecto en ligas y copas), 7 local en copa entre
+        # equipos del mismo país (hfa_viaje; si no, el mismo que 2), 8 escala de la fuerza propia de cada equipo en las copas
+        # (escala_copa: 1 + x[8]; si no, 1)
+        K = 9
+        xa_l, xa_c = (xa * ~copa, xa * copa) if self.alt_copa else (xa, np.zeros_like(xa))
+        self.pais_g = np.array([_pais_grupo(g) for g in grupos])
+        mismo = self.pais_g[gh] == self.pais_g[ga]
         i_at, i_dt, i_ag, i_dg = K, K + n, K + 2 * n, K + 2 * n + G
         i_hg = K + 2 * n + 2 * G                     # ventaja de local de cada liga (si sd_hfa)
         con_hg = bool(self.sd_hfa)
         en_liga = loc * (~copa)
-        hfa_col = np.where(copa, 2, 1)
+        hfa_col = np.where(copa, np.where(mismo & self.hfa_viaje, 7, 2), 1)
+        fc = copa.astype(float) if self.escala_copa else np.zeros(len(d))
 
         def partes(x):
             c, at, dt, ag, dg = x[0], x[i_at:i_dt], x[i_dt:i_ag], x[i_ag:i_dg], x[i_dg:i_hg]
             hfa = x[hfa_col] * loc
             if con_hg:
                 hfa = hfa + x[i_hg:][gh] * en_liga
-            eh = c + hfa + x[3] * xa + at[h] + ag[gh] + dt[a] + dg[ga]
-            ea = c + x[4] * xa + at[a] + ag[ga] + dt[h] + dg[gh]
+            m = 1 + x[8] * fc
+            eh = c + hfa + x[3] * xa_l + x[5] * xa_c + m * (at[h] + dt[a]) + ag[gh] + dg[ga]
+            ea = c + x[4] * xa_l + x[6] * xa_c + m * (at[a] + dt[h]) + ag[ga] + dg[gh]
             return eh, ea
 
         def nll(x):
@@ -471,9 +495,12 @@ class ModeloEuropa:
             gr = np.zeros_like(x)
             gr[0] = rh.sum() + ra.sum()
             gr[1] = np.sum(rh * loc * (hfa_col == 1)); gr[2] = np.sum(rh * loc * (hfa_col == 2))
-            gr[3] = np.sum(rh * xa); gr[4] = np.sum(ra * xa)
-            gr[i_at:i_dt] = np.bincount(h, rh, n) + np.bincount(a, ra, n) + at / s_t ** 2
-            gr[i_dt:i_ag] = np.bincount(a, rh, n) + np.bincount(h, ra, n) + dt / s_t ** 2
+            gr[7] = np.sum(rh * loc * (hfa_col == 7))
+            gr[3] = np.sum(rh * xa_l); gr[4] = np.sum(ra * xa_l); gr[5] = np.sum(rh * xa_c); gr[6] = np.sum(ra * xa_c)
+            m = 1 + x[8] * fc
+            gr[8] = np.sum(rh * fc * (at[h] + dt[a])) + np.sum(ra * fc * (at[a] + dt[h]))
+            gr[i_at:i_dt] = np.bincount(h, rh * m, n) + np.bincount(a, ra * m, n) + at / s_t ** 2
+            gr[i_dt:i_ag] = np.bincount(a, rh * m, n) + np.bincount(h, ra * m, n) + dt / s_t ** 2
             gr[i_ag:i_dg] = np.bincount(gh, rh, G) + np.bincount(ga, ra, G) + (ag - m_att) / s_g ** 2
             gr[i_dg:i_hg] = np.bincount(ga, rh, G) + np.bincount(gh, ra, G) + (dg - m_def) / s_g ** 2
             if con_hg:
@@ -486,7 +513,10 @@ class ModeloEuropa:
         x0[i_ag:i_dg], x0[i_dg:i_hg] = m_att, m_def
         r = minimize(nll, x0, jac=True, method='L-BFGS-B', options={'maxiter': 3000})
         x = r.x
-        self.c, self.hfa_liga, self.hfa_copa, self.alt_h, self.alt_a = x[0], x[1], x[2], x[3], x[4]
+        self.c, self.hfa_liga, self.hfa_copa = x[0], x[1], x[2]
+        self.hfa_mismo = x[7] if self.hfa_viaje else x[2]       # copa entre equipos del mismo país
+        self.escala = 1 + x[8] if self.escala_copa else 1.0
+        self.alt_h, self.alt_a = (x[5], x[6]) if self.alt_copa else (x[3], x[4])     # el de las copas
         self.att, self.dfn = x[i_at:i_dt], x[i_dt:i_ag]
         self.att_g, self.dfn_g = x[i_ag:i_dg], x[i_dg:i_hg]
         self.hfa_g = x[i_hg:] if con_hg else np.zeros(G)
@@ -505,10 +535,12 @@ class ModeloEuropa:
     def _eta(self, th, ta, neutral=False, copa=True):
         i, j = self.tidx[th], self.tidx[ta]
         gi, gj = self.grupo[i], self.grupo[j]
-        hfa = 0 if neutral else (self.hfa_copa if copa else self.hfa_liga + self.hfa_g[gi])
+        hc = self.hfa_mismo if self.pais_g[gi] == self.pais_g[gj] else self.hfa_copa
+        hfa = 0 if neutral else (hc if copa else self.hfa_liga + self.hfa_g[gi])
         xa = 0 if neutral else max(0.0, self._xt[i] - self._xt[j])
-        lam = np.exp(self.c + hfa + self.alt_h * xa + self.att[i] + self.att_g[gi] + self.dfn[j] + self.dfn_g[gj])
-        mu = np.exp(self.c + self.alt_a * xa + self.att[j] + self.att_g[gj] + self.dfn[i] + self.dfn_g[gi])
+        m = self.escala if copa else 1.0
+        lam = np.exp(self.c + hfa + self.alt_h * xa + m * (self.att[i] + self.dfn[j]) + self.att_g[gi] + self.dfn_g[gj])
+        mu = np.exp(self.c + self.alt_a * xa + m * (self.att[j] + self.dfn[i]) + self.att_g[gj] + self.dfn_g[gi])
         return float(lam), float(mu)
 
     def rates_id(self, th, ta, neutral=False):
@@ -547,7 +579,8 @@ class ModeloEuropa:
             M = score_matrix(lam, mu, self.rho)
             out.append({'liga': nom.get(g, g), 'equipos': n, 'g': float(np.tril(M, -1).sum()), 'e': float(np.trace(M)),
                         'p': float(np.triu(M, 1).sum()), 'gf': float(lam), 'gc': float(mu)})
-        return {'contra': nom.get(top, top), 'ligas': out, 'partidos': R['partidos_txt'],
+        return {'contra': nom.get(top, top), 'contra_txt': ('del ' if top == 'bra.1' else 'de la ') + nom.get(top, top), 'ligas': out,
+                'partidos': R['partidos_txt'],
                 'altura': self._efecto_altura() if self.altitud else None}
 
     def _efecto_altura(self):

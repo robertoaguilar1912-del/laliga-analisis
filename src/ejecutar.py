@@ -75,6 +75,8 @@ def main(modo):
             _paso(f'football-data {liga}', fuentes.descargar_football_data, liga)
         _paso('Europa (ligas y copas UEFA)', europa.descargar)
         _paso('Europa momios', europa.descargar_momios)
+        _paso('Sudamérica (ligas, Libertadores y Sudamericana)', europa.descargar, 'sudamerica')
+        _paso('Sudamérica momios', europa.descargar_momios, 'sudamerica')
         for liga in LIGAS:
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
         for liga in LIGAS:

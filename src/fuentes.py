@@ -11,6 +11,7 @@ Todo se guarda en data/ para no volver a descargar lo que ya está.
 """
 import json
 import os
+import re
 import time
 from datetime import datetime, timedelta
 
@@ -46,8 +47,8 @@ def descargar_football_data(liga):
     """Temporadas recientes de primera y segunda división. La actual siempre; las viejas solo si faltan.
     Para Liga MX y MLS, el archivo único con todas las temporadas."""
     L = LIGAS[liga]
-    if L.get('uefa'):
-        return          # las copas europeas las baja europa.descargar() (una vez para las tres, con las ligas de Europa)
+    if L.get('region'):
+        return          # las copas entre ligas las baja europa.descargar() (una vez por región, con sus ligas)
     if L.get('solo_espn'):
         return descargar_resultados_espn(liga)
     if L.get('fd_extra'):
@@ -282,7 +283,8 @@ def descargar_proximos(liga, buscar_alineaciones_min=120):
             eventos[e['id']] = {'id': e['id'], 'utc': e['date'], 'estadio': (comp.get('venue') or {}).get('fullName', ''),
                                 'local_espn': h['team']['displayName'], 'visita_espn': a['team']['displayName'],
                                 'estado': comp['status']['type'].get('name'), 'tipo': ((e.get('season') or {}).get('slug') or ''),
-                                'neutral': bool(comp.get('neutralSite')),
+                                'neutral': bool(comp.get('neutralSite')) or bool(L.get('final_neutral') and re.fullmatch(
+                                    r'finals?', (e.get('season') or {}).get('slug') or '')),
                                 'momios': _momios(comp)}
     # conservar alineaciones ya guardadas
     p = ruta_proximos(liga)
@@ -414,6 +416,127 @@ def descargar_lesiones():
         json.dump(out, open(RAW / f'lesiones_{liga}.json', 'w'), ensure_ascii=False, indent=1)
         print(f"  API-Football {L['nombre']}: {len(out)} lesiones o sanciones para próximos partidos")
     json.dump(estado, open(estado_p, 'w'), ensure_ascii=False, indent=1)
+
+
+
+# ------------------------------------------------------------------ FotMob (bajas)
+# API pública no oficial de FotMob: para cada partido próximo trae los lesionados y sancionados de cada equipo con su fecha
+# esperada de regreso, el valor de mercado de cada jugador y el último once titular. Probado el 13 oct 2026 desde GitHub
+# Actions: bien cubiertas las ligas de Europa, MLS y Liga MX; en Brasil, Argentina y Colombia la lista suele venir vacía.
+# Los partidos ya jugados NO guardan las bajas de ese día (muestran las de hoy): no sirve para probar con el pasado.
+FOTMOB = 'https://www.fotmob.com/api/data'
+MESES = {'January': 'enero', 'February': 'febrero', 'March': 'marzo', 'April': 'abril', 'May': 'mayo', 'June': 'junio', 'July': 'julio',
+         'August': 'agosto', 'September': 'septiembre', 'October': 'octubre', 'November': 'noviembre', 'December': 'diciembre'}
+
+
+def regreso_es(txt, fecha=None):
+    """'Late October 2026' -> 'finales de octubre'; 'Doubtful' -> 'en duda'; 'About 1-2 weeks' -> '1-2 semanas'."""
+    t = (txt or '').strip()
+    if fecha:
+        try:
+            d = datetime.fromisoformat(fecha.replace('Z', '+00:00'))
+            return f"hasta el {d.day} de {list(MESES.values())[d.month - 1]}" + (f' de {d.year}' if d.year != ahora().year else '')
+        except ValueError:
+            pass
+    fijos = {'doubtful': 'en duda', 'unknown': 'sin fecha de regreso', 'back in training': 'ya entrena', 'a few days': 'unos días',
+             'about a week': 'una semana', 'a few weeks': 'unas semanas', 'about a month': 'un mes', 'a few months': 'unos meses',
+             'rest of season': 'el resto de la temporada', 'out for season': 'el resto de la temporada'}
+    if t.lower() in fijos:
+        return fijos[t.lower()]
+    m = re.fullmatch(r'(Early|Mid|Late)\s+(\w+)\s+(\d{4})', t)
+    if m and m.group(2) in MESES:
+        parte = {'Early': 'principios', 'Mid': 'mediados', 'Late': 'finales'}[m.group(1)]
+        return f"{parte} de {MESES[m.group(2)]}" + (f' de {m.group(3)}' if int(m.group(3)) != ahora().year else '')
+    m = re.fullmatch(r'(?:About\s+)?(\d+(?:-\d+)?)\s+(day|week|month)s?', t, re.I)
+    if m:
+        return f"{m.group(1)} {({'day': 'días', 'week': 'semanas', 'month': 'meses'})[m.group(2).lower()]}"
+    return t
+
+
+def _fotmob_lado(t, tipo_xi):
+    """Bajas de un equipo. 'importante': titular en el último once o con valor de mercado de titular (al menos la mediana
+    del once); 'perdida': parte del valor del once titular que falta seguro, y 'perdida_duda' la que está en duda."""
+    xi = t.get('starters') or []
+    ids_xi = {p.get('id') for p in xi}
+    vals = sorted(float(p.get('marketValue') or 0) for p in xi)
+    total = float(t.get('totalStarterMarketValue') or sum(vals) or 0)
+    med = vals[len(vals) // 2] if vals else 0
+    faltan = []
+    for p in t.get('unavailable') or []:
+        u = p.get('unavailability') or {}
+        crudo = u.get('expectedReturn') or ''
+        tipo = {'injury': 'Lesión', 'suspension': 'Sanción', 'international': 'Selección'}.get(u.get('type'), (u.get('type') or 'Baja').capitalize())
+        duda = crudo.strip().lower() in ('doubtful', 'back in training')
+        mv = float(p.get('marketValue') or 0)
+        titular = p.get('id') in ids_xi and tipo_xi != 'confirmed'
+        faltan.append({'nombre': p.get('name'), 'tipo': tipo, 'regreso': regreso_es(crudo, u.get('expectedReturnDate')), 'duda': duda,
+                       'valor': mv, 'titular': titular, 'importante': bool(titular or (med > 0 and mv >= med))})
+    faltan.sort(key=lambda f: (not f['importante'], f['duda'], -f['valor']))
+    sin = lambda d: sum(f['valor'] for f in faltan if f['importante'] and f['duda'] == d)
+    return {'faltan': faltan, 'valor_xi': total, 'perdida': sin(False) / total if total else 0.0,
+            'perdida_duda': sin(True) / total if total else 0.0}
+
+
+def descargar_bajas(ligas=None, dentro_de_h=7 * 24):
+    """Bajas de FotMob de los partidos de las ligas (con 'fotmob' en config) que empiezan en las próximas dentro_de_h horas.
+    Se buscan los partidos de FotMob de esos días y se emparejan con los de ESPN por hora y nombres. Guarda
+    data/raw/bajas_<liga>.json: {id de ESPN: {'fotmob', 'visto', 'xi', 'local', 'visita'}}."""
+    from liga import parecido
+    ligas = [l for l in (ligas or LIGAS) if LIGAS[l].get('fotmob') and ruta_proximos(l).exists()]
+    hoy = ahora()
+    objetivos = []
+    for l in ligas:
+        for e in json.load(open(ruta_proximos(l))):
+            h = (_iso(e['utc']) - hoy).total_seconds() / 3600
+            if -2 <= h <= dentro_de_h:
+                objetivos.append((l, e))
+    if not objetivos:
+        print('  FotMob: sin partidos por revisar')
+        return
+    fechas = sorted({(_iso(e['utc']) + timedelta(days=k)).strftime('%Y%m%d') for _, e in objetivos for k in (-1, 0, 1)})
+    fm = []
+    for f in fechas:
+        j = _get(f'{FOTMOB}/matches', params={'date': f}) or {}
+        for lg in j.get('leagues', []) or []:
+            for m in lg.get('matches', []) or []:
+                utc = ((m.get('status') or {}).get('utcTime') or '')
+                if utc:
+                    fm.append({'liga': lg.get('primaryId'), 'id': m['id'], 'utc': _iso(utc), 'local': (m.get('home') or {}).get('name', ''),
+                               'visita': (m.get('away') or {}).get('name', '')})
+        time.sleep(0.2)
+    fm = list({m['id']: m for m in fm}.values())
+    guardado = {l: (json.load(open(RAW / f'bajas_{l}.json')) if (RAW / f'bajas_{l}.json').exists() else {}) for l in ligas}
+    n_ok = n_sin = 0
+    for l, e in objetivos:
+        ids = LIGAS[l]['fotmob'] if isinstance(LIGAS[l]['fotmob'], (list, tuple)) else [LIGAS[l]['fotmob']]
+        t0 = _iso(e['utc'])
+        mejor, pm = None, 0
+        for m in fm:
+            if m['liga'] not in ids:
+                continue
+            dh = abs((m['utc'] - t0).total_seconds()) / 3600
+            sim = parecido(e['local_espn'], m['local']) + parecido(e['visita_espn'], m['visita'])
+            if (dh <= 3 and sim >= 1.0) or (dh <= 48 and sim >= 1.5):
+                if sim - dh / 100 > pm:
+                    mejor, pm = m, sim - dh / 100
+        if not mejor:
+            n_sin += 1
+            continue
+        d = _get(f'{FOTMOB}/matchDetails', params={'matchId': mejor['id']})
+        time.sleep(0.2)
+        lu = ((d or {}).get('content') or {}).get('lineup') or {}
+        if not lu:
+            n_sin += 1
+            continue
+        tipo_xi = lu.get('lineupType') or ''
+        guardado[l][str(e['id'])] = {'fotmob': mejor['id'], 'visto': hoy.isoformat(timespec='minutes'), 'xi': tipo_xi,
+                                     'local': _fotmob_lado(lu.get('homeTeam') or {}, tipo_xi),
+                                     'visita': _fotmob_lado(lu.get('awayTeam') or {}, tipo_xi)}
+        n_ok += 1
+    for l in ligas:      # solo los partidos que siguen en la lista de próximos
+        vivos = {str(e['id']) for e in json.load(open(ruta_proximos(l)))}
+        json.dump({k: v for k, v in guardado[l].items() if k in vivos}, open(RAW / f'bajas_{l}.json', 'w'), ensure_ascii=False, indent=0)
+    print(f'  FotMob: bajas de {n_ok} partidos' + (f'; {n_sin} sin encontrar en FotMob' if n_sin else ''))
 
 
 def _iso(s):

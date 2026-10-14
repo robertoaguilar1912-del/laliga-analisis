@@ -424,6 +424,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <h3>Qué tan fuerte es cada liga, según el modelo</h3>
       <p class="note" id="ligas-note"></p>
       <div class="tbl-wrap"><table class="data" id="tbl-ligas"></table></div>
+      <p class="note" id="ligas-alt" hidden></p>
     </div>
     <div class="card" id="why-card">
       <h3 id="why-title">Por qué pierde</h3>
@@ -472,7 +473,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
   if (!LIGAS[liga] || PAGINAS[liga]) liga = 'laliga';
   guardar('laboratorio-liga', liga); guardar('laboratorio-futbol', liga);
-  const corto = n => n.replace(' League', '');
+  const corto = n => n.replace(' League', '').replace(/^Copa (?=Libertadores|Sudamericana)/, '');
   const chips = document.getElementById('ligas');
   chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${PAGINAS[id] || '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
   chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
@@ -1033,7 +1034,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const tamGrupo = g => D.tabla.filter(r => r.grupo === g).length;
   const zone = (p, n) => { const z = I.zonas.find(([a, b]) => (a < 0 ? n + a + 1 : a) <= p && p <= (b < 0 ? n + b + 1 : b)); return z ? ZCOL[z[2]] : 'transparent'; };
   $('#t-title').textContent = `Tabla de posiciones ${I.temporada}`;
-  $('#t-text').textContent = 'Orden por puntos, diferencia de goles y goles a favor.' + (I.hay_xg ? ' "xG dif." compara los goles esperados a favor y en contra: si es mucho mejor que la diferencia real, el equipo ha tenido mala suerte, y al revés.' : '') + (I.grupos.length ? (I.grupos[0].startsWith('Zona') ? ' Una tabla por zona.' : ' Una tabla por conferencia.') : '') + ' Toca un equipo para ver su perfil.';
+  $('#t-text').textContent = 'Orden por puntos, diferencia de goles y goles a favor.' + (I.hay_xg ? ' "xG dif." compara los goles esperados a favor y en contra: si es mucho mejor que la diferencia real, el equipo ha tenido mala suerte, y al revés.' : '') + (I.grupos.length ? (I.grupos[0].startsWith('Zona') ? ' Una tabla por zona.' : I.grupos[0].startsWith('Grupo') ? ' Una tabla por grupo (la fase de grupos; las eliminatorias no cuentan).' : ' Una tabla por conferencia.') : '') + ' Toca un equipo para ver su perfil.';
   $('#t-legend').innerHTML = I.zonas.filter((z, k, a) => a.findIndex(y => y[3] === z[3]) === k).map(z => `<span><i style="background:${ZCOL[z[2]]}"></i>${esc(z[3])}</span>`).join('') + (I.zonas.length ? '<span class="muted">Zonas aproximadas</span>' : '');
   const filaTabla = r => `<tr class="click" data-team="${esc(r.equipo)}"><td><span class="zone" style="background:${zone(r.posicion, tamGrupo(r.grupo))}"></span>${r.posicion}</td><td class="nm l">${esc(r.nombre)}</td><td>${r.pj}</td><td>${r.g}</td><td>${r.e}</td><td>${r.p}</td><td>${r.gf}:${r.gc}</td><td class="${r.dg < 0 ? 'neg' : ''}">${r.dg > 0 ? '+' : ''}${r.dg}</td>${I.hay_xg ? `<td class="${r.xdg < 0 ? 'neg' : ''}">${r.xdg == null ? '—' : (r.xdg > 0 ? '+' : '') + r.xdg.toFixed(1)}</td>` : ''}<td><b>${r.pts}</b></td><td class="l">${formHTML(r.forma)}</td></tr>`;
   const nCols = I.hay_xg ? 11 : 10;
@@ -1136,9 +1137,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const FL = I.fuerza_ligas;
     if (FL && FL.ligas && FL.ligas.length) {
       $('#ligas-card').hidden = false;
-      $('#ligas-note').textContent = `Un equipo promedio de cada liga contra uno promedio de la ${FL.contra}, en cancha neutral. Solo las ligas y países con equipos en esta copa. Sale de los partidos europeos de los últimos tres años; es lo que usa el modelo cuando se cruzan equipos de ligas distintas. "Sin liga en los datos": no hay resultados de esa liga, así que el nivel sale solo de sus partidos europeos y el "equipo promedio" es el de los que juegan en Europa (los mejores de su país), no el de toda la liga.`;
+      $('#ligas-note').textContent = `Un equipo promedio de cada liga contra uno promedio ${FL.contra_txt || 'de la ' + FL.contra}, en cancha neutral. Solo las ligas y países con equipos en esta copa. Sale de los ${FL.partidos || 'partidos europeos'} de los últimos tres años; es lo que usa el modelo cuando se cruzan equipos de ligas distintas.${FL.ligas.some(r => r.liga.includes('sin liga en los datos')) ? ' "Sin liga en los datos": no hay resultados de esa liga, así que el nivel sale solo de sus partidos europeos y el "equipo promedio" es el de los que juegan en Europa (los mejores de su país), no el de toda la liga.' : ''}`;
       $('#tbl-ligas').innerHTML = `<thead><tr><th class="l">Liga</th><th>Gana</th><th>Empata</th><th>Pierde</th><th>Goles</th></tr></thead><tbody>` +
         FL.ligas.map(r => `<tr><td class="nm l" style="white-space:normal">${esc(r.liga)}</td><td>${pct(r.g)}</td><td>${pct(r.e)}</td><td>${pct(r.p)}</td><td>${r.gf.toFixed(2)}-${r.gc.toFixed(2)}</td></tr>`).join('') + '</tbody>';
+      const AL = FL.altura;
+      if (AL && AL.altura && AL.altura.length) {
+        $('#ligas-alt').hidden = false;
+        $('#ligas-alt').textContent = `La altura también cuenta: en un partido de copa entre dos equipos del mismo nivel, el local gana ${pct(AL.llano.g)} si juegan en el llano, ` +
+          AL.altura.map(a => `${pct(a.g)} si el local juega a ${num(a.m)} m${a.m < 3000 ? ' (Quito, Bogotá)' : ' (La Paz)'}`).join(' y ') + ' y la visita viene del llano. El modelo lo suma según cuántos metros más alto que la visita juega el local (cuenta lo que pasa de 1,500 m), en ligas y copas.';
+      }
     }
   }
 
@@ -1196,7 +1203,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const yl = svgEl('text', { x: pad.l + 6, y: pad.t + 12 }); yl.textContent = 'lo que pasó'; svg.appendChild(yl);
     el.appendChild(svg);
   }
-  $('#foot-data').textContent = I.fuente_fd === 'uefa'
+  $('#foot-data').textContent = I.fuente_fd === 'conmebol'
+    ? 'Datos: ESPN (resultados desde 2020 de 12 ligas de Sudamérica y de la Libertadores y la Sudamericana, partidos próximos, momios de DraftKings, alineaciones, jugadores, estadísticas). Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Un solo modelo para toda Sudamérica: la fuerza de cada liga sale de los partidos de las copas y la de cada equipo, de su liga, más un efecto por la altura del estadio; con eso, la probabilidad de cada marcador (Dixon-Coles). Aquí no hay modelo de córners ni de remates a puerta.'
+    : I.fuente_fd === 'uefa'
     ? 'Datos: ESPN (resultados desde 2020 de 21 ligas de Europa y de las tres copas de la UEFA con sus previas, partidos próximos, momios de DraftKings, alineaciones, jugadores, estadísticas). Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Un solo modelo para toda Europa: la fuerza de cada liga sale de los partidos europeos y la de cada equipo, de su liga; con eso, la probabilidad de cada marcador (Dixon-Coles). Aquí no hay modelo de córners ni de remates a puerta.'
     : (I.fuente_fd === 'por temporada'
     ? 'Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas, cuotas históricas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas)'

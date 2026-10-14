@@ -148,7 +148,7 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         if h not in modelo.idx or a not in modelo.idx:
             print(f"  aviso: sin datos de {g['local_espn']} o {g['visita_espn']}")
             continue
-        neu = {'neutral': True} if g.get('neutral') and getattr(modelo, 'acepta_neutral', False) else {}   # finales europeas
+        neu = {'neutral': True} if g.get('neutral') and getattr(modelo, 'acepta_neutral', False) else {}   # finales en cancha neutral
         lam, mu = modelo.rates(h, a, **neu)
         M = modelo.score_matrix(h, a, **neu)                # probabilidad exacta de cada marcador
         gi = np.arange(M.shape[0])
@@ -392,6 +392,11 @@ def etiqueta_temporada(liga, temporada):
     return t
 
 
+H2H_REGION = {'europa': ['las copas europeas', 'las ligas de Europa'],
+              'sudamerica': ['Libertadores y Sudamericana', 'las ligas de Sudamérica']}
+FUENTE_REGION = {'europa': 'uefa', 'sudamerica': 'conmebol'}
+
+
 def analizar_liga(liga):
     L = LIGAS[liga]
     ref = pd.Timestamp(ahora().date())
@@ -401,7 +406,7 @@ def analizar_liga(liga):
     nombre = lambda t: NOM.get(t, t)
     promo = ascendidos(df)
     nuevos = promo.get(temporada, set())
-    if L.get('uefa'):                   # en Europa no hay ascendidos: cada equipo trae sus datos de su liga
+    if L.get('region'):                 # en las copas no hay ascendidos: cada equipo trae sus datos de su liga
         nuevos = {}
     elif L.get('prior_nuevos'):           # Série B: los nuevos pueden venir de arriba (descendidos) o de abajo
         nuevos = {t: tuple(L['prior_nuevos']) for t in nuevos}
@@ -409,13 +414,14 @@ def analizar_liga(liga):
         nuevos = previos_nuevos(nuevos, temporada, df2)
     hist = df[(df.Date < ref) & (df.Date >= ref - pd.Timedelta(days=3 * 365))]
     calendario = None
-    if L.get('uefa'):
-        # un solo modelo con 21 ligas de Europa y las tres copas (ver europa.py); córners y remates no: no hay
-        # suficientes partidos europeos con esas estadísticas para probarlos
+    if L.get('region'):
+        # un solo modelo por región: 21 ligas de Europa y las tres copas de la UEFA, o 12 ligas de Sudamérica con
+        # Libertadores y Sudamericana (ver europa.py); córners y remates no: no hay suficientes partidos de copa con esas
+        # estadísticas para probarlos
         import europa
-        modelo = europa.ModeloEuropa().fit(europa.cargar_partidos(), ref)
+        modelo = europa.ModeloEuropa(L['region']).fit(europa.cargar_partidos(L['region']), ref)
         cmodel = rmodel = None
-        calendario = europa.calendario_equipos(ref)
+        calendario = europa.calendario_equipos(ref, L['region'])
     else:
         # ligas de Europa: con la corrección de favoritos y empates (ver RECAL_1X2 en model.py)
         modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None).fit(hist, ref, promoted=nuevos)
@@ -428,12 +434,13 @@ def analizar_liga(liga):
         season = season[season.Date >= pd.Timestamp(inicio_torneo(liga).date())]
     tablas_espn = json.load(open(RAW / 'tablas_espn.json')) if (RAW / 'tablas_espn.json').exists() else {}
     extra = set()
-    if L.get('uefa'):       # la tabla es la de la fase de liga (36 equipos); las eliminatorias no cuentan
-        season = season[season.tipo.fillna('') == 'league-phase']
-        fases = df[df.tipo.fillna('') == 'league-phase']
+    if L.get('region'):     # la tabla es la de la fase de liga (36 equipos) o de grupos; las eliminatorias no cuentan
+        season = season[season.tipo.fillna('') == L['fase_tabla']]
+        fases = df[df.tipo.fillna('') == L['fase_tabla']]
         if len(season) or prox:     # ya empezó (o está por empezar): todos los equipos, aunque todavía no jueguen
             extra = {e for g in prox for e in (g['local_espn'], g['visita_espn'])}
-            extra |= {e for gr in tablas_espn.get(liga, [])[:1] for e in gr.get('equipos', [])}
+            grs = tablas_espn.get(liga, [])
+            extra |= {e for gr in (grs[:1] if L['region'] == 'europa' else grs) for e in gr.get('equipos', [])}
     else:
         season = season[~season.tipo.fillna('').str.contains(ELIMINATORIA)]
         fases = df
@@ -445,15 +452,17 @@ def analizar_liga(liga):
     else:
         temporada_tabla = temporada
     traduce = {'Eastern Conference': 'Conferencia Este', 'Western Conference': 'Conferencia Oeste', 'Group A': 'Zona A', 'Group B': 'Zona B'}
+    if L.get('region') == 'sudamerica':
+        traduce = {f'Group {x}': f'Grupo {x}' for x in 'ABCDEFGH'}
     grupos = [{**g, 'grupo': traduce.get(g.get('grupo'), g.get('grupo'))} for g in tablas_espn.get(liga, []) if g.get('equipos')]
     grupos = grupos if len(grupos) > 1 else []
     equipos, tabla, resumen_liga, hay_xg = analizar_equipos(liga, season, ref, det, mapa, nombre, grupos, calendario, extra)
     partidos = analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, cmodel, equipos, rmodel)
     partidos = [p for p in partidos if p['local_fd'] in equipos and p['visita_fd'] in equipos]
     hist_h2h = df.assign(div=L['nombre'])
-    if L.get('uefa'):        # en Europa también cuentan los partidos de liga entre equipos del mismo país
+    if L.get('region'):      # en las copas también cuentan los partidos de liga entre equipos del mismo país
         import europa
-        hist_h2h = europa.historial()
+        hist_h2h = europa.historial(L['region'])
     if df2 is not None:
         hist_h2h = pd.concat([hist_h2h, df2.assign(div=L.get('fd2_nombre', 'Segunda'))])
     for p in partidos:
@@ -467,11 +476,11 @@ def analizar_liga(liga):
     info = {'liga': liga, 'nombre': L['nombre'], 'pais': L['pais'], 'temporada': etiqueta_temporada(liga, temporada_tabla),
             'zonas': ZONAS.get(L.get('zonas'), []), 'grupos': [g['grupo'] for g in grupos],
             'h2h_desde': str(hist_h2h.Date.min().year),
-            'h2h_divs': (['las copas europeas', 'las ligas de Europa'] if L.get('uefa') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])),
+            'h2h_divs': (H2H_REGION[L['region']] if L.get('region') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])),
             'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'hay_remates': rmodel is not None,
-            'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': 'uefa' if L.get('uefa') else ('por temporada' if L.get('fd') else 'resultados y cuotas'),
+            'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': FUENTE_REGION.get(L.get('region')) or ('por temporada' if L.get('fd') else 'resultados y cuotas'),
             'n_espn_extra': n_espn, 'aviso': L.get('aviso'), 'cuidado': L.get('cuidado') or {},
-            'fuerza_ligas': modelo.tabla_ligas(list(equipos)) if L.get('uefa') else None}
+            'fuerza_ligas': modelo.tabla_ligas(list(equipos)) if L.get('region') else None}
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
            'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],

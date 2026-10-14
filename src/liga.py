@@ -258,7 +258,7 @@ def cargar_liga(liga):
         prox = json.load(open(pp))
     otros = {e['local_espn'] for e in prox} | {e['visita_espn'] for e in prox}
     candidatos = set(df.HomeTeam) | set(df.AwayTeam) | (set(df2.HomeTeam) if df2 is not None else set())
-    if LIGAS[liga].get('uefa'):     # todo viene de ESPN con el mismo nombre: no hay nada que emparejar
+    if LIGAS[liga].get('region'):     # todo viene de ESPN con el mismo nombre: no hay nada que emparejar
         todos = candidatos | otros | (set(E.home_e) | set(E.away_e) if len(E) else set())
         mapa = {t: t for t in todos}
     else:

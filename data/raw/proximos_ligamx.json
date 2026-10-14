@@ -1,183 +1,156 @@
 [
  {
-  "id": "401876954",
-  "utc": "2026-10-10T01:00Z",
-  "estadio": "Estadio Cuauhtémoc",
-  "local_espn": "Puebla",
-  "visita_espn": "León",
+  "id": "401876946",
+  "utc": "2026-10-17T01:00Z",
+  "estadio": "Estadio Victoria",
+  "local_espn": "Necaxa",
+  "visita_espn": "Atlas",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
+  "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
-    225,
-    140
+    150,
+    245,
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -120
+    -140,
+    100
    ],
    "spread": [
     [
-     "+0.5",
-     -190
+     "-0.5",
+     135
     ],
+    [
+     "+0.5",
+     -200
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876945",
+  "utc": "2026-10-17T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Atlante",
+  "visita_espn": "Pumas UNAM",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    245,
+    170
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
     [
      "-0.5",
      130
-    ]
-   ]
-  }
- },
- {
-  "id": "401876953",
-  "utc": "2026-10-10T03:00Z",
-  "estadio": "Estadio Universitario",
-  "local_espn": "Tigres UANL",
-  "visita_espn": "Toluca",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    190,
-    245,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -145,
-    105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -170
-    ],
-    [
-     "-0.5",
-     115
-    ]
-   ]
-  }
- },
- {
-  "id": "401876952",
-  "utc": "2026-10-10T23:00Z",
-  "estadio": "Estadio Olímpico Benito Juárez",
-  "local_espn": "FC Juárez",
-  "visita_espn": "Tijuana",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    235,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -140,
-    -105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -180
-    ],
-    [
-     "-0.5",
-     115
-    ]
-   ]
-  }
- },
- {
-  "id": "401876955",
-  "utc": "2026-10-10T23:00Z",
-  "estadio": "Estadio Corregidora",
-  "local_espn": "Querétaro",
-  "visita_espn": "Atlante",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    110,
-    215,
-    255
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -140,
-    -105
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
     ],
     [
      "+0.5",
-     -150
+     -190
     ]
    ]
   }
  },
  {
-  "id": "401876951",
-  "utc": "2026-10-11T01:00Z",
-  "estadio": "Estadio Jalisco",
-  "local_espn": "Atlas",
-  "visita_espn": "Guadalajara",
+  "id": "401876944",
+  "utc": "2026-10-17T03:00Z",
+  "estadio": "Estadio Caliente",
+  "local_espn": "Tijuana",
+  "visita_espn": "Puebla",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    215,
-    235,
-    115
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -150,
-    105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -160
-    ],
-    [
-     "-0.5",
-     105
-    ]
-   ]
-  }
- },
- {
-  "id": "401876950",
-  "utc": "2026-10-11T03:10Z",
-  "estadio": "Estadio Banorte",
-  "local_espn": "América",
-  "visita_espn": "Monterrey",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
+  "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     -120,
+    265,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876942",
+  "utc": "2026-10-17T23:00Z",
+  "estadio": "Estadio Corona",
+  "local_espn": "Santos",
+  "visita_espn": "Querétaro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
     245,
-    310
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
     -165,
     110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876943",
+  "utc": "2026-10-17T23:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Tigres UANL",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    245,
+    320
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -105
    ],
    "spread": [
     [
@@ -192,152 +165,6 @@
   }
  },
  {
-  "id": "401876948",
-  "utc": "2026-10-11T23:00Z",
-  "estadio": "Estadio Libertad Financiera",
-  "local_espn": "Atlético de San Luis",
-  "visita_espn": "Santos",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    265,
-    255
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -120
-    ],
-    [
-     "+0.5",
-     -125
-    ]
-   ]
-  }
- },
- {
-  "id": "401876949",
-  "utc": "2026-10-11T23:15Z",
-  "estadio": "Estadio Hidalgo",
-  "local_espn": "Pachuca",
-  "visita_espn": "Necaxa",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -150,
-    295,
-    340
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -165
-    ],
-    [
-     "+0.5",
-     105
-    ]
-   ]
-  }
- },
- {
-  "id": "401876947",
-  "utc": "2026-10-12T01:10Z",
-  "estadio": "Estadio Olímpico Universitario",
-  "local_espn": "Pumas UNAM",
-  "visita_espn": "Cruz Azul",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    225,
-    250,
-    105
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    115
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -145
-    ],
-    [
-     "-0.5",
-     -105
-    ]
-   ]
-  }
- },
- {
-  "id": "401876946",
-  "utc": "2026-10-17T01:00Z",
-  "estadio": "Estadio Victoria",
-  "local_espn": "Necaxa",
-  "visita_espn": "Atlas",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": null
- },
- {
-  "id": "401876945",
-  "utc": "2026-10-17T03:00Z",
-  "estadio": "Estadio Banorte",
-  "local_espn": "Atlante",
-  "visita_espn": "Pumas UNAM",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": null
- },
- {
-  "id": "401876944",
-  "utc": "2026-10-17T03:00Z",
-  "estadio": "Estadio Caliente",
-  "local_espn": "Tijuana",
-  "visita_espn": "Puebla",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": null
- },
- {
-  "id": "401876942",
-  "utc": "2026-10-17T23:00Z",
-  "estadio": "Estadio Corona",
-  "local_espn": "Santos",
-  "visita_espn": "Querétaro",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": null
- },
- {
-  "id": "401876943",
-  "utc": "2026-10-17T23:07Z",
-  "estadio": "Estadio Akron",
-  "local_espn": "Guadalajara",
-  "visita_espn": "Tigres UANL",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-apertura",
-  "momios": null
- },
- {
   "id": "401876941",
   "utc": "2026-10-18T01:00Z",
   "estadio": "Estadio León",
@@ -345,7 +172,30 @@
   "visita_espn": "América",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
-  "momios": null
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    180,
+    240,
+    135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -190
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401876940",
@@ -355,16 +205,227 @@
   "visita_espn": "Atlético de San Luis",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
-  "momios": null
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -310,
+    425,
+    600
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -120
+    ],
+    [
+     "+1.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401876939",
-  "utc": "2026-10-18T03:00Z",
+  "utc": "2026-10-18T03:10Z",
   "estadio": "Estadio Banorte",
   "local_espn": "Cruz Azul",
   "visita_espn": "FC Juárez",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -320,
+    425,
+    700
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -115
+    ],
+    [
+     "+1.5",
+     -130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876938",
+  "utc": "2026-10-19T01:00Z",
+  "estadio": "Estadio BBVA",
+  "local_espn": "Monterrey",
+  "visita_espn": "Pachuca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876934",
+  "utc": "2026-10-21T00:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Necaxa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876937",
+  "utc": "2026-10-21T01:00Z",
+  "estadio": "Estadio Libertad Financiera",
+  "local_espn": "Atlético de San Luis",
+  "visita_espn": "Querétaro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876936",
+  "utc": "2026-10-21T01:00Z",
+  "estadio": "Estadio Olímpico Benito Juárez",
+  "local_espn": "FC Juárez",
+  "visita_espn": "Atlante",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876935",
+  "utc": "2026-10-21T03:00Z",
+  "estadio": "Estadio Universitario",
+  "local_espn": "Tigres UANL",
+  "visita_espn": "León",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876932",
+  "utc": "2026-10-22T01:00Z",
+  "estadio": "Estadio Jalisco",
+  "local_espn": "Atlas",
+  "visita_espn": "América",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876933",
+  "utc": "2026-10-22T01:00Z",
+  "estadio": "Estadio Cuauhtémoc",
+  "local_espn": "Puebla",
+  "visita_espn": "Monterrey",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876931",
+  "utc": "2026-10-22T01:00Z",
+  "estadio": "Estadio Nemesio Díez Riega",
+  "local_espn": "Toluca",
+  "visita_espn": "Tijuana",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876930",
+  "utc": "2026-10-22T03:00Z",
+  "estadio": "Estadio Hidalgo",
+  "local_espn": "Pachuca",
+  "visita_espn": "Cruz Azul",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876929",
+  "utc": "2026-10-22T03:00Z",
+  "estadio": "Estadio Corona",
+  "local_espn": "Santos",
+  "visita_espn": "Pumas UNAM",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876928",
+  "utc": "2026-10-24T01:00Z",
+  "estadio": "Estadio Victoria",
+  "local_espn": "Necaxa",
+  "visita_espn": "FC Juárez",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876927",
+  "utc": "2026-10-24T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Atlante",
+  "visita_espn": "Atlético de San Luis",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876926",
+  "utc": "2026-10-24T23:00Z",
+  "estadio": "Estadio León",
+  "local_espn": "León",
+  "visita_espn": "Toluca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876925",
+  "utc": "2026-10-25T00:00Z",
+  "estadio": "Estadio BBVA",
+  "local_espn": "Monterrey",
+  "visita_espn": "Guadalajara",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876924",
+  "utc": "2026-10-25T03:00Z",
+  "estadio": "Estadio Olímpico Universitario",
+  "local_espn": "Pumas UNAM",
+  "visita_espn": "Tigres UANL",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
   "momios": null
  }
 ]
