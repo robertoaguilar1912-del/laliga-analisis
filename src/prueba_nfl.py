@@ -11,7 +11,7 @@ import warnings
 import numpy as np
 import pandas as pd
 
-from config import DATOS
+from config import DATOS, PICK_P_MIN
 from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS
 
 warnings.filterwarnings('ignore')
@@ -67,7 +67,7 @@ def apuestas(d, sm, st, clave, umbral=0.0):
                     ('Moneyline', 'visita', a, e, h, am_to_dec(r.away_moneyline), -r.result)]
         for mk, lado, gana, push, pierde, dec, x in sel:
             ev = gana * (dec - 1) - pierde
-            if ev < umbral:
+            if ev < umbral or gana / max(gana + pierde, 1e-9) < PICK_P_MIN:     # con menos de 30% no es PICK (config.py)
                 continue
             res = 1 if x > 0 else (0.5 if x == 0 else 0)
             filas.append({'Date': r.fecha, 'Season': int(r.season), 'mercado': mk, 'lado': lado, 'odds': dec, 'ev': ev,

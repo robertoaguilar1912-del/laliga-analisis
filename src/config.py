@@ -9,6 +9,11 @@ ESPN_DIR = DATOS / 'espn'
 SITIO = RAIZ / 'site'
 
 ZONA = 'America/Tegucigalpa'
+# Un PICK necesita EV de +5% o más Y que el modelo le dé al menos 30% de probabilidad. En la prueba, los "PICK" de menos
+# de 30% (momio medio ~6, aciertan 1 de cada 6) perdieron mucho más: ligas de Europa 2023-26 −23% (sin ellos el resto
+# pasó de −12.2% a −7.6%), NBA −21%, América −13%. En las copas europeas y la NFL daba casi igual.
+# (Quitar los momios menores a 1.70 se probó y empeoraba: en Europa y en las copas eran de los mejores PICK.)
+PICK_P_MIN = 0.30
 DIAS_PROXIMOS = 10          # cuántos días hacia adelante mostrar partidos
 N_SIMS = 10_000
 TEMPORADAS_HISTORIA = 3     # temporadas anteriores que usa el modelo
@@ -36,6 +41,13 @@ LIGAS = {
     'laliga': {'nombre': 'La Liga', 'pais': 'España', 'espn': 'esp.1', 'fd': 'SP1', 'fd2': 'SP2', 'fd2_nombre': 'Segunda',
                'calendario': 'europa', 'api_football': 140,
                'copas': {**COPAS_UEFA, 'esp.copa_del_rey': 'Copa del Rey', 'esp.super_cup': 'Supercopa'}, 'zonas': 'europa20'},
+    # descienden_de: división de arriba (sus descendidos parten con previo de equipo fuerte, no de recién ascendido)
+    'segunda': {'nombre': 'Segunda División', 'pais': 'España', 'espn': 'esp.2', 'fd': 'SP2', 'fd2': 'SP1', 'fd2_nombre': 'La Liga',
+                'calendario': 'europa', 'api_football': 141, 'descienden_de': 'SP1', 'nuevo': 'es nuevo en Segunda',
+                'copas': {'esp.copa_del_rey': 'Copa del Rey'}, 'zonas': 'segunda22',
+                'aviso': 'Cuidado con los equipos que bajaron de La Liga esta temporada. Al inicio el modelo los ve más débiles que '
+                         'la casa: tiene pocos partidos suyos en Segunda y no sabe que conservan plantel de Primera. En sus partidos '
+                         'confía más en la casa que en el modelo; la diferencia se va cerrando con las jornadas.'},
     'premier': {'nombre': 'Premier League', 'pais': 'Inglaterra', 'espn': 'eng.1', 'fd': 'E0', 'fd2': 'E1', 'fd2_nombre': 'Championship',
                 'calendario': 'europa', 'api_football': 39,
                 'copas': {**COPAS_UEFA, 'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'}, 'zonas': 'europa20'},
@@ -48,6 +60,37 @@ LIGAS = {
     'ligue1': {'nombre': 'Ligue 1', 'pais': 'Francia', 'espn': 'fra.1', 'fd': 'F1', 'fd2': 'F2', 'fd2_nombre': 'Ligue 2',
                'calendario': 'europa', 'api_football': 61,
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
+    'portugal': {'nombre': 'Liga Portugal', 'pais': 'Portugal', 'espn': 'por.1', 'fd': 'P1', 'calendario': 'europa', 'api_football': 94,
+                 'copas': {**COPAS_UEFA, 'por.taca.portugal': 'Copa de Portugal'}, 'zonas': 'portugal18',
+                 'aviso': 'Una de las ligas donde peor le fue al modelo en la prueba 2020-2026: −9.7% siguiendo los PICK (era −21.9% '
+                          'antes de las correcciones del 10 oct 2026: favoritos y empates, y PICK solo con 30% o más). El modelo le daba '
+                          'al empate de más cuando Porto, Benfica o Sporting juegan contra equipos chicos; ahora casi no marca PICK de '
+                          'empate (10 en seis años, y perdieron). Usa la página para ver estadísticas y momios justos.',
+                 'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron mucho en la prueba'}},
+    # uefa: copa europea. Equipos de ligas distintas: se usa el modelo de toda Europa (src/europa.py), que mide cuánto vale
+    # cada liga con los partidos europeos. Sus resultados (y los de 21 ligas) los baja europa.py, no football-data.
+    'champions': {'nombre': 'Champions League', 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'uefa': True,
+                  'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+               'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (396 partidos) quedó casi igual de '
+                           'preciso que el momio de cierre y los PICK dieron +7.2% (208 apuestas, rango probable −9% a +24%: puede ser suerte). '
+                           'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
+    'europa': {'nombre': 'Europa League', 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'uefa': True,
+               'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+               'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (395 partidos) fue menos preciso '
+                           'que el momio de cierre y los PICK dieron +1.6% (315 apuestas, rango probable −11% a +15%). '
+                           'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
+    'conference': {'nombre': 'Conference League', 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'uefa': True,
+                   'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+               'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (301 partidos) fue menos preciso '
+                           'que el momio de cierre y los PICK dieron −6.7% (266 apuestas, rango probable −20% a +6%). Muchos equipos son de países sin liga en '
+                           'los datos (Chequia, Croacia, Polonia...): de ellos sabe menos. '
+                           'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
+                           'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
+                           'pierden. No hay córners ni remates a puerta.'},
     'ligamx': {'nombre': 'Liga MX', 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
@@ -70,14 +113,17 @@ LIGAS = {
                  'calendario': 'anual', 'torneos': {1: 'Apertura', 7: 'Finalización'}, 'api_football': 239,
                  'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
 }
-# Todo lo que aparece en el selector de la página: las ligas de fútbol y la NFL (que tiene su propia página)
-SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL'}
+# Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
+SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL', 'nba': 'NBA'}
 
 # Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
 # Son aproximadas: los cupos exactos cambian según copas y coeficientes.
 ZONAS = {
     'europa20': [[1, 4, 'cl', 'Champions'], [5, 7, 'eu', 'Europa / Conference'], [-3, -1, 'des', 'Descenso']],
+    'portugal18': [[1, 2, 'cl', 'Champions'], [3, 4, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
+    'segunda22': [[1, 2, 'cl', 'Ascenso directo'], [3, 6, 'eu', 'Playoff de ascenso'], [-4, -1, 'des', 'Descenso']],
     'europa18': [[1, 4, 'cl', 'Champions'], [5, 6, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
+    'uefa36': [[1, 8, 'cl', 'Octavos directo'], [9, 24, 'eu', 'Playoff de eliminación'], [25, 36, 'des', 'Eliminado']],
     'ligamx': [[1, 6, 'cl', 'Liguilla directa'], [7, 10, 'eu', 'Play-in']],
     'mls': [[1, 7, 'cl', 'Playoffs'], [8, 9, 'eu', 'Wild card']],
     'brasil': [[1, 6, 'cl', 'Libertadores'], [7, 12, 'eu', 'Sudamericana'], [-4, -1, 'des', 'Descenso']],

@@ -2,20 +2,21 @@
 NBA: datos, modelo y análisis para la página (data/ligas/nba.json).
 
 Datos (todo de ESPN)
-- Resultados de cada juego desde la temporada 2021-22 (marcadores día por día).
+- Resultados de cada juego desde la temporada 2021-22 y quién jugó cuántos minutos (resumen de cada juego).
 - Momios de cierre de cada juego terminado (DraftKings, ESPN BET, Caesars... según la temporada).
-- Juegos próximos con momios de DraftKings (apertura y actual) y el reporte de lesiones.
-- Minutos y puntos por juego de cada jugador, para saber qué bajas pesan.
+- Juegos próximos con momios de DraftKings (apertura y actual), plantillas actuales y reporte de lesiones.
 
-Modelo
-- Puntos de cada equipo = media + ventaja de local + ataque propio + defensa del rival + cansancio
-  (jugar en días seguidos). Mínimos cuadrados con más peso a lo reciente y un freno (ridge).
-- Diferencia de puntos: normal discreta sin empates (en la NBA hay tiempo extra). Total: normal.
-- No sabe de bajas: si falta una estrella la casa mueve la línea y el modelo no. Por eso la página
-  marca las bajas importantes y en esos juegos no da PICK.
+Modelo (dos piezas)
+- Diferencia de puntos: valor de cada jugador. Cada juego, el resultado se reparte entre los que jugaron según
+  sus minutos (un "más/menos ajustado" con freno ridge y más peso a lo reciente). Para un juego próximo se suman
+  los jugadores disponibles con sus minutos de costumbre: si falta una estrella, el modelo lo nota.
+- Total de puntos: ataque y defensa de cada equipo con más peso a lo reciente (el ritmo cambia rápido).
+- Más: ventaja de local, cansancio (segunda noche de días seguidos) y playoffs. Diferencia: normal discreta sin
+  empates (en la NBA hay tiempo extra); total: normal.
 
     python src/nba.py historia   # baja temporadas pasadas con momios de cierre (una sola vez)
-    python src/nba.py            # actualiza ESPN y arma data/ligas/nba.json
+    python src/nba.py box        # minutos por jugador de los juegos que falten
+    python src/nba.py            # arma data/ligas/nba.json
     python src/nba.py prueba     # prueba con temporadas pasadas (data/modelo/nba/backtest.json)
 """
 import json
@@ -28,7 +29,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, ahora
+from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
 CORE_NBA = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba'
@@ -47,6 +48,9 @@ EQUIPOS = {
     'POR': 'Portland Trail Blazers', 'SAC': 'Sacramento Kings', 'SA': 'San Antonio Spurs', 'TOR': 'Toronto Raptors',
     'UTAH': 'Utah Jazz', 'WSH': 'Washington Wizards',
 }
+ESPN_ID = {'ATL': 1, 'BOS': 2, 'BKN': 17, 'CHA': 30, 'CHI': 4, 'CLE': 5, 'DAL': 6, 'DEN': 7, 'DET': 8, 'GS': 9, 'HOU': 10,
+           'IND': 11, 'LAC': 12, 'LAL': 13, 'MEM': 29, 'MIA': 14, 'MIL': 15, 'MIN': 16, 'NO': 3, 'NY': 18, 'OKC': 25, 'ORL': 19,
+           'PHI': 20, 'PHX': 21, 'POR': 22, 'SAC': 23, 'SA': 24, 'TOR': 28, 'UTAH': 26, 'WSH': 27}
 DIVISIONES = {
     'Atlántico': ['BOS', 'BKN', 'NY', 'PHI', 'TOR'], 'Central': ['CHI', 'CLE', 'DET', 'IND', 'MIL'],
     'Sureste': ['ATL', 'CHA', 'MIA', 'ORL', 'WSH'], 'Noroeste': ['DEN', 'MIN', 'OKC', 'POR', 'UTAH'],
@@ -183,6 +187,10 @@ def descargar_historia(desde=TEMPORADA_DESDE):
         cal = ((j or {}).get('leagues') or [{}])[0].get('calendar') or []
         dias = sorted({(c if isinstance(c, str) else c.get('startDate', ''))[:10].replace('-', '') for c in cal} - {''})
         dias = [d for d in dias if d < hoy]
+        if y == actual and len(vieja):          # temporada en curso: solo los días que faltan y los últimos 3
+            hechos = set(vieja.fecha.str.replace('-', ''))
+            recientes = (ahora() - timedelta(days=4)).strftime('%Y%m%d')
+            dias = [d for d in dias if d not in hechos or d >= recientes]
         with ThreadPoolExecutor(8) as ex:
             eventos = [e for lst in ex.map(lambda d: ((_get(f'{ESPN_NBA}/scoreboard', params={'dates': d, 'limit': 50}) or {})
                                                       .get('events', [])), dias) for e in lst]
@@ -191,6 +199,14 @@ def descargar_historia(desde=TEMPORADA_DESDE):
         s = df[df.temporada == y]
         print(f'  NBA {nombre_temporada(y)}: {len(dias)} días, {len(s)} juegos, {s.casa.notna().sum()} con momios')
     return df
+
+
+def descargar():
+    """Corrida diaria: resultados y momios de cierre que falten, próximos, lesiones, minutos por jugador y plantillas."""
+    descargar_historia()
+    descargar_espn()
+    descargar_boxscores()
+    descargar_plantillas()
 
 
 def _momios_prox(comp):
@@ -226,7 +242,10 @@ def descargar_espn(dias_atras=3):
                 continue
             if 'POSTPONED' in f['estado'] or 'CANCELED' in f['estado']:
                 continue
+            faltan = (pd.Timestamp(e['date']) - pd.Timestamp(hoy)).total_seconds() / 60
             eventos[f['id']] = {**{k_: f[k_] for k_ in ('id', 'utc', 'fecha', 'temporada', 'tipo', 'local', 'visita', 'neutral', 'nota', 'estado')},
+                                'local_espn': cs['home']['team'].get('displayName'), 'visita_espn': cs['away']['team'].get('displayName'),
+                                'revisado': bool(-10 <= faltan <= 90),
                                 'estadio': (comp.get('venue') or {}).get('fullName', ''),
                                 'records': {c['homeAway']: [r.get('summary') for r in c.get('records', []) or []] for c in comp['competitors']},
                                 'momios': _momios_prox(comp)}
@@ -256,44 +275,27 @@ def descargar_espn(dias_atras=3):
     print(f'  ESPN NBA: {len(lista)} juegos próximos, {nuevos} resultados nuevos, lesiones de {len(les)} equipos')
 
 
-STATS_URL = 'https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/statistics/byathlete'
-
-
-def descargar_jugadores():
-    """Minutos y puntos por juego de cada jugador (temporada actual; si va empezando, también la anterior)."""
+def descargar_plantillas():
+    """Jugadores de cada equipo hoy (cambian con traspasos y fichajes)."""
     from fuentes import _get
-    out = {}
-    actual = temporada_nba()
-    for y in (actual - 1, actual):
-        for tipo in (2,):
-            pag, total = 1, 1
-            while pag <= total and pag <= 6:
-                j = _get(STATS_URL, params={'region': 'us', 'lang': 'en', 'contentorigin': 'espn', 'isqualified': 'false',
-                                            'page': pag, 'limit': 200, 'sort': 'general.avgMinutes:desc', 'season': y, 'seasontype': tipo})
-                if not j:
-                    break
-                total = int(((j.get('pagination') or {}).get('pages')) or 1)
-                cats = j.get('categories') or []
-                for at in j.get('athletes', []) or []:
-                    a = at.get('athlete') or {}
-                    vals = {}
-                    for c, cv in zip(cats, at.get('categories') or []):
-                        for nm, v in zip(c.get('names') or [], cv.get('totals') or cv.get('values') or []):
-                            vals[nm] = _num(v)
-                    out.setdefault(str(a.get('id')), {})[str(y)] = {
-                        'nombre': a.get('displayName'), 'equipo': (a.get('teamShortName') or a.get('teamAbbrev') or ''),
-                        'pj': vals.get('gamesPlayed'), 'min': vals.get('avgMinutes'), 'pts': vals.get('avgPoints')}
-                pag += 1
-    if out:
-        json.dump(out, open(RAW / 'nba_jugadores.json', 'w'), ensure_ascii=False)
-    print(f'  NBA jugadores: {len(out)}')
+
+    def uno(t):
+        j = _get(f'{ESPN_NBA}/teams/{ESPN_ID[t]}/roster')
+        ats = (j or {}).get('athletes') or []
+        if ats and isinstance(ats[0], dict) and 'items' in ats[0]:          # a veces vienen agrupados por posición
+            ats = [x for grupo in ats for x in grupo.get('items', [])]
+        return t, [{'id': str(x.get('id')), 'nombre': x.get('displayName') or x.get('fullName') or '',
+                    'pos': (x.get('position') or {}).get('abbreviation', '')} for x in ats if x.get('id')]
+    with ThreadPoolExecutor(6) as ex:
+        out = {t: lst for t, lst in ex.map(uno, EQUIPOS) if lst}
+    if len(out) >= 25:
+        json.dump(out, open(RAW / 'nba_plantillas.json', 'w'), ensure_ascii=False, indent=0)
+    print(f'  NBA plantillas: {len(out)} equipos, {sum(len(v) for v in out.values())} jugadores')
     return out
 
 
-
-
 # ----------------------------------------------------------------- quién jugó cada juego (para medir las bajas)
-BOX_COLS = ['id', 'eq', 'jugador', 'nombre', 'titular', 'min', 'pts', 'mas_menos']
+BOX_COLS = ['id', 'equipo', 'jugador', 'nombre', 'titular', 'min', 'pts', 'mas_menos']
 
 
 def ruta_box(y):
@@ -315,7 +317,7 @@ def _box(eid):
                 mins = _num(str(v.get('minutes', '')).split(':')[0])
                 if at.get('didNotPlay') or not mins:
                     continue
-                filas.append({'id': str(eid), 'eq': eq, 'jugador': str(a.get('id')), 'nombre': a.get('displayName', ''),
+                filas.append({'id': str(eid), 'equipo': eq, 'jugador': str(a.get('id')), 'nombre': a.get('displayName', ''),
                               'titular': bool(at.get('starter')), 'min': mins, 'pts': _num(v.get('points')),
                               'mas_menos': _num(v.get('plusMinus'))})
     return filas
@@ -338,20 +340,23 @@ def descargar_boxscores(hilos=8, limite=None):
             filas = [f for lst in ex.map(_box, falta) for f in lst]
         if filas:
             nuevo = pd.concat([viejo, pd.DataFrame(filas)], ignore_index=True)[BOX_COLS]
-            nuevo = nuevo.merge(g[['id', 'utc']], on='id', how='left').sort_values(['utc', 'id', 'eq', 'min'], ascending=[True, True, True, False])
+            nuevo = nuevo.merge(g[['id', 'utc']], on='id', how='left').sort_values(['utc', 'id', 'equipo', 'min'], ascending=[True, True, True, False])
             nuevo[BOX_COLS].to_csv(p, index=False)
         total += len(falta)
         print(f'  NBA {nombre_temporada(y)}: minutos de {len(falta)} juegos más ({len(filas)} filas)')
     return total
 
 # ----------------------------------------------------------------- modelo
-HALF_LIFE = 120      # días; se eligen con la temporada 2022-23 (ver prueba_nba.py)
-RIDGE = 5.0
-SIGMA_M = 12.5       # desviación de la diferencia de puntos alrededor de lo esperado
-SIGMA_T = 18.5       # desviación del total de puntos
+# Parámetros elegidos con la temporada 2022-23 (ver prueba_nba.py)
+HL_EQUIPOS, RIDGE_EQUIPOS = 45, 10.0      # modelo de equipos (total de puntos): días de vida media y freno
+HL_JUGADORES, RIDGE_JUGADORES = 540, 20.0 # modelo de jugadores (diferencia de puntos)
+SIGMA_M = 14.0       # desviación de la diferencia alrededor de lo esperado (se toma de la última temporada de la prueba)
+SIGMA_T = 18.8       # desviación del total de puntos
 VENTANA_DIAS = 3 * 365
 PICK_EV = 0.05
 DIAS_NBA = 4         # la casa publica líneas de la NBA uno o dos días antes
+MIN_DEFECTO = 10.0   # minutos de costumbre de un jugador en su primer juego (prueba)
+MIN_NUEVO = 4.0      # minutos que se le suponen a alguien de la plantilla sin juegos (novato, invitado al campamento)
 
 
 def _descansos(df):
@@ -390,9 +395,40 @@ def pesos_margen(k):
     return np.where(k == 0, 0.0, 1.0)
 
 
+def cargar_box(g):
+    """Minutos de cada jugador en cada juego, con su parte del tiempo del equipo (5 = jugó todo el juego)
+    y los minutos que solía jugar antes de ese juego (promedio de sus 10 apariciones anteriores)."""
+    ps = sorted(RAW.glob('nba_box_*.csv'))
+    if not ps:
+        return pd.DataFrame(columns=['id', 'equipo', 'jugador', 'nombre', 'min', 'pts', 'fecha_dt', 'lado', 'share', 'min_esp', 'share_esp'])
+    box = pd.concat([pd.read_csv(p, dtype={'id': str, 'jugador': str}) for p in ps], ignore_index=True)
+    box = box.merge(g[['id', 'fecha_dt', 'local', 'visita']], on='id')
+    box['lado'] = np.where(box.equipo == box.local, 1, np.where(box.equipo == box.visita, -1, 0))
+    box = box[box.lado != 0].copy()
+    box['share'] = box['min'] / box.groupby(['id', 'lado'])['min'].transform('sum') * 5
+    box = box.sort_values(['jugador', 'fecha_dt'])
+    box['min_esp'] = box.groupby('jugador')['min'].transform(lambda x: x.shift(1).rolling(10, min_periods=1).mean()).fillna(MIN_DEFECTO)
+    box['share_esp'] = repartir(box.min_esp, [box.id, box.lado]) / 48
+    return box.sort_values(['fecha_dt', 'id', 'lado', 'min'], ascending=[True, True, False, False]).reset_index(drop=True)
+
+
+def repartir(minutos, grupos, tope=36, umbral=10):
+    """Lleva los minutos de costumbre de cada equipo a los 240 de un juego. Si sobran minutos (falta alguien),
+    se los llevan sobre todo los suplentes de la rotación: cada uno según lo que le falta para 36 minutos,
+    y los que casi no juegan reciben menos."""
+    m = pd.Series(np.asarray(minutos, float))
+    gr = [pd.Series(np.asarray(x)) for x in grupos]
+    S = m.groupby(gr).transform('sum')
+    cap = (tope - m).clip(lower=0) * (m / umbral).clip(upper=1)
+    C = cap.groupby(gr).transform('sum')
+    falta = 240 - S
+    out = np.where((falta > 0) & (C > 0), m + falta * cap / C.where(C > 0, 1), m * 240 / S)
+    return out
+
+
 class ModeloNBA:
-    """Puntos = media + local + ataque + defensa rival + cansancio propio + cansancio rival + playoffs."""
-    def __init__(self, half_life=HALF_LIFE, ridge=RIDGE, sigma_m=SIGMA_M, sigma_t=SIGMA_T):
+    """Modelo de equipos. Puntos = media + local + ataque + defensa rival + cansancio propio + cansancio rival + playoffs."""
+    def __init__(self, half_life=HL_EQUIPOS, ridge=RIDGE_EQUIPOS, sigma_m=SIGMA_M, sigma_t=SIGMA_T):
         self.half_life, self.ridge, self.sigma_m, self.sigma_t = half_life, ridge, sigma_m, sigma_t
 
     def fit(self, g, ref):
@@ -440,6 +476,72 @@ class ModeloNBA:
         return k, p / p.sum()
 
 
+class ModeloJugadores:
+    """Diferencia de puntos = local + cansancio + suma del valor de los jugadores de cada lado según sus minutos.
+    El valor de un jugador son los puntos que le saca a un jugador promedio en un juego completo (48 minutos).
+    El freno no lleva a todos a cero sino a lo que se espera por sus minutos y su anotación (un jugador al que su
+    entrenador le da 34 minutos suele ser mejor que uno de 10): así las estrellas no quedan aplanadas."""
+    def __init__(self, g, box, half_life=HL_JUGADORES, ridge=RIDGE_JUGADORES):
+        from scipy import sparse
+        self.half_life, self.ridge = half_life, ridge
+        self.jug = sorted(box.jugador.unique())
+        self.J = {x: i for i, x in enumerate(self.jug)}
+        fila = pd.Series(np.arange(len(g)), index=g.id.values)
+        gk = fila.reindex(box.id.values).values
+        j = box.jugador.map(self.J).values
+        n = (len(g), len(self.jug))
+        self.Xs = sparse.csr_matrix((box.share.values * box.lado.values, (gk, j)), shape=n)       # minutos reales
+        self.Xe = sparse.csr_matrix((box.share_esp.values * box.lado.values, (gk, j)), shape=n)   # minutos de costumbre
+        self.base = np.c_[(~g.neutral.values).astype(float), (g.desc_l.values == 1).astype(float) - (g.desc_v.values == 1).astype(float)]
+        self.y = g.margen.values.astype(float)
+        self.f = g.fecha_dt.values
+        self.bj, self.bf = j, box.fecha_dt.values
+        self.bmin, self.bpts = box['min'].values.astype(float), box.pts.fillna(0).values.astype(float)
+
+    def _ridge(self, ref, y_menos):
+        from scipy import sparse
+        m = (self.f < ref) & (self.f >= ref - np.timedelta64(VENTANA_DIAS, 'D'))
+        w = np.exp(-np.log(2) * ((ref - self.f[m]) / np.timedelta64(1, 'D')) / self.half_life)
+        X = sparse.hstack([sparse.csr_matrix(self.base[m]), self.Xs[m]]).tocsr()
+        A = (X.T @ sparse.diags(w) @ X).toarray() + np.diag([1e-6, 1e-6] + [self.ridge] * len(self.jug))
+        return np.linalg.solve(A, X.T @ (w * (self.y[m] - y_menos[m])))
+
+    def fit(self, ref):
+        ref = np.datetime64(pd.Timestamp(ref))
+        nJ = len(self.jug)
+        b = self._ridge(ref, np.zeros(len(self.y)))                  # 1) freno hacia cero
+        # 2) lo que se espera de cada jugador por sus minutos y su anotación del último año
+        m = (self.bf < ref) & (self.bf >= ref - np.timedelta64(365, 'D'))
+        mins = np.bincount(self.bj[m], weights=self.bmin[m], minlength=nJ)
+        n = np.bincount(self.bj[m], minlength=nJ)
+        pts = np.bincount(self.bj[m], weights=self.bpts[m], minlength=nJ)
+        tiene = n > 0
+        Z = np.c_[np.where(tiene, mins / np.maximum(n, 1), 0), np.where(tiene, pts / np.maximum(mins, 1) * 36, 0), np.ones(nJ)]
+        sw = np.sqrt(mins[tiene])
+        self.coef = np.linalg.lstsq(Z[tiene] * sw[:, None], b[2:][tiene] * sw, rcond=None)[0]
+        self.b_def = float(self.coef @ [8, 12, 1])                    # jugador sin historial: de banca
+        b0 = np.where(tiene, Z @ self.coef, self.b_def)
+        # 3) freno hacia lo esperado
+        d = self._ridge(ref, self.Xs @ b0)
+        self.hfa, self.b2b, self.beta = float(d[0]), float(d[1]), b0 + d[2:]
+        self.valor = dict(zip(self.jug, self.beta))
+        return self
+
+    def margen_filas(self, idx):
+        """Prueba: diferencia esperada de juegos ya jugados con los que jugaron y sus minutos de costumbre."""
+        return self.base[idx] @ np.array([self.hfa, self.b2b]) + self.Xe[idx] @ self.beta
+
+    def fuerza(self, minutos):
+        """Valor de una alineación: {jugador: minutos de costumbre} (se llevan a 240 como en repartir)."""
+        if not minutos:
+            return 0.0
+        ks = list(minutos)
+        m = repartir([minutos[k] for k in ks], [np.zeros(len(ks))])
+        return float(sum(mm / 48 * self.valor.get(k, self.b_def) for k, mm in zip(ks, m)))
+
+    def margen(self, min_h, min_a, neutral=False, b2b_h=False, b2b_a=False):
+        return (0 if neutral else self.hfa) + self.b2b * (int(b2b_h) - int(b2b_a)) + self.fuerza(min_h) - self.fuerza(min_a)
+
 
 def prob_linea(k, p, umbral):
     """(gana, empate, pierde) de 'valor > umbral' sobre una distribución discreta."""
@@ -451,8 +553,11 @@ def am_to_dec(a):
     return 1 + a / 100 if a > 0 else 1 + 100 / abs(a)
 
 
-def veredicto(ev):
-    return 'PICK' if ev >= PICK_EV else ('MAYBE' if ev >= 0 else 'SKIP')
+def veredicto(ev, p=1.0):
+    """PICK: EV ≥ +5% y probabilidad del modelo ≥ 30% (ver PICK_P_MIN en config.py); con menos, MAYBE."""
+    if ev >= PICK_EV and p >= PICK_P_MIN:
+        return 'PICK'
+    return 'MAYBE' if ev >= 0 else 'SKIP'
 
 
 def fair(pc):
@@ -477,30 +582,42 @@ def _ats(df, t):
     return [int(c), int(n), int(p)], [int(o), int(u), int(e)]
 
 
-def jugadores():
-    """{id de ESPN: {'nombre', 'min', 'pts', 'pj', 'temporada'}}: temporada actual si ya jugó 5 juegos; si no, la anterior."""
-    p = RAW / 'nba_jugadores.json'
-    if not p.exists():
-        return {}
-    actual = str(temporada_nba())
-    previa = str(temporada_nba() - 1)
-    out = {}
-    for aid, xs in json.load(open(p)).items():
-        x = xs.get(actual) if (xs.get(actual) or {}).get('pj') and xs[actual]['pj'] >= 5 else xs.get(previa)
-        if x and x.get('min') is not None:
-            out[aid] = {**x, 'temporada': actual if x is xs.get(actual) else previa}
-    return out
+def habitos(box):
+    """Por jugador: minutos y puntos en sus últimas 10 apariciones, y equipo y fecha de la última."""
+    if not len(box):
+        return pd.DataFrame(columns=['min', 'pts', 'n', 'fecha_dt', 'equipo', 'nombre'])
+    b = box.sort_values('fecha_dt')
+    h = b.groupby('jugador').tail(10).groupby('jugador').agg(min=('min', 'mean'), pts=('pts', 'mean'), n=('min', 'size'))
+    return h.join(b.groupby('jugador').tail(1).set_index('jugador')[['fecha_dt', 'equipo', 'nombre']])
 
 
-def peso_jugador(x):
+def peso_jugador(minutos, puntos):
     """'estrella', 'titular' o None según minutos y puntos por juego."""
-    if not x:
+    if minutos is None:
         return None
-    if (x.get('pts') or 0) >= 20 or (x.get('min') or 0) >= 32:
+    if (puntos or 0) >= 20 or minutos >= 32:
         return 'estrella'
-    if (x.get('min') or 0) >= 24:
+    if minutos >= 24:
         return 'titular'
     return None
+
+
+FUERA = ('Out', 'Doubtful')              # se cuentan como que no juegan
+DUDA = ('Day-To-Day', 'Questionable', 'Doubtful')
+
+
+def plantilla(t, plantillas, hab, ref):
+    """Ids de los jugadores del equipo: la plantilla de ESPN o, si no hay, los que jugaron con él al final de su último tramo."""
+    ids = [x['id'] for x in plantillas.get(t, [])]
+    if ids:
+        return ids
+    h = hab[hab.equipo == t]
+    return list(h[h.fecha_dt >= h.fecha_dt.max() - pd.Timedelta(days=60)].index) if len(h) else []
+
+
+def minutos_esperados(ids, estados, hab):
+    """{jugador: minutos de costumbre} de los que pueden jugar."""
+    return {x: float(hab['min'].get(x, MIN_NUEVO)) for x in ids if estados.get(x) not in FUERA}
 
 
 def analizar_equipos(g, modelo, temporada):
@@ -555,7 +672,7 @@ def analizar_equipos(g, modelo, temporada):
     return out, conferencias
 
 
-def texto_juego(L, V, m, t, sp_dk, tot_dk, dsc):
+def texto_juego(L, V, m, t, sp_dk, tot_dk, dsc, fuera):
     s = f'El modelo espera a {L} {abs(m):.1f} puntos {"arriba" if m >= 0 else "abajo"} y {t:.0f} puntos en total. '
     if sp_dk is not None:
         dif = sp_dk - (-m)
@@ -564,39 +681,66 @@ def texto_juego(L, V, m, t, sp_dk, tot_dk, dsc):
                ('el modelo ve mejor al local que la casa. ' if dif > 0 else 'el modelo ve mejor al visitante que la casa. ')))
     if tot_dk is not None:
         s += f'Total de la casa {tot_dk:g}, del modelo {t:.0f}. '
+    if fuera:
+        s += 'Ya descuenta a los que no juegan: ' + ', '.join(fuera) + '. '
     cans = [n for n, d in ((L, dsc[0]), (V, dsc[1])) if d == 1]
     if cans:
-        s += ' y '.join(cans) + (' juegan' if len(cans) > 1 else ' juega') + ' la segunda noche de días seguidos (el modelo ya lo descuenta).'
+        s += ' y '.join(cans) + (' juegan' if len(cans) > 1 else ' juega') + ' la segunda noche de días seguidos (también descontado).'
     return s.strip()
 
 
 def analizar():
     ref = pd.Timestamp(ahora().date())
+    hasta = ref + pd.Timedelta(days=1)
     g = cargar_juegos()
     actual = temporada_nba()
-    modelo = ModeloNBA().fit(g, ref + pd.Timedelta(days=1))
+    bt = DATOS / 'modelo' / 'nba' / 'backtest.json'
+    backtest = json.load(open(bt)) if bt.exists() else None
+    sig = (backtest or {}).get('sigma_actual') or {}
+    modelo = ModeloNBA(sigma_m=sig.get('m', SIGMA_M), sigma_t=sig.get('t', SIGMA_T)).fit(g, hasta)
+    box = cargar_box(g)
+    mj = ModeloJugadores(g, box).fit(hasta) if len(box) else None
+    hab = habitos(box)
+    plantillas = json.load(open(RAW / 'nba_plantillas.json')) if (RAW / 'nba_plantillas.json').exists() else {}
     temporada = actual if (g.temporada == actual).any() else actual - 1
     equipos, conferencias = analizar_equipos(g, modelo, temporada)
-    jug = jugadores()
-    juegos_eq = {t: int(((g.temporada == actual) & ((g.local == t) | (g.visita == t))).sum()) for t in EQUIPOS}
     reporte = json.load(open(RAW / 'lesiones_nba.json')) if (RAW / 'lesiones_nba.json').exists() else {}
     nombre_a = {v: k for k, v in EQUIPOS.items()}
-    orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Day-To-Day': 3}
+    estados = {t: {} for t in EQUIPOS}
     for nombre, lst in reporte.items():
-        t = nombre_a.get(nombre)
-        if not t:
-            continue
+        if nombre_a.get(nombre):
+            estados[nombre_a[nombre]] = {x['id']: x['estado'] for x in lst if x.get('id')}
+    orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Day-To-Day': 3}
+    alineacion = {}
+    for t in EQUIPOS:
+        ids = plantilla(t, plantillas, hab, ref)
+        mins = minutos_esperados(ids, estados[t], hab)
+        alineacion[t] = mins
+        e_ = equipos[t]
+
+        def impacto(x):
+            """Puntos que pierde el equipo sin el jugador (positivo = el equipo es peor sin él)."""
+            if mj is None or x not in hab.index:
+                return None
+            con = dict(mins); con[x] = float(hab['min'].get(x, MIN_NUEVO))
+            sin = {k: v for k, v in mins.items() if k != x}
+            return round(mj.fuerza(con) - mj.fuerza(sin), 1)
         les = []
-        for x in lst:
+        for x in reporte.get(EQUIPOS[t], []):
             if x['estado'] == 'Active':
                 continue
-            st = jug.get(x.get('id'))
-            peso = peso_jugador(st)
-            # si ya se perdió media temporada, sus partidos sin él ya están en los datos del modelo
-            reciente = juegos_eq[t] < 10 or bool(st and st['temporada'] == str(actual) and (st.get('pj') or 0) >= 0.5 * juegos_eq[t])
-            les.append({**x, 'peso': peso, 'reciente': reciente,
-                        'min': None if not st else round(st['min'], 1), 'pts': None if not st else round(st.get('pts') or 0, 1)})
-        equipos[t]['lesiones'] = sorted(les, key=lambda x: (orden.get(x['estado'], 4), {'estrella': 0, 'titular': 1}.get(x['peso'], 2), -(x['min'] or 0)))
+            mn, pt = hab['min'].get(x.get('id')), hab['pts'].get(x.get('id'))
+            les.append({**{k: x.get(k) for k in ('id', 'nombre', 'pos', 'estado', 'tipo', 'regreso')},
+                        'min': None if mn is None else round(float(mn), 1), 'pts': None if pt is None else round(float(pt), 1),
+                        'peso': peso_jugador(mn, pt), 'impacto': impacto(x.get('id')) if x.get('id') else None})
+        e_['lesiones'] = sorted(les, key=lambda x: (orden.get(x['estado'], 4), -(x['impacto'] or 0)))
+        # rotación disponible hoy y su fuerza según el modelo de jugadores
+        rot = sorted(mins.items(), key=lambda kv: -kv[1])[:10]
+        e_['rotacion'] = [{'nombre': hab['nombre'].get(x) or next((y['nombre'] for y in plantillas.get(t, []) if y['id'] == x), x),
+                           'min': round(m_, 1), 'pts': None if hab['pts'].get(x) is None else round(float(hab['pts'][x]), 1),
+                           'valor': None if mj is None else round(float(mj.valor.get(x, 0.0)), 1),
+                           'duda': estados[t].get(x) in DUDA} for x, m_ in rot]
+        e_['fuerza_hoy'] = None if mj is None else round(mj.fuerza(mins), 1)
     prox = json.load(open(RAW / 'proximos_nba.json')) if (RAW / 'proximos_nba.json').exists() else []
     limite = ahora() + timedelta(days=DIAS_NBA)
     prox = [e for e in prox if pd.Timestamp(e['utc']) <= limite]
@@ -617,25 +761,29 @@ def analizar():
             continue
         dsc = [desc(h, e['fecha']), desc(a, e['fecha'])]
         playoff = e['tipo'] in (3, 5)
-        ph, pa = modelo.puntos(h, a, e['neutral'], dsc[0] == 1, dsc[1] == 1, playoff)
-        m, t = ph - pa, ph + pa
+        th, ta = modelo.puntos(h, a, e['neutral'], dsc[0] == 1, dsc[1] == 1, playoff)
+        t = th + ta
+        m = mj.margen(alineacion[h], alineacion[a], e['neutral'], dsc[0] == 1, dsc[1] == 1) if mj else th - ta
+        ph, pa = (t + m) / 2, (t - m) / 2
         km, pm = modelo.dist_margen(m)
         kt, pt = modelo.dist_total(t)
         pH, _, pA = prob_linea(km, pm, 0)
         pH, pA = pH / (pH + pA), pA / (pH + pA)
         L, V = EQUIPOS[h], EQUIPOS[a]
-        bajas = {lado: [x for x in equipos[eq].get('lesiones', []) if x['peso'] and x['estado'] in ('Out', 'Doubtful')]
-                 for lado, eq in (('local', h), ('visita', a))}
-        alerta = [x['nombre'] for lado in bajas.values() for x in lado if x['reciente']]
+        les = {'local': equipos[h].get('lesiones', []), 'visita': equipos[a].get('lesiones', [])}
+        fuera = [x['nombre'] for lado in les.values() for x in lado if x['estado'] in FUERA and (x['impacto'] or 0) >= 1]
+        # en duda y con peso: el resultado depende de si juega; el modelo supone que sí (o que no, si es "Doubtful")
+        alerta = [x['nombre'] for lado in les.values() for x in lado
+                  if x['estado'] in DUDA and (x['peso'] == 'estrella' or (x['impacto'] or 0) >= 1.0)]
         mom = e.get('momios') or {}
         con, mkt = [], None
 
         def fila(k_, nm, grupo, gana, push, pierde, d, pmk):
             pc = gana / (gana + pierde) if gana + pierde > 0 else 0
             ev = gana * (d - 1) - pierde
-            v = veredicto(ev)
+            v = veredicto(ev, pc)
             if v == 'PICK' and alerta:
-                v = 'REVISAR'              # el modelo no sabe de la baja: no cuenta como PICK
+                v = 'REVISAR'              # depende de un jugador en duda: no cuenta como PICK
             r = {'k': k_, 'mercado': nm, 'grupo': grupo, 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
                  'justo': fair(pc), 'ev': ev, 'veredicto': v}
             if push > 0.0005:
@@ -667,46 +815,47 @@ def analizar():
         partidos.append({
             'id': e['id'], 'liga': 'nba', 'utc': e['utc'], 'estadio': e.get('estadio', ''), 'tipo': e['tipo'], 'nota': e.get('nota') or '',
             'local_es': L, 'visita_es': V, 'local_fd': h, 'visita_fd': a, 'neutral': bool(e['neutral']),
-            'pts_local': ph, 'pts_visita': pa, 'margen': m, 'total': t, 'linea_modelo': round(-m * 2) / 2,
+            'pts_local': ph, 'pts_visita': pa, 'margen': m, 'margen_equipos': th - ta, 'total': t, 'linea_modelo': round(-m * 2) / 2,
             'pH': pH, 'pA': pA, 'mercado': mkt, 'casa_momios': mom.get('casa'),
             'dk': {'spread': sp[0], 'total': tt[0], 'spread_abre': mom.get('spread_abre'), 'total_abre': mom.get('total_abre')},
             'con_momio': con, 'sin_momio': [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH, 'justo': fair(pH)},
                                             {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA, 'justo': fair(pA)}],
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]],
             't0': t0, 'dist_t': [round(float(x), 5) for x in pt[(kt >= t0) & (kt <= t0 + 120)]],
-            'texto': texto_juego(L, V, m, t, sp[0], tt[0], dsc), 'descanso': dsc,
-            'lesiones': {'local': equipos[h].get('lesiones', []), 'visita': equipos[a].get('lesiones', [])},
-            'bajas': bajas, 'alerta': alerta,
+            'texto': texto_juego(L, V, m, t, sp[0], tt[0], dsc, fuera), 'descanso': dsc,
+            'lesiones': les, 'alerta': alerta, 'fuera': fuera,
             'h2h': [{'fecha': r.fecha, 'local': EQUIPOS[r.local], 'visita': EQUIPOS[r.visita], 'gl': int(r.pl), 'gv': int(r.pv)} for r in h2h.itertuples()],
         })
-    bt = DATOS / 'modelo' / 'nba' / 'backtest.json'
-    backtest = json.load(open(bt)) if bt.exists() else None
     if backtest:
         backtest['curva'] = [{'d': c['d'], 'u': round(c['u'], 2)} for c in backtest['curva']]
     hechos = g[g.temporada == temporada]
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(g.fecha.max()) if len(g) else None,
            'info': {'liga': 'nba', 'nombre': 'NBA', 'temporada': nombre_temporada(actual), 'temporada_tabla': nombre_temporada(temporada),
                     'empezo': bool((g.temporada == actual).any()), 'juegos_tabla': int(len(hechos)),
-                    'hfa': round(float(modelo.hfa), 2), 'b2b': round(float(modelo.b2b_propio - modelo.b2b_rival), 2),
-                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA},
+                    'hfa': round(float(mj.hfa if mj else modelo.hfa), 2),
+                    'b2b': round(float(mj.b2b if mj else modelo.b2b_propio - modelo.b2b_rival), 2),
+                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj)},
            'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     from analizar import limpiar
     json.dump(limpiar(out), open(DATOS / 'ligas' / 'nba.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-    print(f'  NBA: {len(partidos)} juegos próximos, datos hasta {out["datos_hasta"]}, local +{modelo.hfa:.1f}, '
-          f'segunda noche {modelo.b2b_propio - modelo.b2b_rival:+.1f}')
+    print(f'  NBA: {len(partidos)} juegos próximos, datos hasta {out["datos_hasta"]}, local +{out["info"]["hfa"]:.1f}, '
+          f'segunda noche {out["info"]["b2b"]:+.1f}, {len(box)} filas de minutos')
 
 
 if __name__ == '__main__':
     arg = sys.argv[1] if len(sys.argv) > 1 else ''
     if arg == 'historia':
         descargar_historia()
-    elif arg == 'jugadores':
-        descargar_jugadores()
+    elif arg == 'plantillas':
+        descargar_plantillas()
     elif arg == 'box':
         descargar_boxscores()
     elif arg == 'espn':
         descargar_espn()
+    elif arg == 'descargar':
+        descargar()
+        analizar()
     elif arg == 'prueba':
         from prueba_nba import main as prueba
         prueba()

@@ -23,7 +23,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, ahora
+from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahora
 
 HALF_LIFE = 180      # días; elegidos con 2012-2017 (ver prueba_nfl.py)
 RIDGE = 5.0
@@ -141,8 +141,11 @@ def mercado(gana, push, pierde, dec):
     return pc, ev
 
 
-def veredicto(ev):
-    return 'PICK' if ev >= PICK_EV else ('MAYBE' if ev >= 0 else 'SKIP')
+def veredicto(ev, p=1.0):
+    """PICK: EV ≥ +5% y probabilidad del modelo ≥ 30% (ver PICK_P_MIN en config.py); con menos, MAYBE."""
+    if ev >= PICK_EV and p >= PICK_P_MIN:
+        return 'PICK'
+    return 'MAYBE' if ev >= 0 else 'SKIP'
 
 
 def fair(pc):
@@ -389,7 +392,7 @@ def analizar():
             for k_, nm, (gana, pierde), d, pmk in (('ML1', f'Gana {L}', (pH, pA), dec[0], mkt[0]), ('ML2', f'Gana {V}', (pA, pH), dec[1], mkt[1])):
                 pc, ev = mercado(gana, pT, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Moneyline', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': pmk,
-                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev)})
+                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc)})
         sp = mom.get('spread') or [None] * 4
         if sp[0] is not None and None not in sp:
             dh, da = am_to_dec(sp[1]), am_to_dec(sp[3])
@@ -400,7 +403,7 @@ def analizar():
                                                          (f'H2:{sp[2]:+g}', f'{V} {sp[2]:+g}', (g2, p2, l2), da, pms[1])):
                 pc, ev = mercado(gana, push, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Spread', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
-                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev), 'empate': push})
+                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc), 'empate': push})
         tt = mom.get('total') or [None] * 3
         if None not in tt:
             do, du = am_to_dec(tt[1]), am_to_dec(tt[2])
@@ -410,7 +413,7 @@ def analizar():
                                                    (f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', (u_, o_), du, pmt[1])):
                 pc, ev = mercado(gana, push, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Total', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
-                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev), 'empate': push})
+                            'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc), 'empate': push})
         lin_m = round(-m * 2) / 2
         sin = [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH / (pH + pA), 'justo': fair(pH / (pH + pA))},
                {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA / (pH + pA), 'justo': fair(pA / (pH + pA))}]

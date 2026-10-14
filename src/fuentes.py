@@ -46,6 +46,8 @@ def descargar_football_data(liga):
     """Temporadas recientes de primera y segunda división. La actual siempre; las viejas solo si faltan.
     Para Liga MX y MLS, el archivo único con todas las temporadas."""
     L = LIGAS[liga]
+    if L.get('uefa'):
+        return          # las copas europeas las baja europa.descargar() (una vez para las tres, con las ligas de Europa)
     if L.get('solo_espn'):
         return descargar_resultados_espn(liga)
     if L.get('fd_extra'):
@@ -264,7 +266,9 @@ def descargar_proximos(liga, buscar_alineaciones_min=120):
     L = LIGAS[liga]
     hoy = ahora()
     eventos = {}
-    for k in range(DIAS_PROXIMOS + 1):
+    # desde ayer: ESPN arma cada día con la hora del este de EE. UU., así que después de las 00:00 UTC (6 p. m. en Honduras)
+    # los partidos de esa noche en América quedan en el día "de ayer" y, sin esto, desaparecían de la página sin haber empezado
+    for k in range(-1, DIAS_PROXIMOS + 1):
         d = (hoy + timedelta(days=k)).strftime('%Y%m%d')
         for e in _scoreboard(L['espn'], d):
             comp = e['competitions'][0]
@@ -278,6 +282,7 @@ def descargar_proximos(liga, buscar_alineaciones_min=120):
             eventos[e['id']] = {'id': e['id'], 'utc': e['date'], 'estadio': (comp.get('venue') or {}).get('fullName', ''),
                                 'local_espn': h['team']['displayName'], 'visita_espn': a['team']['displayName'],
                                 'estado': comp['status']['type'].get('name'), 'tipo': ((e.get('season') or {}).get('slug') or ''),
+                                'neutral': bool(comp.get('neutralSite')),
                                 'momios': _momios(comp)}
     # conservar alineaciones ya guardadas
     p = ruta_proximos(liga)

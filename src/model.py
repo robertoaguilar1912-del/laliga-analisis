@@ -27,11 +27,35 @@ PROMOTED_DEF = 0.15      # previo para recién ascendidos (defensa más floja)
 ALPHA = 0.6              # peso de los goles frente a los tiros a puerta (elegido con 2018-20)
 
 
+# Corrección del 1X2 para las ligas de Europa (las que tienen tiros a puerta de football-data). Comparado con lo que pasó,
+# el modelo aprieta de más la diferencia entre local y visita (los favoritos ganan más de lo que dice) y le da al empate
+# casi lo mismo en todos los partidos (de más cuando uno es mucho mejor, de menos cuando son parejos).
+# (temperatura, empate, empate·|diferencia|), elegida con 2020-23 en 7 ligas (7,766 partidos) y probada en 2023-26
+# (6,284): log loss 0.9897 -> 0.9866 y PICK contra la apertura de Bet365 de -20.4% a -14.6%. En América y en las copas
+# europeas no mejoraba nada, así que ahí no se usa.
+RECAL_1X2 = (1.17, 0.12, -0.15)
+
+
+def recalibrar(M, th=RECAL_1X2):
+    """Matriz de marcadores con el 1X2 corregido: cada zona (gana local, empate, gana visita) se multiplica por un factor,
+    así los mercados que salen de la matriz (doble oportunidad, hándicap, goles...) siguen cuadrando entre sí."""
+    i, j = np.indices(M.shape)
+    pH, pD, pA = M[i > j].sum(), M[i == j].sum(), M[i < j].sum()
+    t, b, c = th
+    lr = np.log(pH / pA)
+    z = np.array([t * lr / 2, np.log(pD) - 0.5 * np.log(pH * pA) + b + c * abs(lr), -t * lr / 2])
+    q = np.exp(z - z.max()); q /= q.sum()
+    out = M.copy()
+    out[i > j] *= q[0] / pH; out[i == j] *= q[1] / pD; out[i < j] *= q[2] / pA
+    return out
+
+
 class DixonColes:
-    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA):
+    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None):
         self.half_life = half_life
         self.prior_sd = prior_sd
         self.alpha = alpha  # 1.0 = solo goles; <1 mezcla goles con tiros a puerta
+        self.recal = recal  # corrección del 1X2 (RECAL_1X2 en las ligas de Europa) o None
 
     # ------------------------------------------------------------------ ajuste
     def fit(self, matches, ref_date, promoted=()):
@@ -115,7 +139,8 @@ class DixonColes:
 
     def score_matrix(self, home, away):
         lam, mu = self.rates(home, away)
-        return score_matrix(lam, mu, self.rho)
+        M = score_matrix(lam, mu, self.rho)
+        return recalibrar(M, self.recal) if self.recal else M
 
 
 def score_matrix(lam, mu, rho, max_goals=MAX_GOALS):

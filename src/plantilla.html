@@ -83,6 +83,8 @@ button { font: inherit; color: inherit; }
 .intro { display: grid; gap: 6px; }
 .intro p { color: var(--ink-2); max-width: 72ch; font-size: 14.5px; }
 .warning { background: color-mix(in srgb, var(--warn) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--warn) 60%, var(--surface)); border-radius: 12px; padding: 10px 14px; font-size: 13.5px; color: var(--ink); }
+.warning.aviso { background: color-mix(in srgb, var(--crit) 10%, var(--surface)); border-color: color-mix(in srgb, var(--crit) 45%, var(--surface)); margin-bottom: 10px; }
+.warning.aviso b { display: block; margin-bottom: 2px; }
 .mlist { display: grid; gap: 10px; }
 .mcard { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) auto; gap: 10px 20px; align-items: center; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; }
 .mcard:hover { border-color: var(--accent); }
@@ -127,7 +129,7 @@ button { font: inherit; color: inherit; }
 .subtabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .pane { display: grid; gap: 16px; }
 .pane[hidden] { display: none; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; gap: 12px; min-width: 0; align-content: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-width: 0; align-content: start; }
 .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 @media (max-width: 760px) { .grid2 { grid-template-columns: minmax(0, 1fr); } }
 
@@ -235,10 +237,30 @@ table.data.min900 { min-width: 900px; }
 .xrow .p, .xrow .j { font-family: var(--font-data); font-variant-numeric: tabular-nums; font-size: 12.5px; text-align: right; }
 .xrow .j { color: var(--ink-3); min-width: 54px; }
 .xgrp { font-family: var(--font-data); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); padding-top: 10px; }
+details.xdet { border-bottom: 1px solid var(--line); }
+details.xdet > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 10px 0 8px; font-family: var(--font-data); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+details.xdet > summary::-webkit-details-marker { display: none; }
+details.xdet > summary::after { content: '+'; font-size: 15px; color: var(--ink-3); }
+details.xdet[open] > summary::after { content: '−'; }
+details.xdet .xrow:last-child { border-bottom: 0; }
+.xrow.xpick { cursor: pointer; }
+.xrow.xpick:hover { background: var(--surface-2); }
+.xrow small { font-family: var(--font-data); font-size: 10.5px; color: var(--ink-3); margin-left: 4px; }
+.calc #calc-linea { flex: 0 1 110px; }
+.calc #calc-odds { flex: 1 1 130px; }
+.ltab { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 4px 8px; align-items: stretch; padding: 4px 0 12px; }
+.ltab .lh { font-family: var(--font-data); font-size: 10.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; padding: 2px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ltab .ll { font-family: var(--font-data); font-size: 13px; font-weight: 700; align-self: center; min-width: 44px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ltab .ll small { font-weight: 400; color: var(--ink-3); font-size: 11px; }
+.lcell { font: inherit; font-family: var(--font-data); font-size: 12px; color: var(--ink-3); text-align: left; background: var(--surface-2); border: 1px solid transparent; border-radius: 8px; padding: 6px 8px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.lcell b { color: var(--ink); font-size: 13.5px; margin-right: 4px; }
+.lcell small { display: block; font-size: 10px; }
+.lcell:hover { border-color: var(--accent); }
+.lsub { font-weight: 700; font-size: 13.5px; padding: 6px 0 2px; }
 .calc { display: grid; gap: 8px; background: var(--surface-2); border-radius: 12px; padding: 12px 14px; }
 .calc-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .calc select, .calc input, .sel { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; min-width: 0; }
-.calc select { flex: 1 1 220px; }
+.calc select { flex: 1 1 220px; width: 100%; max-width: 100%; }
 .calc input { flex: 0 1 120px; font-family: var(--font-data); }
 .calc-out { font-size: 13.5px; color: var(--ink-2); min-height: 22px; line-height: 1.7; }
 .calc-out .pill { margin-right: 6px; }
@@ -283,6 +305,11 @@ table.data.min900 { min-width: 900px; }
 .kv b.up { color: var(--good); }
 .kv b.down { color: var(--crit); }
 .backup { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pa-ligas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.pa-ligas label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; cursor: pointer; background: var(--surface); }
+.pa-ligas label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.pa-ligas input { margin: 0; accent-color: var(--accent); }
+.tag-pa { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--accent-soft); color: var(--ink); vertical-align: 1px; }
 
 /* El modelo */
 .verdict { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
@@ -334,6 +361,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h2>Próximos partidos</h2>
         <p>Toca un partido para ver su ficha completa: probabilidades, estadísticas de los dos equipos, bajas, cansancio, historial y todos los mercados con su momio justo. Horas de Honduras.</p>
       </div>
+      <p class="warning aviso" id="p-aviso" hidden></p>
       <p class="warning" id="p-warning"></p>
       <div class="mlist" id="mlist"></div>
     </div>
@@ -376,8 +404,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="chart" id="chart-curve"></div>
     </div>
     <div class="card" id="exp-card">
-      <h3>Forma, bajas, cansancio y otros mercados</h3>
-      <p class="note">Cada idea se probó igual: solo con partidos anteriores. Las bajas y el cansancio se comparan contra el momio de cierre, porque las alineaciones salen una hora antes del partido. Precisión: pérdida logarítmica (menos es mejor).</p>
+      <h3>Ideas que se probaron</h3>
+      <p class="note">Cada idea se probó igual: solo con partidos anteriores. Las bajas y el cansancio se comparan contra el momio de cierre, porque las alineaciones salen una hora antes del partido. Precisión: pérdida logarítmica (menos es mejor); "Referencia" es la del momio de la casa.</p>
       <div class="tbl-wrap"><table class="data" id="tbl-exp" style="min-width:980px"></table></div>
     </div>
     <div class="two">
@@ -392,6 +420,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="chart" id="chart-cal"></div>
       </div>
     </div>
+    <div class="card" id="ligas-card" hidden>
+      <h3>Qué tan fuerte es cada liga, según el modelo</h3>
+      <p class="note" id="ligas-note"></p>
+      <div class="tbl-wrap"><table class="data" id="tbl-ligas"></table></div>
+    </div>
     <div class="card" id="why-card">
       <h3 id="why-title">Por qué pierde</h3>
       <div class="two" id="why"></div>
@@ -405,6 +438,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <h2>Mi registro</h2>
       <p>Para guardar una apuesta abre el partido, ve a la pestaña Mercados, elige el mercado y escribe el momio de tu casa y cuánto apostaste. Cuando termina el partido la página revisa el resultado y la marca como ganada, perdida o nula.</p>
     </div>
+    <div class="card" id="pa-card"></div>
     <div class="subtabs" role="tablist" id="reg-tabs">
       <button role="tab" data-r="mias" aria-selected="true">Mis apuestas</button>
       <button role="tab" data-r="modelo" aria-selected="false">Picks del modelo</button>
@@ -426,21 +460,25 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
+  // Pago anticipado: en estas ligas la casa de Roberto paga como ganada la apuesta a ganador si su equipo se pone 2 goles arriba
+  const PA_DEF = ['ligamx', 'mls', 'brasil', 'laliga', 'ligue1', 'premier', 'seriea'];
+  let PA = new Set((() => { try { const v = JSON.parse(leer('laboratorio-pago-anticipado')); return Array.isArray(v) ? v : PA_DEF; } catch (e) { return PA_DEF; } })());
   let liga = new URLSearchParams(location.search).get('liga');
   if (!LIGAS[liga]) liga = leer('laboratorio-liga');
-  if (liga === 'nfl') {             // la NFL tiene su propia página; aquí solo se ve su registro
-    if (location.hash !== '#registro') { location.replace('nfl.html'); return; }
+  const PAGINAS = { nfl: 'nfl.html', nba: 'nba.html' };   // deportes con página propia
+  if (PAGINAS[liga]) {               // aquí solo se ve su registro
+    if (location.hash !== '#registro') { location.replace(PAGINAS[liga]); return; }
     liga = leer('laboratorio-futbol');
   }
-  if (!LIGAS[liga] || liga === 'nfl') liga = 'laliga';
+  if (!LIGAS[liga] || PAGINAS[liga]) liga = 'laliga';
   guardar('laboratorio-liga', liga); guardar('laboratorio-futbol', liga);
   const corto = n => n.replace(' League', '');
   const chips = document.getElementById('ligas');
-  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${id === 'nfl' ? 'nfl.html' : '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${PAGINAS[id] || '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
   chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
     ev.preventDefault();
     const h = location.hash.slice(1);
-    if (a.dataset.liga === 'nfl') { location.href = 'nfl.html' + (['equipos', 'modelo'].includes(h) ? '#' + h : ''); return; }
+    if (PAGINAS[a.dataset.liga]) { location.href = PAGINAS[a.dataset.liga] + (['equipos', 'modelo'].includes(h) ? '#' + h : ''); return; }
     location.href = `?liga=${a.dataset.liga}` + (VISTAS.includes(h) && h !== 'partidos' ? '#' + h : '');
   }));
   const actual = chips.querySelector('[aria-current]');
@@ -474,7 +512,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const formHTML = f => `<span class="form" aria-label="Últimos 5: ${f}">${[...f].map(c => `<i class="${c}" title="${c === 'G' ? 'Ganó' : c === 'E' ? 'Empató' : 'Perdió'}">${c}</i>`).join('')}</span>`;
   const amToDec = a => a > 0 ? 1 + a / 100 : 1 + 100 / Math.abs(a);
   const parseOdds = s => { s = String(s).trim().replace(',', '.').replace('−', '-'); if (!s) return null; const v = parseFloat(s); if (!isFinite(v)) return null; if (/^[+-]/.test(s) || Math.abs(v) >= 100) return Math.abs(v) >= 100 ? amToDec(v) : null; if (v > 1 && v < 100) return v; return null; };
-  const verdictOf = ev => ev >= 0.05 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+  const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   const posLabel = p => ({ G: 'POR', D: 'DEF', M: 'MED', F: 'DEL' })[(p || '?')[0] === 'C' && p.startsWith('CD') ? 'D' : (p || '?')[0]] || p;
   function grp(p) { p = (p || '').toUpperCase(); if (p.startsWith('G')) return 'POR'; if (/^(CD|CB|LB|RB|D|LWB|RWB|SW)/.test(p)) return 'DEF'; if (/^(DM|CM|LM|RM|M)/.test(p)) return 'MED'; return 'DEL'; }
 
@@ -486,8 +524,42 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   const upd = new Date(D.actualizado);
   $('#status').textContent = `Actualizado ${upd.toLocaleDateString('es-HN', { timeZone: tz, day: 'numeric', month: 'short' })}, ${upd.toLocaleTimeString('es-HN', { timeZone: tz, hour: 'numeric', minute: '2-digit' })} · resultados hasta el ${fdate(D.datos_hasta)}`;
-  $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días · ${num(D.n_sims)} simulaciones cada uno`;
+  $('#j-eyebrow').textContent = `${I.nombre} · ${M.length} partidos en los próximos días`;
   const PRINCIPAL = B ? B.estrategias[B.principal || 'modelo|B365|1x2+ou|0.05'] : null;
+  if (I.aviso) { const av = $('#p-aviso'); av.innerHTML = `<b>Aviso para ${esc(I.nombre)}</b>${esc(I.aviso)}`; av.hidden = false; }
+  const CUIDADO = I.cuidado || {};
+  // probabilidad de cobrar "Gana local / visita" con el pago anticipado (si la liga está marcada en el registro)
+  // Lo que dice el mercado (DraftKings sin su margen). En el 1X2 se corrige el sesgo del favorito: la casa cobra de más en los
+  // que pagan mucho (en 2020-23, elevar a 1.07 y volver a repartir acercaba esas probabilidades a lo que pasó).
+  const POT_MERCADO = 1.07;
+  function mercadoDe(m, k) {
+    if (m.mercado) {
+      const q = m.mercado.map(p => Math.pow(p, POT_MERCADO)), s = q[0] + q[1] + q[2], [h, d, a] = q.map(x => x / s);
+      const t = { '1': [h, d + a], 'X': [d, h + a], '2': [a, h + d], '1X': [h + d, a], 'X2': [a + d, h], '12': [h + a, d], 'DNB1': [h, a], 'DNB2': [a, h], 'H1:-0.5': [h, d + a], 'H2:-0.5': [a, h + d], 'H1:+0.5': [h + d, a], 'H2:+0.5': [a + d, h] }[k];
+      if (t) return { W: t[0], Lo: t[1] };
+      // hándicap asiático de −0.25, 0 y +0.25: solo depende de gana/empate/pierde, así que sale del 1X2 del mercado
+      const mh = k.match(/^H([12]):([+-]?[\d.]+)$/);
+      if (mh) {
+        const L = parseFloat(mh[2]), [w, l] = mh[1] === '1' ? [h, a] : [a, h];
+        if (Math.abs(L + 0.25) < 1e-9) return { W: w, Lo: l + d / 2 };
+        if (Math.abs(L) < 1e-9) return { W: w, Lo: l };
+        if (Math.abs(L - 0.25) < 1e-9) return { W: w + d / 2, Lo: l };
+      }
+    }
+    const r = m.con_momio.find(x => x.k === k && x.p_mercado != null && /^[OU]:/.test(k));
+    return r ? { W: r.p_mercado, Lo: 1 - r.p_mercado } : null;
+  }
+  // Qué tan en contra está el mercado de un PICK. En la prueba (7 ligas de Europa 2020-26, PICK 1X2 al momio de Bet365) el
+  // EV que le da el mercado sí separaba: casi justo (0 a −3%) quedaron parejos, −3% a −8% perdieron 5-9%, peor que −8%
+  // perdieron 15-20%. En más/menos de goles no separaba nada (todos alrededor de −5%).
+  function juicioMercado(evM, k) {
+    const t = `EV según el mercado ${spct(evM, 1)}`;
+    if (/^[OU]:/.test(k)) return `El mercado lo ve un poco caro (${t}). En más/menos de goles esto no separó los PICK buenos de los malos en la prueba: es un PICK normal (en promedio perdieron cerca de 5%).`;
+    if (evM > -0.03) return `El mercado lo ve casi justo (${t}): un PICK normal. En la prueba, los PICK así quedaron parejos.`;
+    if (evM > -0.08) return `El mercado lo ve caro (${t}). En la prueba, los PICK así perdieron entre 5% y 9%.`;
+    return `<b>El mercado está muy en contra (${t}).</b> En la prueba, los PICK así perdieron entre 15% y 20%: mejor no.`;
+  }
+  const paDe = (m, k) => (m.pa && PA.has(I.liga) && (k === '1' || k === '2')) ? m.pa[k === '1' ? 0 : 1] : null;
   $('#p-warning').textContent = 'Los PICK son lo que ve el modelo, no una recomendación. ' + (!PRINCIPAL
     ? `Para ${I.nombre} todavía no hay prueba con temporadas pasadas. Compara siempre con el momio de tu casa.`
     : PRINCIPAL.roi < 0
@@ -506,7 +578,10 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'partidos') showList(); history.replaceState(null, '', '#' + b.dataset.view); }));
 
   // ---------------- lista de partidos
-  $('#mlist').innerHTML = M.map((m, i) => {
+  // los que ya empezaron (siguen en la lista hasta que ESPN los da por terminados) van al final, marcados
+  const yaEmpezo = m => new Date(m.utc) <= new Date();
+  const tarjetas = M.map((m, i) => {
+    const emp = yaEmpezo(m);
     const th = E[m.local_fd], ta = E[m.visita_fd];
     const best = m.con_momio.filter(r => r.veredicto === 'PICK').sort((a, b) => b.ev - a.ev)[0];
     const alerts = [...th.sancionados.map(s => `${m.local_es}: ${s.nombre} sancionado`), ...ta.sancionados.map(s => `${m.visita_es}: ${s.nombre} sancionado`),
@@ -515,12 +590,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const nMias = mias.filter(b => b.id === m.id).length;
     const extra = [nextExtra(th, m.local_es), nextExtra(ta, m.visita_es), m.alineaciones && m.alineaciones.local ? 'Alineaciones confirmadas' : null,
                    nMias ? `Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}` : null].filter(Boolean);
+    (m.descendidos || []).forEach(t => alerts.push(`${t} bajó de La Liga: confía más en la casa`));
+    if (m.con_momio.some(r => r.veredicto === 'PICK' && CUIDADO[r.k])) alerts.push('PICK de empate: cuidado en esta liga');
     const bar = (p, c) => `<span style="width:${(p * 100).toFixed(1)}%;background:${c}"></span>`;
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
-      <span class="mmeta">${fdt(m.utc)} · ${esc(m.estadio)}</span>
+      <span class="mmeta">${emp ? '<b>Ya empezó</b> · ' : ''}${fdt(m.utc)} · ${esc(m.estadio)}</span>
       <span class="mteams">
-        <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(m.local_es)}</span><span class="ps">${th.posicion}º</span>${formHTML(m.forma_local)}</span>
-        <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(m.visita_es)}</span><span class="ps">${ta.posicion}º</span>${formHTML(m.forma_visita)}</span>
+        <span class="mteam"><span class="dot" style="background:var(--home)"></span><span class="nm">${esc(m.local_es)}</span><span class="ps">${th.total && th.total.pj ? th.posicion + 'º' : ''}</span>${formHTML(m.forma_local)}</span>
+        <span class="mteam"><span class="dot" style="background:var(--away)"></span><span class="nm">${esc(m.visita_es)}</span><span class="ps">${ta.total && ta.total.pj ? ta.posicion + 'º' : ''}</span>${formHTML(m.forma_visita)}</span>
       </span>
       <span class="prob3">
         <span class="row"><span class="who">Modelo</span><span class="bar">${bar(m.pH, 'var(--home)')}${bar(m.pD, 'var(--draw)')}${bar(m.pA, 'var(--away)')}</span></span>
@@ -532,12 +609,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <span class="tags">
         <span class="tag">Goles esp. ${m.xg_local.toFixed(1)}–${m.xg_visita.toFixed(1)}</span>
         ${m.corners ? `<span class="tag">Córners esp. ${(m.corners[0] + m.corners[1]).toFixed(1)}</span>` : ''}
-        ${best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (m.mercado ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>')}
+        ${emp ? '<span class="tag alert">Ya empezó: los momios y los PICK son de antes del partido</span>' : best ? `<span class="tag">Más valor: ${esc(best.mercado)} ${best.momio}</span>` : (m.mercado ? '<span class="tag">Sin PICK</span>' : '<span class="tag">Sin momios todavía</span>')}
         ${alerts.map(a => `<span class="tag alert">${esc(a)}</span>`).join('')}
         ${extra.map(a => `<span class="tag">${esc(a)}</span>`).join('')}
       </span>
     </button>`;
-  }).join('');
+  });
+  $('#mlist').innerHTML = [...M.keys()].sort((a, b) => yaEmpezo(M[a]) - yaEmpezo(M[b]) || a - b).map(i => tarjetas[i]).join('');
   if (!M.length) $('#mlist').innerHTML = `<p class="empty">No hay partidos de ${esc(I.nombre)} en los próximos días (puede ser una pausa por selecciones o el fin de la temporada). La página se actualiza sola cuando aparezcan.</p>`;
   $$('.mcard').forEach(b => b.addEventListener('click', () => { showMatch(+b.dataset.i); history.replaceState(null, '', '#p' + (+b.dataset.i + 1)); }));
   function showList() { $('#match-detail').hidden = true; $('#match-list-wrap').hidden = false; }
@@ -615,10 +693,59 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (x) parts.push(`próximo partido de ${esc(x.comp)} el ${fdate(x.fecha)}, ${daysBetween(dateIso, x.fecha)} días después${daysBetween(dateIso, x.fecha) <= 4 ? ': posible rotación' : ''}`);
     return `<p>${parts.join('; ')}.</p>`;
   }
+  // ---------------- cualquier línea: distribuciones del modelo (goles, córners y remates a puerta)
+  const nbPmf = (m, k, n = 45) => { const out = [], q = m / (k + m); let p = Math.pow(k / (k + m), k); for (let x = 0; x <= n; x++) { out.push([x, p]); p *= (x + k) / (x + 1) * q; } return out; };
+  const mitades = L => Math.round(Math.abs(L) * 4) % 2 === 1 ? [L - 0.25, L + 0.25] : [L, L];
+  // apuesta "signo·x + h > 0" (las líneas de cuarto son media apuesta en cada línea vecina): probabilidad de ganar y de perder
+  function ganaPierde(P, L, signo) {
+    let W = 0, Lo = 0;
+    for (const h of mitades(L)) for (const [x, p] of P) { const v = signo * x + h; if (v > 1e-9) W += p / 2; else if (v < -1e-9) Lo += p / 2; }
+    return { W, Lo };
+  }
+  function paresDe(m) {
+    if (m._pares) return m._pares;
+    const d = m.dist || {}, out = {};
+    if (d.goles) {
+      const dif = {}, tot = {};
+      d.goles.forEach((fila, i) => fila.forEach((p, j) => { dif[i - j] = (dif[i - j] || 0) + p; tot[i + j] = (tot[i + j] || 0) + p; }));
+      out.dif = Object.entries(dif).map(([x, p]) => [+x, p]); out.tot = Object.entries(tot).map(([x, p]) => [+x, p]);
+    }
+    for (const [nm, c] of [['c', d.corners], ['r', d.remates]]) if (c) { out[nm + 'T'] = nbPmf(c.ml + c.mv, c.kt); out[nm + '1'] = nbPmf(c.ml, c.k); out[nm + '2'] = nbPmf(c.mv, c.k); }
+    return (m._pares = out);
+  }
+  // mercados con línea: [clave, nombre, grupo, distribución, forma ('h' hándicap, 'o' más de, 'u' menos de), líneas que se listan]
+  const LIN_AH = [-2.5, -2, -1.5, -1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5];
+  const rango = (a, b) => { const r = []; for (let x = a; x <= b + 1e-9; x++) r.push(x); return r; };
+  const tiposDe = m => [
+    ['H1', `Hándicap asiático ${m.local_es}`, 'Hándicap asiático', 'dif', 'h', LIN_AH], ['H2', `Hándicap asiático ${m.visita_es}`, 'Hándicap asiático', 'dif', 'h2', LIN_AH],
+    ['O', 'Goles: más de', 'Goles', 'tot', 'o', []], ['U', 'Goles: menos de', 'Goles', 'tot', 'u', []],
+    ['CO', 'Córners del partido: más de', 'Córners del partido', 'cT', 'o', rango(6.5, 13.5)], ['CU', 'Córners del partido: menos de', 'Córners del partido', 'cT', 'u', rango(6.5, 13.5)],
+    ['C1O', `Córners de ${m.local_es}: más de`, 'Córners por equipo', 'c1', 'o', rango(1.5, 8.5)], ['C1U', `Córners de ${m.local_es}: menos de`, 'Córners por equipo', 'c1', 'u', rango(1.5, 8.5)],
+    ['C2O', `Córners de ${m.visita_es}: más de`, 'Córners por equipo', 'c2', 'o', rango(1.5, 8.5)], ['C2U', `Córners de ${m.visita_es}: menos de`, 'Córners por equipo', 'c2', 'u', rango(1.5, 8.5)],
+    ['RO', 'Remates a puerta del partido: más de', 'Remates a puerta del partido', 'rT', 'o', rango(4.5, 12.5)], ['RU', 'Remates a puerta del partido: menos de', 'Remates a puerta del partido', 'rT', 'u', rango(4.5, 12.5)],
+    ['R1O', `Remates a puerta de ${m.local_es}: más de`, 'Remates a puerta por equipo', 'r1', 'o', rango(0.5, 7.5)], ['R1U', `Remates a puerta de ${m.local_es}: menos de`, 'Remates a puerta por equipo', 'r1', 'u', rango(0.5, 7.5)],
+    ['R2O', `Remates a puerta de ${m.visita_es}: más de`, 'Remates a puerta por equipo', 'r2', 'o', rango(0.5, 7.5)], ['R2U', `Remates a puerta de ${m.visita_es}: menos de`, 'Remates a puerta por equipo', 'r2', 'u', rango(0.5, 7.5)],
+  ].filter(t => paresDe(m)[t[3]]);
+  function probLinea(m, tipo, L) {
+    const t = tiposDe(m).find(x => x[0] === tipo); if (!t) return null;
+    const P = paresDe(m)[t[3]];
+    const { W, Lo } = t[4] === 'h' ? ganaPierde(P, L, 1) : t[4] === 'h2' ? ganaPierde(P, L, -1) : t[4] === 'o' ? ganaPierde(P, -L, 1) : ganaPierde(P, L, -1);
+    return { W, Lo, push: Math.max(0, 1 - W - Lo), p: W / Math.max(W + Lo, 1e-12) };
+  }
+  const fmtLinea = (tipo, L) => tipo[0] === 'H' ? (L > 0 ? '+' : '') + L : String(L);
+  const nombreLinea = (m, tipo, L) => tipo[0] === 'H' ? `Hándicap ${tipo === 'H1' ? m.local_es : m.visita_es} ${fmtLinea(tipo, L)}` : `${tiposDe(m).find(x => x[0] === tipo)[1]} ${L}`;
+  const ES_LINEA = /^(H1|H2|O|U|CO|CU|C1O|C1U|C2O|C2U|RO|RU|R1O|R1U|R2O|R2U):/;
+  function lineaPorDefecto(m, tipo) {
+    const t = tiposDe(m).find(x => x[0] === tipo), P = paresDe(m)[t[3]], media = P.reduce((a, [x, p]) => a + x * p, 0);
+    if (t[4] === 'h') return media >= 0 ? -0.5 : 0.5;
+    if (t[4] === 'h2') return media >= 0 ? 0.5 : -0.5;
+    return Math.floor(media) + 0.5;
+  }
+
   function marginSVG(m) {
     const W = 360, H = 136, pad = { l: 6, r: 6, t: 34, b: 22 };
     const data = m.margen; const maxP = Math.max(...data.map(d => d.p)); const bw = (W - pad.l - pad.r) / data.length;
-    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diferencia de goles en las simulaciones">`;
+    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Diferencia de goles">`;
     data.forEach((d, k) => {
       const bh = (H - pad.t - pad.b) * d.p / maxP, x = pad.l + k * bw + 2, y = H - pad.b - bh;
       const color = d.m > 0 ? 'var(--home)' : d.m < 0 ? 'var(--away)' : 'var(--draw)';
@@ -637,14 +764,48 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const el = $('#match-detail'); el.hidden = false;
     const cell = (v, color) => `<div class="cellbar"><span class="v">${pct(v)}</span><span class="track"><span class="fill" style="width:${(v * 100).toFixed(1)}%;background:${color}"></span></span></div>`;
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
-    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
-        <span class="mline">modelo ${pct(r.p, 1)}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
+        <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
+    const conLinea = tiposDe(m);
+    // todos los mercados: los fijos que manda el modelo y, con sus distribuciones, tablas de líneas
+    // (hándicap asiático, córners y remates a puerta): cada línea con sus dos lados
     const groups = {};
-    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push(r); });
-    const extra = Object.entries(groups).map(([g, rs]) => `<div class="xgrp">${esc(g)}</div>` + rs.map(r => `<div class="xrow"><span>${esc(r.mercado)}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.justo}</span></div>`).join('')).join('');
-    const opts = []; const seen = new Set();
-    [...m.con_momio, ...m.sin_momio].forEach(r => { if (!seen.has(r.mercado)) { seen.add(r.mercado); opts.push({ n: r.mercado, p: r.p, k: r.k }); } });
+    m.sin_momio.forEach(r => { (groups[r.grupo] = groups[r.grupo] || []).push({ n: r.mercado, p: r.p, push: r.k.startsWith('DNB') ? m.pD : 0, k: r.k, pa: paDe(m, r.k) }); });
+    const abiertos = ['Resultado', 'Goles'];
+    const det = (g, n, cuerpo) => `<details class="xdet"${abiertos.includes(g) ? ' open' : ''}><summary><span>${esc(g)}</span><span>${n}</span></summary>${cuerpo}</details>`;
+    const fijosHTML = Object.entries(groups).map(([g, rs]) => det(g, rs.length,
+      rs.map(r => `<div class="xrow xpick" data-k="${esc(r.k)}" title="Comparar con mi casa"><span>${esc(r.n)}${r.push > 0.005 ? `<small>nula ${pct(r.push, 0)}</small>` : ''}${r.pa != null ? `<small>con pago anticipado ${pct(r.pa, 1)} · justo ${(1 / r.pa).toFixed(2)}</small>` : ''}</span><span class="p">${pct(r.p, 1)}</span><span class="j">${r.p > 0 && r.p < 1 ? (1 / r.p).toFixed(2) : '—'}</span></div>`).join(''))).join('');
+    const celda = (tipo, L) => { const c = probLinea(m, tipo, L); return c ? `<button class="lcell xpick" data-k="${tipo}:${fmtLinea(tipo, L)}" title="Comparar con mi casa"><b>${pct(c.p, 0)}</b> ${c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—'}${c.push > 0.005 ? `<small>nula ${pct(c.push, 0)}</small>` : ''}</button>` : '<span></span>'; };
+    const vale = (tipo, L) => { const c = probLinea(m, tipo, L); return c && c.p > 0.04 && c.p < 0.96 && c.W + c.Lo > 0.02; };
+    // [grupo, subtítulo, tipo izquierda, tipo derecha, encabezados, líneas, línea de la derecha]
+    const tablas = [
+      ['Hándicap asiático', '', 'H1', 'H2', [m.local_es, m.visita_es], LIN_AH, L => -L],
+      ['Córners del partido', '', 'CO', 'CU', ['Más de', 'Menos de'], rango(6.5, 13.5), L => L],
+      ['Córners por equipo', m.local_es, 'C1O', 'C1U', ['Más de', 'Menos de'], rango(1.5, 8.5), L => L],
+      ['Córners por equipo', m.visita_es, 'C2O', 'C2U', ['Más de', 'Menos de'], rango(1.5, 8.5), L => L],
+      ['Remates a puerta del partido', '', 'RO', 'RU', ['Más de', 'Menos de'], rango(4.5, 12.5), L => L],
+      ['Remates a puerta por equipo', m.local_es, 'R1O', 'R1U', ['Más de', 'Menos de'], rango(0.5, 7.5), L => L],
+      ['Remates a puerta por equipo', m.visita_es, 'R2O', 'R2U', ['Más de', 'Menos de'], rango(0.5, 7.5), L => L],
+    ].filter(t => conLinea.some(x => x[0] === t[2]));
+    const porGrupo = {};
+    tablas.forEach(([g, sub, ti, td, enc, lineas, otra]) => {
+      const ls = lineas.filter(L => vale(ti, L) || vale(td, otra(L)));
+      if (!ls.length) return;
+      const ah = ti === 'H1';
+      (porGrupo[g] = porGrupo[g] || []).push(`${sub ? `<div class="lsub">${esc(sub)}</div>` : ''}<div class="ltab"><span class="lh">Línea</span><span class="lh">${esc(enc[0])}</span><span class="lh">${esc(enc[1])}</span>` +
+        ls.map(L => `<span class="ll">${ah ? fmtLinea('H1', L) + '<small> / ' + fmtLinea('H2', -L) + '</small>' : L}</span>${celda(ti, L)}${celda(td, otra(L))}`).join('') + '</div>');
+    });
+    const lineasHTML = Object.entries(porGrupo).map(([g, partes]) => det(g, '', partes.join(''))).join('');
+    const extra = fijosHTML + lineasHTML;
+    // calculadora: mercados sin línea (de la lista del modelo) y mercados con línea (cualquier línea)
+    const fijos = []; const seen = new Set();
+    [...m.con_momio, ...m.sin_momio].forEach(r => {
+      if (seen.has(r.k) || ES_LINEA.test(r.k)) return; seen.add(r.k);
+      const W = r.k === 'DNB1' ? m.pH : r.k === 'DNB2' ? m.pA : r.p, Lo = r.k === 'DNB1' ? m.pA : r.k === 'DNB2' ? m.pH : 1 - r.p;
+      fijos.push({ n: r.mercado, k: r.k, W, Lo, grupo: r.grupo });
+    });
+
     const xiConf = t => t === th ? (m.alineaciones || {}).local : t === ta ? (m.alineaciones || {}).visita : null;
     const h2h = m.h2h;
     const w = { l: 0, e: 0, v: 0 };
@@ -654,9 +815,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="dhead">
         <span class="eyebrow">${fdt(m.utc)} · ${esc(m.estadio)}</span>
         <div class="vs">
-          <div class="side"><span class="tn" style="color:var(--home)">${esc(m.local_es)}</span><span class="sub">${th.posicion}º · ${th.total.pts} pts</span>${formHTML(m.forma_local)}</div>
+          <div class="side"><span class="tn" style="color:var(--home)">${esc(m.local_es)}</span><span class="sub">${th.total.pj ? th.posicion + 'º · ' + th.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_local)}</div>
           <div class="mid"><b>${m.xg_local.toFixed(2)} – ${m.xg_visita.toFixed(2)}</b><span>goles esperados</span></div>
-          <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.posicion}º · ${ta.total.pts} pts</span>${formHTML(m.forma_visita)}</div>
+          <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.total.pj ? ta.posicion + 'º · ' + ta.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_visita)}</div>
         </div>
         <div class="subtabs" role="tablist">
           ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'Historial', 'Mercados'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
@@ -664,6 +825,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
 
       <div class="pane" data-pane="0">
+        ${(m.descendidos || []).length ? `<p class="warning aviso">${m.descendidos.map(esc).join(' y ')} ${m.descendidos.length > 1 ? 'bajaron' : 'bajó'} de La Liga esta temporada. Al inicio el modelo ${m.descendidos.length > 1 ? 'los' : 'lo'} ve más débil${m.descendidos.length > 1 ? 'es' : ''} que la casa: en este partido confía más en la casa que en el modelo.</p>` : ''}
+        ${m.con_momio.some(r => CUIDADO[r.k] && r.veredicto === 'PICK') ? `<p class="warning aviso">${esc(Object.values(CUIDADO)[0])}. Tómalo con mucho cuidado.</p>` : ''}
         <div class="grid2">
           <div class="card">
             <h3>Probabilidades</h3>
@@ -675,6 +838,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <div class="kv">
               <div><span>Goles esperados</span><b>${(m.xg_local + m.xg_visita).toFixed(1)}</b></div>
               <div><span>Córners esperados</span><b>${m.corners ? (m.corners[0] + m.corners[1]).toFixed(1) : '—'}</b></div>
+              <div><span>Remates a puerta esperados</span><b>${m.remates ? (m.remates[0] + m.remates[1]).toFixed(1) : '—'}</b></div>
               <div><span>Ambos anotan</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Ambos anotan: Sí') || {}).p)}</b></div>
               <div><span>Más de 2.5</span><b>${pct((m.sin_momio.find(r => r.mercado === 'Más de 2.5 goles') || {}).p)}</b></div>
             </div>
@@ -684,7 +848,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <h3>Mercados con momio</h3>
             <div class="markets">${priced || '<p class="empty">La casa todavía no publica momios para este partido. Mientras tanto usa los momios justos de la pestaña Mercados.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu mercado no está aquí o quieres guardar tu apuesta? Compáralo con tu casa →</button>
-            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
+            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más y el modelo le da al menos 30%. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
           </div>
         </div>
         <div class="grid2">
@@ -742,15 +906,23 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="card"><h3>Todos los mercados</h3>
             <div class="xrow" style="font-family:var(--font-data);font-size:10.5px;color:var(--ink-3)"><span>MERCADO</span><span class="p">MODELO</span><span class="j">JUSTO</span></div>
             <div class="xlist">${extra}</div>
+            <p class="note">Toca un mercado para compararlo con el momio de tu casa. "Nula" es la probabilidad de que te devuelvan la apuesta (o la mitad, en las líneas de .25 y .75); el porcentaje del modelo y el momio justo ya la descuentan.${m.dist && (m.dist.corners || m.dist.remates) ? ` Córners y remates a puerta: en la prueba con 2023-2026 de las cinco grandes ligas, sus porcentajes se cumplieron en promedio (por ejemplo, "más de 3.5 remates" de un equipo: el modelo dijo 60% y pasó 60%), pero no hay momios históricos de estos mercados para saber si dejan ganancia.${(m.dist.remates || m.dist.corners).n < 300 ? ` En esta liga el modelo de córners y remates tiene pocos partidos (${(m.dist.remates || m.dist.corners).n}): tómalo con más cuidado.` : ''}` : ''}</p>
           </div>
           <div class="card">
             <h3>Compara con el momio de tu casa</h3>
             <div class="calc">
               <div class="calc-row">
                 <label for="calc-sel" style="position:absolute;left:-9999px">Mercado</label>
-                <select id="calc-sel">${opts.map((o, k) => `<option value="${k}">${esc(o.n)}</option>`).join('')}</select>
+                <select id="calc-sel">
+                  <optgroup label="Sin línea">${fijos.map((o, k) => `<option value="f${k}">${esc(o.n)}</option>`).join('')}</optgroup>
+                  <optgroup label="Con línea (escribe la de tu casa)">${conLinea.map(t => `<option value="l${t[0]}">${esc(t[1])}</option>`).join('')}</optgroup>
+                </select>
+              </div>
+              <div class="calc-row">
+                <label for="calc-linea" style="position:absolute;left:-9999px">Línea</label>
+                <input id="calc-linea" placeholder="Línea" inputmode="decimal" autocomplete="off">
                 <label for="calc-odds" style="position:absolute;left:-9999px">Momio</label>
-                <input id="calc-odds" placeholder="Ej. 2.50" inputmode="decimal" autocomplete="off">
+                <input id="calc-odds" placeholder="Momio, ej. 1.90" inputmode="decimal" autocomplete="off">
               </div>
               <div class="calc-out" aria-live="polite"></div>
               <div class="calc-row">
@@ -775,25 +947,79 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const renderCmp = split => { $('#cmp', el).innerHTML = split === 'ha' ? cmpHTML(th.casa, ta.fuera, m.local_es + ' (casa)', m.visita_es + ' (fuera)') : cmpHTML(th.total, ta.total, m.local_es, m.visita_es); };
     $$('.toggle button', el).forEach(b => b.addEventListener('click', () => { $$('.toggle button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderCmp(b.dataset.split); }));
     renderCmp('total');
-    const sel = $('#calc-sel', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
+    const sel = $('#calc-sel', el), lin = $('#calc-linea', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
+    const leerL = () => { const v = parseFloat(String(lin.value).replace(',', '.').replace('−', '-')); return isFinite(v) ? v : null; };
+    // lo elegido: {n, k, W, Lo} o null si falta la línea
+    const elegido = () => {
+      const v = sel.value;
+      if (v[0] === 'f') return fijos[+v.slice(1)];
+      const tipo = v.slice(1), L = leerL();
+      if (L == null) return null;
+      const c = probLinea(m, tipo, L);
+      return c && { n: nombreLinea(m, tipo, L), k: `${tipo}:${fmtLinea(tipo, L)}`, W: c.W, Lo: c.Lo };
+    };
+    const ponerLinea = () => { const v = sel.value; lin.disabled = v[0] === 'f'; lin.value = v[0] === 'f' ? '' : lineaPorDefecto(m, v.slice(1)); };
     const calc = () => {
-      const o = opts[+sel.value]; const dec = parseOdds(inp.value);
-      if (!inp.value.trim()) { out.innerHTML = `Modelo: <span class="mono">${pct(o.p, 1)}</span> · momio justo <span class="mono">${o.p > 0 && o.p < 1 ? (1 / o.p).toFixed(2) : '—'}</span>. Escribe el momio de tu casa en decimal (por ejemplo 2.50).`; return; }
-      if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return; }
-      const ev = o.p * dec - 1, v = verdictOf(ev);
-      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(o.p, 1)}</span> · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / o.p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      const o = elegido();
+      if (!o) { out.textContent = 'Escribe la línea de tu casa (por ejemplo −1.5, 0.75 o 9.5).'; return null; }
+      const p = o.W / Math.max(o.W + o.Lo, 1e-12), push = Math.max(0, 1 - o.W - o.Lo), just = p > 0 && p < 1 ? (1 / p).toFixed(2) : '—';
+      const nula = push > 0.005 ? ` (nula ${pct(push, 0)})` : '';
+      const pa = paDe(m, o.k);
+      const dec = parseOdds(inp.value);
+      if (!inp.value.trim()) {
+        const mk0 = mercadoDe(m, o.k), pm0 = mk0 ? mk0.W / Math.max(mk0.W + mk0.Lo, 1e-12) : null;
+        // momio mínimo para que sea PICK: EV = W·(m − 1) − Lo ≥ 5%  →  m ≥ (1.05 − (1 − W − Lo)) / W   (la nula devuelve la apuesta)
+        const W0 = pa != null ? pa : o.W, L0 = pa != null ? 1 - pa : o.Lo, pp = W0 / Math.max(W0 + L0, 1e-12);
+        const minimo = pp >= 0.30 ? `<br><b>Para que sea PICK tu momio tiene que ser de ${((0.05 + W0 + L0) / W0).toFixed(2)} o más.</b>` : '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
+        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${minimo}`;
+        return null;
+      }
+      if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
+      const ev = o.W * (dec - 1) - o.Lo;
+      // y contra el mercado: si tu casa paga más que el precio justo del mercado, eso es valor aunque el modelo no lo vea
+      const mk = mercadoDe(m, o.k);
+      const dkr = m.con_momio.find(r => r.k === o.k), dkm = dkr ? parseFloat(dkr.momio) : null;
+      const peorQueDK = dkm && dec < dkm - 0.005 ? `<br><b>Ojo: ${esc(m.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Apostar a un momio peor que el del mercado es la forma más segura de perder valor; si puedes, búscalo en otra casa.` : '';
+      const linMk = () => {
+        if (!mk) return peorQueDK;
+        let W = mk.W, Lo = mk.Lo;
+        if (pa != null) { const extra = pa - p; W += extra; Lo -= extra; }     // el pago anticipado suma lo mismo que en el modelo
+        const pm = W / Math.max(W + Lo, 1e-12), evM = W * (dec - 1) - Lo, ambos = evM >= 0 && (pa != null ? pa * dec - 1 : ev) >= 0;
+        return `<br>Mercado (${esc(m.casa_momios || 'casa')} sin margen${pa != null ? ', con pago anticipado' : ''}): <span class="mono">${pct(pm, 1)}</span> · justo <span class="mono">${(1 / pm).toFixed(2)}</span> · EV <span class="mono">${spct(evM, 1)}</span>. `
+          + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? juicioMercado(evM, o.k) : '') + peorQueDK;
+      };
+      if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
+        const evPA = pa * dec - 1, v = verdictOf(evPA, pa);
+        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}`;
+        return { o, p: pa, push, dec, pa: true };
+      }
+      const v = verdictOf(ev, p);
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}`;
+      return { o, p, push, dec };
     };
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
-    const listo = () => { save.disabled = !parseOdds(inp.value); };
-    sel.addEventListener('change', () => { calc(); msg.textContent = ''; }); inp.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; }); calc(); listo();
+    const listo = () => { save.disabled = !(parseOdds(inp.value) && elegido()); };
+    sel.addEventListener('change', () => { ponerLinea(); calc(); listo(); msg.textContent = ''; });
+    lin.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; });
+    inp.addEventListener('input', () => { calc(); listo(); msg.textContent = ''; });
+    ponerLinea(); calc(); listo();
+    // tocar un mercado de la lista lo carga en la calculadora
+    $$('.xpick', el).forEach(row => row.addEventListener('click', () => {
+      const k = row.dataset.k, mt = k.match(ES_LINEA);
+      if (mt) { sel.value = 'l' + k.split(':')[0]; lin.disabled = false; lin.value = parseFloat(k.split(':')[1]); }
+      else { const i = fijos.findIndex(f => f.k === k); if (i < 0) return; sel.value = 'f' + i; lin.disabled = true; lin.value = ''; }
+      calc(); listo(); msg.textContent = '';
+      $('.calc', el).scrollIntoView({ block: 'nearest', behavior: 'smooth' }); inp.focus({ preventScroll: true });
+    }));
     save.addEventListener('click', () => {
-      const o = opts[+sel.value], dec = parseOdds(inp.value), amt = parseFloat(String(monto.value).replace(',', '.'));
-      if (!dec) return;
+      const r = calc(), amt = parseFloat(String(monto.value).replace(',', '.'));
+      if (!r) return;
       if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, liga: I.liga, utc: m.utc, local: m.local_es, visita: m.visita_es,
-                  mercado: o.n, k: o.k, p: o.p, momio: +dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+                  mercado: r.o.n, k: r.o.k, p: r.p, nula: r.push > 0.005 ? +r.push.toFixed(4) : undefined, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null,
+                  pa: r.pa || undefined });
       guardarMias();
-      msg.innerHTML = lsOK ? `Guardada: ${esc(o.n)} a ${dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
+      msg.innerHTML = lsOK ? `Guardada: ${esc(r.o.n)} a ${r.dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
                            : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       const g = $('#go-reg', msg); if (g) g.addEventListener('click', () => { showView('registro'); history.replaceState(null, '', '#registro'); window.scrollTo(0, 0); });
       inp.value = ''; monto.value = ''; calc(); listo();
@@ -835,16 +1061,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function showTeam(k) {
     selTeam = k; renderTeams();
     const t = E[k];
-    const split = s => s ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${fx(s.corners_pp, 1)}</td><td>${fx(s.corners_contra_pp, 1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
+    const split = s => s && s.pj ? `<td>${s.pj}</td><td>${s.g}-${s.e}-${s.p}</td><td>${s.gf}:${s.gc}</td><td>${s.xf_pp == null ? '—' : s.xf_pp.toFixed(2)}</td><td>${s.xc_pp == null ? '—' : s.xc_pp.toFixed(2)}</td><td>${fx(s.corners_pp, 1)}</td><td>${fx(s.corners_contra_pp, 1)}</td><td>${pct(s.over25)}</td><td>${pct(s.btts)}</td>` : '<td colspan="9">Sin partidos</td>';
     const nextMatch = M.find(m => m.local_fd === k || m.visita_fd === k);
     $('#team-profile').innerHTML = `
       <div class="dhead">
-        <span class="eyebrow">${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos</span>
+        <span class="eyebrow">${t.total.pj ? `${t.posicion}º en la tabla${t.grupo ? ' · ' + esc(t.grupo) : ''} · ${t.total.pts} puntos` : 'Todavía no juega en esta temporada'}</span>
         <h2>${esc(t.nombre)}</h2>
         <div class="kv">
-          <div><span>Goles por partido</span><b>${t.total.gf_pp.toFixed(2)}</b></div>
+          <div><span>Goles por partido</span><b>${fx(t.total.gf_pp, 2)}</b></div>
           <div><span>xG por partido</span><b>${t.total.xf_pp == null ? '—' : t.total.xf_pp.toFixed(2)}</b></div>
-          <div><span>Recibe por partido</span><b>${t.total.gc_pp.toFixed(2)}</b></div>
+          <div><span>Recibe por partido</span><b>${fx(t.total.gc_pp, 2)}</b></div>
           <div><span>Córners por partido</span><b>${fx(t.total.corners_pp, 1)}</b></div>
           <div><span>Posesión</span><b>${t.total.posesion == null ? '—' : t.total.posesion.toFixed(0) + '%'}</b></div>
         </div>
@@ -896,7 +1122,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       $('#tbl-exp').innerHTML = `<thead><tr><th class="l">Prueba</th><th>Periodo</th><th class="l">Comparado con</th><th>Precisión modelo</th><th>Referencia</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>` +
         D.experimentos.map(e => `<tr><td class="nm l" style="white-space:normal;min-width:200px">${esc(e.prueba)}</td><td>${e.periodo}</td><td class="l">${esc(e.contra)}</td>
           <td class="${e.modelo > e.casa ? 'neg' : 'posv'}">${e.modelo.toFixed(4)}</td><td>${e.casa.toFixed(4)}</td>
-          <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? 'sin momios' : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
+          <td class="${e.roi == null ? '' : cls(e.roi)}">${e.roi == null ? esc(e.sin_roi || 'sin momios') : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td>
           <td class="wrap">${esc(e.nota)}</td></tr>`).join('') + '</tbody>';
     } else $('#exp-card').hidden = true;
     const fav = B.calibracion.reduce((a, b) => (b.real - b.pred > a.real - a.pred ? b : a));
@@ -907,6 +1133,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       ${fav.real - fav.pred > 0.02 ? `<div><h4>Subestima a algunos favoritos</h4><p class="note" style="color:var(--ink-2)">Cuando le dio ${pct(fav.pred)} a un equipo, ese equipo ganó ${pct(fav.real)} de las veces. Desconfía de los PICK contra grandes favoritos.</p></div>` : ''}
       <div><h4>Bajas y cansancio ya están en el momio</h4><p class="note" style="color:var(--ink-2)">El momio se mueve en minutos cuando sale la noticia; el modelo se entera hasta después.</p></div>`;
     curve(); evChart(); cal(fav);
+    const FL = I.fuerza_ligas;
+    if (FL && FL.ligas && FL.ligas.length) {
+      $('#ligas-card').hidden = false;
+      $('#ligas-note').textContent = `Un equipo promedio de cada liga contra uno promedio de la ${FL.contra}, en cancha neutral. Solo las ligas y países con equipos en esta copa. Sale de los partidos europeos de los últimos tres años; es lo que usa el modelo cuando se cruzan equipos de ligas distintas. "Sin liga en los datos": no hay resultados de esa liga, así que el nivel sale solo de sus partidos europeos y el "equipo promedio" es el de los que juegan en Europa (los mejores de su país), no el de toda la liga.`;
+      $('#tbl-ligas').innerHTML = `<thead><tr><th class="l">Liga</th><th>Gana</th><th>Empata</th><th>Pierde</th><th>Goles</th></tr></thead><tbody>` +
+        FL.ligas.map(r => `<tr><td class="nm l" style="white-space:normal">${esc(r.liga)}</td><td>${pct(r.g)}</td><td>${pct(r.e)}</td><td>${pct(r.p)}</td><td>${r.gf.toFixed(2)}-${r.gc.toFixed(2)}</td></tr>`).join('') + '</tbody>';
+    }
   }
 
   function svgEl(tag, attrs) { const e = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
@@ -963,10 +1196,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const yl = svgEl('text', { x: pad.l + 6, y: pad.t + 12 }); yl.textContent = 'lo que pasó'; svg.appendChild(yl);
     el.appendChild(svg);
   }
-  $('#foot-data').textContent = (I.fuente_fd === 'por temporada'
+  $('#foot-data').textContent = I.fuente_fd === 'uefa'
+    ? 'Datos: ESPN (resultados desde 2020 de 21 ligas de Europa y de las tres copas de la UEFA con sus previas, partidos próximos, momios de DraftKings, alineaciones, jugadores, estadísticas). Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Un solo modelo para toda Europa: la fuerza de cada liga sale de los partidos europeos y la de cada equipo, de su liga; con eso, la probabilidad de cada marcador (Dixon-Coles). Aquí no hay modelo de córners ni de remates a puerta.'
+    : (I.fuente_fd === 'por temporada'
     ? 'Datos: football-data.co.uk (resultados, xG, tiros, córners, tarjetas, cuotas históricas), ESPN (partidos próximos, momios de DraftKings, alineaciones, jugadores, posesión, copas)'
     : 'Datos: football-data.co.uk (resultados y cuotas históricas), ESPN (tiros, córners, tarjetas, posesión, jugadores, partidos próximos, momios de DraftKings, alineaciones, copas)')
-    + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles con ${num(D.n_sims)} simulaciones por partido.`;
+    + `${D.con_lesiones ? ' y API-Football (parte de lesiones)' : ''}. Se actualiza sola todos los días y cada 30 minutos cerca de los partidos. Modelo Dixon-Coles (probabilidad de cada marcador) y modelos de córners y remates a puerta por equipo.`;
 
   // ---------------- mi registro
   const fmtM = v => num(v, Math.abs(v - Math.round(v)) > 0.005 ? 2 : 0);
@@ -978,8 +1213,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const linea = (f, L) => Math.round(Math.abs(L) * 4) % 2 === 1 ? [half(f(L - 0.25)), half(f(L + 0.25))] : [half(f(L)), half(f(L))];
   function liquidar(k, r) {
     if (!r || !k) return null;
-    const [gl, gv, cl, cv] = r, t = gl + gv, b = v => [v ? 1 : 0, v ? 1 : 0];
-    const [tipo, ln] = k.split(':'), L = parseFloat(ln), hayC = cl != null && cv != null;
+    const [gl, gv, cl, cv, sl, sv] = r, t = gl + gv, b = v => [v ? 1 : 0, v ? 1 : 0];
+    const [tipo, ln] = k.split(':'), L = parseFloat(ln), hayC = cl != null && cv != null, hayR = sl != null && sv != null;
     switch (tipo) {
       case '1': return b(gl > gv);
       case 'X': return b(gl === gv);
@@ -1004,19 +1239,36 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       case 'CU': return hayC ? linea(x => x - cl - cv, L) : null;
       case 'C1O': return cl != null ? linea(x => cl - x, L) : null;
       case 'C2O': return cv != null ? linea(x => cv - x, L) : null;
+      case 'C1U': return cl != null ? linea(x => x - cl, L) : null;
+      case 'C2U': return cv != null ? linea(x => x - cv, L) : null;
+      case 'RO': return hayR ? linea(x => sl + sv - x, L) : null;
+      case 'RU': return hayR ? linea(x => x - sl - sv, L) : null;
+      case 'R1O': return sl != null ? linea(x => sl - x, L) : null;
+      case 'R1U': return sl != null ? linea(x => x - sl, L) : null;
+      case 'R2O': return sv != null ? linea(x => sv - x, L) : null;
+      case 'R2U': return sv != null ? linea(x => x - sv, L) : null;
     }
     return null;
   }
   const MANUAL = { w: [1, 1], l: [0, 0], p: [0.5, 0.5] };
-  function estado(bet, stake) {
+  // ¿Se cobra por pago anticipado? Apuesta a ganador (en los picks del modelo también su igual "hándicap −0.5") en una liga
+  // marcada, y su equipo llegó a ir 2 goles arriba en los 90 minutos. r[6] y r[7]: mayor ventaja del local y de la visita.
+  function cobraPA(bet, r, modelo) {
+    if (!r || r[6] == null || !PA.has(bet.liga || 'laliga')) return false;
+    const k = modelo ? (EQ[bet.k] || bet.k) : bet.k;
+    return (k === '1' && r[6] >= 2) || (k === '2' && r[7] >= 2);
+  }
+  const gananciaDe = (c, bet, stake) => stake * (c.map(x => x === 1 ? bet.momio - 1 : x === 0.5 ? 0 : -1).reduce((a, b) => a + b) / 2);
+  function estado(bet, stake, modelo) {
     const r = R.resultados[bet.id];
-    const c = bet.manual ? MANUAL[bet.manual] : liquidar(bet.k, r);
+    let c = bet.manual ? MANUAL[bet.manual] : liquidar(bet.k, r), pa = false, plSin = null;
+    if (c && !bet.manual && c[0] + c[1] < 2 && cobraPA(bet, r, modelo)) { plSin = gananciaDe(c, bet, stake); c = [1, 1]; pa = true; }
     const empezo = new Date(bet.utc) <= new Date();
     if (!c) return { fin: false, label: !r ? (empezo ? 'Esperando resultado' : 'Pendiente') : 'Sin dato: márcala tú', cls: 'WAIT', r };
-    const pl = stake * (c.map(x => x === 1 ? bet.momio - 1 : x === 0.5 ? 0 : -1).reduce((a, b) => a + b) / 2);
+    const pl = gananciaDe(c, bet, stake);
     const s = c[0] + c[1];
-    const label = s === 2 ? 'Ganada' : s === 0 ? 'Perdida' : (c[0] === 0.5 && c[1] === 0.5) ? 'Nula' : s > 1 ? 'Medio ganada' : 'Medio perdida';
-    return { fin: true, pl, label, cls: s === 2 || s === 1.5 ? 'WIN' : s === 0 || s === 0.5 ? 'LOSS' : 'PUSH', r };
+    const label = pa ? 'Ganada' : s === 2 ? 'Ganada' : s === 0 ? 'Perdida' : (c[0] === 0.5 && c[1] === 0.5) ? 'Nula' : s > 1 ? 'Medio ganada' : 'Medio perdida';
+    return { fin: true, pl, label, cls: s === 2 || s === 1.5 ? 'WIN' : s === 0 || s === 0.5 ? 'LOSS' : 'PUSH', r, pa, plSin };
   }
   function cierreDe(bet) {
     const c = R.cierres[bet.id]; if (!c) return null;
@@ -1067,15 +1319,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function filaHTML(x, mia) {
     const b = x.bet, e = x.e, r = e.r, cie = cierreDe(b), empezo = new Date(b.utc) <= new Date();
     const clv = cie ? b.momio / cie - 1 : null;
-    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct(b.p * b.momio - 1, 0)}` : ''}`
+    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct((1 - (b.nula || 0)) * (b.p * b.momio - 1), 0)}` : ''}`
                     : `momio ${b.momio.toFixed(2)} (${esc(b.casa || 'casa')}) · modelo ${pct(b.p, 1)} · EV ${spct(b.ev, 0)}`;
-    const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}` : '';
+    const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}${e.pa ? ` · llegó a ir 2 goles arriba: se cobra por pago anticipado (sin él, ${sM(e.plSin)})` : ''}` : '';
     const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
     const linea2 = [res, cl].filter(Boolean).join(' · ');
     return `<div class="bet" data-uid="${esc(b.uid || '')}">
       <div class="b-main">
         <span class="b-meta">${b.liga && LIGAS[b.liga] ? esc(corto(LIGAS[b.liga])) + ' · ' : ''}${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
-        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}</span>
+        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${e.pa ? '<span class="tag-pa">Pago anticipado</span>' : ''}</span>
         <span class="b-line">${det}</span>
         ${linea2 ? `<span class="b-line">${linea2}</span>` : ''}
       </div>
@@ -1091,6 +1343,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const ordenar = lista => [...lista.filter(x => !x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)), ...lista.filter(x => x.e.fin).sort((a, b) => b.bet.utc.localeCompare(a.bet.utc))];
   const curva = lista => { let s = 0; return lista.filter(x => x.e.fin).sort((a, b) => a.bet.utc.localeCompare(b.bet.utc)).map(x => ({ u: (s += x.e.pl), txt: `${x.bet.local}–${x.bet.visita}, ${x.bet.mercado} (${sM(x.e.pl)})` })); };
 
+  // cuánto cambió el pago anticipado en una lista de apuestas
+  const notaPA = (lista, u) => {
+    const x = lista.filter(y => y.e.pa); if (!x.length) return '';
+    const extra = x.reduce((a, y) => a + y.e.pl - y.e.plSin, 0);
+    return `<p class="note">Pago anticipado: ${x.length === 1 ? '1 apuesta se cobró' : x.length + ' apuestas se cobraron'} como ganada${x.length === 1 ? '' : 's'} aunque el equipo no ganó al final (<b>${sM(extra)}${u ? ' ' + u : ''}</b> más que sin pago anticipado).</p>`;
+  };
+  function renderPA() {
+    const futbol = Object.keys(LIGAS).filter(id => !PAGINAS[id]);
+    $('#pa-card').innerHTML = `<h3>Pago anticipado de tu casa</h3>
+      <p class="note">En las ligas marcadas, una apuesta a ganador ("Gana" local o visita) se cuenta como ganada si ese equipo llega a ir 2 goles arriba en los 90 minutos, aunque después le empaten o le den la vuelta. Se aplica a tus apuestas y a los picks del modelo cuando termina el partido, y la calculadora usa la probabilidad con pago anticipado. Marca solo las ligas donde tu casa lo ofrece.</p>
+      <div class="pa-ligas">${futbol.map(id => `<label><input type="checkbox" value="${id}"${PA.has(id) ? ' checked' : ''}>${esc(corto(LIGAS[id]))}</label>`).join('')}</div>`;
+    $$('#pa-card input').forEach(cb => cb.addEventListener('change', () => {
+      PA = new Set($$('#pa-card input').filter(x => x.checked).map(x => x.value));
+      guardar('laboratorio-pago-anticipado', JSON.stringify([...PA]));
+      renderMias(); renderModelo();
+    }));
+  }
+
   function renderMias() {
     const el = $('#reg-mias');
     const lista = mias.map(b => ({ bet: b, stake: b.monto, e: estado(b, b.monto) }));
@@ -1100,6 +1370,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="card">
         <h3>Resumen</h3>
         ${resumen(lista, '')}
+        ${notaPA(lista, '')}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada</h4><div class="chart" id="chart-mias"></div><p class="note">Cada punto es una apuesta ya liquidada, en orden de fecha.</p>' : ''}
       </div>
       <div class="card">
@@ -1152,7 +1423,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function renderModelo() {
     const el = $('#reg-modelo');
     const todos = (R.modelo || []).map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
-    todos.forEach(x => { x.e = estado(x.bet, 1); });
+    todos.forEach(x => { x.e = estado(x.bet, 1, true); });
     const ligasCon = Object.keys(LIGAS).filter(id => todos.some(x => x.bet.liga === id));
     if (filtroModelo && !ligasCon.includes(filtroModelo)) filtroModelo = '';
     const lista = filtroModelo ? todos.filter(x => x.bet.liga === filtroModelo) : todos;
@@ -1169,8 +1440,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)}</h3>
         <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no.</p>
         ${resumen(lista, 'u')}
+        ${notaPA(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
           return sub.length < lista.length ? `<p class="note">Sin los "Lejos del mercado" (EV de 20% o más, los que más perdieron en la prueba): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
+        ${(() => { const sub = lista.filter(x => x.bet.p >= 0.30), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
+          return sub.length < lista.length ? `<p class="note">Solo los que el modelo daba en 30% o más (la regla de PICK desde el 10 oct 2026; los de antes se guardaron con la regla vieja): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
       </div>
@@ -1185,7 +1459,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     $$('#mod-filtro button', el).forEach(btn => btn.addEventListener('click', () => { filtroModelo = btn.dataset.l; renderModelo(); }));
   }
 
-  function renderRegistro() { renderMias(); renderModelo(); }
+  function renderRegistro() { renderPA(); renderMias(); renderModelo(); }
   $$('#reg-tabs button').forEach(b => b.addEventListener('click', () => {
     $$('#reg-tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
     $('#reg-mias').hidden = b.dataset.r !== 'mias'; $('#reg-modelo').hidden = b.dataset.r !== 'modelo';
