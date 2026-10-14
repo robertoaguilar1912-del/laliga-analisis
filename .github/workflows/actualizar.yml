@@ -26,6 +26,8 @@ jobs:
       cambios: ${{ steps.run.outputs.cambios }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main      # lo último de main: si otra corrida guardó datos mientras esta esperaba, no choca al guardar
 
       - uses: actions/setup-python@v5
         with:
