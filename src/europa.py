@@ -88,8 +88,10 @@ def _filas(slug, eventos, region='europa'):
     R = REGIONES[region]
     out = []
     for e in eventos:
+        if not e.get('competitions'):
+            continue
         comp = e['competitions'][0]
-        if not comp['status']['type'].get('completed'):
+        if not ((comp.get('status') or {}).get('type') or {}).get('completed'):
             continue
         cs = {c.get('homeAway'): c for c in comp.get('competitors', [])}
         if 'home' not in cs or 'away' not in cs:
