@@ -1,21 +1,10 @@
-$ python explorar/sudam2.py
+$ python explorar/bajas.py
 [exit 0]
-
-
-
-$ python src/europa.py descargar sudamerica
-[exit 0]
-  Sudamérica: 29577 partidos (2121 de copas CONMEBOL), 98 consultas
-  Sudamérica: liga de 1 equipos sin liga en los datos
-
-
-
-$ python src/europa.py momios sudamerica
-[exit 0]
-  Sudamérica: momios de 2121 partidos más; con momios: 1454 de 2121
-
-
-
-$ cp data/raw/sudamerica_partidos.csv data/raw/sudamerica_momios.csv data/raw/sudamerica_equipos.json data/raw/sudamerica_bajados.json salida/
-[exit 0]
+fpl {"http": 200, "jugadores": 667, "con_baja_o_duda": 196, "estados": {"a": 471, "d": 19, "i": 68, "s": 4, "u": 105, "n": 0}, "ejemplos": [["Arsenal", "Saliba", "i", 0, "Back injury - Unknown return date"], ["Arsenal", "Hincapie", "d", 75, "Ankle injury - 75% chance of playing"], ["Arsenal", "Martinelli", "u", 0, "Has joined Al Hilal permanently"], ["Arsenal", "Zubimendi", "d", 75, "Unspecified injury - 75% chance of playing"], ["Arsenal", "Nwaneri", "u", 0, "Has joined Borussia Dortmund on loan for the rest of the season"], ["Arsenal", "Fábio Vieira", "u", 0, "Has joined Hamburger SV permanently
+laliga_fantasy {"v3": {"http": 502, "texto": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n<!-- a padding to"}, "v4": {"http": 502, "texto": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n<!-- a padding to"}}
+espn {"core_injuries": [200, "{\"count\":0,\"pageIndex\":0,\"pageSize\":25,\"pageCount\":0,\"items\":[]}"], "team_keys": ["abbreviation", "alternateColor", "athletes", "color", "defaultLeague", "displayName", "groups", "id", "isActive", "leagueAbbrev", "links", "location", "logos", "name", "nextEvent", "nickname", "record", "shortDisplayName", "slug", "standingSummary", "uid"], "team_injuries": null, "summary_keys": ["boxscore", "format", "gameInfo", "lastFiveGames", "leaders", "broadcasts", "pickcenter", "odds", "hasOdds", "rosters", "news", "header", "wallclockAvailable", "ticketsInfo", "meta", "
+sofascore {"http_lista": 403, "premier": 0}
+fotmob {"https://www.fotmob.com/api/data/matches?date=20261017": [200, "{\"leagues\":[{\"ccode\":\"ENG\",\"id\":47,\"primaryId\":47,\"name\":\"Premier League\",\"matches\":[{\"id\":5795478,\"leagueId\":47,\"time\":\"17.10.2026 13:30\",\"home\":{\"id"], "https://www.fotmob.com/api/matches?date=20261017": [404, "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta name=\"apple-itunes-app\" content=\"app-id=488575683\" data-next-head=\"\"/><link rel=\"alternate\" href="], "https://www.fotmob.com/api/data/leagues?id=47": [200, "{\"tabs\":[\"overview\",\"table\",\"fixtures\",\"stats\",\"transfers\",\"
+transfermarkt {"http": 202, "filas": 0, "inicio": ""}
+rotowire {"http": 200, "largo": 336422, "menciones_injury": 253}
 
