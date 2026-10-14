@@ -5,7 +5,7 @@
   "estadio": "Estadio Alfonso López",
   "local_espn": "Atlético Bucaramanga",
   "visita_espn": "Águilas Doradas",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,127 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    265,
-    380
+    -140,
+    250,
+    370
    ],
-   "ou_linea": 2.5,
-   "ou": [
-    -110,
-    -120
-   ],
-   "spread": [
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
+  "alineaciones": {
+   "Millonarios": [
     [
-     "-0.5",
-     -150
+     "157853",
+     "Javier Burrai",
+     "G"
     ],
     [
-     "+0.5",
-     110
+     "197538",
+     "Sergio Mosquera",
+     "CD-L"
+    ],
+    [
+     "172073",
+     "Jaine Barreiro",
+     "CD-R"
+    ],
+    [
+     "250444",
+     "Sebastián Valencia",
+     "LB"
+    ],
+    [
+     "408743",
+     "Samuel Martín",
+     "RB"
+    ],
+    [
+     "199156",
+     "Rodrigo Urena",
+     "CM-L"
+    ],
+    [
+     "302625",
+     "Leonai",
+     "CM-R"
+    ],
+    [
+     "106650",
+     "David Silva",
+     "LM"
+    ],
+    [
+     "118986",
+     "Juan Cuadrado",
+     "RM"
+    ],
+    [
+     "121216",
+     "Leonardo Castro",
+     "CF-L"
+    ],
+    [
+     "312620",
+     "Daniel Ruíz",
+     "CF-R"
+    ]
+   ],
+   "Once Caldas": [
+    [
+     "302154",
+     "Joan Parra",
+     "G"
+    ],
+    [
+     "206188",
+     "Daniel Londoño",
+     "CD-L"
+    ],
+    [
+     "185841",
+     "Juan Castano",
+     "CD-R"
+    ],
+    [
+     "41652",
+     "Juan Pablo Nieto",
+     "DM"
+    ],
+    [
+     "199007",
+     "Juan Patiño",
+     "LB"
+    ],
+    [
+     "286864",
+     "Juan David Cuesta",
+     "RB"
+    ],
+    [
+     "197506",
+     "Andrés Roa",
+     "CM-L"
+    ],
+    [
+     "266037",
+     "Andres Colorado",
+     "CM-R"
+    ],
+    [
+     "203357",
+     "Luis Gómez",
+     "LM"
+    ],
+    [
+     "162716",
+     "Michael Barrios",
+     "RM"
+    ],
+    [
+     "387396",
+     "Jefry Zapata",
+     "F"
     ]
    ]
   }
@@ -193,7 +297,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -450,
+    -425,
     450,
     850
    ],
@@ -226,9 +330,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -320,
+    -300,
     370,
-    700
+    650
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -238,11 +342,11 @@
    "spread": [
     [
      "-1.5",
-     -105
+     100
     ],
     [
      "+1.5",
-     -140
+     -145
     ]
    ]
   }
