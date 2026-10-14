@@ -12,22 +12,22 @@
    "casa": "DraftKings",
    "ml": [
     125,
-    250,
-    185
+    255,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    105
+    110
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -74,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    200,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -215
+    ]
+   ]
+  }
  },
  {
   "id": "401883155",
@@ -85,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -105,
+    245,
+    260
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  }
  },
  {
   "id": "401883157",
@@ -129,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    190,
+    225,
+    135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -185
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401883156",
@@ -151,7 +217,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -135,
+    280,
+    310
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401883154",
@@ -162,7 +250,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    235,
+    290
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -120
+    ],
+    [
+     "+0.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401883180",
@@ -173,7 +283,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    195,
+    175
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -205,
+    140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     145
+    ],
+    [
+     "+0.5",
+     -230
+    ]
+   ]
+  }
  },
  {
   "id": "401883309",
@@ -192,6 +324,61 @@
   "estadio": "Nuevo Estadio de Los Cármenes",
   "local_espn": "Granada",
   "visita_espn": "Real Valladolid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883128",
+  "utc": "2026-10-24T12:00Z",
+  "estadio": "Estadio Municipal Nuevo El Arcángel",
+  "local_espn": "Córdoba",
+  "visita_espn": "Eibar",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883151",
+  "utc": "2026-10-24T14:15Z",
+  "estadio": "Estadio Municipal de Butarque",
+  "local_espn": "Leganés",
+  "visita_espn": "Mallorca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883308",
+  "utc": "2026-10-24T16:30Z",
+  "estadio": "Estadi Montilivi",
+  "local_espn": "Girona",
+  "visita_espn": "RC Celta Fortuna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883150",
+  "utc": "2026-10-24T16:30Z",
+  "estadio": "Estadio Gran Canaria",
+  "local_espn": "Las Palmas",
+  "visita_espn": "Real Sociedad II",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883153",
+  "utc": "2026-10-24T19:00Z",
+  "estadio": "Power Horse Stadium",
+  "local_espn": "Almería",
+  "visita_espn": "Real Oviedo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

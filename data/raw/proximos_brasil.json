@@ -12,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    230,
-    220
+    235,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -125
+    -115,
+    -120
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -41,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -290,
+    400,
+    650
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -115
+    ],
+    [
+     "+1.5",
+     -135
+    ]
+   ]
+  }
  },
  {
   "id": "401841270",
@@ -52,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -195,
+    310,
+    475
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -105
+   ],
+   "spread": [
+    [
+     "-1.5",
+     130
+    ],
+    [
+     "+1.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401841271",
@@ -63,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    210,
+    235,
+    120
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -165
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401841273",
@@ -140,7 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    185,
+    240,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401841269",
@@ -184,7 +272,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    210,
+    245,
+    110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -155
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401841272",
@@ -195,7 +305,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    265,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401841287",
@@ -203,6 +335,83 @@
   "estadio": "Estadio Mineirão",
   "local_espn": "Cruzeiro",
   "visita_espn": "Remo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841285",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "Estadio Beira-Rio",
+  "local_espn": "Internacional",
+  "visita_espn": "Botafogo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841284",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "Estadio Municipal José Maria de Campos Maia",
+  "local_espn": "Mirassol",
+  "visita_espn": "São Paulo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841280",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "Estadio Manoel Barradas",
+  "local_espn": "Vitória",
+  "visita_espn": "Athletico-PR",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841283",
+  "utc": "2026-10-24T21:30Z",
+  "estadio": "Arena Barueri",
+  "local_espn": "Palmeiras",
+  "visita_espn": "Red Bull Bragantino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841281",
+  "utc": "2026-10-24T21:30Z",
+  "estadio": "Estádio São Januário",
+  "local_espn": "Vasco da Gama",
+  "visita_espn": "Corinthians",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841278",
+  "utc": "2026-10-24T22:30Z",
+  "estadio": "Arena Condá",
+  "local_espn": "Chapecoense",
+  "visita_espn": "Fluminense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841282",
+  "utc": "2026-10-25T00:00Z",
+  "estadio": "Estádio Vila Belmiro (Urbano Caldeira)",
+  "local_espn": "Santos",
+  "visita_espn": "Bahia",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,

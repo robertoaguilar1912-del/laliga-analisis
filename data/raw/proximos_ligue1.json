@@ -12,22 +12,22 @@
    "casa": "DraftKings",
    "ml": [
     195,
-    245,
-    135
+    260,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
      "+0.5",
-     -170
+     -165
     ],
     [
      "-0.5",
-     115
+     120
     ]
    ]
   }
@@ -51,16 +51,16 @@
    "ou_linea": 3.5,
    "ou": [
     -130,
-    100
+    -105
    ],
    "spread": [
     [
      "+1.5",
-     -135
+     -140
     ],
     [
      "-1.5",
-     -110
+     -105
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    265,
+    220,
+    270,
     110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
-    125
+    -170,
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -145
+     -140
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
+    135,
     235,
-    185
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -115
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
-     -195
+     -175
     ]
    ]
   }
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    235,
+    270,
+    240,
     100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -120
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -135
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -242,13 +242,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    225,
-    210
+    125,
+    235,
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -155,
     115
    ],
    "spread": [
@@ -258,7 +258,7 @@
     ],
     [
      "+0.5",
-     -175
+     -165
     ]
    ]
   }
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    300,
-    350
+    -145,
+    310,
+    360
    ],
    "ou_linea": 2.5,
    "ou": [
     -160,
-    115
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -170
+     -165
     ],
     [
      "+0.5",
-     110
+     115
     ]
    ]
   }
@@ -302,6 +302,40 @@
   "estadio": "Stade Francis-Le Blé",
   "local_espn": "Brest",
   "visita_espn": "Nice",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401876423",
+  "utc": "2026-10-24T15:15Z",
+  "estadio": "Stadium Municipal de Toulouse",
+  "local_espn": "Toulouse",
+  "visita_espn": "Troyes",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401876427",
+  "utc": "2026-10-24T18:45Z",
+  "estadio": "Stade Bollaert-Delelis",
+  "local_espn": "Lens",
+  "visita_espn": "Paris FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-ligue-1",
   "neutral": false,

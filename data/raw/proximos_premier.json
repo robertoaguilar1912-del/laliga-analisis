@@ -48,10 +48,10 @@
     260,
     180
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    -180,
+    135
    ],
    "spread": [
     [
@@ -182,13 +182,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    100
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
@@ -209,13 +209,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    340,
-    400
+    -180,
+    350,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     135
    ],
    "spread": [
@@ -242,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
+    140,
     260,
-    165
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -254,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     130
+     125
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -276,8 +276,8 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    295,
-    -175
+    285,
+    -170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -287,11 +287,11 @@
    "spread": [
     [
      "+0.5",
-     135
+     130
     ],
     [
      "-0.5",
-     -195
+     -190
     ]
    ]
   }
@@ -341,9 +341,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    240,
-    140
+    195,
+    250,
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -353,13 +353,129 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -170
     ],
     [
      "-0.5",
-     120
+     110
     ]
    ]
+  }
+ },
+ {
+  "id": "401879256",
+  "utc": "2026-10-24T11:30Z",
+  "estadio": "Villa Park",
+  "local_espn": "Aston Villa",
+  "visita_espn": "Manchester City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    310,
+    -155
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -175
+   ],
+   "spread": [
+    [
+     "+0.5",
+     115
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878768",
+  "utc": "2026-10-24T14:00Z",
+  "estadio": "Emirates Stadium",
+  "local_espn": "Arsenal",
+  "visita_espn": "Everton",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -265,
+    350,
+    750
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-1.5",
+     100
+    ],
+    [
+     "+1.5",
+     -150
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879255",
+  "utc": "2026-10-24T14:00Z",
+  "estadio": "Coventry Building Society Arena",
+  "local_espn": "Coventry City",
+  "visita_espn": "Fulham",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    190,
+    245,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878767",
+  "utc": "2026-10-24T16:30Z",
+  "estadio": "Stamford Bridge",
+  "local_espn": "Chelsea",
+  "visita_espn": "Tottenham Hotspur",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   }
  }
 ]

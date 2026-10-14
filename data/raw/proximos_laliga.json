@@ -13,12 +13,12 @@
    "ml": [
     110,
     250,
-    240
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -110,
+    -110
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -145
+     -135
     ]
    ]
   }
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
+    350,
     280,
-    -130
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -56,11 +56,11 @@
    "spread": [
     [
      "+0.5",
-     -105
+     105
     ],
     [
      "-0.5",
-     -140
+     -150
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -215,
-    380,
+    -225,
+    390,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
     115,
-    -150
+    -145
    ],
    "spread": [
     [
      "-1.5",
-     110
+     105
     ],
     [
      "+1.5",
-     -160
+     -155
     ]
    ]
   }
@@ -110,9 +110,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    450,
-    -240
+    475,
+    425,
+    -230
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+1.5",
-     -135
+     -140
     ],
     [
      "-1.5",
-     -110
+     -105
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
-    235,
-    115
+    230,
+    230,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -130
+    105,
+    -135
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -160
     ],
     [
      "-0.5",
-     105
+     110
     ]
    ]
   }
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    230,
-    280
+    110,
+    225,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -155
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -135
+     -145
     ]
    ]
   }
@@ -281,8 +281,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -125
+    100,
+    -130
    ],
    "spread": [
     [
@@ -314,8 +314,8 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -200,
-    150
+    -190,
+    145
    ],
    "spread": [
     [
@@ -346,6 +346,50 @@
   "estadio": "Mendizorrotza",
   "local_espn": "Alavés",
   "visita_espn": "Málaga",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882830",
+  "utc": "2026-10-24T12:00Z",
+  "estadio": "Estadio de Vallecas",
+  "local_espn": "Rayo Vallecano",
+  "visita_espn": "Elche",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882831",
+  "utc": "2026-10-24T14:15Z",
+  "estadio": "El Sardineros",
+  "local_espn": "Racing Santander",
+  "visita_espn": "Espanyol",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882827",
+  "utc": "2026-10-24T16:30Z",
+  "estadio": "Mestalla Stadium",
+  "local_espn": "Valencia",
+  "visita_espn": "Villarreal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882834",
+  "utc": "2026-10-24T19:00Z",
+  "estadio": "Riyadh Air Metropolitano",
+  "local_espn": "Atlético Madrid",
+  "visita_espn": "Deportivo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    245,
-    155
+    145,
+    250,
+    160
    ],
    "ou_linea": 3.5,
    "ou": [
     110,
-    -150
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -195
+     -190
     ]
    ]
   }
@@ -50,13 +50,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
     [
      "+0.5",
-     115
+     110
     ],
     [
      "-0.5",
@@ -83,8 +83,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    120
+    -165,
+    125
    ],
    "spread": [
     [
@@ -126,7 +126,7 @@
     ],
     [
      "+1.5",
-     -145
+     -150
     ]
    ]
   }
@@ -149,7 +149,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -130
    ],
    "spread": [
@@ -182,13 +182,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -155,
     120
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -140
     ],
     [
      "-0.5",
@@ -215,7 +215,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
+    -135,
     105
    ],
    "spread": [
@@ -242,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
-    270,
-    400
+    -160,
+    265,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -254,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     120
+     115
     ]
    ]
   }
@@ -282,7 +282,7 @@
    "ou_linea": 2.5,
    "ou": [
     100,
-    -130
+    -135
    ],
    "spread": [
     [
@@ -320,7 +320,7 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -195
     ],
     [
      "-0.5",
@@ -335,6 +335,74 @@
   "estadio": "Stadio Olimpico Grande Torino",
   "local_espn": "Torino",
   "visita_espn": "Monza",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401874958",
+  "utc": "2026-10-24T13:00Z",
+  "estadio": "Unipol Domus",
+  "local_espn": "Cagliari",
+  "visita_espn": "Bologna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401874961",
+  "utc": "2026-10-24T13:00Z",
+  "estadio": "Giuseppe Sinigaglia",
+  "local_espn": "Como",
+  "visita_espn": "Sassuolo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401874948",
+  "utc": "2026-10-24T16:00Z",
+  "estadio": "Stadio Diego Armando Maradona",
+  "local_espn": "Napoli",
+  "visita_espn": "AS Roma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401874955",
+  "utc": "2026-10-24T18:45Z",
+  "estadio": "Olimpico",
+  "local_espn": "Lazio",
+  "visita_espn": "Parma",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,

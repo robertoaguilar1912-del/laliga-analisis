@@ -13,11 +13,11 @@
    "ml": [
     125,
     265,
-    180
+    175
    ],
    "ou_linea": 3.5,
    "ou": [
-    135,
+    140,
     -175
    ],
    "spread": [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
@@ -51,7 +51,7 @@
    "ou_linea": 3.5,
    "ou": [
     120,
-    -155
+    -150
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -77,14 +77,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    295,
-    250
+    -115,
+    290,
+    245
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    130,
+    -165
    ],
    "spread": [
     [
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    295,
-    235
+    -140,
+    320,
+    285
    ],
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -125
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -145
     ],
     [
      "+0.5",
-     -115
+     105
     ]
    ]
   }
@@ -159,7 +159,7 @@
     ],
     [
      "+1.5",
-     -165
+     -160
     ]
    ]
   }
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    265,
-    185
+    115,
+    270,
+    190
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -125
+    -105,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   }
@@ -215,17 +215,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -135
+    110,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -185
+     -190
     ]
    ]
   }
@@ -242,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    285,
-    235
+    -120,
+    290,
+    260
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -254,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -125
     ],
     [
      "+0.5",
-     -120
+     -110
     ]
    ]
   }
@@ -275,9 +275,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -450,
+    -475,
     550,
-    800
+    850
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -287,11 +287,11 @@
    "spread": [
     [
      "-1.5",
-     -165
+     -175
     ],
     [
      "+1.5",
-     120
+     125
     ]
    ]
   }
@@ -305,7 +305,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    275,
+    175
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "761871",
@@ -352,23 +374,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    285,
-    225
+    -125,
+    300,
+    270
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    110,
     -145
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -130
     ],
     [
      "+0.5",
-     -125
+     -105
     ]
    ]
   }
@@ -382,7 +404,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    280,
+    210
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
  },
  {
   "id": "761873",
@@ -400,10 +444,10 @@
     360,
     500
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    140,
-    -180
+    -180,
+    140
    ],
    "spread": [
     [
@@ -435,8 +479,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -150,
+    120
    ],
    "spread": [
     [
@@ -445,7 +489,7 @@
     ],
     [
      "+0.5",
-     -155
+     -160
     ]
    ]
   }
@@ -639,6 +683,160 @@
   "estadio": "TQL Stadium",
   "local_espn": "FC Cincinnati",
   "visita_espn": "D.C. United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761903",
+  "utc": "2026-10-24T17:30Z",
+  "estadio": "Stade Saputo",
+  "local_espn": "CF Montréal",
+  "visita_espn": "Nashville SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761890",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "ScottsMiracle-Gro Field",
+  "local_espn": "Columbus Crew",
+  "visita_espn": "Toronto FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761891",
+  "utc": "2026-10-24T21:30Z",
+  "estadio": "Sports Illustrated Stadium",
+  "local_espn": "Red Bull New York",
+  "visita_espn": "Inter Miami CF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761893",
+  "utc": "2026-10-24T23:30Z",
+  "estadio": "Mercedes-Benz Stadium",
+  "local_espn": "Atlanta United FC",
+  "visita_espn": "Chicago Fire FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761895",
+  "utc": "2026-10-24T23:30Z",
+  "estadio": "Audi Field",
+  "local_espn": "D.C. United",
+  "visita_espn": "FC Cincinnati",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761892",
+  "utc": "2026-10-24T23:30Z",
+  "estadio": "Inter&Co Stadium",
+  "local_espn": "Orlando City SC",
+  "visita_espn": "New York City FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761894",
+  "utc": "2026-10-24T23:30Z",
+  "estadio": "Subaru Park",
+  "local_espn": "Philadelphia Union",
+  "visita_espn": "New England Revolution",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761897",
+  "utc": "2026-10-25T00:30Z",
+  "estadio": "Dick's Sporting Goods Park",
+  "local_espn": "Colorado Rapids",
+  "visita_espn": "Vancouver Whitecaps",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761900",
+  "utc": "2026-10-25T00:30Z",
+  "estadio": "Toyota Stadium",
+  "local_espn": "FC Dallas",
+  "visita_espn": "San Jose Earthquakes",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761896",
+  "utc": "2026-10-25T00:30Z",
+  "estadio": "Shell Energy Stadium",
+  "local_espn": "Houston Dynamo FC",
+  "visita_espn": "Minnesota United FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761898",
+  "utc": "2026-10-25T00:30Z",
+  "estadio": "America First Field",
+  "local_espn": "Real Salt Lake",
+  "visita_espn": "St. Louis CITY SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761899",
+  "utc": "2026-10-25T00:30Z",
+  "estadio": "Sporting Park",
+  "local_espn": "Sporting Kansas City",
+  "visita_espn": "Austin FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761902",
+  "utc": "2026-10-25T02:30Z",
+  "estadio": "Providence Park",
+  "local_espn": "Portland Timbers",
+  "visita_espn": "Charlotte FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761901",
+  "utc": "2026-10-25T02:30Z",
+  "estadio": "Snapdragon Stadium",
+  "local_espn": "San Diego FC",
+  "visita_espn": "Seattle Sounders FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
