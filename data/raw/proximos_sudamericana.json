@@ -35,13 +35,35 @@
  {
   "id": "401913957",
   "utc": "2026-10-21T00:30Z",
-  "estadio": "",
+  "estadio": "Estadio do Maracana",
   "local_espn": "Vasco da Gama",
   "visita_espn": "Boca Juniors",
   "estado": "STATUS_SCHEDULED",
   "tipo": "semifinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    190,
+    200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401913956",
