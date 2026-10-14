@@ -2,7 +2,8 @@
 Registro de picks.
 
 - data/registro/modelo.json: cada PICK que marcó el modelo (EV de +5% o más contra el momio de la casa),
-  guardado la primera vez que apareció, con la probabilidad, el momio y el EV de ese momento.
+  guardado la primera vez que apareció, con la probabilidad, el momio y el EV de ese momento. Los REVISAR (PICK de un
+  equipo con bajas importantes, desde el 13 oct 2026) llevan 'revisar' y la página no los cuenta como PICK.
 - data/registro/cierres.json: el último momio que se vio de cada mercado antes de empezar el partido
   (sirve para saber si el momio que tomaste fue mejor que el de cierre).
 - data/registro.json: lo anterior más los resultados de todos los partidos jugados y la lista de ligas,
@@ -118,20 +119,23 @@ def actualizar():
             c = cierres.setdefault(m['id'], {})
             for r in m['con_momio']:
                 c[r['k']] = r['momio']
-            # el mejor PICK de cada resultado (p. ej. "Gana Espanyol" y "Hándicap Espanyol -0.5" son lo mismo)
+            # el mejor PICK de cada resultado (p. ej. "Gana Espanyol" y "Hándicap Espanyol -0.5" son lo mismo). Los REVISAR
+            # (PICK de un equipo con bajas importantes) también se guardan, marcados: no cuentan como PICK en la página, pero
+            # así se puede ver después si de verdad salían peor
             mejores = {}
             for r in m['con_momio']:
-                if r['veredicto'] != 'PICK':
+                if r['veredicto'] not in ('PICK', 'REVISAR'):
                     continue
                 clave = EQUIVALENTE.get(r['k'], r['k'])
-                if clave not in mejores or float(r['momio']) > float(mejores[clave]['momio']):
+                if clave not in mejores or (r['veredicto'] == 'PICK', float(r['momio'])) > (mejores[clave]['veredicto'] == 'PICK', float(mejores[clave]['momio'])):
                     mejores[clave] = r
             for clave, r in mejores.items():
                 if (m['id'], clave) in ya:
                     continue
                 picks.append({'id': m['id'], 'liga': liga, 'utc': m['utc'], 'local': m['local_es'], 'visita': m['visita_es'],
                               'k': r['k'], 'mercado': r['mercado'], 'p': round(r['p'], 4), 'momio': r['momio'],
-                              'ev': round(r['ev'], 4), 'casa': m.get('casa_momios') or '', 'visto': t.isoformat(timespec='minutes')})
+                              'ev': round(r['ev'], 4), 'casa': m.get('casa_momios') or '', 'visto': t.isoformat(timespec='minutes'),
+                              **({'revisar': r.get('revisar') or 'bajas'} if r['veredicto'] == 'REVISAR' else {})})
                 ya.add((m['id'], clave))
                 nuevos += 1
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))

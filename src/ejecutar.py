@@ -35,8 +35,8 @@ def _foto(ligas):
     """Para saber si algo cambió: contenido de los próximos y número de partidos con detalle."""
     out = []
     for liga in ligas:
-        p = fuentes.ruta_proximos(liga)
-        out.append((p.read_text() if p.exists() else '', len(list((ESPN_DIR / liga).glob('*.json')))))
+        p, b = fuentes.ruta_proximos(liga), RAW / f'bajas_{liga}.json'
+        out.append((p.read_text() if p.exists() else '', len(list((ESPN_DIR / liga).glob('*.json'))), b.read_text() if b.exists() else ''))
     return out
 
 
@@ -68,6 +68,9 @@ def main(modo):
             if tareas[liga]['resultados']:
                 _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
+        con_xi = [l for l in ligas if tareas[l]['alineaciones']]
+        if con_xi:      # bajas de última hora de los partidos por empezar
+            _paso('bajas FotMob', fuentes.descargar_bajas, con_xi, dentro_de_h=3)
         if _foto(list(tareas)) == antes and 'nba' not in tareas:    # en la NBA cambian las lesiones aunque no cambie lo demás
             return salida('no')
     else:
@@ -79,6 +82,7 @@ def main(modo):
         _paso('Sudamérica momios', europa.descargar_momios, 'sudamerica')
         for liga in LIGAS:
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
+        _paso('bajas FotMob', fuentes.descargar_bajas)
         for liga in LIGAS:
             _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
         _paso('copas', fuentes.descargar_copas)
