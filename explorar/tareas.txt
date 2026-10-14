@@ -1,1 +1,4 @@
-python explorar/sudam.py
+python explorar/sudam2.py
+python src/europa.py descargar sudamerica
+python src/europa.py momios sudamerica
+cp data/raw/sudamerica_partidos.csv data/raw/sudamerica_momios.csv data/raw/sudamerica_equipos.json data/raw/sudamerica_bajados.json salida/
