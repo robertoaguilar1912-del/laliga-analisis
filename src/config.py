@@ -67,24 +67,25 @@ LIGAS = {
                           'al empate de más cuando Porto, Benfica o Sporting juegan contra equipos chicos; ahora casi no marca PICK de '
                           'empate (10 en seis años, y perdieron). Usa la página para ver estadísticas y momios justos.',
                  'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron mucho en la prueba'}},
-    # uefa: copa europea. Equipos de ligas distintas: se usa el modelo de toda Europa (src/europa.py), que mide cuánto vale
-    # cada liga con los partidos europeos. Sus resultados (y los de 21 ligas) los baja europa.py, no football-data.
-    'champions': {'nombre': 'Champions League', 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'uefa': True,
-                  'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+    # region: copa entre equipos de ligas distintas ('europa' o 'sudamerica'). Se usa el modelo de toda la región
+    # (src/europa.py), que mide cuánto vale cada liga con los partidos de las copas. Sus resultados (y los de las ligas de la
+    # región) los baja europa.py, no football-data. fase_tabla: la fase de la copa que va en la tabla (las eliminatorias no).
+    'champions': {'nombre': 'Champions League', 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'region': 'europa',
+                  'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (396 partidos) quedó casi igual de '
                            'preciso que el momio de cierre y los PICK dieron +7.2% (208 apuestas, rango probable −9% a +24%: puede ser suerte). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
                            'pierden. No hay córners ni remates a puerta.'},
-    'europa': {'nombre': 'Europa League', 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'uefa': True,
-               'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+    'europa': {'nombre': 'Europa League', 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'region': 'europa',
+               'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (395 partidos) fue menos preciso '
                            'que el momio de cierre y los PICK dieron +1.6% (315 apuestas, rango probable −11% a +15%). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
                            'pierden. No hay córners ni remates a puerta.'},
-    'conference': {'nombre': 'Conference League', 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'uefa': True,
-                   'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
+    'conference': {'nombre': 'Conference League', 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'region': 'europa',
+                   'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (301 partidos) fue menos preciso '
                            'que el momio de cierre y los PICK dieron −6.7% (266 apuestas, rango probable −20% a +6%). Muchos equipos son de países sin liga en '
                            'los datos (Chequia, Croacia, Polonia...): de ellos sabe menos. '
@@ -112,6 +113,25 @@ LIGAS = {
     'colombia': {'nombre': 'Liga Colombiana', 'pais': 'Colombia', 'espn': 'col.1', 'solo_espn': True, 'por_fecha': True,
                  'calendario': 'anual', 'torneos': {1: 'Apertura', 7: 'Finalización'}, 'api_football': 239,
                  'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
+    # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
+    'libertadores': {'nombre': 'Copa Libertadores', 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
+                     'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
+                     'copas': {}, 'zonas': 'libertadores',
+                     'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Sudamérica (12 ligas), que además suma la altura del '
+                              'estadio. En la prueba 2024-2026 (447 partidos) fue bastante menos preciso que el momio de cierre y los PICK '
+                              'perdieron −7.8% (285 apuestas, rango probable −22% a +7%); solo en 2026, −44% (91 apuestas). El mercado sabe '
+                              'cosas que el modelo no: rotaciones (equipos que guardan titulares para su liga), lesiones y el marcador global '
+                              'en la vuelta de las eliminatorias. Usa la página para estadísticas, la tabla y el momio justo; no sigas los PICK '
+                              'a ciegas. No hay córners ni remates a puerta.'},
+    'sudamericana': {'nombre': 'Copa Sudamericana', 'pais': 'Sudamérica', 'espn': 'conmebol.sudamericana', 'solo_espn': True,
+                     'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
+                     'copas': {}, 'zonas': 'sudamericana',
+                     'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Sudamérica (12 ligas), que además suma la altura del '
+                              'estadio. En la prueba 2024-2026 (435 partidos) fue bastante menos preciso que el momio de cierre y los PICK '
+                              'quedaron casi parejos: −0.7% (300 apuestas, rango probable −16% a +14%: puede ser suerte); en 2026, −11%. El '
+                              'mercado sabe cosas que el modelo no: rotaciones (aquí muchos equipos juegan con suplentes), lesiones y el '
+                              'marcador global en la vuelta de las eliminatorias. Usa la página para estadísticas, la tabla y el momio justo; '
+                              'no sigas los PICK a ciegas. No hay córners ni remates a puerta.'},
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
 SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL', 'nba': 'NBA'}
@@ -130,6 +150,9 @@ ZONAS = {
     'brasil2': [[1, 4, 'cl', 'Ascenso'], [-4, -1, 'des', 'Descenso']],
     'argentina': [[1, 8, 'cl', 'Playoffs']],
     'colombia': [[1, 8, 'cl', 'Cuadrangulares']],
+    # por grupo (de 4)
+    'libertadores': [[1, 2, 'cl', 'Octavos'], [3, 3, 'eu', 'Pasa a la Sudamericana'], [4, 4, 'des', 'Eliminado']],
+    'sudamericana': [[1, 1, 'cl', 'Octavos'], [2, 2, 'eu', 'Playoff de octavos'], [3, 4, 'des', 'Eliminado']],
 }
 
 # Nombres: ESPN -> football-data

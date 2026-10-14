@@ -1,13 +1,15 @@
 """
-Prueba del modelo europeo sin mirar al futuro (data/modelo/<copa>/backtest.json para Champions, Europa y Conference).
+Prueba de los modelos de copas sin mirar al futuro (data/modelo/<copa>/backtest.json): Champions, Europa y Conference
+con el modelo de Europa; Libertadores y Sudamericana con el de Sudamérica.
 
-- Cada semana el modelo se ajusta solo con partidos anteriores (ligas + copas) y predice los partidos europeos de esa
-  semana (fase de liga, eliminatorias y previas).
+- Cada semana el modelo se ajusta solo con partidos anteriores (ligas + copas) y predice los partidos de copa de esa
+  semana (fase de liga o de grupos, eliminatorias y previas).
 - Se compara con el momio de cierre que guarda ESPN (ESPN BET o DraftKings): 1X2 y más/menos 2.5 goles cuando hay.
-- Las temporadas 2022-23 y 2023-24 sirven para elegir los parámetros; la prueba es de 2024-25 en adelante.
+- Europa: las temporadas 2022-23 y 2023-24 sirven para elegir los parámetros; la prueba es de 2024-25 en adelante.
+  Sudamérica: 2022 y 2023 para elegir; la prueba es de 2024 en adelante.
 
-    python src/prueba_europa.py           # con los parámetros de europa.py
-    python src/prueba_europa.py elegir    # vuelve a elegirlos con 2022-24
+    python src/prueba_europa.py [region]           # con los parámetros de europa.py (region: europa o sudamerica)
+    python src/prueba_europa.py [region] elegir    # vuelve a elegirlos
 """
 import json
 import os
@@ -18,20 +20,20 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, LIGAS
-from europa import (cargar_partidos, ligas_de_equipos, ModeloEuropa, COPAS, MOMIOS,
-                    HALF_LIFE, SD_EQUIPO, SD_LIGA, PREVIO_OTRAS, SD_OTRAS, SD_EQUIPO_OTRAS)
+from europa import cargar_partidos, ligas_de_equipos, ModeloEuropa, REGIONES, PARAMS, archivo
 from model import score_matrix, markets_from_matrix
 from prueba import apuestas, resumen
 
 warnings.filterwarnings('ignore')
-AJUSTE = ('2022-07-01', '2024-07-01')      # dos temporadas, todos los partidos europeos (con o sin momios)
-PRUEBA_DESDE = '2024-07-01'
+# dos temporadas para elegir parámetros (todos los partidos de copa, con o sin momios) y desde cuándo es la prueba
+AJUSTE = {'europa': ('2022-07-01', '2024-07-01'), 'sudamerica': ('2022-01-01', '2024-01-01')}
+PRUEBA_DESDE = {'europa': '2024-07-01', 'sudamerica': '2024-01-01'}
 
 
-def predecir(df, desde, hasta, params, paso=7):
+def predecir(df, desde, hasta, params, paso=7, region='europa'):
     """paso: días entre un ajuste y el siguiente (7 en la prueba; 14 para elegir parámetros, que es más lento)."""
     f = pd.to_datetime(df.fecha)
-    test = df[df.comp.isin(list(COPAS)) & (f >= pd.Timestamp(desde)) & (f < pd.Timestamp(hasta))]
+    test = df[df.comp.isin(list(REGIONES[region]['copas'])) & (f >= pd.Timestamp(desde)) & (f < pd.Timestamp(hasta))]
     filas = []
     fechas = sorted(pd.to_datetime(test.fecha).unique())
     k = 0
@@ -40,7 +42,7 @@ def predecir(df, desde, hasta, params, paso=7):
         bloque = [x for x in fechas[k:] if pd.Timestamp(x) < d0 + pd.Timedelta(days=paso)]
         k += len(bloque)
         sem = test[pd.to_datetime(test.fecha).isin(bloque)]
-        m = ModeloEuropa(**params).fit(df, d0, ligas_de_equipos(df, d0))
+        m = ModeloEuropa(region, **params).fit(df, d0, ligas_de_equipos(df, d0, region))
         for r in sem.itertuples():
             if r.local_id not in m.tidx or r.visita_id not in m.tidx:
                 continue
@@ -51,8 +53,8 @@ def predecir(df, desde, hasta, params, paso=7):
     return df.merge(pd.DataFrame(filas), on='id')
 
 
-def con_momios(d):
-    mo = pd.read_csv(MOMIOS, dtype={'id': str})
+def con_momios(d, region='europa'):
+    mo = pd.read_csv(archivo(region, 'momios.csv'), dtype={'id': str})
     mo = mo[mo.casa.fillna('') != '']
     d = d.merge(mo, on='id', how='left')
     d['Date'] = pd.to_datetime(d.fecha)
@@ -83,17 +85,16 @@ def logloss(d):
     return float(mod[ok].mean()), float(mer[ok].mean()), int(ok.sum())
 
 
-def elegir(df):
+def elegir(df, region='europa'):
     """Búsqueda por partes (cada prueba tarda ~2 minutos): primero lo de los equipos de países sin liga en los datos,
-    luego la memoria y el freno de los equipos."""
-    base = dict(half_life=HALF_LIFE, sd_equipo=SD_EQUIPO, sd_liga=SD_LIGA, previo_otras=PREVIO_OTRAS, sd_otras=SD_OTRAS,
-                sd_equipo_otras=SD_EQUIPO_OTRAS)
+    luego la memoria y el freno de los equipos (en Sudamérica: primero la altura y la ventaja de local por liga)."""
+    base = dict(PARAMS[region])
     vistos = {}
 
     def probar(params):
         clave = tuple(sorted((k, str(v)) for k, v in params.items()))
         if clave not in vistos:
-            d = con_momios(predecir(df, *AJUSTE, params, paso=14))
+            d = con_momios(predecir(df, *AJUSTE[region], params, paso=14, region=region), region)
             lt = logloss_todos(d)
             lm, lc, n = logloss(d)
             vistos[clave] = lt
@@ -102,6 +103,9 @@ def elegir(df):
     mejor = dict(base)
     rejilla = [('sd_equipo_otras', (0.35, 0.5, 0.7, 1.0)), ('previo_otras', ((-0.25, 0.25), (-0.40, 0.40), (-0.55, 0.55))),
                ('sd_otras', (0.3, 0.6)), ('half_life', (365, 540, 730)), ('sd_equipo', (0.35, 0.5, 0.7))]
+    if region == 'sudamerica':    # todos los equipos tienen su liga en los datos: lo de los países sin liga no aplica
+        rejilla = [('altitud', (None, 'km', 'sobre1500')), ('sd_hfa', (None, 0.1, 0.2)), ('half_life', (365, 540, 730, 1000)),
+                   ('sd_equipo', (0.35, 0.5, 0.7, 1.0)), ('sd_liga', (0.3, 0.6, 1.0))]
     for clave, valores in rejilla:          # uno por uno, quedándose con el mejor de cada uno
         for v in valores:
             p = {**mejor, clave: v}
@@ -145,16 +149,16 @@ def evaluar(d, comps=None):
     return out, b
 
 
-def main(elegir_parametros=False):
-    df = cargar_partidos()
-    print(f'- {len(df)} partidos; de copas UEFA: {df.comp.isin(list(COPAS)).sum()}')
-    params = dict(half_life=HALF_LIFE, sd_equipo=SD_EQUIPO, sd_liga=SD_LIGA, previo_otras=PREVIO_OTRAS, sd_otras=SD_OTRAS,
-                  sd_equipo_otras=SD_EQUIPO_OTRAS)
+def main(region='europa', elegir_parametros=False):
+    R = REGIONES[region]
+    df = cargar_partidos(region)
+    print(f"- {len(df)} partidos; de {R['de_copas']}: {df.comp.isin(list(R['copas'])).sum()}")
+    params = dict(PARAMS[region])
     if elegir_parametros:
-        print('- eligiendo parámetros con 2022-24')
-        params = elegir(df)
+        print(f'- eligiendo parámetros con {AJUSTE[region]}')
+        params = elegir(df, region)
     print('  parámetros:', params)
-    d = con_momios(predecir(df, PRUEBA_DESDE, '2100-01-01', params))
+    d = con_momios(predecir(df, PRUEBA_DESDE[region], '2100-01-01', params, region=region), region)
     if os.environ.get('PRUEBA_PKL'):         # para revisar a mano
         d.to_pickle(os.environ['PRUEBA_PKL'])
     todas, b = evaluar(d)
@@ -164,12 +168,14 @@ def main(elegir_parametros=False):
     print(f"  PICK EV>=5%: {p['n']} apuestas, ROI {p['roi']:+.1%} [{p['roi_ic95'][0]:+.1%}, {p['roi_ic95'][1]:+.1%}]")
     print('  por selección:', [(x['sel'], x['n'], round(x['roi'], 3)) for x in todas['por_seleccion']])
     print('  por EV:', [(x['tramo'], x['n'], round(x['roi'], 3)) for x in todas['por_ev']])
-    q, _ = evaluar(d, [c for c in COPAS if c.endswith('_qual')])
-    qq = q['estrategias'][q['principal']]
-    print(f"  previas (no tienen página): {q['partidos']} partidos, PICK {qq['n']}, ROI {qq['roi']:+.1%}; log loss "
-          f"{q['logloss']['1x2']['modelo']:.4f} vs {q['logloss']['1x2']['cierre_justo']:.4f}")
+    previas = [c for c in R['copas'] if c.endswith('_qual')]
+    if previas:
+        q, _ = evaluar(d, previas)
+        qq = q['estrategias'][q['principal']]
+        print(f"  previas (no tienen página): {q['partidos']} partidos, PICK {qq['n']}, ROI {qq['roi']:+.1%}; log loss "
+              f"{q['logloss']['1x2']['modelo']:.4f} vs {q['logloss']['1x2']['cierre_justo']:.4f}")
     for liga, L in LIGAS.items():
-        if not L.get('uefa'):
+        if L.get('region') != region:
             continue
         res, _ = evaluar(d, [L['espn']])         # la página es de la copa (fase de liga y eliminatorias), no de la previa
         res['parametros'] = params
@@ -184,4 +190,5 @@ def main(elegir_parametros=False):
 
 
 if __name__ == '__main__':
-    main('elegir' in sys.argv)
+    reg = next((a for a in sys.argv[1:] if a in REGIONES), 'europa')
+    main(reg, 'elegir' in sys.argv)

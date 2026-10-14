@@ -1,0 +1,62 @@
+[
+ {
+  "prueba": "Modelo base: fuerza de cada liga (con los partidos de copa) y de cada equipo (con su liga)",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.0279290197286395,
+  "casa": 0.9835813729167796,
+  "roi": -0.0861705131574492,
+  "n": 302,
+  "nota": "Punto de partida, igual al de las copas europeas."
+ },
+ {
+  "prueba": "+ altura del estadio (en uso)",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.0108357010124802,
+  "casa": 0.9835813729167796,
+  "roi": -0.006967165808471881,
+  "n": 300,
+  "nota": "Más goles del local y menos de la visita por cada metro que el local juega más alto que la visita (contando lo que pasa de 1500 m). Lo que más ayudó: Bolívar, Always Ready, Liga de Quito o Independiente del Valle ganan en casa mucho más de lo que dice su nivel."
+ },
+ {
+  "prueba": "+ ventaja de local menor entre equipos del mismo país",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.0109683045499753,
+  "casa": 0.9835813729167796,
+  "roi": -0.021943151544650034,
+  "n": 298,
+  "nota": "Sin viaje largo la ventaja de local en las copas es casi nula (0.02 contra 0.17), pero no mejoró las predicciones en 2022-23: no se usa."
+ },
+ {
+  "prueba": "+ la fuerza propia de cada equipo pesa distinto en las copas",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.016929238000966,
+  "casa": 0.9835813729167796,
+  "roi": -0.029447345377449825,
+  "n": 344,
+  "nota": "El ajuste dijo que pesa 13% más en las copas; predijo peor: no se usa."
+ },
+ {
+  "prueba": "Corrección de favoritos y empates (la de las ligas de Europa)",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.0225582325125675,
+  "casa": 0.9835813729167796,
+  "roi": -0.04352752017478212,
+  "n": 345,
+  "nota": "Ayuda en las ligas de Europa; aquí empeora la precisión: no se usa."
+ },
+ {
+  "prueba": "PICK solo si el modelo da 30% o más (regla de todas las ligas)",
+  "periodo": "2024-26",
+  "contra": "momio de cierre (ESPN BET o DraftKings)",
+  "modelo": 1.0108357010124802,
+  "casa": 0.9835813729167796,
+  "roi": -0.006967165808471881,
+  "n": 300,
+  "nota": "Sin la regla: 481 apuestas, ROI +2.4%. Se deja igual que en las demás ligas."
+ }
+]

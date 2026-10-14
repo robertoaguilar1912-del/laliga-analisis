@@ -101,7 +101,7 @@
   const parseOdds = s => { s = String(s).trim().replace(',', '.').replace('−', '-'); if (!s) return null; const v = parseFloat(s); if (!isFinite(v)) return null; if (/^[+-]/.test(s) || Math.abs(v) >= 100) return Math.abs(v) >= 100 ? amToDec(v) : null; if (v > 1 && v < 100) return v; return null; };
   const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   const rec = r => r ? r.slice(0, r[2] ? 3 : 2).join('-') : '—';
-  const corto = n => n.replace(' League', '');
+  const corto = n => n.replace(' League', '').replace(/^Copa (?=Libertadores|Sudamericana)/, '');
 
   // ---------------- selector de ligas
   try { localStorage.setItem('laboratorio-liga', 'nba'); } catch (e) { /* sin almacenamiento */ }
