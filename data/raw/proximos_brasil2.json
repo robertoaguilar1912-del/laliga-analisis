@@ -1,154 +1,5 @@
 [
  {
-  "id": "401860390",
-  "utc": "2026-10-13T22:30Z",
-  "estadio": "Estádio Joaquim Portugal",
-  "local_espn": "Athletic",
-  "visita_espn": "Londrina",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -105,
-    250,
-    290
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    110,
-    -145
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -120
-    ],
-    [
-     "+0.5",
-     -120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Athletic": [
-    [
-     "189787",
-     "Luan Polli",
-     "G"
-    ],
-    [
-     "323125",
-     "Lucas Belezi",
-     "CD"
-    ],
-    [
-     "390864",
-     "Jhan Torres",
-     "CD-L"
-    ],
-    [
-     "97972",
-     "Jhonatan",
-     "CD-R"
-    ],
-    [
-     "409515",
-     "João Miguel Da Costa Pereira",
-     "CM-L"
-    ],
-    [
-     "339036",
-     "Jota",
-     "CM-R"
-    ],
-    [
-     "379395",
-     "Enzo",
-     "LM"
-    ],
-    [
-     "321358",
-     "Diogo Batista",
-     "RM"
-    ],
-    [
-     "379288",
-     "Max",
-     "F"
-    ],
-    [
-     "379739",
-     "Kauan Lindes",
-     "CF-L"
-    ],
-    [
-     "359193",
-     "Kauan",
-     "CF-R"
-    ]
-   ],
-   "Londrina": [
-    [
-     "271559",
-     "Luan",
-     "G"
-    ],
-    [
-     "199044",
-     "Wallace Reis",
-     "CD-L"
-    ],
-    [
-     "418227",
-     "Caio",
-     "CD-R"
-    ],
-    [
-     "202561",
-     "Tarik",
-     "DM"
-    ],
-    [
-     "292283",
-     "Heron",
-     "LB"
-    ],
-    [
-     "398498",
-     "Kauê Leonardo",
-     "RB"
-    ],
-    [
-     "357706",
-     "João Vitor",
-     "CM-L"
-    ],
-    [
-     "349559",
-     "Geovane Santana Meurer",
-     "CM-R"
-    ],
-    [
-     "250391",
-     "Herbert Mateus Almeida De Oliveira",
-     "LM"
-    ],
-    [
-     "390376",
-     "Vitinho Mota",
-     "RM"
-    ],
-    [
-     "166488",
-     "William Pottker",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401860398",
   "utc": "2026-10-16T22:30Z",
   "estadio": "Estádio Italo Mário Limongi",
@@ -160,7 +11,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1000,
+    1100,
     475,
     -450
    ],
@@ -199,13 +50,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -150
+    105,
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
@@ -336,9 +187,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
     195,
-    150
+    200,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -348,11 +199,11 @@
    "spread": [
     [
      "+0.5",
-     -215
+     -200
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   }
@@ -429,6 +280,61 @@
   "estadio": "Ilha do Retiro",
   "local_espn": "Sport",
   "visita_espn": "Criciúma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860403",
+  "utc": "2026-10-24T19:00Z",
+  "estadio": "Estádio da Ressacada",
+  "local_espn": "Avaí",
+  "visita_espn": "Botafogo-SP",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860404",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "Estádio Antônio Accioly",
+  "local_espn": "Atlético Goianiense",
+  "visita_espn": "Novorizontino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860407",
+  "utc": "2026-10-24T19:30Z",
+  "estadio": "Estádio Primeiro de Maio",
+  "local_espn": "São Bernardo",
+  "visita_espn": "Vila Nova",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860402",
+  "utc": "2026-10-24T21:30Z",
+  "estadio": "Estádio Rei Pelé",
+  "local_espn": "CRB",
+  "visita_espn": "Londrina",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860409",
+  "utc": "2026-10-24T21:30Z",
+  "estadio": "Moisés Lucarelli",
+  "local_espn": "Ponte Preta",
+  "visita_espn": "Fortaleza",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
