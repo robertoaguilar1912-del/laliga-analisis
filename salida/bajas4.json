@@ -1,0 +1,1728 @@
+{
+ "matches_keys": [
+  "leagues",
+  "date"
+ ],
+ "league_keys": {
+  "ccode": "ENG",
+  "id": 47,
+  "primaryId": 47,
+  "name": "Premier League",
+  "matches": "list[5]",
+  "internalRank": 30,
+  "simpleLeague": false,
+  "localRank": 17
+ },
+ "match_ejemplo": {
+  "id": 5795478,
+  "leagueId": 47,
+  "time": "17.10.2026 13:30",
+  "home": {
+   "id": 8668,
+   "score": 0,
+   "name": "Everton",
+   "longName": "Everton"
+  },
+  "away": {
+   "id": 8455,
+   "score": 0,
+   "name": "Chelsea",
+   "longName": "Chelsea"
+  },
+  "eliminatedTeamId": null,
+  "statusId": 1,
+  "tournamentStage": "7",
+  "status": {
+   "utcTime": "2026-10-17T11:30:00.000Z",
+   "halfs": {
+    "firstHalfStarted": "17.10.2026 13:30:00"
+   },
+   "periodLength": 45,
+   "started": false,
+   "cancelled": false,
+   "finished": false
+  },
+  "timeTS": 1792236600000
+ },
+ "ligas": {
+  "42": [
+   "Champions League",
+   "INT",
+   943230,
+   42,
+   9
+  ],
+  "130": [
+   "Major League Soccer",
+   "USA",
+   913550,
+   130,
+   1
+  ],
+  "203": [
+   "1. Divisjon",
+   "NOR",
+   203,
+   null,
+   1
+  ],
+  "122": [
+   "1. Liga",
+   "CZE",
+   938182,
+   122,
+   3
+  ],
+  "208": [
+   "3. Liga",
+   "GER",
+   208,
+   null,
+   3
+  ],
+  "525": [
+   "AFC Champions League Elite East",
+   "INT",
+   943984,
+   525,
+   2
+  ],
+  "530": [
+   "Botola Pro",
+   "MAR",
+   530,
+   null,
+   2
+  ],
+  "193": [
+   "Cup Grp. A",
+   "RUS",
+   938418,
+   193,
+   2
+  ],
+  "330": [
+   "Cup",
+   "CYP",
+   330,
+   null,
+   2
+  ],
+  "10342": [
+   "Cup",
+   "URU",
+   10342,
+   null,
+   1
+  ],
+  "10230": [
+   "Cup",
+   "PAR",
+   10230,
+   null,
+   2
+  ],
+  "177": [
+   "FA Cup",
+   "SVK",
+   177,
+   null,
+   1
+  ],
+  "8935": [
+   "II Liga",
+   "POL",
+   8935,
+   null,
+   5
+  ],
+  "9478": [
+   "Indian Super League",
+   "IND",
+   949788,
+   9478,
+   1
+  ],
+  "8947": [
+   "Southern Premier Division South",
+   "ENG",
+   941118,
+   8947,
+   1
+  ],
+  "224": [
+   "League Cup",
+   "JPN",
+   943369,
+   224,
+   8
+  ],
+  "336": [
+   "Liga Nacional Apertura",
+   "GUA",
+   938628,
+   336,
+   1
+  ],
+  "516": [
+   "Ligue 1",
+   "ALG",
+   516,
+   null,
+   3
+  ],
+  "9117": [
+   "NB II",
+   "HUN",
+   9117,
+   null,
+   1
+  ],
+  "205": [
+   "3. Divisjon Avd. 2",
+   "NOR",
+   919793,
+   205,
+   1
+  ],
+  "263": [
+   "Premier League",
+   "BLR",
+   923169,
+   263,
+   3
+  ],
+  "225": [
+   "Premier League",
+   "KAZ",
+   922739,
+   225,
+   4
+  ],
+  "121": [
+   "Primera Division Apertura",
+   "CRC",
+   938190,
+   121,
+   3
+  ],
+  "512": [
+   "Regionalliga Southwest",
+   "GER",
+   940469,
+   512,
+   2
+  ],
+  "147": [
+   "Serie C Grp. C",
+   "ITA",
+   942852,
+   147,
+   1
+  ],
+  "8815": [
+   "Super League 2",
+   "GRE",
+   945430,
+   8815,
+   8
+  ],
+  "186": [
+   "Taca de Portugal",
+   "POR",
+   186,
+   null,
+   13
+  ],
+  "8972": [
+   "USL Championship",
+   "USA",
+   8972,
+   null,
+   2
+  ],
+  "165": [
+   "1. Lig",
+   "TUR",
+   1000001750,
+   165,
+   4
+  ],
+  "9469": [
+   "AFC Champions League Two - G",
+   "INT",
+   9469,
+   9469,
+   2
+  ],
+  "48": [
+   "Championship",
+   "ENG",
+   1000001801,
+   48,
+   11
+  ],
+  "299": [
+   "Copa Sudamericana - Semi-finals",
+   "INT",
+   1000001660,
+   299,
+   2
+  ],
+  "112": [
+   "Liga Profesional",
+   "ARG",
+   1000001729,
+   112,
+   2
+  ],
+  "523": [
+   "Persian Gulf",
+   "IRN",
+   1000001715,
+   523,
+   1
+  ],
+  "248": [
+   "Premium liiga",
+   "EST",
+   1000001181,
+   248,
+   4
+  ],
+  "274": [
+   "Primera A",
+   "COL",
+   1000001696,
+   274,
+   1
+  ],
+  "9125": [
+   "Primera B",
+   "COL",
+   1000001589,
+   9125,
+   4
+  ],
+  "10721": [
+   "Saudi First Division",
+   "KSA",
+   1000001576,
+   10721,
+   3
+  ],
+  "11030": [
+   "Second Division",
+   "QAT",
+   1000001481,
+   11030,
+   2
+  ],
+  "9498": [
+   "Thai League 2",
+   "THA",
+   1000001616,
+   9498,
+   4
+  ],
+  "9741": [
+   "UEFA Youth League - League Stage",
+   "INT",
+   1000001457,
+   9741,
+   9
+  ],
+  "9296": [
+   "USL League One",
+   "USA",
+   1000001712,
+   9296,
+   2
+  ],
+  "73": [
+   "Europa League",
+   "INT",
+   943229,
+   73,
+   18
+  ],
+  "10216": [
+   "Conference League",
+   "INT",
+   943231,
+   10216,
+   18
+  ],
+  "8938": [
+   "Australian Championship Grp. D",
+   "AUS",
+   949117,
+   8938,
+   1
+  ],
+  "9490": [
+   "Cup",
+   "COL",
+   938416,
+   9490,
+   1
+  ],
+  "197": [
+   "I Liga",
+   "POL",
+   197,
+   null,
+   1
+  ],
+  "108": [
+   "League One",
+   "ENG",
+   938219,
+   108,
+   1
+  ],
+  "337": [
+   "Liga Nacional - Apertura",
+   "HON",
+   941508,
+   337,
+   2
+  ],
+  "8970": [
+   "Ligue 3",
+   "FRA",
+   8970,
+   null,
+   8
+  ],
+  "540": [
+   "Superliga",
+   "UZB",
+   540,
+   null,
+   1
+  ],
+  "45": [
+   "Copa Libertadores - Semi-finals",
+   "INT",
+   1000001642,
+   45,
+   1
+  ],
+  "11021": [
+   "Copa Libertadores Femenina",
+   "INT",
+   1000001174,
+   11021,
+   4
+  ],
+  "536": [
+   "Saudi Pro League",
+   "KSA",
+   1000001787,
+   536,
+   3
+  ],
+  "226": [
+   "Virsliga",
+   "LVA",
+   1000001180,
+   226,
+   2
+  ],
+  "54": [
+   "Bundesliga",
+   "GER",
+   54,
+   null,
+   2
+  ],
+  "87": [
+   "LaLiga",
+   "ESP",
+   87,
+   null,
+   1
+  ],
+  "53": [
+   "Ligue 1",
+   "FRA",
+   53,
+   null,
+   5
+  ],
+  "55": [
+   "Serie A",
+   "ITA",
+   55,
+   null,
+   2
+  ],
+  "85": [
+   "1. Division",
+   "DEN",
+   936592,
+   85,
+   1
+  ],
+  "146": [
+   "2. Bundesliga",
+   "GER",
+   146,
+   null,
+   3
+  ],
+  "239": [
+   "2. Division",
+   "DEN",
+   938638,
+   239,
+   1
+  ],
+  "9100": [
+   "2. Division",
+   "CYP",
+   945609,
+   9100,
+   1
+  ],
+  "119": [
+   "2. Liga",
+   "AUT",
+   938696,
+   119,
+   1
+  ],
+  "10443": [
+   "Bangladesh Football League",
+   "BAN",
+   10443,
+   null,
+   3
+  ],
+  "38": [
+   "Bundesliga",
+   "AUT",
+   938366,
+   38,
+   3
+  ],
+  "10619": [
+   "CAF Champions League Qualification",
+   "INT",
+   943487,
+   10619,
+   1
+  ],
+  "123": [
+   "Championship",
+   "SCO",
+   937668,
+   123,
+   4
+  ],
+  "149": [
+   "Cup",
+   "BEL",
+   149,
+   null,
+   5
+  ],
+  "164": [
+   "Cup",
+   "SUI",
+   164,
+   null,
+   6
+  ],
+  "271": [
+   "Cup",
+   "BUL",
+   271,
+   null,
+   2
+  ],
+  "111": [
+   "Eerste Divisie",
+   "NED",
+   111,
+   null,
+   3
+  ],
+  "196": [
+   "Ekstraklasa",
+   "POL",
+   937879,
+   196,
+   1
+  ],
+  "57": [
+   "Eredivisie",
+   "NED",
+   937276,
+   57,
+   5
+  ],
+  "169": [
+   "Ettan Soedra",
+   "SWE",
+   918053,
+   169,
+   2
+  ],
+  "218": [
+   "First Division",
+   "IRL",
+   916016,
+   218,
+   5
+  ],
+  "338": [
+   "First League",
+   "RUS",
+   938422,
+   338,
+   4
+  ],
+  "9676": [
+   "Frauen-Bundesliga",
+   "GER",
+   9676,
+   null,
+   1
+  ],
+  "252": [
+   "HNL",
+   "CRO",
+   252,
+   null,
+   2
+  ],
+  "260": [
+   "Kategoria Superiore",
+   "ALB",
+   260,
+   null,
+   2
+  ],
+  "140": [
+   "LaLiga2",
+   "ESP",
+   938653,
+   140,
+   1
+  ],
+  "128": [
+   "Leumit League",
+   "ISR",
+   938187,
+   128,
+   3
+  ],
+  "161": [
+   "Liga AUF Uruguaya Clausura",
+   "URU",
+   942853,
+   161,
+   1
+  ],
+  "8985": [
+   "Liga Super",
+   "MAS",
+   8985,
+   null,
+   2
+  ],
+  "110": [
+   "Ligue 2",
+   "FRA",
+   110,
+   null,
+   1
+  ],
+  "212": [
+   "NB I",
+   "HUN",
+   212,
+   null,
+   2
+  ],
+  "126": [
+   "Premier Division",
+   "IRL",
+   126,
+   null,
+   2
+  ],
+  "441": [
+   "Premier League",
+   "UKR",
+   940431,
+   441,
+   1
+  ],
+  "262": [
+   "Premier League",
+   "AZE",
+   262,
+   null,
+   2
+  ],
+  "118": [
+   "Premier League",
+   "ARM",
+   118,
+   null,
+   2
+  ],
+  "461": [
+   "Premier League",
+   "SIN",
+   461,
+   null,
+   1
+  ],
+  "9066": [
+   "Premier League",
+   "TAN",
+   9066,
+   null,
+   1
+  ],
+  "129": [
+   "Premiership",
+   "NIR",
+   938371,
+   129,
+   5
+  ],
+  "8968": [
+   "Primera Federacion - Group 2",
+   "ESP",
+   938783,
+   8968,
+   5
+  ],
+  "173": [
+   "Prva Liga",
+   "SVN",
+   173,
+   null,
+   2
+  ],
+  "9122": [
+   "Segunda Division",
+   "URU",
+   922761,
+   9122,
+   3
+  ],
+  "86": [
+   "Serie B",
+   "ITA",
+   941726,
+   86,
+   3
+  ],
+  "524": [
+   "Stars League",
+   "IRQ",
+   943389,
+   524,
+   3
+  ],
+  "120": [
+   "Super League",
+   "CHN",
+   920266,
+   120,
+   3
+  ],
+  "8983": [
+   "Super League",
+   "IDN",
+   8983,
+   null,
+   3
+  ],
+  "71": [
+   "Super Lig",
+   "TUR",
+   71,
+   null,
+   1
+  ],
+  "189": [
+   "Superliga",
+   "ROU",
+   938428,
+   189,
+   2
+  ],
+  "46": [
+   "Superligaen",
+   "DEN",
+   935487,
+   46,
+   1
+  ],
+  "331": [
+   "Toppserien",
+   "NOR",
+   916229,
+   331,
+   4
+  ],
+  "10699": [
+   "USL Super League",
+   "USA",
+   938854,
+   10699,
+   1
+  ],
+  "113": [
+   "A-League",
+   "AUS",
+   1000001678,
+   113,
+   1
+  ],
+  "67": [
+   "Allsvenskan",
+   "SWE",
+   1000001798,
+   67,
+   1
+  ],
+  "9468": [
+   "CAF Confed Cup - 2nd Preliminary Round",
+   "INT",
+   1000001752,
+   9468,
+   7
+  ],
+  "11697": [
+   "Copa de la Liga - Final",
+   "CHI",
+   1000001425,
+   11697,
+   1
+  ],
+  "199": [
+   "Division Profesional",
+   "PAR",
+   1000001212,
+   199,
+   2
+  ],
+  "253": [
+   "FNL",
+   "CZE",
+   1000001573,
+   253,
+   2
+  ],
+  "9545": [
+   "Lowland League West",
+   "SCO",
+   1000001703,
+   9545,
+   5
+  ],
+  "10668": [
+   "KNVB Beker Women - 1st Round",
+   "NED",
+   1000001501,
+   10668,
+   1
+  ],
+  "131": [
+   "Liga 1",
+   "PER",
+   1000001681,
+   131,
+   5
+  ],
+  "10282": [
+   "MLS Next Pro - Conference - Quarter-finals",
+   "USA",
+   1000001195,
+   10282,
+   1
+  ],
+  "9986": [
+   "Premier League",
+   "CAN",
+   1000001192,
+   9986,
+   3
+  ],
+  "9084": [
+   "Premier League 2",
+   "ENG",
+   1000001513,
+   9084,
+   2
+  ],
+  "9126": [
+   "Primera B",
+   "CHI",
+   1000001235,
+   9126,
+   1
+  ],
+  "144": [
+   "Primera División",
+   "BOL",
+   1000001249,
+   144,
+   3
+  ],
+  "538": [
+   "Pro League",
+   "UAE",
+   1000001738,
+   538,
+   3
+  ],
+  "535": [
+   "Qatar Stars League",
+   "QAT",
+   1000001746,
+   535,
+   2
+  ],
+  "268": [
+   "Série A",
+   "BRA",
+   1000001407,
+   268,
+   1
+  ],
+  "246": [
+   "Serie A - Relegation Round",
+   "ECU",
+   1000001253,
+   246,
+   1
+  ],
+  "8814": [
+   "Série B",
+   "BRA",
+   1000001415,
+   8814,
+   1
+  ],
+  "182": [
+   "Super Liga",
+   "SRB",
+   1000001612,
+   182,
+   3
+  ],
+  "8984": [
+   "Thai League",
+   "THA",
+   1000001471,
+   8984,
+   4
+  ],
+  "47": [
+   "Premier League",
+   "ENG",
+   47,
+   null,
+   1
+  ],
+  "332": [
+   "1. Division Kvinner",
+   "NOR",
+   921414,
+   332,
+   1
+  ],
+  "176": [
+   "1. Liga",
+   "SVK",
+   936918,
+   176,
+   3
+  ],
+  "204": [
+   "2. Divisjon Avd. 2",
+   "NOR",
+   919791,
+   204,
+   2
+  ],
+  "240": [
+   "3. Division",
+   "DEN",
+   938639,
+   240,
+   6
+  ],
+  "228": [
+   "A Lyga",
+   "LTU",
+   228,
+   null,
+   1
+  ],
+  "256": [
+   "A-Liga",
+   "DEN",
+   939688,
+   256,
+   1
+  ],
+  "9470": [
+   "AFC Challenge League Grp. E",
+   "INT",
+   944406,
+   9470,
+   2
+  ],
+  "9137": [
+   "China League",
+   "CHN",
+   920267,
+   9137,
+   3
+  ],
+  "136": [
+   "Cyprus League",
+   "CYP",
+   942063,
+   136,
+   2
+  ],
+  "9089": [
+   "Damallsvenskan",
+   "SWE",
+   9089,
+   null,
+   2
+  ],
+  "59": [
+   "Eliteserien",
+   "NOR",
+   59,
+   null,
+   5
+  ],
+  "10308": [
+   "Elitettan",
+   "SWE",
+   10308,
+   null,
+   2
+  ],
+  "439": [
+   "Erovnuli Liga",
+   "GEO",
+   439,
+   null,
+   1
+  ],
+  "10626": [
+   "FA Cup Qualification",
+   "ENG",
+   10626,
+   null,
+   31
+  ],
+  "223": [
+   "J. League",
+   "JPN",
+   937875,
+   223,
+   10
+  ],
+  "8974": [
+   "J. League 2",
+   "JPN",
+   938215,
+   8974,
+   10
+  ],
+  "9136": [
+   "J. League 3",
+   "JPN",
+   9136,
+   null,
+   10
+  ],
+  "9080": [
+   "K-League 1",
+   "KOR",
+   919356,
+   9080,
+   5
+  ],
+  "10174": [
+   "Kansallinen Liiga Championship Group",
+   "FIN",
+   942233,
+   10174,
+   2
+  ],
+  "10186": [
+   "Kansallinen Liiga Qualification Group",
+   "FIN",
+   10186,
+   null,
+   1
+  ],
+  "124": [
+   "League One",
+   "SCO",
+   937670,
+   124,
+   5
+  ],
+  "109": [
+   "League Two",
+   "ENG",
+   938220,
+   109,
+   12
+  ],
+  "125": [
+   "League Two",
+   "SCO",
+   937672,
+   125,
+   5
+  ],
+  "8976": [
+   "Liga de Expansion MX Apertura",
+   "MEX",
+   939530,
+   8976,
+   5
+  ],
+  "9907": [
+   "Liga F",
+   "ESP",
+   938777,
+   9907,
+   4
+  ],
+  "9113": [
+   "Liga II",
+   "ROU",
+   942122,
+   9113,
+   1
+  ],
+  "9906": [
+   "Liga MX Femenil Apertura",
+   "MEX",
+   942125,
+   9906,
+   1
+  ],
+  "544": [
+   "Ligue I",
+   "TUN",
+   943985,
+   544,
+   8
+  ],
+  "9039": [
+   "LPF Apertura",
+   "PAN",
+   941168,
+   9039,
+   3
+  ],
+  "229": [
+   "National Division",
+   "LUX",
+   229,
+   null,
+   7
+  ],
+  "8870": [
+   "National League Championship",
+   "NZL",
+   948410,
+   8870,
+   3
+  ],
+  "8944": [
+   "National League South",
+   "ENG",
+   940374,
+   8944,
+   10
+  ],
+  "533": [
+   "NPFL",
+   "NGA",
+   943368,
+   533,
+   9
+  ],
+  "9134": [
+   "NWSL",
+   "USA",
+   920228,
+   9134,
+   4
+  ],
+  "63": [
+   "Premier League",
+   "RUS",
+   63,
+   null,
+   1
+  ],
+  "267": [
+   "Premier League",
+   "BIH",
+   940873,
+   267,
+   5
+  ],
+  "529": [
+   "Premier League",
+   "KUW",
+   943480,
+   529,
+   2
+  ],
+  "10068": [
+   "Premier League U18",
+   "ENG",
+   10068,
+   null,
+   15
+  ],
+  "9677": [
+   "Premiere Ligue",
+   "FRA",
+   938005,
+   9677,
+   1
+  ],
+  "64": [
+   "Premiership",
+   "SCO",
+   937650,
+   64,
+   1
+  ],
+  "9213": [
+   "Primera B Metropolitana",
+   "ARG",
+   916561,
+   9213,
+   1
+  ],
+  "335": [
+   "Primera Division - Apertura",
+   "SLV",
+   941466,
+   335,
+   3
+  ],
+  "8965": [
+   "Primera Nacional",
+   "ARG",
+   916553,
+   8965,
+   5
+  ],
+  "249": [
+   "Prva Liga",
+   "MKD",
+   249,
+   null,
+   1
+  ],
+  "9138": [
+   "Segunda Federacion - Group 1",
+   "ESP",
+   938779,
+   9138,
+   5
+  ],
+  "10178": [
+   "Serie A Femminile",
+   "ITA",
+   942146,
+   10178,
+   3
+  ],
+  "135": [
+   "Super League",
+   "GRE",
+   941071,
+   135,
+   5
+  ],
+  "231": [
+   "Super Liga",
+   "MDA",
+   936986,
+   231,
+   2
+  ],
+  "168": [
+   "Superettan",
+   "SWE",
+   168,
+   null,
+   1
+  ],
+  "9195": [
+   "Tweede Divisie",
+   "NED",
+   9195,
+   null,
+   9
+  ],
+  "9088": [
+   "V-League",
+   "VIE",
+   9088,
+   null,
+   1
+  ],
+  "51": [
+   "Veikkausliiga Championship Group",
+   "FIN",
+   945694,
+   51,
+   1
+  ],
+  "9717": [
+   "Women's League Cup",
+   "ENG",
+   943324,
+   9717,
+   7
+  ],
+  "10210": [
+   "Women's Premier Division",
+   "IRL",
+   10210,
+   null,
+   6
+  ],
+  "9227": [
+   "WSL",
+   "ENG",
+   9227,
+   null,
+   6
+  ],
+  "9495": [
+   "A-League Women",
+   "AUS",
+   1000001497,
+   9495,
+   1
+  ],
+  "215": [
+   "Besta deildin - Championship Round",
+   "ISL",
+   1000001706,
+   215,
+   1
+  ],
+  "11646": [
+   "Copa Paulista - Finals",
+   "BRA",
+   1000001326,
+   11646,
+   1
+  ],
+  "9116": [
+   "K League 2",
+   "KOR",
+   1000001737,
+   9116,
+   3
+  ],
+  "230": [
+   "Liga MX",
+   "MEX",
+   1000001644,
+   230,
+   5
+  ],
+  "127": [
+   "Ligat ha'Al",
+   "ISR",
+   1000001618,
+   127,
+   1
+  ],
+  "10872": [
+   "Northern Super League",
+   "CAN",
+   1000001210,
+   10872,
+   2
+  ],
+  "537": [
+   "Premier Soccer League",
+   "RSA",
+   1000001719,
+   537,
+   1
+  ],
+  "339": [
+   "Primera División",
+   "VEN",
+   1000001689,
+   339,
+   4
+  ],
+  "8971": [
+   "Série C - Final",
+   "BRA",
+   1000001177,
+   8971,
+   1
+  ],
+  "9500": [
+   "WE League",
+   "JPN",
+   1000001499,
+   9500,
+   3
+  ],
+  "251": [
+   "Ykkösliiga",
+   "FIN",
+   1000001716,
+   251,
+   5
+  ],
+  "232": [
+   "1. CFL",
+   "MNE",
+   232,
+   null,
+   5
+  ],
+  "10289": [
+   "Eredivisie Vrouwen",
+   "NED",
+   10289,
+   null,
+   2
+  ],
+  "250": [
+   "Premier League",
+   "FRO",
+   250,
+   null,
+   5
+  ],
+  "522": [
+   "Premier League",
+   "GHA",
+   522,
+   null,
+   9
+  ],
+  "8969": [
+   "Ykkonen Relegation Group",
+   "FIN",
+   945702,
+   8969,
+   3
+  ],
+  "10791": [
+   "SWPL 1",
+   "SCO",
+   1000001595,
+   10791,
+   5
+  ],
+  "9372": [
+   "Azadegan League",
+   "IRN",
+   9372,
+   null,
+   4
+  ],
+  "61": [
+   "Liga Portugal",
+   "POR",
+   61,
+   null,
+   1
+  ],
+  "519": [
+   "Premier League",
+   "EGY",
+   943009,
+   519,
+   3
+  ],
+  "9682": [
+   "CONCACAF Central American Cup",
+   "INT",
+   944910,
+   9682,
+   1
+  ],
+  "9091": [
+   "Cup",
+   "CHI",
+   946196,
+   9091,
+   1
+  ],
+  "242": [
+   "DBU Pokalen",
+   "DEN",
+   242,
+   null,
+   1
+  ],
+  "8978": [
+   "League Cup",
+   "NIR",
+   8978,
+   null,
+   1
+  ],
+  "333": [
+   "NM Kvinner",
+   "NOR",
+   333,
+   null,
+   8
+  ],
+  "9837": [
+   "Canadian Championship - Final",
+   "CAN",
+   1000001162,
+   9837,
+   1
+  ],
+  "9943": [
+   "President's Cup",
+   "UAE",
+   9943,
+   null,
+   3
+  ],
+  "9441": [
+   "US Open Cup",
+   "USA",
+   922585,
+   9441,
+   1
+  ]
+ },
+ "lineup_keys": [
+  "matchId",
+  "lineupType",
+  "source",
+  "availableFilters",
+  "homeTeam",
+  "awayTeam"
+ ],
+ "lineup_tipo": {
+  "matchId": 5795478,
+  "lineupType": "lastStarting11",
+  "source": "lastStartingLineups"
+ },
+ "home_keys": {
+  "id": [
+   "int",
+   null
+  ],
+  "name": [
+   "str",
+   null
+  ],
+  "formation": [
+   "str",
+   null
+  ],
+  "starters": [
+   "list",
+   11
+  ],
+  "coach": [
+   "dict",
+   null
+  ],
+  "subs": [
+   "list",
+   9
+  ],
+  "unavailable": [
+   "list",
+   1
+  ],
+  "averageStarterAge": [
+   "int",
+   null
+  ],
+  "totalStarterMarketValue": [
+   "int",
+   null
+  ],
+  "lastMatch": [
+   "dict",
+   null
+  ]
+ },
+ "home_starter0": {
+  "id": 303919,
+  "age": 32,
+  "name": "Jordan Pickford",
+  "positionId": 11,
+  "usualPlayingPositionId": 0,
+  "shirtNumber": "1",
+  "countryName": "England",
+  "countryCode": "ENG",
+  "horizontalLayout": {
+   "x": 0.1,
+   "y": 0.5,
+   "height": 0.25,
+   "width": 0.192
+  },
+  "verticalLayout": {
+   "x": 0.5,
+   "y": 0.1,
+   "height": 0.192,
+   "width": 1
+  },
+  "marketValue": 12967809,
+  "firstName": "Jordan",
+  "lastName": "Pickford",
+  "nationalTeamId": 8491,
+  "rankings": null
+ },
+ "home_sub0": {
+  "id": 731855,
+  "age": 27,
+  "name": "Mark Travers",
+  "usualPlayingPositionId": 0,
+  "shirtNumber": "12",
+  "countryName": "Ireland",
+  "countryCode": "IRL",
+  "marketValue": 4267705,
+  "firstName": "Mark",
+  "lastName": "Travers",
+  "nationalTeamId": 5791,
+  "rankings": null
+ },
+ "home_unav": [
+  {
+   "id": 874025,
+   "age": 27,
+   "name": "Vitaliy Mykolenko",
+   "countryName": "Ukraine",
+   "countryCode": "UKR",
+   "marketValue": 28818092,
+   "unavailability": {
+    "injuryId": 130,
+    "type": "injury",
+    "expectedReturn": "Doubtful"
+   },
+   "firstName": "Vitaliy",
+   "lastName": "Mykolenko",
+   "nationalTeamId": 6718
+  }
+ ],
+ "general": {
+  "matchId": "5795478",
+  "matchName": "Everton-vs-Chelsea_Sat, Oct 17, 2026, 11:30 UTC",
+  "matchRound": "7",
+  "teamColors": {
+   "darkMode": {
+    "home": "#0051d6",
+    "away": "#f2deb4"
+   },
+   "lightMode": {
+    "home": "#00359C",
+    "away": "#EAD73A"
+   },
+   "fontDarkMode": {
+    "home": "rgba(255, 255, 255, 1.0)",
+    "away": "rgba(29, 29, 29, 1.0)"
+   },
+   "fontLightMode": {
+    "home": "rgba(255, 255, 255, 1.0)",
+    "away": "rgba(29, 29, 29, 1.0)"
+   }
+  },
+  "leagueId": 47,
+  "leagueName": "Premier League",
+  "leagueRoundName": "7",
+  "parentLeagueId": 47,
+  "countryCode": "ENG",
+  "homeTeam": {
+   "name": "Everton",
+   "id": 8668
+  },
+  "awayTeam": {
+   "name": "Chelsea",
+   "id": 8455
+  },
+  "coverageLevel": "lower",
+  "matchTimeUTC": "Sat, Oct 17, 2026, 11:30 UTC",
+  "matchTimeUTCDate": "2026-10-17T11:30:00.000Z",
+  "started": false,
+  "finished": false,
+  "gender": "male"
+ },
+ "ritmo": {
+  "n": 40,
+  "seg": 9.7,
+  "codigos": [
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200,
+   200
+  ]
+ }
+}
