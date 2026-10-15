@@ -5,7 +5,7 @@
   "estadio": "Vasil Levski National Stadium",
   "local_espn": "CSKA Sofia",
   "visita_espn": "AS Monaco",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Stadionul Ion Oblemenco",
   "local_espn": "CSU Craiova",
   "visita_espn": "Getafe",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Elbasan Arena",
   "local_espn": "Egnatia",
   "visita_espn": "FC Midtjylland",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -436,7 +436,7 @@
   "estadio": "AIL Arena",
   "local_espn": "FC Lugano",
   "visita_espn": "Red Star Belgrade",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -585,7 +585,7 @@
   "estadio": "Stadion Poljud",
   "local_espn": "Hajduk Split",
   "visita_espn": "Ajax Amsterdam",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -734,7 +734,7 @@
   "estadio": "Ghelamco Arena",
   "local_espn": "KAA Gent",
   "visita_espn": "AGF",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -883,7 +883,7 @@
   "estadio": "Tammelan Stadion",
   "local_espn": "KuPS Kuopio",
   "visita_espn": "Trabzonspor",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1032,7 +1032,7 @@
   "estadio": "Olympia",
   "local_espn": "Mjällby AIF",
   "visita_espn": "Inter D'Escaldes",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1181,7 +1181,7 @@
   "estadio": "Athens Olympic Stadium",
   "local_espn": "Panathinaikos",
   "visita_espn": "Borac Banja Luka",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1330,7 +1330,7 @@
   "estadio": "Skonto Stadions",
   "local_espn": "Riga FC",
   "visita_espn": "Kairat Almaty",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1485,23 +1485,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
+    -275,
     450,
-    750
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -130
+    100,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     -135
+     -120
     ],
     [
      "+1.5",
-     -105
+     -115
     ]
    ]
   }
@@ -1524,17 +1524,17 @@
    ],
    "ou_linea": 4.5,
    "ou": [
-    110,
-    -140
+    -105,
+    -125
    ],
    "spread": [
     [
      "-3.5",
-     -140
+     -155
     ],
     [
      "+3.5",
-     100
+     110
     ]
    ]
   }
@@ -1551,23 +1551,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    220,
-    225
+    125,
+    225,
+    240
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    100,
     -130
    ],
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
-     -170
+     -160
     ]
    ]
   }
@@ -1584,23 +1584,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -550,
-    700,
+    -600,
+    800,
     1200
    ],
    "ou_linea": 4.5,
    "ou": [
-    130,
-    -165
+    120,
+    -150
    ],
    "spread": [
     [
      "-2.5",
-     105
+     -105
     ],
     [
      "+2.5",
-     -145
+     -130
     ]
    ]
   }
@@ -1650,23 +1650,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -475,
-    600,
-    1200
+    -425,
+    550,
+    1100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    140
+    -165,
+    130
    ],
    "spread": [
     [
      "-1.5",
-     -170
+     -155
     ],
     [
      "+1.5",
-     120
+     110
     ]
    ]
   }
