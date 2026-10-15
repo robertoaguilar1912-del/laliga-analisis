@@ -5,29 +5,29 @@
   "estadio": "Vasil Levski National Stadium",
   "local_espn": "CSKA Sofia",
   "visita_espn": "AS Monaco",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    450,
-    350,
-    -185
+    550,
+    380,
+    -215
    ],
    "ou_linea": 3.5,
    "ou": [
-    140,
-    -180
+    135,
+    -170
    ],
    "spread": [
     [
      "+1.5",
-     -195
+     -160
     ],
     [
      "-1.5",
-     140
+     115
     ]
    ]
   },
@@ -154,7 +154,7 @@
   "estadio": "Stadionul Ion Oblemenco",
   "local_espn": "CSU Craiova",
   "visita_espn": "Getafe",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -172,11 +172,11 @@
    "spread": [
     [
      "-0.5",
-     150
+     155
     ],
     [
      "+0.5",
-     -215
+     -220
     ]
    ]
   },
@@ -303,10 +303,16 @@
   "estadio": "Elbasan Arena",
   "local_espn": "Egnatia",
   "visita_espn": "FC Midtjylland",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
   "alineaciones": {
    "Egnatia": [
     [
@@ -430,29 +436,29 @@
   "estadio": "AIL Arena",
   "local_espn": "FC Lugano",
   "visita_espn": "Red Star Belgrade",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
+    110,
     275,
-    215
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -155,
     125
    ],
    "spread": [
     [
      "-0.5",
-     105
+     100
     ],
     [
      "+0.5",
-     -145
+     -135
     ]
    ]
   },
@@ -579,29 +585,29 @@
   "estadio": "Stadion Poljud",
   "local_espn": "Hajduk Split",
   "visita_espn": "Ajax Amsterdam",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
-    330,
-    -140
+    310,
+    320,
+    -130
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    125,
-    -160
+    -170,
+    135
    ],
    "spread": [
     [
      "+0.5",
-     110
+     100
     ],
     [
      "-0.5",
-     -155
+     -140
     ]
    ]
   },
@@ -728,29 +734,29 @@
   "estadio": "Ghelamco Arena",
   "local_espn": "KAA Gent",
   "visita_espn": "AGF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     -165,
-    330,
-    425
+    310,
+    450
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    100
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -180
+     -175
     ],
     [
      "+0.5",
-     130
+     125
     ]
    ]
   },
@@ -877,29 +883,29 @@
   "estadio": "Tammelan Stadion",
   "local_espn": "KuPS Kuopio",
   "visita_espn": "Trabzonspor",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     550,
-    390,
-    -220
+    380,
+    -215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    130
+    -160,
+    125
    ],
    "spread": [
     [
      "+1.5",
-     -160
+     -175
     ],
     [
      "-1.5",
-     115
+     125
     ]
    ]
   },
@@ -1026,29 +1032,29 @@
   "estadio": "Olympia",
   "local_espn": "Mjällby AIF",
   "visita_espn": "Inter D'Escaldes",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
-    370,
-    650
+    -215,
+    340,
+    600
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    105
+    -140,
+    110
    ],
    "spread": [
     [
      "-1.5",
-     110
+     120
     ],
     [
      "+1.5",
-     -155
+     -170
     ]
    ]
   },
@@ -1175,19 +1181,19 @@
   "estadio": "Athens Olympic Stadium",
   "local_espn": "Panathinaikos",
   "visita_espn": "Borac Banja Luka",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    550,
-    1000
+    -450,
+    600,
+    1100
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
+    135,
     -170
    ],
    "spread": [
@@ -1324,15 +1330,15 @@
   "estadio": "Skonto Stadions",
   "local_espn": "Riga FC",
   "visita_espn": "Kairat Almaty",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
+    -115,
     255,
-    310
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1342,11 +1348,11 @@
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   },
@@ -1518,13 +1524,13 @@
    ],
    "ou_linea": 4.5,
    "ou": [
-    115,
-    -145
+    110,
+    -140
    ],
    "spread": [
     [
      "-3.5",
-     -135
+     -140
     ],
     [
      "+3.5",
@@ -1552,7 +1558,7 @@
    "ou_linea": 2.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
@@ -1578,23 +1584,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -500,
+    -550,
     700,
-    1100
+    1200
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 4.5,
    "ou": [
-    -150,
-    120
+    130,
+    -165
    ],
    "spread": [
     [
      "-2.5",
-     115
+     105
     ],
     [
      "+2.5",
-     -155
+     -145
     ]
    ]
   }
@@ -1689,11 +1695,11 @@
    "spread": [
     [
      "-1.5",
-     -170
+     -175
     ],
     [
      "+1.5",
-     120
+     125
     ]
    ]
   }
