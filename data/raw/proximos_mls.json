@@ -5,7 +5,7 @@
   "estadio": "Stade Saputo",
   "local_espn": "CF Montréal",
   "visita_espn": "Atlanta United FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "ScottsMiracle-Gro Field",
   "local_espn": "Columbus Crew",
   "visita_espn": "Charlotte FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Audi Field",
   "local_espn": "D.C. United",
   "visita_espn": "Red Bull New York",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "TQL Stadium",
   "local_espn": "FC Cincinnati",
   "visita_espn": "New England Revolution",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Nu Stadium",
   "local_espn": "Inter Miami CF",
   "visita_espn": "New York City FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "BMO Field",
   "local_espn": "Toronto FC",
   "visita_espn": "Orlando City SC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -899,10 +899,32 @@
   "estadio": "Soldier Field",
   "local_espn": "Chicago Fire FC",
   "visita_espn": "Philadelphia Union",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    280,
+    150
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -185
+    ]
+   ]
+  },
   "alineaciones": {
    "Chicago Fire FC": [
     [
@@ -1026,10 +1048,32 @@
   "estadio": "Toyota Stadium",
   "local_espn": "FC Dallas",
   "visita_espn": "Seattle Sounders FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    280,
+    235
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -160
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  },
   "alineaciones": {
    "FC Dallas": [
     [
@@ -1153,10 +1197,32 @@
   "estadio": "GEODIS Park",
   "local_espn": "Nashville SC",
   "visita_espn": "Sporting Kansas City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -650,
+    650,
+    1100
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -135,
+    105
+   ],
+   "spread": [
+    [
+     "-2.5",
+     100
+    ],
+    [
+     "+2.5",
+     -140
+    ]
+   ]
+  },
   "alineaciones": {
    "Nashville SC": [
     [
@@ -1280,10 +1346,32 @@
   "estadio": "Energizer Park",
   "local_espn": "St. Louis CITY SC",
   "visita_espn": "Vancouver Whitecaps",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    265,
+    170
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  },
   "alineaciones": {
    "St. Louis CITY SC": [
     [
@@ -1413,9 +1501,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    280,
-    290
+    -120,
+    265,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1425,11 +1513,127 @@
    "spread": [
     [
      "-0.5",
-     -130
+     -125
     ],
     [
      "+0.5",
-     -105
+     -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Colorado Rapids": [
+    [
+     "293342",
+     "Nico Hansen",
+     "G"
+    ],
+    [
+     "324001",
+     "Loic Williams",
+     "CD-L"
+    ],
+    [
+     "218188",
+     "Rob Holding",
+     "CD-R"
+    ],
+    [
+     "285613",
+     "Miguel Navarro",
+     "LB"
+    ],
+    [
+     "233045",
+     "Keegan Rosenberry",
+     "RB"
+    ],
+    [
+     "298078",
+     "Hamzat Ojediran",
+     "CM"
+    ],
+    [
+     "380600",
+     "Wayne Frederick",
+     "LM"
+    ],
+    [
+     "304129",
+     "Paxten Aaronson",
+     "RM"
+    ],
+    [
+     "304623",
+     "Darren Yapi",
+     "F"
+    ],
+    [
+     "292002",
+     "Morgan Whittaker",
+     "LF"
+    ],
+    [
+     "385082",
+     "Donavan Phillip",
+     "RF"
+    ]
+   ],
+   "Minnesota United FC": [
+    [
+     "245083",
+     "Drake Callender",
+     "G"
+    ],
+    [
+     "358517",
+     "Jefferson Díaz",
+     "CD-L"
+    ],
+    [
+     "101934",
+     "Michael Boxall",
+     "CD-R"
+    ],
+    [
+     "337922",
+     "Morris Duggan",
+     "LB"
+    ],
+    [
+     "379184",
+     "Cherrion Valerius",
+     "RB"
+    ],
+    [
+     "327355",
+     "Owen Gene",
+     "CM-L"
+    ],
+    [
+     "183726",
+     "Wil Trapp",
+     "CM-R"
+    ],
+    [
+     "261168",
+     "Tomás Chancalay",
+     "LM"
+    ],
+    [
+     "287784",
+     "Bongokuhle Hlongwane",
+     "RM"
+    ],
+    [
+     "289941",
+     "Kelvin Yeboah",
+     "CF-L"
+    ],
+    [
+     "324297",
+     "Marcus Caldeira",
+     "CF-R"
     ]
    ]
   }
@@ -1446,23 +1650,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    285,
-    235
+    -145,
+    320,
+    300
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    105,
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -150
     ],
     [
      "+0.5",
-     -125
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Real Salt Lake": [
+    [
+     "134307",
+     "Rafael",
+     "G"
+    ],
+    [
+     "294874",
+     "Philip Quinton",
+     "CD"
+    ],
+    [
+     "304126",
+     "Kobi Henry",
+     "CD-L"
+    ],
+    [
+     "365345",
+     "Luc de Fougerolles",
+     "CD-R"
+    ],
+    [
+     "216288",
+     "Stijn Spierings",
+     "CM-L"
+    ],
+    [
+     "362114",
+     "Noel Caliskan",
+     "CM-R"
+    ],
+    [
+     "287497",
+     "Juan Manuel Sanabria",
+     "LM"
+    ],
+    [
+     "364658",
+     "Dominik Marczuk",
+     "RM"
+    ],
+    [
+     "418187",
+     "Sergi Solans",
+     "F"
+    ],
+    [
+     "305777",
+     "Morgan Guilavogui",
+     "CF-L"
+    ],
+    [
+     "221128",
+     "Saba Lobjanidze",
+     "CF-R"
+    ]
+   ],
+   "San Jose Earthquakes": [
+    [
+     "181299",
+     "Angus Gunn",
+     "G"
+    ],
+    [
+     "222188",
+     "Dave Romney",
+     "CD"
+    ],
+    [
+     "398860",
+     "Reid Roberts",
+     "CD-L"
+    ],
+    [
+     "331616",
+     "Max Floriani",
+     "CD-R"
+    ],
+    [
+     "380800",
+     "Jamar Ricketts",
+     "LB"
+    ],
+    [
+     "229876",
+     "Paul Marie",
+     "RB"
+    ],
+    [
+     "400722",
+     "Nick Fernandez",
+     "CM"
+    ],
+    [
+     "382638",
+     "Beau Leroux",
+     "CM-L"
+    ],
+    [
+     "249699",
+     "Ian Harkes",
+     "CM-R"
+    ],
+    [
+     "300420",
+     "Ousseni Bouda",
+     "CF-L"
+    ],
+    [
+     "295339",
+     "Preston Judd",
+     "CF-R"
     ]
    ]
   }
@@ -1512,23 +1832,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -235,
-    370,
+    -245,
+    380,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -155
+    -150
    ],
    "spread": [
     [
      "-1.5",
-     105
+     100
     ],
     [
      "+1.5",
-     -150
+     -140
     ]
    ]
   }
@@ -1551,13 +1871,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
+    -160,
     125
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
