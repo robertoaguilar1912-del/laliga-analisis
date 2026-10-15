@@ -1,8 +1,8 @@
 {
 "401912523": {
 "fotmob": 1000020613,
-"visto": "2026-10-15T23:20+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-15T23:52+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -11,7 +11,7 @@
 "regreso": "hasta el 16 de octubre",
 "duda": false,
 "valor": 7006267.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -20,24 +20,6 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 1828578.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Leandro González Pírez",
-"tipo": "Sanción",
-"regreso": "hasta el 16 de octubre",
-"duda": false,
-"valor": 413209.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Joaquín Correa",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1132173.0,
 "titular": false,
 "importante": true
 },
@@ -58,11 +40,20 @@
 "valor": 946467.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Leandro González Pírez",
+"tipo": "Sanción",
+"regreso": "hasta el 16 de octubre",
+"duda": false,
+"valor": 413209.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 21703695.0,
-"perdida": 0.42610504801141,
-"perdida_duda": 0.05216498849619846
+"valor_xi": 17809411.0,
+"perdida": 0.49607732675718474,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -103,8 +94,8 @@
 "importante": false
 }
 ],
-"valor_xi": 120134673.0,
-"perdida": 0.2126380949153622,
+"valor_xi": 107557790.0,
+"perdida": 0.23750216511514416,
 "perdida_duda": 0.0
 }
 },
