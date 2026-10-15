@@ -13,7 +13,7 @@
    "ml": [
     -110,
     295,
-    220
+    230
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -46,11 +46,11 @@
    "ml": [
     360,
     320,
-    -175
+    -165
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -160
    ],
    "spread": [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -185
+     -175
     ]
    ]
   }
@@ -95,18 +95,18 @@
    "casa": "DraftKings",
    "ml": [
     195,
-    240,
+    245,
     120
    ],
    "ou_linea": 2.5,
    "ou": [
     -165,
-    125
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -160
     ],
     [
      "-0.5",
@@ -128,22 +128,22 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    255,
+    260,
     155
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -140
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -160,14 +160,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    295,
-    275
+    -130,
+    300,
+    280
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -170
+    -165
    ],
    "spread": [
     [
@@ -176,7 +176,7 @@
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -191,11 +191,27 @@
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -475,
+    600,
+    750
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    -115,
+    -110
+   ],
+   "spread": [
+    [
+     "-2.5",
+     115
+    ],
+    [
+     "+2.5",
+     -160
+    ]
+   ]
   }
  },
  {
@@ -208,11 +224,27 @@
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -145,
+    300,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     105
+    ]
+   ]
   }
  },
  {
@@ -225,11 +257,27 @@
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    195,
+    290,
+    100
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -105
+    ]
+   ]
   }
  },
  {
@@ -443,6 +491,72 @@
     [
      "+1.5",
      -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884760",
+  "utc": "2026-10-25T14:30Z",
+  "estadio": "PreZero Arena",
+  "local_espn": "TSG Hoffenheim",
+  "visita_espn": "Bayer Leverkusen",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    270,
+    125
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884759",
+  "utc": "2026-10-25T16:30Z",
+  "estadio": "Europa-Park Stadion",
+  "local_espn": "SC Freiburg",
+  "visita_espn": "Bayern Munich",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    500,
+    450,
+    -300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -170,
+    125
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -120
+    ],
+    [
+     "-1.5",
+     -125
     ]
    ]
   }

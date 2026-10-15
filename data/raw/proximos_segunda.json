@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    110
+    -145,
+    105
    ],
    "spread": [
     [
@@ -44,14 +44,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
-    250,
-    100
+    235,
+    255,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    100
+    -145,
+    105
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -77,14 +77,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
+    160,
     200,
-    180
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -155
+    110,
+    -150
    ],
    "spread": [
     [
@@ -93,7 +93,7 @@
     ],
     [
      "+0.5",
-     -215
+     -210
     ]
    ]
   }
@@ -111,8 +111,8 @@
    "casa": "DraftKings",
    "ml": [
     -105,
-    245,
-    260
+    250,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -143,13 +143,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
-    260,
+    240,
+    265,
     100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -160,
     115
    ],
    "spread": [
@@ -220,23 +220,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    280,
-    310
+    -120,
+    265,
+    285
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    110
+    -155,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -135
     ],
     [
      "+0.5",
-     100
+     -115
     ]
    ]
   }
@@ -288,21 +288,21 @@
    "ml": [
     165,
     195,
-    175
+    170
    ],
    "ou_linea": 1.5,
    "ou": [
-    -205,
+    -210,
     140
    ],
    "spread": [
     [
-     "-0.5",
-     145
+     "+0.5",
+     -240
     ],
     [
-     "+0.5",
-     -230
+     "-0.5",
+     150
     ]
    ]
   }
@@ -379,6 +379,50 @@
   "estadio": "Power Horse Stadium",
   "local_espn": "Almería",
   "visita_espn": "Real Oviedo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883127",
+  "utc": "2026-10-25T13:00Z",
+  "estadio": "Estadi Municipal de la Nova Creu Alta",
+  "local_espn": "CD Sabadell",
+  "visita_espn": "Tenerife",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883132",
+  "utc": "2026-10-25T15:15Z",
+  "estadio": "Carlos Belmonte",
+  "local_espn": "Albacete",
+  "visita_espn": "Eldense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883130",
+  "utc": "2026-10-25T15:15Z",
+  "estadio": "Nuevo Mirandilla",
+  "local_espn": "Cádiz",
+  "visita_espn": "Ceuta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883129",
+  "utc": "2026-10-25T17:30Z",
+  "estadio": "Nou Estadi Castalia",
+  "local_espn": "Castellón",
+  "visita_espn": "Sporting Gijón",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

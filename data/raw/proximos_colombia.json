@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    400,
-    270,
-    -170
+    450,
+    285,
+    -190
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,44 @@
    "spread": [
     [
      "+0.5",
-     120
+     135
     ],
     [
      "-0.5",
-     -180
+     -200
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878048",
+  "utc": "2026-10-17T23:00Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Millonarios",
+  "visita_espn": "Jaguares de Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -500,
+    500,
+    950
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -170
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -165
+    ],
+    [
+     "+1.5",
+     110
     ]
    ]
   }
@@ -44,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
+    -110,
     230,
-    270
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -120
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -115
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -173,18 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
- },
- {
-  "id": "401878048",
-  "utc": "2026-10-19T23:30Z",
-  "estadio": "Estadio Nemesio Camacho El Campín",
-  "local_espn": "Millonarios",
-  "visita_espn": "Jaguares de Córdoba",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    230,
+    280
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401878019",
@@ -195,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    235,
+    350
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     -105
+    ]
+   ]
+  }
  },
  {
   "id": "401878040",
@@ -217,7 +283,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    250,
+    265
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401878021",
@@ -231,6 +319,27 @@
   "momios": null
  },
  {
+  "id": "401877892",
+  "utc": "2026-10-21T01:30Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Millonarios",
+  "visita_espn": "Once Caldas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    250,
+    370
+   ],
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
   "id": "401878012",
   "utc": "2026-10-21T23:15Z",
   "estadio": "Estadio Bello Horizonte - Rey Pele",
@@ -240,6 +349,39 @@
   "tipo": "clausura",
   "neutral": false,
   "momios": null
+ },
+ {
+  "id": "401877844",
+  "utc": "2026-10-22T01:20Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Independiente Santa Fe",
+  "visita_espn": "Jaguares de Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -360,
+    400,
+    800
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    100
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -125
+    ],
+    [
+     "+1.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401877877",

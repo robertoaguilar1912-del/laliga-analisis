@@ -1,7 +1,7 @@
 {
 "401915573": {
 "fotmob": 6112265,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -56,7 +56,7 @@
 },
 "401915576": {
 "fotmob": 6112318,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +156,7 @@
 },
 "401915566": {
 "fotmob": 6112260,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -170,13 +170,13 @@
 "importante": true
 },
 {
-"nombre": "Moussa Niakhaté",
+"nombre": "Nicolás Tagliafico",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 16316617.0,
+"valor": 2174182.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Mohamed Ouédraogo",
@@ -189,7 +189,7 @@
 }
 ],
 "valor_xi": 159339158.0,
-"perdida": 0.2584916948036088,
+"perdida": 0.15608989222850042,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -247,7 +247,7 @@
 },
 "401915577": {
 "fotmob": 6112336,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -293,17 +293,17 @@
 },
 "401915568": {
 "fotmob": 6112294,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
-"nombre": "Soumaïla Diabaté",
+"nombre": "Tim Drexler",
 "tipo": "Lesión",
-"regreso": "sin fecha de regreso",
+"regreso": "una semana",
 "duda": false,
-"valor": 6100065.0,
-"titular": false,
+"valor": 3689600.0,
+"titular": true,
 "importante": true
 },
 {
@@ -362,7 +362,7 @@
 }
 ],
 "valor_xi": 43921743.0,
-"perdida": 0.22131872134491565,
+"perdida": 0.16643781645915098,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -393,7 +393,7 @@
 },
 "401915567": {
 "fotmob": 6112305,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -407,10 +407,19 @@
 "importante": true
 },
 {
+"nombre": "Josimar Alcócer",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3980840.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Matěj Ryneš",
 "tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 2227455.0,
 "titular": false,
 "importante": true
@@ -444,8 +453,8 @@
 }
 ],
 "valor_xi": 21809980.0,
-"perdida": 0.21767323949861486,
-"perdida_duda": 0.0
+"perdida": 0.11554315959941275,
+"perdida_duda": 0.2846538602969833
 },
 "visita": {
 "faltan": [
@@ -484,7 +493,7 @@
 },
 "401915575": {
 "fotmob": 6112360,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -548,7 +557,7 @@
 },
 "401915574": {
 "fotmob": 6112286,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -605,6 +614,15 @@
 "valor": 1439064.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Ilan Hurtevent",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 768759.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 32368977.0,
@@ -648,7 +666,7 @@
 },
 "401915571": {
 "fotmob": 6112328,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -671,19 +689,10 @@
 "importante": true
 },
 {
-"nombre": "Justin Kluivert",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 24480211.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Veljko Milosavljević",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "unos días",
+"duda": false,
 "valor": 29696246.0,
 "titular": false,
 "importante": true
@@ -691,9 +700,18 @@
 {
 "nombre": "Amine Adli",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "unos días",
+"duda": false,
 "valor": 24875171.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Justin Kluivert",
+"tipo": "Lesión",
+"regreso": "mediados de octubre",
+"duda": false,
+"valor": 24480211.0,
 "titular": false,
 "importante": true
 },
@@ -708,8 +726,8 @@
 }
 ],
 "valor_xi": 275996514.0,
-"perdida": 0.45202662595948584,
-"perdida_duda": 0.19772502271532313
+"perdida": 0.649751648674809,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -793,7 +811,7 @@
 },
 "401915562": {
 "fotmob": 6112247,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -812,6 +830,15 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 13520437.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Daniel Banjaqui",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
@@ -866,7 +893,7 @@
 },
 "401915560": {
 "fotmob": 6112346,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -877,6 +904,15 @@
 "duda": false,
 "valor": 10723738.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Pablo Durán",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 4693143.0,
+"titular": true,
 "importante": true
 },
 {
@@ -896,10 +932,19 @@
 "valor": 2235887.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Borja Iglesias",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 1945029.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 73458889.0,
-"perdida": 0.14598285035320913,
+"perdida": 0.2098708707669129,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -975,12 +1020,31 @@
 },
 "401915549": {
 "fotmob": 6112291,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Scott McKenna",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 2169461.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Stjepan Radeljić",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 1389206.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 29527944.0,
-"perdida": 0.0,
+"perdida": 0.07347145470067269,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1029,7 +1093,7 @@
 },
 "401915564": {
 "fotmob": 6112279,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1084,7 +1148,7 @@
 },
 "401915550": {
 "fotmob": 6112274,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1139,14 +1203,14 @@
 },
 "401915565": {
 "fotmob": 6112369,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
 "nombre": "Emre Mor",
 "tipo": "Lesión",
-"regreso": "mediados de octubre",
+"regreso": "Day to day",
 "duda": false,
 "valor": 456253.0,
 "titular": false,
@@ -1171,8 +1235,8 @@
 {
 "nombre": "Akram Bouras",
 "tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 1808152.0,
 "titular": false,
 "importante": true
@@ -1188,13 +1252,13 @@
 }
 ],
 "valor_xi": 12279560.0,
-"perdida": 0.14724892422855543,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.14724892422855543
 }
 },
 "401915572": {
 "fotmob": 6112309,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -1239,10 +1303,19 @@
 },
 "401915563": {
 "fotmob": 6112353,
-"visto": "2026-10-14T11:32+00:00",
+"visto": "2026-10-15T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Albian Hajdari",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 26163429.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Patrick Wimmer",
 "tipo": "Lesión",
@@ -1254,7 +1327,7 @@
 }
 ],
 "valor_xi": 129620819.0,
-"perdida": 0.10430760354939587,
+"perdida": 0.30615348912430496,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1267,11 +1340,20 @@
 "valor": 5534429.0,
 "titular": true,
 "importante": true
+},
+{
+"nombre": "Dušan Vlahović",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 23093564.0,
+"titular": true,
+"importante": true
 }
 ],
 "valor_xi": 127538483.0,
 "perdida": 0.04339418871714195,
-"perdida_duda": 0.0
+"perdida_duda": 0.18107133985590843
 }
 }
 }

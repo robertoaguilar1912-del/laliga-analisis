@@ -12,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    250,
-    245
+    245,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -110
+    -115
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -44,13 +44,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    350,
-    280,
+    360,
+    290,
     -135
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -125,
     100
    ],
    "spread": [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -150
+     -145
     ]
    ]
   }
@@ -78,18 +78,18 @@
    "casa": "DraftKings",
    "ml": [
     -225,
-    390,
-    500
+    400,
+    550
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    120,
     -145
    ],
    "spread": [
     [
      "-1.5",
-     105
+     110
     ],
     [
      "+1.5",
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    425,
-    -230
+    500,
+    450,
+    -235
    ],
    "ou_linea": 3.5,
    "ou": [
     -150,
-    115
+    120
    ],
    "spread": [
     [
      "+1.5",
-     -140
+     -130
     ],
     [
      "-1.5",
@@ -144,18 +144,18 @@
    "casa": "DraftKings",
    "ml": [
     230,
-    230,
-    120
+    235,
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -155
     ],
     [
      "-0.5",
@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
+    100,
     260,
-    265
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,11 +188,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -110
     ],
     [
      "+0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -225,7 +225,7 @@
     ],
     [
      "+0.5",
-     -145
+     -150
     ]
    ]
   }
@@ -242,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
+    225,
     250,
-    120
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -254,11 +254,11 @@
    "spread": [
     [
      "+0.5",
-     -155
+     -150
     ],
     [
      "-0.5",
-     110
+     105
     ]
    ]
   }
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -400,
-    550,
+    -380,
+    500,
     850
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -135
+    -140
    ],
    "spread": [
     [
      "-1.5",
-     -155
+     -150
     ],
     [
      "+1.5",
-     110
+     100
     ]
    ]
   }
@@ -314,8 +314,8 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -190,
-    145
+    -195,
+    150
    ],
    "spread": [
     [
@@ -347,7 +347,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -120
    ],
    "spread": [
@@ -506,23 +506,155 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    500,
-    950
+    -450,
+    550,
+    1000
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -175
+    120,
+    -165
    ],
    "spread": [
     [
      "-1.5",
-     -165
+     -175
     ],
     [
      "+1.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882835",
+  "utc": "2026-10-25T13:00Z",
+  "estadio": "San Mamés",
+  "local_espn": "Athletic Club",
+  "visita_espn": "Getafe",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    285,
+    370
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882833",
+  "utc": "2026-10-25T15:15Z",
+  "estadio": "Balaidos",
+  "local_espn": "Celta Vigo",
+  "visita_espn": "Real Betis",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    245,
+    145
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -200
+    ],
+    [
+     "-0.5",
+     130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882829",
+  "utc": "2026-10-25T17:30Z",
+  "estadio": "Reale Arena",
+  "local_espn": "Real Sociedad",
+  "visita_espn": "Levante",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    300,
+    320
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -155
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882832",
+  "utc": "2026-10-25T20:00Z",
+  "estadio": "Spotify Camp Nou",
+  "local_espn": "Barcelona",
+  "visita_espn": "Real Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -200,
+    400,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -165,
+    125
+   ],
+   "spread": [
+    [
+     "-1.5",
      105
+    ],
+    [
+     "+1.5",
+     -155
     ]
    ]
   }

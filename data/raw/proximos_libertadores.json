@@ -17,8 +17,8 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -195,
-    145
+    -180,
+    135
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "-0.5",
-     105
+     110
     ]
    ]
   }
@@ -41,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "semifinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    235,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401912521",

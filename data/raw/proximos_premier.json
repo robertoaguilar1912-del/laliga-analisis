@@ -17,7 +17,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     120
    ],
    "spread": [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
+    135,
     260,
-    180
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     140
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -77,19 +77,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -135,
     295,
     360
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
+    -130,
     105
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -150
     ],
     [
      "+0.5",
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -475,
+    -450,
     600,
     1000
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
+    -105,
     -120
    ],
    "spread": [
     [
      "-1.5",
-     -175
+     -160
     ],
     [
      "+1.5",
-     120
+     115
     ]
    ]
   }
@@ -144,18 +144,18 @@
    "casa": "DraftKings",
    "ml": [
     125,
-    270,
-    195
+    275,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    130
+    -165,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
@@ -215,17 +215,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -180,
     135
    ],
    "spread": [
     [
-     "-1.5",
-     135
+     "-0.5",
+     -200
     ],
     [
-     "+1.5",
-     -195
+     "+0.5",
+     135
     ]
    ]
   }
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    260,
-    175
+    135,
+    255,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
     -160,
-    125
+    120
    ],
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
-     -185
+     -175
     ]
    ]
   }
@@ -281,17 +281,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -115
    ],
    "spread": [
     [
      "+0.5",
-     130
+     125
     ],
     [
      "-0.5",
-     -190
+     -180
     ]
    ]
   }
@@ -312,10 +312,10 @@
     360,
     500
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    140,
-    -185
+    -175,
+    135
    ],
    "spread": [
     [
@@ -374,23 +374,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
-    310,
-    -155
+    330,
+    300,
+    -145
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -175
+    -185,
+    135
    ],
    "spread": [
     [
      "+0.5",
-     115
+     105
     ],
     [
      "-0.5",
-     -175
+     -160
     ]
    ]
   }
@@ -467,6 +467,91 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Chelsea",
   "visita_espn": "Tottenham Hotspur",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401879254",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "Selhurst Park",
+  "local_espn": "Crystal Palace",
+  "visita_espn": "Newcastle United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401878766",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "The MKM Stadium",
+  "local_espn": "Hull City",
+  "visita_espn": "Brentford",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401878765",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "Anfield",
+  "local_espn": "Liverpool",
+  "visita_espn": "Brighton & Hove Albion",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401879252",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "Old Trafford",
+  "local_espn": "Manchester United",
+  "visita_espn": "AFC Bournemouth",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401878764",
+  "utc": "2026-10-25T16:30Z",
+  "estadio": "Stadium of Light",
+  "local_espn": "Sunderland",
+  "visita_espn": "Leeds United",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,

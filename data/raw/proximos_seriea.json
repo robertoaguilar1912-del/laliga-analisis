@@ -18,16 +18,16 @@
    "ou_linea": 3.5,
    "ou": [
     110,
-    -140
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -190
+     -195
     ]
    ]
   }
@@ -45,13 +45,13 @@
    "casa": "DraftKings",
    "ml": [
     330,
-    295,
-    -155
+    290,
+    -145
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    115
+    -140,
+    110
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -165
+     -150
     ]
    ]
   }
@@ -77,13 +77,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    425,
-    295,
-    -190
+    400,
+    285,
+    -170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -150,
     120
    ],
    "spread": [
@@ -93,7 +93,7 @@
     ],
     [
      "-0.5",
-     -190
+     -180
     ]
    ]
   }
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -275,
-    370,
-    600
+    -235,
+    350,
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    110
+    115
    ],
    "spread": [
     [
      "-1.5",
-     100
+     115
     ],
     [
      "+1.5",
-     -150
+     -160
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    235,
-    295
+    -115,
+    240,
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -176,14 +176,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    255,
-    100
+    215,
+    250,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    120
+    115
    ],
    "spread": [
     [
@@ -192,7 +192,7 @@
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
@@ -209,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    250,
-    280
+    -125,
+    255,
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -407,14 +407,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -250,
+    -245,
     330,
-    550
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -175
+    120,
+    -165
    ],
    "spread": [
     [
@@ -490,6 +490,171 @@
     [
      "+1.5",
      -215
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875036",
+  "utc": "2026-10-25T11:30Z",
+  "estadio": "San Siro",
+  "local_espn": "Internazionale",
+  "visita_espn": "Fiorentina",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -295,
+    390,
+    550
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -110
+    ],
+    [
+     "+1.5",
+     -135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874972",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "New Balance Arena",
+  "local_espn": "Atalanta",
+  "visita_espn": "Frosinone",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -170,
+    300,
+    350
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    110,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -180
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874952",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "Stadio Luigi Ferraris",
+  "local_espn": "Genoa",
+  "visita_espn": "Venezia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    210,
+    240
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -150
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874772",
+  "utc": "2026-10-25T17:00Z",
+  "estadio": "Via Del Mare",
+  "local_espn": "Lecce",
+  "visita_espn": "Juventus",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    600,
+    300,
+    -245
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -170
+    ],
+    [
+     "-1.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874779",
+  "utc": "2026-10-25T19:45Z",
+  "estadio": "Stadio Friuli",
+  "local_espn": "Udinese",
+  "visita_espn": "AC Milan",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    300,
+    245,
+    -130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -110
+    ],
+    [
+     "-0.5",
+     -140
     ]
    ]
   }

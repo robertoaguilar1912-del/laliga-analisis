@@ -67,7 +67,7 @@
  },
  {
   "id": "401876944",
-  "utc": "2026-10-17T03:00Z",
+  "utc": "2026-10-17T03:05Z",
   "estadio": "Estadio Caliente",
   "local_espn": "Tijuana",
   "visita_espn": "Puebla",
@@ -111,13 +111,13 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    245,
-    170
+    250,
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    110
+    -160,
+    115
    ],
    "spread": [
     [
@@ -126,7 +126,7 @@
     ],
     [
      "+0.5",
-     -190
+     -180
     ]
    ]
   }
@@ -144,7 +144,7 @@
    "casa": "DraftKings",
    "ml": [
     -120,
-    245,
+    250,
     320
    ],
    "ou_linea": 2.5,
@@ -155,11 +155,11 @@
    "spread": [
     [
      "-0.5",
-     -135
+     -130
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   }
@@ -176,19 +176,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    240,
-    120
+    220,
+    250,
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -155,
     110
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -155
     ],
     [
      "-0.5",
@@ -210,13 +210,13 @@
    "casa": "DraftKings",
    "ml": [
     -310,
-    425,
-    600
+    450,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -140
+    -135
    ],
    "spread": [
     [
@@ -225,7 +225,7 @@
     ],
     [
      "+1.5",
-     -125
+     -120
     ]
    ]
   }
@@ -242,14 +242,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -320,
+    -310,
     425,
     700
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -258,7 +258,7 @@
     ],
     [
      "+1.5",
-     -130
+     -125
     ]
    ]
   }
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    295,
-    300
+    -145,
+    310,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    115
+    -175,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -165
     ],
     [
      "+0.5",
-     100
+     110
     ]
    ]
   }
@@ -445,6 +445,50 @@
   "estadio": "Estadio Olímpico Universitario",
   "local_espn": "Pumas UNAM",
   "visita_espn": "Tigres UANL",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876923",
+  "utc": "2026-10-25T23:00Z",
+  "estadio": "Estadio Jalisco",
+  "local_espn": "Atlas",
+  "visita_espn": "Puebla",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876922",
+  "utc": "2026-10-26T01:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "América",
+  "visita_espn": "Pachuca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876921",
+  "utc": "2026-10-26T01:00Z",
+  "estadio": "Estadio Corregidora",
+  "local_espn": "Querétaro",
+  "visita_espn": "Cruz Azul",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876920",
+  "utc": "2026-10-26T03:00Z",
+  "estadio": "Estadio Caliente",
+  "local_espn": "Tijuana",
+  "visita_espn": "Santos",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
