@@ -1,7 +1,7 @@
 {
 "401841275": {
 "fotmob": 5103668,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -92,7 +92,7 @@
 },
 "401841268": {
 "fotmob": 5103665,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401841270": {
 "fotmob": 5103669,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -274,7 +274,7 @@
 },
 "401841271": {
 "fotmob": 5103671,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -313,15 +313,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Vitor Roque",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 42103346.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Agustín Giay",
 "tipo": "Sanción",
 "regreso": "hasta el 18 de octubre",
@@ -340,6 +331,15 @@
 "importante": true
 },
 {
+"nombre": "Vitor Roque",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 42103346.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Jefté",
 "tipo": "Lesión",
 "regreso": "mediados de diciembre",
@@ -350,13 +350,13 @@
 }
 ],
 "valor_xi": 116052775.0,
-"perdida": 0.5096520009969602,
-"perdida_duda": 0.0
+"perdida": 0.14685717769351056,
+"perdida_duda": 0.36279482330344964
 }
 },
 "401841273": {
 "fotmob": 5103666,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -456,10 +456,19 @@
 },
 "401841277": {
 "fotmob": 5103664,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Martinelli",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 16805522.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "John Kennedy",
 "tipo": "Lesión",
@@ -507,7 +516,7 @@
 }
 ],
 "valor_xi": 46085640.0,
-"perdida": 0.34472731636145226,
+"perdida": 0.7093858520788688,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -540,6 +549,15 @@
 "importante": true
 },
 {
+"nombre": "Gonzalo Escobar",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 971724.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Vinicius Lira",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -551,12 +569,12 @@
 ],
 "valor_xi": 35256772.0,
 "perdida": 0.4976266687148784,
-"perdida_duda": 0.0
+"perdida_duda": 0.02756134339241267
 }
 },
 "401841276": {
 "fotmob": 5103670,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -638,7 +656,7 @@
 },
 "401841269": {
 "fotmob": 5103672,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -695,14 +713,14 @@
 "importante": false
 }
 ],
-"valor_xi": 120134673.0,
-"perdida": 0.2126380949153622,
+"valor_xi": 107557790.0,
+"perdida": 0.23750216511514416,
 "perdida_duda": 0.0
 }
 },
 "401841274": {
 "fotmob": 5103673,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -721,6 +739,15 @@
 "regreso": "mediados de octubre",
 "duda": false,
 "valor": 1154584.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jáderson",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 786640.0,
 "titular": false,
 "importante": true
 },
@@ -744,7 +771,7 @@
 }
 ],
 "valor_xi": 5448386.0,
-"perdida": 0.6879165683194987,
+"perdida": 0.8322969407820958,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -793,7 +820,7 @@
 },
 "401841272": {
 "fotmob": 5103667,
-"visto": "2026-10-16T05:43+00:00",
+"visto": "2026-10-16T11:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
