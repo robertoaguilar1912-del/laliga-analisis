@@ -5,7 +5,7 @@
   "estadio": "Estadio Municipal de Butarque",
   "local_espn": "Leganés",
   "visita_espn": "Córdoba",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -259,23 +259,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    240,
-    265,
+    245,
+    270,
     100
    ],
    "ou_linea": 2.5,
    "ou": [
     -160,
-    115
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -130
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -391,23 +391,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    240,
-    295
+    -115,
+    245,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    -105,
     -135
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
@@ -424,9 +424,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    200,
-    180
+    160,
+    195,
+    190
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -436,11 +436,11 @@
    "spread": [
     [
      "-0.5",
-     150
+     145
     ],
     [
      "+0.5",
-     -225
+     -215
     ]
    ]
   }
