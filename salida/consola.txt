@@ -1,9 +1,17 @@
-$ python -c "import sys; sys.path.insert(0, 'src'); import fuentes; fuentes.descargar_bajas()"
+$ python explorar/nba_pre.py
 [exit 0]
-  FotMob: bajas de 199 partidos; 11 sin encontrar en FotMob
-
-
-
-$ mkdir -p salida/bajas && cp data/raw/bajas_*.json salida/bajas/
-[exit 0]
+2023 eventos por tipo {1: 70, 2: 95}
+2024 eventos por tipo {1: 73, 2: 51}
+2025 eventos por tipo {1: 74, 2: 67}
+2026 eventos por tipo {1: 71, 2: 72}
+2027 eventos por tipo {1: 67, 2: 81}
+  aviso: https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary -> HTTPSConnectionPool(host='site.api.espn.com', port=443): Read timed out. (read timeout=30)
+           juegos  terminados  entre_nba
+temporada                               
+2023           70          70         65
+2024           73          73         64
+2025           74          73         70
+2026           71          71         65
+2027           67          55         66
+filas de minutos 9804 juegos con minutos 342
 
