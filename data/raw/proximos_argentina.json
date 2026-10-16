@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841622",
-  "utc": "2026-10-15T23:00Z",
-  "estadio": "Estadio Tomás Adolfo Ducó",
-  "local_espn": "Huracán",
-  "visita_espn": "Gimnasia La Plata",
-  "estado": "STATUS_FIRST_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    115,
-    210,
-    270
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    135,
-    -180
-   ],
-   "spread": [
-    [
-     "-0.5",
-     110
-    ],
-    [
-     "+0.5",
-     -150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Huracán": [
-    [
-     "207921",
-     "Hernán Galíndez",
-     "G"
-    ],
-    [
-     "396513",
-     "Máximo Palazzo",
-     "CD-L"
-    ],
-    [
-     "278504",
-     "Fabio Pereyra",
-     "CD-R"
-    ],
-    [
-     "289737",
-     "Cesar Ibañez",
-     "LB"
-    ],
-    [
-     "241547",
-     "Lucas Blondel",
-     "RB"
-    ],
-    [
-     "139679",
-     "Leonardo Gil",
-     "AM"
-    ],
-    [
-     "241479",
-     "Facundo Waller",
-     "LM"
-    ],
-    [
-     "147183",
-     "Rodrigo Fernández",
-     "RM"
-    ],
-    [
-     "217079",
-     "Jordy Caicedo",
-     "F"
-    ],
-    [
-     "402652",
-     "Facundo Kalinger",
-     "AM-L"
-    ],
-    [
-     "334106",
-     "Oscar Cortés",
-     "AM-R"
-    ]
-   ],
-   "Gimnasia La Plata": [
-    [
-     "301464",
-     "Harlen Castillo",
-     "G"
-    ],
-    [
-     "173742",
-     "Enzo Martínez",
-     "CD-L"
-    ],
-    [
-     "185458",
-     "Germán Conti",
-     "CD-R"
-    ],
-    [
-     "233913",
-     "Pedro Silva Torrejón",
-     "LB"
-    ],
-    [
-     "346867",
-     "Alexis Steimbach",
-     "RB"
-    ],
-    [
-     "336537",
-     "Mateo Seoane",
-     "CM-L"
-    ],
-    [
-     "310476",
-     "Ignacio Miramon",
-     "CM-R"
-    ],
-    [
-     "176813",
-     "Lucas Janson",
-     "LM"
-    ],
-    [
-     "106583",
-     "Ignacio Fernández",
-     "RM"
-    ],
-    [
-     "85513",
-     "Marcelo Torres",
-     "CF-L"
-    ],
-    [
-     "334165",
-     "Agustín Auzmendi",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841626",
   "utc": "2026-10-16T22:00Z",
   "estadio": "Norberto Tomaghello",
@@ -193,19 +44,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    260,
-    400
+    -145,
+    265,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -140
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
@@ -737,6 +588,28 @@
   "estadio": "Alfredo Terrera",
   "local_espn": "Central Córdoba (Santiago del Estero)",
   "visita_espn": "Vélez Sarsfield",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841630",
+  "utc": "2026-10-26T22:00Z",
+  "estadio": "15 de Abril",
+  "local_espn": "Unión (Santa Fe)",
+  "visita_espn": "Estudiantes de La Plata",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841635",
+  "utc": "2026-10-27T00:15Z",
+  "estadio": "Monumental Presidente Perón",
+  "local_espn": "Instituto (Córdoba)",
+  "visita_espn": "Deportivo Riestra",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
