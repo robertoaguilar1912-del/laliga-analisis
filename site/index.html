@@ -460,7 +460,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 <script>
 (async function () {
   // ---------------- liga elegida y carga de datos
-  const LIGAS = {"laliga": "La Liga", "segunda": "Segunda División", "premier": "Premier League", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "portugal": "Liga Portugal", "champions": "Champions League", "europa": "Europa League", "conference": "Conference League", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "libertadores": "Copa Libertadores", "sudamericana": "Copa Sudamericana", "nfl": "NFL", "nba": "NBA"};
+  const LIGAS = {"laliga": "La Liga", "segunda": "Segunda División", "premier": "Premier League", "championship": "Championship", "seriea": "Serie A", "bundesliga": "Bundesliga", "ligue1": "Ligue 1", "portugal": "Liga Portugal", "champions": "Champions League", "europa": "Europa League", "conference": "Conference League", "ligamx": "Liga MX", "mls": "MLS", "brasil": "Brasileirão", "brasil2": "Brasileirão B", "argentina": "Liga Argentina", "colombia": "Liga Colombiana", "libertadores": "Copa Libertadores", "sudamericana": "Copa Sudamericana", "nfl": "NFL", "nba": "NBA"};
   const VISTAS = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
   const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
@@ -606,7 +606,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const nMias = mias.filter(b => b.id === m.id).length;
     const extra = [nextExtra(th, m.local_es), nextExtra(ta, m.visita_es), m.alineaciones && m.alineaciones.local ? 'Alineaciones confirmadas' : null,
                    nMias ? `Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}` : null].filter(Boolean);
-    (m.descendidos || []).forEach(t => alerts.push(`${t} bajó de La Liga: confía más en la casa`));
+    (m.descendidos || []).forEach(t => alerts.push(`${t} bajó de ${I.arriba || 'primera'}: confía más en la casa`));
     if (m.con_momio.some(r => r.veredicto === 'PICK' && CUIDADO[r.k])) alerts.push('PICK de empate: cuidado en esta liga');
     const bar = (p, c) => `<span style="width:${(p * 100).toFixed(1)}%;background:${c}"></span>`;
     return `<button class="mcard" data-i="${i}" aria-label="Ver ${esc(m.local_es)} contra ${esc(m.visita_es)}">
@@ -841,7 +841,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
 
       <div class="pane" data-pane="0">
-        ${(m.descendidos || []).length ? `<p class="warning aviso">${m.descendidos.map(esc).join(' y ')} ${m.descendidos.length > 1 ? 'bajaron' : 'bajó'} de La Liga esta temporada. Al inicio el modelo ${m.descendidos.length > 1 ? 'los' : 'lo'} ve más débil${m.descendidos.length > 1 ? 'es' : ''} que la casa: en este partido confía más en la casa que en el modelo.</p>` : ''}
+        ${(m.descendidos || []).length ? `<p class="warning aviso">${m.descendidos.map(esc).join(' y ')} ${m.descendidos.length > 1 ? 'bajaron' : 'bajó'} de ${esc(I.arriba || 'primera')} esta temporada. Al inicio el modelo ${m.descendidos.length > 1 ? 'los' : 'lo'} ve más débil${m.descendidos.length > 1 ? 'es' : ''} que la casa: en este partido confía más en la casa que en el modelo.</p>` : ''}
         ${m.con_momio.some(r => CUIDADO[r.k] && r.veredicto === 'PICK') ? `<p class="warning aviso">${esc(Object.values(CUIDADO)[0])}. Tómalo con mucho cuidado.</p>` : ''}
         ${[...new Set(m.con_momio.filter(r => r.veredicto === 'REVISAR').map(r => r.revisar))].map(txt => { const rs = m.con_momio.filter(r => r.veredicto === 'REVISAR' && r.revisar === txt);
           return `<p class="warning aviso"><b>REVISAR · ${esc(rs.map(r => r.mercado).join(' y '))}:</b> el modelo ve valor (EV ${rs.map(r => spct(r.ev, 0)).join(' y ')}), pero ${esc(txt.charAt(0).toLowerCase() + txt.slice(1))}. El modelo no sabe de bajas y la casa sí: lo más probable es que ese "valor" sea la baja. Mira la pestaña "Bajas y alineación" antes de apostar.</p>`; }).join('')}

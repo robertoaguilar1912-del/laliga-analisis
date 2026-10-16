@@ -1,7 +1,7 @@
 {
 "401884770": {
 "fotmob": 5881191,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -33,7 +33,7 @@
 "importante": false
 }
 ],
-"valor_xi": 218478525.0,
+"valor_xi": 230193428.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -101,7 +101,7 @@
 },
 "401884769": {
 "fotmob": 5881195,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -194,35 +194,17 @@
 "importante": false
 }
 ],
-"valor_xi": 375422184.0,
+"valor_xi": 351696214.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401884767": {
 "fotmob": 5881193,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Zakaria El Ouahdi",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 14833952.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Bilal Nadir",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 10217368.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Nicolai Remberg",
 "tipo": "Lesión",
@@ -233,13 +215,13 @@
 "importante": true
 },
 {
-"nombre": "Albert Grønbæk",
+"nombre": "Bilal Nadir",
 "tipo": "Lesión",
-"regreso": "unas semanas",
-"duda": false,
-"valor": 5306171.0,
+"regreso": "en duda",
+"duda": true,
+"valor": 10217368.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Patson Daka",
@@ -267,11 +249,20 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Albert Grønbæk",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5306171.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 77930576.0,
-"perdida": 0.4514160141713825,
-"perdida_duda": 0.0
+"valor_xi": 92248688.0,
+"perdida": 0.10978790289136686,
+"perdida_duda": 0.11075895193219441
 },
 "visita": {
 "faltan": [
@@ -330,17 +321,26 @@
 "importante": false
 }
 ],
-"valor_xi": 194093923.0,
-"perdida": 0.17649682416898752,
+"valor_xi": 242063134.0,
+"perdida": 0.14152076953609963,
 "perdida_duda": 0.0
 }
 },
 "401884765": {
 "fotmob": 5881194,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Moussa Sylla",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 4707869.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Dejan Ljubičić",
 "tipo": "Lesión",
@@ -369,8 +369,8 @@
 "importante": false
 }
 ],
-"valor_xi": 25962238.0,
-"perdida": 0.0801878482124692,
+"valor_xi": 23173303.0,
+"perdida": 0.2929977224222201,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -430,14 +430,14 @@
 "importante": false
 }
 ],
-"valor_xi": 85625931.0,
-"perdida": 0.1862720301400285,
+"valor_xi": 78133761.0,
+"perdida": 0.20413347310901878,
 "perdida_duda": 0.0
 }
 },
 "401884764": {
 "fotmob": 5881192,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -469,9 +469,9 @@
 "importante": false
 }
 ],
-"valor_xi": 28300681.0,
-"perdida": 0.25883281748591136,
-"perdida_duda": 0.27930310228223837
+"valor_xi": 26332351.0,
+"perdida": 0.2781804404779505,
+"perdida_duda": 0.3001808687724085
 },
 "visita": {
 "faltan": [
@@ -490,15 +490,6 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 12692505.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Juma Bah",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 15136199.0,
 "titular": false,
 "importante": true
 },
@@ -539,14 +530,14 @@
 "importante": false
 }
 ],
-"valor_xi": 85687364.0,
-"perdida": 0.38642219172479153,
-"perdida_duda": 0.17664447000610264
+"valor_xi": 110307233.0,
+"perdida": 0.30017522966966276,
+"perdida_duda": 0.0
 }
 },
 "401884766": {
 "fotmob": 5881196,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -621,19 +612,10 @@
 "valor": 401314.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Amos Pieper",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2157034.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 49473672.0,
-"perdida": 0.565720308773523,
+"valor_xi": 49875828.0,
+"perdida": 0.5611588242705464,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -682,7 +664,7 @@
 },
 "401884772": {
 "fotmob": 5881189,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -694,10 +676,19 @@
 "valor": 137855653.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Manuel Neuer",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2219328.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 670410641.0,
-"perdida": 0.2056286767679751,
+"valor_xi": 686412208.0,
+"perdida": 0.2008350833410585,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -718,7 +709,7 @@
 "duda": false,
 "valor": 23794034.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Marc Guiu",
@@ -727,17 +718,17 @@
 "duda": false,
 "valor": 20186451.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 254330344.0,
-"perdida": 0.268285026186258,
+"valor_xi": 274951205.0,
+"perdida": 0.08820669834853061,
 "perdida_duda": 0.0
 }
 },
 "401884771": {
 "fotmob": 5881188,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -778,20 +769,20 @@
 "importante": false
 },
 {
+"nombre": "Martin Terrier",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 7893034.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Montrell Culbreath",
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
 "duda": false,
 "valor": 1343692.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Martin Terrier",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 7893034.0,
 "titular": false,
 "importante": false
 }
@@ -828,8 +819,8 @@
 },
 "401884768": {
 "fotmob": 5881190,
-"visto": "2026-10-16T11:32+00:00",
-"xi": "predicted",
+"visto": "2026-10-16T15:04+00:00",
+"xi": "unavailable",
 "local": {
 "faltan": [
 {
@@ -839,7 +830,16 @@
 "duda": false,
 "valor": 12689921.0,
 "titular": false,
-"importante": true
+"importante": false
+},
+{
+"nombre": "Tim Kleindienst",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 6499408.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Franck Honorat",
@@ -848,34 +848,7 @@
 "duda": false,
 "valor": 5914761.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Nicolas-Gerrit Kühn",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 10921619.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Ko Itakura",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6921409.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Tim Kleindienst",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6499408.0,
-"titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Enzo Leopold",
@@ -885,11 +858,47 @@
 "valor": 3789943.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Jan Leszczyński",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 1237185.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Fritz Fleck",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 973320.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolas-Gerrit Kühn",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 10921619.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ko Itakura",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 6921409.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 55871717.0,
-"perdida": 0.3329892653916471,
-"perdida_duda": 0.43568440898281324
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [

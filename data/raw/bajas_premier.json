@@ -1,7 +1,7 @@
 {
 "401878771": {
 "fotmob": 5795478,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -24,7 +24,7 @@
 {
 "nombre": "Reece James",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "mediados de enero de 2027",
 "duda": false,
 "valor": 60613262.0,
 "titular": false,
@@ -56,7 +56,7 @@
 },
 "401879262": {
 "fotmob": 5795476,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -106,9 +106,9 @@
 "importante": false
 }
 ],
-"valor_xi": 404374502.0,
-"perdida": 0.1127857759933637,
-"perdida_duda": 0.18795720458160836
+"valor_xi": 367419476.0,
+"perdida": 0.12412976170049297,
+"perdida_duda": 0.20686192748258125
 },
 "visita": {
 "faltan": [
@@ -183,7 +183,7 @@
 },
 "401878770": {
 "fotmob": 5795479,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -206,9 +206,9 @@
 "importante": false
 }
 ],
-"valor_xi": 235403231.0,
+"valor_xi": 234351616.0,
 "perdida": 0.0,
-"perdida_duda": 0.0896561653395488
+"perdida_duda": 0.0900584828909394
 },
 "visita": {
 "faltan": [
@@ -267,14 +267,14 @@
 "importante": false
 }
 ],
-"valor_xi": 82827369.0,
-"perdida": 0.3254042996343395,
+"valor_xi": 93087285.0,
+"perdida": 0.28953881295388517,
 "perdida_duda": 0.0
 }
 },
 "401879259": {
 "fotmob": 5795481,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -288,7 +288,7 @@
 "importante": false
 }
 ],
-"valor_xi": 931889804.0,
+"valor_xi": 924919133.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -304,14 +304,14 @@
 "importante": false
 }
 ],
-"valor_xi": 159441284.0,
+"valor_xi": 180099321.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401879258": {
 "fotmob": 5795482,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -361,9 +361,9 @@
 "importante": false
 }
 ],
-"valor_xi": 352505902.0,
-"perdida": 0.22739134450009862,
-"perdida_duda": 0.2680686861237291
+"valor_xi": 364776947.0,
+"perdida": 0.2197419317728979,
+"perdida_duda": 0.25905089336689907
 },
 "visita": {
 "faltan": [
@@ -392,7 +392,7 @@
 "duda": false,
 "valor": 25511311.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "George Hemmings",
@@ -413,14 +413,14 @@
 "importante": false
 }
 ],
-"valor_xi": 297549294.0,
-"perdida": 0.3819092576976506,
+"valor_xi": 318599990.0,
+"perdida": 0.2766023909793594,
 "perdida_duda": 0.0
 }
 },
 "401879263": {
 "fotmob": 5795475,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -493,7 +493,7 @@
 },
 "401879261": {
 "fotmob": 5795477,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -620,7 +620,7 @@
 },
 "401879260": {
 "fotmob": 5795480,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -729,7 +729,7 @@
 },
 "401878769": {
 "fotmob": 5795483,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -768,15 +768,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Martín Zubimendi",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 78983208.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Piero Hincapié",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
@@ -795,6 +786,15 @@
 "importante": true
 },
 {
+"nombre": "Martín Zubimendi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 78983208.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Christos Tzolis",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
@@ -805,13 +805,13 @@
 }
 ],
 "valor_xi": 684432752.0,
-"perdida": 0.21100990357048255,
-"perdida_duda": 0.1758983722625828
+"perdida": 0.09561038803122618,
+"perdida_duda": 0.29129788780183913
 }
 },
 "401879257": {
 "fotmob": 5795484,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

@@ -1,7 +1,7 @@
 {
 "401882844": {
 "fotmob": 5868093,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401882843": {
 "fotmob": 5868094,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -120,7 +120,17 @@
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Johnny Cardoso",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 22183754.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 377536008.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
@@ -128,7 +138,7 @@
 },
 "401882837": {
 "fotmob": 5868100,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -151,8 +161,8 @@
 "importante": false
 }
 ],
-"valor_xi": 179559909.0,
-"perdida": 0.0727423792579445,
+"valor_xi": 200404735.0,
+"perdida": 0.06517617959475858,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -167,14 +177,14 @@
 "importante": false
 }
 ],
-"valor_xi": 22028981.0,
+"valor_xi": 22004217.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882846": {
 "fotmob": 5868091,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -197,7 +207,7 @@
 "importante": false
 }
 ],
-"valor_xi": 110325264.0,
+"valor_xi": 147304128.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -231,14 +241,14 @@
 "importante": false
 }
 ],
-"valor_xi": 649355806.0,
+"valor_xi": 777569029.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882838": {
 "fotmob": 5868099,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -270,15 +280,6 @@
 "importante": true
 },
 {
-"nombre": "Dimitri Foulquier",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 596524.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Sergi Canós",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
@@ -295,11 +296,20 @@
 "valor": 1198809.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Dimitri Foulquier",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 596524.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 67615390.0,
-"perdida": 0.16080844908237607,
-"perdida_duda": 0.1146676962153143
+"valor_xi": 63704643.0,
+"perdida": 0.1706802752195001,
+"perdida_duda": 0.12170700022602748
 },
 "visita": {
 "faltan": [
@@ -331,14 +341,14 @@
 "importante": false
 }
 ],
-"valor_xi": 95240903.0,
-"perdida": 0.3302934979522401,
-"perdida_duda": 0.07837178948208838
+"valor_xi": 69735966.0,
+"perdida": 0.4510936437017306,
+"perdida_duda": 0.10703515600543914
 }
 },
 "401882840": {
 "fotmob": 5868097,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -352,20 +362,20 @@
 "importante": true
 },
 {
-"nombre": "Raúl Moro",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 4925990.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Romain Del Castillo",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 4356006.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Raúl Moro",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 4925990.0,
 "titular": false,
 "importante": true
 },
@@ -381,24 +391,24 @@
 {
 "nombre": "Enrique Barja",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 1211398.0,
 "titular": false,
 "importante": false
 }
 ],
 "valor_xi": 23519717.0,
-"perdida": 0.8299365591856399,
-"perdida_duda": 0.18853045723296755
+"perdida": 0.6204956887874119,
+"perdida_duda": 0.3979713276311956
 },
 "visita": {
 "faltan": [
 {
 "nombre": "Matteo Prati",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 6570636.0,
 "titular": false,
 "importante": true
@@ -414,13 +424,13 @@
 }
 ],
 "valor_xi": 57418487.0,
-"perdida": 0.11443415428205204,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.11443415428205204
 }
 },
 "401882845": {
 "fotmob": 5868092,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -502,7 +512,7 @@
 },
 "401882841": {
 "fotmob": 5868096,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -602,7 +612,7 @@
 },
 "401882839": {
 "fotmob": 5868098,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -684,6 +694,15 @@
 "valor": 533994.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Jon Guridi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1405489.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 67774832.0,
@@ -693,7 +712,7 @@
 },
 "401882842": {
 "fotmob": 5868095,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -811,7 +830,7 @@
 },
 "401882870": {
 "fotmob": 5868067,
-"visto": "2026-10-16T11:32+00:00",
+"visto": "2026-10-16T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
