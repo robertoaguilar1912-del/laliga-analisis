@@ -1,0 +1,40 @@
+[
+ {
+  "prueba": "Sin pretemporada (hasta el 15 oct 2026)",
+  "periodo": "2023-26",
+  "modelo": 13.31,
+  "casa": 13.15,
+  "roi": -0.0562,
+  "n": 5994,
+  "nota": "Error de la diferencia de puntos en las dos primeras semanas de cada temporada; ROI de todos los PICK de la temporada."
+ },
+ {
+  "prueba": "+ juegos de pretemporada con la mitad de peso (en uso desde el 15 oct 2026)",
+  "periodo": "2023-26",
+  "modelo": 13.19,
+  "casa": 13.15,
+  "roi": -0.045,
+  "n": 5993,
+  "nota": "Elegido con 2022-23. El modelo queda casi igual de preciso que la línea de cierre al arrancar la temporada. En toda la temporada el error baja poco (14.12 a 14.10) y el ROI mejoró en las tres temporadas de la prueba."
+ },
+ {
+  "prueba": "Juegos de pretemporada con peso completo",
+  "periodo": "2023-26",
+  "modelo": 13.1,
+  "casa": 13.15,
+  "roi": null,
+  "n": null,
+  "sin_roi": "no se usa",
+  "nota": "Ayudaba más al arranque de 2023-26 (sin pretemporada, 13.29 en la misma corrida), pero en 2022-23 empeoraba las dos primeras semanas: con la mitad de peso es más seguro."
+ },
+ {
+  "prueba": "Minutos de pretemporada como minutos de costumbre",
+  "periodo": "2023-26",
+  "modelo": 13.31,
+  "casa": 13.15,
+  "roi": null,
+  "n": null,
+  "sin_roi": "no se usa",
+  "nota": "Mezclar los minutos de pretemporada con los de la temporada pasada casi no mejora la predicción de minutos (error 6.70 a 6.57) ni la de puntos (13.29 a 13.31). En pretemporada los titulares juegan poco."
+ }
+]

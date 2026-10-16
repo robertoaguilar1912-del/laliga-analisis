@@ -428,7 +428,7 @@
     const m = principal, neg = m.roi < 0, porMk = ['Spread', 'Total', 'Moneyline'].map(k => [k, B.estrategias[`modelo|cierre|${k}|0.05`]]);
     el.innerHTML = `
       <div class="intro"><p class="eyebrow">Prueba sin mirar al futuro · ${B.desde.slice(0, 4)}-${B.hasta.slice(0, 4)}</p><h2>Cómo le habría ido al modelo</h2>
-        <p>Para cada día entre ${fdate(B.desde, { month: 'long', year: 'numeric' })} y ${fdate(B.hasta, { month: 'long', year: 'numeric' })}, el modelo solo vio juegos anteriores, calculó sus probabilidades y "apostó" 1 unidad donde veía EV de +5% o más (${B.mercados}), contra ${esc(B.referencia)}. Fueron ${num(B.partidos)} juegos. Para cada juego usó a los jugadores que estuvieron disponibles (la lista de inactivos se conoce antes de que cierre la línea) con los minutos que solían jugar.</p></div>
+        <p>Para cada día entre ${fdate(B.desde, { month: 'long', year: 'numeric' })} y ${fdate(B.hasta, { month: 'long', year: 'numeric' })}, el modelo solo vio juegos anteriores, calculó sus probabilidades y "apostó" 1 unidad donde veía EV de +5% o más (${B.mercados}), contra ${esc(B.referencia)}. Fueron ${num(B.partidos)} juegos. Para cada juego usó a los jugadores que estuvieron disponibles (la lista de inactivos se conoce antes de que cierre la línea) con los minutos que solían jugar. Los juegos de pretemporada cuentan con la mitad de peso.</p></div>
       <div class="verdict">
         <div><span class="eyebrow">ROI siguiendo los PICK</span><span class="big ${neg ? 'neg' : ''}">${spct(m.roi)}</span><span class="what">${num(m.n)} apuestas: ${sNum(m.ganancia_u)} unidades. Rango probable: ${spct(m.roi_ic95[0])} a ${spct(m.roi_ic95[1])}.</span></div>
         <div><span class="eyebrow">Meses en positivo</span><span class="big">${B.meses_positivos}<small style="font-size:20px;color:var(--ink-3)"> de ${B.meses_total}</small></span><span class="what">${B.meses_total - B.meses_positivos} meses terminaron en pérdida.</span></div>
@@ -447,7 +447,11 @@
       <div class="two">
         <div class="card"><h3>¿Más valor es más ganancia?</h3><p class="note">ROI según cuánto valor veía el modelo. Si tuviera ventaja, las barras subirían hacia la derecha.</p><div class="chart" id="chart-ev"></div></div>
         <div class="card"><h3>¿Sus porcentajes se cumplen?</h3><p class="note">Probabilidad de que gane el local: lo que dijo el modelo contra lo que pasó. Línea punteada: calibración perfecta.</p><div class="chart" id="chart-cal"></div></div>
-      </div>`;
+      </div>
+      ${(D.experimentos || []).length ? `<div class="card"><h3>Ideas que se probaron</h3><p class="note">Cada idea se probó igual: solo con juegos anteriores. "Error" es el error típico de la diferencia de puntos en las dos primeras semanas de cada temporada (menos es mejor); "Línea" es el de la línea de cierre en los mismos juegos.</p>
+        <div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Prueba</th><th>Periodo</th><th>Error</th><th>Línea</th><th>ROI</th><th class="l">Qué pasó</th></tr></thead><tbody>
+        ${D.experimentos.map(e => `<tr><td class="nm l" style="white-space:normal;min-width:200px">${esc(e.prueba)}</td><td>${esc(e.periodo)}</td><td>${e.modelo == null ? '—' : e.modelo.toFixed(2)}</td><td>${e.casa == null ? '—' : e.casa.toFixed(2)}</td><td class="${e.roi == null ? '' : e.roi < 0 ? 'neg' : 'posv'}">${e.roi == null ? esc(e.sin_roi || '—') : spct(e.roi) + ' <span class="muted">(' + num(e.n) + ')</span>'}</td><td class="l" style="white-space:normal;min-width:240px">${esc(e.nota || '')}</td></tr>`).join('')}
+        </tbody></table></div></div>` : ''}`;
     const svgEl = (tag, attrs) => { const e = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
     // curva
     (() => {

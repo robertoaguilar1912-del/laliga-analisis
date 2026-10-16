@@ -7,6 +7,7 @@ Prueba del modelo de la NBA sin mirar al futuro (data/modelo/nba/backtest.json).
 - Para cada juego se usan los jugadores que jugaron (la lista de inactivos se conoce antes del cierre) con los
   minutos que solían jugar, no los que jugaron ese día.
 - La desviación de cada temporada es el error del modelo en la temporada anterior.
+- Los juegos de pretemporada (desde 2022) entran al ajuste de los dos modelos con la mitad de peso (ver nba.py).
 
     python src/prueba_nba.py           # con los parámetros de nba.py
     python src/prueba_nba.py elegir    # vuelve a elegirlos con 2022-23
@@ -18,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, PICK_P_MIN
-from nba import (cargar_juegos, cargar_box, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
+from nba import (cargar_juegos, cargar_box, con_pretemporada, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
                  HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES)
 
 warnings.filterwarnings('ignore')
@@ -27,7 +28,7 @@ PRUEBA_DESDE = 2024
 
 
 def predecir_equipos(g, temporadas, hl, ridge):
-    test = g[g.temporada.isin(temporadas)]
+    test = g[g.temporada.isin(temporadas) & (g.tipo != 1)]          # la pretemporada solo se usa para ajustar
     out = []
     for f, dia in test.groupby('fecha_dt', sort=True):
         mod = ModeloNBA(hl, ridge).fit(g, f)
@@ -39,7 +40,7 @@ def predecir_equipos(g, temporadas, hl, ridge):
 
 
 def predecir_jugadores(g, mj, temporadas, paso=2):
-    test = g[g.temporada.isin(temporadas)]
+    test = g[g.temporada.isin(temporadas) & (g.tipo != 1)]
     out = {}
     for k, (f, dia) in enumerate(test.groupby('fecha_dt', sort=True)):
         if k % paso == 0:
@@ -120,7 +121,9 @@ def resumen(b):
 def main(elegir_parametros=False):
     g = cargar_juegos()
     box = cargar_box(g)
-    print(f'- {len(g)} juegos; con momios de cierre: {g.casa.notna().sum()}; {len(box)} filas de minutos por jugador')
+    n0 = len(g)
+    g, box = con_pretemporada(g, box)        # juegos de pretemporada: entran al ajuste con la mitad de peso
+    print(f'- {n0} juegos (+{len(g) - n0} de pretemporada); con momios de cierre: {g.casa.notna().sum()}; {len(box)} filas de minutos por jugador')
     hl_e, r_e, hl_j, r_j = HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES
     if elegir_parametros:
         print(f'- eligiendo parámetros con {", ".join(nombre_temporada(y) for y in AJUSTE)}')
@@ -129,6 +132,7 @@ def main(elegir_parametros=False):
     temporadas = sorted(t for t in g.temporada.unique() if t >= AJUSTE[0])
     d = g.join(predecir_equipos(g, temporadas, hl_e, r_e), how='inner')
     d = d.join(predecir_jugadores(g, ModeloJugadores(g, box, hl_j, r_j), temporadas), how='inner')
+    d = d[d.tipo != 1]
     # desviación de cada temporada = error de la anterior (la primera de la prueba usa la de ajuste)
     err = {y: (rmse(s.margen - s.pm), rmse(s.total - s.pt)) for y, s in d.groupby('temporada')}
     completas = [y for y in sorted(err) if (d.temporada == y).sum() >= 1000]
