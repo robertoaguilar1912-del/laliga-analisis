@@ -52,6 +52,15 @@ LIGAS = {
     'premier': {'nombre': 'Premier League', 'fotmob': 47, 'pais': 'Inglaterra', 'espn': 'eng.1', 'fd': 'E0', 'fd2': 'E1', 'fd2_nombre': 'Championship',
                 'calendario': 'europa', 'api_football': 39,
                 'copas': {**COPAS_UEFA, 'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'}, 'zonas': 'europa20'},
+    # championship: segunda de Inglaterra (24 equipos, 46 jornadas). Los que bajan de la Premier traen dinero de "paracaídas"
+    'championship': {'nombre': 'Championship', 'fotmob': 48, 'pais': 'Inglaterra', 'espn': 'eng.2', 'fd': 'E1', 'fd2': 'E0',
+                     'fd2_nombre': 'Premier League', 'calendario': 'europa', 'api_football': 40, 'descienden_de': 'E0',
+                     'nuevo': 'es nuevo en la Championship', 'copas': {'eng.fa': 'FA Cup', 'eng.league_cup': 'Copa de la Liga'},
+                     'zonas': 'championship24',
+                     'aviso': 'En la prueba 2020-2026 los PICK perdieron −5.5% (2,439 apuestas), pero casi todo en el arranque de cada temporada: '
+                              'en las primeras 10 jornadas −11%, después cerca de −2%. En verano los planteles cambian mucho y el modelo tarda '
+                              'en enterarse; esta temporada va −40% en 113 PICK. Cuidado con los que bajaron de la Premier (Wolves, Burnley, '
+                              'West Ham): traen dinero de "paracaídas" y al inicio la casa los mide mejor que el modelo.'},
     'seriea': {'nombre': 'Serie A', 'fotmob': 55, 'pais': 'Italia', 'espn': 'ita.1', 'fd': 'I1', 'fd2': 'I2', 'fd2_nombre': 'Serie B',
                'calendario': 'europa', 'api_football': 135,
                'copas': {**COPAS_UEFA, 'ita.coppa_italia': 'Copa de Italia', 'ita.super_cup': 'Supercopa'}, 'zonas': 'europa20'},
@@ -143,6 +152,7 @@ ZONAS = {
     'europa20': [[1, 4, 'cl', 'Champions'], [5, 7, 'eu', 'Europa / Conference'], [-3, -1, 'des', 'Descenso']],
     'portugal18': [[1, 2, 'cl', 'Champions'], [3, 4, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
     'segunda22': [[1, 2, 'cl', 'Ascenso directo'], [3, 6, 'eu', 'Playoff de ascenso'], [-4, -1, 'des', 'Descenso']],
+    'championship24': [[1, 2, 'cl', 'Ascenso directo'], [3, 6, 'eu', 'Playoff de ascenso'], [-3, -1, 'des', 'Descenso']],
     'europa18': [[1, 4, 'cl', 'Champions'], [5, 6, 'eu', 'Europa / Conference'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
     'uefa36': [[1, 8, 'cl', 'Octavos directo'], [9, 24, 'eu', 'Playoff de eliminación'], [25, 36, 'des', 'Eliminado']],
     'ligamx': [[1, 6, 'cl', 'Liguilla directa'], [7, 10, 'eu', 'Play-in']],

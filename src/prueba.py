@@ -95,7 +95,7 @@ def predecir(liga):
         hist = df[(df.Date < d0) & (df.Date >= d0 - pd.Timedelta(days=VENTANA))]
         nuevos = promo.get(dia.Season.iloc[0], set())
         if arriba is not None:
-            nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba)
+            nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba, LIGAS[liga].get('previo_descendido'))
         m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None).fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:

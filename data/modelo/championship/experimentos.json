@@ -1,0 +1,32 @@
+[
+ {
+  "prueba": "Corrección de favoritos y empates (en uso, como en todas las ligas de Europa)",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 1.0505,
+  "casa": 1.0354,
+  "roi": -0.0548,
+  "n": 2439,
+  "nota": "Sin la corrección: precisión un poco mejor (1.0482) pero los PICK perdían más: −7.3% en 2,310 apuestas. Pasó lo mismo en Segunda."
+ },
+ {
+  "prueba": "PICK solo si el modelo da 30% o más (regla de todas las ligas)",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 1.0505,
+  "casa": 1.0354,
+  "roi": -0.0548,
+  "n": 2439,
+  "nota": "Sin la regla: 3,043 apuestas, ROI −6.9%. Los \"PICK\" de visita con menos de 30% eran los que más perdían."
+ },
+ {
+  "prueba": "Previo de equipo fuerte para los que bajan de la Premier",
+  "periodo": "2020-26",
+  "contra": "Bet365 apertura",
+  "modelo": 1.0505,
+  "casa": 1.0354,
+  "roi": -0.0548,
+  "n": 2439,
+  "nota": "Tratados como recién ascendidos, el modelo fallaba más en sus partidos de las primeras 20 jornadas (1.0224; con el previo 1.0107; la casa 0.994). Se probaron +0.1 a +0.4: el mejor fue +0.2, el mismo que en Segunda."
+ }
+]

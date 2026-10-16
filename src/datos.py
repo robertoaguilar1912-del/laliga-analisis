@@ -36,11 +36,12 @@ def ascendidos(df):
 PREVIO_DESCENDIDO = (0.20, -0.20)   # ataque y defensa mejores que el promedio de la categoría (elegido con la prueba de Segunda 2020-2026)
 
 
-def previos_nuevos(nuevos, temporada, arriba):
+def previos_nuevos(nuevos, temporada, arriba, previo=None):
     """{equipo: (ataque, defensa)} para los nuevos de una temporada: los que bajan de la división de arriba
     ('arriba': DataFrame de esa división con columna Season) parten como equipo fuerte; los que suben, como
     recién ascendidos."""
     from model import PROMOTED_ATT, PROMOTED_DEF
     ss = sorted(s for s in arriba.Season.unique() if s < temporada) if arriba is not None and len(arriba) else []
     bajan = set(arriba[arriba.Season == ss[-1]].HomeTeam) if ss else set()
-    return {t: (PREVIO_DESCENDIDO if t in bajan else (PROMOTED_ATT, PROMOTED_DEF)) for t in nuevos}
+    previo = previo or PREVIO_DESCENDIDO          # cada liga puede tener el suyo ('previo_descendido' en config)
+    return {t: (tuple(previo) if t in bajan else (PROMOTED_ATT, PROMOTED_DEF)) for t in nuevos}

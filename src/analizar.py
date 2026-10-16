@@ -207,7 +207,8 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     else 'Ningún mercado con momio supera +5% de valor esperado.')
         else:
             txt += '. Todavía no hay momios publicados para este partido.'
-        bajaron = [nombre(t) for t in (h, a) if isinstance(nuevos, dict) and nuevos.get(t) == PREVIO_DESCENDIDO]
+        previo = tuple(LIGAS[liga].get('previo_descendido', PREVIO_DESCENDIDO))
+        bajaron = [nombre(t) for t in (h, a) if LIGAS[liga].get('descienden_de') and isinstance(nuevos, dict) and nuevos.get(t) == previo]
         nv = [t for t in (h, a) if t in nuevos]
         if nv:
             verbo = LIGAS[liga].get('nuevo', 'subió esta temporada')
@@ -482,7 +483,7 @@ def analizar_liga(liga):
     elif L.get('prior_nuevos'):           # Série B: los nuevos pueden venir de arriba (descendidos) o de abajo
         nuevos = {t: tuple(L['prior_nuevos']) for t in nuevos}
     elif L.get('descienden_de'):        # Segunda: los descendidos de La Liga no son recién ascendidos
-        nuevos = previos_nuevos(nuevos, temporada, df2)
+        nuevos = previos_nuevos(nuevos, temporada, df2, L.get('previo_descendido'))
     hist = df[(df.Date < ref) & (df.Date >= ref - pd.Timedelta(days=3 * 365))]
     calendario = None
     if L.get('region'):
@@ -547,7 +548,7 @@ def analizar_liga(liga):
     if backtest:
         backtest['curva'] = [{'d': c['d'], 'u': round(c['u'], 2)} for c in backtest['curva']]
     ex = DATOS / 'modelo' / liga / 'experimentos.json'
-    info = {'liga': liga, 'nombre': L['nombre'], 'pais': L['pais'], 'temporada': etiqueta_temporada(liga, temporada_tabla),
+    info = {'liga': liga, 'nombre': L['nombre'], 'pais': L['pais'], 'arriba': L.get('fd2_nombre') if L.get('descienden_de') else None, 'temporada': etiqueta_temporada(liga, temporada_tabla),
             'zonas': ZONAS.get(L.get('zonas'), []), 'grupos': [g['grupo'] for g in grupos],
             'h2h_desde': str(hist_h2h.Date.min().year),
             'h2h_divs': (H2H_REGION[L['region']] if L.get('region') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])),
