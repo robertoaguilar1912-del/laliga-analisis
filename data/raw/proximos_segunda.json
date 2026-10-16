@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
+    135,
     255,
-    190
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    105
+    110
    ],
    "spread": [
     [
      "-0.5",
-     115
+     125
     ],
     [
      "+0.5",
@@ -84,16 +84,16 @@
    "ou_linea": 2.5,
    "ou": [
     110,
-    -150
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     140
+     145
     ],
     [
      "+0.5",
-     -210
+     -215
     ]
    ]
   }
@@ -177,22 +177,22 @@
    "casa": "DraftKings",
    "ml": [
     190,
-    225,
+    230,
     135
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -145
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -180
     ],
     [
      "-0.5",
-     120
+     125
     ]
    ]
   }
@@ -221,22 +221,22 @@
    "casa": "DraftKings",
    "ml": [
     -120,
-    265,
-    285
+    270,
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    105
+    -150,
+    110
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -130
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   }
@@ -254,12 +254,12 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    235,
-    290
+    240,
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -140
    ],
    "spread": [
@@ -269,7 +269,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -287,22 +287,22 @@
    "casa": "DraftKings",
    "ml": [
     165,
-    195,
-    170
+    200,
+    180
    ],
    "ou_linea": 1.5,
    "ou": [
-    -210,
-    140
+    -205,
+    145
    ],
    "spread": [
     [
-     "+0.5",
-     -240
+     "-0.5",
+     145
     ],
     [
-     "-0.5",
-     150
+     "+0.5",
+     -220
     ]
    ]
   }
@@ -423,6 +423,17 @@
   "estadio": "Nou Estadi Castalia",
   "local_espn": "Castellón",
   "visita_espn": "Sporting Gijón",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883131",
+  "utc": "2026-10-26T19:30Z",
+  "estadio": "Estadi de la FAF d'Encamp",
+  "local_espn": "FC Andorra",
+  "visita_espn": "Burgos",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1100,
-    500,
-    -475
+    800,
+    400,
+    -300
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    110
+    -140,
+    105
    ],
    "spread": [
     [
      "+1.5",
-     100
+     -140
     ],
     [
      "-1.5",
-     -150
+     100
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    230,
-    185
+    150,
+    235,
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -145
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     125
+     140
     ],
     [
      "+0.5",
-     -185
+     -195
     ]
    ]
   }
@@ -145,12 +145,12 @@
    "ml": [
     115,
     200,
-    260
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
     125,
-    -185
+    -180
    ],
    "spread": [
     [
@@ -159,7 +159,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -177,13 +177,13 @@
    "casa": "DraftKings",
    "ml": [
     -170,
-    285,
+    290,
     425
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -120
+    -115
    ],
    "spread": [
     [
@@ -242,19 +242,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    175,
     210,
-    155
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    110,
     -155
    ],
    "spread": [
     [
      "+0.5",
-     -220
+     -215
     ],
     [
      "-0.5",
@@ -281,17 +281,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -135
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -150
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -401,6 +401,28 @@
   "estadio": "Moisés Lucarelli",
   "local_espn": "Ponte Preta",
   "visita_espn": "Fortaleza",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860405",
+  "utc": "2026-10-26T22:30Z",
+  "estadio": "Estádio Raimundo Sampaio (Independência)",
+  "local_espn": "América Mineiro",
+  "visita_espn": "Cuiabá",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860411",
+  "utc": "2026-10-26T23:30Z",
+  "estadio": "Alfredo Jaconi",
+  "local_espn": "Juventude",
+  "visita_espn": "Náutico",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,

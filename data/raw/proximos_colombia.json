@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    450,
+    425,
     285,
-    -190
+    -180
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -125
+    -120,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     135
+     125
     ],
     [
      "-0.5",
-     -200
+     -190
     ]
    ]
   }
@@ -110,8 +110,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    190,
+    180,
+    195,
     150
    ],
    "ou_linea": 2.5,
@@ -144,7 +144,7 @@
    "casa": "DraftKings",
    "ml": [
     160,
-    180,
+    185,
     175
    ],
    "ou_linea": 2.5,
@@ -155,7 +155,7 @@
    "spread": [
     [
      "-0.5",
-     145
+     150
     ],
     [
      "+0.5",
@@ -183,7 +183,7 @@
    "ou_linea": 2.5,
    "ou": [
     115,
-    -170
+    -165
    ],
    "spread": [
     [
@@ -211,7 +211,7 @@
    "ml": [
     -115,
     230,
-    280
+    285
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -225,7 +225,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -359,29 +359,7 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -360,
-    400,
-    800
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -140,
-    100
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -125
-    ],
-    [
-     "+1.5",
-     -120
-    ]
-   ]
-  }
+  "momios": null
  },
  {
   "id": "401877877",
@@ -477,6 +455,28 @@
   "estadio": "Estadio Manuel Murillo Toro",
   "local_espn": "Deportes Tolima",
   "visita_espn": "Deportivo Pasto",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878065",
+  "utc": "2026-10-26T23:00Z",
+  "estadio": "Estadio Jaraguay (Municipal de Montería)",
+  "local_espn": "Jaguares de Córdoba",
+  "visita_espn": "Llaneros FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877841",
+  "utc": "2026-10-27T01:05Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Independiente Santa Fe",
+  "visita_espn": "Atlético Bucaramanga",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
