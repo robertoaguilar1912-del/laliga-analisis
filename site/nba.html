@@ -474,7 +474,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   // ---------------- navegación
   const views = ['juegos', 'posiciones', 'equipos', 'modelo'];
   function showView(v) {
-    if (v === 'registro') { location.href = `./?liga=${futbol}#registro`; return; }
+    if (v === 'registro') { location.href = `./?liga=nba&r=modelo#registro`; return; }
     views.forEach(x => { $('#v-' + x).hidden = x !== v; });
     $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
   }
@@ -715,7 +715,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: g.id, liga: 'nba', utc: g.utc, local: g.local_es, visita: g.visita_es,
                   mercado: nombre, k: clave, p: r.c.p, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
       guardarMias();
-      msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)} por ${num(amt, amt % 1 ? 2 : 0)}. <a class="linkbtn" href="./?liga=${futbol}#registro">Ver mi registro →</a>`
+      msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)} por ${num(amt, amt % 1 ? 2 : 0)}. <a class="linkbtn" href="./?liga=nba#registro">Ver mi registro →</a>`
                            : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       mom.value = ''; monto.value = ''; calc();
     });

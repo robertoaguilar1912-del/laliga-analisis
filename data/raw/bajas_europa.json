@@ -1,7 +1,7 @@
 {
 "401915548": {
 "fotmob": 6112382,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -46,7 +46,7 @@
 },
 "401915556": {
 "fotmob": 6112293,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -82,7 +82,7 @@
 },
 "401915558": {
 "fotmob": 6112281,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -109,7 +109,7 @@
 },
 "401915547": {
 "fotmob": 6112251,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -190,7 +190,7 @@
 },
 "401915546": {
 "fotmob": 6112320,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -254,6 +254,24 @@
 "valor": 10181549.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Thomas Meunier",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 1590131.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Wilson Isidor",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 21441211.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 0.0,
@@ -263,7 +281,7 @@
 },
 "401915559": {
 "fotmob": 6112370,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -340,7 +358,7 @@
 {
 "nombre": "Martin Terrier",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
+"regreso": "principios de diciembre",
 "duda": false,
 "valor": 7893034.0,
 "titular": false,
@@ -363,7 +381,7 @@
 },
 "401915557": {
 "fotmob": 6112314,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -454,7 +472,7 @@
 },
 "401915545": {
 "fotmob": 6112289,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -554,14 +572,14 @@
 },
 "401915552": {
 "fotmob": 6112326,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
 {
 "nombre": "Alex Scott",
 "tipo": "Lesión",
-"regreso": "sin fecha de regreso",
+"regreso": "finales de octubre",
 "duda": false,
 "valor": 55772556.0,
 "titular": false,
@@ -577,20 +595,20 @@
 "importante": false
 },
 {
-"nombre": "Veljko Milosavljević",
+"nombre": "Julián Araujo",
 "tipo": "Lesión",
-"regreso": "unos días",
+"regreso": "finales de noviembre",
 "duda": false,
-"valor": 29696246.0,
+"valor": 10880388.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Julián Araujo",
+"nombre": "Veljko Milosavljević",
 "tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 10880388.0,
+"regreso": "en duda",
+"duda": true,
+"valor": 29696246.0,
 "titular": false,
 "importante": false
 }
@@ -636,7 +654,7 @@
 },
 "401915553": {
 "fotmob": 6112356,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -675,24 +693,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Dean Henderson",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 34320034.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Jean-Philippe Mateta",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 26968341.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Chadi Riad",
 "tipo": "Lesión",
 "regreso": "finales de junio de 2027",
@@ -702,10 +702,37 @@
 "importante": false
 },
 {
+"nombre": "Dean Henderson",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 34320034.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jean-Philippe Mateta",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 26968341.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ben Chilwell",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 6839859.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Takehiro Tomiyasu",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 2281539.0,
 "titular": false,
 "importante": false
@@ -718,7 +745,7 @@
 },
 "401915555": {
 "fotmob": 6112300,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -795,7 +822,7 @@
 {
 "nombre": "Borja Iglesias",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "finales de noviembre",
 "duda": false,
 "valor": 1945029.0,
 "titular": false,
@@ -809,7 +836,7 @@
 },
 "401915542": {
 "fotmob": 6112339,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -854,7 +881,7 @@
 },
 "401915540": {
 "fotmob": 6112374,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -918,7 +945,7 @@
 },
 "401915541": {
 "fotmob": 6112335,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -982,7 +1009,7 @@
 },
 "401915554": {
 "fotmob": 6112267,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1055,7 +1082,7 @@
 },
 "401915544": {
 "fotmob": 6112342,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1119,7 +1146,7 @@
 },
 "401915543": {
 "fotmob": 6112350,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1183,7 +1210,7 @@
 },
 "401915539": {
 "fotmob": 6112285,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

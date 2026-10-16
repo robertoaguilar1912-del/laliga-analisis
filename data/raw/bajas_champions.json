@@ -1,7 +1,7 @@
 {
 "401915403": {
 "fotmob": 6106333,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -110,7 +110,7 @@
 },
 "401915404": {
 "fotmob": 6106422,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -155,7 +155,7 @@
 },
 "401915402": {
 "fotmob": 6106277,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -209,7 +209,7 @@
 },
 "401915398": {
 "fotmob": 6106287,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -318,28 +318,10 @@
 },
 "401915397": {
 "fotmob": 6106248,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Dominik Szoboszlai",
-"tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
-"valor": 122859701.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Alexander Isak",
-"tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
-"valor": 85131503.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Hugo Ekitiké",
 "tipo": "Lesión",
@@ -350,10 +332,28 @@
 "importante": true
 },
 {
+"nombre": "Dominik Szoboszlai",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 122859701.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Alexander Isak",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 85131503.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Cody Gakpo",
 "tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 57741185.0,
 "titular": false,
 "importante": true
@@ -378,8 +378,8 @@
 }
 ],
 "valor_xi": 482277117.0,
-"perdida": 0.7053925347239728,
-"perdida_duda": 0.0
+"perdida": 0.15439730888164863,
+"perdida_duda": 0.5509952258423242
 },
 "visita": {
 "faltan": [
@@ -400,6 +400,15 @@
 "valor": 4755873.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Péter Gulácsi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1146109.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 241159128.0,
@@ -409,7 +418,7 @@
 },
 "401915401": {
 "fotmob": 6106257,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -436,7 +445,7 @@
 },
 "401915400": {
 "fotmob": 6106320,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -518,7 +527,7 @@
 },
 "401915399": {
 "fotmob": 6106234,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -582,7 +591,7 @@
 },
 "401915392": {
 "fotmob": 6106397,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -664,7 +673,7 @@
 },
 "401915395": {
 "fotmob": 6106410,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -693,15 +702,6 @@
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Kobbie Mainoo",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 79664956.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Benjamin Šeško",
 "tipo": "Lesión",
@@ -739,20 +739,29 @@
 "importante": false
 },
 {
-"nombre": "Luke Shaw",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 7079765.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Tom Heaton",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 595429.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kobbie Mainoo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 79664956.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Luke Shaw",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 7079765.0,
 "titular": false,
 "importante": false
 }
@@ -764,7 +773,7 @@
 },
 "401915396": {
 "fotmob": 6106312,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -846,7 +855,7 @@
 },
 "401915394": {
 "fotmob": 6106285,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -880,8 +889,8 @@
 {
 "nombre": "George Hemmings",
 "tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 8500000.0,
 "titular": false,
 "importante": false
@@ -889,9 +898,18 @@
 {
 "nombre": "Modou Kéba Cissé",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 8078347.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ross Barkley",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2168907.0,
 "titular": false,
 "importante": false
 }
@@ -955,7 +973,7 @@
 },
 "401915312": {
 "fotmob": 6106238,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1028,7 +1046,7 @@
 },
 "401915388": {
 "fotmob": 6106297,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1092,7 +1110,7 @@
 },
 "401915390": {
 "fotmob": 6106252,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1183,7 +1201,7 @@
 },
 "401915389": {
 "fotmob": 6106300,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1283,7 +1301,7 @@
 },
 "401915313": {
 "fotmob": 6106244,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1374,7 +1392,7 @@
 },
 "401915391": {
 "fotmob": 6106281,
-"visto": "2026-10-16T15:04+00:00",
+"visto": "2026-10-16T22:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

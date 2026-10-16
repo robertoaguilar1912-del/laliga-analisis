@@ -5,29 +5,29 @@
   "estadio": "Estádio Italo Mário Limongi",
   "local_espn": "Ponte Preta",
   "visita_espn": "Atlético Goianiense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1000,
-    475,
-    -380
+    1100,
+    500,
+    -425
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    120
+    -165,
+    125
    ],
    "spread": [
     [
      "+1.5",
-     -105
+     100
     ],
     [
      "-1.5",
-     -130
+     -140
     ]
    ]
   },
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    230,
-    155
+    160,
+    235,
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "+0.5",
-     -200
+     -215
     ],
     [
      "-0.5",
-     140
+     150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Sport": [
+    [
+     "130826",
+     "Thiago Couto",
+     "G"
+    ],
+    [
+     "323248",
+     "Marcelo",
+     "CD-L"
+    ],
+    [
+     "332435",
+     "Habraão",
+     "CD-R"
+    ],
+    [
+     "314836",
+     "Rai",
+     "LB"
+    ],
+    [
+     "292396",
+     "Claudinho",
+     "RB"
+    ],
+    [
+     "314825",
+     "Diego Hernández",
+     "AM"
+    ],
+    [
+     "186589",
+     "Willian",
+     "LM"
+    ],
+    [
+     "314686",
+     "Biel",
+     "RM"
+    ],
+    [
+     "237136",
+     "Pedro Perotti",
+     "F"
+    ],
+    [
+     "301543",
+     "Patrick de Paula",
+     "AM-L"
+    ],
+    [
+     "339844",
+     "Chrystian",
+     "AM-R"
+    ]
+   ],
+   "Fortaleza": [
+    [
+     "203685",
+     "João Ricardo",
+     "G"
+    ],
+    [
+     "212528",
+     "Tomás Cardona",
+     "CD-L"
+    ],
+    [
+     "203887",
+     "Neris",
+     "CD-R"
+    ],
+    [
+     "204602",
+     "Bastos",
+     "LB"
+    ],
+    [
+     "285004",
+     "Maílton dos Santos",
+     "RB"
+    ],
+    [
+     "301823",
+     "Pierre",
+     "CM"
+    ],
+    [
+     "314640",
+     "Maurício Júnior",
+     "LM"
+    ],
+    [
+     "218965",
+     "Jailson",
+     "RM"
+    ],
+    [
+     "390863",
+     "Juan Cantillo",
+     "F"
+    ],
+    [
+     "218924",
+     "Luiz Fernando",
+     "LF"
+    ],
+    [
+     "204445",
+     "Lucas Crispim",
+     "RF"
     ]
    ]
   }
@@ -393,11 +509,11 @@
    "ml": [
     -135,
     260,
-    340
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -105,
     -135
    ],
    "spread": [
