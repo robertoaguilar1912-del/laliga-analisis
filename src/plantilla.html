@@ -470,15 +470,20 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   let liga = new URLSearchParams(location.search).get('liga');
   if (!LIGAS[liga]) liga = leer('laboratorio-liga');
   const PAGINAS = { nfl: 'nfl.html', nba: 'nba.html' };   // deportes con página propia
-  if (PAGINAS[liga]) {               // aquí solo se ve su registro
+  // NFL y NBA tienen página propia; aquí solo se ve su registro (el de todos los deportes). 'origen' recuerda de dónde
+  // se vino para que la página siga diciendo NFL o NBA (antes mostraba la última liga de fútbol vista) y que los picks
+  // del modelo salgan filtrados por ese deporte
+  let origen = null;
+  if (PAGINAS[liga]) {
     if (location.hash !== '#registro') { location.replace(PAGINAS[liga]); return; }
+    origen = liga;
     liga = leer('laboratorio-futbol');
   }
   if (!LIGAS[liga] || PAGINAS[liga]) liga = 'laliga';
-  guardar('laboratorio-liga', liga); guardar('laboratorio-futbol', liga);
+  guardar('laboratorio-liga', origen || liga); guardar('laboratorio-futbol', liga);
   const corto = n => n.replace(' League', '').replace(/^Copa (?=Libertadores|Sudamericana)/, '');
   const chips = document.getElementById('ligas');
-  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${PAGINAS[id] || '?liga=' + id}" data-liga="${id}"${id === liga ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
+  chips.innerHTML = Object.entries(LIGAS).map(([id, n]) => `<a href="${PAGINAS[id] || '?liga=' + id}" data-liga="${id}"${id === (origen || liga) ? ' aria-current="page"' : ''}>${corto(n)}<small></small></a>`).join('');
   chips.querySelectorAll('a').forEach(a => a.addEventListener('click', ev => {
     ev.preventDefault();
     const h = location.hash.slice(1);
@@ -488,7 +493,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const actual = chips.querySelector('[aria-current]');
   const centrar = () => { if (actual) { const ra = actual.getBoundingClientRect(), rc = chips.getBoundingClientRect(); chips.scrollLeft += (ra.left + ra.width / 2) - (rc.left + rc.width / 2); } };
   centrar();
-  document.getElementById('brand-liga').textContent = corto(LIGAS[liga]);
+  document.getElementById('brand-liga').textContent = corto(LIGAS[origen || liga]);
   const getJSON = u => fetch(u, { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   let D, R;
   try {
@@ -501,7 +506,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   (R.ligas || []).forEach(l => { const x = chips.querySelector(`[data-liga="${l.id}"] small`); if (x && l.partidos) x.textContent = l.partidos; });
   centrar();
   const B = D.backtest, E = D.equipos, M = D.partidos, I = D.info;
-  document.title = `Laboratorio · ${I.nombre}`;
+  document.title = `Laboratorio · ${origen ? LIGAS[origen] : I.nombre}`;
   const $ = (s, el) => (el || document).querySelector(s);
   const $$ = (s, el) => [...(el || document).querySelectorAll(s)];
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
@@ -574,7 +579,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
   // ---------------- navegación
   const views = ['partidos', 'tabla', 'equipos', 'modelo', 'registro'];
+  // desde la NFL o la NBA, las otras pestañas llevan de vuelta a su página
+  const VISTA_DE = { nfl: { partidos: 'juegos', tabla: 'divisiones', equipos: 'equipos', modelo: 'modelo' },
+                     nba: { partidos: 'juegos', tabla: 'posiciones', equipos: 'equipos', modelo: 'modelo' } };
+  if (origen) {
+    const et = { partidos: 'Juegos', tabla: origen === 'nfl' ? 'Divisiones' : 'Posiciones' };
+    $$('.tabs button').forEach(b => { if (et[b.dataset.view]) b.textContent = et[b.dataset.view]; });
+  }
   function showView(v) {
+    if (origen && v !== 'registro') { location.href = PAGINAS[origen] + '#' + VISTA_DE[origen][v]; return; }
     views.forEach(x => { $('#v-' + x).hidden = x !== v; });
     $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
     if (v === 'registro') renderRegistro();
@@ -1386,6 +1399,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<p class="note">Pago anticipado: ${x.length === 1 ? '1 apuesta se cobró' : x.length + ' apuestas se cobraron'} como ganada${x.length === 1 ? '' : 's'} aunque el equipo no ganó al final (<b>${sM(extra)}${u ? ' ' + u : ''}</b> más que sin pago anticipado).</p>`;
   };
   function renderPA() {
+    if (origen) { $('#pa-card').hidden = true; return; }      // en la NFL y la NBA no hay pago anticipado
     const futbol = Object.keys(LIGAS).filter(id => !PAGINAS[id]);
     $('#pa-card').innerHTML = `<h3>Pago anticipado de tu casa</h3>
       <p class="note">En las ligas marcadas, una apuesta a ganador ("Gana" local o visita) se cuenta como ganada si ese equipo llega a ir 2 goles arriba en los 90 minutos, aunque después le empaten o le den la vuelta. Se aplica a tus apuestas y a los picks del modelo cuando termina el partido, y la calculadora usa la probabilidad con pago anticipado. Marca solo las ligas donde tu casa lo ofrece.</p>
@@ -1455,7 +1469,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     });
   }
 
-  let filtroModelo = (R.modelo || []).some(b => (b.liga || 'laliga') === I.liga) ? I.liga : '';
+  let filtroModelo = (R.modelo || []).some(b => (b.liga || 'laliga') === (origen || I.liga)) ? (origen || I.liga) : '';
   function renderModelo() {
     const el = $('#reg-modelo');
     const todosR = (R.modelo || []).map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
@@ -1497,6 +1511,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>`;
     if (pts.length >= 2) cumChart($('#chart-modelo'), pts, 'u');
     $$('#mod-filtro button', el).forEach(btn => btn.addEventListener('click', () => { filtroModelo = btn.dataset.l; renderModelo(); }));
+    const fsel = $('#mod-filtro [aria-selected="true"]', el);          // que se vea el filtro elegido (p. ej. NFL, al final)
+    if (fsel) fsel.parentElement.scrollLeft = Math.max(0, fsel.offsetLeft - fsel.parentElement.offsetLeft - 16);
   }
 
   function renderRegistro() { renderPA(); renderMias(); renderModelo(); }
@@ -1506,6 +1522,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }));
 
   renderModeloTab();
+  // ?r=modelo: abrir el registro en "Picks del modelo" (la pestaña Registro de la NFL y la NBA llega así)
+  if (new URLSearchParams(location.search).get('r') === 'modelo') { const rb = $('#reg-tabs button[data-r="modelo"]'); if (rb) rb.click(); }
 
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);
