@@ -6,7 +6,7 @@ sys.path.insert(0, 'src')
 import fuentes
 from config import DATOS
 S = Path('salida'); S.mkdir(exist_ok=True)
-fuentes.descargar_historia()
+# fuentes.descargar_historia()
 (S / 'historia').mkdir(exist_ok=True)
 import shutil
 for p in sorted((DATOS / 'historia').glob('E1_*.csv')):
@@ -17,7 +17,7 @@ evs = []
 for k in range(-1, 10):
     d = (hoy + timedelta(days=k)).strftime('%Y%m%d')
     evs += fuentes._scoreboard('eng.2', d)
-out['proximos'] = [{'fecha': e['date'], 'partido': e['name'], 'momios': (e['competitions'][0].get('odds') or [{}])[0].get('provider', {}).get('name') if e['competitions'][0].get('odds') else None,
+out['proximos'] = [{'fecha': e['date'], 'partido': e['name'], 'momios': ((((e['competitions'][0].get('odds') or [{}])[0]) or {}).get('provider') or {}).get('name'),
                     'completo': e['competitions'][0]['status']['type'].get('completed')} for e in evs]
 y = fuentes._scoreboard('eng.2', str(hoy.year))
 out['anio'] = {'eventos': len(y), 'tipos': sorted({(e.get('season') or {}).get('slug') or '' for e in y})}
