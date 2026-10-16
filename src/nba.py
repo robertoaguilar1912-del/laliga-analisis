@@ -16,6 +16,7 @@ Modelo (dos piezas)
 
     python src/nba.py historia   # baja temporadas pasadas con momios de cierre (una sola vez)
     python src/nba.py box        # minutos por jugador de los juegos que falten
+    python src/nba.py pretemporada  # juegos de pretemporada y sus minutos (entran al ajuste con la mitad de peso)
     python src/nba.py            # arma data/ligas/nba.json
     python src/nba.py prueba     # prueba con temporadas pasadas (data/modelo/nba/backtest.json)
 """
@@ -23,7 +24,7 @@ import json
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
-from datetime import timedelta
+from datetime import date, timedelta
 
 import numpy as np
 import pandas as pd
@@ -35,6 +36,14 @@ ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
 CORE_NBA = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba'
 TEMPORADA_DESDE = 2022            # temporada 2021-22 (ESPN nombra la temporada por el año en que termina)
 JUEGOS = RAW / 'nba_juegos.csv'
+# Pretemporada (desde el 15 oct 2026): sus juegos entre equipos de la NBA entran al ajuste de los dos modelos con la mitad
+# de peso (y en el de puntos, con su propio efecto: se anota distinto). Prueba con las pretemporadas 2022 a 2025 (elegido
+# con 2022-23, probado en 2023-24 a 2025-26): en las dos primeras semanas el error de la diferencia bajó de 13.31 a 13.19
+# puntos (la línea de cierre: 13.15) y en el resto de la temporada un poco (14.29 -> 14.28). Con peso 1 ayudaba más al
+# arranque pero empeoraba 2022-23. Usar los minutos de pretemporada como "minutos de costumbre" no ayudó.
+PRE_JUEGOS = RAW / 'nba_pre_juegos.csv'
+PRE_BOX = RAW / 'nba_pre_box.csv'
+PESO_PRETEMPORADA = 0.5
 COLS = ['id', 'utc', 'fecha', 'temporada', 'tipo', 'local', 'visita', 'pl', 'pv', 'neutral', 'nota',
         'casa', 'sp', 'sp_ol', 'sp_ov', 'tot', 'o_odds', 'u_odds', 'ml_l', 'ml_v', 'sp_abre', 'tot_abre']
 
@@ -206,6 +215,7 @@ def descargar():
     descargar_historia()
     descargar_espn()
     descargar_boxscores()
+    descargar_pretemporada()
     descargar_plantillas()
 
 
@@ -346,6 +356,84 @@ def descargar_boxscores(hilos=8, limite=None):
         print(f'  NBA {nombre_temporada(y)}: minutos de {len(falta)} juegos más ({len(filas)} filas)')
     return total
 
+def descargar_pretemporada():
+    """Juegos de pretemporada (y sus minutos por jugador) de las últimas temporadas: las pasadas se bajan una vez; la
+    actual, mientras dura (del 25 de septiembre al 31 de octubre)."""
+    from fuentes import _get
+    jg = pd.read_csv(PRE_JUEGOS, dtype={'id': str}) if PRE_JUEGOS.exists() else pd.DataFrame()
+    bx = pd.read_csv(PRE_BOX, dtype={'id': str, 'jugador': str}) if PRE_BOX.exists() else pd.DataFrame(columns=BOX_COLS)
+    actual, hoy = temporada_nba(), ahora().date()
+    filas = []
+    for y in range(actual - 3, actual + 1):
+        d0, d1 = date(y - 1, 9, 25), min(date(y - 1, 10, 31), hoy)
+        ya = jg[jg.temporada == y] if len(jg) else jg
+        if d1 < d0 or (len(ya) >= 40 and (y < actual or hoy > date(y - 1, 11, 3))):
+            continue
+        dias = [(d0 + timedelta(days=k)).strftime('%Y%m%d') for k in range((d1 - d0).days + 1)]
+        if len(ya):           # temporada en curso ya bajada: solo los últimos días
+            dias = dias[-4:]
+        with ThreadPoolExecutor(6) as ex:
+            evs = [e for lst in ex.map(lambda d: (_get(f'{ESPN_NBA}/scoreboard', params={'dates': d, 'limit': 50}) or {}).get('events', []), dias)
+                   for e in lst]
+        for e in evs:
+            if int((e.get('season') or {}).get('type') or 0) != 1:
+                continue
+            comp = e['competitions'][0]
+            cs = {c.get('homeAway'): c for c in comp.get('competitors', [])}
+            if 'home' not in cs or 'away' not in cs:
+                continue
+            h, a = cs['home']['team'].get('abbreviation'), cs['away']['team'].get('abbreviation')
+            fin = bool(comp['status']['type'].get('completed'))
+            filas.append({'id': str(e['id']), 'utc': e['date'], 'fecha': _fecha_et(e['date']), 'temporada': y, 'tipo': 1, 'local': h,
+                          'visita': a, 'pl': _num(cs['home'].get('score')) if fin else None, 'pv': _num(cs['away'].get('score')) if fin else None,
+                          'neutral': bool(comp.get('neutralSite')), 'nba_ambos': h in EQUIPOS and a in EQUIPOS, 'fin': fin})
+    if not filas:
+        return
+    jg = pd.concat([jg, pd.DataFrame(filas)], ignore_index=True).drop_duplicates('id', keep='last').sort_values(['utc', 'id'])
+    jg.to_csv(PRE_JUEGOS, index=False)
+    falta = sorted(set(jg[jg.fin.astype(str).str.lower().eq('true') & jg.nba_ambos.astype(str).str.lower().eq('true')].id) - set(bx.id))
+    if falta:
+        with ThreadPoolExecutor(8) as ex:
+            nuevas = [f for lst in ex.map(_box, falta) for f in lst]
+        if nuevas:
+            bx = pd.concat([bx, pd.DataFrame(nuevas)], ignore_index=True)[BOX_COLS]
+            bx.to_csv(PRE_BOX, index=False)
+    print(f'  NBA pretemporada: {len(jg)} juegos guardados, minutos de {len(falta)} juegos más')
+
+
+def cargar_pretemporada():
+    """Juegos de pretemporada entre equipos NBA ya jugados, con el formato de cargar_juegos (tipo 1, sin descanso)."""
+    if not PRE_JUEGOS.exists():
+        return pd.DataFrame()
+    p = pd.read_csv(PRE_JUEGOS, dtype={'id': str})
+    p = p[p.fin.astype(str).str.lower().eq('true') & p.nba_ambos.astype(str).str.lower().eq('true') & p.pl.notna() & p.pv.notna()].copy()
+    p['fecha_dt'] = pd.to_datetime(p.utc).dt.tz_localize(None).dt.normalize()
+    p['margen'], p['total'] = p.pl - p.pv, p.pl + p.pv
+    p['neutral'] = p.neutral.astype(str).str.lower().eq('true')
+    p['desc_l'] = p['desc_v'] = 9
+    p['tipo'] = 1
+    return p
+
+
+def con_pretemporada(g, box):
+    """Juegos y minutos de la temporada regular más los de pretemporada, para ajustar los modelos (los de pretemporada
+    entran con PESO_PRETEMPORADA). Los minutos de costumbre de la temporada regular no cambian."""
+    p = cargar_pretemporada()
+    if not len(p):
+        return g, box
+    ga = pd.concat([g, p[[c for c in p.columns if c in g.columns]]], ignore_index=True).sort_values(['fecha_dt', 'id']).reset_index(drop=True)
+    if not PRE_BOX.exists():
+        return ga, box
+    b = pd.read_csv(PRE_BOX, dtype={'id': str, 'jugador': str}).merge(p[['id', 'fecha_dt', 'local', 'visita']], on='id')
+    b['lado'] = np.where(b.equipo == b.local, 1, np.where(b.equipo == b.visita, -1, 0))
+    b = b[b.lado != 0].copy()
+    b['share'] = b['min'] / b.groupby(['id', 'lado'])['min'].transform('sum') * 5
+    b['min_esp'] = MIN_DEFECTO
+    b['share_esp'] = repartir(b.min_esp, [b.id, b.lado]) / 48
+    ba = pd.concat([box, b[[c for c in box.columns if c in b.columns]]], ignore_index=True)
+    return ga, ba.sort_values(['fecha_dt', 'id', 'lado', 'min'], ascending=[True, True, False, False]).reset_index(drop=True)
+
+
 # ----------------------------------------------------------------- modelo
 # Parámetros elegidos con la temporada 2022-23 (ver prueba_nba.py)
 HL_EQUIPOS, RIDGE_EQUIPOS = 45, 10.0      # modelo de equipos (total de puntos): días de vida media y freno
@@ -428,15 +516,17 @@ def repartir(minutos, grupos, tope=36, umbral=10):
 
 class ModeloNBA:
     """Modelo de equipos. Puntos = media + local + ataque + defensa rival + cansancio propio + cansancio rival + playoffs."""
-    def __init__(self, half_life=HL_EQUIPOS, ridge=RIDGE_EQUIPOS, sigma_m=SIGMA_M, sigma_t=SIGMA_T):
-        self.half_life, self.ridge, self.sigma_m, self.sigma_t = half_life, ridge, sigma_m, sigma_t
+    def __init__(self, half_life=HL_EQUIPOS, ridge=RIDGE_EQUIPOS, sigma_m=SIGMA_M, sigma_t=SIGMA_T, peso_pre=PESO_PRETEMPORADA):
+        self.half_life, self.ridge, self.sigma_m, self.sigma_t, self.peso_pre = half_life, ridge, sigma_m, sigma_t, peso_pre
 
     def fit(self, g, ref):
         g = g[(g.fecha_dt < ref) & (g.fecha_dt >= ref - pd.Timedelta(days=VENTANA_DIAS))]
+        if not self.peso_pre:
+            g = g[g.tipo != 1]
         teams = sorted(set(g.local) | set(g.visita))
         self.idx = {t: i for i, t in enumerate(teams)}
         n, m = len(teams), len(g)
-        K = 5                                    # media, local, cansado propio, cansado rival, playoffs
+        K = 6                                    # media, local, cansado propio, cansado rival, playoffs, pretemporada
         X = np.zeros((2 * m, K + 2 * n))
         X[:, 0] = 1
         h = g.local.map(self.idx).values; a = g.visita.map(self.idx).values
@@ -447,14 +537,15 @@ class ModeloNBA:
         X[r, 2], X[r, 3] = b2b_l, b2b_v
         X[m + r, 2], X[m + r, 3] = b2b_v, b2b_l
         X[r, 4] = X[m + r, 4] = po
+        X[r, 5] = X[m + r, 5] = (g.tipo.values == 1).astype(float)
         X[r, K + h] = 1; X[r, K + n + a] = 1
         X[m + r, K + a] = 1; X[m + r, K + n + h] = 1
         y = np.r_[g.pl.values, g.pv.values].astype(float)
-        w = np.exp(-np.log(2) * (ref - g.fecha_dt).dt.days.values / self.half_life)
+        w = np.exp(-np.log(2) * (ref - g.fecha_dt).dt.days.values / self.half_life) * np.where(g.tipo.values == 1, self.peso_pre, 1.0)
         w = np.r_[w, w]
         A = X.T @ (X * w[:, None]) + np.diag([1e-6] * K + [self.ridge] * (2 * n))
         b = np.linalg.solve(A, X.T @ (w * y))
-        self.mu, self.hfa, self.b2b_propio, self.b2b_rival, self.playoffs = b[:K]
+        self.mu, self.hfa, self.b2b_propio, self.b2b_rival, self.playoffs, self.pretemporada = b[:K]
         self.off, self.dfn = b[K:K + n], b[K + n:]
         return self
 
@@ -481,9 +572,10 @@ class ModeloJugadores:
     El valor de un jugador son los puntos que le saca a un jugador promedio en un juego completo (48 minutos).
     El freno no lleva a todos a cero sino a lo que se espera por sus minutos y su anotación (un jugador al que su
     entrenador le da 34 minutos suele ser mejor que uno de 10): así las estrellas no quedan aplanadas."""
-    def __init__(self, g, box, half_life=HL_JUGADORES, ridge=RIDGE_JUGADORES):
+    def __init__(self, g, box, half_life=HL_JUGADORES, ridge=RIDGE_JUGADORES, peso_pre=PESO_PRETEMPORADA):
         from scipy import sparse
         self.half_life, self.ridge = half_life, ridge
+        self.peso = np.where(g.tipo.values == 1, peso_pre or 0.0, 1.0)     # juegos de pretemporada: la mitad
         self.jug = sorted(box.jugador.unique())
         self.J = {x: i for i, x in enumerate(self.jug)}
         fila = pd.Series(np.arange(len(g)), index=g.id.values)
@@ -500,8 +592,8 @@ class ModeloJugadores:
 
     def _ridge(self, ref, y_menos):
         from scipy import sparse
-        m = (self.f < ref) & (self.f >= ref - np.timedelta64(VENTANA_DIAS, 'D'))
-        w = np.exp(-np.log(2) * ((ref - self.f[m]) / np.timedelta64(1, 'D')) / self.half_life)
+        m = (self.f < ref) & (self.f >= ref - np.timedelta64(VENTANA_DIAS, 'D')) & (self.peso > 0)
+        w = np.exp(-np.log(2) * ((ref - self.f[m]) / np.timedelta64(1, 'D')) / self.half_life) * self.peso[m]
         X = sparse.hstack([sparse.csr_matrix(self.base[m]), self.Xs[m]]).tocsr()
         A = (X.T @ sparse.diags(w) @ X).toarray() + np.diag([1e-6, 1e-6] + [self.ridge] * len(self.jug))
         return np.linalg.solve(A, X.T @ (w * (self.y[m] - y_menos[m])))
@@ -697,9 +789,10 @@ def analizar():
     bt = DATOS / 'modelo' / 'nba' / 'backtest.json'
     backtest = json.load(open(bt)) if bt.exists() else None
     sig = (backtest or {}).get('sigma_actual') or {}
-    modelo = ModeloNBA(sigma_m=sig.get('m', SIGMA_M), sigma_t=sig.get('t', SIGMA_T)).fit(g, hasta)
     box = cargar_box(g)
-    mj = ModeloJugadores(g, box).fit(hasta) if len(box) else None
+    ga, ba = con_pretemporada(g, box)          # la pretemporada entra al ajuste (con la mitad de peso), no a los minutos
+    modelo = ModeloNBA(sigma_m=sig.get('m', SIGMA_M), sigma_t=sig.get('t', SIGMA_T)).fit(ga, hasta)
+    mj = ModeloJugadores(ga, ba).fit(hasta) if len(box) else None
     hab = habitos(box)
     plantillas = json.load(open(RAW / 'nba_plantillas.json')) if (RAW / 'nba_plantillas.json').exists() else {}
     temporada = actual if (g.temporada == actual).any() else actual - 1
@@ -835,7 +928,8 @@ def analizar():
                     'hfa': round(float(mj.hfa if mj else modelo.hfa), 2),
                     'b2b': round(float(mj.b2b if mj else modelo.b2b_propio - modelo.b2b_rival), 2),
                     'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj)},
-           'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest}
+           'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest,
+           'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else []}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     from analizar import limpiar
     json.dump(limpiar(out), open(DATOS / 'ligas' / 'nba.json', 'w'), ensure_ascii=False, separators=(',', ':'))
@@ -851,6 +945,8 @@ if __name__ == '__main__':
         descargar_plantillas()
     elif arg == 'box':
         descargar_boxscores()
+    elif arg == 'pretemporada':
+        descargar_pretemporada()
     elif arg == 'espn':
         descargar_espn()
     elif arg == 'descargar':
