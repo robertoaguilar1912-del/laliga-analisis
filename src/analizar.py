@@ -3,7 +3,7 @@ Arma los datos de la página para cada liga (data/ligas/<liga>.json):
 - próximos partidos con probabilidades (de la matriz de marcadores del modelo), mercados, momios y momios justos;
   más las distribuciones (goles, córners, remates a puerta) con las que la página calcula cualquier línea
 - estadísticas de cada equipo (total, casa, fuera), tabla, forma, goles por tramo, figuras
-- bajas: sanciones, titulares no convocados, lesiones oficiales (API-Football) y alineaciones confirmadas
+- bajas: sanciones, titulares no convocados, lesionados y sancionados de FotMob (o API-Football) y alineaciones confirmadas
 - cansancio (copas y torneos internacionales) e historial de enfrentamientos
 """
 import json
@@ -363,6 +363,7 @@ def analizar_equipos(liga, df_season, ref, det, mapa, nombre, grupos, calendario
             'jugadores': [{k: p[k] for k in ('nombre', 'pos', 'pj', 'tit', 'goles', 'asist', 'tiros_puerta', 'amarillas', 'rojas')}
                           for p in sorted(ps, key=lambda p: (-(p['goles'] + p['asist']), -p['tiros_puerta']))[:6]],
             'sancionados': sanc, 'no_convocados': dudas, 'en_riesgo': riesgo, 'lesiones': les,
+            'habituales': [p['nombre'] for p in ps if len(games) >= 3 and p['tit'] >= max(3, 0.5 * len(games))],
             'ultimo_xi': [{'nombre': p[1], 'pos': p[2]} for p in (games[-1]['roster'] if games else []) if p[3]],
             'ultimo_partido': {'fecha': str(prev.Date.iloc[0].date()), 'comp': prev.comp.iloc[0]} if len(prev) else None,
             'proximos_extra': [{'fecha': str(r.Date.date()), 'comp': r.comp} for r in nxt.itertuples()],
@@ -390,6 +391,76 @@ def etiqueta_temporada(liga, temporada):
         return temporada
     t = f'20{temporada[:2]}-{temporada[2:]}'
     return t
+
+
+# Bajas de FotMob (fuentes.descargar_bajas). Un PICK a favor de un equipo pasa a REVISAR si le falta al menos esta parte del
+# valor de mercado de su once titular en jugadores importantes (los que están en duda cuentan la mitad): el modelo no sabe de
+# bajas y la casa sí. Con las bajas del 13 oct 2026, uno de cada tres equipos llegaba a 20% (la mitad tenía alguna baja de
+# 10% o más). Si FotMob no trae el once (pasa en Sudamérica y en algunas copas), cuenta cada titular habitual (según ESPN)
+# que falta como 12%. No cambia las probabilidades (eso falta probarlo con el pasado) y los REVISAR no cuentan en el
+# registro del modelo.
+UMBRAL_REVISAR = 0.20
+PESO_TITULAR = 0.12
+
+
+def _lado_de(k):
+    """A qué equipo respalda un mercado con momio: '1' y hándicap del local -> 'local'; '2' y el de la visita -> 'visita'."""
+    if k == '1' or k.startswith('H1:'):
+        return 'local'
+    if k == '2' or k.startswith('H2:'):
+        return 'visita'
+    return None
+
+
+def _mismo_jugador(a, b):
+    """Mismo jugador con el nombre de FotMob y el de ESPN (sin acentos; nombre completo, o apellido e inicial)."""
+    from liga import norm
+    ta, tb = norm(a).split(), norm(b).split()
+    if not ta or not tb:
+        return False
+    if ta == tb:
+        return True
+    return ta[-1] == tb[-1] and (len(ta) == 1 or len(tb) == 1 or ta[0][0] == tb[0][0])
+
+
+def _lado_bajas(B, habituales):
+    """Bajas de un equipo para la página, con 'peso': parte del once que falta (ver UMBRAL_REVISAR)."""
+    faltan = [{'nombre': f['nombre'], 'tipo': f['tipo'], 'regreso': f['regreso'], 'duda': f['duda'], 'importante': f['importante'],
+               'titular': f['titular'], 'mv': round(f['valor'] / 1e6, 1)} for f in B['faltan']]
+    if B.get('valor_xi'):
+        peso, base = B['perdida'] + 0.5 * B['perdida_duda'], 'valor'
+    else:                    # sin el once de FotMob: titulares habituales según ESPN
+        for f in faltan:
+            f['importante'] = any(_mismo_jugador(f['nombre'], h) for h in habituales)
+        peso, base = sum(PESO_TITULAR * (0.5 if f['duda'] else 1) for f in faltan if f['importante']), 'titulares'
+    return {'faltan': faltan, 'peso': round(min(peso, 1.0), 3), 'base': base}
+
+
+def aplicar_bajas(partidos, bajas, equipos):
+    """Pone las bajas de FotMob en cada partido y en cada equipo (las de su próximo partido) y marca REVISAR."""
+    vistos = set()
+    for p in sorted(partidos, key=lambda x: x['utc']):
+        b = bajas.get(str(p['id']))
+        if not b:
+            continue
+        p['bajas'] = {lado: _lado_bajas(b[lado], (equipos.get(t) or {}).get('habituales') or [])
+                      for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd']))}
+        for r in p['con_momio']:
+            lado = _lado_de(r['k'])
+            if r['veredicto'] != 'PICK' or not lado:
+                continue
+            B = p['bajas'][lado]
+            if B['peso'] >= UMBRAL_REVISAR:
+                imp = [f['nombre'] + (' (en duda)' if f['duda'] else '') for f in B['faltan'] if f['importante']]
+                r['veredicto'] = 'REVISAR'
+                r['revisar'] = (f"Le falta{'n' if len(imp) > 1 else ''} {', '.join(imp[:3])}" + (f' y {len(imp) - 3} más' if len(imp) > 3 else '')
+                                + (f" ({B['peso']:.0%} del valor de su once titular)" if B['base'] == 'valor' else ' (titulares habituales)'))
+        for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd'])):
+            if t in equipos and t not in vistos:
+                vistos.add(t)
+                equipos[t]['lesiones'] = [{'nombre': f['nombre'], 'tipo': 'Duda' if f['duda'] else 'Baja', 'importante': f['importante'],
+                                           'motivo': f"{f['tipo']} · {f['regreso'] if f['duda'] else 'vuelve: ' + f['regreso']}", 'fuente': 'FotMob'}
+                                          for f in p['bajas'][lado]['faltan']]
 
 
 H2H_REGION = {'europa': ['las copas europeas', 'las ligas de Europa'],
@@ -468,6 +539,9 @@ def analizar_liga(liga):
     for p in partidos:
         p['h2h'] = h2h(hist_h2h, p['local_fd'], p['visita_fd'], nombre)
         p['liga'] = liga
+    pb = RAW / f'bajas_{liga}.json'
+    bajas = json.load(open(pb)) if pb.exists() else {}
+    aplicar_bajas(partidos, bajas, equipos)
     bt = DATOS / 'modelo' / liga / 'backtest.json'
     backtest = json.load(open(bt)) if bt.exists() else None
     if backtest:
@@ -484,7 +558,8 @@ def analizar_liga(liga):
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
            'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],
-           'con_lesiones': (RAW / f'lesiones_{liga}.json').exists()}
+           'con_lesiones': bool(bajas) or (RAW / f'lesiones_{liga}.json').exists(),
+           'fuente_lesiones': 'FotMob' if bajas else ('API-Football' if (RAW / f'lesiones_{liga}.json').exists() else None)}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     json.dump(limpiar(out), open(DATOS / 'ligas' / f'{liga}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f"  {L['nombre']}: {len(partidos)} partidos próximos, {len(equipos)} equipos, datos hasta {out['datos_hasta']}"

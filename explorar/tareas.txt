@@ -1,2 +1,1 @@
-python -c "import sys; sys.path.insert(0, 'src'); import fuentes; fuentes.descargar_bajas()"
-mkdir -p salida/bajas && cp data/raw/bajas_*.json salida/bajas/
+python explorar/nba_pre.py

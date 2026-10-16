@@ -5,6 +5,7 @@ Descarga de datos, liga por liga (ver LIGAS en config.py).
   un solo CSV con resultados y cuotas para Liga MX y MLS).
 - ESPN (API pública no oficial): partidos próximos con momios de DraftKings, alineaciones confirmadas,
   detalle de cada partido jugado (jugadores, tiros, córners, posesión, minutos de los goles) y calendario de copas.
+- FotMob (API pública no oficial): lesionados y sancionados de cada equipo en los partidos próximos.
 - API-Football (opcional, con la clave en API_FOOTBALL_KEY): lesiones y sanciones oficiales.
 
 Todo se guarda en data/ para no volver a descargar lo que ya está.
