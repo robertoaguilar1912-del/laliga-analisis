@@ -5,7 +5,7 @@
   "estadio": "Arena Castelão",
   "local_espn": "Ceará",
   "visita_espn": "Juventude",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    265,
-    115
+    205,
+    245,
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -105,
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -165
     ],
     [
      "-0.5",
-     110
+     115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "América Mineiro": [
+    [
+     "201680",
+     "Bruno Brigido",
+     "SUB"
+    ],
+    [
+     "211347",
+     "Barreto",
+     "SUB"
+    ],
+    [
+     "361584",
+     "Rafael Barcelos",
+     "SUB"
+    ],
+    [
+     "289868",
+     "Matías Segovia",
+     "SUB"
+    ],
+    [
+     "202294",
+     "Lucas Sosa",
+     "SUB"
+    ],
+    [
+     "292036",
+     "Tobías Ostchega",
+     "SUB"
+    ],
+    [
+     "187381",
+     "Ricardo Silva",
+     "SUB"
+    ],
+    [
+     "225172",
+     "Guilherme Parede",
+     "SUB"
+    ],
+    [
+     "119170",
+     "Willian",
+     "SUB"
+    ],
+    [
+     "194600",
+     "Jorge Roa",
+     "SUB"
+    ],
+    [
+     "334161",
+     "Paulo Victor",
+     "SUB"
+    ]
+   ],
+   "Operário PR": [
+    [
+     "217421",
+     "Elias",
+     "G"
+    ],
+    [
+     "357387",
+     "Gabriel Feliciano",
+     "D"
+    ],
+    [
+     "312608",
+     "José Cuenú",
+     "D"
+    ],
+    [
+     "307939",
+     "Mikael",
+     "D"
+    ],
+    [
+     "250809",
+     "Joseph",
+     "D"
+    ],
+    [
+     "227228",
+     "Hildeberto Pereira",
+     "M"
+    ],
+    [
+     "183601",
+     "Juan Pablo Zuluaga",
+     "M"
+    ],
+    [
+     "300106",
+     "Pedro Veronez",
+     "M"
+    ],
+    [
+     "287803",
+     "Bruno Aparecido Reis Ezequiel",
+     "M"
+    ],
+    [
+     "379922",
+     "Vinícius Diniz",
+     "M"
+    ],
+    [
+     "198283",
+     "Caio Dantas",
+     "F"
     ]
    ]
   }
