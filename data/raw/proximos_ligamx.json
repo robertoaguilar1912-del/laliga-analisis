@@ -5,7 +5,7 @@
   "estadio": "Estadio Banorte",
   "local_espn": "Atlante",
   "visita_espn": "Pumas UNAM",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Caliente",
   "local_espn": "Tijuana",
   "visita_espn": "Puebla",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    250,
-    175
+    120,
+    260,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    115
+    120
    ],
    "spread": [
     [
      "-0.5",
-     125
+     115
     ],
     [
      "+0.5",
-     -175
+     -160
     ]
    ]
   }
@@ -442,13 +442,13 @@
    "casa": "DraftKings",
    "ml": [
     -300,
-    450,
+    425,
     700
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -170
+    -175
    ],
    "spread": [
     [
