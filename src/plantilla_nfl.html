@@ -335,8 +335,13 @@
       const c = calcular(g, k, L);
       const just = c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—';
       if (!dec) { out.innerHTML = `Modelo: <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal.`; return null; }
-      const ev = c.gana * (dec - 1) - c.pierde, v = verdictOf(ev, c.gana / Math.max(c.gana + c.pierde, 1e-12));
-      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      const ev = c.gana * (dec - 1) - c.pierde, v0 = verdictOf(ev, c.gana / Math.max(c.gana + c.pierde, 1e-12));
+      // con un momio menor que el de DraftKings en esa misma línea nunca es PICK (desde el 17 oct 2026)
+      const clave = k.startsWith('ML') ? k : `${k}:${L > 0 && k.startsWith('H') ? '+' : ''}${L}`;
+      const dkr = (g.con_momio || []).find(r => r.k === clave), dkm = dkr ? parseFloat(dkr.momio) : null;
+      const menorQueDK = !!(dkm && dec < dkm - 0.005), v = v0 === 'PICK' && menorQueDK ? 'SKIP' : v0;
+      out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
+        + (menorQueDK ? `<br><b>No es PICK: ${esc(g.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Si puedes, búscalo en otra casa.` : '');
       return { k, L, dec, c };
     }
     tipo.addEventListener('change', () => { setDefault(); calc(); msg.textContent = ''; });

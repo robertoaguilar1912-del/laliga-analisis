@@ -1010,7 +1010,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         const mk0 = mercadoDe(m, o.k), pm0 = mk0 ? mk0.W / Math.max(mk0.W + mk0.Lo, 1e-12) : null;
         // momio mínimo para que sea PICK: EV = W·(m − 1) − Lo ≥ 5%  →  m ≥ (1.05 − (1 − W − Lo)) / W   (la nula devuelve la apuesta)
         const W0 = pa != null ? pa : o.W, L0 = pa != null ? 1 - pa : o.Lo, pp = W0 / Math.max(W0 + L0, 1e-12);
-        const minimo = pp >= 0.30 ? `<br><b>Para que sea PICK tu momio tiene que ser de ${((0.05 + W0 + L0) / W0).toFixed(2)} o más.</b>` : '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
+        // y nunca menos que lo que paga DraftKings en esa misma línea (desde el 17 oct 2026)
+        const dk0 = m.con_momio.find(r => r.k === o.k), dkm0 = dk0 ? parseFloat(dk0.momio) : null, minM = (0.05 + W0 + L0) / W0;
+        const minimo = pp >= 0.30 ? `<br><b>Para que sea PICK tu momio tiene que ser de ${Math.max(minM, dkm0 || 0).toFixed(2)} o más${dkm0 && dkm0 > minM ? ` (no menos que ${esc(m.casa_momios || 'DraftKings')}, que paga ${dkm0.toFixed(2)})` : ''}.</b>` : '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
         out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${minimo}${avisoBajas(o.k)}`;
         return null;
       }
@@ -1019,7 +1021,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       // y contra el mercado: si tu casa paga más que el precio justo del mercado, eso es valor aunque el modelo no lo vea
       const mk = mercadoDe(m, o.k);
       const dkr = m.con_momio.find(r => r.k === o.k), dkm = dkr ? parseFloat(dkr.momio) : null;
-      const peorQueDK = dkm && dec < dkm - 0.005 ? `<br><b>Ojo: ${esc(m.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Apostar a un momio peor que el del mercado es la forma más segura de perder valor; si puedes, búscalo en otra casa.` : '';
+      const menorQueDK = !!(dkm && dec < dkm - 0.005);
+      const peorQueDK = menorQueDK ? `<br><b>No es PICK: ${esc(m.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Apostar a un momio peor que el del mercado es la forma más segura de perder valor; si puedes, búscalo en otra casa.` : '';
+      const sinPickDK = v => v === 'PICK' && menorQueDK ? 'SKIP' : v;      // con un momio menor que el de DraftKings nunca es PICK
       const linMk = () => {
         if (!mk) return peorQueDK;
         let W = mk.W, Lo = mk.Lo;
@@ -1029,11 +1033,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? juicioMercado(evM, o.k) : '') + peorQueDK;
       };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
-        const evPA = pa * dec - 1, v = vB(verdictOf(evPA, pa), o.k);
+        const evPA = pa * dec - 1, v = sinPickDK(vB(verdictOf(evPA, pa), o.k));
         out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}${avisoBajas(o.k)}`;
         return { o, p: pa, push, dec, pa: true };
       }
-      const v = vB(verdictOf(ev, p), o.k);
+      const v = sinPickDK(vB(verdictOf(ev, p), o.k));
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}${avisoBajas(o.k)}`;
       return { o, p, push, dec };
     };
