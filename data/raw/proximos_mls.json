@@ -5,19 +5,19 @@
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "Inter Miami CF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
-    300,
-    -115
+    245,
+    310,
+    -120
    ],
    "ou_linea": 3.5,
    "ou": [
-    -135,
+    -130,
     105
    ],
    "spread": [
@@ -27,7 +27,7 @@
     ],
     [
      "-0.5",
-     -120
+     -125
     ]
    ]
   },
@@ -154,15 +154,15 @@
   "estadio": "Gillette Stadium",
   "local_espn": "New England Revolution",
   "visita_espn": "Chicago Fire FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
+    150,
     265,
-    140
+    150
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -171,12 +171,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -185
-    ],
-    [
      "-0.5",
      135
+    ],
+    [
+     "+0.5",
+     -195
     ]
    ]
   },
@@ -303,7 +303,7 @@
   "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "LAFC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Inter&Co Stadium",
   "local_espn": "Orlando City SC",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Sports Illustrated Stadium",
   "local_espn": "Red Bull New York",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -756,23 +756,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
-    320,
-    -170
+    425,
+    350,
+    -205
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -155
+    110,
+    -140
    ],
    "spread": [
     [
-     "+0.5",
-     125
+     "+1.5",
+     -175
     ],
     [
-     "-0.5",
-     -175
+     "-1.5",
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Austin FC": [
+    [
+     "183780",
+     "Brad Stuver",
+     "G"
+    ],
+    [
+     "196666",
+     "Oleksandr Svatok",
+     "CD"
+    ],
+    [
+     "257193",
+     "Jon Bell",
+     "CD-L"
+    ],
+    [
+     "238438",
+     "Brendan Hines-Ike",
+     "CD-R"
+    ],
+    [
+     "225834",
+     "Besard Sabovic",
+     "CM-L"
+    ],
+    [
+     "381219",
+     "Ervin Torres",
+     "CM-R"
+    ],
+    [
+     "231047",
+     "Jon Gallagher",
+     "LM"
+    ],
+    [
+     "286669",
+     "Joseph Rosales",
+     "RM"
+    ],
+    [
+     "228620",
+     "Brandon Vázquez",
+     "F"
+    ],
+    [
+     "275500",
+     "Myrto Uzuni",
+     "CF-L"
+    ],
+    [
+     "235061",
+     "Christian Ramírez",
+     "CF-R"
+    ]
+   ],
+   "Vancouver Whitecaps": [
+    [
+     "272338",
+     "Yohei Takaoka",
+     "G"
+    ],
+    [
+     "256476",
+     "Tristan Blackmon",
+     "CD-L"
+    ],
+    [
+     "286523",
+     "Mathías Laborda",
+     "CD-R"
+    ],
+    [
+     "338836",
+     "Tate Johnson",
+     "LB"
+    ],
+    [
+     "341727",
+     "Édier Ocampo",
+     "RB"
+    ],
+    [
+     "173404",
+     "Ryan Gauld",
+     "AM"
+    ],
+    [
+     "3111934",
+     "Aleksa Cvetković",
+     "LM"
+    ],
+    [
+     "202501",
+     "Andrés Cubas",
+     "RM"
+    ],
+    [
+     "249490",
+     "Brian White",
+     "F"
+    ],
+    [
+     "365154",
+     "Bruno Caicedo",
+     "AM-L"
+    ],
+    [
+     "256209",
+     "Emmanuel Sabbi",
+     "AM-R"
     ]
    ]
   }
@@ -789,23 +905,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    240,
-    190
+    105,
+    250,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    100
+    -135,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     120
+     100
     ],
     [
      "+0.5",
-     -170
+     -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Houston Dynamo FC": [
+    [
+     "65434",
+     "Jonathan Bond",
+     "G"
+    ],
+    [
+     "419253",
+     "Agustín Resch",
+     "CD-L"
+    ],
+    [
+     "266281",
+     "Lucas Halter",
+     "CD-R"
+    ],
+    [
+     "242613",
+     "Franco Negri",
+     "LB"
+    ],
+    [
+     "323199",
+     "Lawrence Ennali",
+     "RB"
+    ],
+    [
+     "236342",
+     "Artur",
+     "CM"
+    ],
+    [
+     "146866",
+     "Héctor Herrera",
+     "LM"
+    ],
+    [
+     "219466",
+     "Diadie Samassekou",
+     "RM"
+    ],
+    [
+     "264751",
+     "Lyle Foster",
+     "F"
+    ],
+    [
+     "233578",
+     "Guilherme Augusto",
+     "LF"
+    ],
+    [
+     "287841",
+     "Mateusz Bogusz",
+     "RF"
+    ]
+   ],
+   "FC Dallas": [
+    [
+     "243832",
+     "Daniel",
+     "G"
+    ],
+    [
+     "233460",
+     "Sebastien Ibeagha",
+     "CD"
+    ],
+    [
+     "356357",
+     "Nolan Norris",
+     "CD-L"
+    ],
+    [
+     "219275",
+     "Shaq Moore",
+     "CD-R"
+    ],
+    [
+     "283864",
+     "Christian Cappis",
+     "CM-L"
+    ],
+    [
+     "157285",
+     "Ramiro",
+     "CM-R"
+    ],
+    [
+     "318373",
+     "Bernard Kamungo",
+     "LM"
+    ],
+    [
+     "312876",
+     "Herman Johansson",
+     "RM"
+    ],
+    [
+     "277128",
+     "Petar Musa",
+     "F"
+    ],
+    [
+     "381038",
+     "Daniel Job",
+     "CF-L"
+    ],
+    [
+     "297142",
+     "Patrickson Delgado",
+     "CF-R"
     ]
    ]
   }
@@ -828,13 +1060,13 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -155
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -170
     ],
     [
      "-0.5",
