@@ -20,7 +20,8 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, PICK_P_MIN, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
-from model import DixonColes, markets_from_matrix, RECAL_1X2
+from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
+from mercado import implicitas
 
 VENTANA = 3 * 365
 DESDE = {'europa': '2020-08-01', 'torneos': '2020-07-01', 'anual': '2021-01-01'}
@@ -79,7 +80,7 @@ def cargar_historia_div(div):
 
 
 def predecir(liga):
-    df = cargar_historia(liga)
+    df = implicitas(cargar_historia(liga))       # goles que esperaba el mercado (cierre) de cada partido, para el ajuste
     promo = ascendidos(df)
     arriba = cargar_historia_div(LIGAS[liga]['descienden_de']) if LIGAS[liga].get('descienden_de') else None
     desde = pd.Timestamp(DESDE[LIGAS[liga].get('calendario', 'europa')])
@@ -96,7 +97,9 @@ def predecir(liga):
         nuevos = promo.get(dia.Season.iloc[0], set())
         if arriba is not None:
             nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba, LIGAS[liga].get('previo_descendido'))
-        m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None).fit(hist, d0, promoted=nuevos)
+        con_m = hist.imp_l.notna().mean() >= 0.5
+        m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
+                       half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE).fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:
                 continue

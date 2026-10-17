@@ -4,7 +4,11 @@ from config import RAW, temporadas
 
 KEEP = ['Season', 'Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'HTHG', 'HTAG', 'HS', 'AS', 'HST', 'AST',
         'HC', 'AC', 'HxG', 'AxG', 'HF', 'AF', 'HY', 'AY', 'HR', 'AR',
-        'B365H', 'B365D', 'B365A', 'AvgH', 'AvgD', 'AvgA']
+        'B365H', 'B365D', 'B365A', 'AvgH', 'AvgD', 'AvgA',
+        # momios de cierre y de más/menos 2.5: de ahí salen los goles que esperaba el mercado (mercado.py)
+        'PSCH', 'PSCD', 'PSCA', 'AvgCH', 'AvgCD', 'AvgCA', 'B365CH', 'B365CD', 'B365CA', 'PSH', 'PSD', 'PSA',
+        'PC>2.5', 'PC<2.5', 'AvgC>2.5', 'AvgC<2.5', 'B365C>2.5', 'B365C<2.5', 'P>2.5', 'P<2.5', 'Avg>2.5', 'Avg<2.5',
+        'B365>2.5', 'B365<2.5']
 RENAME_OLD = {'BbAvH': 'AvgH', 'BbAvD': 'AvgD', 'BbAvA': 'AvgA'}
 
 

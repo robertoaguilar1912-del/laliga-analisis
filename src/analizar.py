@@ -17,7 +17,8 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
-from model import DixonColes, RECAL_1X2
+from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
+from mercado import implicitas
 from corners import CornerModel, RematesModel
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
@@ -496,7 +497,12 @@ def analizar_liga(liga):
         calendario = europa.calendario_equipos(ref, L['region'])
     else:
         # ligas de Europa: con la corrección de favoritos y empates (ver RECAL_1X2 en model.py)
-        modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None).fit(hist, ref, promoted=nuevos)
+        # ligas: lo que pasó en la cancha más lo que esperaba el mercado de cada partido jugado (ver PESO_MERCADO en model.py),
+        # si la liga tiene momios de cierre; si no, como antes (solo goles y tiros a puerta, vida media de un año)
+        hist = implicitas(hist)
+        con_m = hist.imp_l.notna().mean() >= 0.5
+        modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
+                            half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE).fit(hist, ref, promoted=nuevos)
         hc = hist.dropna(subset=['HC', 'AC'])
         cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
         hs = hist.dropna(subset=['HST', 'AST'])

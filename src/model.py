@@ -25,6 +25,15 @@ PRIOR_SD = 0.50          # cuánto dejamos que un equipo se aleje de su valor pr
 PROMOTED_ATT = -0.20     # previo para recién ascendidos (ataque más flojo)
 PROMOTED_DEF = 0.15      # previo para recién ascendidos (defensa más floja)
 ALPHA = 0.6              # peso de los goles frente a los tiros a puerta (elegido con 2018-20)
+# Lo que esperaba el mercado de cada partido ya jugado (goles esperados según los momios de cierre, ver mercado.py) pesa
+# 80% y lo que pasó en la cancha (la mezcla de goles y tiros a puerta de arriba) 20%; con esas observaciones, mucho menos
+# ruidosas que los goles, conviene olvidar más rápido (vida media de 120 días en vez de 365). Elegido con 2020-23 y probado
+# en 2023-26 (17 oct 2026, 8 ligas de Europa, 9,663 partidos de prueba): log loss del 1X2 0.9958 -> 0.9898 y de más/menos
+# 2.5 0.6776 -> 0.6738 (la apertura de Bet365 sin margen: 0.9795 y 0.6709). En MLS, Liga MX, Brasil y Argentina (11,265
+# partidos; ahí football-data no trae más/menos y el total se reajusta, ver mercado.py): 1X2 1.0421 -> 1.0359 (el cierre sin
+# margen da 1.0198) y más/menos 2.5 0.6708 -> 0.6650. Solo se usa en las ligas con momios de cierre en football-data.
+PESO_MERCADO = 0.8
+HALF_LIFE_MERCADO = 120
 
 
 # Corrección del 1X2 para las ligas de Europa (las que tienen tiros a puerta de football-data). Comparado con lo que pasó,
@@ -51,11 +60,12 @@ def recalibrar(M, th=RECAL_1X2):
 
 
 class DixonColes:
-    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None):
+    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None, peso_mercado=0.0):
         self.half_life = half_life
         self.prior_sd = prior_sd
         self.alpha = alpha  # 1.0 = solo goles; <1 mezcla goles con tiros a puerta
         self.recal = recal  # corrección del 1X2 (RECAL_1X2 en las ligas de Europa) o None
+        self.peso_mercado = peso_mercado  # 0 = no usa los momios; PESO_MERCADO en las ligas (columnas imp_l, imp_v)
 
     # ------------------------------------------------------------------ ajuste
     def fit(self, matches, ref_date, promoted=()):
@@ -81,6 +91,18 @@ class DixonColes:
             x, y = gx, gy
         days = (ref_date - matches.Date).dt.days.values.astype(float)
         w = np.exp(-np.log(2) * days / self.half_life)
+        # lo que esperaba el mercado de cada partido jugado (si hay momios): tiene mucho menos ruido que los goles
+        if self.peso_mercado and 'imp_l' in matches:
+            il, iv = matches.imp_l.values.astype(float).copy(), matches.imp_v.values.astype(float).copy()
+            hay = np.isfinite(il) & np.isfinite(iv)
+            # sin momios de más/menos, el total que sale del 1X2 queda bajo: se lleva al nivel real de goles (ver mercado.py)
+            sin_ou = hay & ~matches.imp_ou.values.astype(bool) if 'imp_ou' in matches else np.zeros(len(il), bool)
+            if sin_ou.sum() >= 30:
+                f = np.sum(w[sin_ou] * (gx[sin_ou] + gy[sin_ou])) / np.sum(w[sin_ou] * (il[sin_ou] + iv[sin_ou]))
+                il[sin_ou] *= f; iv[sin_ou] *= f
+            w_m = self.peso_mercado
+            x = np.where(hay, (1 - w_m) * x + w_m * np.nan_to_num(il), x)
+            y = np.where(hay, (1 - w_m) * y + w_m * np.nan_to_num(iv), y)
 
         prior_att = np.zeros(n)
         prior_def = np.zeros(n)
