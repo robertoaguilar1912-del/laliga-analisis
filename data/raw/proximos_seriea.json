@@ -1,154 +1,5 @@
 [
  {
-  "id": "401874953",
-  "utc": "2026-10-17T16:00Z",
-  "estadio": "Renato Dall'Ara",
-  "local_espn": "Bologna",
-  "visita_espn": "Internazionale",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-italian-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    450,
-    310,
-    -190
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -175,
-    135
-   ],
-   "spread": [
-    [
-     "+0.5",
-     140
-    ],
-    [
-     "-0.5",
-     -200
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Bologna": [
-    [
-     "179358",
-     "Lukasz Skorupski",
-     "G"
-    ],
-    [
-     "91873",
-     "Matteo Darmian",
-     "D"
-    ],
-    [
-     "304222",
-     "Arthur Theate",
-     "D"
-    ],
-    [
-     "250707",
-     "Nicolo Casale",
-     "D"
-    ],
-    [
-     "180956",
-     "Federico Bernardeschi",
-     "M"
-    ],
-    [
-     "202429",
-     "Lewis Ferguson",
-     "M"
-    ],
-    [
-     "261616",
-     "Juan Miranda",
-     "M"
-    ],
-    [
-     "291560",
-     "Nadir Zortea",
-     "M"
-    ],
-    [
-     "287790",
-     "Nicolò Cambiaghi",
-     "M"
-    ],
-    [
-     "276654",
-     "Tommaso Pobega",
-     "M"
-    ],
-    [
-     "285438",
-     "Roberto Piccoli",
-     "F"
-    ]
-   ],
-   "Internazionale": [
-    [
-     "240533",
-     "Josep Martínez",
-     "G"
-    ],
-    [
-     "214562",
-     "Manuel Akanji",
-     "CD"
-    ],
-    [
-     "249280",
-     "Alessandro Bastoni",
-     "CD-L"
-    ],
-    [
-     "266660",
-     "Yann Bisseck",
-     "CD-R"
-    ],
-    [
-     "341494",
-     "Petar Sucic",
-     "CM-L"
-    ],
-    [
-     "204441",
-     "Nicolò Barella",
-     "CM-R"
-    ],
-    [
-     "177782",
-     "Piotr Zielinski",
-     "AM"
-    ],
-    [
-     "194748",
-     "Federico Dimarco",
-     "LM"
-    ],
-    [
-     "286369",
-     "Luis Henrique",
-     "RM"
-    ],
-    [
-     "362674",
-     "Pio Esposito",
-     "CF-L"
-    ],
-    [
-     "217331",
-     "Marcus Thuram",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401874935",
   "utc": "2026-10-17T18:45Z",
   "estadio": "Olimpico",
@@ -160,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    275,
-    450
+    -160,
+    265,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     125
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AS Roma": [
+    [
+     "206587",
+     "Pierluigi Gollini",
+     "G"
+    ],
+    [
+     "271555",
+     "Leonardo Balerdi",
+     "D"
+    ],
+    [
+     "242593",
+     "Evan Ndicka",
+     "D"
+    ],
+    [
+     "336104",
+     "Konstantinos Koulierakis",
+     "D"
+    ],
+    [
+     "323974",
+     "Matìas Soulè",
+     "M"
+    ],
+    [
+     "297300",
+     "Devyne Rensch",
+     "M"
+    ],
+    [
+     "409371",
+     "Emanuele Lulli",
+     "M"
+    ],
+    [
+     "146335",
+     "Marten de Roon",
+     "M"
+    ],
+    [
+     "387204",
+     "Rodrigo Mora",
+     "M"
+    ],
+    [
+     "360235",
+     "Niccolò Pisilli",
+     "M"
+    ],
+    [
+     "250284",
+     "Santiago Castro",
+     "F"
+    ]
+   ],
+   "Genoa": [
+    [
+     "205653",
+     "Justin Bijlow",
+     "G"
+    ],
+    [
+     "281736",
+     "Leo Østigard",
+     "CD"
+    ],
+    [
+     "259975",
+     "Johan Vásquez",
+     "CD-L"
+    ],
+    [
+     "364761",
+     "Alessandro Marcandalli",
+     "CD-R"
+    ],
+    [
+     "270884",
+     "Morten Frendrup",
+     "CM-L"
+    ],
+    [
+     "418840",
+     "Samuel Wiafe",
+     "CM-R"
+    ],
+    [
+     "386505",
+     "David Puczka",
+     "LM"
+    ],
+    [
+     "324256",
+     "Mikael Ellertsson",
+     "RM"
+    ],
+    [
+     "275444",
+     "Milutin Osmajic",
+     "F"
+    ],
+    [
+     "130036",
+     "Stephan El Shaarawy",
+     "CF-L"
+    ],
+    [
+     "261054",
+     "Junior Messias",
+     "CF-R"
     ]
    ]
   }
