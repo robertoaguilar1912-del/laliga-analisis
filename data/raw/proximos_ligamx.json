@@ -5,7 +5,7 @@
   "estadio": "Estadio Victoria",
   "local_espn": "Necaxa",
   "visita_espn": "Atlas",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    245,
-    145
+    155,
+    250,
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -105
+    -140,
+    105
    ],
    "spread": [
     [
-     "+0.5",
-     -190
+     "-0.5",
+     145
     ],
     [
-     "-0.5",
-     135
+     "+0.5",
+     -200
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlante": [
+    [
+     "176824",
+     "Óscar Jiménez",
+     "G"
+    ],
+    [
+     "259939",
+     "Eduardo Tercero",
+     "CD"
+    ],
+    [
+     "317427",
+     "Aarón Quirós",
+     "CD-L"
+    ],
+    [
+     "297375",
+     "Nicolás Carrera",
+     "CD-R"
+    ],
+    [
+     "422084",
+     "Edgar Jiménez",
+     "LB"
+    ],
+    [
+     "304158",
+     "Walter Portales",
+     "RB"
+    ],
+    [
+     "297283",
+     "Eugenio Pizzuto",
+     "CM"
+    ],
+    [
+     "292066",
+     "Luis Calzadilla",
+     "CM-L"
+    ],
+    [
+     "250732",
+     "Martín Sarrafiore",
+     "CM-R"
+    ],
+    [
+     "252405",
+     "Jhojan Julio",
+     "CF-L"
+    ],
+    [
+     "297285",
+     "Luis Puente",
+     "CF-R"
+    ]
+   ],
+   "Pumas UNAM": [
+    [
+     "73247",
+     "Keylor Navas",
+     "G"
+    ],
+    [
+     "236597",
+     "Nathan Silva",
+     "CD"
+    ],
+    [
+     "177553",
+     "Rubén Duarte",
+     "CD-L"
+    ],
+    [
+     "286879",
+     "Pablo Bennevendo",
+     "CD-R"
+    ],
+    [
+     "242715",
+     "Uriel Antuna",
+     "LB"
+    ],
+    [
+     "344568",
+     "Rodrigo López",
+     "RB"
+    ],
+    [
+     "297150",
+     "Pedro Vite",
+     "CM-L"
+    ],
+    [
+     "219508",
+     "Adalberto Carrasquilla",
+     "CM-R"
+    ],
+    [
+     "239983",
+     "Juninho",
+     "LM"
+    ],
+    [
+     "260054",
+     "Alan Medina",
+     "RM"
+    ],
+    [
+     "255942",
+     "Robert Morales",
+     "F"
     ]
    ]
   }
@@ -193,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -145,
     290,
-    360
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    105
+    -135,
+    100
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -160
     ],
     [
      "+0.5",
-     105
+     115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Tijuana": [
+    [
+     "175155",
+     "Antonio Rodríguez",
+     "SUB"
+    ],
+    [
+     "178042",
+     "Ignacio Rivero",
+     "SUB"
+    ],
+    [
+     "284241",
+     "Iván Tona",
+     "SUB"
+    ],
+    [
+     "265861",
+     "Francisco González",
+     "SUB"
+    ],
+    [
+     "286665",
+     "Jackson Porozo",
+     "SUB"
+    ],
+    [
+     "206158",
+     "Jesús Gómez",
+     "SUB"
+    ],
+    [
+     "189834",
+     "Jesus Vega",
+     "SUB"
+    ],
+    [
+     "360957",
+     "Ramiro Árciga",
+     "SUB"
+    ],
+    [
+     "178142",
+     "Rafael Fernández",
+     "SUB"
+    ],
+    [
+     "285904",
+     "Adonis Preciado",
+     "SUB"
+    ],
+    [
+     "300710",
+     "Mourad El Ghezouani",
+     "SUB"
+    ]
+   ],
+   "Puebla": [
+    [
+     "276399",
+     "Ricardo Gutiérrez",
+     "G"
+    ],
+    [
+     "283788",
+     "Facundo Almada",
+     "D"
+    ],
+    [
+     "284657",
+     "Fernando Monarrez",
+     "D"
+    ],
+    [
+     "235122",
+     "Juan Pablo Vargas",
+     "D"
+    ],
+    [
+     "338844",
+     "Iker Moreno",
+     "D"
+    ],
+    [
+     "120798",
+     "Alonso Ramirez",
+     "M"
+    ],
+    [
+     "356340",
+     "Mathías Tomás",
+     "M"
+    ],
+    [
+     "227939",
+     "Brayan Garnica",
+     "M"
+    ],
+    [
+     "284658",
+     "Alejandro Organista",
+     "M"
+    ],
+    [
+     "357211",
+     "Omar Moreno",
+     "M"
+    ],
+    [
+     "316225",
+     "Luifer Hernández",
+     "F"
     ]
    ]
   }
