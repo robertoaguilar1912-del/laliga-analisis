@@ -1,32 +1,32 @@
 {
 "401912520": {
 "fotmob": 1000020616,
-"visto": "2026-10-16T22:51+00:00",
-"xi": "standard",
+"visto": "2026-10-17T06:56+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Jefté",
-"tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Vitor Roque",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 42103346.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jefté",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 5178012.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 116052775.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.36279482330344964
 },
 "visita": {
 "faltan": [
@@ -35,7 +35,34 @@
 "tipo": "Lesión",
 "regreso": "una semana",
 "duda": false,
-"valor": 0.0,
+"valor": 16805522.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "John Kennedy",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 10366146.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Alisson",
+"tipo": "Lesión",
+"regreso": "mediados de octubre",
+"duda": false,
+"valor": 714140.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Germán Cano",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 364193.0,
 "titular": false,
 "importante": false
 },
@@ -47,43 +74,16 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Germán Cano",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Alisson",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "John Kennedy",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 46085640.0,
+"perdida": 0.5895907705740877,
 "perdida_duda": 0.0
 }
 },
 "401912521": {
 "fotmob": 1000020614,
-"visto": "2026-10-16T22:51+00:00",
+"visto": "2026-10-17T06:56+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -153,15 +153,6 @@
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Joaquín Correa",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
 "valor": 0.0,
 "titular": false,
 "importante": false

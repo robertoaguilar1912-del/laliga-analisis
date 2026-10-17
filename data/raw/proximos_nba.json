@@ -297,16 +297,16 @@
     130
    ],
    "spread": [
-    -1.5,
-    -115,
-    1.5,
-    -105
+    -2.5,
+    -105,
+    2.5,
+    -115
    ],
    "spread_abre": -3.5,
    "total": [
-    242.5,
-    -115,
-    -105
+    243.5,
+    -105,
+    -115
    ],
    "total_abre": 236.5
   }
@@ -505,10 +505,10 @@
     -175
    ],
    "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
+    4.5,
+    -115,
+    -4.5,
+    -105
    ],
    "spread_abre": 4.5,
    "total": [
@@ -557,10 +557,10 @@
     270
    ],
    "spread": [
-    -8.5,
-    -102,
-    8.5,
-    -118
+    -7.5,
+    -118,
+    7.5,
+    -102
    ],
    "spread_abre": -8.5,
    "total": [
@@ -601,8 +601,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -185,
-    154
+    -180,
+    150
    ],
    "ml_abre": [
     -205,
@@ -765,10 +765,10 @@
     145
    ],
    "spread": [
-    -4.5,
-    -105,
-    4.5,
-    -115
+    -3.5,
+    -115,
+    3.5,
+    -105
    ],
    "spread_abre": -4.5,
    "total": [
@@ -1907,6 +1907,122 @@
   "visita_espn": "Golden State Warriors",
   "revisado": false,
   "estadio": "Ball Arena",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909877",
+  "utc": "2026-10-27T23:30Z",
+  "fecha": "2026-10-27",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "BOS",
+  "visita": "BKN",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Boston Celtics",
+  "visita_espn": "Brooklyn Nets",
+  "revisado": false,
+  "estadio": "TD Garden",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909878",
+  "utc": "2026-10-28T00:00Z",
+  "fecha": "2026-10-27",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "NY",
+  "visita": "DET",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "New York Knicks",
+  "visita_espn": "Detroit Pistons",
+  "revisado": false,
+  "estadio": "Madison Square Garden",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909879",
+  "utc": "2026-10-28T00:00Z",
+  "fecha": "2026-10-27",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SA",
+  "visita": "SAC",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "San Antonio Spurs",
+  "visita_espn": "Sacramento Kings",
+  "revisado": false,
+  "estadio": "Frost Bank Center",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909880",
+  "utc": "2026-10-28T03:00Z",
+  "fecha": "2026-10-27",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "LAL",
+  "visita": "POR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Los Angeles Lakers",
+  "visita_espn": "Portland Trail Blazers",
+  "revisado": false,
+  "estadio": "crypto.com Arena",
   "records": {
    "home": [
     "0-0",

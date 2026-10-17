@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    425,
-    290,
-    -190
+    500,
+    310,
+    -220
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -115
+    -130,
+    -110
    ],
    "spread": [
     [
-     "+0.5",
-     130
+     "+1.5",
+     -195
     ],
     [
-     "-0.5",
-     -200
+     "-1.5",
+     130
     ]
    ]
   }
@@ -254,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -145
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -276,7 +276,7 @@
  },
  {
   "id": "401878033",
-  "utc": "2026-10-20T23:00Z",
+  "utc": "2026-10-20T23:15Z",
   "estadio": "Metropolitano de Techo",
   "local_espn": "Internacional de Bogotá",
   "visita_espn": "Fortaleza CEIF",
@@ -395,17 +395,6 @@
   "momios": null
  },
  {
-  "id": "401878036",
-  "utc": "2026-10-24T21:05Z",
-  "estadio": "Armando Maestre Pavajeau",
-  "local_espn": "Alianza FC",
-  "visita_espn": "Internacional de Bogotá",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
   "id": "401878057",
   "utc": "2026-10-24T23:05Z",
   "estadio": "Pascual Guerrero",
@@ -433,6 +422,17 @@
   "estadio": "Metropolitano de Techo",
   "local_espn": "Fortaleza CEIF",
   "visita_espn": "Deportivo Cali",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878036",
+  "utc": "2026-10-25T21:05Z",
+  "estadio": "Armando Maestre Pavajeau",
+  "local_espn": "Alianza FC",
+  "visita_espn": "Internacional de Bogotá",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
@@ -481,5 +481,71 @@
   "tipo": "clausura",
   "neutral": false,
   "momios": null
+ },
+ {
+  "id": "401877953",
+  "utc": "2026-10-27T23:00Z",
+  "estadio": "General Santander",
+  "local_espn": "Cúcuta Deportivo",
+  "visita_espn": "Águilas Doradas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    200,
+    200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -180
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401877861",
+  "utc": "2026-10-28T01:05Z",
+  "estadio": "La Independencia",
+  "local_espn": "Boyacá Chicó FC",
+  "visita_espn": "Atlético Junior",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    285,
+    215,
+    -110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -130
+    ],
+    [
+     "-0.5",
+     -115
+    ]
+   ]
+  }
  }
 ]
