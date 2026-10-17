@@ -5,7 +5,7 @@
   "estadio": "Gtech Community Stadium",
   "local_espn": "Brentford",
   "visita_espn": "Liverpool",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -27,7 +27,7 @@
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   },
@@ -154,7 +154,7 @@
   "estadio": "Craven Cottage",
   "local_espn": "Fulham",
   "visita_espn": "Hull City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -303,15 +303,15 @@
   "estadio": "Etihad Stadium",
   "local_espn": "Manchester City",
   "visita_espn": "Ipswich Town",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -400,
+    -425,
     600,
-    900
+    950
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -464,7 +464,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    135,
+    140,
     -170
    ],
    "spread": [
@@ -474,7 +474,7 @@
     ],
     [
      "+0.5",
-     -170
+     -175
     ]
    ]
   }
