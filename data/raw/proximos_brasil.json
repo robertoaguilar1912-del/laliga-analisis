@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841268",
-  "utc": "2026-10-17T21:00Z",
-  "estadio": "Joao Havelange Stadium",
-  "local_espn": "Botafogo",
-  "visita_espn": "Chapecoense",
-  "estado": "STATUS_IN_PROGRESS",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -280,
-    425,
-    650
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    105,
-    -140
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -110
-    ],
-    [
-     "+1.5",
-     -125
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Botafogo": [
-    [
-     "228401",
-     "Gabriel Batista",
-     "G"
-    ],
-    [
-     "170362",
-     "Fernando Marçal",
-     "CD-L"
-    ],
-    [
-     "245291",
-     "Nahuel Ferraresi",
-     "CD-R"
-    ],
-    [
-     "199734",
-     "Alex Telles",
-     "LB"
-    ],
-    [
-     "268700",
-     "Vitinho",
-     "RB"
-    ],
-    [
-     "379785",
-     "Álvaro Montoro",
-     "AM"
-    ],
-    [
-     "306764",
-     "Danilo Santos",
-     "LM"
-    ],
-    [
-     "143883",
-     "Allan",
-     "RM"
-    ],
-    [
-     "202374",
-     "Tiquinho Soares",
-     "F"
-    ],
-    [
-     "314841",
-     "Matheus Martins",
-     "AM-L"
-    ],
-    [
-     "176733",
-     "Hakim Ziyech",
-     "AM-R"
-    ]
-   ],
-   "Chapecoense": [
-    [
-     "276217",
-     "Anderson Paixão",
-     "G"
-    ],
-    [
-     "319649",
-     "Eduardo Doma",
-     "D"
-    ],
-    [
-     "236283",
-     "Bruno Pacheco",
-     "D"
-    ],
-    [
-     "234012",
-     "Bruno",
-     "D"
-    ],
-    [
-     "338663",
-     "Kauan",
-     "D"
-    ],
-    [
-     "202554",
-     "Yago Felipe",
-     "M"
-    ],
-    [
-     "301225",
-     "Fernando",
-     "M"
-    ],
-    [
-     "140012",
-     "Giovanni Augusto",
-     "M"
-    ],
-    [
-     "307717",
-     "Maurício Garcez",
-     "M"
-    ],
-    [
-     "285089",
-     "Camilo",
-     "M"
-    ],
-    [
-     "3108270",
-     "Túlio Eduardo Silva De Oliveira",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841270",
   "utc": "2026-10-17T21:30Z",
   "estadio": "Arena MRV",
@@ -458,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    140,
     225,
-    235
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -155
+    105,
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     110
+     130
     ],
     [
      "+0.5",
-     -155
+     -180
+    ]
+   ]
+  },
+  "alineaciones": {
+   "São Paulo": [
+    [
+     "199013",
+     "Rafael",
+     "G"
+    ],
+    [
+     "201531",
+     "Robert Arboleda",
+     "CD"
+    ],
+    [
+     "357362",
+     "Newton",
+     "CD-L"
+    ],
+    [
+     "196855",
+     "Rafael Tolói",
+     "CD-R"
+    ],
+    [
+     "266282",
+     "Marcos Antonio",
+     "CM-L"
+    ],
+    [
+     "301516",
+     "Damián Bobadilla",
+     "CM-R"
+    ],
+    [
+     "252800",
+     "Iago",
+     "LM"
+    ],
+    [
+     "376489",
+     "Pedro Lima",
+     "RM"
+    ],
+    [
+     "162558",
+     "Jonathan Calleri",
+     "F"
+    ],
+    [
+     "190483",
+     "Luciano",
+     "CF-L"
+    ],
+    [
+     "236596",
+     "Artur",
+     "CF-R"
+    ]
+   ],
+   "Vasco da Gama": [
+    [
+     "205464",
+     "Léo Jardim",
+     "G"
+    ],
+    [
+     "337099",
+     "Robert",
+     "CD-L"
+    ],
+    [
+     "285142",
+     "Gabriel Pereira",
+     "CD-R"
+    ],
+    [
+     "334756",
+     "Cuiabano",
+     "LB"
+    ],
+    [
+     "234842",
+     "Paulo Henrique",
+     "RB"
+    ],
+    [
+     "275941",
+     "Facundo Colidio",
+     "AM"
+    ],
+    [
+     "271473",
+     "Santiago Sosa",
+     "LM"
+    ],
+    [
+     "198302",
+     "Tchê Tchê",
+     "RM"
+    ],
+    [
+     "292259",
+     "Bruno Duarte",
+     "F"
+    ],
+    [
+     "330924",
+     "Andrés Gómez",
+     "AM-L"
+    ],
+    [
+     "336485",
+     "Alan Lescano",
+     "AM-R"
     ]
    ]
   }
