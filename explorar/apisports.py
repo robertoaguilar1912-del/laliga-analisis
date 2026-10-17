@@ -8,6 +8,8 @@ import requests
 KEY = os.environ.get('API_FOOTBALL_KEY', '')
 H = {'x-apisports-key': KEY}
 out = {'hay_clave': bool(KEY)}
+import atexit
+atexit.register(lambda: (Path('salida').mkdir(exist_ok=True), json.dump(out, open('salida/apisports.json', 'w'), ensure_ascii=False, indent=1, default=str)))
 n = 0
 
 def get(base, path, **params):
@@ -27,7 +29,7 @@ out['futbol_status'] = {'http': s, 'plan': (resp.get('subscription') or {}).get(
                         'requests': resp.get('requests'), 'errores': j.get('errors')}
 # casas de momios
 s, j = get(F, 'odds/bookmakers')
-out['futbol_casas'] = sorted(b['name'] for b in j.get('response') or [])
+out['futbol_casas'] = sorted(str(b.get('name')) for b in j.get('response') or [])
 # cobertura de nuestras ligas
 LIGAS = {140: 'La Liga', 141: 'Segunda', 39: 'Premier', 40: 'Championship', 135: 'Serie A', 78: 'Bundesliga', 61: 'Ligue 1',
          94: 'Portugal', 262: 'Liga MX', 253: 'MLS', 71: 'Brasil A', 72: 'Brasil B', 128: 'Argentina', 239: 'Colombia',
@@ -76,7 +78,7 @@ for nom, base in (('basquet', 'https://v1.basketball.api-sports.io'), ('nba', 'h
                             'requests': r.get('requests') if isinstance(r, dict) else None, 'errores': j.get('errors')}
     if nom in ('basquet', 'nfl'):
         s, j = get(base, 'odds/bookmakers')
-        out[f'{nom}_casas'] = sorted(b['name'] for b in j.get('response') or []) or j.get('errors')
+        out[f'{nom}_casas'] = sorted(str(b.get('name')) for b in j.get('response') or []) or j.get('errors')
 out['llamadas'] = n
 Path('salida').mkdir(exist_ok=True)
 json.dump(out, open('salida/apisports.json', 'w'), ensure_ascii=False, indent=1)
