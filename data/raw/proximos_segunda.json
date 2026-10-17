@@ -5,7 +5,7 @@
   "estadio": "Instalaciones de Zubieta",
   "local_espn": "Real Sociedad II",
   "visita_espn": "Almería",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,13 +160,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
-    215,
-    185
+    160,
+    205,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -135
    ],
    "spread": [
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -205
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Eibar": [
+    [
+     "290751",
+     "Jon Mikel Magunagoitia",
+     "G"
+    ],
+    [
+     "150806",
+     "Anaitz Arbilla",
+     "CD-L"
+    ],
+    [
+     "231214",
+     "Unai Elgezabel",
+     "CD-R"
+    ],
+    [
+     "164194",
+     "Juan Bernat",
+     "LB"
+    ],
+    [
+     "251661",
+     "Álvaro Rodríguez Pérez",
+     "RB"
+    ],
+    [
+     "331283",
+     "Iván Gil",
+     "AM"
+    ],
+    [
+     "361257",
+     "Aleix Garrido",
+     "LM"
+    ],
+    [
+     "367721",
+     "Ander Madariaga",
+     "RM"
+    ],
+    [
+     "234335",
+     "Jon Bautista",
+     "F"
+    ],
+    [
+     "376033",
+     "Jon Guruzeta",
+     "AM-L"
+    ],
+    [
+     "347412",
+     "Malcom Adu Ares",
+     "AM-R"
+    ]
+   ],
+   "Mallorca": [
+    [
+     "290043",
+     "Arnau Tenas",
+     "G"
+    ],
+    [
+     "222333",
+     "Antonio Raíllo",
+     "CD-L"
+    ],
+    [
+     "193397",
+     "Martin Valjent",
+     "CD-R"
+    ],
+    [
+     "172998",
+     "Alberto Moreno",
+     "LB"
+    ],
+    [
+     "311996",
+     "John Donald",
+     "RB"
+    ],
+    [
+     "279511",
+     "Antonio Sánchez",
+     "CM-L"
+    ],
+    [
+     "119310",
+     "Álex Sala",
+     "CM-R"
+    ],
+    [
+     "381682",
+     "Adrián Liso",
+     "LM"
+    ],
+    [
+     "354218",
+     "Josep Cerdà",
+     "RM"
+    ],
+    [
+     "206110",
+     "Pablo Torre",
+     "CF-L"
+    ],
+    [
+     "331787",
+     "Fuentes",
+     "CF-R"
     ]
    ]
   }
@@ -259,9 +375,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    205,
     235,
-    140
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -271,11 +387,11 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -170
     ],
     [
      "-0.5",
-     125
+     120
     ]
    ]
   }
