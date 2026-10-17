@@ -149,155 +149,6 @@
   }
  },
  {
-  "id": "401878770",
-  "utc": "2026-10-17T14:00Z",
-  "estadio": "Craven Cottage",
-  "local_espn": "Fulham",
-  "visita_espn": "Hull City",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-english-premier-league",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -155,
-    300,
-    425
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -135,
-    110
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -175
-    ],
-    [
-     "+0.5",
-     125
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Fulham": [
-    [
-     "153765",
-     "Bernd Leno",
-     "G"
-    ],
-    [
-     "313230",
-     "David Affengruber",
-     "D"
-    ],
-    [
-     "197163",
-     "Timothy Castagne",
-     "D"
-    ],
-    [
-     "263110",
-     "Calvin Bassey",
-     "D"
-    ],
-    [
-     "222396",
-     "Antonee Robinson",
-     "D"
-    ],
-    [
-     "307111",
-     "Oscar Bobb",
-     "M"
-    ],
-    [
-     "175063",
-     "Alex Iwobi",
-     "M"
-    ],
-    [
-     "218998",
-     "Sander Berge",
-     "M"
-    ],
-    [
-     "409541",
-     "Josh King",
-     "M"
-    ],
-    [
-     "324164",
-     "Shea Charles",
-     "M"
-    ],
-    [
-     "87297",
-     "Gonzalo García",
-     "F"
-    ]
-   ],
-   "Hull City": [
-    [
-     "284199",
-     "Konstantinos Tzolakis",
-     "G"
-    ],
-    [
-     "168424",
-     "John Egan",
-     "D"
-    ],
-    [
-     "311173",
-     "Brooke Norton-Cuffy",
-     "D"
-    ],
-    [
-     "392320",
-     "Lucas Herrington",
-     "D"
-    ],
-    [
-     "231826",
-     "Lewie Coyle",
-     "D"
-    ],
-    [
-     "178051",
-     "Semi Ajayi",
-     "D"
-    ],
-    [
-     "249851",
-     "Regan Slater",
-     "M"
-    ],
-    [
-     "320417",
-     "Mohamed Belloumi",
-     "M"
-    ],
-    [
-     "153613",
-     "Matt Crooks",
-     "M"
-    ],
-    [
-     "250478",
-     "Sorba Thomas",
-     "M"
-    ],
-    [
-     "193010",
-     "Oliver McBurnie",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401879259",
   "utc": "2026-10-17T14:00Z",
   "estadio": "Etihad Stadium",
@@ -458,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    265,
-    185
+    115,
+    275,
+    215
    ],
    "ou_linea": 3.5,
    "ou": [
-    140,
-    -170
+    130,
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     125
+     105
     ],
     [
      "+0.5",
-     -175
+     -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Newcastle United": [
+    [
+     "319267",
+     "Lukás Hornícek",
+     "G"
+    ],
+    [
+     "349078",
+     "Lewis Miley",
+     "D"
+    ],
+    [
+     "303444",
+     "Malick Thiaw",
+     "D"
+    ],
+    [
+     "274633",
+     "Sven Botman",
+     "D"
+    ],
+    [
+     "106139",
+     "Lewis Hall",
+     "D"
+    ],
+    [
+     "259517",
+     "Joe Willock",
+     "M"
+    ],
+    [
+     "202232",
+     "Joelinton",
+     "M"
+    ],
+    [
+     "323986",
+     "Nico González",
+     "M"
+    ],
+    [
+     "243386",
+     "Harvey Barnes",
+     "M"
+    ],
+    [
+     "224077",
+     "Yoane Wissa",
+     "M"
+    ],
+    [
+     "359651",
+     "Matias Fernandez-Pardo",
+     "F"
+    ]
+   ],
+   "Aston Villa": [
+    [
+     "265958",
+     "Zion Suzuki",
+     "G"
+    ],
+    [
+     "234698",
+     "Matty Cash",
+     "D"
+    ],
+    [
+     "204679",
+     "Victor Lindelöf",
+     "D"
+    ],
+    [
+     "250945",
+     "Aaron Wan-Bissaka",
+     "D"
+    ],
+    [
+     "181312",
+     "Tyrone Mings",
+     "D"
+    ],
+    [
+     "386992",
+     "Johan Manzambi",
+     "M"
+    ],
+    [
+     "301524",
+     "João Gomes",
+     "M"
+    ],
+    [
+     "250936",
+     "Boubacar Kamara",
+     "M"
+    ],
+    [
+     "382839",
+     "Alysson",
+     "M"
+    ],
+    [
+     "214375",
+     "Emiliano Buendía",
+     "M"
+    ],
+    [
+     "308524",
+     "Nicolas Jackson",
+     "F"
     ]
    ]
   }
