@@ -5,7 +5,7 @@
   "estadio": "Riverside Stadium",
   "local_espn": "Middlesbrough",
   "visita_espn": "Cardiff City",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "The Den",
   "local_espn": "Millwall",
   "visita_espn": "Lincoln City",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Vicarage Road",
   "local_espn": "Watford",
   "visita_espn": "Charlton Athletic",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -477,6 +477,122 @@
      -125
     ]
    ]
+  },
+  "alineaciones": {
+   "Birmingham City": [
+    [
+     "329170",
+     "James Beadle",
+     "G"
+    ],
+    [
+     "251627",
+     "Alex Cochrane",
+     "D"
+    ],
+    [
+     "217071",
+     "Bright Osayi-Samuel",
+     "D"
+    ],
+    [
+     "238884",
+     "Phil Neumann",
+     "D"
+    ],
+    [
+     "263133",
+     "Christoph Klarer",
+     "D"
+    ],
+    [
+     "271879",
+     "Liam Millar",
+     "M"
+    ],
+    [
+     "194118",
+     "Patrick Roberts",
+     "M"
+    ],
+    [
+     "285048",
+     "Jhon Solis",
+     "M"
+    ],
+    [
+     "301248",
+     "Jay Stansfield",
+     "M"
+    ],
+    [
+     "286056",
+     "Tomoki Iwata",
+     "M"
+    ],
+    [
+     "330460",
+     "August Priske",
+     "F"
+    ]
+   ],
+   "Queens Park Rangers": [
+    [
+     "352759",
+     "Pierce Charles",
+     "G"
+    ],
+    [
+     "219781",
+     "Jake Clark-Salter",
+     "D"
+    ],
+    [
+     "354937",
+     "Kealey Adamson",
+     "D"
+    ],
+    [
+     "259089",
+     "Jimmy Dunne",
+     "D"
+    ],
+    [
+     "258967",
+     "Boy Kemper",
+     "D"
+    ],
+    [
+     "306532",
+     "Harvey Vale",
+     "M"
+    ],
+    [
+     "300966",
+     "Ronnie Edwards",
+     "M"
+    ],
+    [
+     "175064",
+     "Glen Kamara",
+     "M"
+    ],
+    [
+     "231890",
+     "Paul Smyth",
+     "M"
+    ],
+    [
+     "292221",
+     "Kwame Poku",
+     "M"
+    ],
+    [
+     "367706",
+     "Rayan Kolli",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -491,23 +607,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
+    -105,
     260,
-    270
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -120
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -115
     ],
     [
      "+0.5",
-     -130
+     -120
     ]
    ]
   }
@@ -557,23 +673,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    270,
-    300
+    -120,
+    275,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -140,
     110
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -135
     ],
     [
      "+0.5",
-     -115
+     -105
     ]
    ]
   }
@@ -596,8 +712,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    120,
+    -150
    ],
    "spread": [
     [
@@ -606,7 +722,7 @@
     ],
     [
      "+1.5",
-     -145
+     -150
     ]
    ]
   }
@@ -639,7 +755,7 @@
     ],
     [
      "-0.5",
-     100
+     -105
     ]
    ]
   }
@@ -662,17 +778,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -135
+    100,
+    -130
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -115
     ],
     [
      "+0.5",
-     -115
+     -120
     ]
    ]
   }
@@ -689,14 +805,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    300,
-    500
+    -170,
+    310,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -115
+    -115,
+    -110
    ],
    "spread": [
     [

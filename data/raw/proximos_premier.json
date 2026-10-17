@@ -5,7 +5,7 @@
   "estadio": "Hill Dickinson Stadium",
   "local_espn": "Everton",
   "visita_espn": "Chelsea",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    260,
-    180
+    170,
+    255,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -171,12 +171,128 @@
    ],
    "spread": [
     [
-     "-0.5",
-     125
+     "+0.5",
+     -195
     ],
     [
-     "+0.5",
-     -175
+     "-0.5",
+     140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Brentford": [
+    [
+     "275599",
+     "Caoimhín Kelleher",
+     "G"
+    ],
+    [
+     "356640",
+     "Michael Kayode",
+     "D"
+    ],
+    [
+     "206173",
+     "Kristoffer Ajer",
+     "D"
+    ],
+    [
+     "284490",
+     "Keane Lewis-Potter",
+     "D"
+    ],
+    [
+     "270507",
+     "Sepp van den Berg",
+     "D"
+    ],
+    [
+     "342029",
+     "Yehor Yarmoliuk",
+     "M"
+    ],
+    [
+     "225564",
+     "Vitaly Janelt",
+     "M"
+    ],
+    [
+     "227472",
+     "Mathias Jensen",
+     "M"
+    ],
+    [
+     "315530",
+     "Dango Ouattara",
+     "M"
+    ],
+    [
+     "307657",
+     "Jaidon Anthony",
+     "M"
+    ],
+    [
+     "301894",
+     "Igor Thiago",
+     "F"
+    ]
+   ],
+   "Liverpool": [
+    [
+     "196876",
+     "Alisson Becker",
+     "G"
+    ],
+    [
+     "270821",
+     "Ronald Araújo",
+     "D"
+    ],
+    [
+     "157892",
+     "Virgil van Dijk",
+     "D"
+    ],
+    [
+     "323110",
+     "Milos Kerkez",
+     "D"
+    ],
+    [
+     "355980",
+     "Jérémy Jacquet",
+     "D"
+    ],
+    [
+     "303748",
+     "Florian Wirtz",
+     "M"
+    ],
+    [
+     "397545",
+     "Víctor Muñoz",
+     "M"
+    ],
+    [
+     "328238",
+     "Bradley Barcola",
+     "M"
+    ],
+    [
+     "257206",
+     "Dominik Szoboszlai",
+     "M"
+    ],
+    [
+     "249299",
+     "Alexis Mac Allister",
+     "M"
+    ],
+    [
+     "235662",
+     "Alexander Isak",
+     "F"
     ]
    ]
   }
@@ -205,11 +321,127 @@
    "spread": [
     [
      "-0.5",
-     -165
+     -170
     ],
     [
      "+0.5",
-     120
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Fulham": [
+    [
+     "153765",
+     "Bernd Leno",
+     "G"
+    ],
+    [
+     "313230",
+     "David Affengruber",
+     "D"
+    ],
+    [
+     "197163",
+     "Timothy Castagne",
+     "D"
+    ],
+    [
+     "263110",
+     "Calvin Bassey",
+     "D"
+    ],
+    [
+     "222396",
+     "Antonee Robinson",
+     "D"
+    ],
+    [
+     "307111",
+     "Oscar Bobb",
+     "M"
+    ],
+    [
+     "175063",
+     "Alex Iwobi",
+     "M"
+    ],
+    [
+     "218998",
+     "Sander Berge",
+     "M"
+    ],
+    [
+     "409541",
+     "Josh King",
+     "M"
+    ],
+    [
+     "324164",
+     "Shea Charles",
+     "M"
+    ],
+    [
+     "87297",
+     "Gonzalo García",
+     "F"
+    ]
+   ],
+   "Hull City": [
+    [
+     "284199",
+     "Konstantinos Tzolakis",
+     "G"
+    ],
+    [
+     "168424",
+     "John Egan",
+     "D"
+    ],
+    [
+     "311173",
+     "Brooke Norton-Cuffy",
+     "D"
+    ],
+    [
+     "392320",
+     "Lucas Herrington",
+     "D"
+    ],
+    [
+     "231826",
+     "Lewie Coyle",
+     "D"
+    ],
+    [
+     "178051",
+     "Semi Ajayi",
+     "D"
+    ],
+    [
+     "249851",
+     "Regan Slater",
+     "M"
+    ],
+    [
+     "320417",
+     "Mohamed Belloumi",
+     "M"
+    ],
+    [
+     "153613",
+     "Matt Crooks",
+     "M"
+    ],
+    [
+     "250478",
+     "Sorba Thomas",
+     "M"
+    ],
+    [
+     "193010",
+     "Oliver McBurnie",
+     "F"
     ]
    ]
   }
@@ -226,23 +458,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
+    -390,
     550,
-    950
+    900
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    100
+    -120,
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -155
+     -145
     ],
     [
      "+1.5",
-     110
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Manchester City": [
+    [
+     "217092",
+     "Gianluigi Donnarumma",
+     "G"
+    ],
+    [
+     "303785",
+     "Matheus Nunes",
+     "D"
+    ],
+    [
+     "328464",
+     "Nico O'Reilly",
+     "D"
+    ],
+    [
+     "234878",
+     "Rúben Dias",
+     "D"
+    ],
+    [
+     "265907",
+     "Marc Guéhi",
+     "D"
+    ],
+    [
+     "283672",
+     "Jérémy Doku",
+     "M"
+    ],
+    [
+     "268641",
+     "Iliman Ndiaye",
+     "M"
+    ],
+    [
+     "154595",
+     "Mateo Kovacic",
+     "M"
+    ],
+    [
+     "373927",
+     "Ayyoub Bouaddi",
+     "M"
+    ],
+    [
+     "250787",
+     "Phil Foden",
+     "M"
+    ],
+    [
+     "253989",
+     "Erling Haaland",
+     "F"
+    ]
+   ],
+   "Ipswich Town": [
+    [
+     "168746",
+     "Christian Walton",
+     "G"
+    ],
+    [
+     "243440",
+     "Dara O'Shea",
+     "D"
+    ],
+    [
+     "230963",
+     "Issa Diop",
+     "D"
+    ],
+    [
+     "291174",
+     "Jacob Greaves",
+     "D"
+    ],
+    [
+     "283086",
+     "Leif Davis",
+     "D"
+    ],
+    [
+     "286347",
+     "Daizen Maeda",
+     "M"
+    ],
+    [
+     "256607",
+     "Florentino",
+     "M"
+    ],
+    [
+     "228393",
+     "Exequiel Palacios",
+     "M"
+    ],
+    [
+     "336794",
+     "Abdoul Ouattara",
+     "M"
+    ],
+    [
+     "20975",
+     "Julio Enciso",
+     "M"
+    ],
+    [
+     "322654",
+     "Emersonn",
+     "F"
     ]
    ]
   }
