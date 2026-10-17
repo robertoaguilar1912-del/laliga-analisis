@@ -28,9 +28,9 @@ ALPHA = 0.6              # peso de los goles frente a los tiros a puerta (elegid
 # Lo que esperaba el mercado de cada partido ya jugado (goles esperados según los momios de cierre, ver mercado.py) pesa
 # 80% y lo que pasó en la cancha (la mezcla de goles y tiros a puerta de arriba) 20%; con esas observaciones, mucho menos
 # ruidosas que los goles, conviene olvidar más rápido (vida media de 120 días en vez de 365). Elegido con 2020-23 y probado
-# en 2023-26 (17 oct 2026, 8 ligas de Europa, 9,663 partidos de prueba): log loss del 1X2 0.9958 -> 0.9898 y de más/menos
-# 2.5 0.6776 -> 0.6738 (la apertura de Bet365 sin margen: 0.9795 y 0.6709). En MLS, Liga MX, Brasil y Argentina (11,265
-# partidos; ahí football-data no trae más/menos y el total se reajusta, ver mercado.py): 1X2 1.0421 -> 1.0359 (el cierre sin
+# en 2023-26 (17 oct 2026, 8 ligas de Europa, 7,663 partidos de prueba): log loss del 1X2 0.9958 -> 0.9898 y de más/menos
+# 2.5 0.6776 -> 0.6738 (la apertura de Bet365 sin margen: 0.9795 y 0.6709). En MLS, Liga MX, Brasil y Argentina (5,984
+# partidos de prueba; ahí football-data no trae más/menos y el total se reajusta, ver mercado.py): 1X2 1.0421 -> 1.0359 (el cierre sin
 # margen da 1.0198) y más/menos 2.5 0.6708 -> 0.6650. Solo se usa en las ligas con momios de cierre en football-data.
 PESO_MERCADO = 0.8
 HALF_LIFE_MERCADO = 120
