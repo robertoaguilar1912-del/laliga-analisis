@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
       - run: python explorar/correr.py
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
       - name: Guardar salida
         if: always()
         run: |
