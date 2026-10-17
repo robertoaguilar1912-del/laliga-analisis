@@ -5,7 +5,7 @@
   "estadio": "Joao Havelange Stadium",
   "local_espn": "Botafogo",
   "visita_espn": "Chapecoense",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Arena MRV",
   "local_espn": "Atlético-MG",
   "visita_espn": "Coritiba",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -309,9 +309,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    240,
-    140
+    200,
+    245,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -321,11 +321,127 @@
    "spread": [
     [
      "+0.5",
-     -180
+     -165
     ],
     [
      "-0.5",
-     130
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Athletico Paranaense": [
+    [
+     "322655",
+     "Mycael",
+     "G"
+    ],
+    [
+     "270242",
+     "Juan Felipe Aguirre",
+     "CD"
+    ],
+    [
+     "173351",
+     "Jádson",
+     "CD-L"
+    ],
+    [
+     "381170",
+     "Arthur Dias",
+     "CD-R"
+    ],
+    [
+     "113352",
+     "Luiz Gustavo",
+     "CM-L"
+    ],
+    [
+     "315789",
+     "Filipinho",
+     "CM-R"
+    ],
+    [
+     "197049",
+     "Stiven Mendoza",
+     "LM"
+    ],
+    [
+     "198761",
+     "Gilberto",
+     "RM"
+    ],
+    [
+     "268476",
+     "Kevin Viveros",
+     "F"
+    ],
+    [
+     "361359",
+     "João Cruz",
+     "CF-L"
+    ],
+    [
+     "380327",
+     "Leozinho",
+     "CF-R"
+    ]
+   ],
+   "Palmeiras": [
+    [
+     "276741",
+     "Carlos Miguel",
+     "G"
+    ],
+    [
+     "252609",
+     "Murilo",
+     "D"
+    ],
+    [
+     "257050",
+     "Bruno Fuchs",
+     "D"
+    ],
+    [
+     "222631",
+     "Alexander Barboza",
+     "D"
+    ],
+    [
+     "301653",
+     "Ramón Sosa",
+     "M"
+    ],
+    [
+     "210143",
+     "Andrea Pereira",
+     "M"
+    ],
+    [
+     "186776",
+     "Lucas Evangelista",
+     "M"
+    ],
+    [
+     "288669",
+     "Khellven",
+     "M"
+    ],
+    [
+     "254007",
+     "Joaquín Piquerez",
+     "M"
+    ],
+    [
+     "289046",
+     "Maurício",
+     "M"
+    ],
+    [
+     "311743",
+     "José Manuel López",
+     "F"
     ]
    ]
   }
@@ -348,7 +464,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
+    115,
     -155
    ],
    "spread": [
@@ -441,19 +557,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    265,
-    115
+    205,
+    270,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -160,
     120
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -155
     ],
     [
      "-0.5",
@@ -519,11 +635,11 @@
    "spread": [
     [
      "-0.5",
-     -170
+     -175
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   }
