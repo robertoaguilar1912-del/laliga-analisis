@@ -1,53 +1,7 @@
 {
-"401882837": {
-"fotmob": 5868100,
-"visto": "2026-10-17T15:54+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Tajon Buchanan",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 13061615.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Nicolas Pépé",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 4755873.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 123049766.0,
-"perdida": 0.1061490437941995,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Yago Santiago",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 925917.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 20816369.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-}
-},
 "401882846": {
 "fotmob": 5868091,
-"visto": "2026-10-17T15:54+00:00",
+"visto": "2026-10-17T17:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -102,7 +56,7 @@
 },
 "401882838": {
 "fotmob": 5868099,
-"visto": "2026-10-17T11:26+00:00",
+"visto": "2026-10-17T17:20+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -177,6 +131,15 @@
 "importante": true
 },
 {
+"nombre": "Nico Williams",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 67303020.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Unai Eguiluz",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
@@ -188,7 +151,7 @@
 ],
 "valor_xi": 65029184.0,
 "perdida": 0.4837435911851516,
-"perdida_duda": 0.0
+"perdida_duda": 1.0349663929352089
 }
 },
 "401882840": {
