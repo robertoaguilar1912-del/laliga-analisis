@@ -1,154 +1,5 @@
 [
  {
-  "id": "761876",
-  "utc": "2026-10-17T20:30Z",
-  "estadio": "Allianz Field",
-  "local_espn": "Minnesota United FC",
-  "visita_espn": "St. Louis CITY SC",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    130,
-    270,
-    165
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    135,
-    -170
-   ],
-   "spread": [
-    [
-     "-0.5",
-     120
-    ],
-    [
-     "+0.5",
-     -170
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Minnesota United FC": [
-    [
-     "245083",
-     "Drake Callender",
-     "G"
-    ],
-    [
-     "379184",
-     "Cherrion Valerius",
-     "D"
-    ],
-    [
-     "358517",
-     "Jefferson Díaz",
-     "D"
-    ],
-    [
-     "337922",
-     "Morris Duggan",
-     "D"
-    ],
-    [
-     "287784",
-     "Bongokuhle Hlongwane",
-     "M"
-    ],
-    [
-     "183726",
-     "Wil Trapp",
-     "M"
-    ],
-    [
-     "353246",
-     "Mauricio Gonzalez",
-     "M"
-    ],
-    [
-     "328543",
-     "Nectarios Triantis",
-     "M"
-    ],
-    [
-     "281323",
-     "Anthony Markanich",
-     "M"
-    ],
-    [
-     "318536",
-     "Aziel Jackson",
-     "F"
-    ],
-    [
-     "289941",
-     "Kelvin Yeboah",
-     "F"
-    ]
-   ],
-   "St. Louis CITY SC": [
-    [
-     "308481",
-     "Jaziel Orozco",
-     "SUB"
-    ],
-    [
-     "338133",
-     "Miguel Perez",
-     "SUB"
-    ],
-    [
-     "175906",
-     "Roman Bürki",
-     "SUB"
-    ],
-    [
-     "355253",
-     "Fallou Fall",
-     "SUB"
-    ],
-    [
-     "252749",
-     "Tomas Totland",
-     "SUB"
-    ],
-    [
-     "346651",
-     "Mykhi Joyner",
-     "SUB"
-    ],
-    [
-     "296222",
-     "Dante Polvara",
-     "SUB"
-    ],
-    [
-     "198189",
-     "Timo Baumgartl",
-     "SUB"
-    ],
-    [
-     "288791",
-     "Rafael Navarro",
-     "SUB"
-    ],
-    [
-     "208341",
-     "Simon Becher",
-     "SUB"
-    ],
-    [
-     "297256",
-     "Jeong Sang-Bin",
-     "SUB"
-    ]
-   ]
-  }
- },
- {
   "id": "761880",
   "utc": "2026-10-17T23:30Z",
   "estadio": "Mercedes-Benz Stadium",
@@ -161,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     230,
-    310,
+    300,
     -115
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
@@ -176,7 +27,7 @@
     ],
     [
      "-0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -193,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    145,
     265,
-    165
+    155
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -205,11 +56,11 @@
    "spread": [
     [
      "-0.5",
-     125
+     135
     ],
     [
      "+0.5",
-     -170
+     -190
     ]
    ]
   }
@@ -226,8 +77,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    235,
+    175,
+    240,
     135
    ],
    "ou_linea": 2.5,
@@ -238,11 +89,11 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -180
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
@@ -266,7 +117,7 @@
    "ou_linea": 3.5,
    "ou": [
     -130,
-    100
+    105
    ],
    "spread": [
     [
@@ -275,7 +126,123 @@
     ],
     [
      "+0.5",
-     115
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Orlando City SC": [
+    [
+     "159382",
+     "Maxime Crépeau",
+     "SUB"
+    ],
+    [
+     "294211",
+     "Daryl Dike",
+     "SUB"
+    ],
+    [
+     "250448",
+     "Iván Angulo",
+     "SUB"
+    ],
+    [
+     "140416",
+     "Antoine Griezmann",
+     "SUB"
+    ],
+    [
+     "401054",
+     "Zakaria Taifi",
+     "SUB"
+    ],
+    [
+     "382896",
+     "Luis Otávio",
+     "SUB"
+    ],
+    [
+     "340588",
+     "Iago Teodoro",
+     "SUB"
+    ],
+    [
+     "181558",
+     "Wilder Cartagena",
+     "SUB"
+    ],
+    [
+     "241473",
+     "Eduard Atuesta",
+     "SUB"
+    ],
+    [
+     "233401",
+     "Martín Ojeda",
+     "SUB"
+    ],
+    [
+     "311532",
+     "David Brekalo",
+     "SUB"
+    ]
+   ],
+   "D.C. United": [
+    [
+     "141316",
+     "Sean Johnson",
+     "G"
+    ],
+    [
+     "230822",
+     "Sean Nealis",
+     "D"
+    ],
+    [
+     "227891",
+     "Silvan Hefti",
+     "D"
+    ],
+    [
+     "228416",
+     "Kye Rowles",
+     "D"
+    ],
+    [
+     "288348",
+     "Keisuke Kurokawa",
+     "D"
+    ],
+    [
+     "269158",
+     "Brandon Servania",
+     "M"
+    ],
+    [
+     "379749",
+     "Kimito Nono",
+     "M"
+    ],
+    [
+     "297079",
+     "João Peglow",
+     "M"
+    ],
+    [
+     "227789",
+     "Andre Dozzell",
+     "M"
+    ],
+    [
+     "271884",
+     "Jared Stroud",
+     "F"
+    ],
+    [
+     "313068",
+     "Tai Baribo",
+     "F"
     ]
    ]
   }
@@ -292,8 +259,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    340,
+    -150,
+    330,
     310
    ],
    "ou_linea": 3.5,
@@ -309,6 +276,122 @@
     [
      "+0.5",
      115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Red Bull New York": [
+    [
+     "192027",
+     "Ethan Horvath",
+     "G"
+    ],
+    [
+     "337030",
+     "Devin Padelford",
+     "D"
+    ],
+    [
+     "282582",
+     "Justin Che",
+     "D"
+    ],
+    [
+     "242942",
+     "Dylan Nealis",
+     "D"
+    ],
+    [
+     "361422",
+     "Julián Bazán",
+     "D"
+    ],
+    [
+     "362442",
+     "Ronald Donkor",
+     "M"
+    ],
+    [
+     "380923",
+     "Mohammed Sofo",
+     "M"
+    ],
+    [
+     "381687",
+     "Adri Mehmeti",
+     "M"
+    ],
+    [
+     "270302",
+     "Cameron Harper",
+     "F"
+    ],
+    [
+     "288041",
+     "Julian Hall",
+     "F"
+    ],
+    [
+     "285698",
+     "Cade Cowell",
+     "F"
+    ]
+   ],
+   "Toronto FC": [
+    [
+     "294040",
+     "Luka Gavran",
+     "G"
+    ],
+    [
+     "310293",
+     "Zane Monlouis",
+     "D"
+    ],
+    [
+     "301819",
+     "Matheus Pereira",
+     "D"
+    ],
+    [
+     "337361",
+     "Nickseon Gomis",
+     "D"
+    ],
+    [
+     "298072",
+     "Kobe Franklin",
+     "D"
+    ],
+    [
+     "290190",
+     "Theo Corbeanu",
+     "M"
+    ],
+    [
+     "225567",
+     "Niklas Dorsch",
+     "M"
+    ],
+    [
+     "184221",
+     "Jonathan Osorio",
+     "M"
+    ],
+    [
+     "252351",
+     "Djordje Mihailovic",
+     "M"
+    ],
+    [
+     "181028",
+     "Lewis Morgan",
+     "F"
+    ],
+    [
+     "256613",
+     "Josh Sargent",
+     "F"
     ]
    ]
   }
@@ -374,7 +457,7 @@
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
