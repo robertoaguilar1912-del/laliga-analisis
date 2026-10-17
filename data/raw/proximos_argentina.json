@@ -1,167 +1,18 @@
 [
  {
-  "id": "401841626",
-  "utc": "2026-10-16T22:00Z",
-  "estadio": "Norberto Tomaghello",
-  "local_espn": "Defensa y Justicia",
-  "visita_espn": "Instituto (Córdoba)",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    155,
-    205,
-    195
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    125,
-    -170
-   ],
-   "spread": [
-    [
-     "-0.5",
-     145
-    ],
-    [
-     "+0.5",
-     -205
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Defensa y Justicia": [
-    [
-     "273253",
-     "Matias Borgogno",
-     "G"
-    ],
-    [
-     "228387",
-     "Héctor Martínez",
-     "CD-L"
-    ],
-    [
-     "120682",
-     "Damián Fernández",
-     "CD-R"
-    ],
-    [
-     "402600",
-     "Demian Domínguez",
-     "LB"
-    ],
-    [
-     "418765",
-     "Valentín Loza",
-     "RB"
-    ],
-    [
-     "186887",
-     "David Barbona",
-     "AM"
-    ],
-    [
-     "192087",
-     "César Pérez",
-     "LM"
-    ],
-    [
-     "371519",
-     "Maximiliano Porcel",
-     "RM"
-    ],
-    [
-     "40376",
-     "Leandro Miguel Fernandez",
-     "F"
-    ],
-    [
-     "284845",
-     "Juan Gutiérrez",
-     "AM-L"
-    ],
-    [
-     "366938",
-     "Jeremías Lucco",
-     "AM-R"
-    ]
-   ],
-   "Instituto (Córdoba)": [
-    [
-     "213108",
-     "Marcos Ledesma",
-     "G"
-    ],
-    [
-     "229641",
-     "Leonel Mosevich",
-     "CD"
-    ],
-    [
-     "157910",
-     "Fernando Alarcón",
-     "CD-L"
-    ],
-    [
-     "157500",
-     "Jonathan Galván",
-     "CD-R"
-    ],
-    [
-     "361003",
-     "Matías Gallardo",
-     "CM-L"
-    ],
-    [
-     "242672",
-     "Gustavo Abregú",
-     "CM-R"
-    ],
-    [
-     "76156",
-     "Diego Sosa",
-     "LM"
-    ],
-    [
-     "268229",
-     "Hernán De La Fuente",
-     "RM"
-    ],
-    [
-     "241622",
-     "Matias Tissera",
-     "F"
-    ],
-    [
-     "70912",
-     "Alex Luna",
-     "CF-L"
-    ],
-    [
-     "379598",
-     "Jeremías Lázaro",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841627",
   "utc": "2026-10-17T00:30Z",
   "estadio": "Alberto José Armando (La Bombonera)",
   "local_espn": "Boca Juniors",
   "visita_espn": "Talleres (Córdoba)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
-    330,
+    -230,
+    310,
     750
    ],
    "ou_linea": 2.5,
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-1.5",
-     120
+     125
     ],
     [
      "+1.5",
-     -170
+     -175
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Boca Juniors": [
+    [
+     "166323",
+     "Álvaro Montero",
+     "G"
+    ],
+    [
+     "286902",
+     "Ayrton Costa",
+     "CD-L"
+    ],
+    [
+     "341457",
+     "Lautaro Di Lollo",
+     "CD-R"
+    ],
+    [
+     "290542",
+     "Lautaro Blanco",
+     "LB"
+    ],
+    [
+     "338991",
+     "Leandro Lozano",
+     "RB"
+    ],
+    [
+     "152706",
+     "Rodrigo Battaglia",
+     "CM"
+    ],
+    [
+     "382978",
+     "Milton Delgado",
+     "LM"
+    ],
+    [
+     "233734",
+     "Santiago Ascacibar",
+     "RM"
+    ],
+    [
+     "260812",
+     "Miguel Merentiel",
+     "F"
+    ],
+    [
+     "400360",
+     "Leonel Flores",
+     "LF"
+    ],
+    [
+     "193634",
+     "Ángel Romero",
+     "RF"
+    ]
+   ],
+   "Talleres (Córdoba)": [
+    [
+     "200935",
+     "Ezequiel Unsain",
+     "G"
+    ],
+    [
+     "318179",
+     "Román Riquelme",
+     "CD-L"
+    ],
+    [
+     "173449",
+     "Matías Catalán",
+     "CD-R"
+    ],
+    [
+     "192847",
+     "Gabriel Báez",
+     "LB"
+    ],
+    [
+     "276302",
+     "Augusto Schott",
+     "RB"
+    ],
+    [
+     "402605",
+     "Giovanni Baroni",
+     "AM"
+    ],
+    [
+     "309398",
+     "Alejandro Galarza",
+     "LM"
+    ],
+    [
+     "187475",
+     "Federico Fattori",
+     "RM"
+    ],
+    [
+     "307473",
+     "Agustín Álvarez Martínez",
+     "F"
+    ],
+    [
+     "292245",
+     "Valentin Depietri",
+     "AM-L"
+    ],
+    [
+     "288678",
+     "Rick",
+     "AM-R"
     ]
    ]
   }
@@ -556,13 +523,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    180,
-    250
+    130,
+    185,
+    255
    ],
    "ou_linea": 1.5,
    "ou": [
-    -175,
+    -170,
     120
    ],
    "spread": [
@@ -572,7 +539,7 @@
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -726,6 +693,17 @@
   "estadio": "Monumental Presidente Perón",
   "local_espn": "Instituto (Córdoba)",
   "visita_espn": "Deportivo Riestra",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841642",
+  "utc": "2026-10-27T22:00Z",
+  "estadio": "Diego Armando Maradona",
+  "local_espn": "Argentinos Juniors",
+  "visita_espn": "Independiente Rivadavia",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
