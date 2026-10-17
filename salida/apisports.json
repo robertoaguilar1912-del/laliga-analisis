@@ -1,0 +1,519 @@
+{
+ "hay_clave": true,
+ "futbol_status": {
+  "http": 200,
+  "plan": "Free",
+  "activa": true,
+  "requests": {
+   "current": 0,
+   "limit_day": 100
+  },
+  "errores": []
+ },
+ "futbol_casas": [
+  "10Bet",
+  "188Bet",
+  "1xBet",
+  "5Dimes",
+  "888Sport",
+  "Bet365",
+  "BetFred",
+  "BetVictor",
+  "Betano",
+  "Betcris",
+  "Betfair",
+  "Betsson",
+  "Betway",
+  "Bovada",
+  "Bwin",
+  "ComeOn",
+  "Dafabet",
+  "Expekt",
+  "Fonbet",
+  "Intertops",
+  "Interwetten",
+  "Ladbrokes",
+  "Marathonbet",
+  "Netbet",
+  "None",
+  "NordicBet",
+  "Pinnacle",
+  "SBO",
+  "Sportingbet",
+  "Superbet",
+  "Tipico",
+  "Unibet",
+  "William Hill"
+ ],
+ "futbol_cobertura": {
+  "La Liga": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Segunda": {
+   "temporada": 2026,
+   "desde": 2016,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Premier": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Championship": {
+   "temporada": 2026,
+   "desde": 2011,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Serie A": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Bundesliga": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Ligue 1": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Portugal": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Liga MX": {
+   "temporada": 2026,
+   "desde": 2016,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "MLS": {
+   "temporada": 2026,
+   "desde": 2012,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Brasil A": {
+   "temporada": 2026,
+   "desde": 2010,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Brasil B": {
+   "temporada": 2026,
+   "desde": 2012,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Argentina": {
+   "temporada": 2026,
+   "desde": 2015,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Colombia": {
+   "temporada": 2026,
+   "desde": 2016,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Champions": {
+   "temporada": 2026,
+   "desde": 2011,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Europa League": {
+   "temporada": 2026,
+   "desde": 2014,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": true,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Conference": {
+   "temporada": 2026,
+   "desde": 2021,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Libertadores": {
+   "temporada": 2026,
+   "desde": 2019,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  },
+  "Sudamericana": {
+   "temporada": 2026,
+   "desde": 2019,
+   "cobertura": {
+    "fixtures": {
+     "events": true,
+     "lineups": true,
+     "statistics_fixtures": true,
+     "statistics_players": true
+    },
+    "standings": true,
+    "players": true,
+    "top_scorers": true,
+    "top_assists": true,
+    "top_cards": true,
+    "injuries": false,
+    "predictions": true,
+    "odds": true
+   },
+   "errores": null
+  }
+ },
+ "futbol_momios_ejemplo": {
+  "errores": {
+   "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+  },
+  "results": 0
+ },
+ "futbol_ultimo": null,
+ "futbol_lesiones_laliga": {
+  "n": 0,
+  "errores": {
+   "plan": "Free plans do not have access to this season, try from 2022 to 2024."
+  }
+ },
+ "basquet_status": {
+  "http": 200,
+  "plan": "Free",
+  "requests": {
+   "current": 0,
+   "limit_day": 100
+  },
+  "errores": []
+ },
+ "basquet_casas": {
+  "endpoint": "This endpoint do not exist."
+ },
+ "nba_status": {
+  "http": 200,
+  "plan": "Free",
+  "requests": {
+   "current": 0,
+   "limit_day": 100
+  },
+  "errores": []
+ },
+ "nfl_status": {
+  "http": 200,
+  "plan": "Free",
+  "requests": {
+   "current": 0,
+   "limit_day": 100
+  },
+  "errores": []
+ },
+ "nfl_casas": [
+  "10Bet",
+  "1xBet",
+  "888Sport",
+  "Bet365",
+  "BetVictor",
+  "Betano",
+  "Betcris",
+  "Betfair",
+  "Betsson",
+  "Betway",
+  "Bwin",
+  "ComeOn",
+  "Dafabet",
+  "Fonbet",
+  "Marathon",
+  "None",
+  "NordicBet",
+  "Pinnacle",
+  "SBO",
+  "Sportingbet",
+  "Superbet",
+  "Tipico",
+  "Unibet",
+  "WilliamHill"
+ ],
+ "llamadas": 29
+}

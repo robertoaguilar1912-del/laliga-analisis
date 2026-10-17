@@ -1,8 +1,4 @@
 $ python explorar/apisports.py
-[exit 1]
+[exit 0]
+{"futbol_status": {"http": 200, "plan": "Free", "activa": true, "requests": {"current": 0, "limit_day": 100}, "errores": []}, "basquet_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "nba_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "nfl_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "llamadas": 29}
 
-Traceback (most recent call last):
-  File "/home/runner/work/laliga-analisis/laliga-analisis/explorar/apisports.py", line 30, in <module>
-    out['futbol_casas'] = sorted(b['name'] for b in j.get('response') or [])
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: '<' not supported between instances of 'NoneType' and 'str'
