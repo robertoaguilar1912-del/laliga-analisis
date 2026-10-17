@@ -5,7 +5,7 @@
   "estadio": "Subaru Park",
   "local_espn": "Philadelphia Union",
   "visita_espn": "Charlotte FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    270,
-    145
+    135,
+    280,
+    155
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -155
+    115,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     140
+     125
     ],
     [
      "+0.5",
-     -195
+     -175
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Minnesota United FC": [
+    [
+     "245083",
+     "Drake Callender",
+     "G"
+    ],
+    [
+     "379184",
+     "Cherrion Valerius",
+     "D"
+    ],
+    [
+     "358517",
+     "Jefferson Díaz",
+     "D"
+    ],
+    [
+     "337922",
+     "Morris Duggan",
+     "D"
+    ],
+    [
+     "287784",
+     "Bongokuhle Hlongwane",
+     "M"
+    ],
+    [
+     "183726",
+     "Wil Trapp",
+     "M"
+    ],
+    [
+     "353246",
+     "Mauricio Gonzalez",
+     "M"
+    ],
+    [
+     "328543",
+     "Nectarios Triantis",
+     "M"
+    ],
+    [
+     "281323",
+     "Anthony Markanich",
+     "M"
+    ],
+    [
+     "318536",
+     "Aziel Jackson",
+     "F"
+    ],
+    [
+     "289941",
+     "Kelvin Yeboah",
+     "F"
+    ]
+   ],
+   "St. Louis CITY SC": [
+    [
+     "308481",
+     "Jaziel Orozco",
+     "SUB"
+    ],
+    [
+     "338133",
+     "Miguel Perez",
+     "SUB"
+    ],
+    [
+     "175906",
+     "Roman Bürki",
+     "SUB"
+    ],
+    [
+     "355253",
+     "Fallou Fall",
+     "SUB"
+    ],
+    [
+     "252749",
+     "Tomas Totland",
+     "SUB"
+    ],
+    [
+     "346651",
+     "Mykhi Joyner",
+     "SUB"
+    ],
+    [
+     "296222",
+     "Dante Polvara",
+     "SUB"
+    ],
+    [
+     "198189",
+     "Timo Baumgartl",
+     "SUB"
+    ],
+    [
+     "288791",
+     "Rafael Navarro",
+     "SUB"
+    ],
+    [
+     "208341",
+     "Simon Becher",
+     "SUB"
+    ],
+    [
+     "297256",
+     "Jeong Sang-Bin",
+     "SUB"
     ]
    ]
   }
@@ -271,7 +387,7 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -185
     ],
     [
      "-0.5",
@@ -325,23 +441,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    330,
-    285
+    -150,
+    340,
+    295
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -110
+    -120,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -155
     ],
     [
      "+0.5",
-     110
+     115
     ]
    ]
   }
@@ -398,7 +514,7 @@
    "ou_linea": 2.5,
    "ou": [
     -130,
-    100
+    105
    ],
    "spread": [
     [
@@ -535,7 +651,7 @@
    "spread": [
     [
      "+0.5",
-     -120
+     -115
     ],
     [
      "-0.5",
@@ -556,23 +672,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -285,
+    -275,
     400,
-    600
+    550
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
+    110,
     -135
    ],
    "spread": [
     [
      "-1.5",
-     -110
+     -105
     ],
     [
      "+1.5",
-     -125
+     -135
     ]
    ]
   }
