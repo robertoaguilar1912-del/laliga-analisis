@@ -5,7 +5,7 @@
   "estadio": "Estadio León",
   "local_espn": "León",
   "visita_espn": "América",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Nemesio Díez Riega",
   "local_espn": "Toluca",
   "visita_espn": "Atlético de San Luis",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -309,14 +309,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -340,
+    -350,
     475,
-    800
+    850
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -165
+    -160
    ],
    "spread": [
     [
