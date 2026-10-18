@@ -5,7 +5,7 @@
   "estadio": "Stade Raymond Kopa",
   "local_espn": "Angers",
   "visita_espn": "Marseille",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-ligue-1",
   "neutral": false,
   "momios": {
@@ -193,9 +193,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    240,
-    110
+    275,
+    235,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -209,7 +209,123 @@
     ],
     [
      "-0.5",
-     100
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Lorient": [
+    [
+     "199381",
+     "Yvon Mvogo",
+     "G"
+    ],
+    [
+     "306535",
+     "Isaak Touré",
+     "D"
+    ],
+    [
+     "345563",
+     "Nathaniel Adjei",
+     "D"
+    ],
+    [
+     "265099",
+     "Montassar Talbi",
+     "D"
+    ],
+    [
+     "355870",
+     "Arthur Avom",
+     "M"
+    ],
+    [
+     "315215",
+     "Noah Cadiou",
+     "M"
+    ],
+    [
+     "225557",
+     "Jean-Victor Makengo",
+     "M"
+    ],
+    [
+     "381626",
+     "Arsène Kouassi",
+     "M"
+    ],
+    [
+     "397392",
+     "Gabin Bernardeau",
+     "M"
+    ],
+    [
+     "347940",
+     "Dembo Sylla",
+     "M"
+    ],
+    [
+     "324565",
+     "Ibrahima Baldé",
+     "F"
+    ]
+   ],
+   "AS Monaco": [
+    [
+     "134169",
+     "Lukas Hradecky",
+     "G"
+    ],
+    [
+     "362288",
+     "Sadibou Sané",
+     "D"
+    ],
+    [
+     "316559",
+     "Názinho",
+     "D"
+    ],
+    [
+     "310640",
+     "Vanderson",
+     "D"
+    ],
+    [
+     "277718",
+     "Mohammed Salisu",
+     "D"
+    ],
+    [
+     "38721",
+     "Lamine Camara",
+     "M"
+    ],
+    [
+     "222628",
+     "Denis Zakaria",
+     "M"
+    ],
+    [
+     "292957",
+     "Ansu Fati",
+     "M"
+    ],
+    [
+     "195501",
+     "Aleksandr Golovin",
+     "M"
+    ],
+    [
+     "159348",
+     "Takumi Minamino",
+     "M"
+    ],
+    [
+     "318389",
+     "Matthis Abline",
+     "F"
     ]
    ]
   }
@@ -265,7 +381,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -150,
     115
    ],
    "spread": [

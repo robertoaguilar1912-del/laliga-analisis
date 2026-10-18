@@ -5,7 +5,7 @@
   "estadio": "Vitality Stadium",
   "local_espn": "AFC Bournemouth",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "American Express Stadium",
   "local_espn": "Brighton & Hove Albion",
   "visita_espn": "Crystal Palace",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Elland Road",
   "local_espn": "Leeds United",
   "visita_espn": "Manchester United",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -458,23 +458,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    450,
+    500,
     295,
-    -160
+    -170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -110,
+    -110
    ],
    "spread": [
     [
      "+0.5",
-     125
+     130
     ],
     [
      "-0.5",
-     -175
+     -185
     ]
    ]
   }
