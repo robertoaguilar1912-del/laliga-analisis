@@ -5,7 +5,7 @@
   "estadio": "Estadio Jorge Luis Hirschi",
   "local_espn": "Estudiantes de La Plata",
   "visita_espn": "San Lorenzo",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Ciudad de Río Cuarto Antonio Candini",
   "local_espn": "Estudiantes de Río Cuarto",
   "visita_espn": "Aldosivi",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -342,9 +342,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    220,
-    320
+    -105,
+    225,
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -354,11 +354,11 @@
    "spread": [
     [
      "-0.5",
-     -120
+     -115
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -375,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    185,
-    255
+    130,
+    190,
+    260
    ],
    "ou_linea": 1.5,
    "ou": [
     -175,
-    125
+    130
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
