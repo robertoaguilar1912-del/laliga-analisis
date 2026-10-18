@@ -5,7 +5,7 @@
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "Inter Miami CF",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Gillette Stadium",
   "local_espn": "New England Revolution",
   "visita_espn": "Chicago Fire FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Inter&Co Stadium",
   "local_espn": "Orlando City SC",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Sports Illustrated Stadium",
   "local_espn": "Red Bull New York",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -753,29 +753,7 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    425,
-    350,
-    -205
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    110,
-    -140
-   ],
-   "spread": [
-    [
-     "+1.5",
-     -175
-    ],
-    [
-     "-1.5",
-     125
-    ]
-   ]
-  },
+  "momios": null,
   "alineaciones": {
    "Austin FC": [
     [
@@ -902,29 +880,7 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    105,
-    250,
-    225
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -135,
-    105
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -140
-    ]
-   ]
-  },
+  "momios": null,
   "alineaciones": {
    "Houston Dynamo FC": [
     [
@@ -1051,26 +1007,120 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    170,
-    270,
-    125
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    125,
-    -155
-   ],
-   "spread": [
+  "momios": null,
+  "alineaciones": {
+   "Sporting Kansas City": [
     [
-     "+0.5",
-     -170
+     "249729",
+     "Stefan Cleveland",
+     "G"
     ],
     [
-     "-0.5",
-     120
+     "389905",
+     "Wyatt Meyer",
+     "CD-L"
+    ],
+    [
+     "286804",
+     "Jansen Miller",
+     "CD-R"
+    ],
+    [
+     "274906",
+     "Emir Karic",
+     "LB"
+    ],
+    [
+     "395357",
+     "Jacob Bartlett",
+     "RB"
+    ],
+    [
+     "286194",
+     "Zorhan Bassong",
+     "CM-L"
+    ],
+    [
+     "417725",
+     "Kwaku Agyabeng",
+     "CM-R"
+    ],
+    [
+     "293695",
+     "Calvin Harris",
+     "LM"
+    ],
+    [
+     "324574",
+     "André Luiz",
+     "RM"
+    ],
+    [
+     "362459",
+     "Stephen Afrifa",
+     "CF-L"
+    ],
+    [
+     "381688",
+     "Taylor Calheira",
+     "CF-R"
+    ]
+   ],
+   "Real Salt Lake": [
+    [
+     "134307",
+     "Rafael",
+     "G"
+    ],
+    [
+     "365345",
+     "Luc de Fougerolles",
+     "CD"
+    ],
+    [
+     "294874",
+     "Philip Quinton",
+     "CD-L"
+    ],
+    [
+     "304126",
+     "Kobi Henry",
+     "CD-R"
+    ],
+    [
+     "287497",
+     "Juan Manuel Sanabria",
+     "LB"
+    ],
+    [
+     "364658",
+     "Dominik Marczuk",
+     "RB"
+    ],
+    [
+     "362114",
+     "Noel Caliskan",
+     "CM-L"
+    ],
+    [
+     "216288",
+     "Stijn Spierings",
+     "CM-R"
+    ],
+    [
+     "221128",
+     "Saba Lobjanidze",
+     "LM"
+    ],
+    [
+     "305777",
+     "Morgan Guilavogui",
+     "RM"
+    ],
+    [
+     "418187",
+     "Sergi Solans",
+     "F"
     ]
    ]
   }
@@ -1411,6 +1461,160 @@
   "estadio": "BMO Stadium",
   "local_espn": "LAFC",
   "visita_espn": "LA Galaxy",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761907",
+  "utc": "2026-10-28T23:30Z",
+  "estadio": "Bank of America Stadium",
+  "local_espn": "Charlotte FC",
+  "visita_espn": "CF Montréal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761908",
+  "utc": "2026-10-28T23:30Z",
+  "estadio": "Nu Stadium",
+  "local_espn": "Inter Miami CF",
+  "visita_espn": "FC Cincinnati",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761909",
+  "utc": "2026-10-28T23:30Z",
+  "estadio": "Gillette Stadium",
+  "local_espn": "New England Revolution",
+  "visita_espn": "Red Bull New York",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761905",
+  "utc": "2026-10-28T23:30Z",
+  "estadio": "Yankee Stadium",
+  "local_espn": "New York City FC",
+  "visita_espn": "Atlanta United FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761906",
+  "utc": "2026-10-28T23:30Z",
+  "estadio": "BMO Field",
+  "local_espn": "Toronto FC",
+  "visita_espn": "D.C. United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761910",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Q2 Stadium",
+  "local_espn": "Austin FC",
+  "visita_espn": "Real Salt Lake",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761911",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Soldier Field",
+  "local_espn": "Chicago Fire FC",
+  "visita_espn": "Orlando City SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761912",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Toyota Stadium",
+  "local_espn": "FC Dallas",
+  "visita_espn": "Columbus Crew",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761913",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Allianz Field",
+  "local_espn": "Minnesota United FC",
+  "visita_espn": "Sporting Kansas City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761914",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "GEODIS Park",
+  "local_espn": "Nashville SC",
+  "visita_espn": "Philadelphia Union",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761915",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Energizer Park",
+  "local_espn": "St. Louis CITY SC",
+  "visita_espn": "Portland Timbers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761917",
+  "utc": "2026-10-29T02:30Z",
+  "estadio": "PayPal Park",
+  "local_espn": "San Jose Earthquakes",
+  "visita_espn": "Colorado Rapids",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761916",
+  "utc": "2026-10-29T02:30Z",
+  "estadio": "Lumen Field",
+  "local_espn": "Seattle Sounders FC",
+  "visita_espn": "Houston Dynamo FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761918",
+  "utc": "2026-10-29T02:30Z",
+  "estadio": "BC Place",
+  "local_espn": "Vancouver Whitecaps",
+  "visita_espn": "San Diego FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

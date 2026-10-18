@@ -1,172 +1,23 @@
 [
  {
-  "id": "401841271",
-  "utc": "2026-10-17T22:30Z",
-  "estadio": "Arena da Baixada",
-  "local_espn": "Athletico-PR",
-  "visita_espn": "Palmeiras",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    210,
-    235,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -110,
-    -125
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -160
-    ],
-    [
-     "-0.5",
-     115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Athletico Paranaense": [
-    [
-     "322655",
-     "Mycael",
-     "G"
-    ],
-    [
-     "270242",
-     "Juan Felipe Aguirre",
-     "CD"
-    ],
-    [
-     "173351",
-     "Jádson",
-     "CD-L"
-    ],
-    [
-     "381170",
-     "Arthur Dias",
-     "CD-R"
-    ],
-    [
-     "113352",
-     "Luiz Gustavo",
-     "CM-L"
-    ],
-    [
-     "315789",
-     "Filipinho",
-     "CM-R"
-    ],
-    [
-     "197049",
-     "Stiven Mendoza",
-     "LM"
-    ],
-    [
-     "198761",
-     "Gilberto",
-     "RM"
-    ],
-    [
-     "268476",
-     "Kevin Viveros",
-     "F"
-    ],
-    [
-     "361359",
-     "João Cruz",
-     "CF-L"
-    ],
-    [
-     "380327",
-     "Leozinho",
-     "CF-R"
-    ]
-   ],
-   "Palmeiras": [
-    [
-     "276741",
-     "Carlos Miguel",
-     "G"
-    ],
-    [
-     "252609",
-     "Murilo",
-     "D"
-    ],
-    [
-     "257050",
-     "Bruno Fuchs",
-     "D"
-    ],
-    [
-     "222631",
-     "Alexander Barboza",
-     "D"
-    ],
-    [
-     "301653",
-     "Ramón Sosa",
-     "M"
-    ],
-    [
-     "210143",
-     "Andrea Pereira",
-     "M"
-    ],
-    [
-     "186776",
-     "Lucas Evangelista",
-     "M"
-    ],
-    [
-     "288669",
-     "Khellven",
-     "M"
-    ],
-    [
-     "254007",
-     "Joaquín Piquerez",
-     "M"
-    ],
-    [
-     "289046",
-     "Maurício",
-     "M"
-    ],
-    [
-     "311743",
-     "José Manuel López",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841273",
   "utc": "2026-10-18T00:00Z",
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "São Paulo",
   "visita_espn": "Vasco da Gama",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
+    155,
     225,
-    185
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -135
    ],
    "spread": [
@@ -315,8 +166,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -115,
+    -115
    ],
    "spread": [
     [
@@ -567,6 +418,61 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Flamengo",
   "visita_espn": "Atlético-MG",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841289",
+  "utc": "2026-10-28T22:30Z",
+  "estadio": "Estadio do Maracana",
+  "local_espn": "Fluminense",
+  "visita_espn": "Internacional",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841291",
+  "utc": "2026-10-28T22:30Z",
+  "estadio": "Estádio Municipal Cicero de Souza Marques",
+  "local_espn": "Red Bull Bragantino",
+  "visita_espn": "Chapecoense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841293",
+  "utc": "2026-10-28T22:30Z",
+  "estadio": "Estádio Vila Belmiro (Urbano Caldeira)",
+  "local_espn": "Santos",
+  "visita_espn": "Palmeiras",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841296",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Arena Fonte Nova",
+  "local_espn": "Bahia",
+  "visita_espn": "São Paulo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841297",
+  "utc": "2026-10-29T00:30Z",
+  "estadio": "Mangueirão",
+  "local_espn": "Remo",
+  "visita_espn": "Botafogo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,

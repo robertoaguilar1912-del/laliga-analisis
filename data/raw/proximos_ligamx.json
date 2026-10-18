@@ -5,7 +5,7 @@
   "estadio": "Estadio Corona",
   "local_espn": "Santos",
   "visita_espn": "Querétaro",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Akron",
   "local_espn": "Guadalajara",
   "visita_espn": "Tigres UANL",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -321,11 +321,11 @@
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -342,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
+    -320,
     475,
-    700
+    750
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    -105,
     -130
    ],
    "spread": [
     [
      "-1.5",
-     -120
+     -130
     ],
     [
      "+1.5",
-     -115
+     -105
     ]
    ]
   }
@@ -381,13 +381,13 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
+    120,
     -165
    ],
    "spread": [
     [
      "-1.5",
-     -130
+     -135
     ],
     [
      "+1.5",
@@ -626,5 +626,38 @@
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": null
+ },
+ {
+  "id": "401876986",
+  "utc": "2026-10-29T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "América",
+  "visita_espn": "Tijuana",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -165,
+    310,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     125
+    ]
+   ]
+  }
  }
 ]
