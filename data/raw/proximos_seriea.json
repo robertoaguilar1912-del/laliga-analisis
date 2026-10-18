@@ -5,29 +5,145 @@
   "estadio": "Stadio Artemio Franchi",
   "local_espn": "Fiorentina",
   "visita_espn": "Como",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    245,
-    110
+    200,
+    235,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    130
+    -170,
+    135
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -160
     ],
     [
      "-0.5",
-     105
+     115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Fiorentina": [
+    [
+     "108482",
+     "David de Gea",
+     "G"
+    ],
+    [
+     "255650",
+     "Marin Pongracic",
+     "CD-L"
+    ],
+    [
+     "310216",
+     "Radu Dragusin",
+     "CD-R"
+    ],
+    [
+     "364156",
+     "Viery",
+     "LB"
+    ],
+    [
+     "367861",
+     "Álex Jiménez",
+     "RB"
+    ],
+    [
+     "262591",
+     "Pedro Gonçalves",
+     "AM"
+    ],
+    [
+     "276254",
+     "Nicolò Fagioli",
+     "LM"
+    ],
+    [
+     "360061",
+     "Cher Ndour",
+     "RM"
+    ],
+    [
+     "312757",
+     "Mateo Pellegrino",
+     "F"
+    ],
+    [
+     "367743",
+     "Alieu Njie",
+     "AM-L"
+    ],
+    [
+     "376473",
+     "Franco Mastantuono",
+     "AM-R"
+    ]
+   ],
+   "Como": [
+    [
+     "214740",
+     "Jean Butez",
+     "G"
+    ],
+    [
+     "227784",
+     "Trevoh Chalobah",
+     "CD-L"
+    ],
+    [
+     "175887",
+     "Marc-Oliver Kempf",
+     "CD-R"
+    ],
+    [
+     "192146",
+     "Álex Valle",
+     "LB"
+    ],
+    [
+     "323273",
+     "Ivan Smolcic",
+     "RB"
+    ],
+    [
+     "337970",
+     "Nico Paz",
+     "AM"
+    ],
+    [
+     "291285",
+     "Lucas Da Cunha",
+     "LM"
+    ],
+    [
+     "264211",
+     "Luis Milla",
+     "RM"
+    ],
+    [
+     "262071",
+     "Anastasios Douvikas",
+     "F"
+    ],
+    [
+     "265912",
+     "Maxence Caqueret",
+     "AM-L"
+    ],
+    [
+     "387723",
+     "Mattia Liberali",
+     "AM-R"
     ]
    ]
   }
@@ -50,13 +166,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -170,
+    130
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -155
     ],
     [
      "+0.5",
