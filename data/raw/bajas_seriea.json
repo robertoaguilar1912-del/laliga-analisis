@@ -1,63 +1,8 @@
 {
-"401874774": {
-"fotmob": 5749703,
-"visto": "2026-10-18T14:54+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Arthur Atta",
-"tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
-"valor": 25949449.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Fabiano Parisi",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 6964775.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 174906885.0,
-"perdida": 0.14836150675257867,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Moise Kean",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 36095131.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Assane Diao",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 30417776.0,
-"titular": false,
-"importante": true
-}
-],
-"valor_xi": 225699793.0,
-"perdida": 0.2946963580068503,
-"perdida_duda": 0.0
-}
-},
 "401874978": {
 "fotmob": 5749700,
-"visto": "2026-10-18T14:54+00:00",
-"xi": "predicted",
+"visto": "2026-10-18T15:21+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -67,7 +12,7 @@
 "duda": false,
 "valor": 22777885.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Matteo Gabbia",
@@ -79,8 +24,8 @@
 "importante": false
 }
 ],
-"valor_xi": 245019509.0,
-"perdida": 0.09296355662846423,
+"valor_xi": 267416112.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -110,7 +55,7 @@
 "duda": false,
 "valor": 17564300.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kamaldeen Sulemana",
@@ -119,7 +64,16 @@
 "duda": false,
 "valor": 17294361.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Isak Hien",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 17830087.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Eljif Elmas",
@@ -147,20 +101,11 @@
 "valor": 457127.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Isak Hien",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 17830087.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 230124337.0,
-"perdida": 0.27550061339231585,
-"perdida_duda": 0.0
+"valor_xi": 250703410.0,
+"perdida": 0.39192947953918933,
+"perdida_duda": 0.07112024124442504
 }
 },
 "401874765": {
