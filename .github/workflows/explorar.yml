@@ -20,6 +20,7 @@ jobs:
       - run: python explorar/correr.py
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       - name: Guardar salida
         if: always()
         run: |
