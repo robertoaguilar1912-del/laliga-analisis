@@ -5,7 +5,7 @@
   "estadio": "BayArena",
   "local_espn": "Bayer Leverkusen",
   "visita_espn": "SC Freiburg",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    185,
     285,
-    105
+    115
    ],
    "ou_linea": 3.5,
    "ou": [
     -120,
-    -105
+    -110
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -155
     ],
     [
      "-0.5",
-     100
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Borussia Mönchengladbach": [
+    [
+     "238536",
+     "Moritz Nicolas",
+     "G"
+    ],
+    [
+     "275805",
+     "Philipp Sander",
+     "D"
+    ],
+    [
+     "323061",
+     "Fabio Chiarodia",
+     "D"
+    ],
+    [
+     "206863",
+     "Kevin Diks",
+     "D"
+    ],
+    [
+     "272135",
+     "Joe Scally",
+     "M"
+    ],
+    [
+     "408539",
+     "Wael Mohya",
+     "M"
+    ],
+    [
+     "330239",
+     "Hugo Bolin",
+     "M"
+    ],
+    [
+     "346617",
+     "Lukas Ullrich",
+     "M"
+    ],
+    [
+     "341707",
+     "Zento Uno",
+     "M"
+    ],
+    [
+     "238527",
+     "Florian Neuhaus",
+     "M"
+    ],
+    [
+     "221690",
+     "Isac Lidberg",
+     "F"
+    ]
+   ],
+   "TSG Hoffenheim": [
+    [
+     "138213",
+     "Oliver Baumann",
+     "G"
+    ],
+    [
+     "238025",
+     "Koki Machida",
+     "D"
+    ],
+    [
+     "191209",
+     "Vladimír Coufal",
+     "D"
+    ],
+    [
+     "359744",
+     "Mats Rots",
+     "D"
+    ],
+    [
+     "322510",
+     "Robin Hranác",
+     "D"
+    ],
+    [
+     "336355",
+     "Bambasé Conté",
+     "M"
+    ],
+    [
+     "362590",
+     "Leon Avdullahu",
+     "M"
+    ],
+    [
+     "320939",
+     "Alexander Prass",
+     "M"
+    ],
+    [
+     "303792",
+     "Tim Lemperle",
+     "F"
+    ],
+    [
+     "292169",
+     "Adam Hlozek",
+     "F"
+    ],
+    [
+     "331057",
+     "Fisnik Asllani",
+     "F"
     ]
    ]
   }
