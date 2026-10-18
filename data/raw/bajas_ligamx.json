@@ -1,98 +1,7 @@
 {
-"401876939": {
-"fotmob": 1000014605,
-"visto": "2026-10-18T04:14+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Amaury Morales",
-"tipo": "Lesión",
-"regreso": "principios de enero de 2027",
-"duda": false,
-"valor": 4068784.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "José Paradela",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 9597156.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Carlos Rodolfo Rotondi",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2460290.0,
-"titular": false,
-"importante": true
-}
-],
-"valor_xi": 39464881.0,
-"perdida": 0.1030988538898673,
-"perdida_duda": 0.30552343487365385
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Jairo Torres",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1905119.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Lucas Romero",
-"tipo": "Lesión",
-"regreso": "principios de abril de 2027",
-"duda": false,
-"valor": 698774.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Javier Aquino",
-"tipo": "Sanción",
-"regreso": "hasta el 18 de octubre",
-"duda": false,
-"valor": 395530.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Ettson Ayón",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 839424.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Bryan Romero",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 309583.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 19443225.0,
-"perdida": 0.0,
-"perdida_duda": 0.09798369354878113
-}
-},
 "401876938": {
 "fotmob": 1000014606,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +65,7 @@
 },
 "401876934": {
 "fotmob": 1000014610,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -179,9 +88,9 @@
 "importante": false
 }
 ],
-"valor_xi": 47739131.0,
+"valor_xi": 56285673.0,
 "perdida": 0.0,
-"perdida_duda": 0.20224167884413313
+"perdida_duda": 0.17153285170810698
 },
 "visita": {
 "faltan": [],
@@ -192,10 +101,19 @@
 },
 "401876937": {
 "fotmob": 1000014607,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Robson Bambu",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1401727.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "João Pedro",
 "tipo": "Lesión",
@@ -203,16 +121,7 @@
 "duda": false,
 "valor": 1178929.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Robson Bambu",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1401727.0,
-"titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Jesús Medina",
@@ -221,24 +130,15 @@
 "duda": true,
 "valor": 1252992.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 12990515.0,
-"perdida": 0.09075306098334053,
-"perdida_duda": 0.20435825677426953
+"valor_xi": 14113303.0,
+"perdida": 0.0,
+"perdida_duda": 0.0993195568748152
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Erik Dueñas",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 553831.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Jean Unjanque",
 "tipo": "Lesión",
@@ -249,23 +149,32 @@
 "importante": true
 },
 {
+"nombre": "Erik Dueñas",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 553831.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Álex Alcalá",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 537093.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 11391695.0,
-"perdida": 0.04861708463929205,
-"perdida_duda": 0.13219314597169254
+"valor_xi": 12524050.0,
+"perdida": 0.0,
+"perdida_duda": 0.07735604696563811
 }
 },
 "401876936": {
 "fotmob": 1000014608,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -329,7 +238,7 @@
 },
 "401876935": {
 "fotmob": 1000014609,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -339,6 +248,15 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 2734391.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Marcelo Flores",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 2379055.0,
 "titular": false,
 "importante": true
 },
@@ -359,15 +277,6 @@
 "valor": 6146490.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Marcelo Flores",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 2379055.0,
-"titular": false,
-"importante": false
 },
 {
 "nombre": "Francisco Reyes",
@@ -397,9 +306,9 @@
 "importante": false
 }
 ],
-"valor_xi": 31600003.0,
-"perdida": 0.08653135254449185,
-"perdida_duda": 0.43378315502058656
+"valor_xi": 29782256.0,
+"perdida": 0.17169438070776102,
+"perdida_duda": 0.4602589206136701
 },
 "visita": {
 "faltan": [
@@ -422,14 +331,14 @@
 "importante": false
 }
 ],
-"valor_xi": 19605068.0,
+"valor_xi": 23504316.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401876932": {
 "fotmob": 1000014612,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -459,15 +368,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Cristián Borja",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 981999.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Alan Cervantes",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -493,16 +393,25 @@
 "valor": 1058656.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Cristián Borja",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 981999.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 62728108.0,
+"valor_xi": 73948106.0,
 "perdida": 0.0,
-"perdida_duda": 0.015654848062689856
+"perdida_duda": 0.0
 }
 },
 "401876933": {
 "fotmob": 1000014611,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -566,7 +475,7 @@
 },
 "401876931": {
 "fotmob": 1000014613,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -589,8 +498,8 @@
 "importante": false
 }
 ],
-"valor_xi": 43353674.0,
-"perdida": 0.18311091696634524,
+"valor_xi": 45817357.0,
+"perdida": 0.17326470839424457,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -603,25 +512,16 @@
 "valor": 13614594.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Unai Bilbao",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 702098.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 18056581.0,
+"valor_xi": 19198026.0,
 "perdida": 0.0,
-"perdida_duda": 0.7539962299618073
+"perdida_duda": 0.7091663486652221
 }
 },
 "401876930": {
 "fotmob": 1000014614,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -694,7 +594,7 @@
 },
 "401876929": {
 "fotmob": 1000014615,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -717,8 +617,8 @@
 "importante": true
 }
 ],
-"valor_xi": 18157380.0,
-"perdida": 0.2215250768558019,
+"valor_xi": 15248801.0,
+"perdida": 0.2637790997469244,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -744,7 +644,7 @@
 {
 "nombre": "José Macias",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 0.0,
 "titular": false,
@@ -758,7 +658,7 @@
 },
 "401876928": {
 "fotmob": 1000014616,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -812,7 +712,7 @@
 },
 "401876927": {
 "fotmob": 1000014617,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -867,7 +767,7 @@
 },
 "401876926": {
 "fotmob": 1000014618,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -922,7 +822,7 @@
 },
 "401876925": {
 "fotmob": 1000014619,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -977,7 +877,7 @@
 },
 "401876924": {
 "fotmob": 1000014620,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -1002,7 +902,7 @@
 {
 "nombre": "José Macias",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 0.0,
 "titular": false,

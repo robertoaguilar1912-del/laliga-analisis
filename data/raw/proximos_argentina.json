@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    220,
-    260
+    120,
+    215,
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -170
+    135,
+    -180
    ],
    "spread": [
     [
      "-0.5",
-     105
+     115
     ],
     [
      "+0.5",
-     -150
+     -155
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    195,
-    260
+    110,
+    210,
+    290
    ],
-   "ou_linea": 1.5,
+   "ou_linea": 2.5,
    "ou": [
-    -185,
-    140
+    135,
+    -180
    ],
    "spread": [
     [
      "-0.5",
-     115
+     100
     ],
     [
      "+0.5",
-     -160
+     -140
     ]
    ]
   }
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
     185,
-    175
+    185,
+    180
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -89,11 +89,11 @@
    "spread": [
     [
      "+0.5",
-     -230
+     -235
     ],
     [
      "-0.5",
-     160
+     165
     ]
    ]
   }
@@ -110,9 +110,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    240,
-    210,
-    125
+    250,
+    215,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+0.5",
-     -160
+     -155
     ],
     [
      "-0.5",
-     115
+     110
     ]
    ]
   }
@@ -239,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    190,
+    185
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    140,
+    -210
+   ],
+   "spread": [
+    [
+     "-0.5",
+     145
+    ],
+    [
+     "+0.5",
+     -225
+    ]
+   ]
+  }
  },
  {
   "id": "401841638",
@@ -272,7 +294,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    195,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -175
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401841631",
@@ -283,7 +327,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    225,
+    245
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -150
+    ]
+   ]
+  }
  },
  {
   "id": "401841632",

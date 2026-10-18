@@ -1,15 +1,15 @@
 {
 "401912520": {
 "fotmob": 1000020616,
-"visto": "2026-10-18T04:14+00:00",
+"visto": "2026-10-18T06:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
 "nombre": "Vitor Roque",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "una semana",
+"duda": false,
 "valor": 42103346.0,
 "titular": false,
 "importante": true
@@ -24,9 +24,9 @@
 "importante": false
 }
 ],
-"valor_xi": 116052775.0,
-"perdida": 0.0,
-"perdida_duda": 0.36279482330344964
+"valor_xi": 113736824.0,
+"perdida": 0.37018218479531306,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -83,49 +83,58 @@
 },
 "401912521": {
 "fotmob": 1000020614,
-"visto": "2026-10-18T04:14+00:00",
-"xi": "standard",
+"visto": "2026-10-18T06:29+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Danilo",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Giorgian De Arrascaeta",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 13851966.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Ayrton Lucas",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Evertton Araújo",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 11693242.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Saúl",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1101405.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Ayrton Lucas",
+"tipo": "Lesión",
+"regreso": "mediados de octubre",
+"duda": false,
+"valor": 2613860.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Danilo",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1434786.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 107557790.0,
+"perdida": 0.24774228812250604,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -135,16 +144,16 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 1828578.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jalil Elías",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 970273.0,
 "titular": false,
 "importante": false
 },
@@ -153,13 +162,13 @@
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 946467.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 17809411.0,
+"perdida": 0.10267481614074715,
 "perdida_duda": 0.0
 }
 }
