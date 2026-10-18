@@ -5,7 +5,7 @@
   "estadio": "Estadi Montilivi",
   "local_espn": "Girona",
   "visita_espn": "FC Andorra",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio José Zorrilla",
   "local_espn": "Real Valladolid",
   "visita_espn": "Eldense",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    185,
-    190
+    180,
+    190,
+    180
    ],
    "ou_linea": 1.5,
    "ou": [
-    -190,
-    140
+    -195,
+    145
    ],
    "spread": [
     [
      "-0.5",
-     155
+     165
     ],
     [
      "+0.5",
-     -225
+     -235
     ]
    ]
   }
