@@ -5,7 +5,7 @@
   "estadio": "Estadio Alfonso Murube",
   "local_espn": "Ceuta",
   "visita_espn": "Real Oviedo",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    240,
-    300
+    -115,
+    250,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -120
     ],
     [
      "+0.5",
-     -120
+     -115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Granada": [
+    [
+     "185100",
+     "Alberto Flores",
+     "G"
+    ],
+    [
+     "412251",
+     "Juanjo",
+     "CD-L"
+    ],
+    [
+     "312144",
+     "Manu Lama",
+     "CD-R"
+    ],
+    [
+     "313347",
+     "Baila Diallo",
+     "LB"
+    ],
+    [
+     "173611",
+     "Sergio López",
+     "RB"
+    ],
+    [
+     "214317",
+     "Rubén Alcaraz",
+     "CM"
+    ],
+    [
+     "330246",
+     "Pedro Alemañ",
+     "LM"
+    ],
+    [
+     "186181",
+     "Gerard Gumbau",
+     "RM"
+    ],
+    [
+     "343634",
+     "Jorge Pascual Medina",
+     "F"
+    ],
+    [
+     "229522",
+     "José Arnaiz",
+     "LF"
+    ],
+    [
+     "384447",
+     "Sergio Rodelas",
+     "RF"
+    ]
+   ],
+   "Cádiz": [
+    [
+     "195604",
+     "David Gil",
+     "G"
+    ],
+    [
+     "409477",
+     "Manuel Fernández",
+     "CD-L"
+    ],
+    [
+     "128374",
+     "Javier Castro",
+     "CD-R"
+    ],
+    [
+     "399240",
+     "Sergio Arribas",
+     "LB"
+    ],
+    [
+     "374633",
+     "Beñat De Jesús",
+     "RB"
+    ],
+    [
+     "291262",
+     "Marc-Oliver Doué",
+     "AM"
+    ],
+    [
+     "291401",
+     "Aimen Moueffek",
+     "LM"
+    ],
+    [
+     "387838",
+     "Dilan Zárate",
+     "RM"
+    ],
+    [
+     "394420",
+     "Vladyslav Kopotun",
+     "F"
+    ],
+    [
+     "375875",
+     "Antonio Cordero",
+     "AM-L"
+    ],
+    [
+     "411758",
+     "Ibon Sánchez",
+     "AM-R"
     ]
    ]
   }

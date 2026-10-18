@@ -1,154 +1,5 @@
 [
  {
-  "id": "401882840",
-  "utc": "2026-10-18T12:00Z",
-  "estadio": "El Sadar",
-  "local_espn": "Osasuna",
-  "visita_espn": "Racing Santander",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "2026-27-laliga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    100,
-    265,
-    270
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -150,
-    120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -110
-    ],
-    [
-     "+0.5",
-     -125
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Osasuna": [
-    [
-     "144759",
-     "Aitor Fernández",
-     "G"
-    ],
-    [
-     "264175",
-     "Alejandro Catena",
-     "CD-L"
-    ],
-    [
-     "307905",
-     "Enzo Boyomo",
-     "CD-R"
-    ],
-    [
-     "300284",
-     "Abel Bretones",
-     "LB"
-    ],
-    [
-     "238252",
-     "Valentin Rosier",
-     "RB"
-    ],
-    [
-     "359154",
-     "Iker Muñoz",
-     "CM"
-    ],
-    [
-     "169089",
-     "Moi Gómez",
-     "LM"
-    ],
-    [
-     "286176",
-     "Jon Moncayola",
-     "RM"
-    ],
-    [
-     "207288",
-     "Ante Budimir",
-     "F"
-    ],
-    [
-     "311969",
-     "Jonathan Dubasin",
-     "LF"
-    ],
-    [
-     "178328",
-     "Rubén García",
-     "RF"
-    ]
-   ],
-   "Racing Santander": [
-    [
-     "323970",
-     "Julen Agirrezabala",
-     "G"
-    ],
-    [
-     "333927",
-     "Jeanuël Belocian",
-     "CD-L"
-    ],
-    [
-     "282672",
-     "Pablo Ramon",
-     "CD-R"
-    ],
-    [
-     "178237",
-     "Jorge Salinas",
-     "LB"
-    ],
-    [
-     "300471",
-     "Alvaro Mantilla",
-     "RB"
-    ],
-    [
-     "330545",
-     "Iván Martín",
-     "AM"
-    ],
-    [
-     "286604",
-     "André Almeida",
-     "LM"
-    ],
-    [
-     "107960",
-     "Matteo Prati",
-     "RM"
-    ],
-    [
-     "390389",
-     "Yassir Zabiri",
-     "F"
-    ],
-    [
-     "284699",
-     "Iñigo Vicente",
-     "AM-L"
-    ],
-    [
-     "125383",
-     "Sergio Canales",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401882845",
   "utc": "2026-10-18T14:15Z",
   "estadio": "Balaidos",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    125,
     210,
-    245
+    260
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 1.5,
    "ou": [
-    150,
-    -185
+    -190,
+    155
    ],
    "spread": [
     [
      "-0.5",
-     120
+     110
     ],
     [
      "+0.5",
-     -170
+     -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Celta Vigo": [
+    [
+     "144720",
+     "Andrei Radu",
+     "G"
+    ],
+    [
+     "376147",
+     "Javi Rodríguez",
+     "D"
+    ],
+    [
+     "384643",
+     "Yoel Lago",
+     "D"
+    ],
+    [
+     "285756",
+     "Sebastián Cáceres",
+     "D"
+    ],
+    [
+     "297829",
+     "Ilaix Moriba",
+     "M"
+    ],
+    [
+     "298343",
+     "Sergio Carreira",
+     "M"
+    ],
+    [
+     "188391",
+     "Hugo Álvarez",
+     "M"
+    ],
+    [
+     "414293",
+     "Hugo Burcio",
+     "M"
+    ],
+    [
+     "322652",
+     "Williot Swedberg",
+     "F"
+    ],
+    [
+     "279904",
+     "Ferran Jutglà",
+     "F"
+    ],
+    [
+     "304592",
+     "Couhaib Driouech",
+     "F"
+    ]
+   ],
+   "Alavés": [
+    [
+     "200910",
+     "Antonio Sivera",
+     "G"
+    ],
+    [
+     "318084",
+     "Nicolás Valentini",
+     "D"
+    ],
+    [
+     "262491",
+     "Nahuel Tenaglia",
+     "D"
+    ],
+    [
+     "149306",
+     "Ville Koski",
+     "D"
+    ],
+    [
+     "176312",
+     "Jonny",
+     "D"
+    ],
+    [
+     "345991",
+     "Abde Rebbach",
+     "D"
+    ],
+    [
+     "265997",
+     "Antonio Blanco",
+     "M"
+    ],
+    [
+     "106326",
+     "Pablo Ibáñez",
+     "M"
+    ],
+    [
+     "233802",
+     "Carles Aleñá",
+     "M"
+    ],
+    [
+     "181757",
+     "Toni Martínez",
+     "F"
+    ],
+    [
+     "207236",
+     "Lucas Boyé",
+     "F"
     ]
    ]
   }
@@ -200,7 +167,7 @@
    "ou_linea": 2.5,
    "ou": [
     -160,
-    125
+    130
    ],
    "spread": [
     [
