@@ -5,7 +5,7 @@
   "estadio": "Estadi Montilivi",
   "local_espn": "Girona",
   "visita_espn": "FC Andorra",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio José Zorrilla",
   "local_espn": "Real Valladolid",
   "visita_espn": "Eldense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -167,7 +167,7 @@
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -125
+    -130
    ],
    "spread": [
     [
@@ -315,8 +315,8 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -180,
-    135
+    -190,
+    140
    ],
    "spread": [
     [
@@ -350,7 +350,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    125,
+    205,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
  },
  {
   "id": "401883128",
@@ -515,7 +537,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    115,
+    250,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "401883130",
@@ -526,7 +570,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    235,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401883129",
