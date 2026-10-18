@@ -5,7 +5,7 @@
   "estadio": "San Siro",
   "local_espn": "AC Milan",
   "visita_espn": "Atalanta",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -18,7 +18,7 @@
    "ou_linea": 2.5,
    "ou": [
     -170,
-    130
+    135
    ],
    "spread": [
     [
@@ -457,23 +457,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
+    -150,
     300,
-    330
+    320
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
+    110,
     -145
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -160
     ],
     [
      "+0.5",
-     115
+     110
     ]
    ]
   }
@@ -556,9 +556,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    320,
-    255,
-    -135
+    350,
+    265,
+    -145
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -568,11 +568,11 @@
    "spread": [
     [
      "+0.5",
-     100
+     105
     ],
     [
      "-0.5",
-     -145
+     -155
     ]
    ]
   }
