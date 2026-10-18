@@ -5,7 +5,7 @@
   "estadio": "Estadio León",
   "local_espn": "León",
   "visita_espn": "América",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -149,155 +149,6 @@
   }
  },
  {
-  "id": "401876940",
-  "utc": "2026-10-18T01:00Z",
-  "estadio": "Estadio Nemesio Díez Riega",
-  "local_espn": "Toluca",
-  "visita_espn": "Atlético de San Luis",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -350,
-    500,
-    800
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    -105,
-    -125
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -135
-    ],
-    [
-     "+1.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Toluca": [
-    [
-     "163150",
-     "Hugo González",
-     "G"
-    ],
-    [
-     "288735",
-     "Federico Pereira",
-     "CD-L"
-    ],
-    [
-     "338878",
-     "Everardo López",
-     "CD-R"
-    ],
-    [
-     "132098",
-     "Jesús Gallardo",
-     "LB"
-    ],
-    [
-     "297057",
-     "Santiago Simón",
-     "RB"
-    ],
-    [
-     "295847",
-     "Federico Viñas",
-     "AM"
-    ],
-    [
-     "194311",
-     "Érick Gutiérrez",
-     "LM"
-    ],
-    [
-     "128422",
-     "Franco Romero",
-     "RM"
-    ],
-    [
-     "189480",
-     "Paulinho",
-     "F"
-    ],
-    [
-     "229487",
-     "Alexis Vega",
-     "AM-L"
-    ],
-    [
-     "266679",
-     "Helinho",
-     "AM-R"
-    ]
-   ],
-   "Atlético de San Luis": [
-    [
-     "187496",
-     "Gibrán Lajud",
-     "G"
-    ],
-    [
-     "346233",
-     "Eduardo Águila",
-     "CD"
-    ],
-    [
-     "263221",
-     "Aldo Cruz",
-     "CD-L"
-    ],
-    [
-     "269746",
-     "Robson Bambu",
-     "CD-R"
-    ],
-    [
-     "232323",
-     "Sébastien Salles-Lamonge",
-     "CM-L"
-    ],
-    [
-     "259819",
-     "Oscar Macías",
-     "CM-R"
-    ],
-    [
-     "245842",
-     "Roberto Meraz",
-     "LM"
-    ],
-    [
-     "358389",
-     "Román Torres",
-     "RM"
-    ],
-    [
-     "359828",
-     "Anderson Duarte",
-     "F"
-    ],
-    [
-     "311997",
-     "Rafa Llorente",
-     "CF-L"
-    ],
-    [
-     "26703",
-     "David Rodriguez",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401876939",
   "utc": "2026-10-18T03:10Z",
   "estadio": "Estadio Banorte",
@@ -315,8 +166,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -160
+    125,
+    -165
    ],
    "spread": [
     [
@@ -326,6 +177,122 @@
     [
      "+1.5",
      -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cruz Azul": [
+    [
+     "224752",
+     "Andrés Gudiño",
+     "G"
+    ],
+    [
+     "291186",
+     "Amaury García",
+     "CD"
+    ],
+    [
+     "192166",
+     "Gonzalo Piovi",
+     "CD-L"
+    ],
+    [
+     "304424",
+     "Alán Montes",
+     "CD-R"
+    ],
+    [
+     "136124",
+     "Omar Campos",
+     "LB"
+    ],
+    [
+     "215785",
+     "Alan Mozo",
+     "RB"
+    ],
+    [
+     "276942",
+     "Érik Lira",
+     "CM"
+    ],
+    [
+     "239990",
+     "Carlos Rodríguez",
+     "CM-L"
+    ],
+    [
+     "219001",
+     "Agustín Palavecino",
+     "CM-R"
+    ],
+    [
+     "336641",
+     "Andres Montaño",
+     "CF-L"
+    ],
+    [
+     "207549",
+     "Nicolás Ibáñez",
+     "CF-R"
+    ]
+   ],
+   "FC Juárez": [
+    [
+     "239573",
+     "Sebastián Jurado",
+     "G"
+    ],
+    [
+     "335212",
+     "Daniel Piña",
+     "CD-L"
+    ],
+    [
+     "70681",
+     "Luis Carmona",
+     "CD-R"
+    ],
+    [
+     "259983",
+     "Eder López",
+     "LB"
+    ],
+    [
+     "269521",
+     "Francisco Nevarez",
+     "RB"
+    ],
+    [
+     "323031",
+     "Ricardinho",
+     "AM"
+    ],
+    [
+     "358342",
+     "Leonardo Silva",
+     "LM"
+    ],
+    [
+     "337308",
+     "Denzell García",
+     "RM"
+    ],
+    [
+     "219158",
+     "Óscar Estupiñán",
+     "F"
+    ],
+    [
+     "238763",
+     "José Luis Rodríguez",
+     "AM-L"
+    ],
+    [
+     "283650",
+     "Gilberto Sepúlveda",
+     "AM-R"
     ]
    ]
   }
