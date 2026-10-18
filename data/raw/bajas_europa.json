@@ -1,7 +1,7 @@
 {
 "401915548": {
 "fotmob": 6112382,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -46,7 +46,7 @@
 },
 "401915556": {
 "fotmob": 6112293,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -91,7 +91,7 @@
 },
 "401915558": {
 "fotmob": 6112281,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -118,7 +118,7 @@
 },
 "401915547": {
 "fotmob": 6112251,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -190,7 +190,7 @@
 },
 "401915546": {
 "fotmob": 6112320,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -299,10 +299,19 @@
 },
 "401915559": {
 "fotmob": 6112370,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Taxiarchis Fountas",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1006594.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Christos Sielis",
 "tipo": "Lesión",
@@ -332,7 +341,7 @@
 }
 ],
 "valor_xi": 5397622.0,
-"perdida": 0.10047628381535424,
+"perdida": 0.28696470408635505,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -399,7 +408,7 @@
 },
 "401915557": {
 "fotmob": 6112314,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -490,7 +499,7 @@
 },
 "401915545": {
 "fotmob": 6112289,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -590,7 +599,7 @@
 },
 "401915552": {
 "fotmob": 6112326,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -654,6 +663,15 @@
 "valor": 17101823.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Filippo Terracciano",
+"tipo": "Sanción",
+"regreso": "hasta el 22 de octubre",
+"duda": false,
+"valor": 6592985.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 216576116.0,
@@ -663,7 +681,7 @@
 },
 "401915553": {
 "fotmob": 6112356,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -754,7 +772,7 @@
 },
 "401915555": {
 "fotmob": 6112300,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -845,7 +863,7 @@
 },
 "401915542": {
 "fotmob": 6112339,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -909,7 +927,7 @@
 },
 "401915540": {
 "fotmob": 6112374,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -982,7 +1000,7 @@
 },
 "401915541": {
 "fotmob": 6112335,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1002,6 +1020,15 @@
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Karim Konaté",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 13379613.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Nikolas Veratschnig",
 "tipo": "Lesión",
@@ -1028,25 +1055,16 @@
 "valor": 485149.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Johannes Moser",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 1610505.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 35994453.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.37171319147425297
 }
 },
 "401915554": {
 "fotmob": 6112267,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1087,8 +1105,8 @@
 {
 "nombre": "Matěj Ryneš",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de octubre",
+"duda": false,
 "valor": 2227455.0,
 "titular": false,
 "importante": true
@@ -1110,16 +1128,25 @@
 "valor": 672610.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Loïc Mbe Soh",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1203009.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 23455449.0,
-"perdida": 0.10743746581018339,
-"perdida_duda": 0.09496535325331014
+"perdida": 0.20240281906349353,
+"perdida_duda": 0.0
 }
 },
 "401915544": {
 "fotmob": 6112342,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1183,7 +1210,7 @@
 },
 "401915543": {
 "fotmob": 6112350,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1247,7 +1274,7 @@
 },
 "401915539": {
 "fotmob": 6112285,
-"visto": "2026-10-18T06:29+00:00",
+"visto": "2026-10-18T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
