@@ -488,7 +488,7 @@
     })();
   })();
 
-  $('#foot-data').textContent = `Datos: nflverse (todos los juegos desde 1999 con líneas de cierre), ESPN (juegos próximos, momios de DraftKings, reporte de lesiones), y momios de Pinnacle y otras casas (The Odds API, para comparar con tu momio). Se actualiza sola todos los días y después de cada juego. Modelo de puntos con números clave; ventaja de local estimada en ${I.hfa} puntos.`;
+  $('#foot-data').textContent = `Datos: nflverse (todos los juegos desde 1999 con líneas de cierre), ESPN (juegos próximos, momios de DraftKings, reporte de lesiones), y momios de Pinnacle y otras casas (The Odds API, para comparar con tu momio). Se actualiza sola todos los días y después de cada juego. Modelo de puntos con números clave que aprende de los puntos de cada juego y de sus líneas de cierre (desde el 17 oct 2026); ventaja de local estimada en ${I.hfa} puntos.`;
 
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);

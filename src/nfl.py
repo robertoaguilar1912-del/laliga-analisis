@@ -27,10 +27,14 @@ from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahor
 from picks import un_pick_por_familia
 import oddsapi
 
-HALF_LIFE = 180      # días; elegidos con 2012-2017 (ver prueba_nfl.py)
-RIDGE = 5.0
-SIGMA_M = 13.42      # desviación de la diferencia de puntos alrededor de lo esperado
-SIGMA_T = 13.69      # desviación del total de puntos
+HALF_LIFE = 120      # días; elegidos con 2012-2017 (ver prueba_nfl.py), ya con el peso del mercado de abajo
+RIDGE = 2.0
+# Lo que esperaba el mercado de cada juego ya jugado (spread y total de cierre de nflverse) pesa 30% en la diferencia y 50%
+# en el total, junto a los puntos reales. Elegido con 2012-2017 y probado en 2018-2026 (17 oct 2026, con la vida media y el
+# freno vueltos a elegir): error de la diferencia 13.15 -> 13.09 y del total 13.63 -> 13.54 (el cierre: 12.74 y 13.18).
+PESO_MERCADO_DIF, PESO_MERCADO_TOTAL = 0.3, 0.5
+SIGMA_M = 13.37      # desviación de la diferencia de puntos alrededor de lo esperado
+SIGMA_T = 13.63      # desviación del total de puntos
 VENTANA_DIAS = 4 * 365
 PICK_EV = 0.05
 ESPN_NFL = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl'
@@ -91,8 +95,9 @@ def pesos_clave(g):
 
 
 class ModeloNFL:
-    def __init__(self, half_life=HALF_LIFE, ridge=RIDGE, sigma_m=SIGMA_M, sigma_t=SIGMA_T):
+    def __init__(self, half_life=HALF_LIFE, ridge=RIDGE, sigma_m=SIGMA_M, sigma_t=SIGMA_T, peso_mercado=(PESO_MERCADO_DIF, PESO_MERCADO_TOTAL)):
         self.half_life, self.ridge, self.sigma_m, self.sigma_t = half_life, ridge, sigma_m, sigma_t
+        self.peso_mercado = peso_mercado
 
     def fit(self, g, ref, clave=None):
         g = g[g.home_score.notna() & (g.fecha < ref)]
@@ -106,7 +111,16 @@ class ModeloNFL:
         X[r, 1] = (~g.neutral.values).astype(float)
         X[r, 2 + h] = 1; X[r, 2 + n + a] = 1
         X[m + r, 2 + a] = 1; X[m + r, 2 + n + h] = 1
-        y = np.r_[g.home_score.values, g.away_score.values].astype(float)
+        hs, as_ = g.home_score.values.astype(float), g.away_score.values.astype(float)
+        w1, w2 = self.peso_mercado or (0.0, 0.0)
+        if (w1 or w2) and 'spread_line' in g and 'total_line' in g:
+            # diferencia y total: mezcla de lo que pasó y de lo que esperaba el cierre (spread_line: a favor del local)
+            sl, tl = g.spread_line.values.astype(float), g.total_line.values.astype(float)
+            hay = np.isfinite(sl) & np.isfinite(tl)
+            mg = np.where(hay, (1 - w1) * (hs - as_) + w1 * np.nan_to_num(sl), hs - as_)
+            tt = np.where(hay, (1 - w2) * (hs + as_) + w2 * np.nan_to_num(tl), hs + as_)
+            hs, as_ = (tt + mg) / 2, (tt - mg) / 2
+        y = np.r_[hs, as_]
         w = np.exp(-np.log(2) * (ref - g.fecha).dt.days.values / self.half_life)
         w = np.r_[w, w]
         A = X.T @ (X * w[:, None]) + np.diag([1e-6, 1e-6] + [self.ridge] * (2 * n))
