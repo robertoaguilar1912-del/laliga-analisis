@@ -1,4 +1,4 @@
-$ python explorar/apisports.py
+$ python explorar/oddsapi.py
 [exit 0]
-{"futbol_status": {"http": 200, "plan": "Free", "activa": true, "requests": {"current": 0, "limit_day": 100}, "errores": []}, "basquet_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "nba_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "nfl_status": {"http": 200, "plan": "Free", "requests": {"current": 0, "limit_day": 100}, "errores": []}, "llamadas": 29}
+{"hay_clave": true, "sports_http": 200, "creditos": {"x-requests-remaining": "500", "x-requests-used": "0", "x-requests-last": "0"}, "nfl_http": 200, "creditos_despues": {"x-requests-remaining": "497", "x-requests-used": "3", "x-requests-last": "3"}, "nfl_eventos": 24, "nfl_con_pinnacle": 13}
 
