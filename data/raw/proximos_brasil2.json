@@ -5,7 +5,7 @@
   "estadio": "Estádio da Ressacada",
   "local_espn": "Avaí",
   "visita_espn": "Athletic",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio Rei Pelé",
   "local_espn": "CRB",
   "visita_espn": "Botafogo-SP",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Estádio Primeiro de Maio",
   "local_espn": "São Bernardo",
   "visita_espn": "Criciúma",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -465,7 +465,7 @@
    "ou_linea": 2.5,
    "ou": [
     135,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -475,6 +475,122 @@
     [
      "-0.5",
      150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vila Nova": [
+    [
+     "186507",
+     "Helton Leite",
+     "G"
+    ],
+    [
+     "3102189",
+     "Breno Augusto De Azevedo Bora",
+     "D"
+    ],
+    [
+     "204133",
+     "Douglas Mendes",
+     "D"
+    ],
+    [
+     "224674",
+     "Hayner",
+     "D"
+    ],
+    [
+     "396038",
+     "Higor Luiz De Souza",
+     "D"
+    ],
+    [
+     "249846",
+     "Janderson",
+     "M"
+    ],
+    [
+     "285000",
+     "Higor Matheus Meritão",
+     "M"
+    ],
+    [
+     "135274",
+     "Willian Maranhão",
+     "M"
+    ],
+    [
+     "214192",
+     "Everton",
+     "M"
+    ],
+    [
+     "131532",
+     "Marquinhos Gabriel",
+     "M"
+    ],
+    [
+     "222200",
+     "André Luis",
+     "F"
+    ]
+   ],
+   "Novorizontino": [
+    [
+     "200677",
+     "Jordi",
+     "G"
+    ],
+    [
+     "169883",
+     "Eduardo Brock",
+     "D"
+    ],
+    [
+     "169078",
+     "Mádson",
+     "D"
+    ],
+    [
+     "357170",
+     "Carlinhos",
+     "D"
+    ],
+    [
+     "198942",
+     "Sander",
+     "D"
+    ],
+    [
+     "3093312",
+     "Francisco Reidiney Duarte Gomes",
+     "M"
+    ],
+    [
+     "212417",
+     "Nicolas Careca",
+     "M"
+    ],
+    [
+     "314545",
+     "Rômulo Simão",
+     "M"
+    ],
+    [
+     "287791",
+     "Matheus Bianqui",
+     "M"
+    ],
+    [
+     "269642",
+     "Luis",
+     "M"
+    ],
+    [
+     "145369",
+     "Robson",
+     "F"
     ]
    ]
   }
