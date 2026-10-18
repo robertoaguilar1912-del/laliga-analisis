@@ -5,7 +5,7 @@
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "Inter Miami CF",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Gillette Stadium",
   "local_espn": "New England Revolution",
   "visita_espn": "Chicago Fire FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "LAFC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Inter&Co Stadium",
   "local_espn": "Orlando City SC",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Sports Illustrated Stadium",
   "local_espn": "Red Bull New York",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -750,10 +750,32 @@
   "estadio": "Q2 Stadium",
   "local_espn": "Austin FC",
   "visita_espn": "Vancouver Whitecaps",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    425,
+    350,
+    -200
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    110,
+    -140
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -175
+    ],
+    [
+     "-1.5",
+     125
+    ]
+   ]
+  },
   "alineaciones": {
    "Austin FC": [
     [
@@ -877,10 +899,32 @@
   "estadio": "Shell Energy Stadium",
   "local_espn": "Houston Dynamo FC",
   "visita_espn": "FC Dallas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    250,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  },
   "alineaciones": {
    "Houston Dynamo FC": [
     [
@@ -1004,10 +1048,32 @@
   "estadio": "Sporting Park",
   "local_espn": "Sporting Kansas City",
   "visita_espn": "Real Salt Lake",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    185,
+    275,
+    115
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -155
+    ],
+    [
+     "-0.5",
+     110
+    ]
+   ]
+  },
   "alineaciones": {
    "Sporting Kansas City": [
     [

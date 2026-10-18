@@ -1,168 +1,19 @@
 [
  {
-  "id": "401878048",
-  "utc": "2026-10-17T23:00Z",
-  "estadio": "Estadio Nemesio Camacho El Campín",
-  "local_espn": "Millonarios",
-  "visita_espn": "Jaguares de Córdoba",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -700,
-    600,
-    1300
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    110,
-    -145
-   ],
-   "spread": [
-    [
-     "-2.5",
-     115
-    ],
-    [
-     "+2.5",
-     -160
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Millonarios": [
-    [
-     "157853",
-     "Javier Burrai",
-     "G"
-    ],
-    [
-     "197538",
-     "Sergio Mosquera",
-     "CD-L"
-    ],
-    [
-     "172073",
-     "Jaine Barreiro",
-     "CD-R"
-    ],
-    [
-     "250444",
-     "Sebastián Valencia",
-     "LB"
-    ],
-    [
-     "408743",
-     "Samuel Martín",
-     "RB"
-    ],
-    [
-     "106650",
-     "David Silva",
-     "CM-L"
-    ],
-    [
-     "208703",
-     "Stiven Vega",
-     "CM-R"
-    ],
-    [
-     "312620",
-     "Daniel Ruíz",
-     "LM"
-    ],
-    [
-     "118986",
-     "Juan Cuadrado",
-     "RM"
-    ],
-    [
-     "277093",
-     "Andrey Estupiñán",
-     "CF-L"
-    ],
-    [
-     "121216",
-     "Leonardo Castro",
-     "CF-R"
-    ]
-   ],
-   "Jaguares de Córdoba": [
-    [
-     "336061",
-     "Franklin Mosquera",
-     "G"
-    ],
-    [
-     "139453",
-     "Carlos Henao",
-     "CD-L"
-    ],
-    [
-     "416625",
-     "Jonathan Lovera",
-     "CD-R"
-    ],
-    [
-     "198995",
-     "Luis Jiménez",
-     "LB"
-    ],
-    [
-     "120800",
-     "Juan Franco",
-     "RB"
-    ],
-    [
-     "195767",
-     "Cristian Alvarez",
-     "AM"
-    ],
-    [
-     "273390",
-     "Rafael Bustamante",
-     "LM"
-    ],
-    [
-     "285052",
-     "Royscer Colpa",
-     "RM"
-    ],
-    [
-     "181489",
-     "Andrés Rentería",
-     "F"
-    ],
-    [
-     "285204",
-     "Johar Mejía",
-     "AM-L"
-    ],
-    [
-     "201320",
-     "Wilfrido De La Rosa",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401878030",
   "utc": "2026-10-18T01:10Z",
   "estadio": "Atanasio Girardot",
   "local_espn": "Independiente Medellín",
   "visita_espn": "Once Caldas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
+    105,
     235,
-    265
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -110
+     100
     ],
     [
      "+0.5",
-     -125
+     -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Independiente Medellín": [
+    [
+     "155033",
+     "Salvador Ichazo",
+     "G"
+    ],
+    [
+     "224205",
+     "Joaquín Varela",
+     "CD-L"
+    ],
+    [
+     "383101",
+     "Luis Escorcia",
+     "CD-R"
+    ],
+    [
+     "149496",
+     "Frank Fabra",
+     "LB"
+    ],
+    [
+     "272240",
+     "Hayen Palacios",
+     "RB"
+    ],
+    [
+     "288697",
+     "Agustín Martegani",
+     "AM"
+    ],
+    [
+     "155160",
+     "Didier Moreno",
+     "LM"
+    ],
+    [
+     "403399",
+     "Halam Loboa",
+     "RM"
+    ],
+    [
+     "197533",
+     "Yony González",
+     "F"
+    ],
+    [
+     "365166",
+     "John Montaño",
+     "AM-L"
+    ],
+    [
+     "254236",
+     "Esneyder Mena",
+     "AM-R"
+    ]
+   ],
+   "Once Caldas": [
+    [
+     "302154",
+     "Joan Parra",
+     "G"
+    ],
+    [
+     "206188",
+     "Daniel Londoño",
+     "CD-L"
+    ],
+    [
+     "180635",
+     "Jorge Cardona",
+     "CD-R"
+    ],
+    [
+     "41652",
+     "Juan Pablo Nieto",
+     "DM"
+    ],
+    [
+     "199007",
+     "Juan Patiño",
+     "LB"
+    ],
+    [
+     "286864",
+     "Juan David Cuesta",
+     "RB"
+    ],
+    [
+     "322986",
+     "Jader Quiñónes",
+     "CM-L"
+    ],
+    [
+     "203357",
+     "Luis Gómez",
+     "CM-R"
+    ],
+    [
+     "266037",
+     "Andres Colorado",
+     "LM"
+    ],
+    [
+     "162716",
+     "Michael Barrios",
+     "RM"
+    ],
+    [
+     "387396",
+     "Jefry Zapata",
+     "F"
     ]
    ]
   }
