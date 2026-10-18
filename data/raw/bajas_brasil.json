@@ -1,8 +1,8 @@
 {
 "401841277": {
 "fotmob": 5103664,
-"visto": "2026-10-18T17:51+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-18T18:22+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -11,7 +11,7 @@
 "regreso": "una semana",
 "duda": false,
 "valor": 16805522.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -29,7 +29,7 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 5520833.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -60,8 +60,8 @@
 "importante": false
 }
 ],
-"valor_xi": 46085640.0,
-"perdida": 0.7093858520788688,
+"valor_xi": 43882310.0,
+"perdida": 0.7450041030201008,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -82,7 +82,16 @@
 "duda": false,
 "valor": 1994121.0,
 "titular": false,
-"importante": true
+"importante": false
+},
+{
+"nombre": "Gonzalo Escobar",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 971724.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Willian Arão",
@@ -90,17 +99,8 @@
 "regreso": "hasta el 18 de octubre",
 "duda": false,
 "valor": 559445.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Gonzalo Escobar",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 971724.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Vinicius Lira",
@@ -112,15 +112,15 @@
 "importante": false
 }
 ],
-"valor_xi": 35256772.0,
-"perdida": 0.4976266687148784,
-"perdida_duda": 0.02756134339241267
+"valor_xi": 35708873.0,
+"perdida": 0.41981565758180045,
+"perdida_duda": 0.0
 }
 },
 "401841276": {
 "fotmob": 5103670,
-"visto": "2026-10-18T17:51+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-18T18:22+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -130,15 +130,6 @@
 "duda": false,
 "valor": 11640700.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Wallace",
-"tipo": "Sanción",
-"regreso": "hasta el 18 de octubre",
-"duda": false,
-"valor": 480539.0,
-"titular": true,
 "importante": true
 },
 {
@@ -158,11 +149,20 @@
 "valor": 1004436.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Wallace",
+"tipo": "Sanción",
+"regreso": "hasta el 18 de octubre",
+"duda": false,
+"valor": 480539.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 20441381.0,
-"perdida": 0.5929755430907531,
-"perdida_duda": 0.09334922136620809
+"valor_xi": 24505326.0,
+"perdida": 0.4750273471162963,
+"perdida_duda": 0.07786825606808903
 },
 "visita": {
 "faltan": [
@@ -176,15 +176,6 @@
 "importante": true
 },
 {
-"nombre": "Felipe Morais",
-"tipo": "Sanción",
-"regreso": "hasta el 18 de octubre",
-"duda": false,
-"valor": 0.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Gabriel Pec",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
@@ -194,17 +185,17 @@
 "importante": false
 },
 {
-"nombre": "Lucas Daniel Romero",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
+"nombre": "Felipe Morais",
+"tipo": "Sanción",
+"regreso": "hasta el 18 de octubre",
 "duda": false,
-"valor": 1957814.0,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 97296696.0,
-"perdida": 0.11360362123704591,
+"valor_xi": 97773881.0,
+"perdida": 0.11304917925882475,
 "perdida_duda": 0.0
 }
 },
