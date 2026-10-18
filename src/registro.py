@@ -4,6 +4,10 @@ Registro de picks.
 - data/registro/modelo.json: cada PICK que marcó el modelo (EV de +5% o más contra el momio de la casa),
   guardado la primera vez que apareció, con la probabilidad, el momio y el EV de ese momento. Los REVISAR (PICK de un
   equipo con bajas importantes, desde el 13 oct 2026) llevan 'revisar' y la página no los cuenta como PICK.
+  Un solo PICK por partido en cada familia de mercados (ver picks.py): si antes de empezar el PICK cambia (otra línea u
+  otro lado), cuenta el último que marcó la página ('ultimo' = la última vez que se vio como PICK); los anteriores quedan
+  guardados con 'reemplazado' y la página no los suma (desde el 18 oct 2026; antes se sumaban todos y un solo resultado
+  pesaba varias veces).
 - data/registro/cierres.json: el último momio que se vio de cada mercado antes de empezar el partido
   (sirve para saber si el momio que tomaste fue mejor que el de cierre).
 - data/registro.json: lo anterior más los resultados de todos los partidos jugados y la lista de ligas,
@@ -17,6 +21,7 @@ import re
 from datetime import datetime
 
 from config import DATOS, ESPN_DIR, SECCIONES, ahora
+from picks import familia
 
 REG = DATOS / 'registro'
 
@@ -79,6 +84,30 @@ def ventajas(m, h, a):
     return [vl, vv]
 
 
+def _fam(k):
+    k = EQUIVALENTE.get(k, k)
+    f = familia(k)
+    return f if f in ('resultado', 'total') else k.split(':')[0]
+
+
+def marcar_reemplazados(picks):
+    """En cada partido y familia (los REVISAR aparte), cuenta solo el PICK que se vio por última vez; los demás llevan
+    'reemplazado' con el mercado que quedó."""
+    grupos = {}
+    for r in picks:
+        grupos.setdefault((r['id'], _fam(r['k']), bool(r.get('revisar'))), []).append(r)
+    n = 0
+    for rs in grupos.values():
+        activo = max(rs, key=lambda r: (r.get('ultimo') or r['visto'], r['visto'], r['p']))
+        for r in rs:
+            if r is activo:
+                r.pop('reemplazado', None)
+            else:
+                r['reemplazado'] = activo['mercado']
+                n += 1
+    return n
+
+
 def resultados():
     """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita,
     mayor ventaja del local, mayor ventaja de la visita]} de los partidos ya jugados (goles y ventajas a los 90 minutos)."""
@@ -131,19 +160,24 @@ def actualizar():
                     mejores[clave] = r
             for clave, r in mejores.items():
                 if (m['id'], clave) in ya:
+                    for x in picks:            # sigue siendo PICK: se anota la última vez que se vio
+                        if x['id'] == m['id'] and EQUIVALENTE.get(x['k'], x['k']) == clave:
+                            x['ultimo'] = t.isoformat(timespec='minutes')
                     continue
                 picks.append({'id': m['id'], 'liga': liga, 'utc': m['utc'], 'local': m['local_es'], 'visita': m['visita_es'],
                               'k': r['k'], 'mercado': r['mercado'], 'p': round(r['p'], 4), 'momio': r['momio'],
                               'ev': round(r['ev'], 4), 'casa': m.get('casa_momios') or '', 'visto': t.isoformat(timespec='minutes'),
+                              'ultimo': t.isoformat(timespec='minutes'),
                               **({'revisar': r.get('revisar') or 'bajas'} if r['veredicto'] == 'REVISAR' else {})})
                 ya.add((m['id'], clave))
                 nuevos += 1
+    reemplazados = marcar_reemplazados(picks)
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))
     json.dump(picks, open(REG / 'modelo.json', 'w'), ensure_ascii=False, indent=1)
     json.dump(cierres, open(REG / 'cierres.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     out = {'actualizado': t.isoformat(timespec='minutes'), 'ligas': ligas, 'modelo': picks, 'cierres': cierres, 'resultados': resultados()}
     json.dump(out, open(DATOS / 'registro.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-    print(f'  registro: {nuevos} picks nuevos del modelo, {len(picks)} en total')
+    print(f'  registro: {nuevos} picks nuevos del modelo, {len(picks)} en total ({reemplazados} reemplazados por otro del mismo partido)')
 
 
 if __name__ == '__main__':
