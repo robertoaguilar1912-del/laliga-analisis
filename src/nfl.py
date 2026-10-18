@@ -24,6 +24,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahora
+from picks import un_pick_por_familia
 
 HALF_LIFE = 180      # días; elegidos con 2012-2017 (ver prueba_nfl.py)
 RIDGE = 5.0
@@ -414,6 +415,7 @@ def analizar():
                 pc, ev = mercado(gana, push, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Total', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
                             'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc), 'empate': push})
+        un_pick_por_familia(con)            # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
         lin_m = round(-m * 2) / 2
         sin = [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH / (pH + pA), 'justo': fair(pH / (pH + pA))},
                {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA / (pH + pA), 'justo': fair(pA / (pH + pA))}]

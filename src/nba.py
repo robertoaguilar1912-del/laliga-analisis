@@ -31,6 +31,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
+from picks import un_pick_por_familia
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
 CORE_NBA = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba'
@@ -903,6 +904,7 @@ def analizar():
             o_, push, u_ = prob_linea(kt, pt, tt[0])
             fila(f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', 'Total', o_, push, u_, do, pmt[0])
             fila(f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', 'Total', u_, push, o_, du, pmt[1])
+        un_pick_por_familia(con)            # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
         t0 = int(round(t)) - 60
         h2h = g[((g.local == h) & (g.visita == a)) | ((g.local == a) & (g.visita == h))].sort_values('utc', ascending=False).head(6)
         partidos.append({

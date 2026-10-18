@@ -19,6 +19,7 @@ from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
 from mercado import implicitas
+from picks import un_pick_por_familia
 from corners import CornerModel, RematesModel
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
@@ -549,6 +550,8 @@ def analizar_liga(liga):
     pb = RAW / f'bajas_{liga}.json'
     bajas = json.load(open(pb)) if pb.exists() else {}
     aplicar_bajas(partidos, bajas, equipos)
+    for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
+        un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'
     backtest = json.load(open(bt)) if bt.exists() else None
     if backtest:
