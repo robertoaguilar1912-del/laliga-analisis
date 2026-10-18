@@ -65,12 +65,22 @@
 },
 "401877774": {
 "fotmob": 1000014187,
-"visto": "2026-10-18T20:19+00:00",
+"visto": "2026-10-18T20:55+00:00",
 "xi": "standard",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Ricardo Márquez",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 316875.0,
+"titular": false,
+"importante": true
+}
+],
 "valor_xi": 3393563.0,
-"perdida": 0.0,
+"perdida": 0.09337531084585729,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -101,11 +111,11 @@
 },
 "401878059": {
 "fotmob": 1000014191,
-"visto": "2026-10-18T20:19+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-18T20:55+00:00",
+"xi": "standard",
 "local": {
 "faltan": [],
-"valor_xi": 6709863.0,
+"valor_xi": 7285001.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -117,7 +127,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 1635148.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -127,15 +137,6 @@
 "duda": false,
 "valor": 923455.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Dany Rosero",
-"tipo": "Sanción",
-"regreso": "hasta el 18 de octubre",
-"duda": false,
-"valor": 260648.0,
-"titular": true,
 "importante": true
 },
 {
@@ -155,16 +156,25 @@
 "valor": 281664.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Dany Rosero",
+"tipo": "Sanción",
+"regreso": "hasta el 18 de octubre",
+"duda": false,
+"valor": 260648.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 10402428.0,
-"perdida": 0.2710185545143884,
+"valor_xi": 8157100.0,
+"perdida": 0.3136657635679347,
 "perdida_duda": 0.0
 }
 },
 "401877840": {
 "fotmob": 1000014192,
-"visto": "2026-10-18T20:19+00:00",
+"visto": "2026-10-18T20:55+00:00",
 "xi": "standard",
 "local": {
 "faltan": [

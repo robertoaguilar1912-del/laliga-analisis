@@ -1,103 +1,5 @@
 [
  {
-  "id": "401872999",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Mercedes-Benz Stadium",
-  "local_espn": "Atlanta Falcons",
-  "visita_espn": "Chicago Bears",
-  "local_abbr": "ATL",
-  "visita_abbr": "CHI",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872997",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Huntington Bank Field",
-  "local_espn": "Cleveland Browns",
-  "visita_espn": "Baltimore Ravens",
-  "local_abbr": "CLE",
-  "visita_abbr": "BAL",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873003",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Lucas Oil Stadium",
-  "local_espn": "Indianapolis Colts",
-  "visita_espn": "Tennessee Titans",
-  "local_abbr": "IND",
-  "visita_abbr": "TEN",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873001",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Gillette Stadium",
-  "local_espn": "New England Patriots",
-  "visita_espn": "New York Jets",
-  "local_abbr": "NE",
-  "visita_abbr": "NYJ",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873000",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "MetLife Stadium",
-  "local_espn": "New York Giants",
-  "visita_espn": "New Orleans Saints",
-  "local_abbr": "NYG",
-  "visita_abbr": "NO",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401872998",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Lincoln Financial Field",
-  "local_espn": "Philadelphia Eagles",
-  "visita_espn": "Carolina Panthers",
-  "local_abbr": "PHI",
-  "visita_abbr": "CAR",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873002",
-  "utc": "2026-10-18T17:00Z",
-  "estadio": "Raymond James Stadium",
-  "local_espn": "Tampa Bay Buccaneers",
-  "visita_espn": "Pittsburgh Steelers",
-  "local_abbr": "TB",
-  "visita_abbr": "PIT",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 6,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873004",
   "utc": "2026-10-18T20:05Z",
   "estadio": "SoFi Stadium",
@@ -106,33 +8,10 @@
   "local_abbr": "LAR",
   "visita_abbr": "ARI",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 6,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -700,
-    500
-   ],
-   "ml_abre": [
-    -700,
-    500
-   ],
-   "spread": [
-    -12.5,
-    -115,
-    12.5,
-    -105
-   ],
-   "spread_abre": -13.5,
-   "total": [
-    51.5,
-    -105,
-    -115
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401873006",
@@ -143,33 +22,10 @@
   "local_abbr": "KC",
   "visita_abbr": "LAC",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 6,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -455,
-    350
-   ],
-   "ml_abre": [
-    -135,
-    114
-   ],
-   "spread": [
-    -7.5,
-    -108,
-    7.5,
-    -112
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    41.5,
-    -112,
-    -108
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401873005",
@@ -180,33 +36,10 @@
   "local_abbr": "LV",
   "visita_abbr": "BUF",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 6,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    195,
-    -238
-   ],
-   "ml_abre": [
-    230,
-    -285
-   ],
-   "spread": [
-    5.5,
-    -112,
-    -5.5,
-    -108
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    53.5,
-    -112,
-    -108
-   ],
-   "total_abre": 47.5
-  }
+  "momios": null
  },
  {
   "id": "401873007",

@@ -178,6 +178,13 @@
  ],
  "Atlanta Falcons": [
   {
+   "nombre": "Kendal Daniels",
+   "pos": "LB",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Neck"
+  },
+  {
    "nombre": "Billy Bowman Jr.",
    "pos": "CB",
    "estado": "Questionable",
@@ -190,13 +197,6 @@
    "estado": "Active",
    "fecha": "2026-10-18",
    "tipo": ""
-  },
-  {
-   "nombre": "Kendal Daniels",
-   "pos": "LB",
-   "estado": "Questionable",
-   "fecha": "2026-10-18",
-   "tipo": "Neck"
   },
   {
    "nombre": "Divine Deablo",
@@ -357,7 +357,7 @@
   {
    "nombre": "Rashod Bateman",
    "pos": "WR",
-   "estado": "Out",
+   "estado": "Questionable",
    "fecha": "2026-10-18",
    "tipo": "Shoulder"
   },
@@ -2833,6 +2833,13 @@
  ],
  "Las Vegas Raiders": [
   {
+   "nombre": "Darien Porter",
+   "pos": "CB",
+   "estado": "Active",
+   "fecha": "2026-10-18",
+   "tipo": ""
+  },
+  {
    "nombre": "Trey Zuhn III",
    "pos": "C",
    "estado": "Active",
@@ -2995,13 +3002,6 @@
   },
   {
    "nombre": "Spencer Burford",
-   "pos": "G",
-   "estado": "Active",
-   "fecha": "2026-10-09",
-   "tipo": ""
-  },
-  {
-   "nombre": "Jackson Powers-Johnson",
    "pos": "G",
    "estado": "Active",
    "fecha": "2026-10-09",
@@ -3187,6 +3187,13 @@
  ],
  "Los Angeles Rams": [
   {
+   "nombre": "Blake Grupe",
+   "pos": "PK",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Knee"
+  },
+  {
    "nombre": "Kam Curl",
    "pos": "S",
    "estado": "Active",
@@ -3283,13 +3290,6 @@
    "estado": "Injured Reserve",
    "fecha": "2026-10-14",
    "tipo": "Knee"
-  },
-  {
-   "nombre": "Blake Grupe",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-13",
-   "tipo": ""
   },
   {
    "nombre": "Max Klare",
@@ -3718,6 +3718,20 @@
  ],
  "New England Patriots": [
   {
+   "nombre": "Ben Brown",
+   "pos": "C",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Morgan Moses",
+   "pos": "OT",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Ankle"
+  },
+  {
    "nombre": "Alijah Vera-Tucker",
    "pos": "G",
    "estado": "Questionable",
@@ -3727,16 +3741,9 @@
   {
    "nombre": "Romeo Doubs",
    "pos": "WR",
-   "estado": "Out",
-   "fecha": "2026-10-18",
-   "tipo": "Shoulder"
-  },
-  {
-   "nombre": "Morgan Moses",
-   "pos": "OT",
    "estado": "Questionable",
    "fecha": "2026-10-18",
-   "tipo": "Ankle"
+   "tipo": "Shoulder"
   },
   {
    "nombre": "Rhamondre Stevenson",
@@ -3884,29 +3891,22 @@
    "estado": "Active",
    "fecha": "2026-10-13",
    "tipo": ""
-  },
-  {
-   "nombre": "Andy Borregales",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-12",
-   "tipo": ""
   }
  ],
  "New Orleans Saints": [
-  {
-   "nombre": "Kool-Aid McKinstry",
-   "pos": "CB",
-   "estado": "Questionable",
-   "fecha": "2026-10-18",
-   "tipo": "Illness"
-  },
   {
    "nombre": "Cesar Ruiz",
    "pos": "G",
    "estado": "Questionable",
    "fecha": "2026-10-18",
    "tipo": "Knee"
+  },
+  {
+   "nombre": "Kool-Aid McKinstry",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Illness"
   },
   {
    "nombre": "Alvin Kamara",
@@ -4072,18 +4072,18 @@
  ],
  "New York Giants": [
   {
-   "nombre": "Andrew Thomas",
-   "pos": "OT",
-   "estado": "Questionable",
-   "fecha": "2026-10-18",
-   "tipo": "Head"
-  },
-  {
    "nombre": "Jermaine Eluemunor",
    "pos": "OT",
    "estado": "Out",
    "fecha": "2026-10-18",
    "tipo": "Calf"
+  },
+  {
+   "nombre": "Andrew Thomas",
+   "pos": "OT",
+   "estado": "Questionable",
+   "fecha": "2026-10-18",
+   "tipo": "Head"
   },
   {
    "nombre": "Darnell Mooney",
@@ -4426,11 +4426,18 @@
  ],
  "Philadelphia Eagles": [
   {
+   "nombre": "Dontayvion Wicks",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-10-18",
+   "tipo": ""
+  },
+  {
    "nombre": "Makai Lemon",
    "pos": "WR",
-   "estado": "Questionable",
+   "estado": "Active",
    "fecha": "2026-10-18",
-   "tipo": "Undisclosed"
+   "tipo": ""
   },
   {
    "nombre": "Nolan Smith Jr.",
@@ -4589,13 +4596,6 @@
   {
    "nombre": "E.J. Jenkins",
    "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-10-16",
-   "tipo": ""
-  },
-  {
-   "nombre": "Dontayvion Wicks",
-   "pos": "WR",
    "estado": "Active",
    "fecha": "2026-10-16",
    "tipo": ""
