@@ -5,13 +5,13 @@
   "estadio": "Arena Fonte Nova",
   "local_espn": "Bahia",
   "visita_espn": "Flamengo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    270,
+    280,
     275,
     -110
    ],
@@ -23,11 +23,11 @@
    "spread": [
     [
      "+0.5",
-     -120
+     -115
     ],
     [
      "-0.5",
-     -115
+     -120
     ]
    ]
   },
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    255,
-    120
+    225,
+    265,
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
     -150,
-    110
+    115
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -140
     ],
     [
      "-0.5",
-     110
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Remo": [
+    [
+     "202493",
+     "Ivan",
+     "G"
+    ],
+    [
+     "201793",
+     "José Welison",
+     "CD"
+    ],
+    [
+     "319270",
+     "Zé Ivaldo",
+     "CD-L"
+    ],
+    [
+     "157743",
+     "Marllon",
+     "CD-R"
+    ],
+    [
+     "215815",
+     "Marlon Lopes",
+     "LB"
+    ],
+    [
+     "304826",
+     "Marcelinho",
+     "RB"
+    ],
+    [
+     "198362",
+     "Patrick",
+     "CM-L"
+    ],
+    [
+     "276661",
+     "Zé Ricardo",
+     "CM-R"
+    ],
+    [
+     "359364",
+     "David Francisco",
+     "LM"
+    ],
+    [
+     "254464",
+     "Antonio Galeano",
+     "RM"
+    ],
+    [
+     "235385",
+     "Gabriel Taliari",
+     "F"
+    ]
+   ],
+   "Red Bull Bragantino": [
+    [
+     "145092",
+     "Tiago Volpi",
+     "G"
+    ],
+    [
+     "302225",
+     "Guzmán Rodríguez",
+     "CD-L"
+    ],
+    [
+     "334375",
+     "Gustavo Marques",
+     "CD-R"
+    ],
+    [
+     "229555",
+     "Juninho Capixaba",
+     "LB"
+    ],
+    [
+     "418512",
+     "Ryan Augusto",
+     "RB"
+    ],
+    [
+     "358167",
+     "Wallace Yan",
+     "AM"
+    ],
+    [
+     "279941",
+     "Ramires",
+     "LM"
+    ],
+    [
+     "307934",
+     "Fabinho",
+     "RM"
+    ],
+    [
+     "199680",
+     "Eduardo Sasha",
+     "F"
+    ],
+    [
+     "267902",
+     "Fernando",
+     "AM-L"
+    ],
+    [
+     "248584",
+     "Lucas Barbosa",
+     "AM-R"
     ]
    ]
   }

@@ -1,7 +1,7 @@
 {
 "401841269": {
 "fotmob": 5103672,
-"visto": "2026-10-18T21:20+00:00",
+"visto": "2026-10-18T21:53+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,19 +74,10 @@
 },
 "401841274": {
 "fotmob": 5103673,
-"visto": "2026-10-18T21:20+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-18T21:53+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Zé Ivaldo",
-"tipo": "Sanción",
-"regreso": "hasta el 19 de octubre",
-"duda": false,
-"valor": 1546049.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "João Lucas",
 "tipo": "Lesión",
@@ -115,17 +106,26 @@
 "importante": true
 },
 {
+"nombre": "Duplexe Tchamba",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 512692.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Marcelo",
 "tipo": "Sanción",
 "regreso": "hasta el 19 de octubre",
 "duda": false,
 "valor": 442913.0,
-"titular": true,
+"titular": false,
 "importante": true
 }
 ],
-"valor_xi": 5448386.0,
-"perdida": 0.8322969407820958,
+"valor_xi": 7660100.0,
+"perdida": 0.4570851555462722,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -133,26 +133,17 @@
 {
 "nombre": "Rodriguinho",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "una semana",
+"duda": false,
 "valor": 7046369.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Alix",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 3643464.0,
 "titular": false,
 "importante": true
 },
 {
 "nombre": "Henry Mosquera",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "una semana",
+"duda": false,
 "valor": 2698103.0,
 "titular": false,
 "importante": true
@@ -168,8 +159,8 @@
 }
 ],
 "valor_xi": 36280511.0,
-"perdida": 0.0,
-"perdida_duda": 0.3690117815595265
+"perdida": 0.268586955679869,
+"perdida_duda": 0.0
 }
 },
 "401841272": {
