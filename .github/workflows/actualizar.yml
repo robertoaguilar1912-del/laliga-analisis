@@ -35,6 +35,8 @@ jobs:
 
       - name: Elegir modo
         id: modo
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           if [ "${{ github.event.schedule }}" = "*/30 * * * *" ]; then
             echo "modo=rapido" >> "$GITHUB_OUTPUT"
@@ -53,6 +55,7 @@ jobs:
         if: steps.modo.outputs.seguir == 'si'
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python src/ejecutar.py ${{ steps.modo.outputs.modo }}
 
       - name: Guardar los datos nuevos en el repositorio

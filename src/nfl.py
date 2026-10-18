@@ -25,6 +25,7 @@ from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahora
 from picks import un_pick_por_familia
+import oddsapi
 
 HALF_LIFE = 180      # días; elegidos con 2012-2017 (ver prueba_nfl.py)
 RIDGE = 5.0
@@ -416,6 +417,8 @@ def analizar():
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Total', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
                             'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc), 'empate': push})
         un_pick_por_familia(con)            # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
+        otras = oddsapi.para_juego('nfl', e)     # Pinnacle y el promedio de varias casas (The Odds API), si hay
+        oddsapi.enriquecer(con, otras)
         lin_m = round(-m * 2) / 2
         sin = [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH / (pH + pA), 'justo': fair(pH / (pH + pA))},
                {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA / (pH + pA), 'justo': fair(pA / (pH + pA))}]
@@ -426,7 +429,7 @@ def analizar():
             'pts_local': ph, 'pts_visita': pa, 'margen': m, 'total': t, 'linea_modelo': lin_m,
             'pH': pH, 'pA': pA, 'pT': pT, 'mercado': mkt, 'casa_momios': mom.get('casa'),
             'dk': {'spread': sp[0], 'total': tt[0], 'spread_abre': mom.get('spread_abre'), 'total_abre': mom.get('total_abre')},
-            'con_momio': con, 'sin_momio': sin,
+            'con_momio': con, 'otras_casas': otras, 'sin_momio': sin,
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]], 'dist_t': [round(float(x), 5) for x in pt[(kt >= 10) & (kt <= 90)]],
             'texto': texto_juego(L, V, m, t, ml, sp[0], tt[0]), 'lesiones': lesiones,
             'descanso': None if nv is None or pd.isna(nv.home_rest) else [int(nv.home_rest), int(nv.away_rest)],

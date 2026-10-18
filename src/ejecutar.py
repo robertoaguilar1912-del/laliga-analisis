@@ -19,6 +19,7 @@ import europa
 import registro
 import construir
 import revisar
+import oddsapi
 from config import RAW, ESPN_DIR, LIGAS, ahora
 
 LIMITE_DESCARGA_S = 11 * 60     # la corrida completa tiene 20 min; el detalle que falte se baja en la siguiente
@@ -64,6 +65,9 @@ def main(modo):
         if 'nba' in tareas:
             _paso('NBA', nba.descargar_espn)
             _paso('NBA minutos', nba.descargar_boxscores)
+        cierres = [d for d in ('nfl', 'nba') if tareas.get(d, {}).get('cierres')]
+        for d in cierres:        # momios de cierre de varias casas para los juegos por empezar
+            _paso(f'momios de cierre {d} (The Odds API)', oddsapi.descargar, d)
         for liga in ligas:
             if tareas[liga]['resultados']:
                 _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
@@ -71,7 +75,7 @@ def main(modo):
         con_xi = [l for l in ligas if tareas[l]['alineaciones']]
         if con_xi:      # bajas de última hora de los partidos por empezar
             _paso('bajas FotMob', fuentes.descargar_bajas, con_xi, dentro_de_h=3)
-        if _foto(list(tareas)) == antes and 'nba' not in tareas:    # en la NBA cambian las lesiones aunque no cambie lo demás
+        if _foto(list(tareas)) == antes and 'nba' not in tareas and not cierres:    # en la NBA cambian las lesiones aunque no cambie lo demás
             return salida('no')
     else:
         for liga in LIGAS:
@@ -91,6 +95,9 @@ def main(modo):
         _paso('historia', fuentes.descargar_historia)
         _paso('NFL', nfl.descargar)
         _paso('NBA', nba.descargar)
+        for d in ('nfl', 'nba'):    # Pinnacle y varias casas, solo si hay juegos en las próximas 30 horas (créditos)
+            if oddsapi.hay_juegos(d, 30):
+                _paso(f'momios {d} (The Odds API)', oddsapi.descargar, d)
     print('- análisis')
     if ligas is None or ligas:
         analizar.main(ligas if modo in ('rapido', 'alineaciones') else None)

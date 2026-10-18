@@ -32,6 +32,7 @@ from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
 from picks import un_pick_por_familia
+import oddsapi
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
 CORE_NBA = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba'
@@ -905,6 +906,8 @@ def analizar():
             fila(f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', 'Total', o_, push, u_, do, pmt[0])
             fila(f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', 'Total', u_, push, o_, du, pmt[1])
         un_pick_por_familia(con)            # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
+        otras = oddsapi.para_juego('nba', e)     # Pinnacle y el promedio de varias casas (The Odds API), si hay
+        oddsapi.enriquecer(con, otras)
         t0 = int(round(t)) - 60
         h2h = g[((g.local == h) & (g.visita == a)) | ((g.local == a) & (g.visita == h))].sort_values('utc', ascending=False).head(6)
         partidos.append({
@@ -913,7 +916,7 @@ def analizar():
             'pts_local': ph, 'pts_visita': pa, 'margen': m, 'margen_equipos': th - ta, 'total': t, 'linea_modelo': round(-m * 2) / 2,
             'pH': pH, 'pA': pA, 'mercado': mkt, 'casa_momios': mom.get('casa'),
             'dk': {'spread': sp[0], 'total': tt[0], 'spread_abre': mom.get('spread_abre'), 'total_abre': mom.get('total_abre')},
-            'con_momio': con, 'sin_momio': [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH, 'justo': fair(pH)},
+            'con_momio': con, 'otras_casas': otras, 'sin_momio': [{'k': 'ML1', 'mercado': f'Gana {L}', 'grupo': 'Moneyline', 'p': pH, 'justo': fair(pH)},
                                             {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA, 'justo': fair(pA)}],
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]],
             't0': t0, 'dist_t': [round(float(x), 5) for x in pt[(kt >= t0) & (kt <= t0 + 120)]],

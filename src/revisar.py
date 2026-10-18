@@ -30,7 +30,17 @@ def pendientes():
             dura = {'nfl': 200, 'nba': 150}.get(liga, 110)
             if -24 * 60 <= faltan <= -dura and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 t['resultados'].append(f'{nombre} empezó hace {-faltan:.0f} min')
-        if t['alineaciones'] or t['resultados']:
+        # NFL y NBA: guardar el cierre de varias casas (The Odds API) de los juegos que empiezan en 5 a 40 minutos
+        if liga in ('nfl', 'nba') and os.environ.get('ODDS_API_KEY'):
+            try:
+                cierres = json.load(open(RAIZ / 'data' / 'cierres_oddsapi.json')).get(liga, {})
+            except (OSError, ValueError):
+                cierres = {}
+            for e in json.load(open(p)):
+                faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
+                if 5 <= faltan <= 40 and str(e['id']) not in cierres:
+                    t.setdefault('cierres', []).append(f"{e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min (momios de cierre)")
+        if t['alineaciones'] or t['resultados'] or t.get('cierres'):
             out[liga] = t
     return out
 
