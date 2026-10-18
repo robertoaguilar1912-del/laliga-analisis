@@ -5,15 +5,15 @@
   "estadio": "Atanasio Girardot",
   "local_espn": "Águilas Doradas",
   "visita_espn": "Deportes Tolima",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
-    205,
-    145
+    180,
+    200,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -210
     ],
     [
      "-0.5",
-     135
+     150
     ]
    ]
   },
@@ -193,23 +193,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
+    165,
     205,
-    155
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -160
+    -155
    ],
    "spread": [
     [
-     "+0.5",
-     -205
+     "-0.5",
+     155
     ],
     [
-     "-0.5",
-     145
+     "+0.5",
+     -220
     ]
    ]
   }
@@ -227,12 +227,12 @@
    "casa": "DraftKings",
    "ml": [
     -115,
-    240,
-    280
+    245,
+    285
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -120
    ],
    "spread": [
@@ -242,7 +242,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
