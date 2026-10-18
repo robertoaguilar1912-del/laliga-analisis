@@ -502,8 +502,10 @@ def analizar_liga(liga):
         # si la liga tiene momios de cierre; si no, como antes (solo goles y tiros a puerta, vida media de un año)
         hist = implicitas(hist)
         con_m = hist.imp_l.notna().mean() >= 0.5
+        # con momios: ventaja de local de cada equipo en América y forma en remates a puerta en Europa (ver model.py)
         modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
-                            half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE).fit(hist, ref, promoted=nuevos)
+                            half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE,
+                            local_propio=con_m and bool(L.get('fd_extra')), forma=con_m and bool(L.get('fd'))).fit(hist, ref, promoted=nuevos)
         hc = hist.dropna(subset=['HC', 'AC'])
         cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
         hs = hist.dropna(subset=['HST', 'AST'])

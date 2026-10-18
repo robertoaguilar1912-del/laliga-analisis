@@ -99,7 +99,8 @@ def predecir(liga):
             nuevos = previos_nuevos(nuevos, dia.Season.iloc[0], arriba, LIGAS[liga].get('previo_descendido'))
         con_m = hist.imp_l.notna().mean() >= 0.5
         m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
-                       half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE).fit(hist, d0, promoted=nuevos)
+                       half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE, local_propio=con_m and bool(LIGAS[liga].get('fd_extra')),
+                       forma=con_m and bool(LIGAS[liga].get('fd'))).fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:
                 continue

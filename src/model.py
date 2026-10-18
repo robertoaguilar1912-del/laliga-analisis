@@ -35,6 +35,27 @@ ALPHA = 0.6              # peso de los goles frente a los tiros a puerta (elegid
 PESO_MERCADO = 0.8
 HALF_LIFE_MERCADO = 120
 
+# Ventaja de local propia de cada equipo, solo en MLS, Liga MX, Brasil y Argentina: además de la ventaja de local de toda la
+# liga, cada equipo tiene un extra de local (mete más y recibe menos en su cancha), encogido hacia 0 (desviación 0.3) y
+# medido con los 3 años casi por igual (vida media de 1500 días), porque es algo del estadio (altura, viajes, cancha
+# sintética) y no de la racha. Sale de un primer ajuste y queda fijo en el ajuste de siempre. Elegido con 2020-23 y probado
+# en 2023-26 (18 oct 2026, 5,984 partidos de prueba): log loss del 1X2 1.0359 -> 1.0350, sobre todo por la Liga MX
+# (1.0023 -> 0.9995); más/menos igual. En las 8 ligas de Europa no mejoraba (ni con memoria corta ni larga), así que ahí no
+# se usa. Probado también: ataque y defensa distintos de local y de visita para cada equipo ('forma de local' y 'forma de
+# visita'): no mejora en ningún lado.
+LOCAL_PROPIO_SD = 0.3
+LOCAL_PROPIO_HL = 1500
+
+# Forma reciente en remates a puerta, solo en las 8 ligas de Europa con remates de football-data: en los últimos FORMA_N
+# partidos de cada equipo (de local o de visita), cuántos goles "en remates a puerta" (remates por goles por remate de la
+# liga) hizo y recibió de más o de menos frente a lo que le da el modelo; los goles esperados se corrigen con
+# exp(FORMA_PESO x esa diferencia), sumando la del ataque de uno y la de la defensa del otro. Elegido con 2020-23 y probado
+# en 2023-26 (18 oct 2026, 7,663 partidos de prueba): log loss del 1X2 0.9898 -> 0.9888 y de más/menos 2.5 0.6738 -> 0.6736;
+# mejoró en 6 de las 8 ligas (en La Liga y la Serie A empeoró un poco). Separar la forma de local del local y la de visita
+# del visitante no mejoraba nada sobre esto, ni con goles en vez de remates.
+FORMA_N = 10
+FORMA_PESO = 0.124
+
 
 # Corrección del 1X2 para las ligas de Europa (las que tienen tiros a puerta de football-data). Comparado con lo que pasó,
 # el modelo aprieta de más la diferencia entre local y visita (los favoritos ganan más de lo que dice) y le da al empate
@@ -60,12 +81,15 @@ def recalibrar(M, th=RECAL_1X2):
 
 
 class DixonColes:
-    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None, peso_mercado=0.0):
+    def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None, peso_mercado=0.0,
+                 local_propio=False, forma=False):
         self.half_life = half_life
         self.prior_sd = prior_sd
         self.alpha = alpha  # 1.0 = solo goles; <1 mezcla goles con tiros a puerta
         self.recal = recal  # corrección del 1X2 (RECAL_1X2 en las ligas de Europa) o None
         self.peso_mercado = peso_mercado  # 0 = no usa los momios; PESO_MERCADO en las ligas (columnas imp_l, imp_v)
+        self.local_propio = local_propio  # ventaja de local de cada equipo (LOCAL_PROPIO_SD): MLS, Liga MX, Brasil, Argentina
+        self.forma = forma                # forma reciente en remates a puerta (FORMA_PESO): las 8 ligas de Europa
 
     # ------------------------------------------------------------------ ajuste
     def fit(self, matches, ref_date, promoted=()):
@@ -114,31 +138,63 @@ class DixonColes:
             prior_def[idx[t]] = pd_
         s2 = self.prior_sd ** 2
 
-        def negll(p):
-            att, dfn, home, icpt = p[:n], p[n:2 * n], p[2 * n], p[2 * n + 1]
-            log_lam = icpt + home + att[h] + dfn[a]
-            log_mu = icpt + att[a] + dfn[h]
-            lam, mu = np.exp(log_lam), np.exp(log_mu)
-            ll = np.sum(w * (x * log_lam - lam + y * log_mu - mu))
-            pen = 0.5 * (np.sum((att - prior_att) ** 2) + np.sum((dfn - prior_def) ** 2)) / s2
-            r1, r2 = w * (x - lam), w * (y - mu)
-            g_att = np.bincount(h, r1, n) + np.bincount(a, r2, n) - (att - prior_att) / s2
-            g_def = np.bincount(a, r1, n) + np.bincount(h, r2, n) - (dfn - prior_def) / s2
-            g_home = r1.sum()
-            g_icpt = r1.sum() + r2.sum()
-            return -(ll - pen), -np.concatenate([g_att, g_def, [g_home, g_icpt]])
+        def ajustar(w, eta=None, sd_eta=None):
+            """eta fijo (array) o libre con desviación sd_eta (se agrega al final de los parámetros)."""
+            libre = sd_eta is not None
+            def negll(p):
+                att, dfn, home, icpt = p[:n], p[n:2 * n], p[2 * n], p[2 * n + 1]
+                e = p[2 * n + 2:] if libre else (eta if eta is not None else np.zeros(n))
+                log_lam = icpt + home + e[h] + att[h] + dfn[a]
+                log_mu = icpt + att[a] + dfn[h] - e[h]
+                lam, mu = np.exp(log_lam), np.exp(log_mu)
+                ll = np.sum(w * (x * log_lam - lam + y * log_mu - mu))
+                pen = 0.5 * (np.sum((att - prior_att) ** 2) + np.sum((dfn - prior_def) ** 2)) / s2
+                r1, r2 = w * (x - lam), w * (y - mu)
+                g_att = np.bincount(h, r1, n) + np.bincount(a, r2, n) - (att - prior_att) / s2
+                g_def = np.bincount(a, r1, n) + np.bincount(h, r2, n) - (dfn - prior_def) / s2
+                g = [g_att, g_def, [r1.sum(), r1.sum() + r2.sum()]]
+                if libre:
+                    pen += 0.5 * np.sum(e ** 2) / sd_eta ** 2
+                    g.append(np.bincount(h, r1, n) - np.bincount(h, r2, n) - e / sd_eta ** 2)
+                return -(ll - pen), -np.concatenate(g)
 
-        # icpt = nivel base de la liga (sin él, la penalización empuja el promedio hacia 1 gol/córner)
-        level = np.log(max((np.sum(w * x) + np.sum(w * y)) / (2 * np.sum(w)), 1e-3))
-        p0 = np.concatenate([prior_att, prior_def, [0.25, level]])
-        res = minimize(negll, p0, jac=True, method='L-BFGS-B')
-        p = res.x
+            # icpt = nivel base de la liga (sin él, la penalización empuja el promedio hacia 1 gol/córner)
+            level = np.log(max((np.sum(w * x) + np.sum(w * y)) / (2 * np.sum(w)), 1e-3))
+            p0 = np.concatenate([prior_att, prior_def, [0.25, level]] + ([np.zeros(n)] if libre else []))
+            return minimize(negll, p0, jac=True, method='L-BFGS-B').x
+
+        self.eta = np.zeros(n)
+        if self.local_propio:
+            # primer ajuste, con memoria larga, solo para sacar el extra de local de cada equipo
+            w_larga = np.exp(-np.log(2) * days / LOCAL_PROPIO_HL)
+            self.eta = ajustar(w_larga, sd_eta=LOCAL_PROPIO_SD)[2 * n + 2:]
+        p = ajustar(w, eta=self.eta)
         self.teams, self.idx = teams, idx
         self.att, self.dfn, self.home, self.icpt = p[:n], p[n:2 * n], p[2 * n], p[2 * n + 1]
-        lam = np.exp(self.icpt + self.home + self.att[h] + self.dfn[a])
-        mu = np.exp(self.icpt + self.att[a] + self.dfn[h])
+        lam = np.exp(self.icpt + self.home + self.eta[h] + self.att[h] + self.dfn[a])
+        mu = np.exp(self.icpt + self.att[a] + self.dfn[h] - self.eta[h])
+        self.forma_f, self.forma_c = np.zeros(n), np.zeros(n)
+        if self.forma and ok.sum() >= 30:
+            self._forma(matches, h, a, hst, ast, gx, gy, lam, mu, n)
         self.rho = self._fit_rho(gx, gy, lam, mu, w)
         return self
+
+    def _forma(self, matches, h, a, hst, ast, gx, gy, lam, mu, n):
+        """Promedio de (remates a puerta x goles por remate - goles esperados por el modelo) en los últimos FORMA_N partidos de
+        cada equipo, a favor (forma_f) y en contra (forma_c). Equipos con menos de 3 partidos con remates: 0."""
+        ok = np.isfinite(hst) & np.isfinite(ast)
+        c = (gx[ok].sum() + gy[ok].sum()) / max(hst[ok].sum() + ast[ok].sum(), 1)
+        orden = np.argsort(matches.Date.values[ok], kind='stable')
+        eq = np.concatenate([h[ok][orden], a[ok][orden]])
+        fav = np.concatenate([(c * hst - lam)[ok][orden], (c * ast - mu)[ok][orden]])
+        con = np.concatenate([(c * ast - mu)[ok][orden], (c * hst - lam)[ok][orden]])
+        fecha = np.concatenate([matches.Date.values[ok][orden]] * 2)
+        for t in range(n):
+            k = np.where(eq == t)[0]
+            if len(k) < 3:
+                continue
+            k = k[np.argsort(fecha[k], kind='stable')][-FORMA_N:]
+            self.forma_f[t], self.forma_c[t] = fav[k].mean(), con[k].mean()
 
     @staticmethod
     def _fit_rho(x, y, lam, mu, w):
@@ -155,8 +211,8 @@ class DixonColes:
     # --------------------------------------------------------------- predicción
     def rates(self, home, away):
         i, j = self.idx[home], self.idx[away]
-        lam = np.exp(self.icpt + self.home + self.att[i] + self.dfn[j])
-        mu = np.exp(self.icpt + self.att[j] + self.dfn[i])
+        lam = np.exp(self.icpt + self.home + self.eta[i] + self.att[i] + self.dfn[j] + FORMA_PESO * (self.forma_f[i] + self.forma_c[j]))
+        mu = np.exp(self.icpt + self.att[j] + self.dfn[i] - self.eta[i] + FORMA_PESO * (self.forma_f[j] + self.forma_c[i]))
         return lam, mu
 
     def score_matrix(self, home, away):
