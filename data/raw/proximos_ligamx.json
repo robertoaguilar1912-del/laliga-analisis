@@ -1,154 +1,5 @@
 [
  {
-  "id": "401876938",
-  "utc": "2026-10-19T01:00Z",
-  "estadio": "Estadio BBVA",
-  "local_espn": "Monterrey",
-  "visita_espn": "Pachuca",
-  "estado": "STATUS_IN_PROGRESS",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -175,
-    330,
-    425
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    130,
-    -170
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -190
-    ],
-    [
-     "+0.5",
-     135
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Monterrey": [
-    [
-     "138328",
-     "Esteban Andrada",
-     "G"
-    ],
-    [
-     "184299",
-     "Carlos Salcedo",
-     "CD-L"
-    ],
-    [
-     "290348",
-     "Víctor Guzmán",
-     "CD-R"
-    ],
-    [
-     "245848",
-     "Gerardo Arteaga",
-     "LB"
-    ],
-    [
-     "202106",
-     "Ricardo Chávez",
-     "RB"
-    ],
-    [
-     "117977",
-     "Jesús Corona",
-     "AM"
-    ],
-    [
-     "207011",
-     "Orbelín Pineda",
-     "LM"
-    ],
-    [
-     "375061",
-     "Cesar Garza",
-     "RM"
-    ],
-    [
-     "235511",
-     "Hugo Cuypers",
-     "F"
-    ],
-    [
-     "159263",
-     "Lucas Ocampos",
-     "AM-L"
-    ],
-    [
-     "235817",
-     "Diego Rossi",
-     "AM-R"
-    ]
-   ],
-   "Pachuca": [
-    [
-     "259439",
-     "Carlos Moreno",
-     "G"
-    ],
-    [
-     "194921",
-     "Eduardo Bauermann",
-     "D"
-    ],
-    [
-     "302128",
-     "Mauricio Isais",
-     "D"
-    ],
-    [
-     "364454",
-     "Jorge Berlanga",
-     "D"
-    ],
-    [
-     "268843",
-     "Sergio Barreto",
-     "D"
-    ],
-    [
-     "176489",
-     "Rodolfo Pizarro",
-     "M"
-    ],
-    [
-     "326072",
-     "Alan Bautista",
-     "M"
-    ],
-    [
-     "229552",
-     "Oussama Idrissi",
-     "M"
-    ],
-    [
-     "160562",
-     "Javier Vallejo",
-     "M"
-    ],
-    [
-     "233978",
-     "Christian Rivera",
-     "M"
-    ],
-    [
-     "127570",
-     "Salomón Rondón",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401876934",
   "utc": "2026-10-21T00:07Z",
   "estadio": "Estadio Akron",
@@ -172,11 +23,11 @@
    "spread": [
     [
      "-1.5",
-     -105
+     100
     ],
     [
      "+1.5",
-     -140
+     -145
     ]
    ]
   }
@@ -322,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    255,
+    255,
+    -105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -130
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401876931",
@@ -366,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    170,
+    260,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -185
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
+  }
  },
  {
   "id": "401876929",
@@ -381,13 +276,13 @@
    "casa": "DraftKings",
    "ml": [
     120,
-    250,
+    255,
     195
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -195
+    -185,
+    130
    ],
    "spread": [
     [
@@ -396,7 +291,7 @@
     ],
     [
      "+0.5",
-     -165
+     -160
     ]
    ]
   }
