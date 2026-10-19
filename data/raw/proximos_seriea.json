@@ -5,7 +5,7 @@
   "estadio": "U-Power Stadium",
   "local_espn": "Monza",
   "visita_espn": "Cagliari",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    195,
+    225,
+    190,
     135
    ],
    "ou_linea": 2.5,
    "ou": [
-    140,
-    -180
+    145,
+    -185
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -175
     ],
     [
      "-0.5",
-     130
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Parma": [
+    [
+     "290792",
+     "Edoardo Corvi",
+     "G"
+    ],
+    [
+     "196860",
+     "Diego Carlos",
+     "D"
+    ],
+    [
+     "272694",
+     "Enrico Del Prato",
+     "D"
+    ],
+    [
+     "366526",
+     "Mariano Troilo",
+     "D"
+    ],
+    [
+     "261274",
+     "Emanuele Valeri",
+     "M"
+    ],
+    [
+     "396009",
+     "Sascha Britschgi",
+     "M"
+    ],
+    [
+     "323118",
+     "Giovanni Fabbian",
+     "M"
+    ],
+    [
+     "316609",
+     "Mandela Keita",
+     "M"
+    ],
+    [
+     "276653",
+     "Adrián Bernabé",
+     "M"
+    ],
+    [
+     "287430",
+     "El Bilal Toure",
+     "M"
+    ],
+    [
+     "301980",
+     "José Romero",
+     "F"
+    ]
+   ],
+   "Torino": [
+    [
+     "252406",
+     "Lucas Perri",
+     "G"
+    ],
+    [
+     "189974",
+     "Giovanni Simeone",
+     "SUB"
+    ],
+    [
+     "367168",
+     "Pietro Comuzzo",
+     "SUB"
+    ],
+    [
+     "239120",
+     "Adrian Ismajli",
+     "SUB"
+    ],
+    [
+     "213725",
+     "Ché Adams",
+     "SUB"
+    ],
+    [
+     "364590",
+     "Rafik Belghali",
+     "SUB"
+    ],
+    [
+     "290592",
+     "Daniel Bragança",
+     "SUB"
+    ],
+    [
+     "206378",
+     "Nikola Vlasic",
+     "SUB"
+    ],
+    [
+     "403148",
+     "Alessio Cacciamani",
+     "SUB"
+    ],
+    [
+     "274258",
+     "Saúl Coco",
+     "SUB"
+    ],
+    [
+     "210392",
+     "Rolando Mandragora",
+     "SUB"
     ]
    ]
   }
@@ -525,21 +641,21 @@
    "ml": [
     175,
     220,
-    135
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
     -140,
-    100
+    105
    ],
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
