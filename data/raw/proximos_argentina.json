@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841620",
-  "utc": "2026-10-19T22:00Z",
-  "estadio": "Marcelo Bielsa",
-  "local_espn": "Newell's Old Boys",
-  "visita_espn": "Central Córdoba (Santiago del Estero)",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -160,
-    275,
-    450
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    110,
-    -150
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -170
-    ],
-    [
-     "+0.5",
-     120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Newell's Old Boys": [
-    [
-     "199690",
-     "Franco Escobar",
-     "SUB"
-    ],
-    [
-     "400805",
-     "Facundo Gauch",
-     "SUB"
-    ],
-    [
-     "240430",
-     "Lucas Carrizo",
-     "SUB"
-    ],
-    [
-     "250387",
-     "Walter Mazzantti",
-     "SUB"
-    ],
-    [
-     "315926",
-     "Santiago Solari",
-     "SUB"
-    ],
-    [
-     "270402",
-     "Martín Ortega",
-     "SUB"
-    ],
-    [
-     "407376",
-     "Jerónimo Mattar",
-     "SUB"
-    ],
-    [
-     "361297",
-     "Josué Reinatti",
-     "SUB"
-    ],
-    [
-     "263095",
-     "Matías Cóccaro",
-     "SUB"
-    ],
-    [
-     "420806",
-     "Bruno Cabrera",
-     "SUB"
-    ],
-    [
-     "121876",
-     "Rodrigo Herrera",
-     "SUB"
-    ]
-   ],
-   "Central Córdoba (Santiago del Estero)": [
-    [
-     "149387",
-     "Alan Aguerre",
-     "G"
-    ],
-    [
-     "181496",
-     "Felipe Aguilar",
-     "D"
-    ],
-    [
-     "269809",
-     "Dario Cáceres",
-     "D"
-    ],
-    [
-     "317313",
-     "Fernando Martínez",
-     "D"
-    ],
-    [
-     "262493",
-     "Alejandro Maciel",
-     "D"
-    ],
-    [
-     "266508",
-     "Diego Barrera",
-     "M"
-    ],
-    [
-     "218440",
-     "Matias Vera",
-     "M"
-    ],
-    [
-     "292018",
-     "Marco Iacobellis",
-     "M"
-    ],
-    [
-     "276229",
-     "Lucas González",
-     "M"
-    ],
-    [
-     "216663",
-     "Leonardo Sequeira",
-     "M"
-    ],
-    [
-     "131758",
-     "Michael Santos",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841617",
   "utc": "2026-10-19T22:00Z",
   "estadio": "Eva Perón",
@@ -309,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    200,
-    245
+    115,
+    210,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
-    145,
-    -195
+    140,
+    -185
    ],
    "spread": [
     [
      "-0.5",
-     120
+     105
     ],
     [
      "+0.5",
-     -165
+     -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Deportivo Riestra": [
+    [
+     "146637",
+     "Ignacio Arce",
+     "G"
+    ],
+    [
+     "206671",
+     "Cristian Paz",
+     "CD"
+    ],
+    [
+     "190565",
+     "Juan Cruz Randazzo",
+     "CD-L"
+    ],
+    [
+     "315728",
+     "Facundo Miño",
+     "CD-R"
+    ],
+    [
+     "233726",
+     "Nicolás Sansotre",
+     "LB"
+    ],
+    [
+     "278608",
+     "Mariano Bracamonte",
+     "RB"
+    ],
+    [
+     "283894",
+     "Nicólas Watson",
+     "CM-L"
+    ],
+    [
+     "195672",
+     "Milton Céliz",
+     "CM-R"
+    ],
+    [
+     "310778",
+     "Antony Alonso",
+     "LM"
+    ],
+    [
+     "213487",
+     "Brian Sánchez",
+     "RM"
+    ],
+    [
+     "114767",
+     "Alexander Díaz",
+     "F"
+    ]
+   ],
+   "Unión (Santa Fe)": [
+    [
+     "310768",
+     "Matias Mansilla",
+     "G"
+    ],
+    [
+     "346282",
+     "Juan Ludueña",
+     "CD-L"
+    ],
+    [
+     "359911",
+     "Matías Rocha",
+     "CD-R"
+    ],
+    [
+     "3109245",
+     "Lucas Santiago",
+     "LB"
+    ],
+    [
+     "339805",
+     "Tobías Rubio",
+     "RB"
+    ],
+    [
+     "3109240",
+     "Mateo Peresutti",
+     "CM-L"
+    ],
+    [
+     "358259",
+     "Joaquín Mosqueira",
+     "CM-R"
+    ],
+    [
+     "243287",
+     "Braian Cuello",
+     "LM"
+    ],
+    [
+     "298859",
+     "Julián Palacio",
+     "RM"
+    ],
+    [
+     "96687",
+     "Marcelo Estigarribia",
+     "CF-L"
+    ],
+    [
+     "212444",
+     "Cristian Tarragona",
+     "CF-R"
     ]
    ]
   }
