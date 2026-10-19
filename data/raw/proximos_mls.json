@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    330,
+    310
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "761903",
@@ -52,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -165,
+    320,
+    340
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "761891",
@@ -99,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    140,
     260,
-    165
+    150
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -111,11 +155,11 @@
    "spread": [
     [
      "-0.5",
-     120
+     135
     ],
     [
      "+0.5",
-     -180
+     -195
     ]
    ]
   }
@@ -176,16 +220,25 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    330,
-    360
+    -195,
+    340,
+    390
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -140
+    100,
+    -135
    ],
-   "spread": []
+   "spread": [
+    [
+     "-1.5",
+     125
+    ],
+    [
+     "+1.5",
+     -185
+    ]
+   ]
   }
  },
  {
@@ -233,9 +286,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    285,
-    270
+    -140,
+    295,
+    285
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -245,11 +298,11 @@
    "spread": [
     [
      "-0.5",
-     -135
+     -145
     ],
     [
      "+0.5",
-     -110
+     100
     ]
    ]
   }
@@ -266,23 +319,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
+    100,
     260,
-    240
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    130
+    -155,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -115
+     -105
     ],
     [
      "+0.5",
-     -130
+     -140
     ]
    ]
   }
@@ -428,7 +481,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -210,
+    360,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -135
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -170
+    ]
+   ]
+  }
  },
  {
   "id": "761907",
@@ -466,7 +541,7 @@
  {
   "id": "761905",
   "utc": "2026-10-28T23:30Z",
-  "estadio": "Yankee Stadium",
+  "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "Atlanta United FC",
   "estado": "STATUS_SCHEDULED",

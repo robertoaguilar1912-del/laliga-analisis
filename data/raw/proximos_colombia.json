@@ -12,8 +12,8 @@
    "casa": "DraftKings",
    "ml": [
     -140,
-    235,
-    350
+    240,
+    360
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,7 +23,7 @@
    "spread": [
     [
      "-0.5",
-     -145
+     -150
     ],
     [
      "+0.5",
@@ -206,7 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -350,
+    390,
+    750
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -120
+    ],
+    [
+     "+1.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401877877",

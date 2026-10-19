@@ -1,15 +1,15 @@
 {
 "401912520": {
 "fotmob": 1000020616,
-"visto": "2026-10-18T20:58+00:00",
+"visto": "2026-10-19T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
 "nombre": "Vitor Roque",
 "tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 42103346.0,
 "titular": false,
 "importante": true
@@ -25,8 +25,8 @@
 }
 ],
 "valor_xi": 113736824.0,
-"perdida": 0.37018218479531306,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.37018218479531306
 },
 "visita": {
 "faltan": [
@@ -36,7 +36,7 @@
 "regreso": "una semana",
 "duda": false,
 "valor": 16805522.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -76,14 +76,14 @@
 "importante": false
 }
 ],
-"valor_xi": 46085640.0,
-"perdida": 0.5895907705740877,
+"valor_xi": 43882310.0,
+"perdida": 0.6191941126162228,
 "perdida_duda": 0.0
 }
 },
 "401912521": {
 "fotmob": 1000020614,
-"visto": "2026-10-18T20:58+00:00",
+"visto": "2026-10-19T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -106,15 +106,6 @@
 "importante": true
 },
 {
-"nombre": "Saúl",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1101405.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Ayrton Lucas",
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
@@ -131,10 +122,19 @@
 "valor": 1434786.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Saúl",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1101405.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 107557790.0,
-"perdida": 0.24774228812250604,
+"valor_xi": 96006031.0,
+"perdida": 0.26607920079520836,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -155,7 +155,7 @@
 "duda": false,
 "valor": 970273.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Gabriel Neves",
@@ -164,11 +164,11 @@
 "duda": false,
 "valor": 946467.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 17809411.0,
-"perdida": 0.10267481614074715,
+"valor_xi": 19343123.0,
+"perdida": 0.19362530031991215,
 "perdida_duda": 0.0
 }
 }

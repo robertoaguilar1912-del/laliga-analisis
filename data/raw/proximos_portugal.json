@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
+    -185,
     300,
     500
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -130
+    -105,
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     -190
+     -200
     ],
     [
      "+0.5",
-     135
+     140
     ]
    ]
   }
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    270,
-    390
+    -145,
+    265,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -89,11 +89,11 @@
    "spread": [
     [
      "-0.5",
-     -170
+     -160
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }
@@ -111,8 +111,8 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    205,
-    260
+    210,
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -241,11 +241,27 @@
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -425,
+    500,
+    850
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -165
+    ],
+    [
+     "+1.5",
+     110
+    ]
+   ]
   }
  },
  {
@@ -258,11 +274,27 @@
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    700,
+    370,
+    -290
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -115
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -150
+    ],
+    [
+     "-1.5",
+     100
+    ]
+   ]
   }
  }
 ]
