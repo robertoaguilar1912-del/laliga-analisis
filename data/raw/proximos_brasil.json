@@ -107,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    220,
+    170
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -210
+    ]
+   ]
+  }
  },
  {
   "id": "401841283",
@@ -151,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    270,
+    380
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401841278",
@@ -165,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    265,
-    -125
+    280,
+    255,
+    -115
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -177,11 +221,11 @@
    "spread": [
     [
      "+0.5",
-     -110
+     -120
     ],
     [
      "-0.5",
-     -140
+     -125
     ]
    ]
   }
@@ -204,8 +248,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -115
+    -140,
+    100
    ],
    "spread": [
     [

@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -265,
+    -280,
     425,
-    475
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-1.5",
-     -110
+     -120
     ],
     [
      "+1.5",
-     -130
+     -125
     ]
    ]
   }
@@ -84,7 +84,7 @@
    "ou_linea": 2.5,
    "ou": [
     -175,
-    135
+    130
    ],
    "spread": [
     [
@@ -276,6 +276,39 @@
     [
      "-1.5",
      -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884746",
+  "utc": "2026-10-30T19:30Z",
+  "estadio": "URSAPHARM-Arena an der Kaiserlinde",
+  "local_espn": "SV Elversberg",
+  "visita_espn": "Mainz",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    215,
+    255,
+    100
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -170
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -110
     ]
    ]
   }

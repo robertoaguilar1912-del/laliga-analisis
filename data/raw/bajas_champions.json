@@ -1,7 +1,7 @@
 {
 "401915403": {
 "fotmob": 6106333,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -35,15 +35,15 @@
 {
 "nombre": "Amara Diouf",
 "tipo": "Lesión",
-"regreso": "ya entrena",
+"regreso": "en duda",
 "duda": true,
 "valor": 1387101.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 153219144.0,
-"perdida": 0.20213087080032244,
+"valor_xi": 159185469.0,
+"perdida": 0.19455493767461904,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -60,8 +60,8 @@
 {
 "nombre": "Igoh Ogbu",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 6079118.0,
 "titular": false,
 "importante": true
@@ -69,8 +69,8 @@
 {
 "nombre": "David Jurásek",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 4780717.0,
 "titular": false,
 "importante": true
@@ -103,14 +103,14 @@
 "importante": false
 }
 ],
-"valor_xi": 46010367.0,
-"perdida": 0.405001768405803,
-"perdida_duda": 0.0
+"valor_xi": 31718284.0,
+"perdida": 0.24510925622584123,
+"perdida_duda": 0.34238406466125343
 }
 },
 "401915404": {
 "fotmob": 6106422,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [],
@@ -120,6 +120,15 @@
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Konstantinos Karetsas",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 44402311.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Giannis Konstantelias",
 "tipo": "Lesión",
@@ -148,14 +157,14 @@
 "importante": false
 }
 ],
-"valor_xi": 295263255.0,
-"perdida": 0.0,
+"valor_xi": 356398260.0,
+"perdida": 0.12458621711565034,
 "perdida_duda": 0.0
 }
 },
 "401915402": {
 "fotmob": 6106277,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -185,22 +194,31 @@
 "valor": 6594315.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Paulo Dybala",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 2326109.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 205436918.0,
-"perdida": 0.4726133109142535,
+"valor_xi": 229644454.0,
+"perdida": 0.42279367216941366,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [],
-"valor_xi": 10460530.0,
+"valor_xi": 9570187.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915398": {
 "fotmob": 6106287,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -257,22 +275,22 @@
 "importante": true
 },
 {
-"nombre": "Sami Ouaissa",
+"nombre": "Guus Til",
 "tipo": "Lesión",
-"regreso": "Day to day",
+"regreso": "principios de noviembre",
 "duda": false,
-"valor": 9988948.0,
+"valor": 13026703.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
-"nombre": "Kilian Sildillia",
+"nombre": "Ruben van Bommel",
 "tipo": "Lesión",
-"regreso": "principios de diciembre",
+"regreso": "mediados de noviembre",
 "duda": false,
-"valor": 7636604.0,
+"valor": 12659189.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Adamo Nagalo",
@@ -302,14 +320,14 @@
 "importante": false
 }
 ],
-"valor_xi": 135998790.0,
-"perdida": 0.5763328261964684,
+"valor_xi": 122926093.0,
+"perdida": 0.8465774552844529,
 "perdida_duda": 0.0
 }
 },
 "401915397": {
 "fotmob": 6106248,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -332,13 +350,22 @@
 "importante": true
 },
 {
+"nombre": "Jeremie Frimpong",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 43905178.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Giovanni Leoni",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 30879227.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Conor Bradley",
@@ -347,24 +374,15 @@
 "duda": false,
 "valor": 28459646.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 482277117.0,
-"perdida": 0.4091464907716117,
+"valor_xi": 419255543.0,
+"perdida": 0.7169041555164364,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Tajon Buchanan",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 13061615.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Nicolas Pépé",
 "tipo": "Lesión",
@@ -382,10 +400,37 @@
 },
 "401915401": {
 "fotmob": 6106257,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Antoine Semenyo",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 84339140.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Nico O'Reilly",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 81688764.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Matheus Nunes",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 53537615.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Mateo Kovačić",
 "tipo": "Lesión",
@@ -396,9 +441,9 @@
 "importante": false
 }
 ],
-"valor_xi": 953236365.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 939161804.0,
+"perdida": 0.089802566118841,
+"perdida_duda": 0.08698050075298847
 },
 "visita": {
 "faltan": [
@@ -412,14 +457,14 @@
 "importante": false
 }
 ],
-"valor_xi": 39977625.0,
+"valor_xi": 40267811.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915400": {
 "fotmob": 6106320,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -462,15 +507,15 @@
 {
 "nombre": "Alisson Santos",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "principios de noviembre",
+"duda": false,
 "valor": 722365.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 213509473.0,
-"perdida": 0.1900599323759279,
+"valor_xi": 205082801.0,
+"perdida": 0.19786932791112016,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -491,7 +536,16 @@
 "duda": false,
 "valor": 1972523.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Ole Blomberg",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2106752.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "August Mikkelsen",
@@ -503,21 +557,21 @@
 "importante": false
 }
 ],
-"valor_xi": 39067629.0,
-"perdida": 0.10932393670473323,
-"perdida_duda": 0.0
+"valor_xi": 38751749.0,
+"perdida": 0.1611165988920913,
+"perdida_duda": 0.05436533974247201
 }
 },
 "401915399": {
 "fotmob": 6106234,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
 {
 "nombre": "Nuno Mendes",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
+"regreso": "unas semanas",
 "duda": false,
 "valor": 78703506.0,
 "titular": false,
@@ -592,7 +646,7 @@
 },
 "401915392": {
 "fotmob": 6106397,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -602,15 +656,6 @@
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 18427771.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Maximilian Mittelstädt",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 15829190.0,
 "titular": false,
 "importante": true
 },
@@ -633,15 +678,6 @@
 "importante": false
 },
 {
-"nombre": "Nikolas Nartey",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 1336689.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Dan-Axel Zagadou",
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
@@ -649,22 +685,41 @@
 "valor": 1249820.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Nikolas Nartey",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1336689.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 228051872.0,
-"perdida": 0.15021565356850042,
+"valor_xi": 224485966.0,
+"perdida": 0.08208874402420328,
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
-"valor_xi": 455912052.0,
-"perdida": 0.0,
+"faltan": [
+{
+"nombre": "Cristian Romero",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 56787269.0,
+"titular": false,
+"importante": true
+}
+],
+"valor_xi": 431799648.0,
+"perdida": 0.1315130043829957,
 "perdida_duda": 0.0
 }
 },
 "401915395": {
 "fotmob": 6106410,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -685,6 +740,15 @@
 "valor": 30417776.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Yan Couto",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 18640589.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 327668881.0,
@@ -755,7 +819,7 @@
 },
 "401915396": {
 "fotmob": 6106312,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -837,7 +901,7 @@
 },
 "401915394": {
 "fotmob": 6106285,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -964,7 +1028,7 @@
 },
 "401915312": {
 "fotmob": 6106238,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -1028,7 +1092,7 @@
 },
 "401915388": {
 "fotmob": 6106297,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -1067,15 +1131,6 @@
 "importante": false
 },
 {
-"nombre": "Jonathan Gradit",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1673302.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Maik Nawrocki",
 "tipo": "Lesión",
 "regreso": "mediados de mayo de 2027",
@@ -1092,6 +1147,15 @@
 "valor": 1828282.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Jonathan Gradit",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1673302.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 96325155.0,
@@ -1101,7 +1165,7 @@
 },
 "401915390": {
 "fotmob": 6106252,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -1158,15 +1222,6 @@
 "importante": false
 },
 {
-"nombre": "Irakli Azarovi",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 1953329.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Marlon",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -1192,19 +1247,37 @@
 "valor": 460343.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Irakli Azarovi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1953329.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 89335580.0,
+"valor_xi": 101643319.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915389": {
 "fotmob": 6106300,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Juan Hernández",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 19345407.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Júnior Firpo",
 "tipo": "Lesión",
@@ -1225,7 +1298,7 @@
 }
 ],
 "valor_xi": 166634266.0,
-"perdida": 0.0,
+"perdida": 0.11609501133458348,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1301,7 +1374,7 @@
 },
 "401915313": {
 "fotmob": 6106244,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -1383,7 +1456,7 @@
 },
 "401915391": {
 "fotmob": 6106281,
-"visto": "2026-10-19T11:33+00:00",
+"visto": "2026-10-20T07:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [

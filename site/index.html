@@ -524,6 +524,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   // un solo PICK por partido en cada familia (resultado: 1X2, doble oportunidad y hándicaps; total: más/menos), ver picks.py
   const famDe = k => /^(1|X|2|1X|X2|12|DNB1|DNB2|ML1|ML2)$/.test(k) || /^H[12]:/.test(k) ? 'resultado' : /^[OU](:|$)/.test(k) ? 'total' : k;
+  // reglas de las 8 ligas de Europa con momios (ver picks.py): sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" en
+  // las primeras 13 semanas de la temporada; en la prueba 2023-26 el ROI de los PICK pasó de −10.9% a −5.0%
+  const GANA_K = new Set(['1', '2', 'H1:-0.5', 'H2:-0.5']);
+  const REGLA_TXT = {
+    gana: 'En estas ligas, "Gana" con momio de 2.00 o más no es PICK: en la prueba 2020-26 eran los PICK que más perdían (el modelo sobrevalora al que no es favorito).',
+    menos: 'En las primeras 13 semanas de la temporada, "Menos de" no es PICK: en la prueba 2020-26 perdían mucho más que el resto (el modelo tarda en ver cuántos goles trae la temporada).' };
+  const reglaDe = (m, k, dec) => !m.reglas ? null : (GANA_K.has(k) && dec >= m.reglas.gana_max - 1e-9) ? 'gana' : (/^U(:|$)/.test(k) && m.reglas.sin_menos) ? 'menos' : null;
+  const minus = t => t.charAt(0).toLowerCase() + t.slice(1);
+  const notaRegla = rg => rg ? `<br><b>No es PICK:</b> ${esc(minus(REGLA_TXT[rg]))}` : '';
+  const EXC_MERCADO = 0.02;      // la regla no aplica si tu momio está al menos 2% por encima del precio justo del mercado
+  const notaExcepcion = '<br>Este tipo de apuesta normalmente no es PICK en esta liga, pero tu casa paga más que el precio justo del mercado: ahí el valor no lo ve solo el modelo.';
   const otroPick = (m, k, p) => (m.con_momio || []).find(r => r.veredicto === 'PICK' && r.k !== k && famDe(r.k) === famDe(k) && r.p > p);
   const notaOtro = r => r ? `<br><b>No es PICK: en este partido ya hay PICK en ${esc(r.mercado)}</b>, que el modelo ve más probable. Los dos dependen del mismo resultado; apostar los dos es repetir la apuesta.` : '';
   const posLabel = p => ({ G: 'POR', D: 'DEF', M: 'MED', F: 'DEL' })[(p || '?')[0] === 'C' && p.startsWith('CD') ? 'D' : (p || '?')[0]] || p;
@@ -797,7 +808,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const el = $('#match-detail'); el.hidden = false;
     const cell = (v, color) => `<div class="cellbar"><span class="v">${pct(v)}</span><span class="track"><span class="fill" style="width:${(v * 100).toFixed(1)}%;background:${color}"></span></span></div>`;
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
-    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}${r.revisar ? `<span class="far" title="${esc(r.revisar)}">Bajas importantes</span>` : ''}${r.otro_pick ? `<span class="far" title="Depende del mismo resultado que ${esc(r.otro_pick)}: solo cuenta como PICK el que el modelo ve más probable">Ya hay PICK: ${esc(r.otro_pick)}</span>` : ''}</span>
+    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}${r.revisar ? `<span class="far" title="${esc(r.revisar)}">Bajas importantes</span>` : ''}${r.otro_pick ? `<span class="far" title="Depende del mismo resultado que ${esc(r.otro_pick)}: solo cuenta como PICK el que el modelo ve más probable">Ya hay PICK: ${esc(r.otro_pick)}</span>` : ''}${r.regla ? `<span class="far" title="${esc(REGLA_TXT[r.regla])}">${r.regla === 'gana' ? 'Momio alto: sin PICK' : 'Inicio de temporada: sin PICK'}</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
     const conLinea = tiposDe(m);
@@ -883,7 +894,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <h3>Mercados con momio</h3>
             <div class="markets">${priced || '<p class="empty">La casa todavía no publica momios para este partido. Mientras tanto usa los momios justos de la pestaña Mercados.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu mercado no está aquí o quieres guardar tu apuesta? Compáralo con tu casa →</button>
-            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más y el modelo le da al menos 30%. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.</p>
+            <p class="note">Momios de ${esc(m.casa_momios || 'la casa')} en formato decimal. "Justo" es el momio que haría la apuesta neutra según el modelo: si tu casa paga más que eso, hay valor. PICK: EV de +5% o más y el modelo le da al menos 30%. "Lejos del mercado": en la prueba, estos casos perdieron más que el resto.${m.reglas ? ' En esta liga, además, "Gana" con momio de 2.00 o más no es PICK' + (m.reglas.sin_menos ? ', y "Menos de" tampoco, porque la temporada va empezando' : '') + ' (en la prueba eran los que más perdían).' : ''}</p>
           </div>
         </div>
         <div class="grid2">
@@ -1016,7 +1027,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         const W0 = pa != null ? pa : o.W, L0 = pa != null ? 1 - pa : o.Lo, pp = W0 / Math.max(W0 + L0, 1e-12);
         // y nunca menos que lo que paga DraftKings en esa misma línea (desde el 17 oct 2026)
         const dk0 = m.con_momio.find(r => r.k === o.k), dkm0 = dk0 ? parseFloat(dk0.momio) : null, minM = (0.05 + W0 + L0) / W0;
-        const minimo = pp >= 0.30 ? `<br><b>Para que sea PICK tu momio tiene que ser de ${Math.max(minM, dkm0 || 0).toFixed(2)} o más${dkm0 && dkm0 > minM ? ` (no menos que ${esc(m.casa_momios || 'DraftKings')}, que paga ${dkm0.toFixed(2)})` : ''}.</b>` : '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
+        const minPick = Math.max(minM, dkm0 || 0), topeGana = m.reglas && GANA_K.has(o.k) ? m.reglas.gana_max : null;
+        // con las reglas de Europa: momio desde el que tu casa paga 2% más que el precio justo del mercado (ahí la regla no aplica)
+        const minEx = mk0 ? (() => { let W = mk0.W, Lo = mk0.Lo; if (pa != null) { const x = pa - p; W += x; Lo -= x; } return (EXC_MERCADO + W + Lo) / W; })() : null;
+        let desde = minEx ? Math.max(minPick, minEx, topeGana || 0) : null;
+        if (topeGana && desde && desde <= topeGana + 1e-9) desde = null;        // desde el tope el mercado ya ve valor: no hay hueco
+        const porMercado = ` (${pct(EXC_MERCADO, 0)} por encima del precio justo del mercado: así el valor no lo ve solo el modelo)`;
+        const normal = (extra = '') => `<br><b>Para que sea PICK tu momio tiene que ser de ${minPick.toFixed(2)} o más${extra}${dkm0 && dkm0 > minM ? ` (no menos que ${esc(m.casa_momios || 'DraftKings')}, que paga ${dkm0.toFixed(2)})` : ''}.</b>`;
+        let minimo;
+        if (pp < 0.30) minimo = '<br>No llega a PICK con ningún momio: el modelo le da menos de 30%.';
+        else if (reglaDe(m, o.k, 1) === 'menos')
+          minimo = desde ? `<br><b>Para que sea PICK tu momio tiene que ser de ${desde.toFixed(2)} o más</b>${porMercado}. ${esc(REGLA_TXT.menos)}`
+                         : `<br><b>No llega a PICK con ningún momio.</b> ${esc(REGLA_TXT.menos)}`;
+        else if (topeGana && minPick >= topeGana)
+          minimo = desde ? `<br><b>Para que sea PICK tu momio tiene que ser de ${desde.toFixed(2)} o más</b>${porMercado}. ${esc(REGLA_TXT.gana)}`
+                 : minEx ? normal()
+                 : `<br><b>No llega a PICK:</b> necesitaría un momio de ${minPick.toFixed(2)} o más, y ${esc(minus(REGLA_TXT.gana))}`;
+        else minimo = normal(!topeGana ? '' : desde ? ` y menor que ${topeGana.toFixed(2)}, o de ${desde.toFixed(2)} o más${porMercado}`
+                                    : minEx ? '' : ` y menor que ${topeGana.toFixed(2)}`);
         out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${minimo}${avisoBajas(o.k)}`;
         return null;
       }
@@ -1027,7 +1055,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const dkr = m.con_momio.find(r => r.k === o.k), dkm = dkr ? parseFloat(dkr.momio) : null;
       const menorQueDK = !!(dkm && dec < dkm - 0.005);
       const peorQueDK = menorQueDK ? `<br><b>No es PICK: ${esc(m.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Apostar a un momio peor que el del mercado es la forma más segura de perder valor; si puedes, búscalo en otra casa.` : '';
-      const sinPickDK = v => v === 'PICK' && menorQueDK ? 'SKIP' : v;      // con un momio menor que el de DraftKings nunca es PICK
+      // las reglas de Europa quitan el PICK cuando el valor lo ve solo el modelo; si tu casa paga más que el precio justo del
+      // mercado, el valor es real y la regla no aplica
+      const evMk = mk ? (() => { let W = mk.W, Lo = mk.Lo; if (pa != null) { const x = pa - p; W += x; Lo -= x; } return W * (dec - 1) - Lo; })() : null;
+      const rg0 = reglaDe(m, o.k, dec), rg = rg0 && !(evMk != null && evMk >= EXC_MERCADO) ? rg0 : null;
+      const sinPickDK = v => v === 'PICK' && menorQueDK ? 'SKIP' : v === 'PICK' && rg ? 'MAYBE' : v;   // con un momio menor que el de DraftKings nunca es PICK; ni con las reglas de Europa
       const linMk = () => {
         if (!mk) return peorQueDK;
         let W = mk.W, Lo = mk.Lo;
@@ -1037,12 +1069,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           + (ambos ? '<b>El modelo y el mercado ven valor: es la mejor señal.</b>' : evM >= 0 ? 'Tu casa paga más que el mercado aunque el modelo no lo vea: eso sí es valor.' : (pa != null ? pa * dec - 1 : ev) >= 0 ? juicioMercado(evM, o.k) : '') + peorQueDK;
       };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
-        const evPA = pa * dec - 1, v0 = sinPickDK(vB(verdictOf(evPA, pa), o.k)), op = v0 === 'PICK' ? otroPick(m, o.k, pa) : null, v = op ? 'MAYBE' : v0;
-        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}${notaOtro(op)}${avisoBajas(o.k)}`;
+        const evPA = pa * dec - 1, vR = vB(verdictOf(evPA, pa), o.k), v0 = sinPickDK(vR), op = v0 === 'PICK' ? otroPick(m, o.k, pa) : null, v = op ? 'MAYBE' : v0;
+        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
         return { o, p: pa, push, dec, pa: true };
       }
-      const v0 = sinPickDK(vB(verdictOf(ev, p), o.k)), op = v0 === 'PICK' ? otroPick(m, o.k, p) : null, v = op ? 'MAYBE' : v0;
-      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}${notaOtro(op)}${avisoBajas(o.k)}`;
+      const vR = vB(verdictOf(ev, p), o.k), v0 = sinPickDK(vR), op = v0 === 'PICK' ? otroPick(m, o.k, p) : null, v = op ? 'MAYBE' : v0;
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
       return { o, p, push, dec };
     };
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);

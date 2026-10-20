@@ -50,7 +50,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -120,
     -125
    ],
    "spread": [
@@ -108,11 +108,27 @@
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    600,
+    350,
+    -245
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -170
+    ],
+    [
+     "-1.5",
+     110
+    ]
+   ]
   }
  },
  {
@@ -158,11 +174,27 @@
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    450,
+    295,
+    -180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     130
+    ],
+    [
+     "-0.5",
+     -200
+    ]
+   ]
   }
  },
  {
@@ -263,5 +295,16 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401885408",
+  "utc": "2026-10-30T20:15Z",
+  "estadio": "Estádio Municipal de Rio Maior",
+  "local_espn": "Casa Pia",
+  "visita_espn": "Sporting CP",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
  }
 ]
