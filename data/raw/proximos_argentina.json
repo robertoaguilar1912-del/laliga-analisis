@@ -1,182 +1,33 @@
 [
  {
-  "id": "401841617",
-  "utc": "2026-10-19T22:00Z",
-  "estadio": "Eva Perón",
-  "local_espn": "Sarmiento (Junín)",
-  "visita_espn": "Barracas Central",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    140,
-    200,
-    230
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -205,
-    150
-   ],
-   "spread": [
-    [
-     "-0.5",
-     130
-    ],
-    [
-     "+0.5",
-     -180
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Sarmiento (Junín)": [
-    [
-     "365450",
-     "Thyago Ayala",
-     "SUB"
-    ],
-    [
-     "202225",
-     "Lucas Suarez",
-     "SUB"
-    ],
-    [
-     "356976",
-     "Santiago Salle",
-     "SUB"
-    ],
-    [
-     "188476",
-     "Mauricio Martínez",
-     "SUB"
-    ],
-    [
-     "379769",
-     "Julián Mavilla",
-     "SUB"
-    ],
-    [
-     "118725",
-     "Juan Insaurralde",
-     "SUB"
-    ],
-    [
-     "402942",
-     "Jhon Rentería",
-     "SUB"
-    ],
-    [
-     "361303",
-     "Julian Contrera",
-     "SUB"
-    ],
-    [
-     "279074",
-     "Cristian Zabala",
-     "SUB"
-    ],
-    [
-     "276062",
-     "Renzo Orihuela",
-     "SUB"
-    ],
-    [
-     "253308",
-     "Junior Marabel",
-     "SUB"
-    ]
-   ],
-   "Barracas Central": [
-    [
-     "256553",
-     "Marcelo Miño",
-     "G"
-    ],
-    [
-     "206618",
-     "Rafael Barrios",
-     "D"
-    ],
-    [
-     "269817",
-     "Elías Pereyra",
-     "D"
-    ],
-    [
-     "262496",
-     "Nicolás De Martini",
-     "D"
-    ],
-    [
-     "237040",
-     "Yonatthan Rak",
-     "D"
-    ],
-    [
-     "316295",
-     "Enzo Taborda",
-     "M"
-    ],
-    [
-     "292028",
-     "Iván Tapia",
-     "M"
-    ],
-    [
-     "217154",
-     "Rodrigo Bogarín",
-     "M"
-    ],
-    [
-     "227730",
-     "Esteban Rolón",
-     "M"
-    ],
-    [
-     "240421",
-     "Norberto Briasco",
-     "F"
-    ],
-    [
-     "193531",
-     "Nicolás Orsini",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841625",
   "utc": "2026-10-20T00:15Z",
   "estadio": "Guillermo Laza",
   "local_espn": "Deportivo Riestra",
   "visita_espn": "Unión (Santa Fe)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
+    110,
     210,
-    270
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
     140,
-    -185
+    -190
    ],
    "spread": [
     [
      "-0.5",
-     105
+     100
     ],
     [
      "+0.5",
-     -145
+     -140
     ]
    ]
   },
@@ -633,6 +484,50 @@
   "estadio": "Diego Armando Maradona",
   "local_espn": "Argentinos Juniors",
   "visita_espn": "Independiente Rivadavia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841655",
+  "utc": "2026-10-30T22:00Z",
+  "estadio": "Ciudad de Río Cuarto Antonio Candini",
+  "local_espn": "Estudiantes de Río Cuarto",
+  "visita_espn": "Gimnasia La Plata",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841653",
+  "utc": "2026-10-30T22:00Z",
+  "estadio": "Estadio Tomás Adolfo Ducó",
+  "local_espn": "Huracán",
+  "visita_espn": "Tigre",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841648",
+  "utc": "2026-10-31T00:15Z",
+  "estadio": "Presidente Perón (Cilindro de Avellaneda)",
+  "local_espn": "Racing Club",
+  "visita_espn": "Aldosivi",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841647",
+  "utc": "2026-10-31T00:15Z",
+  "estadio": "Eva Perón",
+  "local_espn": "Sarmiento (Junín)",
+  "visita_espn": "Rosario Central",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,

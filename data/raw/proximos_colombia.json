@@ -11,14 +11,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    250,
-    400
+    -150,
+    245,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -140
+    110,
+    -145
    ],
    "spread": [
     [
@@ -28,6 +28,122 @@
     [
      "+0.5",
      110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Deportivo Pasto": [
+    [
+     "205977",
+     "Geovanni Banguera",
+     "G"
+    ],
+    [
+     "238823",
+     "Nicolás Gil",
+     "CD-L"
+    ],
+    [
+     "149025",
+     "Fainer Torijano",
+     "CD-R"
+    ],
+    [
+     "405422",
+     "Hervin Goyes",
+     "LB"
+    ],
+    [
+     "322980",
+     "Juan Garavito",
+     "RB"
+    ],
+    [
+     "272845",
+     "Yeiler Goez",
+     "CM-L"
+    ],
+    [
+     "187918",
+     "Franco Leys",
+     "CM-R"
+    ],
+    [
+     "241475",
+     "Enrique Serje",
+     "LM"
+    ],
+    [
+     "334197",
+     "Joider Micolta",
+     "RM"
+    ],
+    [
+     "301280",
+     "Jonathan Perlaza",
+     "CF-L"
+    ],
+    [
+     "276994",
+     "Diego Chavez",
+     "CF-R"
+    ]
+   ],
+   "Alianza FC": [
+    [
+     "398879",
+     "Eduar Esteban",
+     "G"
+    ],
+    [
+     "3099045",
+     "Leyner David Palacios Cordoba",
+     "D"
+    ],
+    [
+     "31750",
+     "Juan Viveros",
+     "D"
+    ],
+    [
+     "322983",
+     "Jesús Figueroa",
+     "D"
+    ],
+    [
+     "193475",
+     "Kevin Moreno",
+     "D"
+    ],
+    [
+     "336820",
+     "Jesús Muñoz",
+     "M"
+    ],
+    [
+     "272557",
+     "Wiston Fernández",
+     "M"
+    ],
+    [
+     "301336",
+     "Jair Castillo",
+     "M"
+    ],
+    [
+     "215752",
+     "Israel Alba",
+     "M"
+    ],
+    [
+     "366879",
+     "Jhildrey Lasso",
+     "M"
+    ],
+    [
+     "398890",
+     "Cristian Vergara",
+     "F"
     ]
    ]
   }
@@ -523,6 +639,50 @@
     [
      "+0.5",
      135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401877995",
+  "utc": "2026-10-30T23:00Z",
+  "estadio": "",
+  "local_espn": "Deportivo Pereira",
+  "visita_espn": "Jaguares de Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878044",
+  "utc": "2026-10-31T01:05Z",
+  "estadio": "Estadio Alfonso López",
+  "local_espn": "Atlético Bucaramanga",
+  "visita_espn": "Deportivo Pasto",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -185,
+    250,
+    475
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -195
+    ],
+    [
+     "+0.5",
+     125
     ]
    ]
   }
