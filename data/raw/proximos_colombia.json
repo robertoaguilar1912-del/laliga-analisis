@@ -1,168 +1,19 @@
 [
  {
-  "id": "401878040",
-  "utc": "2026-10-20T21:30Z",
-  "estadio": "Deportivo Cali",
-  "local_espn": "Deportivo Pereira",
-  "visita_espn": "Boyacá Chicó FC",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    120,
-    195,
-    250
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    130,
-    -175
-   ],
-   "spread": [
-    [
-     "-0.5",
-     110
-    ],
-    [
-     "+0.5",
-     -155
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Deportivo Pereira": [
-    [
-     "259658",
-     "Yimy Gómez",
-     "G"
-    ],
-    [
-     "320086",
-     "Santiago Aguilar",
-     "CD-L"
-    ],
-    [
-     "132421",
-     "Carlos Cruz",
-     "CD-R"
-    ],
-    [
-     "252494",
-     "Fabio Delgado",
-     "LB"
-    ],
-    [
-     "228693",
-     "Jordy Monroy",
-     "RB"
-    ],
-    [
-     "197652",
-     "Walmer Pacheco",
-     "AM"
-    ],
-    [
-     "276181",
-     "Ederson Moreno",
-     "LM"
-    ],
-    [
-     "22314",
-     "Miguel Palacios",
-     "RM"
-    ],
-    [
-     "151412",
-     "Marco Pérez",
-     "F"
-    ],
-    [
-     "379518",
-     "Jhon Largacha",
-     "AM-L"
-    ],
-    [
-     "136765",
-     "Anderson Plata",
-     "AM-R"
-    ]
-   ],
-   "Boyacá Chicó FC": [
-    [
-     "171512",
-     "David Agudelo",
-     "G"
-    ],
-    [
-     "197492",
-     "Jefferson Mena",
-     "CD-L"
-    ],
-    [
-     "3100467",
-     "Jhonier Camilo Alomía Díaz",
-     "CD-R"
-    ],
-    [
-     "92528",
-     "Cristian Blanco",
-     "LB"
-    ],
-    [
-     "345702",
-     "Cristian Mosquera",
-     "RB"
-    ],
-    [
-     "106782",
-     "Juan Díaz",
-     "CM-L"
-    ],
-    [
-     "206117",
-     "Sebastián Salazar",
-     "CM-R"
-    ],
-    [
-     "339961",
-     "Santiago Mera",
-     "LM"
-    ],
-    [
-     "322906",
-     "Estiven Sarria",
-     "RM"
-    ],
-    [
-     "302117",
-     "Jacobo Pimentel",
-     "CF-L"
-    ],
-    [
-     "334088",
-     "Isaac Camargo",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401878033",
   "utc": "2026-10-20T23:15Z",
   "estadio": "Metropolitano de Techo",
   "local_espn": "Internacional de Bogotá",
   "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    230,
-    185
+    110,
+    225,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     125
+     105
     ],
     [
      "+0.5",
-     -175
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Internacional de Bogotá": [
+    [
+     "220056",
+     "Wuilker Faríñez",
+     "G"
+    ],
+    [
+     "302480",
+     "Carlos Vivas",
+     "CD"
+    ],
+    [
+     "315810",
+     "Agustín Irazoque",
+     "CD-L"
+    ],
+    [
+     "217454",
+     "Joan Castro",
+     "CD-R"
+    ],
+    [
+     "197568",
+     "Larry Vásquez",
+     "CM-L"
+    ],
+    [
+     "331702",
+     "Dewar Victoria",
+     "CM-R"
+    ],
+    [
+     "359505",
+     "Miguel Pernía",
+     "LM"
+    ],
+    [
+     "403073",
+     "Ronaldo Julio",
+     "RM"
+    ],
+    [
+     "379730",
+     "Fabricio Sanguinetti",
+     "F"
+    ],
+    [
+     "222678",
+     "Cristián Dájome",
+     "CF-L"
+    ],
+    [
+     "287648",
+     "Facundo Boné",
+     "CF-R"
+    ]
+   ],
+   "Fortaleza CEIF": [
+    [
+     "285031",
+     "Williams Barlasina",
+     "G"
+    ],
+    [
+     "408101",
+     "Jeferson Medina",
+     "CD-L"
+    ],
+    [
+     "285359",
+     "Yesid Díaz",
+     "CD-R"
+    ],
+    [
+     "378918",
+     "Santiago Cuero",
+     "LB"
+    ],
+    [
+     "417801",
+     "Joan Cajares",
+     "RB"
+    ],
+    [
+     "200363",
+     "Sebastián Navarro",
+     "AM"
+    ],
+    [
+     "413584",
+     "Santiago Vivas",
+     "LM"
+    ],
+    [
+     "170515",
+     "Leonardo Pico",
+     "RM"
+    ],
+    [
+     "135017",
+     "Juan Sebastian Herrera",
+     "F"
+    ],
+    [
+     "378911",
+     "Jhonier Salas",
+     "AM-L"
+    ],
+    [
+     "357928",
+     "Ítalo Montaño",
+     "AM-R"
     ]
    ]
   }
@@ -193,7 +160,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
+    300,
     275,
     -130
    ],
@@ -205,11 +172,127 @@
    "spread": [
     [
      "+0.5",
-     100
+     -105
     ],
     [
      "-0.5",
-     -140
+     -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cúcuta Deportivo": [
+    [
+     "276019",
+     "Federico Abadía",
+     "G"
+    ],
+    [
+     "362722",
+     "Jhon Quiñónes",
+     "CD-L"
+    ],
+    [
+     "309465",
+     "Diego Calcaterra",
+     "CD-R"
+    ],
+    [
+     "178775",
+     "Brayan Montaño",
+     "LB"
+    ],
+    [
+     "233032",
+     "Hernán Ezequiel Lópes",
+     "RB"
+    ],
+    [
+     "417407",
+     "Marlon Carabalí",
+     "CM"
+    ],
+    [
+     "85219",
+     "Carlos Rentería",
+     "LM"
+    ],
+    [
+     "230976",
+     "Sebastián Tamara",
+     "RM"
+    ],
+    [
+     "180487",
+     "Gustavo Torres",
+     "F"
+    ],
+    [
+     "315607",
+     "Leider Berdugo",
+     "LF"
+    ],
+    [
+     "416627",
+     "Dayan Pérez",
+     "RF"
+    ]
+   ],
+   "Atlético Nacional": [
+    [
+     "315576",
+     "Luis Marquínez",
+     "G"
+    ],
+    [
+     "287250",
+     "César Haydar",
+     "CD-L"
+    ],
+    [
+     "419252",
+     "Neider Parra",
+     "CD-R"
+    ],
+    [
+     "336455",
+     "Samuel Velásquez",
+     "LB"
+    ],
+    [
+     "252488",
+     "Andres Román",
+     "RB"
+    ],
+    [
+     "407306",
+     "Andrés Marín",
+     "AM"
+    ],
+    [
+     "270221",
+     "Jorman Campuzano",
+     "LM"
+    ],
+    [
+     "197531",
+     "Mateus Uribe",
+     "RM"
+    ],
+    [
+     "82816",
+     "James Rodríguez",
+     "F"
+    ],
+    [
+     "336437",
+     "Kevin Parra",
+     "AM-L"
+    ],
+    [
+     "378916",
+     "Nicolás Rodríguez",
+     "AM-R"
     ]
    ]
   }
