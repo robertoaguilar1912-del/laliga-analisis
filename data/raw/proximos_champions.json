@@ -5,7 +5,7 @@
   "estadio": "Şükrü Saracoğlu Stadium",
   "local_espn": "Fenerbahce",
   "visita_espn": "Slavia Prague",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Baku Olympic Stadium",
   "local_espn": "Sabah FK",
   "visita_espn": "Borussia Dortmund",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -313,10 +313,10 @@
     900,
     2000
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 4.5,
    "ou": [
-    -165,
-    130
+    130,
+    -165
    ],
    "spread": [
     [
@@ -348,8 +348,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    135,
-    -165
+    130,
+    -160
    ],
    "spread": [
     [
@@ -358,7 +358,7 @@
     ],
     [
      "+1.5",
-     -170
+     -175
     ]
    ]
   }
@@ -375,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    370,
-    500
+    -175,
+    350,
+    450
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -135
+    125,
+    -155
    ],
    "spread": [
     [
      "-1.5",
-     115
+     140
     ],
     [
      "+1.5",
-     -160
+     -195
     ]
    ]
   }
@@ -408,23 +408,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -750,
+    -700,
     800,
-    1700
+    1600
    ],
    "ou_linea": 3.5,
    "ou": [
-    -145,
+    -140,
     115
    ],
    "spread": [
     [
      "-2.5",
-     -110
+     100
     ],
     [
      "+2.5",
-     -125
+     -135
     ]
    ]
   }
@@ -441,23 +441,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -135,
     300,
-    370
+    340
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    140
+    135,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -145
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }
@@ -480,17 +480,17 @@
    ],
    "ou_linea": 4.5,
    "ou": [
-    115,
-    -140
+    120,
+    -145
    ],
    "spread": [
     [
-     "-0.5",
-     140
+     "+0.5",
+     -185
     ],
     [
-     "+0.5",
-     -170
+     "-0.5",
+     135
     ]
    ]
   }
@@ -514,12 +514,12 @@
    "ou_linea": 3.5,
    "ou": [
     115,
-    -145
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     -130
+     -135
     ],
     [
      "-0.5",
@@ -579,7 +579,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -175,
     140
    ],
    "spread": [
