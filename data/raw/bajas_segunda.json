@@ -1,7 +1,7 @@
 {
 "401883152": {
 "fotmob": 5868510,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -24,7 +24,7 @@
 {
 "nombre": "Guille Bueno",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 1259656.0,
 "titular": false,
@@ -51,8 +51,8 @@
 {
 "nombre": "Dani Pérez",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 0.0,
 "titular": false,
 "importante": false
@@ -65,8 +65,8 @@
 },
 "401883128": {
 "fotmob": 5868508,
-"visto": "2026-10-20T07:44+00:00",
-"xi": "unavailable",
+"visto": "2026-10-20T11:31+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -97,7 +97,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 6978855.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -109,8 +109,8 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 0.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Sergio Álvarez",
@@ -119,17 +119,17 @@
 "duda": true,
 "valor": 394054.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 5369350.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.07338951642191327
 }
 },
 "401883151": {
 "fotmob": 5868511,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -202,7 +202,7 @@
 },
 "401883308": {
 "fotmob": 5868509,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -250,6 +250,15 @@
 "importante": true
 },
 {
+"nombre": "Kike Ribes",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 490105.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Anthony Khayat",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -261,12 +270,12 @@
 ],
 "valor_xi": 5089465.0,
 "perdida": 0.13696174352314044,
-"perdida_duda": 0.2100544949223543
+"perdida_duda": 0.3063524358650664
 }
 },
 "401883150": {
 "fotmob": 5868512,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -356,7 +365,7 @@
 },
 "401883153": {
 "fotmob": 5868504,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -381,7 +390,7 @@
 {
 "nombre": "Rodrigo Ely",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 416613.0,
 "titular": false,
@@ -413,9 +422,18 @@
 "importante": true
 },
 {
+"nombre": "Carlos Domínguez",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 1632607.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Estanis Pedrola",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 1086037.0,
 "titular": false,
@@ -442,7 +460,7 @@
 {
 "nombre": "Alexandru Ișfan",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 960260.0,
 "titular": false,
@@ -459,13 +477,13 @@
 }
 ],
 "valor_xi": 12135494.0,
-"perdida": 0.3180422651109217,
+"perdida": 0.45257383012178987,
 "perdida_duda": 0.23489097353597638
 }
 },
 "401883127": {
 "fotmob": 5868513,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -492,7 +510,7 @@
 },
 "401883132": {
 "fotmob": 5868503,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -517,7 +535,7 @@
 {
 "nombre": "Fran Gámez",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 244267.0,
 "titular": false,
@@ -592,7 +610,7 @@
 },
 "401883130": {
 "fotmob": 5868506,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -656,7 +674,7 @@
 },
 "401883129": {
 "fotmob": 5868507,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -738,7 +756,7 @@
 },
 "401883131": {
 "fotmob": 5868505,
-"visto": "2026-10-20T07:44+00:00",
+"visto": "2026-10-20T11:31+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -751,8 +769,8 @@
 {
 "nombre": "David González",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "mediados de noviembre",
+"duda": false,
 "valor": 2149270.0,
 "titular": false,
 "importante": false
