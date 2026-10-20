@@ -1,160 +1,11 @@
 [
  {
-  "id": "401915403",
-  "utc": "2026-10-20T16:45Z",
-  "estadio": "Şükrü Saracoğlu Stadium",
-  "local_espn": "Fenerbahce",
-  "visita_espn": "Slavia Prague",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -240,
-    425,
-    600
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    100,
-    -125
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -105
-    ],
-    [
-     "+1.5",
-     -130
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Fenerbahce": [
-    [
-     "176948",
-     "Ederson",
-     "G"
-    ],
-    [
-     "222670",
-     "Nélson Semedo",
-     "D"
-    ],
-    [
-     "159248",
-     "Nathan Aké",
-     "D"
-    ],
-    [
-     "320982",
-     "Archie Brown",
-     "D"
-    ],
-    [
-     "175195",
-     "Milan Skriniar",
-     "D"
-    ],
-    [
-     "248676",
-     "Matteo Guendouzi",
-     "M"
-    ],
-    [
-     "276221",
-     "Mason Greenwood",
-     "M"
-    ],
-    [
-     "173556",
-     "N'Golo Kanté",
-     "M"
-    ],
-    [
-     "322813",
-     "Oguz Aydin",
-     "M"
-    ],
-    [
-     "306789",
-     "Kerem Aktürkoglu",
-     "M"
-    ],
-    [
-     "240209",
-     "Vedat Muriqi",
-     "F"
-    ]
-   ],
-   "Slavia Prague": [
-    [
-     "291407",
-     "Jakub Markovic",
-     "G"
-    ],
-    [
-     "290116",
-     "David Zima",
-     "D"
-    ],
-    [
-     "220165",
-     "Ange N'Guessan",
-     "D"
-    ],
-    [
-     "283008",
-     "Tomás Vlcek",
-     "D"
-    ],
-    [
-     "410093",
-     "Wiktor Nowak",
-     "M"
-    ],
-    [
-     "256751",
-     "David Moses",
-     "M"
-    ],
-    [
-     "3099524",
-     "Oskar Kubiak",
-     "M"
-    ],
-    [
-     "3098601",
-     "Emmanuel Dennis Ayaosi",
-     "M"
-    ],
-    [
-     "418535",
-     "Mubarak Suleiman",
-     "M"
-    ],
-    [
-     "294618",
-     "Lukás Provod",
-     "M"
-    ],
-    [
-     "322169",
-     "Danijel Sturm",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915402",
   "utc": "2026-10-20T19:00Z",
   "estadio": "Olimpico",
   "local_espn": "AS Roma",
   "visita_espn": "Slovan Bratislava",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -172,11 +23,11 @@
    "spread": [
     [
      "-2.5",
-     -145
+     -150
     ],
     [
      "+2.5",
-     105
+     110
     ]
    ]
   },
@@ -303,7 +154,7 @@
   "estadio": "Estádio do Dragão",
   "local_espn": "FC Porto",
   "visita_espn": "PSV Eindhoven",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -313,19 +164,19 @@
     370,
     500
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -160
+    -175,
+    140
    ],
    "spread": [
     [
      "-1.5",
-     115
+     120
     ],
     [
      "+1.5",
-     -160
+     -165
     ]
    ]
   },
@@ -452,29 +303,29 @@
   "estadio": "Anfield",
   "local_espn": "Liverpool",
   "visita_espn": "Villarreal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    340,
-    450
+    -185,
+    350,
+    475
    ],
    "ou_linea": 3.5,
    "ou": [
-    140,
-    -175
+    135,
+    -170
    ],
    "spread": [
     [
-     "-0.5",
-     -200
+     "-1.5",
+     135
     ],
     [
-     "+0.5",
-     140
+     "+1.5",
+     -190
     ]
    ]
   },
@@ -601,29 +452,29 @@
   "estadio": "Etihad Stadium",
   "local_espn": "Manchester City",
   "visita_espn": "AEK Athens",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     -650,
-    750,
+    800,
     1400
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
      "-2.5",
-     110
+     -105
     ],
     [
      "+2.5",
-     -150
+     -130
     ]
    ]
   },
@@ -750,29 +601,29 @@
   "estadio": "Stadio Diego Armando Maradona",
   "local_espn": "Napoli",
   "visita_espn": "Bodo/Glimt",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
+    -150,
     310,
-    370
+    380
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -155
+    110,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -170
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   },
@@ -899,29 +750,29 @@
   "estadio": "Parc des Princes",
   "local_espn": "Paris Saint-Germain",
   "visita_espn": "Barcelona",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    330,
-    150
+    135,
+    340,
+    155
    ],
    "ou_linea": 4.5,
    "ou": [
-    125,
-    -155
+    115,
+    -145
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -200
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   },
@@ -1048,29 +899,29 @@
   "estadio": "MHPArena",
   "local_espn": "VfB Stuttgart",
   "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
+    220,
     285,
-    120
+    110
    ],
    "ou_linea": 3.5,
    "ou": [
     115,
-    -145
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -140
     ],
     [
      "-0.5",
-     110
+     100
     ]
    ]
   },
@@ -1308,7 +1159,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     135
    ],
    "spread": [
@@ -1341,7 +1192,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
+    105,
     -135
    ],
    "spread": [
@@ -1467,7 +1318,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -500,
+    -525,
     700,
     1100
    ],
