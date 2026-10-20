@@ -5,15 +5,15 @@
   "estadio": "Deportivo Cali",
   "local_espn": "Deportivo Pereira",
   "visita_espn": "Boyacá Chicó FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     120,
-    200,
-    240
+    195,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     120
+     110
     ],
     [
      "+0.5",
-     -165
+     -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Deportivo Pereira": [
+    [
+     "259658",
+     "Yimy Gómez",
+     "G"
+    ],
+    [
+     "320086",
+     "Santiago Aguilar",
+     "CD-L"
+    ],
+    [
+     "132421",
+     "Carlos Cruz",
+     "CD-R"
+    ],
+    [
+     "252494",
+     "Fabio Delgado",
+     "LB"
+    ],
+    [
+     "228693",
+     "Jordy Monroy",
+     "RB"
+    ],
+    [
+     "197652",
+     "Walmer Pacheco",
+     "AM"
+    ],
+    [
+     "276181",
+     "Ederson Moreno",
+     "LM"
+    ],
+    [
+     "22314",
+     "Miguel Palacios",
+     "RM"
+    ],
+    [
+     "151412",
+     "Marco Pérez",
+     "F"
+    ],
+    [
+     "379518",
+     "Jhon Largacha",
+     "AM-L"
+    ],
+    [
+     "136765",
+     "Anderson Plata",
+     "AM-R"
+    ]
+   ],
+   "Boyacá Chicó FC": [
+    [
+     "171512",
+     "David Agudelo",
+     "G"
+    ],
+    [
+     "197492",
+     "Jefferson Mena",
+     "CD-L"
+    ],
+    [
+     "3100467",
+     "Jhonier Camilo Alomía Díaz",
+     "CD-R"
+    ],
+    [
+     "92528",
+     "Cristian Blanco",
+     "LB"
+    ],
+    [
+     "345702",
+     "Cristian Mosquera",
+     "RB"
+    ],
+    [
+     "106782",
+     "Juan Díaz",
+     "CM-L"
+    ],
+    [
+     "206117",
+     "Sebastián Salazar",
+     "CM-R"
+    ],
+    [
+     "339961",
+     "Santiago Mera",
+     "LM"
+    ],
+    [
+     "322906",
+     "Estiven Sarria",
+     "RM"
+    ],
+    [
+     "302117",
+     "Jacobo Pimentel",
+     "CF-L"
+    ],
+    [
+     "334088",
+     "Isaac Camargo",
+     "CF-R"
     ]
    ]
   }
@@ -77,23 +193,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    270,
-    -130
+    320,
+    280,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -150,
     110
    ],
    "spread": [
     [
      "+0.5",
-     100
+     105
     ],
     [
      "-0.5",
-     -135
+     -145
     ]
    ]
   }
@@ -126,7 +242,7 @@
     ],
     [
      "+0.5",
-     100
+     -105
     ]
    ]
   }
