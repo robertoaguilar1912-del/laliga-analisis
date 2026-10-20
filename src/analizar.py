@@ -19,7 +19,7 @@ from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
 from mercado import implicitas
-from picks import un_pick_por_familia
+from picks import un_pick_por_familia, reglas_europa, GANA_MAX, SIN_MENOS_DIAS
 from corners import CornerModel, RematesModel
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
@@ -488,6 +488,7 @@ def analizar_liga(liga):
         nuevos = previos_nuevos(nuevos, temporada, df2, L.get('previo_descendido'))
     hist = df[(df.Date < ref) & (df.Date >= ref - pd.Timedelta(days=3 * 365))]
     calendario = None
+    con_m = False
     if L.get('region'):
         # un solo modelo por región: 21 ligas de Europa y las tres copas de la UEFA, o 12 ligas de Sudamérica con
         # Libertadores y Sudamericana (ver europa.py); córners y remates no: no hay suficientes partidos de copa con esas
@@ -552,6 +553,15 @@ def analizar_liga(liga):
     pb = RAW / f'bajas_{liga}.json'
     bajas = json.load(open(pb)) if pb.exists() else {}
     aplicar_bajas(partidos, bajas, equipos)
+    # 8 ligas de Europa con momios: sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" al empezar la temporada
+    # (ver picks.py); la calculadora aplica lo mismo con el momio de tu casa ('reglas' de cada partido)
+    if L.get('fd') and con_m:
+        inicio = df[df.Season == temporada].Date.min()
+        for p in partidos:
+            fecha = pd.Timestamp(p['utc'][:10])
+            dias = int((fecha - inicio).days) if pd.notna(inicio) else 0
+            reglas_europa(p['con_momio'], dias)
+            p['reglas'] = {'gana_max': GANA_MAX, 'sin_menos': dias < SIN_MENOS_DIAS}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'

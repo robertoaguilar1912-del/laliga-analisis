@@ -22,6 +22,7 @@ from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
 from mercado import implicitas
+from picks import GANA_MAX, SIN_MENOS_DIAS
 
 VENTANA = 3 * 365
 DESDE = {'europa': '2020-08-01', 'torneos': '2020-07-01', 'anual': '2021-01-01'}
@@ -137,7 +138,9 @@ def preparar(df, solo_cierre):
     return df
 
 
-def apuestas(df, book, thr, mercados, con_clv):
+def apuestas(df, book, thr, mercados, con_clv, reglas=False):
+    """reglas: las de la página en las 8 ligas de Europa (picks.py): sin "Gana" con momio de GANA_MAX o más ni "Menos de"
+    en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias')."""
     out = []
     sel = []
     if '1x2' in mercados:
@@ -148,6 +151,10 @@ def apuestas(df, book, thr, mercados, con_clv):
         p, odds = df[pm], df[oc]
         ev = p * odds - 1
         m = (ev >= thr) & odds.notna() & p.notna() & (p >= PICK_P_MIN)     # con menos de 30% no es PICK (config.py)
+        if reglas and outcome in 'HA':
+            m &= odds < GANA_MAX
+        if reglas and outcome == 'U':
+            m &= df.dias >= SIN_MENOS_DIAS
         sub = df[m]
         won = (sub.res == outcome) if outcome in 'HDA' else (sub.over if outcome == 'O' else ~sub.over)
         out.append(pd.DataFrame({'Date': sub.Date, 'Season': sub.Season, 'sel': outcome, 'odds': odds[m], 'p': p[m], 'ev': ev[m],
@@ -192,8 +199,11 @@ def evaluar(liga, df):
     else:
         book, mercados, con_clv = 'B365', ('1x2', 'ou'), True
         df = df[df[['B365H', 'B365D', 'B365A']].notna().all(1)]
-        ref = 'la cuota de apertura de Bet365'
+        ref = ('la cuota de apertura de Bet365, con las reglas de la página: sin "Gana" con momio de 2.00 o más ni "Menos de" '
+               'en las primeras 13 semanas de cada temporada')
         mtxt = '1X2 y más/menos 2.5 goles'
+    df['dias'] = (df.Date - df.groupby('Season').Date.transform('min')).dt.days
+    reglas = not solo_cierre
     r = df.res.map({'H': 0, 'D': 1, 'A': 2}).values
     i = np.arange(len(df))
     ll = {'1x2': {'modelo': float(-np.mean(np.log(np.c_[df.pH, df.pD, df.pA][i, r]))),
@@ -202,8 +212,8 @@ def evaluar(liga, df):
     out = {'partidos': int(len(df)), 'desde': str(df.Date.min().date()), 'hasta': str(df.Date.max().date()), 'logloss': ll,
            'estrategias': {}, 'principal': principal, 'referencia': ref, 'mercados': mtxt}
     for thr in (0.0, 0.03, 0.05, 0.10):
-        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv))
-    b = apuestas(df, book, 0.05, mercados, con_clv)
+        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas))
+    b = apuestas(df, book, 0.05, mercados, con_clv, reglas)
     b['mes'] = b.Date.dt.to_period('M').astype(str)
     mensual = b.groupby('mes').agg(n=('profit', 'size'), ganancia=('profit', 'sum')).reset_index()
     out['mensual'] = mensual.to_dict('records')
@@ -213,7 +223,7 @@ def evaluar(liga, df):
     out['por_seleccion'] = b.groupby('sel').agg(n=('profit', 'size'), roi=('profit', 'mean')).reset_index().to_dict('records')
     out['curva'] = [{'d': str(d.date()), 'u': float(u)} for d, u in zip(b.Date, b.profit.cumsum())]
     out['calibracion'] = calibracion(df)
-    b0 = apuestas(df, book, 0.0, mercados, con_clv)
+    b0 = apuestas(df, book, 0.0, mercados, con_clv, reglas)
     b0['tramo'] = pd.cut(b0.ev, [0, 0.05, 0.10, 0.20, 10], right=False, labels=['0–5 %', '5–10 %', '10–20 %', '20 % o más'])
     g = b0.groupby('tramo', observed=True).agg(n=('profit', 'size'), roi=('profit', 'mean'), clv=('clv', 'mean'))
     out['por_ev'] = [{'tramo': str(t), 'n': int(r.n), 'roi': float(r.roi), 'clv': None if pd.isna(r.clv) else float(r.clv)} for t, r in g.iterrows()]
