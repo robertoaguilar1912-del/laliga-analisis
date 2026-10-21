@@ -1,154 +1,5 @@
 [
  {
-  "id": "401860397",
-  "utc": "2026-10-20T22:30Z",
-  "estadio": "Estadio VGD",
-  "local_espn": "Londrina",
-  "visita_espn": "Cuiabá",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    220,
-    220,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -160
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -170
-    ],
-    [
-     "-0.5",
-     120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Londrina": [
-    [
-     "271559",
-     "Luan",
-     "G"
-    ],
-    [
-     "199044",
-     "Wallace Reis",
-     "CD-L"
-    ],
-    [
-     "418227",
-     "Caio",
-     "CD-R"
-    ],
-    [
-     "202561",
-     "Tarik",
-     "DM"
-    ],
-    [
-     "292283",
-     "Heron",
-     "LB"
-    ],
-    [
-     "398498",
-     "Kauê Leonardo",
-     "RB"
-    ],
-    [
-     "315284",
-     "Guilherme Maciel Dantas",
-     "CM-L"
-    ],
-    [
-     "349559",
-     "Geovane Santana Meurer",
-     "CM-R"
-    ],
-    [
-     "250391",
-     "Herbert Mateus Almeida De Oliveira",
-     "LM"
-    ],
-    [
-     "390376",
-     "Vitinho Mota",
-     "RM"
-    ],
-    [
-     "166488",
-     "William Pottker",
-     "F"
-    ]
-   ],
-   "Cuiabá": [
-    [
-     "119069",
-     "João Carlos",
-     "G"
-    ],
-    [
-     "345704",
-     "Calebe",
-     "CD"
-    ],
-    [
-     "290099",
-     "Vitor Mendes",
-     "CD-L"
-    ],
-    [
-     "231850",
-     "Joao Basso",
-     "CD-R"
-    ],
-    [
-     "395391",
-     "David Miguel De Souza Arcanjo",
-     "CM-L"
-    ],
-    [
-     "224731",
-     "Raul",
-     "CM-R"
-    ],
-    [
-     "402827",
-     "Lorenzo",
-     "LM"
-    ],
-    [
-     "298951",
-     "Igor",
-     "RM"
-    ],
-    [
-     "267917",
-     "Pedro",
-     "F"
-    ],
-    [
-     "155056",
-     "Jean Dias",
-     "CF-L"
-    ],
-    [
-     "382994",
-     "Kauan",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401860410",
   "utc": "2026-10-23T22:30Z",
   "estadio": "Germano Krüger",
@@ -162,12 +13,12 @@
    "ml": [
     -115,
     240,
-    295
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -145
+    -140
    ],
    "spread": [
     [
@@ -199,7 +50,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    110,
     -155
    ],
    "spread": [
@@ -342,17 +193,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    100
+    -150,
+    105
    ],
    "spread": [
     [
      "+1.5",
-     -115
+     -110
     ],
     [
      "-1.5",
-     -135
+     -140
     ]
    ]
   }
@@ -418,6 +269,39 @@
   "estadio": "Heriberto Hülse",
   "local_espn": "Criciúma",
   "visita_espn": "Ponte Preta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860413",
+  "utc": "2026-10-31T19:00Z",
+  "estadio": "Estádio Santa Cruz",
+  "local_espn": "Botafogo-SP",
+  "visita_espn": "Sport",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860416",
+  "utc": "2026-10-31T21:00Z",
+  "estadio": "Estádio Onésio Brasileiro Alvarenga",
+  "local_espn": "Vila Nova",
+  "visita_espn": "Juventude",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860421",
+  "utc": "2026-10-31T22:30Z",
+  "estadio": "Estádio dos Aflitos",
+  "local_espn": "Náutico",
+  "visita_espn": "Avaí",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,

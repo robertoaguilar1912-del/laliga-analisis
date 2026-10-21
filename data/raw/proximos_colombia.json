@@ -5,7 +5,7 @@
   "estadio": "Metropolitano de Techo",
   "local_espn": "Internacional de Bogotá",
   "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "General Santander",
   "local_espn": "Cúcuta Deportivo",
   "visita_espn": "Atlético Nacional",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -780,5 +780,16 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401878071",
+  "utc": "2026-10-31T23:00Z",
+  "estadio": "Estadio Bello Horizonte - Rey Pele",
+  "local_espn": "Llaneros FC",
+  "visita_espn": "Atlético Junior",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
  }
 ]

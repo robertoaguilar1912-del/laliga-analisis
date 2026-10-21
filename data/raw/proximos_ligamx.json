@@ -5,29 +5,29 @@
   "estadio": "Estadio Akron",
   "local_espn": "Guadalajara",
   "visita_espn": "Necaxa",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -285,
+    -290,
     450,
     650
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
-    -110
+    -115,
+    -115
    ],
    "spread": [
     [
      "-1.5",
-     -120
+     -125
     ],
     [
      "+1.5",
-     -115
+     -110
     ]
    ]
   },
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    140,
     250,
-    195
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
     -135,
-    100
+    105
    ],
    "spread": [
     [
      "-0.5",
-     120
+     130
     ],
     [
      "+0.5",
-     -170
+     -180
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético de San Luis": [
+    [
+     "187496",
+     "Gibrán Lajud",
+     "G"
+    ],
+    [
+     "346233",
+     "Eduardo Águila",
+     "CD"
+    ],
+    [
+     "263221",
+     "Aldo Cruz",
+     "CD-L"
+    ],
+    [
+     "269746",
+     "Robson Bambu",
+     "CD-R"
+    ],
+    [
+     "232323",
+     "Sébastien Salles-Lamonge",
+     "CM-L"
+    ],
+    [
+     "259819",
+     "Oscar Macías",
+     "CM-R"
+    ],
+    [
+     "359828",
+     "Anderson Duarte",
+     "LM"
+    ],
+    [
+     "26703",
+     "David Rodriguez",
+     "RM"
+    ],
+    [
+     "202539",
+     "Felipe Mora",
+     "F"
+    ],
+    [
+     "311997",
+     "Rafa Llorente",
+     "CF-L"
+    ],
+    [
+     "283623",
+     "Benjamín Galdames",
+     "CF-R"
+    ]
+   ],
+   "Querétaro": [
+    [
+     "149407",
+     "Guillermo Allison",
+     "G"
+    ],
+    [
+     "315939",
+     "Lucas Abascia",
+     "CD-L"
+    ],
+    [
+     "171317",
+     "Carlos Villanueva",
+     "CD-R"
+    ],
+    [
+     "240560",
+     "Daniel Parra",
+     "LB"
+    ],
+    [
+     "372374",
+     "Bayron Duarte",
+     "RB"
+    ],
+    [
+     "263219",
+     "Mateo Coronel",
+     "AM"
+    ],
+    [
+     "362417",
+     "Bernardo Parra",
+     "LM"
+    ],
+    [
+     "309109",
+     "Carlo García",
+     "RM"
+    ],
+    [
+     "297287",
+     "Ali Avila",
+     "F"
+    ],
+    [
+     "116745",
+     "Paulo Victor",
+     "AM-L"
+    ],
+    [
+     "252571",
+     "Enzo Giménez",
+     "AM-R"
     ]
    ]
   }
@@ -193,8 +309,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    255,
+    230,
+    250,
     115
    ],
    "ou_linea": 2.5,
@@ -210,6 +326,122 @@
     [
      "-0.5",
      105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "FC Juárez": [
+    [
+     "239573",
+     "Sebastián Jurado",
+     "G"
+    ],
+    [
+     "335212",
+     "Daniel Piña",
+     "CD-L"
+    ],
+    [
+     "197050",
+     "Jesús Murillo",
+     "CD-R"
+    ],
+    [
+     "283650",
+     "Gilberto Sepúlveda",
+     "LB"
+    ],
+    [
+     "358342",
+     "Leonardo Silva",
+     "RB"
+    ],
+    [
+     "323031",
+     "Ricardinho",
+     "AM"
+    ],
+    [
+     "337308",
+     "Denzell García",
+     "LM"
+    ],
+    [
+     "170506",
+     "Rodrigo Dourado",
+     "RM"
+    ],
+    [
+     "219158",
+     "Óscar Estupiñán",
+     "F"
+    ],
+    [
+     "270379",
+     "Guilherme Castilho",
+     "AM-L"
+    ],
+    [
+     "287807",
+     "Madson",
+     "AM-R"
+    ]
+   ],
+   "Atlante": [
+    [
+     "176824",
+     "Óscar Jiménez",
+     "G"
+    ],
+    [
+     "259939",
+     "Eduardo Tercero",
+     "CD"
+    ],
+    [
+     "317427",
+     "Aarón Quirós",
+     "CD-L"
+    ],
+    [
+     "297375",
+     "Nicolás Carrera",
+     "CD-R"
+    ],
+    [
+     "422084",
+     "Edgar Jiménez",
+     "LB"
+    ],
+    [
+     "304158",
+     "Walter Portales",
+     "RB"
+    ],
+    [
+     "297283",
+     "Eugenio Pizzuto",
+     "CM"
+    ],
+    [
+     "292066",
+     "Luis Calzadilla",
+     "CM-L"
+    ],
+    [
+     "250732",
+     "Martín Sarrafiore",
+     "CM-R"
+    ],
+    [
+     "252405",
+     "Jhojan Julio",
+     "CF-L"
+    ],
+    [
+     "297285",
+     "Luis Puente",
+     "CF-R"
     ]
    ]
   }
@@ -572,6 +804,50 @@
   "estadio": "Estadio Cuauhtémoc",
   "local_espn": "Puebla",
   "visita_espn": "Pumas UNAM",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876916",
+  "utc": "2026-10-31T23:00Z",
+  "estadio": "Estadio Hidalgo",
+  "local_espn": "Pachuca",
+  "visita_espn": "Tigres UANL",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876914",
+  "utc": "2026-11-01T01:00Z",
+  "estadio": "Estadio BBVA",
+  "local_espn": "Monterrey",
+  "visita_espn": "Tijuana",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876915",
+  "utc": "2026-11-01T01:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Atlante",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876913",
+  "utc": "2026-11-01T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "América",
+  "visita_espn": "Toluca",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
