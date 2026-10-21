@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -290,
-    400,
+    -280,
+    425,
     600
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -175
+    -170
    ],
    "spread": [
     [
      "-1.5",
-     -115
+     -110
     ],
     [
      "+1.5",
-     -135
+     -130
     ]
    ]
   }
@@ -182,8 +182,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -135
+    -110,
+    -130
    ],
    "spread": [
     [
@@ -209,14 +209,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    280,
+    290,
     255,
-    -115
+    -120
    ],
    "ou_linea": 2.5,
    "ou": [
     -130,
-    -110
+    -115
    ],
    "spread": [
     [
@@ -225,7 +225,7 @@
     ],
     [
      "-0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    250,
-    240
+    -110,
+    260,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    100
+    -150,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -120
     ],
     [
      "+0.5",
-     -140
+     -130
     ]
    ]
   }
@@ -423,6 +423,17 @@
   "estadio": "Neo Química Arena",
   "local_espn": "Corinthians",
   "visita_espn": "Mirassol",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841294",
+  "utc": "2026-10-31T19:00Z",
+  "estadio": "Couto Pereira",
+  "local_espn": "Coritiba",
+  "visita_espn": "Vitória",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,

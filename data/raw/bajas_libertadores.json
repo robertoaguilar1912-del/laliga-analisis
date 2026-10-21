@@ -1,7 +1,7 @@
 {
 "401912520": {
 "fotmob": 1000020616,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -31,20 +31,20 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Martinelli",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 16805522.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "John Kennedy",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 10366146.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Martinelli",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 16805522.0,
 "titular": false,
 "importante": true
 },
@@ -58,15 +58,6 @@
 "importante": false
 },
 {
-"nombre": "Germán Cano",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 364193.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Riquelme",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
@@ -74,16 +65,25 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Germán Cano",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 364193.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 43882310.0,
-"perdida": 0.6191941126162228,
-"perdida_duda": 0.0
+"perdida": 0.23622607834455386,
+"perdida_duda": 0.3829680342716689
 }
 },
 "401912521": {
 "fotmob": 1000020614,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -106,15 +106,6 @@
 "importante": true
 },
 {
-"nombre": "Ayrton Lucas",
-"tipo": "Lesión",
-"regreso": "mediados de octubre",
-"duda": false,
-"valor": 2613860.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Danilo",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
@@ -126,8 +117,8 @@
 {
 "nombre": "Saúl",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 1101405.0,
 "titular": false,
 "importante": false

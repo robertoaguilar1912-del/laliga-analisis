@@ -1,8 +1,8 @@
 {
 "401876428": {
 "fotmob": 5802966,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -83,7 +83,7 @@
 },
 "401876423": {
 "fotmob": 5802971,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -128,7 +128,7 @@
 },
 "401876427": {
 "fotmob": 5802967,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -138,15 +138,6 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 6225024.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Ruben Aguilar",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1828282.0,
 "titular": true,
 "importante": true
 },
@@ -169,6 +160,15 @@
 "importante": false
 },
 {
+"nombre": "Jonathan Gradit",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1673302.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Maik Nawrocki",
 "tipo": "Lesión",
 "regreso": "mediados de mayo de 2027",
@@ -176,20 +176,11 @@
 "valor": 1364483.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Jonathan Gradit",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1673302.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 89363195.0,
 "perdida": 0.06965981912352172,
-"perdida_duda": 0.020459004403322868
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -219,8 +210,8 @@
 },
 "401876425": {
 "fotmob": 5802969,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -242,7 +233,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 174575024.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -255,7 +246,7 @@
 "duda": false,
 "valor": 17403486.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ayase Ueda",
@@ -264,7 +255,7 @@
 "duda": false,
 "valor": 17099567.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Tiago Santos",
@@ -273,7 +264,16 @@
 "duda": false,
 "valor": 12804286.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Osame Sahraoui",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 10158008.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Ethan Mbappé",
@@ -281,28 +281,19 @@
 "regreso": "hasta el 3 de noviembre",
 "duda": false,
 "valor": 8651117.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Osame Sahraoui",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 10158008.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 122376680.0,
+"perdida": 0.5402701233601043,
 "perdida_duda": 0.0
 }
 },
 "401876429": {
 "fotmob": 5802965,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -312,7 +303,7 @@
 "duda": false,
 "valor": 4192409.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Bryan Okoh",
@@ -321,7 +312,7 @@
 "duda": false,
 "valor": 2941924.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Marvin Senaya",
@@ -330,7 +321,7 @@
 "duda": false,
 "valor": 2504967.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sékou Fofana",
@@ -369,8 +360,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 59707491.0,
+"perdida": 0.16144205423068272,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -403,15 +394,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 8608520.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401876430": {
 "fotmob": 5802964,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -421,11 +412,11 @@
 "duda": false,
 "valor": 5640290.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 25899474.0,
+"perdida": 0.21777623746335542,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -437,7 +428,7 @@
 "duda": false,
 "valor": 6856443.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Noah Mbamba",
@@ -446,7 +437,7 @@
 "duda": false,
 "valor": 2133158.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mohamed Bamba",
@@ -467,15 +458,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 48220002.0,
+"perdida": 0.18642888069560842,
 "perdida_duda": 0.0
 }
 },
 "401876426": {
 "fotmob": 5802968,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -485,7 +476,7 @@
 "duda": false,
 "valor": 14020317.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Derek Cornelius",
@@ -497,8 +488,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 121902332.0,
+"perdida": 0.1150127054173172,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -510,7 +501,7 @@
 "duda": false,
 "valor": 4713020.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Stephan Zagadou",
@@ -519,7 +510,7 @@
 "duda": false,
 "valor": 3012339.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Timothée Pembélé",
@@ -528,7 +519,7 @@
 "duda": false,
 "valor": 1614661.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Felix Mambimbi",
@@ -549,15 +540,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 28412371.0,
+"perdida": 0.3287307490107038,
 "perdida_duda": 0.0
 }
 },
 "401876424": {
 "fotmob": 5802970,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -566,12 +557,12 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 24658449.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 118325743.0,
+"perdida": 0.20839462634939887,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -583,7 +574,7 @@
 "duda": false,
 "valor": 27622171.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ismaël Doukouré",
@@ -592,7 +583,7 @@
 "duda": false,
 "valor": 21094019.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sebastian Nanasi",
@@ -601,7 +592,7 @@
 "duda": false,
 "valor": 18008922.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Martial Godo",
@@ -610,7 +601,7 @@
 "duda": false,
 "valor": 11799646.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Fabio Baldé",
@@ -618,8 +609,8 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 6827940.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Maxi Oyedele",
@@ -631,17 +622,44 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 134269360.0,
+"perdida": 0.5848300610057275,
+"perdida_duda": 0.050852554894132214
 }
 },
 "401876422": {
 "fotmob": 5802972,
-"visto": "2026-10-20T11:31+00:00",
-"xi": "unavailable",
+"visto": "2026-10-21T11:33+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Khvicha Kvaratskhelia",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 101401549.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Ousmane Dembélé",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 89136737.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Marquinhos",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 23533264.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Nuno Mendes",
 "tipo": "Lesión",
@@ -650,28 +668,10 @@
 "valor": 78703506.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Senny Mayulu",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 30076078.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Maghnes Akliouche",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 56659932.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 796154875.0,
+"perdida": 0.2688817926286013,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -683,7 +683,7 @@
 "duda": false,
 "valor": 24871232.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Keito Nakamura",
@@ -713,8 +713,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 129747809.0,
+"perdida": 0.19168903268339582,
 "perdida_duda": 0.0
 }
 }

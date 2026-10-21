@@ -117,7 +117,7 @@
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -120
+    -125
    ],
    "spread": [
     [
@@ -126,7 +126,7 @@
     ],
     [
      "+0.5",
-     -175
+     -180
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
+    185,
     205,
-    155
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -175
+    115,
+    -170
    ],
    "spread": [
     [
      "+0.5",
-     -220
+     -210
     ],
     [
      "-0.5",
-     140
+     135
     ]
    ]
   }
@@ -173,12 +173,34 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -220,
+    340,
+    500
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -185
+    ]
+   ]
+  }
  },
  {
   "id": "401860409",
   "utc": "2026-10-24T21:30Z",
-  "estadio": "Moisés Lucarelli",
+  "estadio": "Estádio Italo Mário Limongi",
   "local_espn": "Ponte Preta",
   "visita_espn": "Fortaleza",
   "estado": "STATUS_SCHEDULED",
@@ -187,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    950,
-    425,
-    -400
+    1000,
+    450,
+    -425
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -217,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    250,
+    245,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -135
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401860411",
@@ -243,11 +287,11 @@
    "spread": [
     [
      "-1.5",
-     135
+     140
     ],
     [
      "+1.5",
-     -215
+     -220
     ]
    ]
   }
@@ -261,7 +305,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    220,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401860414",

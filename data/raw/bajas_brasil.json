@@ -1,7 +1,7 @@
 {
 "401841287": {
 "fotmob": 5103679,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -92,7 +92,7 @@
 },
 "401841285": {
 "fotmob": 5103680,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -241,8 +241,8 @@
 {
 "nombre": "Edenílson",
 "tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 350551.0,
 "titular": false,
 "importante": false
@@ -255,7 +255,7 @@
 },
 "401841284": {
 "fotmob": 5103678,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -337,7 +337,7 @@
 },
 "401841280": {
 "fotmob": 5103682,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -375,6 +375,15 @@
 "duda": false,
 "valor": 1144530.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Renê",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": true,
 "importante": true
 },
 {
@@ -457,14 +466,14 @@
 "importante": false
 }
 ],
-"valor_xi": 24255647.0,
-"perdida": 0.24231120283041718,
+"valor_xi": 25482919.0,
+"perdida": 0.23064135627476584,
 "perdida_duda": 0.0
 }
 },
 "401841283": {
 "fotmob": 5103677,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -555,7 +564,7 @@
 },
 "401841281": {
 "fotmob": 5103675,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -593,7 +602,7 @@
 "duda": false,
 "valor": 4744173.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Claudio Spinelli",
@@ -605,8 +614,8 @@
 "importante": false
 }
 ],
-"valor_xi": 81414079.0,
-"perdida": 0.2447334201250376,
+"valor_xi": 62689390.0,
+"perdida": 0.3935102734290444,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -655,7 +664,7 @@
 },
 "401841278": {
 "fotmob": 5103683,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -703,15 +712,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Martinelli",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 16805522.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "John Kennedy",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -730,20 +730,20 @@
 "importante": true
 },
 {
+"nombre": "Martinelli",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 16805522.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Alisson",
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
 "duda": false,
 "valor": 714140.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Germán Cano",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 364193.0,
 "titular": false,
 "importante": false
 },
@@ -755,16 +755,25 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Germán Cano",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 364193.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 43882310.0,
-"perdida": 0.7634933758045098,
-"perdida_duda": 0.0
+"perdida": 0.3805253415328409,
+"perdida_duda": 0.3829680342716689
 }
 },
 "401841282": {
 "fotmob": 5103676,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -775,6 +784,15 @@
 "duda": false,
 "valor": 14991144.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Lucas Veríssimo",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 2344525.0,
+"titular": true,
 "importante": true
 },
 {
@@ -796,6 +814,15 @@
 "importante": false
 },
 {
+"nombre": "Willian Arão",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 559445.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Vinicius Lira",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -806,7 +833,7 @@
 }
 ],
 "valor_xi": 35708873.0,
-"perdida": 0.41981565758180045,
+"perdida": 0.4854723082411478,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -846,7 +873,7 @@
 },
 "401841279": {
 "fotmob": 5103681,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -910,19 +937,10 @@
 },
 "401841286": {
 "fotmob": 5103674,
-"visto": "2026-10-20T11:31+00:00",
+"visto": "2026-10-21T11:33+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Saúl",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Danilo",
 "tipo": "Lesión",
@@ -942,19 +960,19 @@
 "importante": false
 },
 {
-"nombre": "Ayrton Lucas",
+"nombre": "Evertton Araújo",
 "tipo": "Lesión",
-"regreso": "mediados de octubre",
+"regreso": "principios de noviembre",
 "duda": false,
 "valor": 0.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Evertton Araújo",
+"nombre": "Saúl",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 0.0,
 "titular": false,
 "importante": false

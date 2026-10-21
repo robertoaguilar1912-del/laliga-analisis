@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    125,
     240,
-    220
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     110
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
@@ -33,8 +33,206 @@
   }
  },
  {
+  "id": "401876427",
+  "utc": "2026-10-24T18:45Z",
+  "estadio": "Stade Bollaert-Delelis",
+  "local_espn": "Lens",
+  "visita_espn": "Paris FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    265,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876425",
+  "utc": "2026-10-25T14:00Z",
+  "estadio": "Stade Louis II",
+  "local_espn": "AS Monaco",
+  "visita_espn": "Lille",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    230,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876429",
+  "utc": "2026-10-25T16:15Z",
+  "estadio": "Stade de l'Abbé-Deschamps",
+  "local_espn": "AJ Auxerre",
+  "visita_espn": "Le Mans",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    260,
+    225
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876430",
+  "utc": "2026-10-25T16:15Z",
+  "estadio": "Stade Raymond Kopa",
+  "local_espn": "Angers",
+  "visita_espn": "Lorient",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    195,
+    230,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876426",
+  "utc": "2026-10-25T16:15Z",
+  "estadio": "Stade Vélodrome",
+  "local_espn": "Marseille",
+  "visita_espn": "Le Havre AC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -175,
+    350,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    135,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -195
+    ],
+    [
+     "+0.5",
+     130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876424",
+  "utc": "2026-10-25T16:15Z",
+  "estadio": "Roazhon Park",
+  "local_espn": "Stade Rennais",
+  "visita_espn": "Strasbourg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -135,
+    320,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
+ },
+ {
   "id": "401876423",
-  "utc": "2026-10-24T15:15Z",
+  "utc": "2026-10-25T16:15Z",
   "estadio": "Stadium Municipal de Toulouse",
   "local_espn": "Toulouse",
   "visita_espn": "Troyes",
@@ -66,204 +264,6 @@
   }
  },
  {
-  "id": "401876427",
-  "utc": "2026-10-24T18:45Z",
-  "estadio": "Stade Bollaert-Delelis",
-  "local_espn": "Lens",
-  "visita_espn": "Paris FC",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    135,
-    265,
-    180
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -160,
-    120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     120
-    ],
-    [
-     "+0.5",
-     -175
-    ]
-   ]
-  }
- },
- {
-  "id": "401876425",
-  "utc": "2026-10-25T14:00Z",
-  "estadio": "Stade Louis II",
-  "local_espn": "AS Monaco",
-  "visita_espn": "Lille",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    110,
-    225,
-    250
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    -110
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -150
-    ]
-   ]
-  }
- },
- {
-  "id": "401876429",
-  "utc": "2026-10-25T16:15Z",
-  "estadio": "Stade de l'Abbé-Deschamps",
-  "local_espn": "AJ Auxerre",
-  "visita_espn": "Le Mans",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    110,
-    255,
-    225
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    110
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -105
-    ],
-    [
-     "+0.5",
-     -150
-    ]
-   ]
-  }
- },
- {
-  "id": "401876430",
-  "utc": "2026-10-25T16:15Z",
-  "estadio": "Stade Raymond Kopa",
-  "local_espn": "Angers",
-  "visita_espn": "Lorient",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    180,
-    220,
-    150
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -135
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -200
-    ],
-    [
-     "-0.5",
-     130
-    ]
-   ]
-  }
- },
- {
-  "id": "401876426",
-  "utc": "2026-10-25T16:15Z",
-  "estadio": "Stade Vélodrome",
-  "local_espn": "Marseille",
-  "visita_espn": "Le Havre AC",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -180,
-    340,
-    390
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    130,
-    -185
-   ],
-   "spread": [
-    [
-     "-1.5",
-     130
-    ],
-    [
-     "+1.5",
-     -205
-    ]
-   ]
-  }
- },
- {
-  "id": "401876424",
-  "utc": "2026-10-25T16:15Z",
-  "estadio": "Roazhon Park",
-  "local_espn": "Stade Rennais",
-  "visita_espn": "Strasbourg",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -135,
-    320,
-    295
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    100,
-    -140
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -155
-    ],
-    [
-     "+0.5",
-     100
-    ]
-   ]
-  }
- },
- {
   "id": "401876422",
   "utc": "2026-10-25T19:45Z",
   "estadio": "Parc des Princes",
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -280,
-    450,
-    600
+    -235,
+    425,
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
-    -115
+    -105,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     -125
+     100
     ],
     [
      "+1.5",
-     -125
+     -145
     ]
    ]
   }
@@ -308,23 +308,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    800,
+    850,
     550,
     -425
    ],
    "ou_linea": 3.5,
    "ou": [
     -125,
-    -115
+    -110
    ],
    "spread": [
     [
      "+1.5",
-     105
+     110
     ],
     [
      "-1.5",
-     -165
+     -170
     ]
    ]
   }
@@ -358,6 +358,138 @@
     [
      "+0.5",
      -170
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876416",
+  "utc": "2026-10-31T16:15Z",
+  "estadio": "Allianz Riviera",
+  "local_espn": "Nice",
+  "visita_espn": "Stade Rennais",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    265,
+    135
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -185
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876419",
+  "utc": "2026-10-31T19:45Z",
+  "estadio": "Stade du Moustoir - Yves Allainmat",
+  "local_espn": "Lorient",
+  "visita_espn": "Brest",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    245,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -215
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876418",
+  "utc": "2026-10-31T19:45Z",
+  "estadio": "Groupama Stadium",
+  "local_espn": "Lyon",
+  "visita_espn": "Angers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -255,
+    390,
+    600
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -190,
+    135
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -105
+    ],
+    [
+     "+1.5",
+     -150
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876413",
+  "utc": "2026-10-31T19:45Z",
+  "estadio": "Stade de l'Aube",
+  "local_espn": "Troyes",
+  "visita_espn": "Le Mans",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    245,
+    225
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -155
     ]
    ]
   }

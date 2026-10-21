@@ -12,22 +12,22 @@
    "casa": "DraftKings",
    "ml": [
     265,
-    220,
+    230,
     115
    ],
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -115
+    -120
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -140
     ],
     [
      "-0.5",
-     105
+     100
     ]
    ]
   }
@@ -45,18 +45,18 @@
    "casa": "DraftKings",
    "ml": [
     -130,
-    265,
-    370
+    270,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -140
     ],
     [
      "+0.5",
@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -370,
+    -360,
     475,
-    900
+    850
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,7 +188,7 @@
    "spread": [
     [
      "-1.5",
-     -150
+     -145
     ],
     [
      "+1.5",
@@ -242,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
-    250,
-    150
+    175,
+    245,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -308,23 +308,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
+    -170,
     425,
-    320
+    310
    ],
    "ou_linea": 4.5,
    "ou": [
-    120,
-    -155
+    115,
+    -150
    ],
    "spread": [
     [
      "-1.5",
-     115
+     120
     ],
     [
      "+1.5",
-     -170
+     -175
     ]
    ]
   }
@@ -391,6 +391,138 @@
     [
      "+0.5",
      130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882820",
+  "utc": "2026-10-31T13:00Z",
+  "estadio": "Estadi Ciutat de València",
+  "local_espn": "Levante",
+  "visita_espn": "Atlético Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    350,
+    -170
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "+0.5",
+     120
+    ],
+    [
+     "-0.5",
+     -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882818",
+  "utc": "2026-10-31T15:15Z",
+  "estadio": "Estadio de Vallecas",
+  "local_espn": "Rayo Vallecano",
+  "visita_espn": "Celta Vigo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    125,
+    235,
+    200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882825",
+  "utc": "2026-10-31T17:30Z",
+  "estadio": "Estadio La Cartuja",
+  "local_espn": "Real Betis",
+  "visita_espn": "Málaga",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -250,
+    400,
+    550
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     100
+    ],
+    [
+     "+1.5",
+     -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882822",
+  "utc": "2026-10-31T20:00Z",
+  "estadio": "Spotify Camp Nou",
+  "local_espn": "Barcelona",
+  "visita_espn": "Alavés",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -700,
+    600,
+    1800
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -170,
+    125
+   ],
+   "spread": [
+    [
+     "-2.5",
+     -125
+    ],
+    [
+     "+2.5",
+     -125
     ]
    ]
   }

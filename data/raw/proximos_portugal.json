@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    290,
-    450
+    -175,
+    295,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -195
+     -190
     ],
     [
      "+0.5",
-     125
+     130
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
-    250,
-    270
+    -115,
+    255,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,11 +155,11 @@
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -302,6 +302,28 @@
   "estadio": "Estádio Municipal de Rio Maior",
   "local_espn": "Casa Pia",
   "visita_espn": "Sporting CP",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885405",
+  "utc": "2026-10-31T15:30Z",
+  "estadio": "Estádio Comendador Joaquim de Almeida Freitas",
+  "local_espn": "Moreirense",
+  "visita_espn": "Estrela",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885404",
+  "utc": "2026-10-31T20:30Z",
+  "estadio": "Estádio do Dragão",
+  "local_espn": "FC Porto",
+  "visita_espn": "Estoril",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,

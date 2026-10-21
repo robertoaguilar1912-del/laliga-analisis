@@ -12,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     -150,
-    330,
-    300
+    350,
+    290
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -150,
+    120
    ],
    "spread": [
     [
@@ -44,13 +44,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
+    350,
     310,
-    -165
+    -170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -175,
     130
    ],
    "spread": [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -175
+     -180
     ]
    ]
   }
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+0.5",
-     -120
+     -125
     ],
     [
      "-0.5",
-     -120
+     -115
     ]
    ]
   }
@@ -193,8 +193,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -140
+    100,
+    -135
    ],
    "spread": [
     [
@@ -203,7 +203,7 @@
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
@@ -260,7 +260,7 @@
    "ou_linea": 2.5,
    "ou": [
     -165,
-    120
+    125
    ],
    "spread": [
     [
@@ -392,7 +392,7 @@
    "ou_linea": 3.5,
    "ou": [
     110,
-    -150
+    -145
    ],
    "spread": [
     [
@@ -484,23 +484,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    360,
-    400
+    -195,
+    340,
+    390
    ],
    "ou_linea": 3.5,
    "ou": [
     100,
-    -130
+    -135
    ],
    "spread": [
     [
-     "-1.5",
-     120
+     "-0.5",
+     -195
     ],
     [
-     "+1.5",
-     -170
+     "+0.5",
+     130
     ]
    ]
   }
@@ -654,6 +654,105 @@
   "estadio": "BC Place",
   "local_espn": "Vancouver Whitecaps",
   "visita_espn": "San Diego FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761922",
+  "utc": "2026-10-31T17:00Z",
+  "estadio": "Bank of America Stadium",
+  "local_espn": "Charlotte FC",
+  "visita_espn": "Orlando City SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761924",
+  "utc": "2026-10-31T18:00Z",
+  "estadio": "ScottsMiracle-Gro Field",
+  "local_espn": "Columbus Crew",
+  "visita_espn": "D.C. United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761919",
+  "utc": "2026-10-31T18:00Z",
+  "estadio": "TQL Stadium",
+  "local_espn": "FC Cincinnati",
+  "visita_espn": "Philadelphia Union",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761930",
+  "utc": "2026-10-31T18:00Z",
+  "estadio": "Citi Field",
+  "local_espn": "New York City FC",
+  "visita_espn": "CF Montréal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761928",
+  "utc": "2026-10-31T19:00Z",
+  "estadio": "Sporting Park",
+  "local_espn": "Sporting Kansas City",
+  "visita_espn": "FC Dallas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761926",
+  "utc": "2026-10-31T19:00Z",
+  "estadio": "Energizer Park",
+  "local_espn": "St. Louis CITY SC",
+  "visita_espn": "San Diego FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761925",
+  "utc": "2026-10-31T21:00Z",
+  "estadio": "Dignity Health Sports Park",
+  "local_espn": "LA Galaxy",
+  "visita_espn": "Austin FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761929",
+  "utc": "2026-10-31T21:00Z",
+  "estadio": "PayPal Park",
+  "local_espn": "San Jose Earthquakes",
+  "visita_espn": "Real Salt Lake",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "761923",
+  "utc": "2026-11-01T01:30Z",
+  "estadio": "Dick's Sporting Goods Park",
+  "local_espn": "Colorado Rapids",
+  "visita_espn": "Chicago Fire FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
+    105,
     235,
-    220
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -150
+     -140
     ]
    ]
   }
@@ -56,7 +56,7 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -195
     ],
     [
      "-0.5",
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    340,
-    500
+    -200,
+    330,
+    425
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -89,11 +89,11 @@
    "spread": [
     [
      "-1.5",
-     105
+     120
     ],
     [
      "+1.5",
-     -155
+     -175
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    310,
-    550
+    -245,
+    320,
+    600
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -120,
+    -110
    ],
    "spread": [
     [
      "-1.5",
-     120
+     115
     ],
     [
      "+1.5",
-     -175
+     -170
     ]
    ]
   }
@@ -221,7 +221,7 @@
    "spread": [
     [
      "-0.5",
-     -145
+     -140
     ],
     [
      "+0.5",
@@ -441,22 +441,22 @@
    "casa": "DraftKings",
    "ml": [
     -175,
-    285,
-    390
+    290,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -110
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -185
+     -180
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -474,7 +474,7 @@
    "casa": "DraftKings",
    "ml": [
     185,
-    205,
+    210,
     135
    ],
    "ou_linea": 2.5,
@@ -485,11 +485,11 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
@@ -518,12 +518,12 @@
    "casa": "DraftKings",
    "ml": [
     400,
-    255,
-    -165
+    265,
+    -160
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -135
    ],
    "spread": [
@@ -533,7 +533,7 @@
     ],
     [
      "-0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -550,23 +550,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    280,
-    255,
-    -130
+    265,
+    265,
+    -120
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    105
+    110
    ],
    "spread": [
     [
      "+0.5",
-     -110
+     -115
     ],
     [
      "-0.5",
-     -135
+     -125
     ]
    ]
   }
@@ -583,23 +583,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
+    -110,
     250,
-    255
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
+    -180,
     130
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -120
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -636,5 +636,38 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401874798",
+  "utc": "2026-10-31T14:00Z",
+  "estadio": "Renato Dall'Ara",
+  "local_espn": "Bologna",
+  "visita_espn": "Monza",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874990",
+  "utc": "2026-10-31T17:00Z",
+  "estadio": "Stadio Friuli",
+  "local_espn": "Udinese",
+  "visita_espn": "AS Roma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874795",
+  "utc": "2026-10-31T19:45Z",
+  "estadio": "San Siro",
+  "local_espn": "AC Milan",
+  "visita_espn": "Internazionale",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
  }
 ]

@@ -1,5 +1,38 @@
 [
  {
+  "id": "401841638",
+  "utc": "2026-10-23T21:00Z",
+  "estadio": "Juan Carmelo Zerillo (El Bosque)",
+  "local_espn": "Gimnasia La Plata",
+  "visita_espn": "Sarmiento (Junín)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    270,
+    400
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
   "id": "401841637",
   "utc": "2026-10-23T21:30Z",
   "estadio": "Estadio Víctor Antonio Legrotaglie",
@@ -11,56 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    190,
-    225
+    120,
+    200,
+    250
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 1.5,
    "ou": [
-    140,
-    -210
+    -205,
+    145
    ],
    "spread": [
     [
      "-0.5",
-     120
+     110
     ],
     [
      "+0.5",
-     -185
-    ]
-   ]
-  }
- },
- {
-  "id": "401841638",
-  "utc": "2026-10-23T22:00Z",
-  "estadio": "Juan Carmelo Zerillo (El Bosque)",
-  "local_espn": "Gimnasia La Plata",
-  "visita_espn": "Sarmiento (Junín)",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -150,
-    265,
-    380
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -140
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -165
-    ],
-    [
-     "+0.5",
-     105
+     -160
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    200,
-    280
+    -130,
+    235,
+    380
    ],
    "ou_linea": 1.5,
    "ou": [
-    -190,
-    130
+    -200,
+    145
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -140
     ],
     [
      "+0.5",
-     -145
+     -105
     ]
    ]
   }
@@ -248,7 +248,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
+    130,
     -195
    ],
    "spread": [
@@ -341,7 +341,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
+    -205,
     270,
     600
    ],
@@ -353,11 +353,11 @@
    "spread": [
     [
      "-0.5",
-     -220
+     -225
     ],
     [
      "+0.5",
-     140
+     145
     ]
    ]
   }
@@ -365,7 +365,7 @@
  {
   "id": "401841639",
   "utc": "2026-10-26T00:30Z",
-  "estadio": "Alfredo Terrera",
+  "estadio": "'Estadio Único Madre de Ciudades",
   "local_espn": "Central Córdoba (Santiago del Estero)",
   "visita_espn": "Vélez Sarsfield",
   "estado": "STATUS_SCHEDULED",
@@ -413,8 +413,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -175
+    115,
+    -170
    ],
    "spread": [
     [
@@ -440,23 +440,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    215,
-    400
+    -105,
+    190,
+    340
    ],
    "ou_linea": 1.5,
    "ou": [
-    -180,
-    125
+    -170,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -115
     ],
     [
      "+0.5",
-     -105
+     -135
     ]
    ]
   }
@@ -470,7 +470,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    215,
+    260
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -170
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401841655",
@@ -511,6 +533,39 @@
   "estadio": "Eva Perón",
   "local_espn": "Sarmiento (Junín)",
   "visita_espn": "Rosario Central",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841656",
+  "utc": "2026-10-31T20:00Z",
+  "estadio": "Guillermo Laza",
+  "local_espn": "Deportivo Riestra",
+  "visita_espn": "Talleres (Córdoba)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841646",
+  "utc": "2026-10-31T22:15Z",
+  "estadio": "José Amalfitani",
+  "local_espn": "Vélez Sarsfield",
+  "visita_espn": "San Lorenzo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841654",
+  "utc": "2026-11-01T00:30Z",
+  "estadio": "Estadio Jorge Luis Hirschi",
+  "local_espn": "Estudiantes de La Plata",
+  "visita_espn": "Instituto (Córdoba)",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
