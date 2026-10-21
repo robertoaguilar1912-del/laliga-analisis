@@ -5,7 +5,7 @@
   "estadio": "Giuseppe Sinigaglia",
   "local_espn": "Como",
   "visita_espn": "Manchester United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Decathlon Arena - Stade Pierre-Mauroy",
   "local_espn": "Lille",
   "visita_espn": "Galatasaray",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -380,
+    -390,
     550,
     850
    ],
    "ou_linea": 3.5,
    "ou": [
-    -145,
-    115
+    -155,
+    125
    ],
    "spread": [
     [
      "-1.5",
-     -160
+     -165
     ],
     [
      "+1.5",
-     115
+     120
     ]
    ]
   }
@@ -342,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    270,
-    200
+    140,
+    275,
+    175
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -170
+    -165,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     110
+     130
     ],
     [
      "+0.5",
-     -155
+     -180
     ]
    ]
   }
@@ -375,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    310,
-    275
+    -120,
+    320,
+    285
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    -110,
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -135
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -443,17 +443,17 @@
    "ml": [
     -155,
     350,
-    350
+    360
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -105
+    -105,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -170
     ],
     [
      "+0.5",
@@ -474,9 +474,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -450,
-    650,
-    1000
+    -425,
+    600,
+    900
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -486,11 +486,11 @@
    "spread": [
     [
      "-2.5",
-     120
+     125
     ],
     [
      "+2.5",
-     -165
+     -175
     ]
    ]
   }
@@ -507,23 +507,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -300,
-    475,
+    -310,
+    500,
     700
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
      "-1.5",
-     -120
+     -125
     ],
     [
      "+1.5",
-     -115
+     -110
     ]
    ]
   }
