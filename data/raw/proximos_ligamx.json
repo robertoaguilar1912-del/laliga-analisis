@@ -5,7 +5,7 @@
   "estadio": "Estadio Akron",
   "local_espn": "Guadalajara",
   "visita_espn": "Necaxa",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Libertad Financiera",
   "local_espn": "Atlético de San Luis",
   "visita_espn": "Querétaro",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -166,7 +166,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -140,
     105
    ],
    "spread": [
@@ -303,7 +303,7 @@
   "estadio": "Estadio Olímpico Benito Juárez",
   "local_espn": "FC Juárez",
   "visita_espn": "Atlante",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -465,7 +465,7 @@
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -110
+    -105
    ],
    "spread": [
     [
@@ -491,8 +491,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
-    265,
+    235,
+    270,
     105
    ],
    "ou_linea": 2.5,
@@ -503,11 +503,11 @@
    "spread": [
     [
      "+0.5",
-     -140
+     -135
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
@@ -524,19 +524,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    290,
-    265,
-    -120
+    295,
+    270,
+    -115
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -105
+    -130,
+    100
    ],
    "spread": [
     [
      "+0.5",
-     -115
+     -110
     ],
     [
      "-0.5",
@@ -557,9 +557,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -270,
+    -265,
     425,
-    550
+    600
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -573,7 +573,7 @@
     ],
     [
      "+1.5",
-     -130
+     -125
     ]
    ]
   }
