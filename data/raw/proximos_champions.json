@@ -1,182 +1,33 @@
 [
  {
-  "id": "401915395",
-  "utc": "2026-10-21T16:45Z",
-  "estadio": "Giuseppe Sinigaglia",
-  "local_espn": "Como",
-  "visita_espn": "Manchester United",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    140,
-    275,
-    175
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    140,
-    -175
-   ],
-   "spread": [
-    [
-     "-0.5",
-     125
-    ],
-    [
-     "+0.5",
-     -180
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Como": [
-    [
-     "214740",
-     "Jean Butez",
-     "G"
-    ],
-    [
-     "380318",
-     "Jacobo Ramón",
-     "CD-L"
-    ],
-    [
-     "175887",
-     "Marc-Oliver Kempf",
-     "CD-R"
-    ],
-    [
-     "192146",
-     "Álex Valle",
-     "LB"
-    ],
-    [
-     "297084",
-     "Yan Couto",
-     "RB"
-    ],
-    [
-     "337970",
-     "Nico Paz",
-     "AM"
-    ],
-    [
-     "264211",
-     "Luis Milla",
-     "LM"
-    ],
-    [
-     "309241",
-     "Máximo Perrone",
-     "RM"
-    ],
-    [
-     "262071",
-     "Anastasios Douvikas",
-     "F"
-    ],
-    [
-     "311475",
-     "Martin Baturina",
-     "AM-L"
-    ],
-    [
-     "291285",
-     "Lucas Da Cunha",
-     "AM-R"
-    ]
-   ],
-   "Manchester United": [
-    [
-     "301425",
-     "Senne Lammens",
-     "G"
-    ],
-    [
-     "239350",
-     "Noussair Mazraoui",
-     "D"
-    ],
-    [
-     "157073",
-     "Harry Maguire",
-     "D"
-    ],
-    [
-     "239349",
-     "Matthijs de Ligt",
-     "D"
-    ],
-    [
-     "238902",
-     "Diogo Dalot",
-     "D"
-    ],
-    [
-     "124091",
-     "Bruno Fernandes",
-     "M"
-    ],
-    [
-     "231167",
-     "Mason Mount",
-     "M"
-    ],
-    [
-     "259902",
-     "Matheus Cunha",
-     "M"
-    ],
-    [
-     "193297",
-     "Youri Tielemans",
-     "M"
-    ],
-    [
-     "314858",
-     "Andrey Santos",
-     "M"
-    ],
-    [
-     "271170",
-     "Bryan Mbeumo",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915394",
   "utc": "2026-10-21T19:00Z",
   "estadio": "Villa Park",
   "local_espn": "Aston Villa",
   "visita_espn": "Viking FK",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    600,
-    900
+    -475,
+    650,
+    1000
    ],
    "ou_linea": 3.5,
    "ou": [
-    -155,
-    125
+    -160,
+    130
    ],
    "spread": [
     [
      "-2.5",
-     115
+     105
     ],
     [
      "+2.5",
-     -165
+     -145
     ]
    ]
   },
@@ -303,7 +154,7 @@
   "estadio": "Allianz Arena",
   "local_espn": "Bayern Munich",
   "visita_espn": "Arsenal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -315,17 +166,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    135
+    -160,
+    130
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -170
+     -175
     ]
    ]
   },
@@ -452,15 +303,15 @@
   "estadio": "Jan Breydel Stadium",
   "local_espn": "Club Brugge",
   "visita_espn": "Lens",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -145,
     330,
-    330
+    340
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -470,7 +321,7 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -155
     ],
     [
      "+0.5",
@@ -601,29 +452,29 @@
   "estadio": "San Siro",
   "local_espn": "Internazionale",
   "visita_espn": "Shakhtar Donetsk",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -400,
+    -370,
     550,
-    900
+    850
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    105
+    -115,
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -155
+     -140
     ],
     [
      "+1.5",
-     110
+     100
     ]
    ]
   },
@@ -750,29 +601,29 @@
   "estadio": "Estadio La Cartuja",
   "local_espn": "Real Betis",
   "visita_espn": "Feyenoord Rotterdam",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    330,
-    320
+    -130,
+    320,
+    310
    ],
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -115
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -140
     ],
     [
      "+0.5",
-     105
+     100
     ]
    ]
   },
@@ -899,29 +750,29 @@
   "estadio": "Santiago Bernabéu",
   "local_espn": "Real Madrid",
   "visita_espn": "RB Leipzig",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    600,
-    900
+    -450,
+    650,
+    950
    ],
    "ou_linea": 4.5,
    "ou": [
-    105,
-    -130
+    100,
+    -125
    ],
    "spread": [
     [
      "-2.5",
-     125
+     120
     ],
     [
      "+2.5",
-     -175
+     -170
     ]
    ]
   },
@@ -1048,15 +899,15 @@
   "estadio": "Estádio José Alvalade",
   "local_espn": "Sporting CP",
   "visita_espn": "LASK Linz",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -320,
-    500,
-    750
+    -275,
+    475,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1066,11 +917,11 @@
    "spread": [
     [
      "-1.5",
-     -130
+     -115
     ],
     [
      "+1.5",
-     -105
+     -120
     ]
    ]
   },
