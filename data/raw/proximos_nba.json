@@ -1,36 +1,7 @@
 [
  {
-  "id": "401909089",
-  "utc": "2026-10-20T23:00Z",
-  "fecha": "2026-10-20",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NY",
-  "visita": "PHI",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New York Knicks",
-  "visita_espn": "Philadelphia 76ers",
-  "revisado": false,
-  "estadio": "Madison Square Garden",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909090",
-  "utc": "2026-10-21T01:30Z",
+  "utc": "2026-10-21T01:50Z",
   "fecha": "2026-10-20",
   "temporada": 2027,
   "tipo": 2,
@@ -38,10 +9,10 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
@@ -55,30 +26,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -102,
-    -118
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    1.5,
-    -112,
-    -1.5,
-    -108
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    229.5,
-    -108,
-    -112
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909834",
@@ -162,8 +110,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -185,
-    154
+    -180,
+    150
    ],
    "ml_abre": [
     -238,
@@ -669,9 +617,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "0-0",
@@ -682,8 +630,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    114
+    -142,
+    120
    ],
    "ml_abre": [
     -175,
@@ -691,9 +639,9 @@
    ],
    "spread": [
     -2.5,
-    -112,
+    -115,
     2.5,
-    -108
+    -105
    ],
    "spread_abre": -4.5,
    "total": [
@@ -807,8 +755,8 @@
     "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ]
   },
@@ -1225,9 +1173,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "0-0",
@@ -1457,8 +1405,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ],
    "away": [
@@ -1544,9 +1492,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "1-0",
@@ -1892,8 +1840,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ],
    "away": [
@@ -2071,9 +2019,9 @@
     "0-0"
    ],
    "away": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -2129,8 +2077,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ]
   },
@@ -2570,13 +2518,13 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ]
   },
@@ -2635,8 +2583,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -148,
-    124
+    -155,
+    130
    ],
    "ml_abre": [
     -155,
@@ -2644,9 +2592,9 @@
    ],
    "spread": [
     -3.5,
-    -110,
+    -108,
     3.5,
-    -110
+    -112
    ],
    "spread_abre": -3.5,
    "total": [
@@ -2968,9 +2916,9 @@
     "0-0"
    ],
    "away": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null

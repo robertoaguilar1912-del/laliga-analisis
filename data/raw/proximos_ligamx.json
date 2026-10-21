@@ -1,160 +1,11 @@
 [
  {
-  "id": "401876934",
-  "utc": "2026-10-21T00:07Z",
-  "estadio": "Estadio Akron",
-  "local_espn": "Guadalajara",
-  "visita_espn": "Necaxa",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -290,
-    450,
-    650
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    -115,
-    -115
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -125
-    ],
-    [
-     "+1.5",
-     -110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Guadalajara": [
-    [
-     "290899",
-     "Raúl Rangel",
-     "G"
-    ],
-    [
-     "290889",
-     "Diego Campillo",
-     "CD"
-    ],
-    [
-     "147715",
-     "Luis Gabriel Rey",
-     "CD-L"
-    ],
-    [
-     "133111",
-     "Daniel Aguirre",
-     "CD-R"
-    ],
-    [
-     "277191",
-     "Jordan Carillo",
-     "CM-L"
-    ],
-    [
-     "131697",
-     "Fernando Gonzalez",
-     "CM-R"
-    ],
-    [
-     "3113343",
-     "Leonel Calderón Oviedo",
-     "LM"
-    ],
-    [
-     "271844",
-     "Richard Ledezma",
-     "RM"
-    ],
-    [
-     "228352",
-     "Ricardo Marín",
-     "F"
-    ],
-    [
-     "260173",
-     "Efrain Álvarez",
-     "CF-L"
-    ],
-    [
-     "194308",
-     "Roberto Alvarado",
-     "CF-R"
-    ]
-   ],
-   "Necaxa": [
-    [
-     "364768",
-     "Javier Orantes",
-     "G"
-    ],
-    [
-     "372152",
-     "Diego Ochoa",
-     "D"
-    ],
-    [
-     "303329",
-     "Agustín Oliveros",
-     "D"
-    ],
-    [
-     "310751",
-     "Emilio Martínez",
-     "D"
-    ],
-    [
-     "332351",
-     "Kaiky Naves",
-     "D"
-    ],
-    [
-     "333586",
-     "Mauro Zaleta",
-     "M"
-    ],
-    [
-     "154517",
-     "Lorenzo Faravelli",
-     "M"
-    ],
-    [
-     "280765",
-     "Daniel Leyva",
-     "M"
-    ],
-    [
-     "365552",
-     "Javier Ruiz",
-     "M"
-    ],
-    [
-     "342767",
-     "Miguel Rodríguez",
-     "M"
-    ],
-    [
-     "406874",
-     "Juan Valencia",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401876937",
   "utc": "2026-10-21T01:00Z",
   "estadio": "Estadio Libertad Financiera",
   "local_espn": "Atlético de San Luis",
   "visita_espn": "Querétaro",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -303,7 +154,7 @@
   "estadio": "Estadio Olímpico Benito Juárez",
   "local_espn": "FC Juárez",
   "visita_espn": "Atlante",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -465,7 +316,7 @@
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -105
+    -110
    ],
    "spread": [
     [
@@ -475,6 +326,122 @@
     [
      "+0.5",
      -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Tigres UANL": [
+    [
+     "68340",
+     "Nahuel Guzmán",
+     "SUB"
+    ],
+    [
+     "253830",
+     "Diego Lainez",
+     "SUB"
+    ],
+    [
+     "271439",
+     "Emiliano Gomez",
+     "SUB"
+    ],
+    [
+     "193566",
+     "Guillermo Martínez",
+     "SUB"
+    ],
+    [
+     "275892",
+     "Rafael Guerrero",
+     "SUB"
+    ],
+    [
+     "276557",
+     "Jesús Garza",
+     "SUB"
+    ],
+    [
+     "200636",
+     "Fernando Gorriarán",
+     "SUB"
+    ],
+    [
+     "219471",
+     "Mauro Laínez",
+     "SUB"
+    ],
+    [
+     "420171",
+     "Henrique Simeone Koifman",
+     "SUB"
+    ],
+    [
+     "319255",
+     "Ozziel Herrera",
+     "SUB"
+    ],
+    [
+     "228493",
+     "Alan Franco",
+     "SUB"
+    ]
+   ],
+   "León": [
+    [
+     "335959",
+     "Oscar García",
+     "G"
+    ],
+    [
+     "195695",
+     "Iván Moreno",
+     "D"
+    ],
+    [
+     "235956",
+     "Jhohan Romaña",
+     "D"
+    ],
+    [
+     "190559",
+     "Sebastian Vegas",
+     "D"
+    ],
+    [
+     "88781",
+     "Juan Guevara",
+     "D"
+    ],
+    [
+     "199163",
+     "Rodrigo Echeverría",
+     "M"
+    ],
+    [
+     "308096",
+     "Edgar Guerra",
+     "M"
+    ],
+    [
+     "317509",
+     "Daniel Arcila",
+     "M"
+    ],
+    [
+     "195326",
+     "Ismael Díaz",
+     "M"
+    ],
+    [
+     "259697",
+     "Fernando Beltrán",
+     "M"
+    ],
+    [
+     "201538",
+     "José Alvarado",
+     "F"
     ]
    ]
   }
