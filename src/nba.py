@@ -16,6 +16,7 @@ Modelo (dos piezas)
 
     python src/nba.py historia   # baja temporadas pasadas con momios de cierre (una sola vez)
     python src/nba.py box        # minutos por jugador de los juegos que falten
+    python src/nba.py cuartos       # puntos por cuarto de los juegos terminados (para estudiar mitades y cuartos)
     python src/nba.py pretemporada  # juegos de pretemporada y sus minutos (entran al ajuste con la mitad de peso)
     python src/nba.py            # arma data/ligas/nba.json
     python src/nba.py prueba     # prueba con temporadas pasadas (data/modelo/nba/backtest.json)
@@ -212,6 +213,41 @@ def descargar_historia(desde=TEMPORADA_DESDE):
     return df
 
 
+CUARTOS = RAW / 'nba_cuartos.csv'
+
+
+def descargar_cuartos():
+    """Puntos por cuarto de cada juego terminado (l1..l4 local, v1..v4 visita, l_ot/v_ot tiempo extra), para estudiar los
+    mercados de primera mitad y de cuarto. Solo baja los días con juegos que faltan (la primera vez, todas las temporadas)."""
+    from fuentes import _get
+    g = _cargar_csv()
+    g = g[g.pl.notna()]
+    ya = pd.read_csv(CUARTOS, dtype={'id': str}) if CUARTOS.exists() else pd.DataFrame(columns=['id'])
+    dias = sorted(set(g[~g.id.astype(str).isin(set(ya.id.astype(str)))].fecha.str.replace('-', '')))
+    if not dias:
+        return
+    with ThreadPoolExecutor(8) as ex:
+        eventos = [e for lst in ex.map(lambda d: ((_get(f'{ESPN_NBA}/scoreboard', params={'dates': d, 'limit': 50}) or {})
+                                                  .get('events', [])), dias) for e in lst]
+    filas = []
+    for e in eventos:
+        comp = e['competitions'][0]
+        if not comp['status']['type'].get('completed'):
+            continue
+        cs = {c.get('homeAway'): c for c in comp.get('competitors', [])}
+        if 'home' not in cs or 'away' not in cs:
+            continue
+        ls = {k: [float(x.get('value', x.get('displayValue', 0)) or 0) for x in (cs[k].get('linescores') or [])] for k in ('home', 'away')}
+        if len(ls['home']) < 4 or len(ls['away']) < 4:
+            continue
+        filas.append({'id': str(e['id']), **{f'l{i + 1}': ls['home'][i] for i in range(4)}, **{f'v{i + 1}': ls['away'][i] for i in range(4)},
+                      'l_ot': sum(ls['home'][4:]), 'v_ot': sum(ls['away'][4:])})
+    if filas:
+        nuevo = pd.concat([ya, pd.DataFrame(filas)], ignore_index=True).drop_duplicates('id', keep='last')
+        nuevo.to_csv(CUARTOS, index=False)
+    print(f'  NBA cuartos: {len(dias)} días, {len(filas)} juegos nuevos')
+
+
 def descargar():
     """Corrida diaria: resultados y momios de cierre que falten, próximos, lesiones, minutos por jugador y plantillas."""
     descargar_historia()
@@ -219,6 +255,10 @@ def descargar():
     descargar_boxscores()
     descargar_pretemporada()
     descargar_plantillas()
+    try:
+        descargar_cuartos()
+    except Exception as ex:          # es para estudiar mercados nuevos: si falla, la página sigue igual
+        print('  NBA cuartos: no se pudo', ex)
 
 
 def _momios_prox(comp):
@@ -964,6 +1004,8 @@ if __name__ == '__main__':
         descargar_plantillas()
     elif arg == 'box':
         descargar_boxscores()
+    elif arg == 'cuartos':
+        descargar_cuartos()
     elif arg == 'pretemporada':
         descargar_pretemporada()
     elif arg == 'espn':
