@@ -1,173 +1,24 @@
 [
  {
-  "id": "401915846",
-  "utc": "2026-10-22T14:30Z",
-  "estadio": "Almaty Ortalyk Stadium",
-  "local_espn": "Kairat Almaty",
-  "visita_espn": "Panathinaikos",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    475,
-    320,
-    -175
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    -105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     135
-    ],
-    [
-     "-0.5",
-     -190
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Kairat Almaty": [
-    [
-     "306134",
-     "Temirlan Anarbekov",
-     "G"
-    ],
-    [
-     "345109",
-     "Olzhas Baybek",
-     "D"
-    ],
-    [
-     "227259",
-     "Luis Mata",
-     "D"
-    ],
-    [
-     "140152",
-     "Alyaksandr Martynovich",
-     "D"
-    ],
-    [
-     "287874",
-     "Erkin Tapalov",
-     "D"
-    ],
-    [
-     "406968",
-     "Azamat Tuyakbayev",
-     "M"
-    ],
-    [
-     "275994",
-     "Jaakko Oksanen",
-     "M"
-    ],
-    [
-     "352200",
-     "Gustavo Mendonça",
-     "M"
-    ],
-    [
-     "250068",
-     "Marc Gual",
-     "M"
-    ],
-    [
-     "326288",
-     "Aleksandr Mrynskiy",
-     "M"
-    ],
-    [
-     "352291",
-     "Edmilson",
-     "F"
-    ]
-   ],
-   "Panathinaikos": [
-    [
-     "282680",
-     "Iñaki Peña",
-     "G"
-    ],
-    [
-     "213207",
-     "Georgios Kyriakopoulos",
-     "D"
-    ],
-    [
-     "346306",
-     "Triantafyllos Tsapras",
-     "D"
-    ],
-    [
-     "141443",
-     "Stefan de Vrij",
-     "D"
-    ],
-    [
-     "191847",
-     "Erik Palmer-Brown",
-     "D"
-    ],
-    [
-     "312550",
-     "Etienne Camara",
-     "M"
-    ],
-    [
-     "324043",
-     "Vicente Taborda",
-     "M"
-    ],
-    [
-     "392253",
-     "Santino Andino",
-     "M"
-    ],
-    [
-     "365703",
-     "Andrews Tetteh",
-     "M"
-    ],
-    [
-     "283699",
-     "Imran Louza",
-     "M"
-    ],
-    [
-     "212250",
-     "Cyriel Dessers",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915844",
   "utc": "2026-10-22T16:45Z",
   "estadio": "Right to Dream Park",
   "local_espn": "FC Nordsjælland",
   "visita_espn": "CSKA Sofia",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
+    -245,
     400,
-    600
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -165
+    -160
    ],
    "spread": [
     [
@@ -176,7 +27,7 @@
     ],
     [
      "+1.5",
-     -140
+     -135
     ]
    ]
   },
@@ -303,29 +154,29 @@
   "estadio": "Estadio Coliseum",
   "local_espn": "Getafe",
   "visita_espn": "FC Lugano",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    220,
-    255
+    130,
+    215,
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -165
+    135,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     105
+     120
     ],
     [
      "+0.5",
-     -150
+     -165
     ]
    ]
   },
@@ -452,29 +303,29 @@
   "estadio": "Mikheil Meskhi Stadioni",
   "local_espn": "Iberia 1999",
   "visita_espn": "Mjällby AIF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
-    220,
-    155
+    175,
+    230,
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -135
+    -105,
+    -120
    ],
    "spread": [
     [
      "+0.5",
-     -190
+     -210
     ],
     [
      "-0.5",
-     135
+     150
     ]
    ]
   },
@@ -601,7 +452,7 @@
   "estadio": "Estadi de la FAF d'Encamp",
   "local_espn": "Inter D'Escaldes",
   "visita_espn": "CSU Craiova",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -613,17 +464,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -105
    ],
    "spread": [
     [
      "+1.5",
-     -185
+     -170
     ],
     [
      "-1.5",
-     130
+     125
     ]
    ]
   },
@@ -750,29 +601,29 @@
   "estadio": "Stadion Strelnice",
   "local_espn": "Jablonec",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1200,
+    1300,
     650,
-    -500
+    -525
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -135
+    -105,
+    -120
    ],
    "spread": [
     [
-     "+1.5",
-     130
+     "+2.5",
+     -175
     ],
     [
-     "-1.5",
-     -185
+     "-2.5",
+     125
     ]
    ]
   },
@@ -899,29 +750,29 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "SK Brann",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    380,
-    295,
-    -140
+    350,
+    285,
+    -130
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -120
+    100,
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     110
+     100
     ],
     [
      "-0.5",
-     -155
+     -140
     ]
    ]
   },
@@ -1048,29 +899,29 @@
   "estadio": "Alphamega Stadium",
   "local_espn": "Pafos",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    285,
-    360
+    -105,
+    265,
+    275
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -105
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -110
     ],
     [
      "+0.5",
-     105
+     -125
     ]
    ]
   },
@@ -1197,7 +1048,7 @@
   "estadio": "Rajko Mitic Stadium",
   "local_espn": "Red Star Belgrade",
   "visita_espn": "F.C. København",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1205,7 +1056,7 @@
    "ml": [
     115,
     260,
-    230
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1222,6 +1073,122 @@
      -145
     ]
    ]
+  },
+  "alineaciones": {
+   "Red Star Belgrade": [
+    [
+     "158174",
+     "Matheus",
+     "G"
+    ],
+    [
+     "402677",
+     "Stefan Gudelj",
+     "CD"
+    ],
+    [
+     "237079",
+     "Yuta Nakayama",
+     "LB"
+    ],
+    [
+     "402676",
+     "Matej Gashtarov",
+     "RB"
+    ],
+    [
+     "222595",
+     "Rade Krunic",
+     "CM-L"
+    ],
+    [
+     "324008",
+     "Tomás Händel",
+     "CM-R"
+    ],
+    [
+     "221334",
+     "Mihailo Ristic",
+     "LM"
+    ],
+    [
+     "345737",
+     "Vladimir Lucic",
+     "RM"
+    ],
+    [
+     "313889",
+     "Bamba Dieng",
+     "F"
+    ],
+    [
+     "400970",
+     "Vasilije Kostov",
+     "AM-L"
+    ],
+    [
+     "235813",
+     "Timi Elsnik",
+     "AM-R"
+    ]
+   ],
+   "F.C. København": [
+    [
+     "287713",
+     "Diant Ramaj",
+     "G"
+    ],
+    [
+     "208595",
+     "Asger Sørensen",
+     "CD"
+    ],
+    [
+     "333663",
+     "Junnosuke Suzuki",
+     "CD-L"
+    ],
+    [
+     "255253",
+     "Felix Beijmo",
+     "CD-R"
+    ],
+    [
+     "151757",
+     "Thomas Delaney",
+     "CM-L"
+    ],
+    [
+     "397863",
+     "Hunor Németh",
+     "CM-R"
+    ],
+    [
+     "192115",
+     "Birger Meling",
+     "LM"
+    ],
+    [
+     "317453",
+     "Rodrigo Huescas",
+     "RM"
+    ],
+    [
+     "176668",
+     "Andreas Cornelius",
+     "F"
+    ],
+    [
+     "363213",
+     "Robert",
+     "CF-L"
+    ],
+    [
+     "376476",
+     "Maher Carrizo",
+     "CF-R"
+    ]
+   ]
   }
  },
  {
@@ -1230,29 +1197,29 @@
   "estadio": "Papara Park",
   "local_espn": "Trabzonspor",
   "visita_espn": "Heart of Midlothian",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -295,
+    -320,
     500,
-    650
+    700
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -120,
+    -110
    ],
    "spread": [
     [
      "-1.5",
-     -125
+     -130
     ],
     [
      "+1.5",
-     -110
+     -105
     ]
    ]
   },
@@ -1418,9 +1385,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    300,
-    230
+    105,
+    310,
+    220
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1430,11 +1397,11 @@
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -1452,13 +1419,13 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    260,
-    225
+    270,
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    125
+    -170,
+    130
    ],
    "spread": [
     [
@@ -1484,9 +1451,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    265,
-    350
+    -140,
+    290,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1496,11 +1463,11 @@
    "spread": [
     [
      "-0.5",
-     -140
+     -155
     ],
     [
      "+0.5",
-     100
+     110
     ]
    ]
   }
