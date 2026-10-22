@@ -67,10 +67,10 @@
   "visita": "MIN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Miami Heat",
   "visita_espn": "Minnesota Timberwolves",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -84,30 +84,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -118,
-    -102
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -1.5,
-    -108,
-    1.5,
-    -112
-   ],
-   "spread_abre": -3.5,
-   "total": [
-    240.5,
-    -110,
-    -110
-   ],
-   "total_abre": 236.5
-  }
+  "momios": null
  },
  {
   "id": "401909836",
@@ -119,10 +96,10 @@
   "visita": "CHA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Brooklyn Nets",
   "visita_espn": "Charlotte Hornets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Barclays Center",
   "records": {
    "home": [
@@ -136,30 +113,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    105,
-    -125
-   ],
-   "ml_abre": [
-    142,
-    -170
-   ],
-   "spread": [
-    1.5,
-    -110,
-    -1.5,
-    -110
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    219.5,
-    -112,
-    -108
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909837",
@@ -171,10 +125,10 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Toronto Raptors",
   "visita_espn": "Chicago Bulls",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
@@ -188,30 +142,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -470,
-    360
-   ],
-   "ml_abre": [
-    -345,
-    275
-   ],
-   "spread": [
-    -10.5,
-    -112,
-    10.5,
-    -108
-   ],
-   "spread_abre": -8.5,
-   "total": [
-    237.5,
-    -115,
-    -105
-   ],
-   "total_abre": 235.5
-  }
+  "momios": null
  },
  {
   "id": "401909838",
@@ -223,10 +154,10 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "Utah Jazz",
-  "revisado": true,
+  "revisado": false,
   "estadio": "FedExForum",
   "records": {
    "home": [
@@ -240,30 +171,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -125,
-    105
-   ],
-   "ml_abre": [
-    124,
-    -148
-   ],
-   "spread": [
-    -1.5,
-    -115,
-    1.5,
-    -105
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    240.5,
-    -115,
-    -105
-   ],
-   "total_abre": 241.5
-  }
+  "momios": null
  },
  {
   "id": "401909839",
@@ -275,10 +183,10 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Indiana Pacers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -292,30 +200,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    120,
-    -142
-   ],
-   "ml_abre": [
-    145,
-    -175
-   ],
-   "spread": [
-    2.5,
-    -102,
-    -2.5,
-    -118
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    238.5,
-    -115,
-    -105
-   ],
-   "total_abre": 240.5
-  }
+  "momios": null
  },
  {
   "id": "401909840",
@@ -330,7 +215,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Houston Rockets",
   "visita_espn": "Dallas Mavericks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -355,10 +240,10 @@
     270
    ],
    "spread": [
-    -10.5,
-    100,
-    10.5,
-    -120
+    -9.5,
+    -118,
+    9.5,
+    -102
    ],
    "spread_abre": -8.5,
    "total": [
@@ -382,7 +267,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Golden State Warriors",
-  "revisado": false,
+  "revisado": true,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -434,7 +319,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Portland Trail Blazers",
   "visita_espn": "Phoenix Suns",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Moda Center",
   "records": {
    "home": [
@@ -2989,6 +2874,122 @@
     "1-0",
     "0-0",
     "1-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909903",
+  "utc": "2026-11-01T20:30Z",
+  "fecha": "2026-11-01",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ORL",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Orlando Magic",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Kia Center",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-1",
+    "0-0",
+    "0-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909904",
+  "utc": "2026-11-01T22:00Z",
+  "fecha": "2026-11-01",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "IND",
+  "visita": "BKN",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Indiana Pacers",
+  "visita_espn": "Brooklyn Nets",
+  "revisado": false,
+  "estadio": "Gainbridge Fieldhouse",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909905",
+  "utc": "2026-11-02T01:30Z",
+  "fecha": "2026-11-01",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "GS",
+  "visita": "LAC",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Golden State Warriors",
+  "visita_espn": "LA Clippers",
+  "revisado": false,
+  "estadio": "Chase Center",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909906",
+  "utc": "2026-11-02T02:00Z",
+  "fecha": "2026-11-01",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "LAL",
+  "visita": "TOR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Los Angeles Lakers",
+  "visita_espn": "Toronto Raptors",
+  "revisado": false,
+  "estadio": "crypto.com Arena",
+  "records": {
+   "home": [
+    "0-0",
+    "0-0",
+    "0-0"
+   ],
+   "away": [
+    "0-0",
+    "0-0",
+    "0-0"
    ]
   },
   "momios": null

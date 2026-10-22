@@ -11,13 +11,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
+    240,
     275,
-    105
+    100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     125
    ],
    "spread": [
@@ -44,23 +44,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    280,
-    -125
+    275,
+    270,
+    -110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    100
+    -125,
+    -105
    ],
    "spread": [
     [
      "+0.5",
-     -105
+     -120
     ],
     [
      "-0.5",
-     -130
+     -115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Puebla": [
+    [
+     "276399",
+     "Ricardo Gutiérrez",
+     "SUB"
+    ],
+    [
+     "308491",
+     "Eduardo Mustre",
+     "SUB"
+    ],
+    [
+     "329916",
+     "Heriberto De Jesus",
+     "SUB"
+    ],
+    [
+     "284657",
+     "Fernando Monarrez",
+     "SUB"
+    ],
+    [
+     "227939",
+     "Brayan Garnica",
+     "SUB"
+    ],
+    [
+     "120798",
+     "Alonso Ramirez",
+     "SUB"
+    ],
+    [
+     "283788",
+     "Facundo Almada",
+     "SUB"
+    ],
+    [
+     "284658",
+     "Alejandro Organista",
+     "SUB"
+    ],
+    [
+     "338844",
+     "Iker Moreno",
+     "SUB"
+    ],
+    [
+     "235122",
+     "Juan Pablo Vargas",
+     "SUB"
+    ],
+    [
+     "356340",
+     "Mathías Tomás",
+     "SUB"
+    ]
+   ],
+   "Monterrey": [
+    [
+     "138328",
+     "Esteban Andrada",
+     "G"
+    ],
+    [
+     "202106",
+     "Ricardo Chávez",
+     "D"
+    ],
+    [
+     "290348",
+     "Víctor Guzmán",
+     "D"
+    ],
+    [
+     "245848",
+     "Gerardo Arteaga",
+     "D"
+    ],
+    [
+     "184299",
+     "Carlos Salcedo",
+     "D"
+    ],
+    [
+     "235817",
+     "Diego Rossi",
+     "M"
+    ],
+    [
+     "207011",
+     "Orbelín Pineda",
+     "M"
+    ],
+    [
+     "173233",
+     "Óliver Torres",
+     "M"
+    ],
+    [
+     "159263",
+     "Lucas Ocampos",
+     "M"
+    ],
+    [
+     "375061",
+     "Cesar Garza",
+     "M"
+    ],
+    [
+     "235511",
+     "Hugo Cuypers",
+     "F"
     ]
    ]
   }
@@ -77,23 +193,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -390,
-    550,
-    850
+    -750,
+    750,
+    1500
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -115
+    -160,
+    120
    ],
    "spread": [
     [
-     "-1.5",
-     -165
+     "-2.5",
+     -110
     ],
     [
-     "+1.5",
-     115
+     "+2.5",
+     -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Toluca": [
+    [
+     "184845",
+     "Luis García",
+     "G"
+    ],
+    [
+     "338878",
+     "Everardo López",
+     "D"
+    ],
+    [
+     "132098",
+     "Jesús Gallardo",
+     "D"
+    ],
+    [
+     "288735",
+     "Federico Pereira",
+     "D"
+    ],
+    [
+     "233104",
+     "Diego Zaragoza",
+     "D"
+    ],
+    [
+     "229487",
+     "Alexis Vega",
+     "M"
+    ],
+    [
+     "282615",
+     "Jesús Angulo",
+     "M"
+    ],
+    [
+     "128422",
+     "Franco Romero",
+     "M"
+    ],
+    [
+     "266679",
+     "Helinho",
+     "M"
+    ],
+    [
+     "57149",
+     "Nicolás Castro",
+     "M"
+    ],
+    [
+     "189480",
+     "Paulinho",
+     "F"
+    ]
+   ],
+   "Tijuana": [
+    [
+     "175155",
+     "Antonio Rodríguez",
+     "G"
+    ],
+    [
+     "178142",
+     "Rafael Fernández",
+     "D"
+    ],
+    [
+     "286665",
+     "Jackson Porozo",
+     "D"
+    ],
+    [
+     "364810",
+     "Pablo Nicolás Ortíz",
+     "D"
+    ],
+    [
+     "222363",
+     "Unai Bilbao",
+     "D"
+    ],
+    [
+     "232558",
+     "Frank Thierry Boya",
+     "M"
+    ],
+    [
+     "401798",
+     "Joban González",
+     "M"
+    ],
+    [
+     "361264",
+     "Jonathan Padilla",
+     "M"
+    ],
+    [
+     "304337",
+     "Ángel Zapata",
+     "M"
+    ],
+    [
+     "360957",
+     "Ramiro Árciga",
+     "M"
+    ],
+    [
+     "307660",
+     "Elias Manoel",
+     "F"
     ]
    ]
   }
@@ -412,6 +644,28 @@
   "estadio": "Estadio Banorte",
   "local_espn": "América",
   "visita_espn": "Toluca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876912",
+  "utc": "2026-11-01T23:00Z",
+  "estadio": "Estadio Corona",
+  "local_espn": "Santos",
+  "visita_espn": "Necaxa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876911",
+  "utc": "2026-11-02T01:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Cruz Azul",
+  "visita_espn": "León",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

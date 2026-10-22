@@ -5,7 +5,7 @@
   "estadio": "Estadio Bello Horizonte - Rey Pele",
   "local_espn": "Llaneros FC",
   "visita_espn": "Deportivo Cali",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -326,8 +326,8 @@
    "casa": "DraftKings",
    "ml": [
     -380,
-    400,
-    750
+    425,
+    800
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -341,7 +341,7 @@
     ],
     [
      "+1.5",
-     -115
+     -110
     ]
    ]
   }
@@ -660,6 +660,28 @@
   "estadio": "Estadio Bello Horizonte - Rey Pele",
   "local_espn": "Llaneros FC",
   "visita_espn": "Atlético Junior",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878061",
+  "utc": "2026-11-01T23:10Z",
+  "estadio": "Atanasio Girardot",
+  "local_espn": "Independiente Medellín",
+  "visita_espn": "Alianza FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877913",
+  "utc": "2026-11-02T01:15Z",
+  "estadio": "Deportivo Cali",
+  "local_espn": "Deportivo Cali",
+  "visita_espn": "Boyacá Chicó FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
