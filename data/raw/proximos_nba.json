@@ -1,92 +1,5 @@
 [
  {
-  "id": "401909838",
-  "utc": "2026-10-22T00:00Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MEM",
-  "visita": "UTAH",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Memphis Grizzlies",
-  "visita_espn": "Utah Jazz",
-  "revisado": false,
-  "estadio": "FedExForum",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909839",
-  "utc": "2026-10-22T00:00Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NO",
-  "visita": "IND",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New Orleans Pelicans",
-  "visita_espn": "Indiana Pacers",
-  "revisado": false,
-  "estadio": "Smoothie King Center",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909840",
-  "utc": "2026-10-22T00:30Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "HOU",
-  "visita": "DAL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_END_PERIOD",
-  "local_espn": "Houston Rockets",
-  "visita_espn": "Dallas Mavericks",
-  "revisado": false,
-  "estadio": "Toyota Center (Houston)",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909092",
   "utc": "2026-10-22T02:00Z",
   "fecha": "2026-10-21",
@@ -154,10 +67,10 @@
   "visita": "SAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "Sacramento Kings",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -171,30 +84,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -185,
-    154
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -5.5,
-    -105,
-    5.5,
-    -115
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    226.5,
-    -112,
-    -108
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909093",
@@ -224,20 +114,20 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -155,
-    130
+    -162,
+    136
    ],
    "ml_abre": [
     -175,
     145
    ],
    "spread": [
-    -3.5,
-    -105,
-    3.5,
-    -115
+    -2.5,
+    -120,
+    2.5,
+    100
    ],
    "spread_abre": -4.5,
    "total": [
@@ -276,7 +166,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -298,
     250
@@ -357,7 +247,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -135,
     114
@@ -427,14 +317,14 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -548,8 +438,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -572,13 +462,13 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ]
   },
@@ -606,8 +496,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -804,9 +694,9 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-1",
@@ -838,8 +728,8 @@
     "1-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -867,8 +757,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ]
   },
@@ -920,9 +810,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-0",
@@ -954,9 +844,9 @@
     "0-0"
    ],
    "away": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1099,8 +989,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1215,9 +1105,9 @@
     "0-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1244,9 +1134,9 @@
     "0-1"
    ],
    "away": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1297,8 +1187,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
@@ -1326,13 +1216,13 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1587,9 +1477,9 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "1-0",
@@ -1679,8 +1569,8 @@
     "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1732,8 +1622,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ],
    "away": [
@@ -1761,9 +1651,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-1",
@@ -1790,9 +1680,9 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -1877,8 +1767,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ],
    "away": [
@@ -1911,8 +1801,8 @@
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1946,7 +1836,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -115,
     -105
@@ -1998,7 +1888,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -575,
     425
@@ -2050,7 +1940,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     250,
     -310
@@ -2102,7 +1992,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -125,
     105
@@ -2154,7 +2044,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -155,
     130
@@ -2200,13 +2090,13 @@
     "0-0"
    ],
    "away": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -148,
     124
@@ -2247,13 +2137,13 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -2287,7 +2177,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -310,
     250
@@ -2339,7 +2229,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -105,
     -115
@@ -2391,7 +2281,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     110,
     -130
@@ -2432,9 +2322,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-0",
@@ -2490,8 +2380,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "0-1",
+    "0-1",
     "0-0"
    ],
    "away": [
@@ -2519,8 +2409,8 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
@@ -2606,8 +2496,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
@@ -2664,9 +2554,9 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
+    "1-0",
     "0-0",
-    "0-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "0-1",
