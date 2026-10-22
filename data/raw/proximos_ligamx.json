@@ -5,7 +5,7 @@
   "estadio": "Estadio Jalisco",
   "local_espn": "Atlas",
   "visita_espn": "América",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -38,7 +38,7 @@
   "estadio": "Estadio Cuauhtémoc",
   "local_espn": "Puebla",
   "visita_espn": "Monterrey",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -187,7 +187,7 @@
   "estadio": "Estadio Nemesio Díez Riega",
   "local_espn": "Toluca",
   "visita_espn": "Tijuana",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -342,23 +342,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    210,
     265,
-    125
+    115
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    -180,
+    135
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -150
     ],
     [
      "-0.5",
-     115
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Pachuca": [
+    [
+     "259439",
+     "Carlos Moreno",
+     "G"
+    ],
+    [
+     "364454",
+     "Jorge Berlanga",
+     "D"
+    ],
+    [
+     "347613",
+     "Pedro Budib",
+     "D"
+    ],
+    [
+     "228355",
+     "Francisco Venegas",
+     "D"
+    ],
+    [
+     "194921",
+     "Eduardo Bauermann",
+     "D"
+    ],
+    [
+     "229552",
+     "Oussama Idrissi",
+     "M"
+    ],
+    [
+     "160562",
+     "Javier Vallejo",
+     "M"
+    ],
+    [
+     "326072",
+     "Alan Bautista",
+     "M"
+    ],
+    [
+     "233978",
+     "Christian Rivera",
+     "M"
+    ],
+    [
+     "176489",
+     "Rodolfo Pizarro",
+     "M"
+    ],
+    [
+     "127570",
+     "Salomón Rondón",
+     "F"
+    ]
+   ],
+   "Cruz Azul": [
+    [
+     "224752",
+     "Andrés Gudiño",
+     "G"
+    ],
+    [
+     "192166",
+     "Gonzalo Piovi",
+     "CD-L"
+    ],
+    [
+     "291186",
+     "Amaury García",
+     "CD-R"
+    ],
+    [
+     "136124",
+     "Omar Campos",
+     "LB"
+    ],
+    [
+     "215785",
+     "Alan Mozo",
+     "RB"
+    ],
+    [
+     "219001",
+     "Agustín Palavecino",
+     "AM"
+    ],
+    [
+     "276942",
+     "Érik Lira",
+     "LM"
+    ],
+    [
+     "285862",
+     "Ángel Márquez",
+     "RM"
+    ],
+    [
+     "115447",
+     "Gabriel Fernandez",
+     "F"
+    ],
+    [
+     "239990",
+     "Carlos Rodríguez",
+     "AM-L"
+    ],
+    [
+     "304424",
+     "Alán Montes",
+     "AM-R"
     ]
    ]
   }
@@ -375,9 +491,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    145,
     265,
-    205
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -387,11 +503,127 @@
    "spread": [
     [
      "-0.5",
-     110
+     130
     ],
     [
      "+0.5",
-     -155
+     -185
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Santos": [
+    [
+     "236368",
+     "Carlos Acevedo",
+     "G"
+    ],
+    [
+     "358421",
+     "Felipe Sanchez",
+     "CD"
+    ],
+    [
+     "252608",
+     "Efraín Orona",
+     "CD-L"
+    ],
+    [
+     "255945",
+     "Franco Pardo",
+     "CD-R"
+    ],
+    [
+     "110987",
+     "Francisco Villalba",
+     "CM-L"
+    ],
+    [
+     "309575",
+     "Facundo Cáseres",
+     "CM-R"
+    ],
+    [
+     "315609",
+     "Diego González",
+     "LM"
+    ],
+    [
+     "287252",
+     "Mauricio Cuevas",
+     "RM"
+    ],
+    [
+     "228358",
+     "Eduardo Aguirre",
+     "F"
+    ],
+    [
+     "282380",
+     "Ezequiel Bullaude",
+     "CF-L"
+    ],
+    [
+     "376557",
+     "Tahiel Jiménez",
+     "CF-R"
+    ]
+   ],
+   "Pumas UNAM": [
+    [
+     "73247",
+     "Keylor Navas",
+     "G"
+    ],
+    [
+     "177553",
+     "Rubén Duarte",
+     "CD-L"
+    ],
+    [
+     "236597",
+     "Nathan Silva",
+     "CD-R"
+    ],
+    [
+     "286879",
+     "Pablo Bennevendo",
+     "LB"
+    ],
+    [
+     "344568",
+     "Rodrigo López",
+     "RB"
+    ],
+    [
+     "297150",
+     "Pedro Vite",
+     "CM-L"
+    ],
+    [
+     "219508",
+     "Adalberto Carrasquilla",
+     "CM-R"
+    ],
+    [
+     "265969",
+     "César Huerta",
+     "LM"
+    ],
+    [
+     "242715",
+     "Uriel Antuna",
+     "RM"
+    ],
+    [
+     "239983",
+     "Juninho",
+     "CF-L"
+    ],
+    [
+     "255942",
+     "Robert Morales",
+     "CF-R"
     ]
    ]
   }
@@ -415,7 +647,7 @@
    "ou_linea": 2.5,
    "ou": [
     -180,
-    130
+    125
    ],
    "spread": [
     [
