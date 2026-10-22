@@ -5,7 +5,7 @@
   "estadio": "Almaty Ortalyk Stadium",
   "local_espn": "Kairat Almaty",
   "visita_espn": "Panathinaikos",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -160,7 +160,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -245,
+    -240,
     400,
     600
    ],
@@ -179,6 +179,122 @@
      -140
     ]
    ]
+  },
+  "alineaciones": {
+   "FC Nordsjælland": [
+    [
+     "145645",
+     "Andreas Hansen",
+     "G"
+    ],
+    [
+     "372633",
+     "Noah Markmann",
+     "D"
+    ],
+    [
+     "241138",
+     "Victor Nelsson",
+     "D"
+    ],
+    [
+     "378549",
+     "Stephen Acquah",
+     "D"
+    ],
+    [
+     "387494",
+     "Justin Janssen",
+     "M"
+    ],
+    [
+     "372632",
+     "Juho Lähteenmäki",
+     "M"
+    ],
+    [
+     "312960",
+     "Runar Norheim",
+     "M"
+    ],
+    [
+     "249171",
+     "Nicklas Rojkjaer",
+     "M"
+    ],
+    [
+     "299619",
+     "Ibrahim Adel",
+     "F"
+    ],
+    [
+     "401465",
+     "Villum Berthelsen",
+     "F"
+    ],
+    [
+     "202681",
+     "Alexander Lind",
+     "F"
+    ]
+   ],
+   "CSKA Sofia": [
+    [
+     "343364",
+     "Fedor Lapoukhov",
+     "G"
+    ],
+    [
+     "258439",
+     "Bruno Jordão",
+     "D"
+    ],
+    [
+     "118680",
+     "Facundo Rodríguez",
+     "D"
+    ],
+    [
+     "219280",
+     "Dinis Almeida",
+     "D"
+    ],
+    [
+     "274583",
+     "Max Ebong",
+     "M"
+    ],
+    [
+     "314648",
+     "Pastor",
+     "M"
+    ],
+    [
+     "180927",
+     "Stefano Sensi",
+     "M"
+    ],
+    [
+     "249304",
+     "Ángelo Martino",
+     "M"
+    ],
+    [
+     "410382",
+     "Petko Panayotov",
+     "M"
+    ],
+    [
+     "221149",
+     "Ioannis Pittas",
+     "F"
+    ],
+    [
+     "147012",
+     "Santiago Godoy",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -193,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    230,
-    290
+    120,
+    220,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
-    -160
+    130,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     100
+     105
     ],
     [
      "+0.5",
-     -135
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Getafe": [
+    [
+     "196339",
+     "David Soria",
+     "G"
+    ],
+    [
+     "277876",
+     "Abdel Abqar",
+     "CD-L"
+    ],
+    [
+     "181355",
+     "Djené",
+     "CD-R"
+    ],
+    [
+     "406832",
+     "Davinchi",
+     "LB"
+    ],
+    [
+     "125749",
+     "Kiko Femenía",
+     "RB"
+    ],
+    [
+     "310259",
+     "Ivan Azón",
+     "AM"
+    ],
+    [
+     "395479",
+     "Jean Ives Valou",
+     "LM"
+    ],
+    [
+     "356080",
+     "Andrés García",
+     "RM"
+    ],
+    [
+     "218793",
+     "Borja Mayoral",
+     "F"
+    ],
+    [
+     "307186",
+     "Francho Serrano",
+     "AM-L"
+    ],
+    [
+     "383912",
+     "Alberto Risco",
+     "AM-R"
+    ]
+   ],
+   "FC Lugano": [
+    [
+     "199378",
+     "David Von Ballmoos",
+     "G"
+    ],
+    [
+     "259126",
+     "Lukas Mai",
+     "CD"
+    ],
+    [
+     "252521",
+     "Hannes Delcroix",
+     "CD-L"
+    ],
+    [
+     "291966",
+     "Antonios Papadopoulos",
+     "CD-R"
+    ],
+    [
+     "319631",
+     "Daniel Correia",
+     "CM-L"
+    ],
+    [
+     "341382",
+     "Uran Bislimi",
+     "CM-R"
+    ],
+    [
+     "223234",
+     "Anto Grgic",
+     "AM"
+    ],
+    [
+     "305659",
+     "Yanis Cimignani",
+     "LM"
+    ],
+    [
+     "323117",
+     "Mattia Zanotti",
+     "RM"
+    ],
+    [
+     "406463",
+     "Dereck Moncada",
+     "CF-L"
+    ],
+    [
+     "202100",
+     "Albian Ajeti",
+     "CF-R"
     ]
    ]
   }
@@ -227,22 +459,138 @@
    "casa": "DraftKings",
    "ml": [
     195,
-    235,
-    145
+    220,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -120
+    105,
+    -135
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -190
     ],
     [
      "-0.5",
-     130
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Iberia 1999": [
+    [
+     "136682",
+     "Georgi Makaridze",
+     "G"
+    ],
+    [
+     "322014",
+     "Giorgi Kobuladze",
+     "D"
+    ],
+    [
+     "239915",
+     "Vahid Selimovic",
+     "D"
+    ],
+    [
+     "289205",
+     "Jemali-Giorgi Jinjolava",
+     "D"
+    ],
+    [
+     "405634",
+     "Aleksandre Amisulashvili",
+     "D"
+    ],
+    [
+     "358181",
+     "Lucas Brune",
+     "M"
+    ],
+    [
+     "221189",
+     "Bakar Kardava",
+     "M"
+    ],
+    [
+     "385863",
+     "Nikoloz Dadiani",
+     "M"
+    ],
+    [
+     "405633",
+     "Amiran Dzagania",
+     "F"
+    ],
+    [
+     "3093406",
+     "Zviad Natchkebia",
+     "F"
+    ],
+    [
+     "382642",
+     "Nika Sikharulashvili",
+     "F"
+    ]
+   ],
+   "Mjällby AIF": [
+    [
+     "151931",
+     "Alexander Lundin",
+     "G"
+    ],
+    [
+     "342493",
+     "Tony Miettinen",
+     "D"
+    ],
+    [
+     "306289",
+     "Axel Norén",
+     "D"
+    ],
+    [
+     "356281",
+     "Abdullah Iqbal",
+     "D"
+    ],
+    [
+     "303651",
+     "Viktor Gustafson",
+     "M"
+    ],
+    [
+     "357140",
+     "Villiam Granath",
+     "M"
+    ],
+    [
+     "192793",
+     "Jesper Gustavsson",
+     "M"
+    ],
+    [
+     "306519",
+     "Ian Hoffman",
+     "M"
+    ],
+    [
+     "293925",
+     "Jacob Bergstrom",
+     "F"
+    ],
+    [
+     "403153",
+     "Olle Lindberg",
+     "F"
+    ],
+    [
+     "305836",
+     "Áki Debes Samuelsen",
+     "F"
     ]
    ]
   }
@@ -265,7 +613,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -125,
     -105
    ],
    "spread": [
@@ -276,6 +624,122 @@
     [
      "-1.5",
      130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Inter D'Escaldes": [
+    [
+     "96595",
+     "Javier Díaz",
+     "G"
+    ],
+    [
+     "411685",
+     "Anwar Hernández",
+     "D"
+    ],
+    [
+     "196982",
+     "Jilmar Torres",
+     "D"
+    ],
+    [
+     "112048",
+     "Álex Sánchez",
+     "D"
+    ],
+    [
+     "296885",
+     "Maurizio Pochettino",
+     "D"
+    ],
+    [
+     "354456",
+     "David López",
+     "M"
+    ],
+    [
+     "385442",
+     "Pablo Molina",
+     "M"
+    ],
+    [
+     "363935",
+     "Domi Berlanga",
+     "M"
+    ],
+    [
+     "75689",
+     "Victor Alonso",
+     "M"
+    ],
+    [
+     "331929",
+     "Soule",
+     "M"
+    ],
+    [
+     "344576",
+     "Faysal Choaib",
+     "F"
+    ]
+   ],
+   "CSU Craiova": [
+    [
+     "239895",
+     "Laurentiu Popescu",
+     "G"
+    ],
+    [
+     "239807",
+     "Vladimir Screciu",
+     "D"
+    ],
+    [
+     "275362",
+     "Nikola Stevanovic",
+     "D"
+    ],
+    [
+     "364179",
+     "Oleksandr Romanchuk",
+     "D"
+    ],
+    [
+     "364416",
+     "João Lameira",
+     "M"
+    ],
+    [
+     "310002",
+     "Carlos Mora",
+     "M"
+    ],
+    [
+     "239813",
+     "Nicusor Bancu",
+     "M"
+    ],
+    [
+     "239721",
+     "Tudor Baluta",
+     "M"
+    ],
+    [
+     "289724",
+     "Stefan Baiaram",
+     "F"
+    ],
+    [
+     "239724",
+     "Alexandru Cicaldau",
+     "F"
+    ],
+    [
+     "301369",
+     "Assad Al-Hamlawi",
+     "F"
     ]
    ]
   }
@@ -292,23 +756,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1500,
-    750,
-    -650
+    1200,
+    650,
+    -500
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    105,
+    -135
    ],
    "spread": [
     [
-     "+2.5",
-     -145
+     "+1.5",
+     130
     ],
     [
-     "-2.5",
-     105
+     "-1.5",
+     -185
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Jablonec": [
+    [
+     "277226",
+     "Richard Sedlacek",
+     "SUB"
+    ],
+    [
+     "141978",
+     "Jan Hanus",
+     "SUB"
+    ],
+    [
+     "338238",
+     "Martin Cedidla",
+     "SUB"
+    ],
+    [
+     "276602",
+     "Jiri Sláma",
+     "SUB"
+    ],
+    [
+     "275765",
+     "Nemanja Tekijaski",
+     "SUB"
+    ],
+    [
+     "26853",
+     "Dusan Pavlovic",
+     "SUB"
+    ],
+    [
+     "308366",
+     "Matej Polidar",
+     "SUB"
+    ],
+    [
+     "297099",
+     "Saidou Alioum Moubarak",
+     "SUB"
+    ],
+    [
+     "257078",
+     "Antonin Rusek",
+     "SUB"
+    ],
+    [
+     "221129",
+     "Vakhtang Chanturishvili",
+     "SUB"
+    ],
+    [
+     "324434",
+     "Nelson Okeke",
+     "SUB"
+    ]
+   ],
+   "Brighton & Hove Albion": [
+    [
+     "291609",
+     "Bart Verbruggen",
+     "G"
+    ],
+    [
+     "289942",
+     "Michael Svoboda",
+     "D"
+    ],
+    [
+     "306033",
+     "Jaouen Hadjam",
+     "D"
+    ],
+    [
+     "274285",
+     "Costinha",
+     "D"
+    ],
+    [
+     "216017",
+     "Olivier Boscagli",
+     "D"
+    ],
+    [
+     "359097",
+     "Malick Yalcouyé",
+     "M"
+    ],
+    [
+     "328011",
+     "Jack Hinshelwood",
+     "M"
+    ],
+    [
+     "132659",
+     "Pascal Gross",
+     "M"
+    ],
+    [
+     "359400",
+     "Ibrahim Osman",
+     "F"
+    ],
+    [
+     "261087",
+     "Matt O'Riley",
+     "F"
+    ],
+    [
+     "278061",
+     "Georginio Rutter",
+     "F"
     ]
    ]
   }
@@ -325,14 +905,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
-    320,
+    380,
+    295,
     -140
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    115
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -341,7 +921,123 @@
     ],
     [
      "-0.5",
-     -150
+     -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Kauno Zalgiris": [
+    [
+     "305774",
+     "Joris Moutachy",
+     "SUB"
+    ],
+    [
+     "269497",
+     "Léo Ribeiro",
+     "SUB"
+    ],
+    [
+     "175221",
+     "Tomas Svedkauskas",
+     "SUB"
+    ],
+    [
+     "305581",
+     "Nosa Iyobosa Edokpolor",
+     "SUB"
+    ],
+    [
+     "194779",
+     "Ivan Fiolic",
+     "SUB"
+    ],
+    [
+     "193870",
+     "Gratas Sirgedas",
+     "SUB"
+    ],
+    [
+     "170222",
+     "Fabien Ourega",
+     "SUB"
+    ],
+    [
+     "208767",
+     "Anthony Kalik",
+     "SUB"
+    ],
+    [
+     "363446",
+     "Rokas Lekiatas",
+     "SUB"
+    ],
+    [
+     "345172",
+     "Anton Tolordava",
+     "SUB"
+    ],
+    [
+     "308049",
+     "Renan Oliveira",
+     "SUB"
+    ]
+   ],
+   "SK Brann": [
+    [
+     "301564",
+     "Simen Vidtun Nilsen",
+     "G"
+    ],
+    [
+     "214177",
+     "Fredrik Knudsen",
+     "D"
+    ],
+    [
+     "243863",
+     "Jacob Sørensen",
+     "D"
+    ],
+    [
+     "205582",
+     "Joachim Soltvedt",
+     "D"
+    ],
+    [
+     "356390",
+     "Jonas Torsvik",
+     "D"
+    ],
+    [
+     "321407",
+     "Eggert Aron Gudmundsson",
+     "M"
+    ],
+    [
+     "314371",
+     "Niklas Jensen",
+     "M"
+    ],
+    [
+     "305403",
+     "Kristall Máni Ingason",
+     "M"
+    ],
+    [
+     "234989",
+     "Niklas Castro",
+     "F"
+    ],
+    [
+     "326637",
+     "Saevar Atli Magnússon",
+     "F"
+    ],
+    [
+     "277007",
+     "Noah Holm",
+     "F"
     ]
    ]
   }
@@ -358,23 +1054,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
-    320,
-    450
+    -130,
+    285,
+    360
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    105
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -145
     ],
     [
      "+0.5",
-     125
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Pafos": [
+    [
+     "238952",
+     "Radoslaw Majecki",
+     "G"
+    ],
+    [
+     "98398",
+     "David Luiz",
+     "D"
+    ],
+    [
+     "206782",
+     "Samy Mmaee",
+     "D"
+    ],
+    [
+     "205240",
+     "Nicholas Ioannou",
+     "D"
+    ],
+    [
+     "258886",
+     "Bruno",
+     "D"
+    ],
+    [
+     "238899",
+     "Guga",
+     "M"
+    ],
+    [
+     "397119",
+     "Alexandre Brito",
+     "M"
+    ],
+    [
+     "107995",
+     "João Correia",
+     "M"
+    ],
+    [
+     "314835",
+     "Gabriel Teixeira",
+     "F"
+    ],
+    [
+     "36807",
+     "Anderson Silva",
+     "F"
+    ],
+    [
+     "266180",
+     "Vlad Dragomir",
+     "F"
+    ]
+   ],
+   "Riga FC": [
+    [
+     "236466",
+     "Kenan Piric",
+     "G"
+    ],
+    [
+     "258259",
+     "Raivis Andris Jurkovskis",
+     "D"
+    ],
+    [
+     "342563",
+     "Baba Musah",
+     "D"
+    ],
+    [
+     "405965",
+     "Karl Wassom",
+     "D"
+    ],
+    [
+     "305058",
+     "Maksims Tonisevs",
+     "D"
+    ],
+    [
+     "362691",
+     "Raki Aouani",
+     "M"
+    ],
+    [
+     "332082",
+     "Ahmed Ankrah",
+     "M"
+    ],
+    [
+     "322489",
+     "Meissa Diop",
+     "M"
+    ],
+    [
+     "405885",
+     "Iago Siqueira",
+     "M"
+    ],
+    [
+     "320258",
+     "Reginaldo Ramires",
+     "F"
+    ],
+    [
+     "307172",
+     "Salah-Eddine Oulad",
+     "F"
     ]
    ]
   }
@@ -391,23 +1203,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    250,
-    200
+    115,
+    260,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     120
+     105
     ],
     [
      "+0.5",
-     -170
+     -145
     ]
    ]
   }
@@ -424,23 +1236,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -340,
-    550,
-    750
+    -295,
+    500,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
      "-1.5",
-     -140
+     -125
     ],
     [
      "+1.5",
-     100
+     -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Trabzonspor": [
+    [
+     "215340",
+     "André Onana",
+     "G"
+    ],
+    [
+     "301348",
+     "Cenk Özkacar",
+     "CD-L"
+    ],
+    [
+     "322807",
+     "Samet Akaydin",
+     "CD-R"
+    ],
+    [
+     "332394",
+     "Sidny Lopes Cabral",
+     "LB"
+    ],
+    [
+     "305565",
+     "Melih Kabasakal",
+     "RB"
+    ],
+    [
+     "265917",
+     "Batista Mendy",
+     "CM"
+    ],
+    [
+     "304683",
+     "Benjamin Bouchouari",
+     "LM"
+    ],
+    [
+     "315227",
+     "Tim Jabol-Folcarelli",
+     "RM"
+    ],
+    [
+     "364585",
+     "Franculino Djú",
+     "F"
+    ],
+    [
+     "410817",
+     "Noah Saviolo",
+     "LF"
+    ],
+    [
+     "173896",
+     "Mohamed Salah",
+     "RF"
+    ]
+   ],
+   "Heart of Midlothian": [
+    [
+     "277882",
+     "Beau Reus",
+     "G"
+    ],
+    [
+     "225632",
+     "Jamie McCart",
+     "CD-L"
+    ],
+    [
+     "279791",
+     "Malachi Walcott",
+     "CD-R"
+    ],
+    [
+     "252741",
+     "Christian Borchgrevink",
+     "LB"
+    ],
+    [
+     "367663",
+     "Jordi Altena",
+     "RB"
+    ],
+    [
+     "405748",
+     "Tómas Magnússon",
+     "CM"
+    ],
+    [
+     "366334",
+     "Severin Sabri Guendouz",
+     "LM"
+    ],
+    [
+     "405624",
+     "Cláudio Braga",
+     "RM"
+    ],
+    [
+     "362560",
+     "James Wilson",
+     "F"
+    ],
+    [
+     "333609",
+     "Rogers Mato",
+     "LF"
+    ],
+    [
+     "199731",
+     "Calvin Miller",
+     "RF"
     ]
    ]
   }
