@@ -1,182 +1,149 @@
 [
  {
-  "id": "401878012",
-  "utc": "2026-10-21T23:15Z",
-  "estadio": "Estadio Bello Horizonte - Rey Pele",
-  "local_espn": "Llaneros FC",
-  "visita_espn": "Deportivo Cali",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    215,
-    145
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -155
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -195
-    ],
-    [
-     "-0.5",
-     140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Llaneros FC": [
-    [
-     "400102",
-     "Roameth Romaña",
-     "G"
-    ],
-    [
-     "378909",
-     "Juan Pertúz",
-     "D"
-    ],
-    [
-     "157583",
-     "Francisco Meza",
-     "D"
-    ],
-    [
-     "365507",
-     "Jhojan Escobar",
-     "D"
-    ],
-    [
-     "357940",
-     "Howell Mena",
-     "D"
-    ],
-    [
-     "366880",
-     "Néider Ospina",
-     "M"
-    ],
-    [
-     "98970",
-     "Luis Miranda",
-     "M"
-    ],
-    [
-     "386889",
-     "Juan Ramírez",
-     "M"
-    ],
-    [
-     "405438",
-     "Kevin Rincón",
-     "M"
-    ],
-    [
-     "24324",
-     "Juan Castilla",
-     "M"
-    ],
-    [
-     "142309",
-     "Yorleys Mena",
-     "F"
-    ]
-   ],
-   "Deportivo Cali": [
-    [
-     "150334",
-     "Pedro Gallese",
-     "G"
-    ],
-    [
-     "400754",
-     "Keimer Sandoval",
-     "D"
-    ],
-    [
-     "322554",
-     "José Caldera",
-     "D"
-    ],
-    [
-     "324044",
-     "Fernando Álvarez",
-     "D"
-    ],
-    [
-     "178817",
-     "Edwin Velasco",
-     "D"
-    ],
-    [
-     "348929",
-     "Johan Andrés Martínez",
-     "M"
-    ],
-    [
-     "378917",
-     "Ronaldo Pájaro",
-     "M"
-    ],
-    [
-     "334205",
-     "Alexis Castillo Manyoma",
-     "M"
-    ],
-    [
-     "157256",
-     "Daniel Giraldo",
-     "M"
-    ],
-    [
-     "222126",
-     "Nicolas Benedetti",
-     "F"
-    ],
-    [
-     "285357",
-     "Steven Rodríguez",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401877844",
   "utc": "2026-10-22T01:20Z",
   "estadio": "Estadio Nemesio Camacho El Campín",
   "local_espn": "Independiente Santa Fe",
   "visita_espn": "Jaguares de Córdoba",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    500,
-    850
+    -525,
+    550,
+    1000
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -145
+    105,
+    -140
    ],
    "spread": [
     [
      "-1.5",
-     -150
+     -175
     ],
     [
      "+1.5",
-     110
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Independiente Santa Fe": [
+    [
+     "286112",
+     "Weibmar Asprilla",
+     "G"
+    ],
+    [
+     "138391",
+     "Emanuel Olivera",
+     "CD-L"
+    ],
+    [
+     "302914",
+     "Iván Scarpeta",
+     "CD-R"
+    ],
+    [
+     "195727",
+     "Christian Mafla",
+     "LB"
+    ],
+    [
+     "197051",
+     "Helibelton Palacios",
+     "RB"
+    ],
+    [
+     "318097",
+     "Franco Fagúndez",
+     "AM"
+    ],
+    [
+     "188170",
+     "Daniel Torres",
+     "LM"
+    ],
+    [
+     "171395",
+     "Johan Torres",
+     "RM"
+    ],
+    [
+     "131212",
+     "Hugo Rodallega",
+     "F"
+    ],
+    [
+     "308522",
+     "Emerson Rodríguez",
+     "AM-L"
+    ],
+    [
+     "216183",
+     "Jáder Obrian",
+     "AM-R"
+    ]
+   ],
+   "Jaguares de Córdoba": [
+    [
+     "336061",
+     "Franklin Mosquera",
+     "G"
+    ],
+    [
+     "139453",
+     "Carlos Henao",
+     "CD-L"
+    ],
+    [
+     "416625",
+     "Jonathan Lovera",
+     "CD-R"
+    ],
+    [
+     "198995",
+     "Luis Jiménez",
+     "LB"
+    ],
+    [
+     "120800",
+     "Juan Franco",
+     "RB"
+    ],
+    [
+     "312812",
+     "Johan Esteban Beltran",
+     "AM"
+    ],
+    [
+     "273390",
+     "Rafael Bustamante",
+     "LM"
+    ],
+    [
+     "285052",
+     "Royscer Colpa",
+     "RM"
+    ],
+    [
+     "181489",
+     "Andrés Rentería",
+     "F"
+    ],
+    [
+     "285204",
+     "Johar Mejía",
+     "AM-L"
+    ],
+    [
+     "201320",
+     "Wilfrido De La Rosa",
+     "AM-R"
     ]
    ]
   }

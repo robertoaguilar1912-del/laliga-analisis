@@ -183,7 +183,7 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Indiana Pacers",
   "revisado": false,
@@ -212,7 +212,7 @@
   "visita": "DAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Dallas Mavericks",
   "revisado": false,
@@ -229,30 +229,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -425,
-    330
-   ],
-   "ml_abre": [
-    -340,
-    270
-   ],
-   "spread": [
-    -9.5,
-    -118,
-    9.5,
-    -102
-   ],
-   "spread_abre": -8.5,
-   "total": [
-    230.5,
-    -102,
-    -118
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909092",
@@ -299,9 +276,9 @@
    ],
    "spread_abre": -5.5,
    "total": [
-    234.5,
-    -112,
-    -108
+    233.5,
+    -115,
+    -105
    ],
    "total_abre": 231.5
   }
@@ -336,24 +313,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -142,
-    120
+    -155,
+    130
    ],
    "ml_abre": [
     -170,
     142
    ],
    "spread": [
-    -2.5,
-    -112,
-    2.5,
-    -108
+    -3.5,
+    -110,
+    3.5,
+    -110
    ],
    "spread_abre": -4.5,
    "total": [
-    231.5,
-    -112,
-    -108
+    232.5,
+    -110,
+    -110
    ],
    "total_abre": 236.5
   }
@@ -371,7 +348,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "LA Clippers",
   "visita_espn": "Sacramento Kings",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
