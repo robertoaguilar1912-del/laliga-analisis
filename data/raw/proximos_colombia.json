@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -275,
-    350,
-    600
+    -320,
+    370,
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    100
+    -150,
+    105
    ],
    "spread": [
     [
      "-1.5",
-     105
+     -110
     ],
     [
      "+1.5",
-     -160
+     -135
     ]
    ]
   }
@@ -173,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    195,
+    115
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -165
+    ],
+    [
+     "-0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401878036",
@@ -261,7 +283,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    215,
+    155
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -220
+    ]
+   ]
+  }
  },
  {
   "id": "401877841",
