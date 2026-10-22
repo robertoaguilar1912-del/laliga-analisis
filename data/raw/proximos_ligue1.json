@@ -45,8 +45,8 @@
    "casa": "DraftKings",
    "ml": [
     135,
-    265,
-    180
+    270,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -56,7 +56,7 @@
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
@@ -78,13 +78,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    230,
-    255
+    220,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -105
+    -110
    ],
    "spread": [
     [
@@ -93,7 +93,7 @@
     ],
     [
      "+0.5",
-     -145
+     -150
     ]
    ]
   }
@@ -116,7 +116,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
@@ -150,12 +150,12 @@
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -130
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -185
     ],
     [
      "-0.5",
@@ -177,13 +177,13 @@
    "casa": "DraftKings",
    "ml": [
     -175,
-    350,
-    400
+    360,
+    390
    ],
    "ou_linea": 3.5,
    "ou": [
-    135,
-    -180
+    130,
+    -175
    ],
    "spread": [
     [
@@ -275,8 +275,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -235,
-    425,
+    -225,
+    400,
     500
    ],
    "ou_linea": 3.5,
@@ -287,11 +287,11 @@
    "spread": [
     [
      "-1.5",
-     100
+     105
     ],
     [
      "+1.5",
-     -145
+     -150
     ]
    ]
   }
@@ -314,7 +314,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
+    -130,
     -110
    ],
    "spread": [
@@ -490,6 +490,105 @@
     [
      "+0.5",
      -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876414",
+  "utc": "2026-11-01T14:00Z",
+  "estadio": "Stade de la Meinau",
+  "local_espn": "Strasbourg",
+  "visita_espn": "AJ Auxerre",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -130,
+    295,
+    295
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -140
+    ],
+    [
+     "+0.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876415",
+  "utc": "2026-11-01T16:15Z",
+  "estadio": "Stade Jean Bouin",
+  "local_espn": "Paris FC",
+  "visita_espn": "AS Monaco",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    250,
+    185
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876417",
+  "utc": "2026-11-01T19:45Z",
+  "estadio": "Stade Vélodrome",
+  "local_espn": "Marseille",
+  "visita_espn": "Toulouse",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    290,
+    290
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -185,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -140
+    ],
+    [
+     "+0.5",
+     -110
     ]
    ]
   }

@@ -83,17 +83,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
+    135,
     -195
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -180
+     -175
     ]
    ]
   }
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    225,
-    205
+    145,
+    230,
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -125
+    -115,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     115
+     130
     ],
     [
      "+0.5",
-     -180
+     -195
     ]
    ]
   }
@@ -149,13 +149,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    120,
     -170
    ],
    "spread": [
     [
      "+0.5",
-     -210
+     -205
     ],
     [
      "-0.5",
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -220,
-    340,
-    500
+    -265,
+    390,
+    600
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    125
+    -190,
+    135
    ],
    "spread": [
     [
      "-1.5",
-     120
+     100
     ],
     [
      "+1.5",
-     -185
+     -150
     ]
    ]
   }
@@ -368,6 +368,39 @@
   "estadio": "Estádio dos Aflitos",
   "local_espn": "Náutico",
   "visita_espn": "Avaí",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860418",
+  "utc": "2026-11-01T19:00Z",
+  "estadio": "Estadio VGD",
+  "local_espn": "Londrina",
+  "visita_espn": "América Mineiro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860415",
+  "utc": "2026-11-01T21:30Z",
+  "estadio": "Arena Pantanal",
+  "local_espn": "Cuiabá",
+  "visita_espn": "São Bernardo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860417",
+  "utc": "2026-11-01T21:30Z",
+  "estadio": "Estádio Dr. Jorge Ismael de Biasi",
+  "local_espn": "Novorizontino",
+  "visita_espn": "Operário PR",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,

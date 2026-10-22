@@ -45,13 +45,13 @@
    "casa": "DraftKings",
    "ml": [
     -120,
-    280,
-    260
+    285,
+    265
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -155
+    -150
    ],
    "spread": [
     [
@@ -79,11 +79,11 @@
    "ml": [
     100,
     265,
-    215
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -165,
     130
    ],
    "spread": [
@@ -93,7 +93,7 @@
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -111,13 +111,13 @@
    "casa": "DraftKings",
    "ml": [
     -145,
-    295,
-    310
+    300,
+    320
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -175
+    135,
+    -170
    ],
    "spread": [
     [
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -265,
-    390,
+    -240,
+    380,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
-    -150,
+    -140,
     110
    ],
    "spread": [
     [
      "-1.5",
-     -115
+     -105
     ],
     [
      "+1.5",
-     -130
+     -135
     ]
    ]
   }
@@ -193,19 +193,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    380,
-    425
+    -225,
+    390,
+    450
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -115,
     -110
    ],
    "spread": [
     [
      "-1.5",
-     105
+     110
     ],
     [
      "+1.5",
@@ -265,8 +265,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -160,
-    120
+    -165,
+    125
    ],
    "spread": [
     [
@@ -457,8 +457,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    265,
+    175,
+    270,
     110
    ],
    "ou_linea": 3.5,
@@ -469,11 +469,11 @@
    "spread": [
     [
      "+0.5",
-     -155
+     -160
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -509,6 +509,40 @@
      -105
     ]
    ]
+  }
+ },
+ {
+  "id": "401884750",
+  "utc": "2026-11-01T14:30Z",
+  "estadio": "Stadion An der Alten Försterei",
+  "local_espn": "1. FC Union Berlin",
+  "visita_espn": "FC Cologne",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401884752",
+  "utc": "2026-11-01T16:30Z",
+  "estadio": "Deutsche Bank Park",
+  "local_espn": "Eintracht Frankfurt",
+  "visita_espn": "Hamburg SV",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   }
  }
 ]

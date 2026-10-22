@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    295,
-    475
+    -160,
+    280,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -125
    ],
    "spread": [
     [
      "-0.5",
-     -190
+     -175
     ],
     [
      "+0.5",
-     130
+     120
     ]
    ]
   }
@@ -44,19 +44,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -130,
     260,
-    350
+    340
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -125
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -150
+     -140
     ],
     [
      "+0.5",
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    210,
-    245
+    115,
+    215,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -93,7 +93,7 @@
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   }
@@ -111,8 +111,8 @@
    "casa": "DraftKings",
    "ml": [
     550,
-    330,
-    -235
+    340,
+    -220
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -126,7 +126,7 @@
     ],
     [
      "-1.5",
-     120
+     125
     ]
    ]
   }
@@ -149,7 +149,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -120
    ],
    "spread": [
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
+    -450,
     500,
-    850
+    900
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -150
+    -155
    ],
    "spread": [
     [
      "-1.5",
-     -165
+     -160
     ],
     [
      "+1.5",
-     110
+     105
     ]
    ]
   }
@@ -276,22 +276,22 @@
    "casa": "DraftKings",
    "ml": [
     700,
-    360,
-    -280
+    370,
+    -290
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -115
+    -130,
+    -110
    ],
    "spread": [
     [
      "+1.5",
-     -150
+     -145
     ],
     [
      "-1.5",
-     100
+     -105
     ]
    ]
   }
@@ -324,6 +324,50 @@
   "estadio": "Estádio do Dragão",
   "local_espn": "FC Porto",
   "visita_espn": "Estoril",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885410",
+  "utc": "2026-11-01T15:30Z",
+  "estadio": "Estádio Municipal de Arouca",
+  "local_espn": "Arouca",
+  "visita_espn": "C.D. Nacional",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885411",
+  "utc": "2026-11-01T18:00Z",
+  "estadio": "Estádio do Fontelo",
+  "local_espn": "Académico de Viseu",
+  "visita_espn": "Rio Ave",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885406",
+  "utc": "2026-11-01T18:00Z",
+  "estadio": "Estádio do Marítimo",
+  "local_espn": "Maritimo",
+  "visita_espn": "Santa Clara",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885409",
+  "utc": "2026-11-01T20:30Z",
+  "estadio": "Estádio Municipal de Braga",
+  "local_espn": "Braga",
+  "visita_espn": "FC Famalicao",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
