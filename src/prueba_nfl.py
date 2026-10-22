@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, PICK_P_MIN
-from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB
+from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB, BAJAS, FALTAS
 from picks import calibrar
 
 warnings.filterwarnings('ignore')
@@ -31,6 +31,20 @@ def predecir(g, desde, hasta, hl, ridge, clave):
                 out.append({'i': r.Index, 'pm': ph - pa, 'pt': ph + pa})
     p = pd.DataFrame(out).set_index('i')
     return g.join(p, how='inner')
+
+
+def con_bajas(d):
+    """Suma a la diferencia del modelo las bajas de cada equipo (Out y Doubtful pesados por sus snaps; nfl.BAJAS), con las
+    faltas por juego de data/raw/nfl_faltas.csv (parte de lesiones y snaps de nflverse, 2013-2026)."""
+    if not FALTAS.exists():
+        return d
+    f = pd.read_csv(FALTAS)
+    cols = [c for c in f.columns if c.startswith('f_')]
+    x = d.reset_index().merge(f.rename(columns={'team': 'home_team', **{c: c + '_h' for c in cols}}), on=['season', 'week', 'home_team'], how='left')
+    x = x.merge(f.rename(columns={'team': 'away_team', **{c: c + '_a' for c in cols}}), on=['season', 'week', 'away_team'], how='left')
+    aj = sum(BAJAS[c[2:]] * (x[c + '_h'].fillna(0) - x[c + '_a'].fillna(0)) for c in cols)
+    x['pm'] = x.pm + aj.values
+    return x.set_index(d.index.name or 'index')[d.columns]
 
 
 def elegir(g, clave):
@@ -96,7 +110,7 @@ def main():
     print('- eligiendo parámetros con 2012-2017')
     _, hl, ridge, rm, rt = elegir(g, clave)
     print(f'  elegidos: vida media {hl} días, freno {ridge}; desviaciones {rm:.2f} y {rt:.2f}')
-    d = predecir(g, 2018, 2100, hl, ridge, clave)
+    d = con_bajas(predecir(g, 2018, 2100, hl, ridge, clave))
     sm, st = rm, rt
     print(f'- prueba 2018-hoy: {len(d)} juegos')
     b = apuestas(d, sm, st, clave, 0.0)
@@ -104,7 +118,7 @@ def main():
            'parametros': {'vida_media': hl, 'freno': ridge, 'sigma_m': round(sm, 2), 'sigma_t': round(st, 2)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre (no hay momios de apertura para todos los años)',
            'mercados': 'spread, total y moneyline', 'estrategias': {},
-           'calib': CALIB, 'nota_calib': 'probabilidades ajustadas a lo que se cumplió (elegido con 2012-17)'}
+           'calib': CALIB, 'nota_calib': 'con bajas (Out y Doubtful pesados por snaps) y probabilidades ajustadas a lo que se cumplió (elegido con 2013-17)'}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):

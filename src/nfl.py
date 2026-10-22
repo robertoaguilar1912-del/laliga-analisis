@@ -154,7 +154,75 @@ def prob_linea(k, p, umbral):
 # Probabilidades ajustadas a lo que se cumplió (desde el 22 oct 2026, pedido de Roberto). En la prueba 2018-26, cuando el
 # modelo decía 60-70% en spread, se cumplía 51-55%, y en total ~50%. logit p' = c·logit p, c elegido con 2012-17
 # (scratchpad nbacal/calib_nfl.py); en el total salía negativo (el modelo iba al revés), así que queda en 0 (50%).
-CALIB = {'Moneyline': 1.246, 'Spread': 0.027, 'Total': 0.0}
+CALIB = {'Moneyline': 1.214, 'Spread': 0.241, 'Total': 0.0}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
+
+# Bajas (desde el 22 oct 2026). Puntos que pierde un equipo por cada titular completo (100% de los snaps) que no juega: Out
+# o Doubtful en el parte, o en la lista de reserva (lesionados, PUP); por grupo de posición. La importancia ("papel") de
+# cada jugador es su % de snaps en los últimos 4 juegos del equipo (0 si no jugó: un suplente que fue titular hace meses, o
+# una baja larga que ya está en los resultados, no pesan). En el QB cuenta si falta el que venía jugando: papel del QB con
+# más snaps recientes − papel del mejor QB disponible. Elegido con 2013-17 (parte de lesiones, lista de reserva y snaps de
+# nflverse; freno 10, efectos <= 0) y probado con 2018-26: error de la diferencia 13.065 -> 12.977; en los 136 juegos con el
+# QB titular fuera, 15.23 -> 14.62 y la distancia a la línea de cierre 4.23 -> 2.77 puntos; moneyline log loss
+# 0.6355 -> 0.6302 y PICK de moneyline -9.1% -> -3.2% (-111 u -> -39 u). En el total no ayudó: el total no cambia.
+# Scratchpad nflbajas/bajas4.py y evaluar5.py.
+BAJAS = {'QB': -2.88, 'OL': -0.31, 'WR': -1.66, 'TE': 0.0, 'RB': -1.68, 'DL': -0.35, 'LB': -1.81, 'DB': -0.51}
+GRUPO_POS = {'QB': 'QB', 'T': 'OL', 'G': 'OL', 'C': 'OL', 'OT': 'OL', 'OG': 'OL', 'OL': 'OL', 'WR': 'WR', 'TE': 'TE', 'RB': 'RB',
+             'FB': 'RB', 'HB': 'RB', 'DE': 'DL', 'DT': 'DL', 'NT': 'DL', 'DL': 'DL', 'LB': 'LB', 'ILB': 'LB', 'OLB': 'LB',
+             'MLB': 'LB', 'CB': 'DB', 'S': 'DB', 'FS': 'DB', 'SS': 'DB', 'DB': 'DB', 'SAF': 'DB'}
+FUERA_NFL = ('Out', 'Doubtful')
+
+
+def no_juega(estado):
+    """Out, Doubtful o en la lista de reserva (lesionados, PUP, fuera por enfermedad...)."""
+    e = estado or ''
+    return e in FUERA_NFL or 'Reserve' in e or 'Physically Unable' in e or 'Non-Football' in e
+SNAPS = RAW / 'nfl_snaps.csv'
+FALTAS = RAW / 'nfl_faltas.csv'          # faltas por juego y grupo, 2013-2026 (para prueba_nfl.py)
+
+
+def norm_nombre(s):
+    import re
+    import unicodedata
+    s = unicodedata.normalize('NFKD', str(s)).encode('ascii', 'ignore').decode().lower()
+    s = re.sub(r'\b(jr|sr|ii|iii|iv|v)\b\.?', '', s)
+    return re.sub(r'[^a-z]', '', s)
+
+
+def descargar_snaps():
+    """% de snaps de cada jugador por juego (nflverse), de esta temporada y la anterior."""
+    from io import StringIO
+    from fuentes import _get
+    t = temporada_nfl()
+    partes = []
+    for y in (t - 1, t):
+        txt = _get(f'https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_{y}.csv', as_json=False)
+        if not txt or not txt.startswith('game_id'):
+            continue
+        s = pd.read_csv(StringIO(txt))
+        s['pct'] = s[['offense_pct', 'defense_pct']].max(axis=1).round(2)
+        partes.append(s[s.pct >= 0.05][['season', 'week', 'team', 'player', 'position', 'pct']])
+    if partes:
+        pd.concat(partes).to_csv(SNAPS, index=False)
+        print(f'  nflverse snaps: {sum(len(p) for p in partes)} filas')
+
+
+def importancia_snaps():
+    """({(equipo, nombre normalizado): % de snaps en los últimos 4 juegos del equipo (0 en los que no jugó)},
+    {equipo: {QB: ese %}} de los QB que jugaron en esos juegos)."""
+    if not SNAPS.exists():
+        return {}, {}
+    s = pd.read_csv(SNAPS)
+    s['k'] = s.player.map(norm_nombre)
+    s['orden'] = s.season * 100 + s.week
+    ult = s.groupby('team').orden.apply(lambda v: set(sorted(set(v))[-4:]))
+    s = s[[o in ult[t] for t, o in zip(s.team, s.orden)]]
+    n = {t: len(v) for t, v in ult.items()}
+    u = s.groupby(['team', 'k', 'orden']).pct.max().groupby(['team', 'k']).sum()
+    papel = {(t, k): v / n[t] for (t, k), v in u.items()}
+    qbs = {}
+    for t, k in s[s.position == 'QB'][['team', 'k']].drop_duplicates().itertuples(index=False):
+        qbs.setdefault(t, {})[k] = papel[(t, k)]
+    return papel, qbs
 
 
 def mercado(gana, push, pierde, dec):
@@ -215,6 +283,10 @@ def descargar():
         if txt and txt.startswith(('game_id', 'season')):
             (RAW / nombre).write_text(txt, encoding='utf-8')
             print(f'  nflverse {nombre}: {txt.count(chr(10))} filas')
+    try:
+        descargar_snaps()
+    except Exception as ex:
+        print('  nflverse snaps: no se pudo', ex)
     descargar_espn()
 
 
@@ -373,6 +445,17 @@ def texto_juego(L, V, m, t, ml, sp_dk, tot_dk):
     return s
 
 
+def texto_bajas(les, L, V):
+    partes = []
+    for nom, lado in ((L, 'local'), (V, 'visita')):
+        if nom is None:
+            continue
+        xs = [x for x in les.get(lado, []) if no_juega(x['estado']) and (x.get('impacto') or 0) >= 0.3]
+        if xs:
+            partes.append(f"{nom} sin {', '.join(f'{x['nombre']} (−{x['impacto']:.1f})' for x in xs[:4])}")
+    return (' Ya descuenta las bajas: ' + '; '.join(partes) + '.') if partes else ''
+
+
 def analizar():
     ref = pd.Timestamp(ahora().date())
     g = cargar_juegos()
@@ -384,14 +467,39 @@ def analizar():
     modelo = ModeloNFL().fit(hist, ref, clave)
     equipos = analizar_equipos(g, modelo, info, temporada)
     reporte = json.load(open(RAW / 'lesiones_nfl.json')) if (RAW / 'lesiones_nfl.json').exists() else {}
+    imp_snaps, qbs_snaps = importancia_snaps()
     orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Injured Reserve': 3}
     corte = (ref - pd.Timedelta(days=45)).strftime('%Y-%m-%d')
     for t, e_ in equipos.items():
         lst = [x for x in reporte.get(e_['nombre'], []) if x['estado'] != 'Active' and (x.get('fecha', '') >= corte or x['estado'] in orden)]
         e_['lesiones'] = sorted(lst, key=lambda x: (orden.get(x['estado'], 4), x['pos'] != 'QB'))
+        # bajas: cuánto resta cada una (puntos) y cuánto le falta al equipo hoy (Out, Doubtful y lista de reserva; una baja
+        # larga casi no pesa porque su papel en los últimos 4 juegos ya es bajo)
+        falta = 0.0
+        qb_t = qbs_snaps.get(t, {})
+        qb_fuera = {norm_nombre(x['nombre']) for x in e_['lesiones'] if x.get('pos') == 'QB' and no_juega(x['estado'])}
+        qb_disp = max([v for k, v in qb_t.items() if k not in qb_fuera], default=0.0)
+        for x in e_['lesiones']:
+            grp = GRUPO_POS.get(x.get('pos'))
+            k = norm_nombre(x.get('nombre', ''))
+            if grp == 'QB':           # pesa solo si es el QB que venía jugando y el que queda jugaba menos
+                otro = max([v for kk, v in qb_t.items() if kk != k and kk not in qb_fuera], default=0.0)
+                imp = max(0.0, qb_t.get(k, 0.0) - otro)
+            else:
+                imp = imp_snaps.get((t, k), 0.0) if grp else 0.0
+            x['impacto'] = round(-BAJAS.get(grp, 0.0) * imp, 1) if grp else None
+            if no_juega(x['estado']) and grp and grp != 'QB':
+                falta += BAJAS[grp] * imp
+        if qb_t:
+            falta += BAJAS['QB'] * max(0.0, max(qb_t.values()) - qb_disp)
+        e_['ajuste_bajas'] = round(falta, 2)
     prox = json.load(open(RAW / 'proximos_nfl.json')) if (RAW / 'proximos_nfl.json').exists() else []
     espn_a = {v['espn']: k for k, v in info.items()}
     por_espn = {r.espn: r for r in g[g.espn != ''].itertuples()}
+    proximo = {}                          # el primer juego de cada equipo en la lista (para las bajas)
+    for e in sorted(prox, key=lambda e: e['utc']):
+        for ab in (e['local_abbr'], e['visita_abbr']):
+            proximo.setdefault(espn_a.get(ab), e['id'])
     partidos = []
     for e in prox:
         h, a = espn_a.get(e['local_abbr']), espn_a.get(e['visita_abbr'])
@@ -400,6 +508,11 @@ def analizar():
         nv = por_espn.get(str(e['id']))
         neutral = bool(e.get('neutral')) or (nv is not None and nv.location == 'Neutral')
         ph, pa = modelo.puntos(h, a, neutral)
+        # bajas (el total no cambia): el parte de lesiones es para el próximo juego de cada equipo; en los siguientes no se usa
+        bh = equipos[h].get('ajuste_bajas', 0.0) if proximo.get(h) == e['id'] else 0.0
+        ba = equipos[a].get('ajuste_bajas', 0.0) if proximo.get(a) == e['id'] else 0.0
+        aj = bh - ba
+        ph, pa = ph + aj / 2, pa - aj / 2
         m, t = ph - pa, ph + pa
         km, pm = modelo.dist_margen(m)
         kt, pt = modelo.dist_total(t)
@@ -452,7 +565,8 @@ def analizar():
             'dk': {'spread': sp[0], 'total': tt[0], 'spread_abre': mom.get('spread_abre'), 'total_abre': mom.get('total_abre')},
             'con_momio': con, 'otras_casas': otras, 'sin_momio': sin,
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]], 'dist_t': [round(float(x), 5) for x in pt[(kt >= 10) & (kt <= 90)]],
-            'texto': texto_juego(L, V, m, t, ml, sp[0], tt[0]), 'lesiones': lesiones,
+            'texto': texto_juego(L, V, m, t, ml, sp[0], tt[0]) + texto_bajas(lesiones, L if bh else None, V if ba else None), 'lesiones': lesiones,
+            'ajuste_bajas': [bh, ba],
             'descanso': None if nv is None or pd.isna(nv.home_rest) else [int(nv.home_rest), int(nv.away_rest)],
             'techo': None if nv is None else nv.roof, 'qb': None if nv is None or not isinstance(nv.home_qb_name, str) else [nv.home_qb_name, nv.away_qb_name],
             'h2h': [{'fecha': str(r.fecha.date()), 'local': info.get(r.home_team, {}).get('nombre'), 'visita': info.get(r.away_team, {}).get('nombre'),

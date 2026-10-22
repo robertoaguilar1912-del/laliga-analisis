@@ -205,7 +205,7 @@
   // ---------------- ficha del juego
   function lesionesHTML(l) {
     const xs = (l || []).slice().sort((a, b) => (b.pos === 'QB') - (a.pos === 'QB'));
-    return xs.length ? `<div class="plist">${xs.map(x => `<div class="pr"><span class="${x.pos === 'QB' ? 'qb' : ''}">${esc(x.nombre)} <small>${esc(x.pos)}${x.tipo ? ' · ' + esc(x.tipo) : ''}</small></span><span class="flag ${/out|reserve/i.test(x.estado) ? 'out' : /doubtful|questionable/i.test(x.estado) ? 'doubt' : ''}">${esc(x.estado)}</span></div>`).join('')}</div>`
+    return xs.length ? `<div class="plist">${xs.map(x => `<div class="pr"><span class="${x.pos === 'QB' ? 'qb' : ''}">${esc(x.nombre)} <small>${esc(x.pos)}${x.tipo ? ' · ' + esc(x.tipo) : ''}${x.impacto != null && x.impacto >= 0.3 ? ` · sin él, el equipo pierde ${x.impacto.toFixed(1)} pts` : ''}</small></span><span class="flag ${/out|reserve/i.test(x.estado) ? 'out' : /doubtful|questionable/i.test(x.estado) ? 'doubt' : ''}">${esc(x.estado)}</span></div>`).join('')}</div>`
       : '<p class="empty">Sin lesionados reportados.</p>';
   }
   function equipoHTML(t) {
@@ -311,7 +311,7 @@
       </div>
 
       <div class="pane" data-pane="2" hidden>
-        <p class="note">Reporte oficial de lesiones vía ESPN. Los inactivos definitivos se anuncian unos 90 minutos antes del juego: revísalo antes de apostar. Un QB en duda puede mover la línea varios puntos.</p>
+        <p class="note">Reporte oficial de lesiones vía ESPN. Desde el 22 oct 2026 el modelo descuenta a los que no juegan (Out, Doubtful y lista de reserva) según cuánto juegan: su % de snaps en los últimos 4 juegos del equipo y lo que vale su posición en la prueba con temporadas pasadas. Con el QB titular fuera, el modelo resta lo de un QB promedio: si es una estrella, la baja pesa más de lo que el modelo calcula. Los en duda (Questionable) se suponen disponibles. Los inactivos definitivos se anuncian unos 90 minutos antes del juego: revísalo antes de apostar.</p>
         <div class="grid2">
           <div class="card"><h3 style="color:var(--away)">${esc(g.visita_es)}</h3>${lesionesHTML(g.lesiones.visita)}</div>
           <div class="card"><h3 style="color:var(--home)">${esc(g.local_es)}</h3>${lesionesHTML(g.lesiones.local)}</div>
@@ -495,7 +495,7 @@
     })();
   })();
 
-  $('#foot-data').textContent = `Datos: nflverse (todos los juegos desde 1999 con líneas de cierre), ESPN (juegos próximos, momios de DraftKings, reporte de lesiones), y momios de Pinnacle y otras casas (The Odds API, para comparar con tu momio). Se actualiza sola todos los días y después de cada juego. Modelo de puntos con números clave que aprende de los puntos de cada juego y de sus líneas de cierre (desde el 17 oct 2026); ventaja de local estimada en ${I.hfa} puntos.`;
+  $('#foot-data').textContent = `Datos: nflverse (todos los juegos desde 1999 con líneas de cierre), ESPN (juegos próximos, momios de DraftKings, reporte de lesiones), y momios de Pinnacle y otras casas (The Odds API, para comparar con tu momio). Se actualiza sola todos los días y después de cada juego. Modelo de puntos con números clave que aprende de los puntos de cada juego y de sus líneas de cierre (desde el 17 oct 2026), con las bajas de cada equipo pesadas por sus snaps (nflverse, desde el 22 oct 2026); ventaja de local estimada en ${I.hfa} puntos.`;
 
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);
