@@ -5,7 +5,7 @@
   "estadio": "Vazgen Sargsyan Republican Stadium",
   "local_espn": "Ararat-Armenia",
   "visita_espn": "AZ Alkmaar",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Maksimir Stadium",
   "local_espn": "Dinamo Zagreb",
   "visita_espn": "NEC Nijmegen",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Groupama Arena",
   "local_espn": "Ferencvaros",
   "visita_espn": "Torreense",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Allianz Stadium",
   "local_espn": "Juventus",
   "visita_espn": "Stade Rennais",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Municipal Stadium-Poznan",
   "local_espn": "Lech Poznan",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "Pankritio Stadium",
   "local_espn": "OFI Crete",
   "visita_espn": "Bayer Leverkusen",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "Merkur Arena",
   "local_espn": "SK Sturm Graz",
   "visita_espn": "Marseille",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1048,7 +1048,7 @@
   "estadio": "Merkur Spiel-Arena",
   "local_espn": "Union St.-Gilloise",
   "visita_espn": "Hapoel Be'er",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1203,23 +1203,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    285,
-    300
+    -125,
+    295,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    115
+    -145,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -140
     ],
     [
      "+0.5",
-     -110
+     100
     ]
    ]
   }
@@ -1236,9 +1236,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    270,
-    210
+    175,
+    255,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1247,12 +1247,12 @@
    ],
    "spread": [
     [
-     "-0.5",
-     110
+     "+0.5",
+     -190
     ],
     [
-     "+0.5",
-     -150
+     "-0.5",
+     135
     ]
    ]
   }
@@ -1270,22 +1270,22 @@
    "casa": "DraftKings",
    "ml": [
     145,
-    255,
-    180
+    260,
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    130
+    -150,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     125
+     135
     ],
     [
      "+0.5",
-     -175
+     -185
     ]
    ]
   }
@@ -1302,23 +1302,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    260,
-    125
+    200,
+    255,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -165
     ],
     [
      "-0.5",
-     110
+     120
     ]
    ]
   }
@@ -1335,23 +1335,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    550,
-    425,
-    -245
+    600,
+    450,
+    -255
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -130
+    -115,
+    -110
    ],
    "spread": [
     [
      "+1.5",
-     -135
+     -125
     ],
     [
      "-1.5",
-     100
+     -110
     ]
    ]
   }
@@ -1368,9 +1368,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    370,
-    -195
+    450,
+    360,
+    -185
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1380,11 +1380,11 @@
    "spread": [
     [
      "+1.5",
-     -170
+     -190
     ],
     [
      "-1.5",
-     125
+     135
     ]
    ]
   }
@@ -1434,9 +1434,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    750,
+    800,
     475,
-    -310
+    -330
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1446,11 +1446,11 @@
    "spread": [
     [
      "+1.5",
-     -115
+     -105
     ],
     [
      "-1.5",
-     -120
+     -130
     ]
    ]
   }
@@ -1467,23 +1467,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    295,
-    230
+    -135,
+    330,
+    320
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    115,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -150
     ],
     [
      "+0.5",
-     -130
+     105
     ]
    ]
   }

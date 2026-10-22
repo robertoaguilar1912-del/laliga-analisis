@@ -5,7 +5,7 @@
   "estadio": "Right to Dream Park",
   "local_espn": "FC Nordsjælland",
   "visita_espn": "CSKA Sofia",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Coliseum",
   "local_espn": "Getafe",
   "visita_espn": "FC Lugano",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Mikheil Meskhi Stadioni",
   "local_espn": "Iberia 1999",
   "visita_espn": "Mjällby AIF",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Estadi de la FAF d'Encamp",
   "local_espn": "Inter D'Escaldes",
   "visita_espn": "CSU Craiova",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Stadion Strelnice",
   "local_espn": "Jablonec",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "SK Brann",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "Alphamega Stadium",
   "local_espn": "Pafos",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1048,7 +1048,7 @@
   "estadio": "Rajko Mitic Stadium",
   "local_espn": "Red Star Belgrade",
   "visita_espn": "F.C. København",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1197,7 +1197,7 @@
   "estadio": "Papara Park",
   "local_espn": "Trabzonspor",
   "visita_espn": "Heart of Midlothian",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1386,13 +1386,13 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    310,
+    300,
     220
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    110,
+    -140
    ],
    "spread": [
     [
@@ -1401,7 +1401,7 @@
     ],
     [
      "+0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -1418,23 +1418,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
+    140,
     270,
-    220
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
     -170,
-    130
+    135
    ],
    "spread": [
     [
      "-0.5",
-     105
+     125
     ],
     [
      "+0.5",
-     -145
+     -175
     ]
    ]
   }
@@ -1451,23 +1451,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    290,
-    380
+    -175,
+    330,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -115
+    -130,
+    105
    ],
    "spread": [
     [
-     "-0.5",
-     -155
+     "-1.5",
+     140
     ],
     [
-     "+0.5",
-     110
+     "+1.5",
+     -195
     ]
    ]
   }
@@ -1496,11 +1496,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -120
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
@@ -1540,7 +1540,7 @@
    "spread": [
     [
      "+0.5",
-     -165
+     -170
     ],
     [
      "-0.5",
@@ -1561,19 +1561,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1400,
+    1300,
     700,
     -575
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    -115,
+    -110
    ],
    "spread": [
     [
      "+2.5",
-     -165
+     -160
     ],
     [
      "-2.5",
