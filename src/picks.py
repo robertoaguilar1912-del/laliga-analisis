@@ -51,6 +51,13 @@ GANA_MAX = 2.00
 SIN_MENOS_DIAS = 91
 
 
+def inicio_copa_uefa(fecha):
+    """Inicio de la temporada para las reglas en las copas UEFA: el 15 de agosto (cuando ya empezaron las ligas)."""
+    import pandas as pd
+    fecha = pd.Timestamp(fecha)
+    return pd.Timestamp(f'{fecha.year if fecha.month >= 7 else fecha.year - 1}-08-15')
+
+
 def reglas_europa(con_momio, dias):
     """Quita el PICK a "Gana" con momio de GANA_MAX o más y a "Menos de" en los primeros SIN_MENOS_DIAS días de la
     temporada (dias = días desde el primer partido de la temporada). Va antes de un_pick_por_familia, para que otro

@@ -524,12 +524,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const verdictOf = (ev, p = 1) => ev >= 0.05 && p >= 0.30 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';   // PICK: EV ≥ 5% y modelo ≥ 30%
   // un solo PICK por partido en cada familia (resultado: 1X2, doble oportunidad y hándicaps; total: más/menos), ver picks.py
   const famDe = k => /^(1|X|2|1X|X2|12|DNB1|DNB2|ML1|ML2)$/.test(k) || /^H[12]:/.test(k) ? 'resultado' : /^[OU](:|$)/.test(k) ? 'total' : k;
-  // reglas de las 8 ligas de Europa con momios (ver picks.py): sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" en
+  // reglas de las 8 ligas de Europa con momios y de las copas UEFA (ver picks.py y analizar.py): sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" en
   // las primeras 13 semanas de la temporada; en la prueba 2023-26 el ROI de los PICK pasó de −10.9% a −5.0%
   const GANA_K = new Set(['1', '2', 'H1:-0.5', 'H2:-0.5']);
   const REGLA_TXT = {
-    gana: 'En estas ligas, "Gana" con momio de 2.00 o más no es PICK: en la prueba 2020-26 eran los PICK que más perdían (el modelo sobrevalora al que no es favorito).',
-    menos: 'En las primeras 13 semanas de la temporada, "Menos de" no es PICK: en la prueba 2020-26 perdían mucho más que el resto (el modelo tarda en ver cuántos goles trae la temporada).' };
+    gana: 'Aquí, "Gana" con momio de 2.00 o más no es PICK: en la prueba con temporadas pasadas eran los PICK que más perdían (el modelo sobrevalora al que no es favorito).',
+    menos: 'En las primeras 13 semanas de la temporada, "Menos de" no es PICK: en la prueba con temporadas pasadas perdían mucho más que el resto (el modelo tarda en ver cuántos goles trae la temporada).' };
   const reglaDe = (m, k, dec) => !m.reglas ? null : (GANA_K.has(k) && dec >= m.reglas.gana_max - 1e-9) ? 'gana' : (/^U(:|$)/.test(k) && m.reglas.sin_menos) ? 'menos' : null;
   const minus = t => t.charAt(0).toLowerCase() + t.slice(1);
   const notaRegla = rg => rg ? `<br><b>No es PICK:</b> ${esc(minus(REGLA_TXT[rg]))}` : '';
