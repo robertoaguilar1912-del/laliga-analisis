@@ -9,7 +9,21 @@ Elegido con datos (17 oct 2026): en la prueba 2020-26 de 8 ligas de Europa hubo 
 los dos perdió 62.5 u; quedarse con el más probable, 23.3 u, y con el de más valor (EV), 29.3 u. En el registro en vivo
 (6-17 oct, 96 partidos con dos o más PICK de resultado): todos −8.9 u, el más probable −5.3 u, el de más valor −7.8 u.
 """
+import math
 import re
+
+
+def calibrar(gana, push, pierde, c):
+    """Ajusta la probabilidad del modelo a lo que de verdad se cumplió en temporadas pasadas: logit p' = c·logit p, con
+    p = gana / (gana + pierde); el empate (push) no cambia. c = 1 deja todo igual, c = 0 deja 50% (el modelo no sabía
+    nada contra la línea). Se usa en la NBA y la NFL (CALIB en nba.py y nfl.py)."""
+    s = gana + pierde
+    if c is None or s <= 0:
+        return gana, push, pierde
+    p = min(max(gana / s, 1e-9), 1 - 1e-9)
+    q = 1 / (1 + math.exp(-c * math.log(p / (1 - p))))
+    return q * s, push, (1 - q) * s
+
 
 RESULTADO = {'1', 'X', '2', '1X', 'X2', '12', 'DNB1', 'DNB2', 'ML1', 'ML2'}
 

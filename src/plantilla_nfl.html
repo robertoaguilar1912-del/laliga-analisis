@@ -143,6 +143,13 @@
     if (cs && cs.n >= 3) out.push(`promedio de ${cs.n} casas <span class="mono">${pct(cs.p, 1)}</span>`);
     return out.length ? `<br>${out.join(' · ')}.` : '';
   }
+  // probabilidad ajustada a lo que se cumplió en temporadas pasadas (I.calib, igual que nba.py/nfl.py, desde el 22 oct 2026)
+  const ajustar = (r, tipo) => {
+    const c = I.calib ? I.calib[/^H/.test(tipo) ? 'Spread' : /^[OU]$/.test(tipo) ? 'Total' : 'Moneyline'] : null;
+    const s = r.gana + r.pierde; if (c == null || s <= 0) return r;
+    const p = Math.min(Math.max(r.gana / s, 1e-9), 1 - 1e-9), q = 1 / (1 + Math.exp(-c * Math.log(p / (1 - p))));
+    return { gana: q * s, push: r.push, pierde: (1 - q) * s, p: q };
+  };
   function calcular(g, tipo, linea) {
     let gana, push;
     if (tipo === 'ML1') { gana = probM(g, k => k > 0); push = probM(g, k => k === 0); }
@@ -152,7 +159,7 @@
     else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
     else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
     const pierde = Math.max(0, 1 - gana - push);
-    return { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
+    return ajustar({ gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) }, tipo);
   }
 
   // ---------------- lista de juegos
@@ -277,7 +284,7 @@
             <h3>Mercados con momio</h3>
             <div class="markets">${filas || '<p class="empty">La casa todavía no publica momios para este juego. Usa la calculadora con los de tu casa.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu casa tiene otra línea o quieres guardar tu apuesta? Usa la calculadora →</button>
-            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo (sin contar el empate, que devuelve la apuesta). PICK: EV de +5% o más y el modelo le da al menos 30%.</p>
+            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo (sin contar el empate, que devuelve la apuesta). PICK: EV de +5% o más y el modelo le da al menos 30%. Desde el 22 oct 2026 las probabilidades están ajustadas a lo que de verdad se cumplió en temporadas pasadas: en spread y total, cuando el modelo decía 60-70% se cumplía cerca de 50%, así que ahí quedan cerca de 50% y casi no hay PICK.</p>
           </div>
         </div>
       </div>

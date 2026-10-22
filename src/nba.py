@@ -32,7 +32,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
-from picks import un_pick_por_familia
+from picks import un_pick_por_familia, calibrar
 import oddsapi
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
@@ -484,11 +484,18 @@ SIGMA_M = 14.0       # desviación de la diferencia alrededor de lo esperado (se
 SIGMA_T = 18.8       # desviación del total de puntos
 VENTANA_DIAS = 3 * 365
 PICK_EV = 0.05
+# Probabilidades ajustadas a lo que se cumplió (desde el 22 oct 2026, pedido de Roberto). En la prueba 2022-26, cuando el
+# modelo decía 60-70% en spread o total, se cumplía 48-52%: sus diferencias con la línea de cierre casi no traen
+# información. logit p' = c·logit p, c elegido con 2022-23 y 2023-24 (scratchpad nbacal/calib.py); en 2024-26 el log loss
+# de spread y total pasa de 0.704-0.716 a 0.693 y los PICK de −164.8 u (4,011) a −14.4 u (1,065, casi todos moneyline).
+# El ⏰ PICK temprano no depende de esto (usa la distancia del total a la línea de apertura).
+CALIB = {'Moneyline': 1.086, 'Spread': 0.068, 'Total': 0.028}
 # PICK temprano (total): el total del modelo a TEMPRANO_DIF puntos o más de la línea de APERTURA y la línea todavía a
 # TEMPRANO_MOV puntos o menos de la apertura (aún no se ha movido). Prueba 2023-26 (claude/ventaja-apertura-nba-oct-2026.md):
 # en esos juegos la línea se movió hacia el modelo en las 3 temporadas (+2.4, +5.7 y +1.7 puntos de media) y apostar a la
 # apertura ganó +16.8%, +21.1% y +0.6%; apostando al cierre no hay ventaja. Cuenta como PICK.
 TEMPRANO_DIF = 7.0
+TEMPRANO_P = 0.56          # probabilidad de ganar de un PICK temprano en la prueba 2023-26 (por valor de cierre: 54-62%)
 TEMPRANO_MOV = 1.0
 DIAS_NBA = 4        # la casa publica líneas de la NBA uno o dos días antes
 MIN_DEFECTO = 10.0   # minutos de costumbre de un jugador en su primer juego (prueba)
@@ -942,6 +949,7 @@ def analizar():
         kt, pt = modelo.dist_total(t)
         pH, _, pA = prob_linea(km, pm, 0)
         pH, pA = pH / (pH + pA), pA / (pH + pA)
+        pH, _, pA = calibrar(pH, 0, pA, CALIB['Moneyline'])
         L, V = EQUIPOS[h], EQUIPOS[a]
         les = {'local': equipos[h].get('lesiones', []), 'visita': equipos[a].get('lesiones', [])}
         fuera = [x['nombre'] for lado in les.values() for x in lado if x['estado'] in FUERA and (x['impacto'] or 0) >= 1]
@@ -972,15 +980,16 @@ def analizar():
         if sp[0] is not None and None not in sp:
             dh, da = am_to_dec(sp[1]), am_to_dec(sp[3])
             imp = np.array([1 / dh, 1 / da]); pms = imp / imp.sum()
-            g1, p1, l1 = prob_linea(km, pm, -sp[0])
+            g1, p1, l1 = calibrar(*prob_linea(km, pm, -sp[0]), CALIB['Spread'])
             l2, p2, g2 = prob_linea(km, pm, sp[2])
+            g2, p2, l2 = calibrar(g2, p2, l2, CALIB['Spread'])
             fila(f'H1:{sp[0]:+g}', f'{L} {sp[0]:+g}', 'Spread', g1, p1, l1, dh, pms[0])
             fila(f'H2:{sp[2]:+g}', f'{V} {sp[2]:+g}', 'Spread', g2, p2, l2, da, pms[1])
         tt = mom.get('total') or [None] * 3
         if None not in tt:
             do, du = am_to_dec(tt[1]), am_to_dec(tt[2])
             imp = np.array([1 / do, 1 / du]); pmt = imp / imp.sum()
-            o_, push, u_ = prob_linea(kt, pt, tt[0])
+            o_, push, u_ = calibrar(*prob_linea(kt, pt, tt[0]), CALIB['Total'])
             fila(f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', 'Total', o_, push, u_, do, pmt[0])
             fila(f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', 'Total', u_, push, o_, du, pmt[1])
             ta_ = mom.get('total_abre')
@@ -989,8 +998,9 @@ def analizar():
                 for r in con:
                     if r['k'] == kk:
                         r['temprano'] = round(float(t - ta_), 1)     # modelo − apertura
-                        if r['veredicto'] in ('SKIP', 'MAYBE'):
-                            r['veredicto'] = 'PICK'
+                        d_ = float(r['momio']); pe = TEMPRANO_P * (1 - r.get('empate', 0))
+                        r['p'], r['ev'], r['justo'] = TEMPRANO_P, pe * (d_ - 1) - (1 - TEMPRANO_P) * (1 - r.get('empate', 0)), fair(TEMPRANO_P)
+                        r['veredicto'] = 'REVISAR' if alerta else 'PICK'
         un_pick_por_familia(con)           # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
         otras = oddsapi.para_juego('nba', e)     # Pinnacle y el promedio de varias casas (The Odds API), si hay
         oddsapi.enriquecer(con, otras)
@@ -1018,7 +1028,7 @@ def analizar():
                     'empezo': bool((g.temporada == actual).any()), 'juegos_tabla': int(len(hechos)),
                     'hfa': round(float(mj.hfa if mj else modelo.hfa), 2),
                     'b2b': round(float(mj.b2b if mj else modelo.b2b_propio - modelo.b2b_rival), 2),
-                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj)},
+                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj), 'calib': CALIB},
            'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest,
            'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else []}
     (DATOS / 'ligas').mkdir(exist_ok=True)

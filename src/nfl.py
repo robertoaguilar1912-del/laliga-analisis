@@ -24,7 +24,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahora
-from picks import un_pick_por_familia
+from picks import un_pick_por_familia, calibrar
 import oddsapi
 
 HALF_LIFE = 120      # días; elegidos con 2012-2017 (ver prueba_nfl.py), ya con el peso del mercado de abajo
@@ -149,6 +149,12 @@ class ModeloNFL:
 def prob_linea(k, p, umbral):
     """(gana, empate, pierde) de 'valor > umbral' sobre una distribución discreta."""
     return float(p[k > umbral].sum()), float(p[k == umbral].sum()), float(p[k < umbral].sum())
+
+
+# Probabilidades ajustadas a lo que se cumplió (desde el 22 oct 2026, pedido de Roberto). En la prueba 2018-26, cuando el
+# modelo decía 60-70% en spread, se cumplía 51-55%, y en total ~50%. logit p' = c·logit p, c elegido con 2012-17
+# (scratchpad nbacal/calib_nfl.py); en el total salía negativo (el modelo iba al revés), así que queda en 0 (50%).
+CALIB = {'Moneyline': 1.246, 'Spread': 0.027, 'Total': 0.0}
 
 
 def mercado(gana, push, pierde, dec):
@@ -397,7 +403,7 @@ def analizar():
         m, t = ph - pa, ph + pa
         km, pm = modelo.dist_margen(m)
         kt, pt = modelo.dist_total(t)
-        pH, pT, pA = prob_linea(km, pm, 0)
+        pH, pT, pA = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
         L, V = info[h]['nombre'], info[a]['nombre']
         mom = e.get('momios') or {}
         con, mkt = [], None
@@ -413,8 +419,9 @@ def analizar():
         if sp[0] is not None and None not in sp:
             dh, da = am_to_dec(sp[1]), am_to_dec(sp[3])
             imp = np.array([1 / dh, 1 / da]); pms = imp / imp.sum()
-            g1, p1, l1 = prob_linea(km, pm, -sp[0])            # local cubre si margen + línea > 0
+            g1, p1, l1 = calibrar(*prob_linea(km, pm, -sp[0]), CALIB['Spread'])     # local cubre si margen + línea > 0
             l2, p2, g2 = prob_linea(km, pm, sp[2])             # visita cubre si margen < su línea
+            g2, p2, l2 = calibrar(g2, p2, l2, CALIB['Spread'])
             for k_, nm, (gana, push, pierde), d, pmk in ((f'H1:{sp[0]:+g}', f'{L} {sp[0]:+g}', (g1, p1, l1), dh, pms[0]),
                                                          (f'H2:{sp[2]:+g}', f'{V} {sp[2]:+g}', (g2, p2, l2), da, pms[1])):
                 pc, ev = mercado(gana, push, pierde, d)
@@ -424,7 +431,7 @@ def analizar():
         if None not in tt:
             do, du = am_to_dec(tt[1]), am_to_dec(tt[2])
             imp = np.array([1 / do, 1 / du]); pmt = imp / imp.sum()
-            o_, push, u_ = prob_linea(kt, pt, tt[0])
+            o_, push, u_ = calibrar(*prob_linea(kt, pt, tt[0]), CALIB['Total'])
             for k_, nm, (gana, pierde), d, pmk in ((f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', (o_, u_), do, pmt[0]),
                                                    (f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', (u_, o_), du, pmt[1])):
                 pc, ev = mercado(gana, push, pierde, d)
@@ -460,7 +467,7 @@ def analizar():
     hechos = g[(g.season == temporada) & g.home_score.notna()]
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(hechos.fecha.max().date()) if len(hechos) else None,
            'info': {'liga': 'nfl', 'nombre': 'NFL', 'temporada': f'{temporada}', 'semana': int(hechos.week.max()) if len(hechos) else 0,
-                    'hfa': round(float(modelo.hfa), 2), 'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t},
+                    'hfa': round(float(modelo.hfa), 2), 'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'calib': CALIB},
            'divisiones': DIVISIONES, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     from analizar import limpiar
