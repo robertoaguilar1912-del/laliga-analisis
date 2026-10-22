@@ -12,7 +12,8 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, PICK_P_MIN
-from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS
+from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB
+from picks import calibrar
 
 warnings.filterwarnings('ignore')
 
@@ -54,15 +55,15 @@ def apuestas(d, sm, st, clave, umbral=0.0):
         kt, pt = mod.dist_total(r.pt)
         sel = []
         if not np.isnan(r.spread_line) and not np.isnan(r.home_spread_odds) and not np.isnan(r.away_spread_odds):
-            g1, p1, l1 = prob_linea(km, pm, r.spread_line)
+            g1, p1, l1 = calibrar(*prob_linea(km, pm, r.spread_line), CALIB['Spread'])
             sel += [('Spread', 'local', g1, p1, l1, am_to_dec(r.home_spread_odds), r.result - r.spread_line),
                     ('Spread', 'visita', l1, p1, g1, am_to_dec(r.away_spread_odds), r.spread_line - r.result)]
         if not np.isnan(r.total_line) and not np.isnan(r.over_odds) and not np.isnan(r.under_odds):
-            o, pu, u = prob_linea(kt, pt, r.total_line)
+            o, pu, u = calibrar(*prob_linea(kt, pt, r.total_line), CALIB['Total'])
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.over_odds), r.total - r.total_line),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.under_odds), r.total_line - r.total)]
         if not np.isnan(r.home_moneyline) and not np.isnan(r.away_moneyline):
-            h, e, a = prob_linea(km, pm, 0)
+            h, e, a = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
             sel += [('Moneyline', 'local', h, e, a, am_to_dec(r.home_moneyline), r.result),
                     ('Moneyline', 'visita', a, e, h, am_to_dec(r.away_moneyline), -r.result)]
         for mk, lado, gana, push, pierde, dec, x in sel:
@@ -102,7 +103,8 @@ def main():
     out = {'partidos': int(len(d)), 'desde': str(d.fecha.min().date()), 'hasta': str(d.fecha.max().date()),
            'parametros': {'vida_media': hl, 'freno': ridge, 'sigma_m': round(sm, 2), 'sigma_t': round(st, 2)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre (no hay momios de apertura para todos los años)',
-           'mercados': 'spread, total y moneyline', 'estrategias': {}}
+           'mercados': 'spread, total y moneyline', 'estrategias': {},
+           'calib': CALIB, 'nota_calib': 'probabilidades ajustadas a lo que se cumplió (elegido con 2012-17)'}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):

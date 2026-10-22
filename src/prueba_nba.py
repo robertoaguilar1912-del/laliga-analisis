@@ -20,7 +20,8 @@ import pandas as pd
 
 from config import DATOS, PICK_P_MIN
 from nba import (cargar_juegos, cargar_box, con_pretemporada, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
-                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES)
+                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB)
+from picks import calibrar
 
 warnings.filterwarnings('ignore')
 AJUSTE = [2023]               # temporada con la que se eligen los parámetros
@@ -84,17 +85,18 @@ def apuestas(d, sigma):
         kt, pt = mod.dist_total(r.pt)
         sel = []
         if not np.isnan(r.sp) and not np.isnan(r.sp_ol) and not np.isnan(r.sp_ov):
-            g1, p1, l1 = prob_linea(km, pm, -r.sp)          # el local cubre si diferencia + línea > 0
+            g1, p1, l1 = calibrar(*prob_linea(km, pm, -r.sp), CALIB['Spread'])   # el local cubre si diferencia + línea > 0
             sel += [('Spread', 'local', g1, p1, l1, am_to_dec(r.sp_ol), r.margen + r.sp),
                     ('Spread', 'visita', l1, p1, g1, am_to_dec(r.sp_ov), -(r.margen + r.sp))]
         if not np.isnan(r.tot) and not np.isnan(r.o_odds) and not np.isnan(r.u_odds):
-            o, pu, u = prob_linea(kt, pt, r.tot)
+            o, pu, u = calibrar(*prob_linea(kt, pt, r.tot), CALIB['Total'])
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.o_odds), r.total - r.tot),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.u_odds), r.tot - r.total)]
         if not np.isnan(r.ml_l) and not np.isnan(r.ml_v):
             h, e, a = prob_linea(km, pm, 0)
-            sel += [('Moneyline', 'local', h / (h + a), 0, a / (h + a), am_to_dec(r.ml_l), r.margen),
-                    ('Moneyline', 'visita', a / (h + a), 0, h / (h + a), am_to_dec(r.ml_v), -r.margen)]
+            h, _, a = calibrar(h / (h + a), 0, a / (h + a), CALIB['Moneyline'])
+            sel += [('Moneyline', 'local', h, 0, a, am_to_dec(r.ml_l), r.margen),
+                    ('Moneyline', 'visita', a, 0, h, am_to_dec(r.ml_v), -r.margen)]
         for mk, lado, gana, push, pierde, dec, x in sel:
             ev = gana * (dec - 1) - pierde
             if ev < 0 or gana / max(gana + pierde, 1e-9) < PICK_P_MIN:     # con menos de 30% no es PICK (config.py)
@@ -147,7 +149,8 @@ def main(elegir_parametros=False):
            'parametros': {'equipos': {'vida_media': hl_e, 'freno': r_e}, 'jugadores': {'vida_media': hl_j, 'freno': r_j}},
            'sigma_actual': {'m': round(err[ult][0], 2), 't': round(err[ult][1], 2), 'temporada': nombre_temporada(ult)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre de la casa que muestra ESPN (' + ', '.join(casas.index[:3]) + ')',
-           'mercados': 'spread, total y moneyline', 'estrategias': {}}
+           'mercados': 'spread, total y moneyline', 'estrategias': {},
+           'calib': CALIB, 'nota_calib': 'probabilidades ajustadas a lo que se cumplió (elegido con 2022-23 y 2023-24; 2023-24 también está en esta prueba)'}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):
