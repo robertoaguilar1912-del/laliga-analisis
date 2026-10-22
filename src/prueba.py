@@ -138,7 +138,7 @@ def preparar(df, solo_cierre):
     return df
 
 
-def apuestas(df, book, thr, mercados, con_clv, reglas=False):
+def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX):
     """reglas: las de la página en las 8 ligas de Europa (picks.py): sin "Gana" con momio de GANA_MAX o más ni "Menos de"
     en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias')."""
     out = []
@@ -152,7 +152,7 @@ def apuestas(df, book, thr, mercados, con_clv, reglas=False):
         ev = p * odds - 1
         m = (ev >= thr) & odds.notna() & p.notna() & (p >= PICK_P_MIN)     # con menos de 30% no es PICK (config.py)
         if reglas and outcome in 'HA':
-            m &= odds < GANA_MAX
+            m &= odds < gana_max
         if reglas and outcome == 'U':
             m &= df.dias >= SIN_MENOS_DIAS
         sub = df[m]

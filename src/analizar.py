@@ -19,7 +19,7 @@ from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
 from mercado import implicitas
-from picks import un_pick_por_familia, reglas_europa, inicio_copa_uefa, GANA_MAX, SIN_MENOS_DIAS
+from picks import un_pick_por_familia, reglas_europa, inicio_copa_uefa, GANA_MAX, GANA_MAX_COPAS, SIN_MENOS_DIAS
 from config import COPAS_UEFA
 from corners import CornerModel, RematesModel
 
@@ -578,14 +578,14 @@ def analizar_liga(liga):
             reglas_europa(p['con_momio'], dias)
             p['reglas'] = {'gana_max': GANA_MAX, 'sin_menos': dias < SIN_MENOS_DIAS}
     elif L.get('espn') in COPAS_UEFA:
-        # copas UEFA (desde el 22 oct 2026): las mismas reglas, con la temporada desde el 15 de agosto. Prueba 2024-26
+        # copas UEFA (desde el 22 oct 2026): las mismas reglas, con la temporada desde el 15 de agosto y "Gana" desde 2.60 (picks.py). Prueba 2024-26
         # (prueba_europa.py, cierre de ESPN): 825 PICK +0.2% → 407 PICK +3.6%, mejor en las 3 temporadas; Europa League
         # +0.4% → +8.7%, Conference −7.9% → −3.7%, Champions +10.0% → +7.1%. En vivo (7-22 oct) sus "Menos de" ganaban 38%.
         for p in partidos:
             fecha = pd.Timestamp(p['utc'][:10])
             dias = int((fecha - inicio_copa_uefa(fecha)).days)
-            reglas_europa(p['con_momio'], dias)
-            p['reglas'] = {'gana_max': GANA_MAX, 'sin_menos': dias < SIN_MENOS_DIAS}
+            reglas_europa(p['con_momio'], dias, GANA_MAX_COPAS)
+            p['reglas'] = {'gana_max': GANA_MAX_COPAS, 'sin_menos': dias < SIN_MENOS_DIAS}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'

@@ -48,6 +48,10 @@ def un_pick_por_familia(con_momio):
 # 2023-26, así que ahí no se usan (20 oct 2026).
 GANA = {'1', '2', 'H1:-0.5', 'H2:-0.5'}
 GANA_MAX = 2.00
+# Copas UEFA: el corte es 2.60. "Gana" de 2.00 a 2.59 ganó en las copas en los dos periodos (2022-24 +3.9%, 2024-26
+# +10.8%) y el de 2.60 o más perdió (−13.5% y −7.1%); con las reglas completas, corte 2.60: 2022-24 −4.7%, 2024-26 +5.0%,
+# contra −7.1% y +3.6% con 2.00. En las 8 ligas, 2.00-2.59 perdió en los dos periodos (−7.9% y −5.3%): ahí sigue 2.00.
+GANA_MAX_COPAS = 2.60
 SIN_MENOS_DIAS = 91
 
 
@@ -58,14 +62,14 @@ def inicio_copa_uefa(fecha):
     return pd.Timestamp(f'{fecha.year if fecha.month >= 7 else fecha.year - 1}-08-15')
 
 
-def reglas_europa(con_momio, dias):
+def reglas_europa(con_momio, dias, gana_max=GANA_MAX):
     """Quita el PICK a "Gana" con momio de GANA_MAX o más y a "Menos de" en los primeros SIN_MENOS_DIAS días de la
     temporada (dias = días desde el primer partido de la temporada). Va antes de un_pick_por_familia, para que otro
     mercado de la misma familia pueda quedar como PICK."""
     for r in con_momio:
         if r.get('veredicto') != 'PICK':
             continue
-        if r['k'] in GANA and float(r['momio']) >= GANA_MAX:
+        if r['k'] in GANA and float(r['momio']) >= gana_max:
             r['veredicto'], r['regla'] = 'MAYBE', 'gana'
         elif r['k'].startswith('U') and dias < SIN_MENOS_DIAS:
             r['veredicto'], r['regla'] = 'MAYBE', 'menos'

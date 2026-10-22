@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, LIGAS, COPAS_UEFA
-from picks import inicio_copa_uefa
+from picks import inicio_copa_uefa, GANA_MAX_COPAS
 from europa import cargar_partidos, ligas_de_equipos, ModeloEuropa, REGIONES, PARAMS, archivo
 from model import score_matrix, markets_from_matrix
 from prueba import apuestas, resumen
@@ -135,11 +135,11 @@ def evaluar(d, comps=None):
     lm, lc, n = logloss(d)
     out = {'partidos': int(len(d)), 'desde': str(d.Date.min().date()), 'hasta': str(d.Date.max().date()),
            'logloss': {'1x2': {'modelo': lm, 'cierre_justo': lc}}, 'estrategias': {}, 'principal': f'modelo|{book}|1x2+ou|0.05',
-           'referencia': 'momios de cierre que guarda ESPN (ESPN BET o DraftKings)' + (', con las reglas de la página: sin "Gana" con momio de 2.00 o más ni "Menos de" en las primeras 13 semanas' if reglas else ''), 'mercados': '1X2 y más/menos 2.5 goles',
+           'referencia': 'momios de cierre que guarda ESPN (ESPN BET o DraftKings)' + (', con las reglas de la página: sin "Gana" con momio de 2.60 o más ni "Menos de" en las primeras 13 semanas' if reglas else ''), 'mercados': '1X2 y más/menos 2.5 goles',
            'reglas': reglas}
     for thr in (0.0, 0.03, 0.05, 0.10):
-        out['estrategias'][f'modelo|{book}|1x2+ou|{thr}'] = resumen(apuestas(d, book, thr, mercados, False, reglas))
-    b = apuestas(d, book, 0.05, mercados, False, reglas)
+        out['estrategias'][f'modelo|{book}|1x2+ou|{thr}'] = resumen(apuestas(d, book, thr, mercados, False, reglas, GANA_MAX_COPAS))
+    b = apuestas(d, book, 0.05, mercados, False, reglas, GANA_MAX_COPAS)
     b['mes'] = b.Date.dt.to_period('M').astype(str)
     mensual = b.groupby('mes').agg(n=('profit', 'size'), ganancia=('profit', 'sum')).reset_index()
     out['mensual'] = mensual.to_dict('records')
@@ -148,7 +148,7 @@ def evaluar(d, comps=None):
     out['por_seleccion'] = b.groupby('sel').agg(n=('profit', 'size'), roi=('profit', 'mean')).reset_index().to_dict('records')
     out['curva'] = [{'d': str(x.date()), 'u': float(u)} for x, u in zip(b.Date, b.profit.cumsum())]
     out['calibracion'] = calibracion(d)
-    b0 = apuestas(d, book, 0.0, mercados, False, reglas)
+    b0 = apuestas(d, book, 0.0, mercados, False, reglas, GANA_MAX_COPAS)
     b0['tramo'] = pd.cut(b0.ev, [0, 0.05, 0.10, 0.20, 10], right=False, labels=['0–5 %', '5–10 %', '10–20 %', '20 % o más'])
     g = b0.groupby('tramo', observed=True).agg(n=('profit', 'size'), roi=('profit', 'mean'))
     out['por_ev'] = [{'tramo': str(t), 'n': int(r.n), 'roi': float(r.roi), 'clv': None} for t, r in g.iterrows()]
