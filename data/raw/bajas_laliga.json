@@ -1,7 +1,7 @@
 {
 "401882836": {
 "fotmob": 5868101,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -24,7 +24,7 @@
 "importante": false
 }
 ],
-"valor_xi": 41014194.0,
+"valor_xi": 40530125.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -76,26 +76,17 @@
 "importante": false
 }
 ],
-"valor_xi": 20747073.0,
-"perdida": 0.2073108818771689,
+"valor_xi": 18663495.0,
+"perdida": 0.23045490675781788,
 "perdida_duda": 0.0
 }
 },
 "401882830": {
 "fotmob": 5868107,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Andrei Rațiu",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 19479261.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Augusto Batalla",
 "tipo": "Lesión",
@@ -106,20 +97,20 @@
 "importante": true
 },
 {
+"nombre": "Andrei Rațiu",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 19479261.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Luiz Felipe",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1187737.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Pathé Ciss",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de octubre",
-"duda": false,
-"valor": 1155617.0,
 "titular": false,
 "importante": false
 },
@@ -134,8 +125,8 @@
 }
 ],
 "valor_xi": 31548810.0,
-"perdida": 0.7843178554119791,
-"perdida_duda": 0.0
+"perdida": 0.16688534369442143,
+"perdida_duda": 0.6174325117175576
 },
 "visita": {
 "faltan": [
@@ -165,7 +156,7 @@
 },
 "401882831": {
 "fotmob": 5868106,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -220,7 +211,7 @@
 },
 "401882827": {
 "fotmob": 5868110,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -320,7 +311,7 @@
 },
 "401882834": {
 "fotmob": 5868103,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -332,6 +323,15 @@
 "valor": 56787269.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Johnny Cardoso",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 22183754.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Koke",
@@ -411,8 +411,8 @@
 },
 "401882835": {
 "fotmob": 5868102,
-"visto": "2026-10-22T11:34+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-22T21:55+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -430,7 +430,7 @@
 "regreso": "hasta el 25 de octubre",
 "duda": false,
 "valor": 7464200.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -461,9 +461,9 @@
 "importante": false
 }
 ],
-"valor_xi": 84642513.0,
-"perdida": 0.5189841657938488,
-"perdida_duda": 0.03945412159490114
+"valor_xi": 101439230.0,
+"perdida": 0.4330486735753022,
+"perdida_duda": 0.03292114894799576
 },
 "visita": {
 "faltan": [
@@ -486,22 +486,22 @@
 "importante": true
 },
 {
+"nombre": "Zaid Abner Romero",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 2101655.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Djené",
 "tipo": "Sanción",
 "regreso": "hasta el 25 de octubre",
 "duda": false,
 "valor": 1325674.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Zaid Abner Romero",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2101655.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Juanmi",
@@ -513,15 +513,15 @@
 "importante": false
 }
 ],
-"valor_xi": 40364585.0,
-"perdida": 0.5995801765334636,
-"perdida_duda": 0.05206680559208029
+"valor_xi": 40617281.0,
+"perdida": 0.56321177678043,
+"perdida_duda": 0.051742877619011474
 }
 },
 "401882833": {
 "fotmob": 5868104,
-"visto": "2026-10-22T11:34+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-22T21:55+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -579,8 +579,8 @@
 "importante": false
 }
 ],
-"valor_xi": 78889288.0,
-"perdida": 0.13593401933098953,
+"valor_xi": 81958078.0,
+"perdida": 0.13084418597517625,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -613,15 +613,15 @@
 "importante": false
 }
 ],
-"valor_xi": 161207820.0,
-"perdida": 0.12000290680687822,
+"valor_xi": 127012756.0,
+"perdida": 0.15231074113532345,
 "perdida_duda": 0.0
 }
 },
 "401882829": {
 "fotmob": 5868108,
-"visto": "2026-10-22T11:34+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-22T21:55+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -693,17 +693,26 @@
 "valor": 6504234.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Adrián De La Fuente",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2355976.0,
+"titular": false,
+"importante": true
 }
 ],
 "valor_xi": 45415876.0,
 "perdida": 0.1589116545940895,
-"perdida_duda": 0.5442313828758912
+"perdida_duda": 0.5961069869047555
 }
 },
 "401882832": {
 "fotmob": 5868105,
-"visto": "2026-10-22T11:34+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-22T21:55+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -721,7 +730,7 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 55875641.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -745,15 +754,15 @@
 {
 "nombre": "Andreas Christensen",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
+"regreso": "mediados de noviembre",
 "duda": false,
 "valor": 12170982.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 813231886.0,
-"perdida": 0.14073627457347387,
+"valor_xi": 831661616.0,
+"perdida": 0.13761754035309476,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -764,7 +773,7 @@
 "regreso": "hasta el 8 de noviembre",
 "duda": false,
 "valor": 116097950.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -795,17 +804,26 @@
 "importante": false
 }
 ],
-"valor_xi": 806153747.0,
-"perdida": 0.1440146503468401,
+"valor_xi": 822033682.0,
+"perdida": 0.1412325948950593,
 "perdida_duda": 0.0
 }
 },
 "401882828": {
 "fotmob": 5868109,
-"visto": "2026-10-22T11:34+00:00",
+"visto": "2026-10-22T21:55+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Lucas Stassin",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 15788710.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Giorgi Kochorashvili",
 "tipo": "Lesión",
@@ -845,7 +863,7 @@
 ],
 "valor_xi": 91190192.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.173140440366657
 },
 "visita": {
 "faltan": [

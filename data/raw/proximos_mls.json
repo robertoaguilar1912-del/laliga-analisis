@@ -83,7 +83,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -155,
+    -150,
     120
    ],
    "spread": [
@@ -150,7 +150,7 @@
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -120
+    -125
    ],
    "spread": [
     [
@@ -231,39 +231,6 @@
   }
  },
  {
-  "id": "761897",
-  "utc": "2026-10-25T00:30Z",
-  "estadio": "Dick's Sporting Goods Park",
-  "local_espn": "Colorado Rapids",
-  "visita_espn": "Vancouver Whitecaps",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    200,
-    270,
-    110
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    125
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -145
-    ],
-    [
-     "-0.5",
-     105
-    ]
-   ]
-  }
- },
- {
   "id": "761900",
   "utc": "2026-10-25T00:30Z",
   "estadio": "Toyota Stadium",
@@ -287,7 +254,7 @@
    "spread": [
     [
      "-0.5",
-     -145
+     -150
     ],
     [
      "+0.5",
@@ -330,39 +297,6 @@
   }
  },
  {
-  "id": "761898",
-  "utc": "2026-10-25T00:30Z",
-  "estadio": "America First Field",
-  "local_espn": "Real Salt Lake",
-  "visita_espn": "St. Louis CITY SC",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    145,
-    270,
-    150
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    130,
-    -165
-   ],
-   "spread": [
-    [
-     "-0.5",
-     135
-    ],
-    [
-     "+0.5",
-     -190
-    ]
-   ]
-  }
- },
- {
   "id": "761899",
   "utc": "2026-10-25T00:30Z",
   "estadio": "Sporting Park",
@@ -391,6 +325,72 @@
     [
      "+0.5",
      -150
+    ]
+   ]
+  }
+ },
+ {
+  "id": "761897",
+  "utc": "2026-10-25T01:30Z",
+  "estadio": "Dick's Sporting Goods Park",
+  "local_espn": "Colorado Rapids",
+  "visita_espn": "Vancouver Whitecaps",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    200,
+    270,
+    110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "761898",
+  "utc": "2026-10-25T01:30Z",
+  "estadio": "America First Field",
+  "local_espn": "Real Salt Lake",
+  "visita_espn": "St. Louis CITY SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    270,
+    150
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -190
     ]
    ]
   }
