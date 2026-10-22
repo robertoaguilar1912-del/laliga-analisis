@@ -755,9 +755,31 @@ def plantilla(t, plantillas, hab, ref):
     return list(h[h.fecha_dt >= h.fecha_dt.max() - pd.Timedelta(days=60)].index) if len(h) else []
 
 
-def minutos_esperados(ids, estados, hab):
-    """{jugador: minutos de costumbre} de los que pueden jugar."""
-    return {x: float(hab['min'].get(x, MIN_NUEVO)) for x in ids if estados.get(x) not in FUERA}
+def minutos_esperados(ids, estados, hab, nuevos=None):
+    """{jugador: minutos de costumbre} de los que pueden jugar. nuevos: {jugador: minutos} de los que llegaron de otro
+    equipo (ver con_equipo_nuevo), que reemplazan a los minutos que jugaban en el equipo anterior."""
+    nuevos = nuevos or {}
+    return {x: float(nuevos[x] if x in nuevos else hab['min'].get(x, MIN_NUEVO)) for x in ids if estados.get(x) not in FUERA}
+
+
+def con_equipo_nuevo(box, g, temporada):
+    """{equipo: {jugador: minutos}} de los que llegaron de otro equipo para esta temporada, una vez que su equipo ya jugó.
+    Sus minutos de costumbre son los del equipo anterior (Rayan Rupert: 33 minutos el año pasado en otro equipo; en
+    Philadelphia no jugó el primer partido y el modelo lo contaba 33 minutos, 22 oct 2026). Si ya jugó con el nuevo: el
+    promedio de sus minutos con él; si el equipo ya jugó y él no: MIN_NUEVO."""
+    if not len(box):
+        return {}
+    b = box.merge(g[['id', 'temporada']], on='id')
+    antes = b[b.temporada < temporada].sort_values('fecha_dt').groupby('jugador').equipo.last()
+    ahora_ = b[(b.temporada == temporada) & (b['min'] > 0)]
+    jugados = g[(g.temporada == temporada) & g.pl.notna()]
+    out = {}
+    for t in EQUIPOS:
+        if not ((jugados.local == t) | (jugados.visita == t)).any():
+            continue
+        con_t = ahora_[ahora_.equipo == t].groupby('jugador')['min'].mean()
+        out[t] = {'_con_t': con_t, '_antes': antes}
+    return out
 
 
 def analizar_equipos(g, modelo, temporada):
@@ -853,9 +875,19 @@ def analizar():
             estados[nombre_a[nombre]] = {x['id']: x['estado'] for x in lst if x.get('id')}
     orden = {'Out': 0, 'Doubtful': 1, 'Questionable': 2, 'Day-To-Day': 3}
     alineacion = {}
+    nuevos_eq = con_equipo_nuevo(box, g, temporada_nba())
+    cambios_min = {}
     for t in EQUIPOS:
         ids = plantilla(t, plantillas, hab, ref)
-        mins = minutos_esperados(ids, estados[t], hab)
+        nuevos = {}
+        if t in nuevos_eq:
+            con_t, antes = nuevos_eq[t]['_con_t'], nuevos_eq[t]['_antes']
+            for x in ids:
+                if x in antes.index and antes[x] != t:            # llegó de otro equipo
+                    nuevos[x] = float(con_t[x]) if x in con_t.index else MIN_NUEVO
+                    if abs(nuevos[x] - float(hab['min'].get(x, MIN_NUEVO))) >= 8:
+                        cambios_min[x] = (t, round(float(hab['min'].get(x, MIN_NUEVO)), 1), round(nuevos[x], 1))
+        mins = minutos_esperados(ids, estados[t], hab, nuevos)
         alineacion[t] = mins
         e_ = equipos[t]
 
