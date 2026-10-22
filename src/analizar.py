@@ -144,6 +144,20 @@ def fila_momio(k_, nm, grupo, W, Lo, dec, pm):
     return r
 
 
+# Ambos anotan: el modelo lo da 2-3 puntos por debajo de lo que pasa (Europa 2023-26: 51.1% contra 53.7%; América: 49.7%
+# contra 52.6%). Corrección logit elegida con 2020-23 y probada con 2023-26: log loss Europa 0.6849 -> 0.6838, América
+# 0.6789 -> 0.6772 (22 oct 2026; scratchpad ventaja/btts.py). Solo donde se probó: las 8 ligas de Europa y 4 de América.
+BTTS_DESPL_EUROPA, BTTS_DESPL_AMERICA = 0.052, 0.096
+BTTS_AMERICA = ('mls', 'ligamx', 'brasil', 'argentina')
+
+
+def corregir_btts(liga, p):
+    k = BTTS_DESPL_EUROPA if LIGAS[liga].get('fd') else BTTS_DESPL_AMERICA if liga in BTTS_AMERICA else 0.0
+    if not k or not 0 < p < 1:
+        return p
+    return float(1 / (1 + np.exp(-(np.log(p / (1 - p)) + k))))
+
+
 def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, equipos_info, remates_model=None):
     out = []
     for k, g in enumerate(prox):
@@ -185,7 +199,7 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         add('DNB1', f'{L} (empate no acción)', 'Empate no acción', pH / (pH + pA)); add('DNB2', f'{V} (empate no acción)', 'Empate no acción', pA / (pH + pA))
         for ln in (1.5, 2.5, 3.5, 4.5):
             add(f'O:{ln}', f'Más de {ln} goles', 'Goles', pM[tot_ > ln].sum()); add(f'U:{ln}', f'Menos de {ln} goles', 'Goles', pM[tot_ < ln].sum())
-        btts = float(M[1:, 1:].sum())
+        btts = corregir_btts(liga, float(M[1:, 1:].sum()))
         add('BTTS:S', 'Ambos anotan: Sí', 'Goles', btts); add('BTTS:N', 'Ambos anotan: No', 'Goles', 1 - btts)
         add('A1', f'Anota {L}', 'Goles por equipo', 1 - M[0, :].sum()); add('A2', f'Anota {V}', 'Goles por equipo', 1 - M[:, 0].sum())
         add('CS1', f'Portería en cero {L}', 'Goles por equipo', M[:, 0].sum()); add('CS2', f'Portería en cero {V}', 'Goles por equipo', M[0, :].sum())
