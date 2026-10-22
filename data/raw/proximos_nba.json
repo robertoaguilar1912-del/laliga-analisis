@@ -1,92 +1,5 @@
 [
  {
-  "id": "401909092",
-  "utc": "2026-10-22T02:00Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "LAL",
-  "visita": "GS",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Los Angeles Lakers",
-  "visita_espn": "Golden State Warriors",
-  "revisado": false,
-  "estadio": "crypto.com Arena",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909841",
-  "utc": "2026-10-22T02:00Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "POR",
-  "visita": "PHX",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Portland Trail Blazers",
-  "visita_espn": "Phoenix Suns",
-  "revisado": false,
-  "estadio": "Moda Center",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909842",
-  "utc": "2026-10-22T02:30Z",
-  "fecha": "2026-10-21",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "LAC",
-  "visita": "SAC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "LA Clippers",
-  "visita_espn": "Sacramento Kings",
-  "revisado": false,
-  "estadio": "Intuit Dome",
-  "records": {
-   "home": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909093",
   "utc": "2026-10-22T23:00Z",
   "fecha": "2026-10-22",
@@ -114,10 +27,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -162,
-    136
+    -148,
+    124
    ],
    "ml_abre": [
     -175,
@@ -125,9 +38,9 @@
    ],
    "spread": [
     -2.5,
-    -120,
+    -118,
     2.5,
-    100
+    -102
    ],
    "spread_abre": -4.5,
    "total": [
@@ -166,20 +79,20 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -298,
-    250
+    -340,
+    270
    ],
    "ml_abre": [
     -278,
     225
    ],
    "spread": [
-    -7.5,
-    -115,
-    7.5,
-    -105
+    -8.5,
+    -110,
+    8.5,
+    -110
    ],
    "spread_abre": -7.5,
    "total": [
@@ -247,7 +160,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -135,
     114
@@ -356,7 +269,30 @@
     "1-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    -125
+   ],
+   "ml_abre": [
+    -102,
+    -118
+   ],
+   "spread": [
+    1.5,
+    -105,
+    -1.5,
+    -115
+   ],
+   "spread_abre": 1.5,
+   "total": [
+    237.5,
+    -105,
+    -115
+   ],
+   "total_abre": 237.5
+  }
  },
  {
   "id": "401909846",
@@ -414,7 +350,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    105
+   ],
+   "ml_abre": [
+    -125,
+    105
+   ],
+   "spread": [
+    -1.5,
+    -115,
+    1.5,
+    -105
+   ],
+   "spread_abre": -1.5,
+   "total": [
+    234.5,
+    -110,
+    -110
+   ],
+   "total_abre": 234.5
+  }
  },
  {
   "id": "401909096",
@@ -443,7 +402,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -270,
+    220
+   ],
+   "ml_abre": [
+    -225,
+    185
+   ],
+   "spread": [
+    -6.5,
+    -115,
+    6.5,
+    -105
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    225.5,
+    -110,
+    -110
+   ],
+   "total_abre": 225.5
+  }
  },
  {
   "id": "401909849",
@@ -491,9 +473,9 @@
   "estadio": "Chase Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -520,13 +502,13 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -549,13 +531,13 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -781,14 +763,14 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -815,8 +797,8 @@
     "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -931,8 +913,8 @@
     "1-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -984,9 +966,9 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -1163,9 +1145,9 @@
     "1-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1250,9 +1232,9 @@
     "0-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1337,9 +1319,9 @@
     "0-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1361,13 +1343,13 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1598,9 +1580,9 @@
     "1-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1709,13 +1691,13 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -1772,9 +1754,9 @@
     "0-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1796,8 +1778,8 @@
   "estadio": "Moda Center",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
@@ -1836,7 +1818,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -115,
     -105
@@ -1888,7 +1870,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -575,
     425
@@ -1940,7 +1922,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     250,
     -310
@@ -1992,7 +1974,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -125,
     105
@@ -2044,7 +2026,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -155,
     130
@@ -2096,7 +2078,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -148,
     124
@@ -2177,7 +2159,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -310,
     250
@@ -2218,18 +2200,18 @@
   "estadio": "Chase Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -105,
     -115
@@ -2270,9 +2252,9 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-0",
@@ -2281,7 +2263,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     110,
     -130
@@ -2327,8 +2309,8 @@
     "0-1"
    ],
    "away": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ]
   },
@@ -2583,9 +2565,9 @@
   "estadio": "Chase Center",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-0",
@@ -2612,8 +2594,8 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "0-0",
-    "0-0",
+    "1-0",
+    "1-0",
     "0-0"
    ],
    "away": [
