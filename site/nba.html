@@ -495,6 +495,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     if (cs && cs.n >= 3) out.push(`promedio de ${cs.n} casas <span class="mono">${pct(cs.p, 1)}</span>`);
     return out.length ? `<br>${out.join(' · ')}.` : '';
   }
+  // probabilidad ajustada a lo que se cumplió en temporadas pasadas (I.calib, igual que nba.py/nfl.py, desde el 22 oct 2026)
+  const ajustar = (r, tipo) => {
+    const c = I.calib ? I.calib[/^H/.test(tipo) ? 'Spread' : /^[OU]$/.test(tipo) ? 'Total' : 'Moneyline'] : null;
+    const s = r.gana + r.pierde; if (c == null || s <= 0) return r;
+    const p = Math.min(Math.max(r.gana / s, 1e-9), 1 - 1e-9), q = 1 / (1 + Math.exp(-c * Math.log(p / (1 - p))));
+    return { gana: q * s, push: r.push, pierde: (1 - q) * s, p: q };
+  };
   function calcular(g, tipo, linea) {
     let gana, push = 0, pierde;
     if (tipo === 'ML1' || tipo === 'ML2') { gana = tipo === 'ML1' ? g.pH : g.pA; pierde = 1 - gana; return { gana, push, pierde, p: gana }; }
@@ -503,7 +510,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
     else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
     pierde = Math.max(0, 1 - gana - push);
-    return { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
+    return ajustar({ gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) }, tipo);
   }
 
   // ---------------- lista de juegos
@@ -645,7 +652,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <h3>Mercados con momio</h3>
             <div class="markets">${filas || '<p class="empty">La casa todavía no publica momios para este juego (en la NBA suelen salir el día anterior). Usa la calculadora con los de tu casa.</p>'}</div>
             <button class="linkbtn" id="to-calc">¿Tu casa tiene otra línea o quieres guardar tu apuesta? Usa la calculadora →</button>
-            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo. PICK: EV de +5% o más y el modelo le da al menos 30%. REVISAR: el modelo ve valor, pero hay un jugador importante en duda. ⏰ Temprano: total del modelo a 7 puntos o más de la línea de apertura, con la línea aún sin moverse; es la única regla de la NBA que ganó en la prueba, y solo apostando antes de que la línea se mueva.</p>
+            <p class="note">Momios de ${esc(g.casa_momios || 'la casa')} en decimal. "Justo" es el momio que haría la apuesta neutra según el modelo. PICK: EV de +5% o más y el modelo le da al menos 30%. REVISAR: el modelo ve valor, pero hay un jugador importante en duda. ⏰ Temprano: total del modelo a 7 puntos o más de la línea de apertura, con la línea aún sin moverse; es la única regla de la NBA que ganó en la prueba, y solo apostando antes de que la línea se mueva; su probabilidad (56%) es la de esa prueba. Desde el 22 oct 2026 las probabilidades están ajustadas a lo que de verdad se cumplió en temporadas pasadas: en spread y total, cuando el modelo decía 60-70% se cumplía cerca de 50%, así que ahí quedan cerca de 50% y casi no hay PICK.</p>
           </div>
         </div>
       </div>
