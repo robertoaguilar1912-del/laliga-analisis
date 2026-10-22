@@ -148,6 +148,10 @@ def actualizar():
             c = cierres.setdefault(m['id'], {})
             for r in m['con_momio']:
                 c[r['k']] = r['momio']
+            dk = m.get('dk') or {}           # NBA y NFL: la última línea vista (al cierre: la de cierre), para el valor de cierre
+            for clave_l, campo in (('_total', 'total'), ('_spread', 'spread')):
+                if dk.get(campo) is not None:
+                    c[clave_l] = dk[campo]
             # el mejor PICK de cada resultado (p. ej. "Gana Espanyol" y "Hándicap Espanyol -0.5" son lo mismo). Los REVISAR
             # (PICK de un equipo con bajas importantes) también se guardan, marcados: no cuentan como PICK en la página, pero
             # así se puede ver después si de verdad salían peor
@@ -163,11 +167,14 @@ def actualizar():
                     for x in picks:            # sigue siendo PICK: se anota la última vez que se vio
                         if x['id'] == m['id'] and EQUIVALENTE.get(x['k'], x['k']) == clave:
                             x['ultimo'] = t.isoformat(timespec='minutes')
+                            if r.get('temprano') is not None and x.get('temprano') is None:
+                                x['temprano'] = r['temprano']
                     continue
                 picks.append({'id': m['id'], 'liga': liga, 'utc': m['utc'], 'local': m['local_es'], 'visita': m['visita_es'],
                               'k': r['k'], 'mercado': r['mercado'], 'p': round(r['p'], 4), 'momio': r['momio'],
                               'ev': round(r['ev'], 4), 'casa': m.get('casa_momios') or '', 'visto': t.isoformat(timespec='minutes'),
                               'ultimo': t.isoformat(timespec='minutes'),
+                              **({'temprano': r['temprano']} if r.get('temprano') is not None else {}),
                               **({'revisar': r.get('revisar') or 'bajas'} if r['veredicto'] == 'REVISAR' else {})})
                 ya.add((m['id'], clave))
                 nuevos += 1

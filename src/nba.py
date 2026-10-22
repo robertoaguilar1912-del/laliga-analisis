@@ -444,7 +444,13 @@ SIGMA_M = 14.0       # desviación de la diferencia alrededor de lo esperado (se
 SIGMA_T = 18.8       # desviación del total de puntos
 VENTANA_DIAS = 3 * 365
 PICK_EV = 0.05
-DIAS_NBA = 4         # la casa publica líneas de la NBA uno o dos días antes
+# PICK temprano (total): el total del modelo a TEMPRANO_DIF puntos o más de la línea de APERTURA y la línea todavía a
+# TEMPRANO_MOV puntos o menos de la apertura (aún no se ha movido). Prueba 2023-26 (claude/ventaja-apertura-nba-oct-2026.md):
+# en esos juegos la línea se movió hacia el modelo en las 3 temporadas (+2.4, +5.7 y +1.7 puntos de media) y apostar a la
+# apertura ganó +16.8%, +21.1% y +0.6%; apostando al cierre no hay ventaja. Cuenta como PICK.
+TEMPRANO_DIF = 7.0
+TEMPRANO_MOV = 1.0
+DIAS_NBA = 4        # la casa publica líneas de la NBA uno o dos días antes
 MIN_DEFECTO = 10.0   # minutos de costumbre de un jugador en su primer juego (prueba)
 MIN_NUEVO = 4.0      # minutos que se le suponen a alguien de la plantilla sin juegos (novato, invitado al campamento)
 
@@ -905,7 +911,15 @@ def analizar():
             o_, push, u_ = prob_linea(kt, pt, tt[0])
             fila(f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', 'Total', o_, push, u_, do, pmt[0])
             fila(f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', 'Total', u_, push, o_, du, pmt[1])
-        un_pick_por_familia(con)            # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
+            ta_ = mom.get('total_abre')
+            if ta_ is not None and abs(tt[0] - ta_) <= TEMPRANO_MOV and min(abs(t - ta_), abs(t - tt[0])) >= TEMPRANO_DIF:
+                kk = f'{"O" if t > tt[0] else "U"}:{tt[0]:g}'
+                for r in con:
+                    if r['k'] == kk:
+                        r['temprano'] = round(float(t - ta_), 1)     # modelo − apertura
+                        if r['veredicto'] in ('SKIP', 'MAYBE'):
+                            r['veredicto'] = 'PICK'
+        un_pick_por_familia(con)           # un solo PICK de ganador/spread y uno de total por juego (ver picks.py)
         otras = oddsapi.para_juego('nba', e)     # Pinnacle y el promedio de varias casas (The Odds API), si hay
         oddsapi.enriquecer(con, otras)
         t0 = int(round(t)) - 60
