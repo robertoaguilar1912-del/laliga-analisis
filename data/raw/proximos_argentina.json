@@ -8,26 +8,120 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -170,
-    300,
-    450
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    -110
-   ],
-   "spread": [
+  "momios": null,
+  "alineaciones": {
+   "Gimnasia La Plata": [
     [
-     "-0.5",
-     -185
+     "301464",
+     "Harlen Castillo",
+     "G"
     ],
     [
-     "+0.5",
-     135
+     "173742",
+     "Enzo Martínez",
+     "CD-L"
+    ],
+    [
+     "185458",
+     "Germán Conti",
+     "CD-R"
+    ],
+    [
+     "233913",
+     "Pedro Silva Torrejón",
+     "LB"
+    ],
+    [
+     "346867",
+     "Alexis Steimbach",
+     "RB"
+    ],
+    [
+     "336537",
+     "Mateo Seoane",
+     "CM-L"
+    ],
+    [
+     "310476",
+     "Ignacio Miramon",
+     "CM-R"
+    ],
+    [
+     "176813",
+     "Lucas Janson",
+     "LM"
+    ],
+    [
+     "106583",
+     "Ignacio Fernández",
+     "RM"
+    ],
+    [
+     "85513",
+     "Marcelo Torres",
+     "CF-L"
+    ],
+    [
+     "334165",
+     "Agustín Auzmendi",
+     "CF-R"
+    ]
+   ],
+   "Sarmiento (Junín)": [
+    [
+     "365450",
+     "Thyago Ayala",
+     "G"
+    ],
+    [
+     "118725",
+     "Juan Insaurralde",
+     "CD"
+    ],
+    [
+     "202225",
+     "Lucas Suarez",
+     "CD-L"
+    ],
+    [
+     "276062",
+     "Renzo Orihuela",
+     "CD-R"
+    ],
+    [
+     "379769",
+     "Julián Mavilla",
+     "CM-L"
+    ],
+    [
+     "188476",
+     "Mauricio Martínez",
+     "CM-R"
+    ],
+    [
+     "279074",
+     "Cristian Zabala",
+     "AM"
+    ],
+    [
+     "361303",
+     "Julian Contrera",
+     "LM"
+    ],
+    [
+     "356976",
+     "Santiago Salle",
+     "RM"
+    ],
+    [
+     "155955",
+     "Jonathan Herrera",
+     "CF-L"
+    ],
+    [
+     "253308",
+     "Junior Marabel",
+     "CF-R"
     ]
    ]
   }
@@ -51,16 +145,132 @@
    "ou_linea": 2.5,
    "ou": [
     130,
-    -175
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     140
+     135
     ],
     [
      "+0.5",
      -195
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Gimnasia (Mendoza)": [
+    [
+     "122884",
+     "César Rigamonti",
+     "G"
+    ],
+    [
+     "319190",
+     "Matías Recalde",
+     "D"
+    ],
+    [
+     "263351",
+     "Diego Mondino",
+     "D"
+    ],
+    [
+     "379599",
+     "Lautaro Carrera",
+     "D"
+    ],
+    [
+     "339037",
+     "Luciano Paredes",
+     "D"
+    ],
+    [
+     "307334",
+     "Esteban Fernández",
+     "M"
+    ],
+    [
+     "318398",
+     "Facundo Lencioni",
+     "M"
+    ],
+    [
+     "309461",
+     "Luciano Cingolani",
+     "M"
+    ],
+    [
+     "358523",
+     "Nahuel Barboza",
+     "M"
+    ],
+    [
+     "312136",
+     "Ignacio Charparin",
+     "M"
+    ],
+    [
+     "371423",
+     "Agustín Módica",
+     "F"
+    ]
+   ],
+   "Platense": [
+    [
+     "271254",
+     "Juan Pablo Cozzani",
+     "G"
+    ],
+    [
+     "382974",
+     "Mateo Mendia",
+     "D"
+    ],
+    [
+     "319195",
+     "Juan Ignacio Saborido",
+     "D"
+    ],
+    [
+     "335100",
+     "Tomas Silva",
+     "D"
+    ],
+    [
+     "200303",
+     "Víctor Cuesta",
+     "D"
+    ],
+    [
+     "287496",
+     "Martín Barrios",
+     "M"
+    ],
+    [
+     "285245",
+     "Juan Gauto",
+     "M"
+    ],
+    [
+     "233948",
+     "Bautista Merlini",
+     "M"
+    ],
+    [
+     "310736",
+     "Nicolas Retamar",
+     "M"
+    ],
+    [
+     "166297",
+     "Ivan Gomez",
+     "M"
+    ],
+    [
+     "285380",
+     "Gonzalo Lencina",
+     "F"
     ]
    ]
   }
@@ -348,7 +558,7 @@
    "ou_linea": 1.5,
    "ou": [
     -165,
-    115
+    120
    ],
    "spread": [
     [
@@ -374,14 +584,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
     220,
+    225,
     125
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -160
+    120,
+    -165
    ],
    "spread": [
     [
@@ -473,14 +683,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
+    115,
     210,
-    260
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -175
+    -180
    ],
    "spread": [
     [
@@ -489,7 +699,7 @@
     ],
     [
      "+0.5",
-     -150
+     -155
     ]
    ]
   }
