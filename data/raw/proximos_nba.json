@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909848",
-  "utc": "2026-10-23T20:00Z",
-  "fecha": "2026-10-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIL",
-  "visita": "CHI",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Milwaukee Bucks",
-  "visita_espn": "Chicago Bulls",
-  "revisado": false,
-  "estadio": "Fiserv Forum",
-  "records": {
-   "home": [
-    "0-1",
-    "0-0",
-    "0-1"
-   ],
-   "away": [
-    "0-1",
-    "0-0",
-    "0-1"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909095",
   "utc": "2026-10-23T23:00Z",
   "fecha": "2026-10-23",
@@ -177,9 +148,9 @@
    ],
    "spread_abre": -5.5,
    "total": [
-    239.5,
-    -112,
-    -108
+    241.5,
+    -110,
+    -110
    ],
    "total_abre": 234.5
   }
@@ -223,9 +194,9 @@
    ],
    "spread": [
     -1.5,
-    -105,
+    -110,
     1.5,
-    -115
+    -110
    ],
    "spread_abre": 1.5,
    "total": [
@@ -301,7 +272,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Miami Heat",
   "visita_espn": "Detroit Pistons",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -333,9 +304,9 @@
    ],
    "spread_abre": -1.5,
    "total": [
-    235.5,
-    -108,
-    -112
+    234.5,
+    -112,
+    -108
    ],
    "total_abre": 234.5
   }
@@ -370,8 +341,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -192,
-    160
+    -185,
+    154
    ],
    "ml_abre": [
     -225,
@@ -379,15 +350,15 @@
    ],
    "spread": [
     -4.5,
-    -118,
+    -115,
     4.5,
-    -102
+    -105
    ],
    "spread_abre": -5.5,
    "total": [
     224.5,
-    -110,
-    -110
+    -108,
+    -112
    ],
    "total_abre": 225.5
   }
@@ -680,8 +651,8 @@
     "1-0"
    ],
    "away": [
+    "0-2",
     "0-1",
-    "0-0",
     "0-1"
    ]
   },
@@ -704,9 +675,9 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "0-1",
+    "1-1",
     "0-0",
-    "0-1"
+    "1-1"
    ],
    "away": [
     "1-0",
@@ -1115,9 +1086,9 @@
     "0-1"
    ],
    "away": [
-    "0-1",
+    "1-1",
     "0-0",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -1168,8 +1139,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-0",
     "0-1"
    ],
    "away": [
@@ -1574,9 +1545,9 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "0-1",
+    "1-1",
     "0-0",
-    "0-1"
+    "1-1"
    ],
    "away": [
     "0-1",
@@ -1603,8 +1574,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-0",
     "0-1"
    ],
    "away": [
@@ -1898,9 +1869,9 @@
     "0-1"
    ],
    "away": [
-    "0-1",
+    "1-1",
     "0-0",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -2293,8 +2264,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-0",
     "0-1"
    ],
    "away": [
@@ -2646,9 +2617,9 @@
     "1-0"
    ],
    "away": [
-    "0-1",
+    "1-1",
     "0-0",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -2733,8 +2704,8 @@
     "1-0"
    ],
    "away": [
+    "0-2",
     "0-1",
-    "0-0",
     "0-1"
    ]
   },

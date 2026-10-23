@@ -1,7 +1,7 @@
 {
 "401877773": {
 "fotmob": 1000014204,
-"visto": "2026-10-23T22:25+00:00",
+"visto": "2026-10-23T22:58+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -202,19 +202,10 @@
 },
 "401877907": {
 "fotmob": 1000014203,
-"visto": "2026-10-23T22:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-23T22:58+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Jhonier Alomía",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de octubre",
-"duda": false,
-"valor": 70136.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Yesús Cabrera",
 "tipo": "Sanción",
@@ -223,10 +214,19 @@
 "valor": 232172.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Jhonier Alomía",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 70136.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 3005103.0,
-"perdida": 0.023338967083657364,
+"valor_xi": 2859613.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -237,7 +237,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 1388574.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -246,12 +246,12 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 300409.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 7285001.0,
-"perdida": 0.23184389405025477,
+"valor_xi": 6072370.0,
+"perdida": 0.22867084844961688,
 "perdida_duda": 0.0
 }
 },
