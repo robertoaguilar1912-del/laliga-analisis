@@ -1028,7 +1028,8 @@ def analizar():
                     'empezo': bool((g.temporada == actual).any()), 'juegos_tabla': int(len(hechos)),
                     'hfa': round(float(mj.hfa if mj else modelo.hfa), 2),
                     'b2b': round(float(mj.b2b if mj else modelo.b2b_propio - modelo.b2b_rival), 2),
-                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj), 'calib': CALIB},
+                    'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj), 'calib': CALIB,
+                    'temprano': {'dif': TEMPRANO_DIF, 'mov': TEMPRANO_MOV, 'p': TEMPRANO_P}},
            'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest,
            'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else []}
     (DATOS / 'ligas').mkdir(exist_ok=True)

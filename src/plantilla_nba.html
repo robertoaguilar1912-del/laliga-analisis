@@ -172,6 +172,12 @@
     const p = Math.min(Math.max(r.gana / s, 1e-9), 1 - 1e-9), q = 1 / (1 + Math.exp(-c * Math.log(p / (1 - p))));
     return { gana: q * s, push: r.push, pierde: (1 - q) * s, p: q };
   };
+  // ⏰ PICK temprano en la calculadora (como nba.py): total con tu línea a TEMPRANO_MOV o menos de la apertura y el modelo a
+  // TEMPRANO_DIF o más de tu línea y de la apertura, del lado del modelo: probabilidad de la prueba (56%), no la del modelo
+  const esTemprano = (g, tipo, L) => {
+    const T = I.temprano; if (!T || !/^[OU]$/.test(tipo) || L == null || !g.dk || g.dk.total_abre == null) return false;
+    return tipo === (g.total > L ? 'O' : 'U') && Math.abs(L - g.dk.total_abre) <= T.mov + 1e-9 && Math.abs(g.total - L) >= T.dif - 1e-9 && Math.abs(g.total - g.dk.total_abre) >= T.dif - 1e-9;
+  };
   function calcular(g, tipo, linea) {
     let gana, push = 0, pierde;
     if (tipo === 'ML1' || tipo === 'ML2') { gana = tipo === 'ML1' ? g.pH : g.pA; pierde = 1 - gana; return { gana, push, pierde, p: gana }; }
@@ -180,6 +186,7 @@
     else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
     else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
     pierde = Math.max(0, 1 - gana - push);
+    if (esTemprano(g, tipo, linea)) { const q = I.temprano.p, s = 1 - push; return { gana: q * s, push, pierde: (1 - q) * s, p: q, temprano: true }; }
     return ajustar({ gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) }, tipo);
   }
 
@@ -389,11 +396,11 @@
       const c = calcular(g, k, L);
       const just = c.p > 0 && c.p < 1 ? (1 / c.p).toFixed(2) : '—';
       if (!dec) { out.innerHTML = `Modelo: <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${just}</span>. Escribe el momio de tu casa en decimal.`; return null; }
-      const ev = c.gana * (dec - 1) - c.pierde, v0 = verdictOf(ev, c.gana / Math.max(c.gana + c.pierde, 1e-12));
-      // con un momio menor que el de DraftKings en esa misma línea nunca es PICK (desde el 17 oct 2026)
+      const ev = c.gana * (dec - 1) - c.pierde, v0 = c.temprano ? (ev >= 0.03 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP') : verdictOf(ev, c.gana / Math.max(c.gana + c.pierde, 1e-12));
+      // con un momio menor que el de DraftKings en esa misma línea nunca es PICK (desde el 17 oct 2026); el ⏰ sí, si le da EV de +3%
       const clave = k.startsWith('ML') ? k : `${k}:${L > 0 && k.startsWith('H') ? '+' : ''}${L}`;
       const dkr = (g.con_momio || []).find(r => r.k === clave), dkm = dkr ? parseFloat(dkr.momio) : null;
-      const menorQueDK = !!(dkm && dec < dkm - 0.005), v1 = v0 === 'PICK' && menorQueDK ? 'SKIP' : v0;
+      const menorQueDK = !c.temprano && !!(dkm && dec < dkm - 0.005), v1 = v0 === 'PICK' && menorQueDK ? 'SKIP' : v0;
       // un solo PICK por juego en ganador/spread y en total (ver picks.py)
       const famDe = x => /^(ML1|ML2)$/.test(x) || /^H[12]:/.test(x) ? 'resultado' : /^[OU](:|$)/.test(x) ? 'total' : x;
       const op = v1 === 'PICK' ? (g.con_momio || []).find(r => r.veredicto === 'PICK' && r.k !== clave && famDe(r.k) === famDe(clave) && r.p > c.p) : null;
@@ -401,7 +408,8 @@
       out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
         + (menorQueDK ? `<br><b>No es PICK: ${esc(g.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Si puedes, búscalo en otra casa.` : '')
         + (op ? `<br><b>No es PICK: en este juego ya hay PICK en ${esc(op.mercado)}</b>, que el modelo ve más probable. Los dos dependen del mismo resultado; apostar los dos es repetir la apuesta.` : '')
-        + otrasCasas(g, clave, dec) + valorPinnacle(g, clave, dec);
+        + (c.temprano ? `<br><b>⏰ PICK temprano:</b> el modelo espera ${g.total.toFixed(1)} puntos y tu línea sigue cerca de la apertura (${g.dk.total_abre}). Aquí la probabilidad es la de la prueba con temporadas pasadas (${pct(I.temprano.p, 0)}), no la del modelo. Necesitas momio de ${(1.03 / I.temprano.p).toFixed(2)} o más.` : '')
+        + otrasCasas(g, clave, dec) + (c.temprano ? '' : valorPinnacle(g, clave, dec));
       return { k, L, dec, c };
     }
     tipo.addEventListener('change', () => { setDefault(); calc(); msg.textContent = ''; });
