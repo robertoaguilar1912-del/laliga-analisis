@@ -1,8 +1,8 @@
 {
 "401841287": {
 "fotmob": 5103679,
-"visto": "2026-10-23T22:08+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-23T22:25+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -15,20 +15,20 @@
 "importante": true
 },
 {
-"nombre": "João Marcelo",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de octubre",
-"duda": false,
-"valor": 2185804.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Gabriel Pec",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 8245071.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "João Marcelo",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 2185804.0,
 "titular": false,
 "importante": false
 },
@@ -42,8 +42,8 @@
 "importante": false
 }
 ],
-"valor_xi": 97773881.0,
-"perdida": 0.13540488384622884,
+"valor_xi": 106461618.0,
+"perdida": 0.10382386824141636,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -85,22 +85,13 @@
 "importante": true
 },
 {
-"nombre": "Duplexe Tchamba",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 512692.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Yago Pikachu",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 452134.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Poveda",
@@ -109,7 +100,7 @@
 "duda": false,
 "valor": 413562.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Bill",
@@ -117,12 +108,12 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 0.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 7660100.0,
-"perdida": 0.6240207046905393,
+"valor_xi": 9449088.0,
+"perdida": 0.36000013969602146,
 "perdida_duda": 0.0
 }
 },
