@@ -1,7 +1,7 @@
 {
 "401877773": {
 "fotmob": 1000014204,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -56,7 +56,7 @@
 },
 "401878057": {
 "fotmob": 1000014206,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -75,6 +75,24 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 1635148.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jan Lucumí",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1010117.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Tomás Ángel",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 967406.0,
 "titular": false,
 "importante": true
 },
@@ -107,7 +125,7 @@
 }
 ],
 "valor_xi": 8157100.0,
-"perdida": 0.618200953770335,
+"perdida": 0.8606306162729401,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -129,7 +147,7 @@
 },
 "401877906": {
 "fotmob": 1000014200,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -184,7 +202,7 @@
 },
 "401877907": {
 "fotmob": 1000014203,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -230,7 +248,7 @@
 },
 "401878036": {
 "fotmob": 1000014201,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -294,7 +312,7 @@
 },
 "401878052": {
 "fotmob": 1000014197,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -331,8 +349,8 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 451816.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Marlos Moreno",
@@ -353,8 +371,8 @@
 "importante": false
 }
 ],
-"valor_xi": 8071035.0,
-"perdida": 0.5070446355393081,
+"valor_xi": 4354923.0,
+"perdida": 1.0434606995347564,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -385,7 +403,7 @@
 },
 "401877918": {
 "fotmob": 1000014199,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -414,14 +432,14 @@
 },
 "visita": {
 "faltan": [],
-"valor_xi": 3647673.0,
+"valor_xi": 3581326.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401877895": {
 "fotmob": 1000014205,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -438,7 +456,7 @@
 },
 "401878065": {
 "fotmob": 1000014198,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -475,15 +493,25 @@
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Howell Mena",
+"tipo": "Sanción",
+"regreso": "hasta el 27 de octubre",
+"duda": false,
+"valor": 316828.0,
+"titular": true,
+"importante": true
+}
+],
 "valor_xi": 3566332.0,
-"perdida": 0.0,
+"perdida": 0.08883861625894617,
 "perdida_duda": 0.0
 }
 },
 "401877841": {
 "fotmob": 1000014180,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -506,6 +534,15 @@
 "importante": true
 },
 {
+"nombre": "Christian Mafla",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 330828.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Víctor Moreno",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
@@ -525,20 +562,30 @@
 }
 ],
 "valor_xi": 6226829.0,
-"perdida": 0.29333036124807665,
+"perdida": 0.3464598112458203,
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Cristopher Fiermarín",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1388574.0,
+"titular": true,
+"importante": true
+}
+],
 "valor_xi": 7285001.0,
-"perdida": 0.0,
+"perdida": 0.19060724905871668,
 "perdida_duda": 0.0
 }
 },
 "401877953": {
 "fotmob": 1000014089,
-"visto": "2026-10-23T05:19+00:00",
-"xi": "standard",
+"visto": "2026-10-23T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -546,13 +593,13 @@
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
 "duda": false,
-"valor": 0.0,
+"valor": 469813.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 2643614.0,
+"perdida": 0.17771618700763425,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -562,23 +609,23 @@
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
-"valor": 0.0,
+"valor": 316875.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 3393563.0,
+"perdida": 0.09337531084585729,
 "perdida_duda": 0.0
 }
 },
 "401877861": {
 "fotmob": 1000014091,
-"visto": "2026-10-23T05:19+00:00",
-"xi": "standard",
+"visto": "2026-10-23T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 3005103.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -589,9 +636,9 @@
 "tipo": "Lesión",
 "regreso": "mediados de octubre",
 "duda": false,
-"valor": 0.0,
+"valor": 1855203.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Fabián Correa",
@@ -603,14 +650,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 6347301.0,
+"perdida": 0.29228218419135943,
 "perdida_duda": 0.0
 }
 },
 "401877998": {
 "fotmob": 1000014093,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -646,7 +693,7 @@
 },
 "401877878": {
 "fotmob": 1000014088,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -692,7 +739,7 @@
 },
 "401878035": {
 "fotmob": 1000014094,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -700,6 +747,24 @@
 "nombre": "Yhorman Hurtado",
 "tipo": "Sanción",
 "regreso": "",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Tomás Ángel",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jan Lucumí",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
 "duda": false,
 "valor": 0.0,
 "titular": false,
@@ -756,7 +821,7 @@
 },
 "401877845": {
 "fotmob": 1000014087,
-"visto": "2026-10-23T05:19+00:00",
+"visto": "2026-10-23T06:03+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
