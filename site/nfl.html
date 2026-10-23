@@ -504,14 +504,18 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   };
   function calcular(g, tipo, linea) {
     let gana, push;
+    // con línea de la casa: curvas centradas en la línea de la casa movida hacia el modelo (dist_mc/dist_tc, MEZCLA en nfl.py)
+    const pM = g.dist_mc ? (f => g.dist_mc.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0)) : (f => probM(g, f));
+    const pT = g.dist_tc ? (f => g.dist_tc.reduce((a, p, i) => a + (f(i + 10) ? p : 0), 0)) : (f => probT(g, f));
     if (tipo === 'ML1') { gana = probM(g, k => k > 0); push = probM(g, k => k === 0); }
     else if (tipo === 'ML2') { gana = probM(g, k => k < 0); push = probM(g, k => k === 0); }
-    else if (tipo === 'H1') { gana = probM(g, k => k + linea > 0); push = probM(g, k => k + linea === 0); }
-    else if (tipo === 'H2') { gana = probM(g, k => -k + linea > 0); push = probM(g, k => -k + linea === 0); }
-    else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
-    else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
+    else if (tipo === 'H1') { gana = pM(k => k + linea > 0); push = pM(k => k + linea === 0); }
+    else if (tipo === 'H2') { gana = pM(k => -k + linea > 0); push = pM(k => -k + linea === 0); }
+    else if (tipo === 'O') { gana = pT(t => t > linea); push = pT(t => t === linea); }
+    else { gana = pT(t => t < linea); push = pT(t => t === linea); }
     const pierde = Math.max(0, 1 - gana - push);
-    return ajustar({ gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) }, tipo);
+    const r = { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
+    return /^ML/.test(tipo) ? ajustar(r, tipo) : (/^H/.test(tipo) ? g.dist_mc : g.dist_tc) ? r : ajustar(r, tipo);
   }
 
   // ---------------- lista de juegos

@@ -5,10 +5,32 @@
   "estadio": "Juan Carmelo Zerillo (El Bosque)",
   "local_espn": "Gimnasia La Plata",
   "visita_espn": "Sarmiento (Junín)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    300,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     125
+    ]
+   ]
+  },
   "alineaciones": {
    "Gimnasia La Plata": [
     [
@@ -132,29 +154,29 @@
   "estadio": "Estadio Víctor Antonio Legrotaglie",
   "local_espn": "Gimnasia (Mendoza)",
   "visita_espn": "Platense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
-    200,
-    200
+    165,
+    205,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -170
+    125,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     135
+     150
     ],
     [
      "+0.5",
-     -195
+     -210
     ]
    ]
   },
@@ -617,23 +639,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    210,
+    150,
+    215,
     185
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -165
+    115,
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -205
+     -200
     ]
    ]
   }
