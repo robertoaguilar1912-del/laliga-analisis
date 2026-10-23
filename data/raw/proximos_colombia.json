@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -150,
+    115
    ],
    "spread": [
     [
@@ -28,6 +28,122 @@
     [
      "+1.5",
      100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Nacional": [
+    [
+     "118577",
+     "Franco Armani",
+     "G"
+    ],
+    [
+     "287250",
+     "César Haydar",
+     "CD-L"
+    ],
+    [
+     "182014",
+     "Andrés Reyes",
+     "CD-R"
+    ],
+    [
+     "135867",
+     "Milton Casco",
+     "LB"
+    ],
+    [
+     "418464",
+     "Xavi Rios",
+     "RB"
+    ],
+    [
+     "345363",
+     "Juan Manuel Rengifo",
+     "AM"
+    ],
+    [
+     "422319",
+     "Simón Rojas",
+     "LM"
+    ],
+    [
+     "287997",
+     "Juan Zapata",
+     "RM"
+    ],
+    [
+     "339197",
+     "Elías Cabrera",
+     "F"
+    ],
+    [
+     "5323390",
+     "José Rafael Escorcia De La Cruz",
+     "AM-L"
+    ],
+    [
+     "196767",
+     "Edwin Cardona",
+     "AM-R"
+    ]
+   ],
+   "Deportivo Pasto": [
+    [
+     "205977",
+     "Geovanni Banguera",
+     "G"
+    ],
+    [
+     "238823",
+     "Nicolás Gil",
+     "CD-L"
+    ],
+    [
+     "149025",
+     "Fainer Torijano",
+     "CD-R"
+    ],
+    [
+     "405422",
+     "Hervin Goyes",
+     "LB"
+    ],
+    [
+     "322980",
+     "Juan Garavito",
+     "RB"
+    ],
+    [
+     "187918",
+     "Franco Leys",
+     "CM-L"
+    ],
+    [
+     "252588",
+     "Harrinson Mancilla",
+     "CM-R"
+    ],
+    [
+     "309053",
+     "Mayer Gil",
+     "LM"
+    ],
+    [
+     "241475",
+     "Enrique Serje",
+     "RM"
+    ],
+    [
+     "301280",
+     "Jonathan Perlaza",
+     "CF-L"
+    ],
+    [
+     "276994",
+     "Diego Chavez",
+     "CF-R"
     ]
    ]
   }
@@ -293,16 +409,16 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -130
+    -135
    ],
    "spread": [
     [
-     "-0.5",
-     140
-    ],
-    [
      "+0.5",
      -220
+    ],
+    [
+     "-0.5",
+     140
     ]
    ]
   }
@@ -544,6 +660,39 @@
   "estadio": "Deportivo Cali",
   "local_espn": "Deportivo Cali",
   "visita_espn": "Boyacá Chicó FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877772",
+  "utc": "2026-11-02T21:05Z",
+  "estadio": "Estadio Cincuentenario",
+  "local_espn": "Águilas Doradas",
+  "visita_espn": "Fortaleza CEIF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877959",
+  "utc": "2026-11-02T23:10Z",
+  "estadio": "General Santander",
+  "local_espn": "Cúcuta Deportivo",
+  "visita_espn": "Independiente Santa Fe",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877914",
+  "utc": "2026-11-03T01:15Z",
+  "estadio": "Estadio Alfonso López",
+  "local_espn": "Atlético Bucaramanga",
+  "visita_espn": "Atlético Nacional",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
