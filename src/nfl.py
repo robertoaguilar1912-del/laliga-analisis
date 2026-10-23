@@ -297,37 +297,59 @@ def descargar():
 APERTURAS = RAW / 'nfl_aperturas.csv'
 
 
-def descargar_aperturas(desde=2021):
-    """Líneas de apertura y de cierre de ESPN de los juegos ya jugados (por semana, temporadas pasadas una sola vez), para
-    probar si el modelo le gana a la apertura como en la NBA (22 oct 2026)."""
+def _momios_core(eid):
+    """Apertura y cierre de un juego ya jugado (core API de ESPN): la primera casa válida."""
     from fuentes import _get
-    ya = pd.read_csv(APERTURAS, dtype={'id': str}) if APERTURAS.exists() else pd.DataFrame(columns=['id', 'season'])
-    actual = temporada_nfl()
-    filas = []
-    for y in range(desde, actual + 1):
-        if y < actual and (ya.season == y).sum() >= 250:
+    j = _get(f'https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/{eid}/competitions/{eid}/odds')
+
+    def g(d, *ks):
+        for k in ks:
+            d = (d or {}).get(k)
+        return d
+
+    def f(x):
+        try:
+            return float(str(x).strip().lstrip('ouOU').replace('+', ''))
+        except (TypeError, ValueError):
+            return None
+    for it in (j or {}).get('items', []) or []:
+        if '$ref' in it and len(it) == 1:
+            it = _get(it['$ref']) or {}
+        casa = ((it.get('provider') or {}).get('name') or '').strip()
+        if not casa or any(m in casa.lower() for m in ('live', 'numberfire', 'teamrankings', 'accuscore')):
             continue
-        for st, semanas in ((2, range(1, 19)), (3, range(1, 6))):
-            for w in semanas:
-                j = _get(f'{ESPN_NFL}/scoreboard', params={'dates': y, 'seasontype': st, 'week': w, 'limit': 50})
-                for e in (j or {}).get('events', []):
-                    comp = e['competitions'][0]
-                    if not comp['status']['type'].get('completed'):
-                        continue
-                    cs = {c['homeAway']: c for c in comp['competitors']}
-                    m = _momios_nfl(comp) or {}
-                    if 'home' not in cs or not m:
-                        continue
-                    filas.append({'id': str(e['id']), 'season': y, 'tipo': st, 'week': w, 'local': cs['home']['team']['abbreviation'],
-                                  'visita': cs['away']['team']['abbreviation'], 'pl': int(cs['home'].get('score') or 0),
-                                  'pv': int(cs['away'].get('score') or 0), 'casa': m.get('casa'),
-                                  'sp': m['spread'][0], 'sp_abre': m.get('spread_abre'), 'sp_ol': m['spread'][1], 'sp_ov': m['spread'][3],
-                                  'tot': m['total'][0], 'tot_abre': m.get('total_abre'), 'o_odds': m['total'][1], 'u_odds': m['total'][2],
-                                  'ml_l': m['ml'][0], 'ml_v': m['ml'][1], 'ml_l_abre': m['ml_abre'][0], 'ml_v_abre': m['ml_abre'][1]})
-    if filas:
-        df = pd.concat([ya, pd.DataFrame(filas)], ignore_index=True).drop_duplicates('id', keep='last')
-        df.to_csv(APERTURAS, index=False)
-        print(f"  ESPN NFL aperturas: {len(filas)} juegos nuevos; con apertura de spread: {df.sp_abre.notna().sum()} de {len(df)}")
+        H, A = it.get('homeTeamOdds') or {}, it.get('awayTeamOdds') or {}
+        sp = f(g(H, 'close', 'pointSpread', 'american'))
+        if sp is None:
+            sp = f(it.get('spread'))
+        if sp is None:
+            continue
+        return {'casa': casa, 'sp': sp, 'sp_abre': f(g(H, 'open', 'pointSpread', 'american')),
+                'sp_ol': f(g(H, 'close', 'spread', 'american')), 'sp_ov': f(g(A, 'close', 'spread', 'american')),
+                'tot': f(g(it, 'close', 'total', 'american')) or f(it.get('overUnder')), 'tot_abre': f(g(it, 'open', 'total', 'american')),
+                'o_odds': f(g(it, 'close', 'over', 'american')), 'u_odds': f(g(it, 'close', 'under', 'american')),
+                'ml_l': f(g(H, 'close', 'moneyLine', 'american')), 'ml_v': f(g(A, 'close', 'moneyLine', 'american')),
+                'ml_l_abre': f(g(H, 'open', 'moneyLine', 'american')), 'ml_v_abre': f(g(A, 'open', 'moneyLine', 'american'))}
+    return None
+
+
+def descargar_aperturas(desde=2021, tope=1500):
+    """Líneas de apertura y de cierre de ESPN de los juegos ya jugados (core API, por juego; los ya bajados no se repiten),
+    para probar si el modelo le gana a la apertura como en la NBA (22 oct 2026). Ids de ESPN de nflverse."""
+    from concurrent.futures import ThreadPoolExecutor
+    g = cargar_juegos()
+    g = g[(g.season >= desde) & g.result.notna() & (g.espn.astype(str) != '')]
+    ya = pd.read_csv(APERTURAS, dtype={'id': str}) if APERTURAS.exists() else pd.DataFrame(columns=['id'])
+    faltan = [str(x) for x in g.espn.astype(str) if x not in set(ya.id.astype(str))][:tope]
+    if not faltan:
+        return
+    with ThreadPoolExecutor(8) as ex:
+        res = list(ex.map(_momios_core, faltan))
+    filas = [{'id': eid, **m} for eid, m in zip(faltan, res) if m]
+    vacios = [{'id': eid} for eid, m in zip(faltan, res) if not m]
+    df = pd.concat([ya, pd.DataFrame(filas + vacios)], ignore_index=True).drop_duplicates('id', keep='last')
+    df.to_csv(APERTURAS, index=False)
+    print(f"  ESPN NFL aperturas: {len(faltan)} juegos consultados, {len(filas)} con momios; con apertura de spread: {df.sp_abre.notna().sum()} de {len(df)}")
 
 
 def descargar_espn(dias_atras=3):
