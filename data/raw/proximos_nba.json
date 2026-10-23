@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909093",
-  "utc": "2026-10-22T23:00Z",
-  "fecha": "2026-10-22",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "PHI",
-  "visita": "CLE",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Philadelphia 76ers",
-  "visita_espn": "Cleveland Cavaliers",
-  "revisado": false,
-  "estadio": "Xfinity Mobile Arena",
-  "records": {
-   "home": [
-    "1-0",
-    "0-0",
-    "1-0"
-   ],
-   "away": [
-    "0-0",
-    "0-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909094",
   "utc": "2026-10-23T01:30Z",
   "fecha": "2026-10-22",
@@ -38,10 +9,10 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "Denver Nuggets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Paycom Center",
   "records": {
    "home": [
@@ -55,30 +26,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -340,
-    270
-   ],
-   "ml_abre": [
-    -278,
-    225
-   ],
-   "spread": [
-    -7.5,
-    -118,
-    7.5,
-    -102
-   ],
-   "spread_abre": -7.5,
-   "total": [
-    236.5,
-    -108,
-    -112
-   ],
-   "total_abre": 231.5
-  }
+  "momios": null
  },
  {
   "id": "401909848",
@@ -108,7 +56,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -115,
     -105
@@ -160,7 +108,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -142,
     120
@@ -212,7 +160,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     120,
     -142
@@ -264,7 +212,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -225,
     185
@@ -316,7 +264,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     105,
     -125
@@ -333,9 +281,9 @@
    ],
    "spread_abre": 1.5,
    "total": [
-    236.5,
-    -110,
-    -110
+    235.5,
+    -112,
+    -108
    ],
    "total_abre": 237.5
   }
@@ -368,7 +316,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     180,
     -218
@@ -420,7 +368,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -110,
     -110
@@ -472,7 +420,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -218,
     180
@@ -524,7 +472,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -135,
     114
@@ -576,7 +524,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -155,
     130
@@ -628,7 +576,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -395,
     310
@@ -680,7 +628,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     245,
     -305
@@ -750,9 +698,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "0-1",
@@ -779,8 +727,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ],
    "away": [
@@ -1098,8 +1046,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ],
    "away": [
@@ -1185,9 +1133,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -1562,9 +1510,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -1625,8 +1573,8 @@
     "1-0"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ]
   },
@@ -1886,9 +1834,9 @@
     "1-0"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -1978,30 +1926,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -115,
-    -105
-   ],
-   "ml_abre": [
-    -105,
-    -115
-   ],
-   "spread": [
-    -1.5,
-    -105,
-    1.5,
-    -115
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    235.5,
-    -110,
-    -110
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909278",
@@ -2030,30 +1955,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -575,
-    425
-   ],
-   "ml_abre": [
-    -575,
-    425
-   ],
-   "spread": [
-    -11.5,
-    -110,
-    11.5,
-    -110
-   ],
-   "spread_abre": -11.5,
-   "total": [
-    232.5,
-    -110,
-    -110
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401909279",
@@ -2082,30 +1984,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    250,
-    -310
-   ],
-   "ml_abre": [
-    250,
-    -310
-   ],
-   "spread": [
-    7.5,
-    -102,
-    -7.5,
-    -118
-   ],
-   "spread_abre": 7.5,
-   "total": [
-    225.5,
-    -110,
-    -110
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909280",
@@ -2124,8 +2003,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ],
    "away": [
@@ -2134,30 +2013,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -125,
-    105
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    -2.5,
-    -105,
-    2.5,
-    -115
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    231.5,
-    -110,
-    -110
-   ],
-   "total_abre": 231.5
-  }
+  "momios": null
  },
  {
   "id": "401909281",
@@ -2186,30 +2042,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -155,
-    130
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -3.5,
-    -108,
-    3.5,
-    -112
-   ],
-   "spread_abre": -3.5,
-   "total": [
-    226.5,
-    -110,
-    -110
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909282",
@@ -2238,30 +2071,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -148,
-    124
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -3.5,
-    -110,
-    3.5,
-    -110
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    241.5,
-    -115,
-    -105
-   ],
-   "total_abre": 240.5
-  }
+  "momios": null
  },
  {
   "id": "401909283",
@@ -2319,30 +2129,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -340,
-    270
-   ],
-   "ml_abre": [
-    -360,
-    285
-   ],
-   "spread": [
-    -9.5,
-    -110,
-    9.5,
-    -110
-   ],
-   "spread_abre": -9.5,
-   "total": [
-    230.5,
-    -110,
-    -110
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909285",
@@ -2371,30 +2158,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -105,
-    -115
-   ],
-   "ml_abre": [
-    -105,
-    -115
-   ],
-   "spread": [
-    1.5,
-    -115,
-    -1.5,
-    -105
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    236.5,
-    -110,
-    -110
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909286",
@@ -2424,26 +2188,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    110,
-    -130
+    null,
+    null
    ],
    "ml_abre": [
-    114,
-    -135
+    null,
+    null
    ],
    "spread": [
-    2.5,
-    -110,
-    -2.5,
-    -110
+    null,
+    null,
+    null,
+    null
    ],
-   "spread_abre": 2.5,
+   "spread_abre": null,
    "total": [
     233.5,
-    -115,
-    -105
+    null,
+    null
    ],
    "total_abre": 233.5
   }
@@ -2499,8 +2263,8 @@
     "1-0"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ]
   },
@@ -2586,9 +2350,9 @@
     "0-1"
    ],
    "away": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -2784,9 +2548,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
+    "0-1",
     "0-0",
-    "0-0",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-0",
@@ -2929,8 +2693,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "2-0",
     "1-0",
-    "0-0",
     "1-0"
    ],
    "away": [
