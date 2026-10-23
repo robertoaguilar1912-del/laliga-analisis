@@ -18,12 +18,12 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -175
+    -170
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     100
     ],
     [
      "+1.5",
@@ -46,7 +46,7 @@
    "ml": [
     -105,
     265,
-    260
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -60,7 +60,7 @@
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -308,9 +308,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
-    425,
-    650
+    -320,
+    400,
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -320,11 +320,11 @@
    "spread": [
     [
      "-1.5",
-     -110
+     -125
     ],
     [
      "+1.5",
-     -135
+     -125
     ]
    ]
   }
@@ -434,6 +434,17 @@
   "estadio": "Couto Pereira",
   "local_espn": "Coritiba",
   "visita_espn": "Vitória",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841299",
+  "utc": "2026-11-02T23:00Z",
+  "estadio": "Estádio Municipal Cicero de Souza Marques",
+  "local_espn": "Red Bull Bragantino",
+  "visita_espn": "Santos",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,

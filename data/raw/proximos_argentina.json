@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    205,
-    265
+    140,
+    200,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
     145,
-    -190
+    -195
    ],
    "spread": [
     [
      "-0.5",
-     110
+     130
     ],
     [
      "+0.5",
-     -150
+     -180
     ]
    ]
   }
@@ -78,22 +78,22 @@
    "casa": "DraftKings",
    "ml": [
     -145,
-    250,
+    255,
     425
    ],
    "ou_linea": 1.5,
    "ou": [
-    -205,
-    145
+    -200,
+    150
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     110
+     115
     ]
    ]
   }
@@ -342,22 +342,22 @@
    "casa": "DraftKings",
    "ml": [
     -185,
-    260,
-    550
+    265,
+    600
    ],
    "ou_linea": 1.5,
    "ou": [
     -175,
-    120
+    125
    ],
    "spread": [
     [
      "-0.5",
-     -205
+     -200
     ],
     [
      "+0.5",
-     130
+     135
     ]
    ]
   }
@@ -374,19 +374,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
-    215,
+    200,
+    220,
     135
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -170
+    120,
+    -165
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -180
     ],
     [
      "-0.5",
@@ -473,23 +473,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    215,
+    110,
+    210,
     260
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -170
+    -175
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -145
+     -150
     ]
    ]
   }
@@ -610,6 +610,50 @@
   "estadio": "Ciudad de Lanús",
   "local_espn": "Lanús",
   "visita_espn": "Gimnasia (Mendoza)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841657",
+  "utc": "2026-11-02T22:00Z",
+  "estadio": "Norberto Tomaghello",
+  "local_espn": "Defensa y Justicia",
+  "visita_espn": "Independiente",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841649",
+  "utc": "2026-11-02T22:00Z",
+  "estadio": "Ciudad de Vicente López",
+  "local_espn": "Platense",
+  "visita_espn": "Central Córdoba (Santiago del Estero)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841644",
+  "utc": "2026-11-03T00:15Z",
+  "estadio": "Monumental Presidente José Fierro",
+  "local_espn": "Atlético Tucumán",
+  "visita_espn": "Argentinos Juniors",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841652",
+  "utc": "2026-11-03T00:15Z",
+  "estadio": "Bautista Gargantini",
+  "local_espn": "Independiente Rivadavia",
+  "visita_espn": "Banfield",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,

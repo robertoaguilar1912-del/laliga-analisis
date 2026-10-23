@@ -13,7 +13,7 @@
    "ml": [
     -150,
     280,
-    425
+    450
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     120
+     115
     ]
    ]
   }
@@ -215,7 +215,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -105
    ],
    "spread": [
@@ -249,12 +249,12 @@
    "ou_linea": 2.5,
    "ou": [
     -170,
-    135
+    140
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -170
     ],
     [
      "+0.5",
@@ -625,5 +625,16 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401882824",
+  "utc": "2026-11-02T20:00Z",
+  "estadio": "Riazor",
+  "local_espn": "Deportivo",
+  "visita_espn": "Osasuna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
  }
 ]

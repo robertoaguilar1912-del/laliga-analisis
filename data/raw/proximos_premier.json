@@ -18,16 +18,16 @@
    "ou_linea": 2.5,
    "ou": [
     -135,
-    105
+    110
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -160
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   }
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
-    330,
-    -150
+    380,
+    340,
+    -155
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -155,7 +155,7 @@
    "spread": [
     [
      "-0.5",
-     -155
+     -150
     ],
     [
      "+0.5",
@@ -249,7 +249,7 @@
    "ou_linea": 3.5,
    "ou": [
     135,
-    -165
+    -170
    ],
    "spread": [
     [
@@ -622,6 +622,39 @@
     [
      "-0.5",
      -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878762",
+  "utc": "2026-11-02T20:00Z",
+  "estadio": "St. James' Park",
+  "local_espn": "Newcastle United",
+  "visita_espn": "Everton",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    260,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -165
     ]
    ]
   }

@@ -18,7 +18,7 @@
    "ou_linea": 2.5,
    "ou": [
     105,
-    -135
+    -140
    ],
    "spread": [
     [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    220,
-    195
+    140,
+    225,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -150
+    110,
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
@@ -401,6 +401,39 @@
   "estadio": "Estádio Dr. Jorge Ismael de Biasi",
   "local_espn": "Novorizontino",
   "visita_espn": "Operário PR",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860420",
+  "utc": "2026-11-02T19:00Z",
+  "estadio": "Arena Castelão",
+  "local_espn": "Fortaleza",
+  "visita_espn": "Atlético Goianiense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860412",
+  "utc": "2026-11-02T21:00Z",
+  "estadio": "Estádio Joaquim Portugal",
+  "local_espn": "Athletic",
+  "visita_espn": "Ceará",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860419",
+  "utc": "2026-11-02T23:30Z",
+  "estadio": "Estádio da Serrinha",
+  "local_espn": "Goiás",
+  "visita_espn": "CRB",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
