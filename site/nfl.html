@@ -477,6 +477,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const probM = (g, f) => g.dist_m.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0);
   const probT = (g, f) => g.dist_t.reduce((a, p, i) => a + (f(i + 10) ? p : 0), 0);
   // Pinnacle (la casa más afilada) y el promedio de varias casas, sin margen, desde The Odds API; solo si tienen la misma línea
+  // Valor contra Pinnacle (desde el 23 oct 2026): en la NBA y la NFL el modelo no le gana a la línea de cierre, pero si tu casa
+  // paga más que el precio justo de Pinnacle (la casa más precisa), eso sí es valor. VALOR: EV de +3% o más contra Pinnacle.
+  const VALOR_PIN = 0.03;
+  function valorPinnacle(g, clave, dec) {
+    const pn = g.otras_casas && g.otras_casas.pinnacle ? g.otras_casas.pinnacle[clave] : null;
+    if (!pn || !dec) return '';
+    const ev = pn.p * dec - 1, minimo = (1 + VALOR_PIN) / pn.p;
+    return ev >= VALOR_PIN
+      ? `<br><span class="pill PICK">VALOR</span> <b>Tu momio le gana al precio justo de Pinnacle</b> (justo ${(1 / pn.p).toFixed(2)}, EV <span class="mono">${spct(ev, 1)}</span>). Es la señal más confiable que tenemos.`
+      : `<br><b>Contra Pinnacle no hay valor</b> (justo ${(1 / pn.p).toFixed(2)}, EV <span class="mono">${spct(ev, 1)}</span>): para que lo haya, tu casa tendría que pagar ${minimo.toFixed(2)} o más.`;
+  }
   function otrasCasas(g, clave, dec) {
     const o = g.otras_casas; if (!o) return '';
     const pn = o.pinnacle[clave], cs = o.consenso[clave], out = [];
@@ -703,7 +714,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       out.innerHTML = `<span class="pill ${v}">${v}</span> Modelo <span class="mono">${pct(c.p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
         + (menorQueDK ? `<br><b>No es PICK: ${esc(g.casa_momios || 'DraftKings')} paga ${dkm.toFixed(2)} y tu casa ${dec.toFixed(2)}.</b> Si puedes, búscalo en otra casa.` : '')
         + (op ? `<br><b>No es PICK: en este juego ya hay PICK en ${esc(op.mercado)}</b>, que el modelo ve más probable. Los dos dependen del mismo resultado; apostar los dos es repetir la apuesta.` : '')
-        + otrasCasas(g, clave, dec);
+        + otrasCasas(g, clave, dec) + valorPinnacle(g, clave, dec);
       return { k, L, dec, c };
     }
     tipo.addEventListener('change', () => { setDefault(); calc(); msg.textContent = ''; });
