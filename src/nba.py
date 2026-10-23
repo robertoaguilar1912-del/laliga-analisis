@@ -32,7 +32,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, PICK_P_MIN, ahora
-from picks import un_pick_por_familia, calibrar
+from picks import un_pick_por_familia, calibrar, centro_mercado
 import oddsapi
 
 ESPN_NBA = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba'
@@ -490,6 +490,11 @@ PICK_EV = 0.05
 # de spread y total pasa de 0.704-0.716 a 0.693 y los PICK de −164.8 u (4,011) a −14.4 u (1,065, casi todos moneyline).
 # El ⏰ PICK temprano no depende de esto (usa la distancia del total a la línea de apertura).
 CALIB = {'Moneyline': 1.086, 'Spread': 0.068, 'Total': 0.028}
+# Con línea de la casa (desde el 23 oct 2026): la probabilidad de spread y total para CUALQUIER línea sale de una curva
+# centrada en la línea de la casa movida hacia el modelo solo lo que de verdad se cumplió: centro = línea + k·(modelo −
+# línea). (real − línea) contra (modelo − línea), 2022-26: k = 0.106 en spread y ≈ 0 en total. La calibración de arriba
+# (logit) solo valía en la línea de la casa: con otra línea (p. ej. +12.5 cuando la casa da +4.5) seguía diciendo ~50%.
+MEZCLA = {'Spread': 0.10, 'Total': 0.0}
 # PICK temprano (total): el total del modelo a TEMPRANO_DIF puntos o más de la línea de APERTURA y la línea todavía a
 # TEMPRANO_MOV puntos o menos de la apertura (aún no se ha movido). Prueba 2023-26 (claude/ventaja-apertura-nba-oct-2026.md):
 # en esos juegos la línea se movió hacia el modelo en las 3 temporadas (+2.4, +5.7 y +1.7 puntos de media) y apostar a la
@@ -977,19 +982,30 @@ def analizar():
             fila('ML1', f'Gana {L}', 'Moneyline', pH, 0, pA, dec[0], mkt[0])
             fila('ML2', f'Gana {V}', 'Moneyline', pA, 0, pH, dec[1], mkt[1])
         sp = mom.get('spread') or [None] * 4
+        mc = None
+        if sp[0] is not None:          # centro: el de la casa (su probabilidad sin margen en su línea) + k·(modelo − ese centro)
+            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
+            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+            mc = cm + MEZCLA['Spread'] * (m - cm)
+        kmc, pmc = modelo.dist_margen(mc) if mc is not None else (km, pm)
         if sp[0] is not None and None not in sp:
             dh, da = am_to_dec(sp[1]), am_to_dec(sp[3])
             imp = np.array([1 / dh, 1 / da]); pms = imp / imp.sum()
-            g1, p1, l1 = calibrar(*prob_linea(km, pm, -sp[0]), CALIB['Spread'])
-            l2, p2, g2 = prob_linea(km, pm, sp[2])
-            g2, p2, l2 = calibrar(g2, p2, l2, CALIB['Spread'])
+            g1, p1, l1 = prob_linea(kmc, pmc, -sp[0])
+            l2, p2, g2 = prob_linea(kmc, pmc, sp[2])
             fila(f'H1:{sp[0]:+g}', f'{L} {sp[0]:+g}', 'Spread', g1, p1, l1, dh, pms[0])
             fila(f'H2:{sp[2]:+g}', f'{V} {sp[2]:+g}', 'Spread', g2, p2, l2, da, pms[1])
         tt = mom.get('total') or [None] * 3
+        tc = None
+        if tt[0] is not None:
+            qo = 0.5 if None in tt else (1 / am_to_dec(tt[1])) / (1 / am_to_dec(tt[1]) + 1 / am_to_dec(tt[2]))
+            ct = centro_mercado(modelo.dist_total, tt[0], qo, tt[0] - 30, tt[0] + 30)
+            tc = ct + MEZCLA['Total'] * (t - ct)
+        ktc, ptc = modelo.dist_total(tc) if tc is not None else (kt, pt)
         if None not in tt:
             do, du = am_to_dec(tt[1]), am_to_dec(tt[2])
             imp = np.array([1 / do, 1 / du]); pmt = imp / imp.sum()
-            o_, push, u_ = calibrar(*prob_linea(kt, pt, tt[0]), CALIB['Total'])
+            o_, push, u_ = prob_linea(ktc, ptc, tt[0])
             fila(f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', 'Total', o_, push, u_, do, pmt[0])
             fila(f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', 'Total', u_, push, o_, du, pmt[1])
             ta_ = mom.get('total_abre')
@@ -1016,6 +1032,10 @@ def analizar():
                                             {'k': 'ML2', 'mercado': f'Gana {V}', 'grupo': 'Moneyline', 'p': pA, 'justo': fair(pA)}],
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]],
             't0': t0, 'dist_t': [round(float(x), 5) for x in pt[(kt >= t0) & (kt <= t0 + 120)]],
+            # curvas para la calculadora, centradas en la línea de la casa movida hacia el modelo (MEZCLA)
+            'dist_mc': None if mc is None else [round(float(x), 5) for x in pmc[(kmc >= -50) & (kmc <= 50)]],
+            't0c': None if tc is None else int(round(tc)) - 60,
+            'dist_tc': None if tc is None else [round(float(x), 5) for x in ptc[(ktc >= int(round(tc)) - 60) & (ktc <= int(round(tc)) + 60)]],
             'texto': texto_juego(L, V, m, t, sp[0], tt[0], dsc, fuera), 'descanso': dsc,
             'lesiones': les, 'alerta': alerta, 'fuera': fuera,
             'h2h': [{'fecha': r.fecha, 'local': EQUIPOS[r.local], 'visita': EQUIPOS[r.visita], 'gl': int(r.pl), 'gv': int(r.pv)} for r in h2h.itertuples()],

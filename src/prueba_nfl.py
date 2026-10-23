@@ -12,8 +12,8 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, PICK_P_MIN
-from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB, BAJAS, FALTAS
-from picks import calibrar
+from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB, BAJAS, FALTAS, MEZCLA
+from picks import calibrar, centro_mercado
 
 warnings.filterwarnings('ignore')
 
@@ -69,11 +69,17 @@ def apuestas(d, sm, st, clave, umbral=0.0):
         kt, pt = mod.dist_total(r.pt)
         sel = []
         if not np.isnan(r.spread_line) and not np.isnan(r.home_spread_odds) and not np.isnan(r.away_spread_odds):
-            g1, p1, l1 = calibrar(*prob_linea(km, pm, r.spread_line), CALIB['Spread'])
+            qh = (1 / am_to_dec(r.home_spread_odds)) / (1 / am_to_dec(r.home_spread_odds) + 1 / am_to_dec(r.away_spread_odds))
+            cm = centro_mercado(mod.dist_margen, r.spread_line, qh, r.spread_line - 20, r.spread_line + 20)
+            kc, pc_ = mod.dist_margen(cm + MEZCLA['Spread'] * (r.pm - cm))
+            g1, p1, l1 = prob_linea(kc, pc_, r.spread_line)
             sel += [('Spread', 'local', g1, p1, l1, am_to_dec(r.home_spread_odds), r.result - r.spread_line),
                     ('Spread', 'visita', l1, p1, g1, am_to_dec(r.away_spread_odds), r.spread_line - r.result)]
         if not np.isnan(r.total_line) and not np.isnan(r.over_odds) and not np.isnan(r.under_odds):
-            o, pu, u = calibrar(*prob_linea(kt, pt, r.total_line), CALIB['Total'])
+            qo = (1 / am_to_dec(r.over_odds)) / (1 / am_to_dec(r.over_odds) + 1 / am_to_dec(r.under_odds))
+            ct = centro_mercado(mod.dist_total, r.total_line, qo, r.total_line - 30, r.total_line + 30)
+            ktc, ptc = mod.dist_total(ct + MEZCLA['Total'] * (r.pt - ct))
+            o, pu, u = prob_linea(ktc, ptc, r.total_line)
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.over_odds), r.total - r.total_line),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.under_odds), r.total_line - r.total)]
         if not np.isnan(r.home_moneyline) and not np.isnan(r.away_moneyline):

@@ -181,13 +181,18 @@
   function calcular(g, tipo, linea) {
     let gana, push = 0, pierde;
     if (tipo === 'ML1' || tipo === 'ML2') { gana = tipo === 'ML1' ? g.pH : g.pA; pierde = 1 - gana; return { gana, push, pierde, p: gana }; }
-    if (tipo === 'H1') { gana = probM(g, k => k + linea > 0); push = probM(g, k => k + linea === 0); }
-    else if (tipo === 'H2') { gana = probM(g, k => -k + linea > 0); push = probM(g, k => -k + linea === 0); }
-    else if (tipo === 'O') { gana = probT(g, t => t > linea); push = probT(g, t => t === linea); }
-    else { gana = probT(g, t => t < linea); push = probT(g, t => t === linea); }
+    // con línea de la casa: curvas centradas en la línea de la casa movida hacia el modelo (dist_mc/dist_tc, ver MEZCLA en nba.py),
+    // que valen para cualquier línea; sin línea, la curva del modelo con el ajuste de siempre
+    const pM = g.dist_mc ? (f => g.dist_mc.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0)) : (f => probM(g, f));
+    const pT = g.dist_tc ? (f => g.dist_tc.reduce((a, p, i) => a + (f(i + g.t0c) ? p : 0), 0)) : (f => probT(g, f));
+    if (tipo === 'H1') { gana = pM(k => k + linea > 0); push = pM(k => k + linea === 0); }
+    else if (tipo === 'H2') { gana = pM(k => -k + linea > 0); push = pM(k => -k + linea === 0); }
+    else if (tipo === 'O') { gana = pT(t => t > linea); push = pT(t => t === linea); }
+    else { gana = pT(t => t < linea); push = pT(t => t === linea); }
     pierde = Math.max(0, 1 - gana - push);
     if (esTemprano(g, tipo, linea)) { const q = I.temprano.p, s = 1 - push; return { gana: q * s, push, pierde: (1 - q) * s, p: q, temprano: true }; }
-    return ajustar({ gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) }, tipo);
+    const r = { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
+    return (/^H/.test(tipo) ? g.dist_mc : g.dist_tc) ? r : ajustar(r, tipo);
   }
 
   // ---------------- lista de juegos

@@ -20,8 +20,8 @@ import pandas as pd
 
 from config import DATOS, PICK_P_MIN
 from nba import (cargar_juegos, cargar_box, con_pretemporada, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
-                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB)
-from picks import calibrar
+                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB, MEZCLA)
+from picks import calibrar, centro_mercado
 
 warnings.filterwarnings('ignore')
 AJUSTE = [2023]               # temporada con la que se eligen los parámetros
@@ -85,11 +85,17 @@ def apuestas(d, sigma):
         kt, pt = mod.dist_total(r.pt)
         sel = []
         if not np.isnan(r.sp) and not np.isnan(r.sp_ol) and not np.isnan(r.sp_ov):
-            g1, p1, l1 = calibrar(*prob_linea(km, pm, -r.sp), CALIB['Spread'])   # el local cubre si diferencia + línea > 0
+            qh = (1 / am_to_dec(r.sp_ol)) / (1 / am_to_dec(r.sp_ol) + 1 / am_to_dec(r.sp_ov))     # como nba.py: centro de la casa + k·(modelo − centro)
+            cm = centro_mercado(mod.dist_margen, -r.sp, qh, -r.sp - 20, -r.sp + 20)
+            kc, pc_ = mod.dist_margen(cm + MEZCLA['Spread'] * (r.pm - cm))
+            g1, p1, l1 = prob_linea(kc, pc_, -r.sp)          # el local cubre si diferencia + línea > 0
             sel += [('Spread', 'local', g1, p1, l1, am_to_dec(r.sp_ol), r.margen + r.sp),
                     ('Spread', 'visita', l1, p1, g1, am_to_dec(r.sp_ov), -(r.margen + r.sp))]
         if not np.isnan(r.tot) and not np.isnan(r.o_odds) and not np.isnan(r.u_odds):
-            o, pu, u = calibrar(*prob_linea(kt, pt, r.tot), CALIB['Total'])
+            qo = (1 / am_to_dec(r.o_odds)) / (1 / am_to_dec(r.o_odds) + 1 / am_to_dec(r.u_odds))
+            ct = centro_mercado(mod.dist_total, r.tot, qo, r.tot - 30, r.tot + 30)
+            ktc, ptc = mod.dist_total(ct + MEZCLA['Total'] * (r.pt - ct))
+            o, pu, u = prob_linea(ktc, ptc, r.tot)
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.o_odds), r.total - r.tot),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.u_odds), r.tot - r.total)]
         if not np.isnan(r.ml_l) and not np.isnan(r.ml_v):
@@ -150,7 +156,7 @@ def main(elegir_parametros=False):
            'sigma_actual': {'m': round(err[ult][0], 2), 't': round(err[ult][1], 2), 'temporada': nombre_temporada(ult)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre de la casa que muestra ESPN (' + ', '.join(casas.index[:3]) + ')',
            'mercados': 'spread, total y moneyline', 'estrategias': {},
-           'calib': CALIB, 'nota_calib': 'probabilidades ajustadas a lo que se cumplió (elegido con 2022-23 y 2023-24; 2023-24 también está en esta prueba)'}
+           'calib': CALIB, 'nota_calib': 'spread y total: curva de la casa movida hacia el modelo lo que se cumplió (k 0.10 y 0, con 2022-26); moneyline ajustado (elegido con 2022-24)'}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):

@@ -25,6 +25,21 @@ def calibrar(gana, push, pierde, c):
     return q * s, push, (1 - q) * s
 
 
+def centro_mercado(dist, umbral, q, a, b, iters=40):
+    """Centro c de la curva dist(c) -> (valores, probabilidades) con el que P(valor > umbral) / (P(> umbral) + P(< umbral))
+    es q (la probabilidad sin margen de la casa en su línea). Con números clave (3 y 7 en la NFL) el centro no es la línea:
+    centrar la curva justo en la línea daba, p. ej., 56% a "+7.5" cuando la casa lo paga parejo."""
+    for _ in range(iters):
+        c = (a + b) / 2
+        k, p = dist(c)
+        g, l = p[k > umbral].sum(), p[k < umbral].sum()
+        if g / max(g + l, 1e-12) < q:
+            a = c
+        else:
+            b = c
+    return (a + b) / 2
+
+
 RESULTADO = {'1', 'X', '2', '1X', 'X2', '12', 'DNB1', 'DNB2', 'ML1', 'ML2'}
 
 

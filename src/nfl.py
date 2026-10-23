@@ -24,7 +24,7 @@ import pandas as pd
 from scipy.stats import norm
 
 from config import RAW, DATOS, ESPN_DIR, DIAS_PROXIMOS, N_SIMS, PICK_P_MIN, ahora
-from picks import un_pick_por_familia, calibrar
+from picks import un_pick_por_familia, calibrar, centro_mercado
 import oddsapi
 
 HALF_LIFE = 120      # días; elegidos con 2012-2017 (ver prueba_nfl.py), ya con el peso del mercado de abajo
@@ -154,7 +154,12 @@ def prob_linea(k, p, umbral):
 # Probabilidades ajustadas a lo que se cumplió (desde el 22 oct 2026, pedido de Roberto). En la prueba 2018-26, cuando el
 # modelo decía 60-70% en spread, se cumplía 51-55%, y en total ~50%. logit p' = c·logit p, c elegido con 2012-17
 # (scratchpad nbacal/calib_nfl.py); en el total salía negativo (el modelo iba al revés), así que queda en 0 (50%).
-CALIB = {'Moneyline': 1.214, 'Spread': 0.241, 'Total': 0.0}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
+CALIB = {'Moneyline': 1.214, 'Spread': 0.241, 'Total': 0.0}
+# Con línea de la casa (desde el 23 oct 2026): spread y total para CUALQUIER línea salen de la curva centrada en la línea de
+# la casa movida hacia el modelo lo que de verdad se cumplió: centro = línea + k·(modelo − línea); (real − línea) contra
+# (modelo con bajas − línea), 2013-26: k = 0.183 en spread y negativo en total (queda en 0). La calibración logit solo valía
+# en la línea de la casa.
+MEZCLA = {'Spread': 0.18, 'Total': 0.0}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
 
 # Bajas (desde el 22 oct 2026). Puntos que pierde un equipo por cada titular completo (100% de los snaps) que no juega: Out
 # o Doubtful en el parte, o en la lista de reserva (lesionados, PUP); por grupo de posición. La importancia ("papel") de
@@ -591,22 +596,33 @@ def analizar():
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Moneyline', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': pmk,
                             'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc)})
         sp = mom.get('spread') or [None] * 4
+        mc = None
+        if sp[0] is not None:          # centro: el de la casa (su probabilidad sin margen en su línea) + k·(modelo − ese centro)
+            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
+            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+            mc = cm + MEZCLA['Spread'] * (m - cm)
+        kmc, pmc = modelo.dist_margen(mc) if mc is not None else (km, pm)
         if sp[0] is not None and None not in sp:
             dh, da = am_to_dec(sp[1]), am_to_dec(sp[3])
             imp = np.array([1 / dh, 1 / da]); pms = imp / imp.sum()
-            g1, p1, l1 = calibrar(*prob_linea(km, pm, -sp[0]), CALIB['Spread'])     # local cubre si margen + línea > 0
-            l2, p2, g2 = prob_linea(km, pm, sp[2])             # visita cubre si margen < su línea
-            g2, p2, l2 = calibrar(g2, p2, l2, CALIB['Spread'])
+            g1, p1, l1 = prob_linea(kmc, pmc, -sp[0])            # local cubre si margen + línea > 0
+            l2, p2, g2 = prob_linea(kmc, pmc, sp[2])             # visita cubre si margen < su línea
             for k_, nm, (gana, push, pierde), d, pmk in ((f'H1:{sp[0]:+g}', f'{L} {sp[0]:+g}', (g1, p1, l1), dh, pms[0]),
                                                          (f'H2:{sp[2]:+g}', f'{V} {sp[2]:+g}', (g2, p2, l2), da, pms[1])):
                 pc, ev = mercado(gana, push, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Spread', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': float(pmk),
                             'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc), 'empate': push})
         tt = mom.get('total') or [None] * 3
+        tc = None
+        if tt[0] is not None:
+            qo = 0.5 if None in tt else (1 / am_to_dec(tt[1])) / (1 / am_to_dec(tt[1]) + 1 / am_to_dec(tt[2]))
+            ct = centro_mercado(modelo.dist_total, tt[0], qo, tt[0] - 30, tt[0] + 30)
+            tc = ct + MEZCLA['Total'] * (t - ct)
+        ktc, ptc = modelo.dist_total(tc) if tc is not None else (kt, pt)
         if None not in tt:
             do, du = am_to_dec(tt[1]), am_to_dec(tt[2])
             imp = np.array([1 / do, 1 / du]); pmt = imp / imp.sum()
-            o_, push, u_ = calibrar(*prob_linea(kt, pt, tt[0]), CALIB['Total'])
+            o_, push, u_ = prob_linea(ktc, ptc, tt[0])
             for k_, nm, (gana, pierde), d, pmk in ((f'O:{tt[0]:g}', f'Más de {tt[0]:g} puntos', (o_, u_), do, pmt[0]),
                                                    (f'U:{tt[0]:g}', f'Menos de {tt[0]:g} puntos', (u_, o_), du, pmt[1])):
                 pc, ev = mercado(gana, push, pierde, d)
@@ -627,6 +643,8 @@ def analizar():
             'dk': {'spread': sp[0], 'total': tt[0], 'spread_abre': mom.get('spread_abre'), 'total_abre': mom.get('total_abre')},
             'con_momio': con, 'otras_casas': otras, 'sin_momio': sin,
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]], 'dist_t': [round(float(x), 5) for x in pt[(kt >= 10) & (kt <= 90)]],
+            'dist_mc': None if mc is None else [round(float(x), 5) for x in pmc[(kmc >= -50) & (kmc <= 50)]],
+            'dist_tc': None if tc is None else [round(float(x), 5) for x in ptc[(ktc >= 10) & (ktc <= 90)]],
             'texto': texto_juego(L, V, m, t, ml, sp[0], tt[0]) + texto_bajas(lesiones, L if bh else None, V if ba else None), 'lesiones': lesiones,
             'ajuste_bajas': [bh, ba],
             'descanso': None if nv is None or pd.isna(nv.home_rest) else [int(nv.home_rest), int(nv.away_rest)],
