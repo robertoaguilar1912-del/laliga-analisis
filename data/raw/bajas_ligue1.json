@@ -1,10 +1,20 @@
 {
 "401876423": {
 "fotmob": 5802971,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Sion Oppong",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 1300828.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 54524457.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
@@ -46,7 +56,7 @@
 },
 "401876427": {
 "fotmob": 5802967,
-"visto": "2026-10-24T18:25+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -128,7 +138,7 @@
 },
 "401876425": {
 "fotmob": 5802969,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -187,21 +197,21 @@
 {
 "nombre": "Osame Sahraoui",
 "tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 10158008.0,
 "titular": false,
 "importante": true
 }
 ],
 "valor_xi": 122184919.0,
-"perdida": 0.4703145647622846,
-"perdida_duda": 0.0
+"perdida": 0.3871782163230799,
+"perdida_duda": 0.08313634843920467
 }
 },
 "401876429": {
 "fotmob": 5802965,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -276,6 +286,33 @@
 "visita": {
 "faltan": [
 {
+"nombre": "Yasser Larouci",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1336682.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Théo Eyoum",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1069931.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Harold Voyer",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 641389.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Martin Rossignol",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
@@ -304,13 +341,13 @@
 }
 ],
 "valor_xi": 11963585.0,
-"perdida": 0.0,
+"perdida": 0.20116152474362828,
 "perdida_duda": 0.0
 }
 },
 "401876430": {
 "fotmob": 5802964,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [],
@@ -364,7 +401,7 @@
 },
 "401876426": {
 "fotmob": 5802968,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -437,7 +474,7 @@
 },
 "401876424": {
 "fotmob": 5802970,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -496,8 +533,8 @@
 {
 "nombre": "Fabio Baldé",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "1-2 semanas",
+"duda": false,
 "valor": 6827940.0,
 "titular": false,
 "importante": false
@@ -519,7 +556,7 @@
 },
 "401876422": {
 "fotmob": 5802972,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -610,7 +647,7 @@
 },
 "401876421": {
 "fotmob": 5802973,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -710,7 +747,7 @@
 },
 "401876420": {
 "fotmob": 5802974,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:56+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -742,20 +779,20 @@
 "importante": false
 },
 {
-"nombre": "Osame Sahraoui",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 10158008.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Ethan Mbappé",
 "tipo": "Sanción",
 "regreso": "hasta el 3 de noviembre",
 "duda": false,
 "valor": 8651117.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Osame Sahraoui",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 10158008.0,
 "titular": false,
 "importante": false
 }
@@ -808,6 +845,325 @@
 "regreso": "mediados de mayo de 2027",
 "duda": false,
 "valor": 1364483.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401876416": {
+"fotmob": 5802978,
+"visto": "2026-10-24T19:56+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Antoine Mendy",
+"tipo": "Lesión",
+"regreso": "finales de mayo de 2027",
+"duda": false,
+"valor": 12084322.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Moïse Bombito",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 2393737.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Laurent Abergel",
+"tipo": "Lesión",
+"regreso": "finales de abril de 2027",
+"duda": false,
+"valor": 1419707.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ali Abdi",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1148532.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Estéban Lepaul",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 24658449.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401876419": {
+"fotmob": 5802975,
+"visto": "2026-10-24T19:56+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Isak Steiner Jensen",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Noah Mbamba",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Bandiougou Fadiga",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Mohamed Bamba",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Giovani Versini",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Raphaël Le Guen",
+"tipo": "Lesión",
+"regreso": "finales de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Brendan Chardonnet",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401876418": {
+"fotmob": 5802976,
+"visto": "2026-10-24T19:56+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Steeve Kango",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pavel Šulc",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolás Tagliafico",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Loïs Openda",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Mohamed Ouédraogo",
+"tipo": "Lesión",
+"regreso": "finales de junio de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Ousmane Camara",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401876413": {
+"fotmob": 5802981,
+"visto": "2026-10-24T19:56+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Anis Ouzenadji",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Yvann Titi",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ismaël Boura",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Théo Eyoum",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Harold Voyer",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Yasser Larouci",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adil Bourabaa",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Martin Rossignol",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Erwan Colas",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }

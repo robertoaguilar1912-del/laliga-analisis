@@ -5,10 +5,32 @@
   "estadio": "Riyadh Air Metropolitano",
   "local_espn": "Atlético Madrid",
   "visita_espn": "Deportivo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -425,
+    550,
+    1000
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -140
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -155
+    ],
+    [
+     "+1.5",
+     110
+    ]
+   ]
+  },
   "alineaciones": {
    "Atlético Madrid": [
     [
@@ -237,9 +259,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
+    -150,
     450,
-    290
+    275
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -249,11 +271,11 @@
    "spread": [
     [
      "-0.5",
-     -170
+     -165
     ],
     [
      "+0.5",
-     125
+     120
     ]
    ]
   }
@@ -303,23 +325,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    320,
+    -185,
+    340,
     450
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     130
    ],
    "spread": [
     [
-     "-0.5",
-     -195
+     "-1.5",
+     140
     ],
     [
-     "+0.5",
-     130
+     "+1.5",
+     -205
     ]
    ]
   }

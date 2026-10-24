@@ -5,10 +5,32 @@
   "estadio": "Power Horse Stadium",
   "local_espn": "Almería",
   "visita_espn": "Real Oviedo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -130,
+    270,
+    360
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -140
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  },
   "alineaciones": {
    "Almería": [
     [
@@ -171,9 +193,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
+    135,
     240,
-    210
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -183,11 +205,11 @@
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
