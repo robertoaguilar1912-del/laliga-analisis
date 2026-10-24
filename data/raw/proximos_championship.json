@@ -5,7 +5,7 @@
   "estadio": "The Valley",
   "local_espn": "Charlton Athletic",
   "visita_espn": "Norwich City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Fratton Park",
   "local_espn": "Portsmouth",
   "visita_espn": "Millwall",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Bramall Lane",
   "local_espn": "Sheffield United",
   "visita_espn": "Derby County",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -315,8 +315,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    105
+    -140,
+    110
    ],
    "spread": [
     [
@@ -491,23 +491,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    290,
-    135
+    145,
+    285,
+    160
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -155
+    -160
    ],
    "spread": [
     [
-     "+0.5",
-     -175
+     "-0.5",
+     130
     ],
     [
-     "-0.5",
-     125
+     "+0.5",
+     -185
     ]
    ]
   }
@@ -536,11 +536,11 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -195
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -564,7 +564,7 @@
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -105
+    -110
    ],
    "spread": [
     [
@@ -573,7 +573,7 @@
     ],
     [
      "-0.5",
-     -115
+     -120
     ]
    ]
   }
@@ -629,7 +629,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    110,
     -135
    ],
    "spread": [
@@ -695,7 +695,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
+    -150,
     120
    ],
    "spread": [
