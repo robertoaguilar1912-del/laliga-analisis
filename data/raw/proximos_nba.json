@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909847",
-  "utc": "2026-10-24T00:00Z",
-  "fecha": "2026-10-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIA",
-  "visita": "DET",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Miami Heat",
-  "visita_espn": "Detroit Pistons",
-  "revisado": false,
-  "estadio": "Kaseya Center",
-  "records": {
-   "home": [
-    "0-1",
-    "0-1",
-    "0-0"
-   ],
-   "away": [
-    "1-0",
-    "1-0",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909096",
   "utc": "2026-10-24T01:30Z",
   "fecha": "2026-10-23",
@@ -38,7 +9,7 @@
   "visita": "HOU",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Houston Rockets",
   "revisado": false,
@@ -195,13 +166,13 @@
     "1-0"
    ],
    "away": [
-    "0-1",
-    "0-1",
+    "0-2",
+    "0-2",
     "0-0"
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     124,
     -148
@@ -252,7 +223,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -455,
+    350
+   ],
+   "ml_abre": [
+    -455,
+    350
+   ],
+   "spread": [
+    -11.5,
+    -105,
+    11.5,
+    -115
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    232.5,
+    -115,
+    -105
+   ],
+   "total_abre": 232.5
+  }
  },
  {
   "id": "401909855",
@@ -282,7 +276,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -625,
     455
@@ -293,15 +287,15 @@
    ],
    "spread": [
     -12.5,
-    -115,
+    -110,
     12.5,
-    -105
+    -110
    ],
    "spread_abre": -12.5,
    "total": [
     230.5,
-    -115,
-    -105
+    -110,
+    -110
    ],
    "total_abre": 230.5
   }
@@ -333,7 +327,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    -110
+   ],
+   "ml_abre": [
+    -110,
+    -110
+   ],
+   "spread": [
+    1.5,
+    -118,
+    -1.5,
+    -102
+   ],
+   "spread_abre": 1.5,
+   "total": [
+    243.5,
+    -112,
+    -108
+   ],
+   "total_abre": 243.5
+  }
  },
  {
   "id": "401909858",
@@ -362,7 +379,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    -470
+   ],
+   "ml_abre": [
+    360,
+    -470
+   ],
+   "spread": [
+    11.5,
+    -110,
+    -11.5,
+    -110
+   ],
+   "spread_abre": 11.5,
+   "total": [
+    230.5,
+    -110,
+    -110
+   ],
+   "total_abre": 230.5
+  }
  },
  {
   "id": "401909856",
@@ -391,7 +431,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -118,
+    -102
+   ],
+   "ml_abre": [
+    -115,
+    -105
+   ],
+   "spread": [
+    -1.5,
+    -110,
+    1.5,
+    -110
+   ],
+   "spread_abre": -1.5,
+   "total": [
+    230.5,
+    -105,
+    -115
+   ],
+   "total_abre": 230.5
+  }
  },
  {
   "id": "401909859",
@@ -420,7 +483,30 @@
     "0-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -485,
+    370
+   ],
+   "ml_abre": [
+    -485,
+    370
+   ],
+   "spread": [
+    -11.5,
+    -110,
+    11.5,
+    -110
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    237.5,
+    -115,
+    -105
+   ],
+   "total_abre": 237.5
+  }
  },
  {
   "id": "401909860",
@@ -618,9 +704,9 @@
     "1-0"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "1-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -758,8 +844,8 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "0-1",
-    "0-1",
+    "0-2",
+    "0-2",
     "0-0"
    ],
    "away": [
@@ -966,9 +1052,9 @@
     "0-1"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "1-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1053,8 +1139,8 @@
     "2-0"
    ],
    "away": [
-    "0-1",
-    "0-1",
+    "0-2",
+    "0-2",
     "0-0"
    ]
   },
@@ -1106,9 +1192,9 @@
   "estadio": "Little Caesars Arena",
   "records": {
    "home": [
+    "2-0",
     "1-0",
-    "1-0",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "1-1",
@@ -1546,9 +1632,9 @@
     "0-0"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "1-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1628,8 +1714,8 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "0-1",
-    "0-1",
+    "0-2",
+    "0-2",
     "0-0"
    ],
    "away": [
@@ -1755,7 +1841,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
@@ -2149,9 +2235,9 @@
     "1-0"
    ],
    "away": [
+    "2-0",
     "1-0",
-    "1-0",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -2526,8 +2612,8 @@
     "0-0"
    ],
    "away": [
-    "0-1",
-    "0-1",
+    "0-2",
+    "0-2",
     "0-0"
    ]
   },
