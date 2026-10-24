@@ -1,44 +1,11 @@
 [
  {
-  "id": "401876928",
-  "utc": "2026-10-24T01:00Z",
-  "estadio": "Estadio Victoria",
-  "local_espn": "Necaxa",
-  "visita_espn": "FC Juárez",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -140,
-    295,
-    350
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -150
-    ],
-    [
-     "+0.5",
-     110
-    ]
-   ]
-  }
- },
- {
   "id": "401876927",
   "utc": "2026-10-24T03:00Z",
   "estadio": "Estadio Banorte",
   "local_espn": "Atlante",
   "visita_espn": "Atlético de San Luis",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -259,14 +226,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    240,
-    150
+    170,
+    245,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -105
+    -130,
+    100
    ],
    "spread": [
     [
@@ -275,7 +242,7 @@
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
