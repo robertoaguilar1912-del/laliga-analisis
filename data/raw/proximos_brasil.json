@@ -5,7 +5,7 @@
   "estadio": "Arena Barueri",
   "local_espn": "Palmeiras",
   "visita_espn": "Red Bull Bragantino",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio São Januário",
   "local_espn": "Vasco da Gama",
   "visita_espn": "Corinthians",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -303,15 +303,15 @@
   "estadio": "Arena Condá",
   "local_espn": "Chapecoense",
   "visita_espn": "Fluminense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    295,
+    280,
     260,
-    -110
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -325,7 +325,7 @@
     ],
     [
      "-0.5",
-     -120
+     -115
     ]
    ]
   },
@@ -464,7 +464,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
+    125,
     -170
    ],
    "spread": [
