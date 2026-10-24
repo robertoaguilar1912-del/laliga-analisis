@@ -5,10 +5,16 @@
   "estadio": "Estadi Montilivi",
   "local_espn": "Girona",
   "visita_espn": "RC Celta Fortuna",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
   "alineaciones": {
    "Girona": [
     [
@@ -132,7 +138,7 @@
   "estadio": "Estadio Gran Canaria",
   "local_espn": "Las Palmas",
   "visita_espn": "Real Sociedad II",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {

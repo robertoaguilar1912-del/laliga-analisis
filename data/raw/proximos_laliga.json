@@ -5,7 +5,7 @@
   "estadio": "Mestalla Stadium",
   "local_espn": "Valencia",
   "visita_espn": "Villarreal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -200,7 +200,7 @@
    "ou_linea": 2.5,
    "ou": [
     130,
-    -160
+    -165
    ],
    "spread": [
     [
@@ -560,19 +560,19 @@
     600,
     -380
    ],
-   "ou_linea": 4.5,
+   "ou_linea": 3.5,
    "ou": [
-    130,
-    -170
+    -170,
+    130
    ],
    "spread": [
     [
      "+1.5",
-     105
+     110
     ],
     [
      "-1.5",
-     -155
+     -160
     ]
    ]
   }
