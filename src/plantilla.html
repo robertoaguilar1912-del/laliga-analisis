@@ -1516,7 +1516,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     todosR.forEach(x => { x.e = estado(x.bet, 1, true); });
     // un PICK por partido y familia: si cambió antes de empezar, cuenta el último (los demás llevan 'reemplazado')
     const reempl = todosR.filter(x => x.bet.reemplazado && !x.bet.revisar && (!filtroModelo || x.bet.liga === filtroModelo)).length;
-    const todos = todosR.filter(x => !x.bet.revisar && !x.bet.reemplazado);   // los REVISAR (bajas importantes) no cuentan como PICK
+    const retir = todosR.filter(x => x.bet.retirado && !x.bet.revisar && !x.bet.reemplazado && (!filtroModelo || x.bet.liga === filtroModelo)).length;
+    const todos = todosR.filter(x => !x.bet.revisar && !x.bet.reemplazado && !x.bet.retirado);   // los REVISAR (bajas importantes) y los que dejaron de ser PICK antes del partido no cuentan
     const revs = todosR.filter(x => x.bet.revisar && !x.bet.reemplazado && (!filtroModelo || x.bet.liga === filtroModelo));
     const ligasCon = Object.keys(LIGAS).filter(id => todos.some(x => x.bet.liga === id));
     if (filtroModelo && !ligasCon.includes(filtroModelo)) filtroModelo = '';
@@ -1532,7 +1533,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       ${ligasCon.length > 1 ? `<div class="subtabs" id="mod-filtro">${[['', 'Todas'], ...ligasCon.map(id => [id, corto(LIGAS[id])])].map(([id, n]) => `<button data-l="${id}" aria-selected="${id === filtroModelo}">${esc(n)}</button>`).join('')}</div>` : ''}
       <div class="card">
         <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)}</h3>
-        <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no. Cuenta un solo PICK por partido en el resultado (ganador, hándicap) y uno en el total: si cambió antes de empezar (otra línea u otro lado), el último que marcó la página${reempl ? ` (${num(reempl)} anteriores no se suman)` : ''}.</p>
+        <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no. Cuenta un solo PICK por partido en el resultado (ganador, hándicap) y uno en el total: si cambió antes de empezar (otra línea u otro lado), el último que marcó la página${reempl ? ` (${num(reempl)} anteriores no se suman)` : ''}. Si la página deja de marcarlo antes del partido (cambió el momio, entró una regla o una baja), tampoco cuenta${retir ? ` (${num(retir)} así, desde el 18 oct 2026)` : ''}.</p>
         ${resumen(lista, 'u')}
         ${notaPA(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);

@@ -90,6 +90,30 @@ def _fam(k):
     return f if f in ('resultado', 'total') else k.split(':')[0]
 
 
+def marcar_retirados(picks, t, vistos):
+    """Un PICK que la página dejó de marcar antes del partido (cambió el momio, entró una regla, una baja...) no cuenta:
+    lleva 'retirado'. vistos: {id de partido: claves que hoy son PICK o REVISAR} de los partidos que se analizaron en esta
+    corrida. Para los anteriores (desde el 18 oct 2026, cuando se empezó a anotar 'ultimo'): retirado si la última vez
+    que se vio como PICK fue más de 6 horas antes del partido (desde el 24 oct 2026; antes se contaban todos, y los de
+    días antes de las reglas del 20 oct seguían sumando)."""
+    from datetime import timedelta
+    n = 0
+    for r in picks:
+        clave = EQUIVALENTE.get(r['k'], r['k'])
+        if r['id'] in vistos:
+            if clave in vistos[r['id']]:
+                r.pop('retirado', None)
+            elif not r.get('retirado'):
+                r['retirado'] = t.isoformat(timespec='minutes')
+        elif not r.get('retirado') and r['utc'] >= '2026-10-18T12:00':
+            inicio = datetime.fromisoformat(r['utc'].replace('Z', '+00:00'))
+            ult = r.get('ultimo')
+            if inicio <= t and (ult is None or datetime.fromisoformat(ult) < inicio - timedelta(hours=6)):
+                r['retirado'] = ult or r['visto']
+        n += bool(r.get('retirado'))
+    return n
+
+
 def marcar_reemplazados(picks):
     """En cada partido y familia (los REVISAR aparte), cuenta solo el PICK que se vio por última vez; los demás llevan
     'reemplazado' con el mercado que quedó."""
@@ -132,6 +156,7 @@ def actualizar():
         r.setdefault('liga', 'laliga')
     cierres = _leer(REG / 'cierres.json', {})
     ya = {(r['id'], EQUIVALENTE.get(r['k'], r['k'])) for r in picks}
+    vistos = {}
     t = ahora()
     nuevos = 0
     ligas = []
@@ -162,6 +187,7 @@ def actualizar():
                 clave = EQUIVALENTE.get(r['k'], r['k'])
                 if clave not in mejores or (r['veredicto'] == 'PICK', float(r['momio'])) > (mejores[clave]['veredicto'] == 'PICK', float(mejores[clave]['momio'])):
                     mejores[clave] = r
+            vistos[m['id']] = set(mejores)
             for clave, r in mejores.items():
                 if (m['id'], clave) in ya:
                     for x in picks:            # sigue siendo PICK: se anota la última vez que se vio
@@ -178,13 +204,14 @@ def actualizar():
                               **({'revisar': r.get('revisar') or 'bajas'} if r['veredicto'] == 'REVISAR' else {})})
                 ya.add((m['id'], clave))
                 nuevos += 1
+    retirados = marcar_retirados(picks, t, vistos)
     reemplazados = marcar_reemplazados(picks)
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))
     json.dump(picks, open(REG / 'modelo.json', 'w'), ensure_ascii=False, indent=1)
     json.dump(cierres, open(REG / 'cierres.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     out = {'actualizado': t.isoformat(timespec='minutes'), 'ligas': ligas, 'modelo': picks, 'cierres': cierres, 'resultados': resultados()}
     json.dump(out, open(DATOS / 'registro.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-    print(f'  registro: {nuevos} picks nuevos del modelo, {len(picks)} en total ({reemplazados} reemplazados por otro del mismo partido)')
+    print(f'  registro: {nuevos} picks nuevos del modelo, {len(picks)} en total ({reemplazados} reemplazados por otro del mismo partido, {retirados} que dejaron de ser PICK antes del partido)')
 
 
 if __name__ == '__main__':
