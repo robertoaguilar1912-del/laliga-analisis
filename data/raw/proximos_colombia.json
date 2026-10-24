@@ -5,7 +5,7 @@
   "estadio": "La Independencia",
   "local_espn": "Boyacá Chicó FC",
   "visita_espn": "Atlético Bucaramanga",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Junior": [
+    [
+     "241476",
+     "Mauro Silveira",
+     "G"
+    ],
+    [
+     "378906",
+     "Daniel Rivera",
+     "CD-L"
+    ],
+    [
+     "295070",
+     "Jermein Peña",
+     "CD-R"
+    ],
+    [
+     "224023",
+     "Jeison Suárez",
+     "LB"
+    ],
+    [
+     "419303",
+     "Daniel Socarras",
+     "RB"
+    ],
+    [
+     "172354",
+     "Guillermo Celis",
+     "CM-L"
+    ],
+    [
+     "266584",
+     "Fabián Ángel",
+     "CM-R"
+    ],
+    [
+     "197425",
+     "Yimmi Chará",
+     "LM"
+    ],
+    [
+     "267706",
+     "Cristian Barrios",
+     "RM"
+    ],
+    [
+     "151510",
+     "Luis Muriel",
+     "CF-L"
+    ],
+    [
+     "266579",
+     "Deiber Caicedo",
+     "CF-R"
+    ]
+   ],
+   "Águilas Doradas": [
+    [
+     "216564",
+     "Jorge Soto",
+     "G"
+    ],
+    [
+     "252624",
+     "Sebastián Rodríguez",
+     "CD-L"
+    ],
+    [
+     "148264",
+     "Andres Mosquera",
+     "CD-R"
+    ],
+    [
+     "381438",
+     "Javier Mena",
+     "LB"
+    ],
+    [
+     "327120",
+     "Dylan Lozano",
+     "RB"
+    ],
+    [
+     "197551",
+     "Andrés Ricaurte",
+     "AM"
+    ],
+    [
+     "234941",
+     "Iván Rojas",
+     "LM"
+    ],
+    [
+     "181800",
+     "Frank Lozano",
+     "RM"
+    ],
+    [
+     "327119",
+     "Antony Vásquez",
+     "F"
+    ],
+    [
+     "195525",
+     "Matías Ramírez",
+     "AM-L"
+    ],
+    [
+     "147014",
+     "Nicolás Lara",
+     "AM-R"
     ]
    ]
   }
@@ -682,6 +798,28 @@
   "estadio": "Estadio Alfonso López",
   "local_espn": "Atlético Bucaramanga",
   "visita_espn": "Atlético Nacional",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877912",
+  "utc": "2026-11-03T23:00Z",
+  "estadio": "",
+  "local_espn": "Deportivo Pereira",
+  "visita_espn": "Deportes Tolima",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877910",
+  "utc": "2026-11-04T01:10Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Millonarios",
+  "visita_espn": "América de Cali",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,

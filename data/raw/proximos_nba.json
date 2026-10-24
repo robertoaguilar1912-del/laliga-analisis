@@ -154,10 +154,10 @@
   "visita": "DET",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Miami Heat",
   "visita_espn": "Detroit Pistons",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -171,30 +171,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    105,
-    -125
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    1.5,
-    -105,
-    -1.5,
-    -115
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    235.5,
-    -105,
-    -115
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909096",
@@ -209,7 +186,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Houston Rockets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Moody Center",
   "records": {
    "home": [
@@ -224,7 +201,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -185,
     154
@@ -261,7 +238,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Utah Jazz",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -276,7 +253,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -112,
     -108
@@ -313,7 +290,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Golden State Warriors",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Chase Center",
   "records": {
    "home": [
@@ -328,20 +305,20 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -162,
-    136
+    -155,
+    130
    ],
    "ml_abre": [
     -155,
     130
    ],
    "spread": [
-    -3.5,
-    -115,
-    3.5,
-    -105
+    -4.5,
+    -105,
+    4.5,
+    -115
    ],
    "spread_abre": -3.5,
    "total": [
@@ -365,7 +342,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "LA Clippers",
-  "revisado": false,
+  "revisado": true,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -380,7 +357,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -360,
     285
@@ -417,7 +394,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -432,7 +409,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     360,
     -470
@@ -1992,7 +1969,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
