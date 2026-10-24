@@ -1,8 +1,8 @@
 {
 "401880205": {
 "fotmob": 5836889,
-"visto": "2026-10-24T10:28+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T10:59+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -33,7 +33,7 @@
 "importante": false
 }
 ],
-"valor_xi": 18697045.0,
+"valor_xi": 16809866.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -55,7 +55,7 @@
 "duda": false,
 "valor": 4273041.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ali Ahmed",
@@ -64,7 +64,7 @@
 "duda": false,
 "valor": 4234227.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mirko Topić",
@@ -72,15 +72,6 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 2882420.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Kenny McLean",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 738711.0,
 "titular": false,
 "importante": false
 },
@@ -94,17 +85,35 @@
 "importante": false
 }
 ],
-"valor_xi": 48184780.0,
-"perdida": 0.09498075948463394,
+"valor_xi": 45690166.0,
+"perdida": 0.28636129271230926,
 "perdida_duda": 0.0
 }
 },
 "401880203": {
 "fotmob": 5836891,
-"visto": "2026-10-24T10:28+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T10:59+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
+{
+"nombre": "Josh Murphy",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1254759.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Colby Bishop",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1172595.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Luke Brooke-Smith",
 "tipo": "Lesión",
@@ -142,38 +151,11 @@
 "importante": false
 },
 {
-"nombre": "Josh Murphy",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1254759.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Colby Bishop",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1172595.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Benjamin Arthur",
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
 "valor": 1041589.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Franco Umeh-Chibueze",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 775404.0,
 "titular": false,
 "importante": false
 },
@@ -196,9 +178,9 @@
 "importante": false
 }
 ],
-"valor_xi": 20734839.0,
+"valor_xi": 17854258.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.13595378760629537
 },
 "visita": {
 "faltan": [
@@ -208,15 +190,6 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 4917660.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Mihailo Ivanović",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 10260628.0,
 "titular": false,
 "importante": true
 },
@@ -253,8 +226,8 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 1069739.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Lukas Bornhøft Jensen",
@@ -266,23 +239,23 @@
 "importante": false
 }
 ],
-"valor_xi": 22225868.0,
-"perdida": 0.2212584003468391,
-"perdida_duda": 0.964252239777542
+"valor_xi": 22599889.0,
+"perdida": 0.2175966439481185,
+"perdida_duda": 0.44694803589522053
 }
 },
 "401880200": {
 "fotmob": 5836894,
-"visto": "2026-10-24T10:28+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T10:59+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
-"nombre": "Femi Seriki",
+"nombre": "Jamie Shackleton",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2387994.0,
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 603550.0,
 "titular": false,
 "importante": false
 },
@@ -296,7 +269,7 @@
 "importante": false
 }
 ],
-"valor_xi": 66236254.0,
+"valor_xi": 61056422.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -308,15 +281,6 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 11179393.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Max Johnston",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 3703972.0,
 "titular": false,
 "importante": true
 },
@@ -339,29 +303,11 @@
 "importante": true
 },
 {
-"nombre": "Lewis Travis",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1306495.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Matthew Clarke",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 1606924.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Jacob Widell Zetterström",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 1487348.0,
 "titular": false,
 "importante": false
 },
@@ -391,11 +337,20 @@
 "valor": 297725.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Lewis Travis",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1306495.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 22426173.0,
-"perdida": 0.9022779321286784,
-"perdida_duda": 0.05825759927919935
+"valor_xi": 25613699.0,
+"perdida": 0.6453839017941142,
+"perdida_duda": 0.0
 }
 },
 "401880208": {
