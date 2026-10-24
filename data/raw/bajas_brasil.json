@@ -1,8 +1,8 @@
 {
 "401841285": {
 "fotmob": 5103680,
-"visto": "2026-10-24T18:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T19:01+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -20,7 +20,7 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 5570238.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -29,7 +29,7 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 3938471.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -38,24 +38,6 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 2282692.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Gabriel Mercado",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de octubre",
-"duda": false,
-"valor": 466234.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Anthoni",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 3404359.0,
 "titular": false,
 "importante": true
 },
@@ -66,7 +48,7 @@
 "duda": false,
 "valor": 2158954.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sergio Rochet",
@@ -78,6 +60,15 @@
 "importante": false
 },
 {
+"nombre": "Gabriel Mercado",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 466234.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Benjamin Arhin",
 "tipo": "Lesión",
 "regreso": "finales de octubre",
@@ -85,47 +76,29 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Guillermo Maripán",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1634657.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Alan Patrick",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1505846.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 36275899.0,
-"perdida": 0.5091491461038636,
-"perdida_duda": 0.0938463027477279
+"valor_xi": 28265036.0,
+"perdida": 0.7133393709457861,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Arthur Chaves",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 5207706.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Jordan Barrera",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 4667811.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Arthur Chaves",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5207706.0,
 "titular": false,
 "importante": true
 },
@@ -146,26 +119,17 @@
 "valor": 769315.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Edenílson",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 350551.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 77051719.0,
-"perdida": 0.060580231831038056,
-"perdida_duda": 0.06758714883440822
+"valor_xi": 86754458.0,
+"perdida": 0.11383296291240734,
+"perdida_duda": 0.0
 }
 },
 "401841284": {
 "fotmob": 5103678,
-"visto": "2026-10-24T18:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T19:01+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -178,15 +142,6 @@
 "importante": true
 },
 {
-"nombre": "José Aldo",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1175654.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "André Luís",
 "tipo": "Sanción",
 "regreso": "hasta el 24 de octubre",
@@ -194,14 +149,32 @@
 "valor": 809679.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "José Aldo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1175654.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 11531486.0,
-"perdida": 0.17432679534970602,
-"perdida_duda": 0.1019516478622096
+"valor_xi": 12293809.0,
+"perdida": 0.16351701901339122,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Artur",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 8260068.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Domingos Duarte",
 "tipo": "Lesión",
@@ -209,7 +182,7 @@
 "duda": false,
 "valor": 1278051.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Aurélio Buta",
@@ -218,7 +191,7 @@
 "duda": false,
 "valor": 1151258.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Danielzinho",
@@ -226,6 +199,15 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 1084466.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jonathan Calleri",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1045298.0,
 "titular": false,
 "importante": false
 },
@@ -239,15 +221,15 @@
 "importante": false
 }
 ],
-"valor_xi": 45822097.0,
-"perdida": 0.0,
+"valor_xi": 37198777.0,
+"perdida": 0.28735829137608476,
 "perdida_duda": 0.0
 }
 },
 "401841280": {
 "fotmob": 5103682,
-"visto": "2026-10-24T18:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T19:01+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -287,15 +269,6 @@
 "importante": true
 },
 {
-"nombre": "Renê",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de octubre",
-"duda": false,
-"valor": 0.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Gabriel Baralhas",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -323,6 +296,15 @@
 "importante": false
 },
 {
+"nombre": "Renê",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Dudu",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -332,9 +314,9 @@
 "importante": false
 }
 ],
-"valor_xi": 12458629.0,
-"perdida": 0.48441405551124445,
-"perdida_duda": 0.14969199259404867
+"valor_xi": 13324145.0,
+"perdida": 0.4529472622821202,
+"perdida_duda": 0.139968230606917
 },
 "visita": {
 "faltan": [
@@ -344,7 +326,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 5852445.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -384,14 +366,14 @@
 "importante": false
 }
 ],
-"valor_xi": 25482919.0,
-"perdida": 0.4603028405026912,
+"valor_xi": 25935117.0,
+"perdida": 0.4522771190891485,
 "perdida_duda": 0.0
 }
 },
 "401841283": {
 "fotmob": 5103677,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -509,7 +491,7 @@
 },
 "401841281": {
 "fotmob": 5103675,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T19:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

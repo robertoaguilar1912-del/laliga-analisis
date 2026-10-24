@@ -8,29 +8,7 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    140,
-    205,
-    225
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    145,
-    -195
-   ],
-   "spread": [
-    [
-     "-0.5",
-     125
-    ],
-    [
-     "+0.5",
-     -180
-    ]
-   ]
-  },
+  "momios": null,
   "alineaciones": {
    "Avaí": [
     [
@@ -160,23 +138,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    225,
-    175
+    130,
+    235,
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -125
+    -110,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     140
+     120
     ],
     [
      "+0.5",
-     -200
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Goianiense": [
+    [
+     "279349",
+     "Paulo Vítor",
+     "G"
+    ],
+    [
+     "302596",
+     "Adriano Martins",
+     "CD-L"
+    ],
+    [
+     "319660",
+     "Gebson",
+     "CD-R"
+    ],
+    [
+     "216107",
+     "Guilherme Almeida",
+     "LB"
+    ],
+    [
+     "294883",
+     "Warley",
+     "RB"
+    ],
+    [
+     "270193",
+     "Marrony",
+     "AM"
+    ],
+    [
+     "271302",
+     "José Domingo Moraes Neto",
+     "LM"
+    ],
+    [
+     "384200",
+     "Peixoto",
+     "RM"
+    ],
+    [
+     "288461",
+     "Gustavo Coutinho",
+     "F"
+    ],
+    [
+     "303568",
+     "Gustavo Maia",
+     "AM-L"
+    ],
+    [
+     "420775",
+     "Geovany Soares",
+     "AM-R"
+    ]
+   ],
+   "Novorizontino": [
+    [
+     "200677",
+     "Jordi",
+     "G"
+    ],
+    [
+     "169883",
+     "Eduardo Brock",
+     "CD-L"
+    ],
+    [
+     "357170",
+     "Carlinhos",
+     "CD-R"
+    ],
+    [
+     "357185",
+     "Patrick",
+     "LB"
+    ],
+    [
+     "169078",
+     "Mádson",
+     "RB"
+    ],
+    [
+     "314545",
+     "Rômulo Simão",
+     "AM"
+    ],
+    [
+     "269642",
+     "Luis",
+     "LM"
+    ],
+    [
+     "287791",
+     "Matheus Bianqui",
+     "RM"
+    ],
+    [
+     "145107",
+     "Carlão",
+     "F"
+    ],
+    [
+     "212417",
+     "Nicolas Careca",
+     "AM-L"
+    ],
+    [
+     "3093312",
+     "Francisco Reidiney Duarte Gomes",
+     "AM-R"
     ]
    ]
   }
@@ -193,9 +287,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
+    210,
     205,
-    205,
-    150
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +299,127 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -185
     ],
     [
      "-0.5",
-     140
+     130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "São Bernardo": [
+    [
+     "94304",
+     "Alex Alves",
+     "G"
+    ],
+    [
+     "318175",
+     "Luizão",
+     "D"
+    ],
+    [
+     "187396",
+     "Jemerson",
+     "D"
+    ],
+    [
+     "198808",
+     "Rodrigo Ferreira",
+     "D"
+    ],
+    [
+     "201618",
+     "Pará",
+     "D"
+    ],
+    [
+     "203880",
+     "Marcão Silva",
+     "D"
+    ],
+    [
+     "304844",
+     "Eduardo",
+     "M"
+    ],
+    [
+     "287045",
+     "Lucas Lima",
+     "M"
+    ],
+    [
+     "234713",
+     "Lucas Fernandes",
+     "M"
+    ],
+    [
+     "262873",
+     "Pedrinho",
+     "M"
+    ],
+    [
+     "304817",
+     "Fabrício Daniel",
+     "F"
+    ]
+   ],
+   "Vila Nova": [
+    [
+     "270363",
+     "João Pedro Vieira",
+     "SUB"
+    ],
+    [
+     "214192",
+     "Everton",
+     "SUB"
+    ],
+    [
+     "224674",
+     "Hayner",
+     "SUB"
+    ],
+    [
+     "285000",
+     "Higor Matheus Meritão",
+     "SUB"
+    ],
+    [
+     "198245",
+     "Jonathan Costa",
+     "SUB"
+    ],
+    [
+     "396038",
+     "Higor Luiz De Souza",
+     "SUB"
+    ],
+    [
+     "249846",
+     "Janderson",
+     "SUB"
+    ],
+    [
+     "186507",
+     "Helton Leite",
+     "SUB"
+    ],
+    [
+     "222200",
+     "André Luis",
+     "SUB"
+    ],
+    [
+     "131532",
+     "Marquinhos Gabriel",
+     "SUB"
+    ],
+    [
+     "204133",
+     "Douglas Mendes",
+     "SUB"
     ]
    ]
   }
