@@ -1,7 +1,7 @@
 {
 "401883128": {
 "fotmob": 5868508,
-"visto": "2026-10-24T12:34+00:00",
+"visto": "2026-10-24T13:28+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -92,8 +92,8 @@
 },
 "401883151": {
 "fotmob": 5868511,
-"visto": "2026-10-24T12:34+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T13:28+00:00",
+"xi": "simple",
 "local": {
 "faltan": [
 {
@@ -106,6 +106,15 @@
 "importante": true
 },
 {
+"nombre": "Marcos Leiva",
+"tipo": "Lesión",
+"regreso": "principios de febrero de 2027",
+"duda": false,
+"valor": 498186.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Miguel Atienza",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -113,20 +122,11 @@
 "valor": 1127828.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Marcos Leiva",
-"tipo": "Lesión",
-"regreso": "principios de febrero de 2027",
-"duda": false,
-"valor": 498186.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 17306703.0,
-"perdida": 0.24828628537740552,
-"perdida_duda": 0.0651671205081638
+"valor_xi": 10808039.0,
+"perdida": 0.44367003116846637,
+"perdida_duda": 0.1043508447739687
 },
 "visita": {
 "faltan": [
@@ -145,8 +145,8 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 1149130.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Jan Salas",
@@ -167,8 +167,8 @@
 "importante": false
 }
 ],
-"valor_xi": 25874343.0,
-"perdida": 0.1177971166263043,
+"valor_xi": 24725213.0,
+"perdida": 0.07679581971649749,
 "perdida_duda": 0.0
 }
 },
