@@ -9,10 +9,10 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Miami Heat",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Spectrum Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    136,
-    -162
-   ],
-   "ml_abre": [
-    124,
-    -148
-   ],
-   "spread": [
-    4.5,
-    -115,
-    -4.5,
-    -105
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    228.5,
-    -105,
-    -115
-   ],
-   "total_abre": 231.5
-  }
+  "momios": null
  },
  {
   "id": "401909854",
@@ -64,7 +41,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Brooklyn Nets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Rocket Arena",
   "records": {
    "home": [
@@ -79,7 +56,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -500,
     380
@@ -116,7 +93,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Milwaukee Bucks",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
@@ -131,20 +108,20 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -625,
-    455
+    -675,
+    490
    ],
    "ml_abre": [
     -625,
     455
    ],
    "spread": [
-    -12.5,
-    -108,
-    12.5,
-    -112
+    -13.5,
+    -105,
+    13.5,
+    -115
    ],
    "spread_abre": -12.5,
    "total": [
@@ -183,20 +160,20 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -130,
-    110
+    -125,
+    105
    ],
    "ml_abre": [
     -110,
     -110
    ],
    "spread": [
-    -2.5,
-    -108,
-    2.5,
-    -112
+    -1.5,
+    -115,
+    1.5,
+    -105
    ],
    "spread_abre": 1.5,
    "total": [
@@ -235,7 +212,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     600,
     -900
@@ -287,7 +264,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -108,
     -112
@@ -339,7 +316,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -485,
     370
@@ -391,7 +368,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -395,
     310
@@ -1719,7 +1696,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
