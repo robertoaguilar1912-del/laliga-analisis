@@ -5,7 +5,7 @@
   "estadio": "Estadio Beira-Rio",
   "local_espn": "Internacional",
   "visita_espn": "Botafogo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Municipal José Maria de Campos Maia",
   "local_espn": "Mirassol",
   "visita_espn": "São Paulo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -166,7 +166,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -130
    ],
    "spread": [
@@ -303,7 +303,7 @@
   "estadio": "Estadio Manoel Barradas",
   "local_espn": "Vitória",
   "visita_espn": "Athletico-PR",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -316,16 +316,16 @@
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -120
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     130
+     125
     ],
     [
      "+0.5",
-     -180
+     -175
     ]
    ]
   },

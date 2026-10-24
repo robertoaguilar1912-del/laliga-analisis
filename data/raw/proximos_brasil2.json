@@ -5,10 +5,32 @@
   "estadio": "Estádio da Ressacada",
   "local_espn": "Avaí",
   "visita_espn": "Botafogo-SP",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    200,
+    215
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    145,
+    -195
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -185
+    ]
+   ]
+  },
   "alineaciones": {
    "Avaí": [
     [
@@ -132,15 +154,15 @@
   "estadio": "Estádio Antônio Accioly",
   "local_espn": "Atlético Goianiense",
   "visita_espn": "Novorizontino",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    235,
-    210
+    120,
+    240,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -150,11 +172,11 @@
    "spread": [
     [
      "-0.5",
-     120
+     110
     ],
     [
      "+0.5",
-     -165
+     -150
     ]
    ]
   },
@@ -281,29 +303,29 @@
   "estadio": "Estádio Primeiro de Maio",
   "local_espn": "São Bernardo",
   "visita_espn": "Vila Nova",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    205,
-    145
+    225,
+    215,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
     130,
-    -175
+    -170
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -170
     ],
     [
      "-0.5",
-     130
+     120
     ]
    ]
   },
