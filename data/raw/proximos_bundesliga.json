@@ -1,154 +1,5 @@
 [
  {
-  "id": "401884757",
-  "utc": "2026-10-24T13:30Z",
-  "estadio": "MEWA ARENA",
-  "local_espn": "Mainz",
-  "visita_espn": "Werder Bremen",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-german-bundesliga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -135,
-    290,
-    300
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    120,
-    -155
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -135
-    ],
-    [
-     "+0.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Mainz": [
-    [
-     "375371",
-     "Kacper Potulski",
-     "SUB"
-    ],
-    [
-     "241297",
-     "Anthony Caci",
-     "SUB"
-    ],
-    [
-     "134103",
-     "Lee Jae-Sung",
-     "SUB"
-    ],
-    [
-     "210818",
-     "Nadiem Amiri",
-     "SUB"
-    ],
-    [
-     "195027",
-     "Sheraldo Becker",
-     "SUB"
-    ],
-    [
-     "357030",
-     "Kaishu Sano",
-     "SUB"
-    ],
-    [
-     "234376",
-     "Phillip Tietz",
-     "SUB"
-    ],
-    [
-     "154603",
-     "Danny da Costa",
-     "SUB"
-    ],
-    [
-     "156416",
-     "Alexander Schwolow",
-     "SUB"
-    ],
-    [
-     "238906",
-     "Stefan Posch",
-     "SUB"
-    ],
-    [
-     "239574",
-     "Phillipp Mwene",
-     "SUB"
-    ]
-   ],
-   "Werder Bremen": [
-    [
-     "282646",
-     "Karl Hein",
-     "G"
-    ],
-    [
-     "334374",
-     "Arthur",
-     "D"
-    ],
-    [
-     "275844",
-     "Amos Pieper",
-     "D"
-    ],
-    [
-     "282388",
-     "Olivier Deman",
-     "D"
-    ],
-    [
-     "232477",
-     "Marco Friedl",
-     "D"
-    ],
-    [
-     "297292",
-     "Youri Regeer",
-     "M"
-    ],
-    [
-     "371689",
-     "Chuki",
-     "M"
-    ],
-    [
-     "305853",
-     "Marco Grüll",
-     "M"
-    ],
-    [
-     "261363",
-     "Ludovit Reis",
-     "M"
-    ],
-    [
-     "159139",
-     "Mitchell Weiser",
-     "M"
-    ],
-    [
-     "170257",
-     "Niclas Füllkrug",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401884763",
   "utc": "2026-10-24T16:30Z",
   "estadio": "Signal Iduna Park",
@@ -160,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -215,
-    380,
-    425
+    -255,
+    400,
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-1.5",
-     115
+     -105
     ],
     [
      "+1.5",
-     -160
+     -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Borussia Dortmund": [
+    [
+     "238544",
+     "Gregor Kobel",
+     "G"
+    ],
+    [
+     "220714",
+     "Waldemar Anton",
+     "CD"
+    ],
+    [
+     "220703",
+     "Ramy Bensebaini",
+     "CD-L"
+    ],
+    [
+     "286828",
+     "Nico Schlotterbeck",
+     "CD-R"
+    ],
+    [
+     "281122",
+     "Felix Nmecha",
+     "CM-L"
+    ],
+    [
+     "173907",
+     "Marcel Sabitzer",
+     "CM-R"
+    ],
+    [
+     "310709",
+     "Daniel Svensson",
+     "LM"
+    ],
+    [
+     "222991",
+     "Julian Ryerson",
+     "RM"
+    ],
+    [
+     "186381",
+     "Serhou Guirassy",
+     "F"
+    ],
+    [
+     "240912",
+     "Joey Veerman",
+     "CF-L"
+    ],
+    [
+     "291629",
+     "Fábio Silva",
+     "CF-R"
+    ]
+   ],
+   "Eintracht Frankfurt": [
+    [
+     "321064",
+     "Noah Atubolu",
+     "G"
+    ],
+    [
+     "290141",
+     "Lilian Brassier",
+     "D"
+    ],
+    [
+     "372788",
+     "Elias Baum",
+     "D"
+    ],
+    [
+     "305556",
+     "Nnamdi Collins",
+     "D"
+    ],
+    [
+     "208285",
+     "Robin Koch",
+     "D"
+    ],
+    [
+     "219627",
+     "Ritsu Doan",
+     "M"
+    ],
+    [
+     "337306",
+     "Farès Chaïbi",
+     "M"
+    ],
+    [
+     "352179",
+     "Noël Aséko",
+     "M"
+    ],
+    [
+     "320882",
+     "Raphael Onyedika",
+     "M"
+    ],
+    [
+     "359793",
+     "Younes Ebnoutalib",
+     "F"
+    ],
+    [
+     "274887",
+     "Jonathan Burkardt",
+     "F"
     ]
    ]
   }
@@ -232,7 +199,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -155,
+    -150,
     120
    ],
    "spread": [
@@ -325,23 +292,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    295,
-    250
+    -115,
+    285,
+    240
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
+    115,
     -150
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -120
     ],
     [
      "+0.5",
-     -110
+     -120
     ]
    ]
   }
@@ -391,9 +358,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    270,
-    260,
-    -120
+    295,
+    265,
+    -130
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -403,11 +370,11 @@
    "spread": [
     [
      "+0.5",
-     -115
+     -105
     ],
     [
      "-0.5",
-     -125
+     -135
     ]
    ]
   }
