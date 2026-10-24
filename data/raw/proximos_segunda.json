@@ -5,7 +5,7 @@
   "estadio": "Estadi Montilivi",
   "local_espn": "Girona",
   "visita_espn": "RC Celta Fortuna",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -138,7 +138,7 @@
   "estadio": "Estadio Gran Canaria",
   "local_espn": "Las Palmas",
   "visita_espn": "Real Sociedad II",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -371,11 +371,11 @@
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -160
+     -165
     ]
    ]
   }
@@ -427,12 +427,12 @@
    "ml": [
     -200,
     340,
-    475
+    500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    105
+    -145,
+    110
    ],
    "spread": [
     [
@@ -441,7 +441,7 @@
     ],
     [
      "+1.5",
-     -195
+     -190
     ]
    ]
   }
