@@ -411,23 +411,19 @@ def etiqueta_temporada(liga, temporada):
     return t
 
 
-# Bajas de FotMob (fuentes.descargar_bajas). Un PICK a favor de un equipo pasa a REVISAR si le falta al menos esta parte del
-# valor de mercado de su once titular en jugadores importantes (los que están en duda cuentan la mitad): el modelo no sabe de
-# bajas y la casa sí. Con las bajas del 13 oct 2026, uno de cada tres equipos llegaba a 20% (la mitad tenía alguna baja de
-# 10% o más). Si FotMob no trae el once (pasa en Sudamérica y en algunas copas), cuenta cada titular habitual (según ESPN)
-# que falta como 12%. No cambia las probabilidades (eso falta probarlo con el pasado) y los REVISAR no cuentan en el
-# registro del modelo.
-UMBRAL_REVISAR = 0.20
+# Bajas de FotMob (fuentes.descargar_bajas). 'peso' de cada equipo: parte del valor de mercado de su once titular que falta en
+# jugadores importantes (los que están en duda cuentan la mitad). Si FotMob no trae el once (pasa en Sudamérica y en algunas
+# copas), cada titular habitual (según ESPN) que falta cuenta 12%.
+# Del 13 al 24 oct 2026 un PICK pasaba a REVISAR (y no contaba) si a su equipo le faltaba 20% o más. Desde el 24 oct las bajas
+# entran en la probabilidad con lo que de verdad pesan: en 450 partidos (13-24 oct, la última versión antes de empezar), el
+# mercado se apartaba del modelo en BAJAS_LOGIT·(peso del local − peso de la visita) en logit de "gana local" contra "gana
+# visita": 0.23 ± 0.06 (hasta el 18 oct 0.33, desde el 19 oct 0.16; Europa 0.25, América 0.19). Es poco: 30% más del once
+# fuera que el rival mueve ~1 punto de probabilidad de ganar (0.35 por cada 10%). Con los resultados (249 partidos sin empate)
+# el log loss mejora con 0.1-0.23 (0.5781 -> 0.5778) y empeora con 0.6. Los REVISAR habían ganado +2% (60 picks) contra −14%
+# del resto: la alerta no apartaba a los que salían peor. Las bajas largas (jugadores que no estaban en los últimos 5 partidos) movían al mercado lo mismo que las recientes
+# (0.25 ± 0.07 contra 0.20 ± 0.11): el modelo recuerda unos 4 meses, así que todavía no las ve del todo (scratchpad bajas5/).
+BAJAS_LOGIT = 0.20
 PESO_TITULAR = 0.12
-
-
-def _lado_de(k):
-    """A qué equipo respalda un mercado con momio: '1' y hándicap del local -> 'local'; '2' y el de la visita -> 'visita'."""
-    if k == '1' or k.startswith('H1:'):
-        return 'local'
-    if k == '2' or k.startswith('H2:'):
-        return 'visita'
-    return None
 
 
 def _mismo_jugador(a, b):
@@ -442,7 +438,7 @@ def _mismo_jugador(a, b):
 
 
 def _lado_bajas(B, habituales):
-    """Bajas de un equipo para la página, con 'peso': parte del once que falta (ver UMBRAL_REVISAR)."""
+    """Bajas de un equipo para la página, con 'peso': parte del once que falta (ver BAJAS_LOGIT)."""
     faltan = [{'nombre': f['nombre'], 'tipo': f['tipo'], 'regreso': f['regreso'], 'duda': f['duda'], 'importante': f['importante'],
                'titular': f['titular'], 'mv': round(f['valor'] / 1e6, 1)} for f in B['faltan']]
     if B.get('valor_xi'):
@@ -454,8 +450,93 @@ def _lado_bajas(B, habituales):
     return {'faltan': faltan, 'peso': round(min(peso, 1.0), 3), 'base': base}
 
 
+def _inclinar(M, th):
+    """Pasa probabilidad entre marcadores con el mismo total de goles (más al local si th > 0): cambia quién gana, no
+    cuántos goles hay."""
+    i, j = np.indices(M.shape)
+    W, s, out = M * np.exp(th * (i - j)), i + j, np.zeros_like(M)
+    for t in range(s.max() + 1):
+        k = s == t
+        z = W[k].sum()
+        if z > 0:
+            out[k] = W[k] * M[k].sum() / z
+    return out
+
+
+def _log_lv(M):
+    i, j = np.indices(M.shape)
+    return float(np.log(max(M[i > j].sum(), 1e-12) / max(M[i < j].sum(), 1e-12)))
+
+
+def ajustar_bajas(p):
+    """Mete las bajas en la probabilidad (ver BAJAS_LOGIT): inclina el marcador para que "gana local" contra "gana visita" se
+    mueva BAJAS_LOGIT·(peso local − peso visita) en logit, y rehace los mercados de resultado y hándicap con su momio, los de
+    resultado sin momio, el pago anticipado, la gráfica de diferencia de goles y la distribución que usa la calculadora. Los de
+    goles no cambian. Cada mercado que cambió lleva 'bajas_pp' (lo que movió) y 'p_sin_bajas'."""
+    B, d = p.get('bajas'), p.get('dist') or {}
+    if not B or not d.get('goles'):
+        return
+    neto = B['local']['peso'] - B['visita']['peso']
+    if abs(neto) < 0.005:
+        return
+    M0 = np.array(d['goles'], dtype=float)
+    M0 /= M0.sum()
+    obj, a, b = _log_lv(M0) - BAJAS_LOGIT * neto, -3.0, 3.0
+    for _ in range(50):
+        th = (a + b) / 2
+        a, b = (th, b) if _log_lv(_inclinar(M0, th)) < obj else (a, th)
+    M1 = _inclinar(M0, (a + b) / 2)
+    gi = np.arange(M0.shape[0])
+    dif = (gi[:, None] - gi[None, :]).ravel()
+    resultado = lambda M: dict(zip(('1', 'X', '2'), (M.ravel()[dif > 0].sum(), M.ravel()[dif == 0].sum(), M.ravel()[dif < 0].sum())))
+    r0, r1 = resultado(M0), resultado(M1)
+    dr = {k: float(r1[k] - r0[k]) for k in r0}
+    dr.update({'1X': dr['1'] + dr['X'], 'X2': dr['2'] + dr['X'], '12': dr['1'] + dr['2'],
+               'A1': float(M0[0, :].sum() - M1[0, :].sum()), 'A2': float(M0[:, 0].sum() - M1[:, 0].sum()),
+               'CS1': float(M1[:, 0].sum() - M0[:, 0].sum()), 'CS2': float(M1[0, :].sum() - M0[0, :].sum())})
+    for k, c in (('pH', '1'), ('pD', 'X'), ('pA', '2')):
+        p[k] = float(p[k] + dr[c])
+    dnb = {'DNB1': p['pH'] / (p['pH'] + p['pA']), 'DNB2': p['pA'] / (p['pH'] + p['pA'])}
+    for r in p['con_momio']:
+        tipo, _, ln = r['k'].partition(':')
+        if tipo in ('1', 'X', '2'):
+            W, Lo = r['p'] + dr[tipo], 1 - r['p'] - dr[tipo]
+        elif tipo in ('H1', 'H2'):
+            signo = 1 if tipo == 'H1' else -1
+            g0, g1 = gana_pierde(dif, M0.ravel(), float(ln), signo), gana_pierde(dif, M1.ravel(), float(ln), signo)
+            em = r.get('empate', 0.0)
+            W0 = r['p'] * (1 - em)
+            W, Lo = W0 + g1[0] - g0[0], (1 - em - W0) + g1[1] - g0[1]
+        else:
+            continue
+        dec = float(r['momio'])
+        pc = W / (W + Lo)
+        r.update({'p_sin_bajas': r['p'], 'bajas_pp': pc - r['p'], 'p': pc, 'justo': fair_dec(pc), 'ev': W * (dec - 1) - Lo})
+        r['veredicto'] = veredicto(r['ev'], pc)
+        if W + Lo < 0.9995:
+            r['empate'] = 1 - W - Lo
+    for r in p['sin_momio']:
+        if r['k'] in dr or r['k'] in dnb:
+            nuevo = dnb[r['k']] if r['k'] in dnb else r['p'] + dr[r['k']]
+            r.update({'p_sin_bajas': r['p'], 'bajas_pp': nuevo - r['p'], 'p': float(nuevo), 'justo': fair_dec(float(nuevo))})
+    if p.get('pa'):
+        pa0, pa1 = pago_anticipado(M0), pago_anticipado(M1)
+        p['pa'] = [float(x + y1 - y0) for x, y0, y1 in zip(p['pa'], pa0, pa1)]
+    if p.get('margen'):
+        dc = np.clip(dif, -4, 4)
+        for x in p['margen']:
+            x['p'] = float(x['p'] + M1.ravel()[dc == x['m']].sum() - M0.ravel()[dc == x['m']].sum())
+    d['goles'] = [[round(float(x), 5) for x in fila] for fila in M1]
+    p['bajas_ajuste'] = {'neto': round(neto, 3), 'local': round(dr['1'], 4), 'visita': round(dr['2'], 4)}
+    quien = [(p['local_es'], dr['1']), (p['visita_es'], dr['2'])]
+    eq, dv = min(quien, key=lambda x: x[1])
+    if dv <= -0.005:
+        p['texto'] = (p.get('texto') or '') + (f" Con las bajas (FotMob) el modelo le quita {abs(dv) * 100:.1f} puntos a {eq}"
+                                               f" ({'local' if eq == p['local_es'] else 'visita'} {p['pH']:.0%} / empate {p['pD']:.0%} / visita {p['pA']:.0%}).")
+
+
 def aplicar_bajas(partidos, bajas, equipos):
-    """Pone las bajas de FotMob en cada partido y en cada equipo (las de su próximo partido) y marca REVISAR."""
+    """Pone las bajas de FotMob en cada partido y en cada equipo (las de su próximo partido) y las mete en la probabilidad."""
     vistos = set()
     for p in sorted(partidos, key=lambda x: x['utc']):
         b = bajas.get(str(p['id']))
@@ -463,16 +544,7 @@ def aplicar_bajas(partidos, bajas, equipos):
             continue
         p['bajas'] = {lado: _lado_bajas(b[lado], (equipos.get(t) or {}).get('habituales') or [])
                       for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd']))}
-        for r in p['con_momio']:
-            lado = _lado_de(r['k'])
-            if r['veredicto'] != 'PICK' or not lado:
-                continue
-            B = p['bajas'][lado]
-            if B['peso'] >= UMBRAL_REVISAR:
-                imp = [f['nombre'] + (' (en duda)' if f['duda'] else '') for f in B['faltan'] if f['importante']]
-                r['veredicto'] = 'REVISAR'
-                r['revisar'] = (f"Le falta{'n' if len(imp) > 1 else ''} {', '.join(imp[:3])}" + (f' y {len(imp) - 3} más' if len(imp) > 3 else '')
-                                + (f" ({B['peso']:.0%} del valor de su once titular)" if B['base'] == 'valor' else ' (titulares habituales)'))
+        ajustar_bajas(p)
         for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd'])):
             if t in equipos and t not in vistos:
                 vistos.add(t)

@@ -2,8 +2,10 @@
 Registro de picks.
 
 - data/registro/modelo.json: cada PICK que marcó el modelo (EV de +5% o más contra el momio de la casa),
-  guardado la primera vez que apareció, con la probabilidad, el momio y el EV de ese momento. Los REVISAR (PICK de un
-  equipo con bajas importantes, desde el 13 oct 2026) llevan 'revisar' y la página no los cuenta como PICK.
+  guardado la primera vez que apareció, con la probabilidad, el momio y el EV de ese momento. Los REVISAR llevan
+  'revisar' y la página no los cuenta como PICK (fútbol, del 13 al 24 oct 2026: PICK de un equipo con 20% o más de su once
+  fuera; desde el 24 oct las bajas entran en la probabilidad y ya no hay REVISAR; NBA: ⏰ con una estrella en duda). Si
+  antes del partido un REVISAR pasa a PICK (o al revés), el registro sigue a lo último que marcó la página.
   Un solo PICK por partido en cada familia de mercados (ver picks.py): si antes de empezar el PICK cambia (otra línea u
   otro lado), cuenta el último que marcó la página ('ultimo' = la última vez que se vio como PICK); los anteriores quedan
   guardados con 'reemplazado' y la página no los suma (desde el 18 oct 2026; antes se sumaban todos y un solo resultado
@@ -193,6 +195,10 @@ def actualizar():
                     for x in picks:            # sigue siendo PICK: se anota la última vez que se vio
                         if x['id'] == m['id'] and EQUIVALENTE.get(x['k'], x['k']) == clave:
                             x['ultimo'] = t.isoformat(timespec='minutes')
+                            if r['veredicto'] == 'PICK':
+                                x.pop('revisar', None)
+                            elif not x.get('revisar'):
+                                x['revisar'] = r.get('revisar') or 'bajas'
                             if r.get('temprano') is not None and x.get('temprano') is None:
                                 x['temprano'] = r['temprano']
                     continue

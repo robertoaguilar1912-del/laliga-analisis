@@ -167,6 +167,7 @@ button { font: inherit; color: inherit; }
 .pill.REVISAR::before { background: var(--crit); }
 .flag.imp { border-color: var(--crit); }
 .far { font-family: var(--font-data); font-size: 10.5px; color: var(--ink); background: color-mix(in srgb, var(--crit) 14%, var(--surface)); border: 1px solid color-mix(in srgb, var(--crit) 45%, var(--surface)); border-radius: 5px; padding: 1px 6px; margin-left: 6px; white-space: nowrap; }
+.bj { font-family: var(--font-data); font-size: 10.5px; color: var(--ink-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; margin-left: 6px; white-space: nowrap; }
 
 /* Comparación de estadísticas */
 .toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--surface); justify-self: start; }
@@ -589,7 +590,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     : PRINCIPAL.roi < 0
       ? `En la prueba con temporadas pasadas de ${I.nombre}, seguirlos perdió dinero (${spct(PRINCIPAL.roi)}; pestaña "El modelo"). Úsalos como información y compara siempre con el momio de tu casa.`
       : `En la prueba con temporadas pasadas de ${I.nombre} salió ${spct(PRINCIPAL.roi)}, ${PRINCIPAL.roi_ic95 && PRINCIPAL.roi_ic95[0] < 0 ? 'pero el rango probable incluye perder: puede ser suerte' : 'aunque lo pasado no garantiza lo que viene'} (pestaña "El modelo"). Compara siempre con el momio de tu casa.`);
-  if (M.some(m => m.bajas)) $('#p-warning').textContent += ' REVISAR: el modelo ve valor en un equipo al que le faltan jugadores importantes (lesión o sanción); el modelo no lo sabe y la casa sí. No cuenta como PICK.';
+  if (M.some(m => m.bajas)) $('#p-warning').textContent += ' Las bajas (FotMob) ya están en la probabilidad del modelo, con lo que el mercado suele moverse por ellas.';
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
   // ---------------- navegación
@@ -808,7 +809,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const el = $('#match-detail'); el.hidden = false;
     const cell = (v, color) => `<div class="cellbar"><span class="v">${pct(v)}</span><span class="track"><span class="fill" style="width:${(v * 100).toFixed(1)}%;background:${color}"></span></span></div>`;
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
-    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}${r.revisar ? `<span class="far" title="${esc(r.revisar)}">Bajas importantes</span>` : ''}${r.otro_pick ? `<span class="far" title="Depende del mismo resultado que ${esc(r.otro_pick)}: solo cuenta como PICK el que el modelo ve más probable">Ya hay PICK: ${esc(r.otro_pick)}</span>` : ''}${r.regla ? `<span class="far" title="${esc(REGLA_TXT[r.regla])}">${r.regla === 'gana' ? 'Momio alto: sin PICK' : 'Inicio de temporada: sin PICK'}</span>` : ''}</span>
+    const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}${r.revisar ? `<span class="far" title="${esc(r.revisar)}">Bajas importantes</span>` : ''}${r.bajas_pp != null && Math.abs(r.bajas_pp) >= 0.005 ? `<span class="bj" title="Las bajas de FotMob ya están en la probabilidad: sin ellas el modelo le daba ${pct(r.p_sin_bajas, 1)}">bajas ${r.bajas_pp > 0 ? '+' : '−'}${Math.abs(r.bajas_pp * 100).toFixed(1)} pts</span>` : ''}${r.otro_pick ? `<span class="far" title="Depende del mismo resultado que ${esc(r.otro_pick)}: solo cuenta como PICK el que el modelo ve más probable">Ya hay PICK: ${esc(r.otro_pick)}</span>` : ''}${r.regla ? `<span class="far" title="${esc(REGLA_TXT[r.regla])}">${r.regla === 'gana' ? 'Momio alto: sin PICK' : 'Inicio de temporada: sin PICK'}</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
         <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
     const conLinea = tiposDe(m);
@@ -926,7 +927,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       </div>
 
       <div class="pane" data-pane="2" hidden>
-        <p class="note">${D.fuente_lesiones === 'FotMob' ? 'Lesionados y sancionados: FotMob (lista no oficial; se revisa cada día y cerca del partido). "Importante": titular en el último partido o con valor de mercado de titular. Si a un equipo le falta 20% o más del valor de su once titular, los PICK a su favor salen como REVISAR.' : D.con_lesiones ? 'El parte oficial de lesiones viene de API-Football.' : 'Esta liga no tiene lista de lesionados.'} Además se estiman bajas así: sancionado si vio roja${I.liga === 'laliga' ? ' o llegó a 5 amarillas' : ''} en el último partido; "no convocado" si es titular habitual y no estuvo en la lista del último partido (suele ser lesión o descarte). Confírmalo antes de apostar.</p>
+        <p class="note">${D.fuente_lesiones === 'FotMob' ? 'Lesionados y sancionados: FotMob (lista no oficial; se revisa cada día y cerca del partido). "Importante": titular en el último partido o con valor de mercado de titular. El modelo ya cuenta estas bajas: por cada 10% del valor del once que le falta a un equipo más que a su rival, le quita unos 0.35 puntos de probabilidad de ganar (lo que se movía el mercado en 450 partidos). Hasta el 24 oct 2026, con 20% o más fuera, los PICK a su favor salían como REVISAR.' : D.con_lesiones ? 'El parte oficial de lesiones viene de API-Football.' : 'Esta liga no tiene lista de lesionados.'} Además se estiman bajas así: sancionado si vio roja${I.liga === 'laliga' ? ' o llegó a 5 amarillas' : ''} en el último partido; "no convocado" si es titular habitual y no estuvo en la lista del último partido (suele ser lesión o descarte). Confírmalo antes de apostar.</p>
         <div class="grid2">
           ${[[th, m.local_es, 'var(--home)', 'local'], [ta, m.visita_es, 'var(--away)', 'visita']].map(([t, n, c, lado]) => `<div class="card">
             <h3 style="color:${c}">${esc(n)}</h3>
@@ -1005,14 +1006,21 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       return c && { n: nombreLinea(m, tipo, L), k: `${tipo}:${fmtLinea(tipo, L)}`, W: c.W, Lo: c.Lo };
     };
     const ponerLinea = () => { const v = sel.value; lin.disabled = v[0] === 'f'; lin.value = v[0] === 'f' ? '' : lineaPorDefecto(m, v.slice(1)); };
-    // bajas del equipo que respalda la apuesta (FotMob): aviso y, si es un PICK con 20% o más del once fuera, REVISAR
+    // bajas del equipo que respalda la apuesta (FotMob): desde el 24 oct 2026 ya están en la probabilidad (m.bajas_ajuste);
+    // antes un PICK con 20% o más del once fuera salía como REVISAR, y esos picks ganaban más que el resto
     const ladoK = k => (k === '1' || k === '1X' || k === 'DNB1' || /^H1:/.test(k)) ? 'local' : (k === '2' || k === 'X2' || k === 'DNB2' || /^H2:/.test(k)) ? 'visita' : null;
     const bajasK = k => { const l = ladoK(k); return l && m.bajas ? m.bajas[l] : null; };
-    const vB = (v, k) => v === 'PICK' && bajasK(k) && bajasK(k).peso >= 0.2 ? 'REVISAR' : v;
+    const vB = v => v;
     const avisoBajas = k => {
-      const B = bajasK(k), imp = B ? B.faltan.filter(f => f.importante) : [];
-      if (!imp.length) return '';
-      return `<br><b>Ojo: a ${esc(ladoK(k) === 'local' ? m.local_es : m.visita_es)} le falta${imp.length > 1 ? 'n' : ''} ${esc(imp.slice(0, 3).map(f => f.nombre + (f.duda ? ' (en duda)' : '')).join(', '))}${imp.length > 3 ? ` y ${imp.length - 3} más` : ''}.</b> El modelo no lo sabe y la casa sí${B.peso >= 0.2 ? '; por eso aquí un PICK sale como REVISAR' : ''}. El precio del mercado ya incluye las bajas: si el mercado también ve valor, ese valor no viene de la baja.`;
+      const l = ladoK(k), B = bajasK(k), imp = B ? B.faltan.filter(f => f.importante) : [];
+      if (!l || !m.bajas) return '';
+      const otro = l === 'local' ? 'visita' : 'local', Bo = m.bajas[otro], impO = Bo ? Bo.faltan.filter(f => f.importante) : [];
+      const lista = xs => esc(xs.slice(0, 3).map(f => f.nombre + (f.duda ? ' (en duda)' : '')).join(', ')) + (xs.length > 3 ? ` y ${xs.length - 3} más` : '');
+      const eq = l === 'local' ? m.local_es : m.visita_es, eqO = l === 'local' ? m.visita_es : m.local_es;
+      if (!imp.length && !impO.length) return '';
+      const aj = m.bajas_ajuste, mov = aj ? aj[l] * 100 : 0;
+      const partes = [imp.length ? `a ${esc(eq)} le falta${imp.length > 1 ? 'n' : ''} ${lista(imp)}` : '', impO.length ? `a ${esc(eqO)} le falta${impO.length > 1 ? 'n' : ''} ${lista(impO)}` : ''].filter(Boolean);
+      return `<br>Bajas (FotMob): ${partes.join('; ')}. ${Math.abs(mov) >= 0.05 ? `<b>El modelo ya las cuenta: le ${mov < 0 ? 'quitan' : 'suman'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya las cuenta; se compensan entre los dos equipos'}, lo que el mercado suele moverse por bajas así (30% más del once fuera que el rival ≈ 1 punto).`;
     };
     const calc = () => {
       const o = elegido();
@@ -1541,7 +1549,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         ${(() => { const sub = lista.filter(x => x.bet.p >= 0.30), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
           return sub.length < lista.length ? `<p class="note">Solo los que el modelo daba en 30% o más (la regla de PICK desde el 10 oct 2026; los de antes se guardaron con la regla vieja): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
         ${revs.length ? (() => { const fin = revs.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
-          return `<p class="note">Aparte, no cuentan arriba: ${num(revs.length)} PICK marcados REVISAR porque al equipo le faltaban jugadores importantes (desde el 13 oct 2026)${fin.length ? `; si los hubieras seguido: <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b> en ${num(fin.length)} liquidados` : ', ninguno liquidado todavía'}. Si con el tiempo salen peor que los PICK, la regla sirve.</p>`; })() : ''}
+          return `<p class="note">Aparte, no cuentan arriba: ${num(revs.length)} PICK marcados REVISAR porque al equipo le faltaban jugadores importantes (fútbol, del 13 al 24 oct 2026; NBA: ⏰ con una estrella en duda)${fin.length ? `; si los hubieras seguido: <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b> en ${num(fin.length)} liquidados` : ', ninguno liquidado todavía'}.</p>`; })() : ''}
         ${(() => { // PICK temprano (total NBA): resultado y cuántos puntos se movió la línea a favor hasta el cierre
           const sub = lista.filter(x => x.bet.temprano != null); if (!sub.length) return '';
           const fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
