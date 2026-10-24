@@ -5,7 +5,7 @@
   "estadio": "Emirates Stadium",
   "local_espn": "Arsenal",
   "visita_espn": "Everton",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Coventry Building Society Arena",
   "local_espn": "Coventry City",
   "visita_espn": "Fulham",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -313,19 +313,19 @@
     285,
     285
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    140
+    140,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   }

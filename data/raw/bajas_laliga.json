@@ -1,7 +1,7 @@
 {
 "401882831": {
 "fotmob": 5868106,
-"visto": "2026-10-24T14:58+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -47,7 +47,7 @@
 },
 "401882827": {
 "fotmob": 5868110,
-"visto": "2026-10-24T14:58+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -138,7 +138,7 @@
 },
 "401882834": {
 "fotmob": 5868103,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -170,8 +170,8 @@
 "importante": false
 }
 ],
-"valor_xi": 433140041.0,
-"perdida": 0.1311060248987694,
+"valor_xi": 444576486.0,
+"perdida": 0.1277334064852004,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -229,7 +229,7 @@
 },
 "401882835": {
 "fotmob": 5868102,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -329,7 +329,7 @@
 },
 "401882833": {
 "fotmob": 5868104,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -395,6 +395,15 @@
 "importante": true
 },
 {
+"nombre": "Júnior Firpo",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 2286887.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Héctor Bellerín",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -411,15 +420,6 @@
 "valor": 7640513.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Júnior Firpo",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 2286887.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 165856057.0,
@@ -429,7 +429,7 @@
 },
 "401882829": {
 "fotmob": 5868108,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -502,7 +502,7 @@
 },
 "401882832": {
 "fotmob": 5868105,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -602,7 +602,7 @@
 },
 "401882828": {
 "fotmob": 5868109,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -636,7 +636,7 @@
 {
 "nombre": "Jon Guridi",
 "tipo": "Lesión",
-"regreso": "ya entrena",
+"regreso": "en duda",
 "duda": true,
 "valor": 1405489.0,
 "titular": false,
@@ -684,7 +684,7 @@
 },
 "401882817": {
 "fotmob": 5868120,
-"visto": "2026-10-24T11:27+00:00",
+"visto": "2026-10-24T15:04+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -737,6 +737,70 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 3544832.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882820": {
+"fotmob": 5868117,
+"visto": "2026-10-24T15:04+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Enzo Bardeli",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 6504234.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adrián De La Fuente",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2355976.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Cristian Romero",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 56787269.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Johnny Cardoso",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 22183754.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Koke",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 2769886.0,
 "titular": false,
 "importante": false
 }
