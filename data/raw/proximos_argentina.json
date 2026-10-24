@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841631",
-  "utc": "2026-10-24T20:00Z",
-  "estadio": "Mario Alberto Kempes",
-  "local_espn": "Talleres (Córdoba)",
-  "visita_espn": "Defensa y Justicia",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    135,
-    225,
-    205
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    110,
-    -145
-   ],
-   "spread": [
-    [
-     "-0.5",
-     125
-    ],
-    [
-     "+0.5",
-     -175
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Talleres (Córdoba)": [
-    [
-     "200935",
-     "Ezequiel Unsain",
-     "G"
-    ],
-    [
-     "318179",
-     "Román Riquelme",
-     "CD-L"
-    ],
-    [
-     "173449",
-     "Matías Catalán",
-     "CD-R"
-    ],
-    [
-     "399687",
-     "Alexandro Maidana",
-     "LB"
-    ],
-    [
-     "276302",
-     "Augusto Schott",
-     "RB"
-    ],
-    [
-     "402605",
-     "Giovanni Baroni",
-     "AM"
-    ],
-    [
-     "309398",
-     "Alejandro Galarza",
-     "LM"
-    ],
-    [
-     "187475",
-     "Federico Fattori",
-     "RM"
-    ],
-    [
-     "307473",
-     "Agustín Álvarez Martínez",
-     "F"
-    ],
-    [
-     "292245",
-     "Valentin Depietri",
-     "AM-L"
-    ],
-    [
-     "288678",
-     "Rick",
-     "AM-R"
-    ]
-   ],
-   "Defensa y Justicia": [
-    [
-     "273253",
-     "Matias Borgogno",
-     "G"
-    ],
-    [
-     "228387",
-     "Héctor Martínez",
-     "CD-L"
-    ],
-    [
-     "120682",
-     "Damián Fernández",
-     "CD-R"
-    ],
-    [
-     "402600",
-     "Demian Domínguez",
-     "LB"
-    ],
-    [
-     "418765",
-     "Valentín Loza",
-     "RB"
-    ],
-    [
-     "186887",
-     "David Barbona",
-     "CM-L"
-    ],
-    [
-     "192087",
-     "César Pérez",
-     "CM-R"
-    ],
-    [
-     "284845",
-     "Juan Gutiérrez",
-     "LM"
-    ],
-    [
-     "271473",
-     "Santiago Sosa",
-     "RM"
-    ],
-    [
-     "40376",
-     "Leandro Miguel Fernandez",
-     "CF-L"
-    ],
-    [
-     "366938",
-     "Jeremías Lucco",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841632",
   "utc": "2026-10-24T22:15Z",
   "estadio": "Estadio Pedro Bidegain",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
+    165,
     175,
-    225
+    210
    ],
    "ou_linea": 1.5,
    "ou": [
-    -170,
-    130
+    -165,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     145
+     155
     ],
     [
      "+0.5",
-     -205
+     -215
+    ]
+   ]
+  },
+  "alineaciones": {
+   "San Lorenzo": [
+    [
+     "195679",
+     "José Devecchi",
+     "G"
+    ],
+    [
+     "214198",
+     "Emiliano Amor",
+     "CD"
+    ],
+    [
+     "254142",
+     "Guzmán Corujo",
+     "CD-L"
+    ],
+    [
+     "215932",
+     "Danilo Arboleda",
+     "CD-R"
+    ],
+    [
+     "312188",
+     "Gonzalo Alassia",
+     "CM-L"
+    ],
+    [
+     "406931",
+     "Facundo Gulli",
+     "CM-R"
+    ],
+    [
+     "298592",
+     "Facundo Farías",
+     "AM"
+    ],
+    [
+     "401538",
+     "Teo Rodríguez",
+     "LM"
+    ],
+    [
+     "195337",
+     "Nicolas Tripichio",
+     "RM"
+    ],
+    [
+     "364366",
+     "Rodrigo Auzmendi",
+     "CF-L"
+    ],
+    [
+     "283675",
+     "Alexis Cuello",
+     "CF-R"
+    ]
+   ],
+   "Newell's Old Boys": [
+    [
+     "361297",
+     "Josué Reinatti",
+     "G"
+    ],
+    [
+     "240430",
+     "Lucas Carrizo",
+     "CD-L"
+    ],
+    [
+     "420806",
+     "Bruno Cabrera",
+     "CD-R"
+    ],
+    [
+     "361305",
+     "Jeronimo Russo",
+     "LB"
+    ],
+    [
+     "270402",
+     "Martín Ortega",
+     "RB"
+    ],
+    [
+     "397602",
+     "Luca Regiardo",
+     "CM"
+    ],
+    [
+     "400805",
+     "Facundo Gauch",
+     "LM"
+    ],
+    [
+     "407376",
+     "Jerónimo Mattar",
+     "RM"
+    ],
+    [
+     "263095",
+     "Matías Cóccaro",
+     "F"
+    ],
+    [
+     "315926",
+     "Santiago Solari",
+     "LF"
+    ],
+    [
+     "250387",
+     "Walter Mazzantti",
+     "RF"
     ]
    ]
   }
