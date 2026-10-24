@@ -1,7 +1,7 @@
 {
 "401883151": {
 "fotmob": 5868511,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T15:27+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -83,7 +83,7 @@
 },
 "401883308": {
 "fotmob": 5868509,
-"visto": "2026-10-24T15:04+00:00",
+"visto": "2026-10-24T15:27+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -165,8 +165,8 @@
 },
 "401883150": {
 "fotmob": 5868512,
-"visto": "2026-10-24T15:04+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T15:27+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -179,22 +179,13 @@
 "importante": true
 },
 {
-"nombre": "Jeremía Recoba",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 1101095.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Viti",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 856280.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Sergio Ruiz",
@@ -203,34 +194,7 @@
 "duda": false,
 "valor": 648656.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Ale García",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 1519103.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Marvin Park",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 1036968.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Inaki González",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 416833.0,
-"titular": true,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Sandro Ramírez",
@@ -240,15 +204,33 @@
 "valor": 242435.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Marvin Park",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1036968.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Inaki González",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 416833.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 9855662.0,
-"perdida": 0.3906870994561299,
-"perdida_duda": 0.3016442731092036
+"valor_xi": 14781761.0,
+"perdida": 0.08418814240062467,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [],
-"valor_xi": 12864013.0,
+"valor_xi": 17195195.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }

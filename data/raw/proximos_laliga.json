@@ -5,7 +5,7 @@
   "estadio": "El Sardineros",
   "local_espn": "Racing Santander",
   "visita_espn": "Espanyol",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    245,
-    265,
-    110
+    225,
+    260,
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     115
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -145
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -589,14 +589,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    700,
-    550,
-    -390
+    750,
+    600,
+    -380
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 4.5,
    "ou": [
-    -170,
-    125
+    130,
+    -170
    ],
    "spread": [
     [
@@ -605,7 +605,7 @@
     ],
     [
      "-1.5",
-     -160
+     -155
     ]
    ]
   }
