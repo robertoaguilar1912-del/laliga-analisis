@@ -1,7 +1,7 @@
 {
 "401841285": {
 "fotmob": 5103680,
-"visto": "2026-10-24T20:19+00:00",
+"visto": "2026-10-24T20:55+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -128,7 +128,7 @@
 },
 "401841284": {
 "fotmob": 5103678,
-"visto": "2026-10-24T20:19+00:00",
+"visto": "2026-10-24T20:55+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -228,7 +228,7 @@
 },
 "401841280": {
 "fotmob": 5103682,
-"visto": "2026-10-24T20:19+00:00",
+"visto": "2026-10-24T20:55+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -373,17 +373,26 @@
 },
 "401841283": {
 "fotmob": 5103677,
-"visto": "2026-10-24T20:19+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T20:55+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
+{
+"nombre": "Vitor Roque",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 42103346.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Andreas Pereira",
 "tipo": "Sanción",
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 16278890.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -392,7 +401,7 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 13240816.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -405,27 +414,18 @@
 "importante": true
 },
 {
-"nombre": "Vitor Roque",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 42103346.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Jefté",
 "tipo": "Lesión",
 "regreso": "mediados de diciembre",
 "duda": false,
 "valor": 5178012.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 116052775.0,
-"perdida": 0.34295264374333145,
-"perdida_duda": 0.36279482330344964
+"valor_xi": 106366987.0,
+"perdida": 0.8186935294124671,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -453,7 +453,7 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 3515944.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -471,8 +471,8 @@
 "regreso": "hasta el 24 de octubre",
 "duda": false,
 "valor": 2079538.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Davi Gomes",
@@ -484,15 +484,15 @@
 "importante": false
 }
 ],
-"valor_xi": 36280511.0,
-"perdida": 0.5731185814885573,
+"valor_xi": 36704998.0,
+"perdida": 0.5098351183672589,
 "perdida_duda": 0.0
 }
 },
 "401841281": {
 "fotmob": 5103675,
-"visto": "2026-10-24T20:19+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-24T20:55+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -511,11 +511,11 @@
 "duda": false,
 "valor": 4744173.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 62689390.0,
-"perdida": 0.1968350784718116,
+"valor_xi": 73952790.0,
+"perdida": 0.10270468497537416,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -527,7 +527,7 @@
 "duda": false,
 "valor": 3430438.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Raniele",
@@ -536,7 +536,7 @@
 "duda": false,
 "valor": 2469435.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Kayke",
@@ -545,16 +545,25 @@
 "duda": false,
 "valor": 1183531.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Gabriel Paulista",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "1-2 semanas",
+"duda": false,
 "valor": 952047.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Alex Santana",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 857982.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Zakaria Labyad",
@@ -575,14 +584,14 @@
 "importante": false
 }
 ],
-"valor_xi": 87889641.0,
-"perdida": 0.08059429893450128,
-"perdida_duda": 0.01083230047554751
+"valor_xi": 97232256.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 }
 },
 "401841278": {
 "fotmob": 5103683,
-"visto": "2026-10-24T20:19+00:00",
+"visto": "2026-10-24T20:55+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

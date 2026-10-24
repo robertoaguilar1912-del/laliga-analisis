@@ -5,7 +5,7 @@
   "estadio": "ScottsMiracle-Gro Field",
   "local_espn": "Columbus Crew",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    310,
-    -110
+    190,
+    290,
+    110
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
-    110
+    -130,
+    100
    ],
    "spread": [
     [
      "+0.5",
-     -120
+     -145
     ],
     [
      "-0.5",
-     -115
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Red Bull New York": [
+    [
+     "192027",
+     "Ethan Horvath",
+     "G"
+    ],
+    [
+     "217009",
+     "Tim Parker",
+     "D"
+    ],
+    [
+     "361422",
+     "Julián Bazán",
+     "D"
+    ],
+    [
+     "242942",
+     "Dylan Nealis",
+     "D"
+    ],
+    [
+     "337030",
+     "Devin Padelford",
+     "D"
+    ],
+    [
+     "380923",
+     "Mohammed Sofo",
+     "M"
+    ],
+    [
+     "362442",
+     "Ronald Donkor",
+     "M"
+    ],
+    [
+     "381687",
+     "Adri Mehmeti",
+     "M"
+    ],
+    [
+     "329917",
+     "Jorge Ruvalcaba",
+     "F"
+    ],
+    [
+     "288041",
+     "Julian Hall",
+     "F"
+    ],
+    [
+     "285698",
+     "Cade Cowell",
+     "F"
+    ]
+   ],
+   "Inter Miami CF": [
+    [
+     "231059",
+     "Dayne St. Clair",
+     "SUB"
+    ],
+    [
+     "290715",
+     "David Ayala",
+     "SUB"
+    ],
+    [
+     "314952",
+     "Micael",
+     "SUB"
+    ],
+    [
+     "174466",
+     "Rodrigo De Paul",
+     "SUB"
+    ],
+    [
+     "125088",
+     "Luis Suárez",
+     "SUB"
+    ],
+    [
+     "315617",
+     "Gonzalo Luján",
+     "SUB"
+    ],
+    [
+     "228394",
+     "Germán Berterame",
+     "SUB"
+    ],
+    [
+     "173666",
+     "Casemiro",
+     "SUB"
+    ],
+    [
+     "231241",
+     "Sergio Reguilón",
+     "SUB"
+    ],
+    [
+     "297328",
+     "Matías Galarza",
+     "SUB"
+    ],
+    [
+     "361433",
+     "Riquelme",
+     "SUB"
     ]
    ]
   }
@@ -233,7 +349,7 @@
    "ou_linea": 3.5,
    "ou": [
     -120,
-    -110
+    -105
    ],
    "spread": [
     [
@@ -259,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    285,
-    195
+    120,
+    280,
+    175
    ],
    "ou_linea": 3.5,
    "ou": [
     100,
-    -125
+    -130
    ],
    "spread": [
     [
      "-0.5",
-     100
+     110
     ],
     [
      "+0.5",
-     -140
+     -155
     ]
    ]
   }
@@ -292,14 +408,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -220,
+    -210,
     370,
-    450
+    425
    ],
    "ou_linea": 3.5,
    "ou": [
     100,
-    -125
+    -130
    ],
    "spread": [
     [
@@ -308,7 +424,7 @@
     ],
     [
      "+1.5",
-     -155
+     -165
     ]
    ]
   }
@@ -463,17 +579,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
+    125,
     -160
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
   }

@@ -5,7 +5,7 @@
   "estadio": "Estadio Beira-Rio",
   "local_espn": "Internacional",
   "visita_espn": "Botafogo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Municipal José Maria de Campos Maia",
   "local_espn": "Mirassol",
   "visita_espn": "São Paulo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Estadio Manoel Barradas",
   "local_espn": "Vitória",
   "visita_espn": "Athletico-PR",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -477,6 +477,122 @@
      -200
     ]
    ]
+  },
+  "alineaciones": {
+   "Palmeiras": [
+    [
+     "276741",
+     "Carlos Miguel",
+     "G"
+    ],
+    [
+     "257050",
+     "Bruno Fuchs",
+     "D"
+    ],
+    [
+     "222631",
+     "Alexander Barboza",
+     "D"
+    ],
+    [
+     "118395",
+     "Gustavo Gómez",
+     "D"
+    ],
+    [
+     "315619",
+     "Agustín Giay",
+     "M"
+    ],
+    [
+     "239566",
+     "Jhon Arias",
+     "M"
+    ],
+    [
+     "186776",
+     "Lucas Evangelista",
+     "M"
+    ],
+    [
+     "289046",
+     "Maurício",
+     "M"
+    ],
+    [
+     "234016",
+     "Marlon Freitas",
+     "M"
+    ],
+    [
+     "382965",
+     "Arthur Gabriel",
+     "M"
+    ],
+    [
+     "311743",
+     "José Manuel López",
+     "F"
+    ]
+   ],
+   "Red Bull Bragantino": [
+    [
+     "145092",
+     "Tiago Volpi",
+     "G"
+    ],
+    [
+     "257335",
+     "Alix Vinicius",
+     "D"
+    ],
+    [
+     "418512",
+     "Ryan Augusto",
+     "D"
+    ],
+    [
+     "229555",
+     "Juninho Capixaba",
+     "D"
+    ],
+    [
+     "302225",
+     "Guzmán Rodríguez",
+     "D"
+    ],
+    [
+     "267902",
+     "Fernando",
+     "M"
+    ],
+    [
+     "248584",
+     "Lucas Barbosa",
+     "M"
+    ],
+    [
+     "335360",
+     "José Herrera",
+     "M"
+    ],
+    [
+     "307934",
+     "Fabinho",
+     "M"
+    ],
+    [
+     "225538",
+     "Matheus Fernandes",
+     "M"
+    ],
+    [
+     "287035",
+     "Isidro Pitta",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -491,9 +607,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
+    -160,
     290,
-    400
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -503,11 +619,127 @@
    "spread": [
     [
      "-0.5",
-     -160
+     -170
     ],
     [
      "+0.5",
-     115
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vasco da Gama": [
+    [
+     "205464",
+     "Léo Jardim",
+     "G"
+    ],
+    [
+     "337099",
+     "Robert",
+     "CD-L"
+    ],
+    [
+     "317383",
+     "Alan Saldivia",
+     "CD-R"
+    ],
+    [
+     "334756",
+     "Cuiabano",
+     "LB"
+    ],
+    [
+     "43711",
+     "José Luis Rodríguez",
+     "RB"
+    ],
+    [
+     "201717",
+     "Thiago Mendes",
+     "AM"
+    ],
+    [
+     "271473",
+     "Santiago Sosa",
+     "LM"
+    ],
+    [
+     "336485",
+     "Alan Lescano",
+     "RM"
+    ],
+    [
+     "292259",
+     "Bruno Duarte",
+     "F"
+    ],
+    [
+     "275941",
+     "Facundo Colidio",
+     "AM-L"
+    ],
+    [
+     "330924",
+     "Andrés Gómez",
+     "AM-R"
+    ]
+   ],
+   "Corinthians": [
+    [
+     "257051",
+     "Hugo Souza",
+     "G"
+    ],
+    [
+     "194090",
+     "André Ramalho",
+     "D"
+    ],
+    [
+     "272533",
+     "Mateuzinho",
+     "D"
+    ],
+    [
+     "168981",
+     "Gustavo Henrique",
+     "D"
+    ],
+    [
+     "195756",
+     "Fabrizio Angileri",
+     "D"
+    ],
+    [
+     "287774",
+     "Matheus Bidu",
+     "M"
+    ],
+    [
+     "409662",
+     "André",
+     "M"
+    ],
+    [
+     "382944",
+     "Dieguinho",
+     "M"
+    ],
+    [
+     "270562",
+     "Rodrigo Garro",
+     "M"
+    ],
+    [
+     "338898",
+     "Breno Bidon",
+     "M"
+    ],
+    [
+     "266666",
+     "Yuri Alberto",
+     "F"
     ]
    ]
   }
@@ -563,7 +795,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
+    125,
     -170
    ],
    "spread": [
@@ -697,7 +929,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    245,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -195
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
+  }
  },
  {
   "id": "401841288",
