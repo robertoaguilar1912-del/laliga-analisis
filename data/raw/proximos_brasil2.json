@@ -5,7 +5,7 @@
   "estadio": "Estádio da Ressacada",
   "local_espn": "Avaí",
   "visita_espn": "Botafogo-SP",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -497,8 +497,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -140,
+    105
    ],
    "spread": [
     [
@@ -631,7 +631,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    215,
+    190
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
  },
  {
   "id": "401860416",
