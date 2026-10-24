@@ -8,13 +8,7 @@
   "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
-  },
+  "momios": null,
   "alineaciones": {
    "Girona": [
     [
@@ -133,155 +127,6 @@
   }
  },
  {
-  "id": "401883150",
-  "utc": "2026-10-24T16:30Z",
-  "estadio": "Estadio Gran Canaria",
-  "local_espn": "Las Palmas",
-  "visita_espn": "Real Sociedad II",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    115,
-    255,
-    220
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -150,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     105
-    ],
-    [
-     "+0.5",
-     -150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Las Palmas": [
-    [
-     "239387",
-     "Caro",
-     "G"
-    ],
-    [
-     "367729",
-     "Juanma Herzog",
-     "CD-L"
-    ],
-    [
-     "121611",
-     "Álex Suárez",
-     "CD-R"
-    ],
-    [
-     "335952",
-     "Giovanni Bonfanti",
-     "LB"
-    ],
-    [
-     "388727",
-     "Valentín Pezzolesi",
-     "RB"
-    ],
-    [
-     "5326095",
-     "Sergio Viera García",
-     "M"
-    ],
-    [
-     "272870",
-     "Enzo Loiodice",
-     "CM-L"
-    ],
-    [
-     "280489",
-     "Iván Jaime",
-     "LM"
-    ],
-    [
-     "265959",
-     "Taisei Miyashiro",
-     "RM"
-    ],
-    [
-     "292774",
-     "Manu Fuster",
-     "CF-L"
-    ],
-    [
-     "162453",
-     "Jesé",
-     "CF-R"
-    ]
-   ],
-   "Real Sociedad II": [
-    [
-     "406381",
-     "Lander Olasagasti",
-     "G"
-    ],
-    [
-     "360178",
-     "Kazunari Kita",
-     "CD-L"
-    ],
-    [
-     "411583",
-     "Iker Calderon",
-     "CD-R"
-    ],
-    [
-     "396608",
-     "Jon Balda",
-     "LB"
-    ],
-    [
-     "379457",
-     "Iñaki Rupérez",
-     "RB"
-    ],
-    [
-     "410486",
-     "Ibai Aguirre",
-     "CM-L"
-    ],
-    [
-     "406396",
-     "Tomás Carbonell",
-     "CM-R"
-    ],
-    [
-     "406389",
-     "Gorka Gorosabel",
-     "LM"
-    ],
-    [
-     "387496",
-     "Daniel Díaz",
-     "RM"
-    ],
-    [
-     "396613",
-     "Alex Marchal",
-     "CF-L"
-    ],
-    [
-     "406383",
-     "Gorka Carrera",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401883153",
   "utc": "2026-10-24T19:00Z",
   "estadio": "Power Horse Stadium",
@@ -293,23 +138,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    285,
-    400
+    -135,
+    270,
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    100
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -145
     ],
     [
      "+0.5",
-     115
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Almería": [
+    [
+     "87897",
+     "Andrés Fernández",
+     "G"
+    ],
+    [
+     "283833",
+     "Federico Bonini",
+     "CD-L"
+    ],
+    [
+     "152557",
+     "Jorge Pulido",
+     "CD-R"
+    ],
+    [
+     "178896",
+     "Álex Muñoz",
+     "LB"
+    ],
+    [
+     "347438",
+     "Marcos Luna Marcos Ruiz",
+     "RB"
+    ],
+    [
+     "307917",
+     "Sergio Arribas",
+     "AM"
+    ],
+    [
+     "389437",
+     "Stefan Dzodic",
+     "LM"
+    ],
+    [
+     "214275",
+     "Javi Muñoz",
+     "RM"
+    ],
+    [
+     "277717",
+     "Miguel de la Fuente",
+     "F"
+    ],
+    [
+     "352285",
+     "Brian Cipenga",
+     "AM-L"
+    ],
+    [
+     "376425",
+     "Quim Junyent",
+     "AM-R"
+    ]
+   ],
+   "Real Oviedo": [
+    [
+     "200964",
+     "Aarón Escandell",
+     "G"
+    ],
+    [
+     "192796",
+     "David Costas",
+     "D"
+    ],
+    [
+     "240102",
+     "Nacho Vidal",
+     "D"
+    ],
+    [
+     "123743",
+     "Dani Calvo",
+     "D"
+    ],
+    [
+     "395613",
+     "Samu Rodríguez",
+     "D"
+    ],
+    [
+     "320768",
+     "Aritz Aldasoro",
+     "M"
+    ],
+    [
+     "396611",
+     "Mikel Goti",
+     "M"
+    ],
+    [
+     "347357",
+     "Youness Lachhab",
+     "M"
+    ],
+    [
+     "253732",
+     "Alberto Reina",
+     "M"
+    ],
+    [
+     "184640",
+     "José Luis Morales",
+     "F"
+    ],
+    [
+     "3128635",
+     "Enzo Pérez Miranda",
+     "F"
     ]
    ]
   }
