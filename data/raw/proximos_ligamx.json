@@ -5,7 +5,7 @@
   "estadio": "Estadio Victoria",
   "local_espn": "Necaxa",
   "visita_espn": "FC Juárez",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -17,7 +17,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
@@ -78,8 +78,8 @@
    "casa": "DraftKings",
    "ml": [
     265,
-    255,
-    100
+    265,
+    -105
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -93,7 +93,7 @@
     ],
     [
      "-0.5",
-     -110
+     -115
     ]
    ]
   }
@@ -111,22 +111,22 @@
    "casa": "DraftKings",
    "ml": [
     145,
-    220,
+    225,
     190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     105
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }

@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841287",
-  "utc": "2026-10-23T23:00Z",
-  "estadio": "Estadio Mineirão",
-  "local_espn": "Cruzeiro",
-  "visita_espn": "Remo",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -340,
-    500,
-    750
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    -110,
-    -120
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -140
-    ],
-    [
-     "+1.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Cruzeiro": [
-    [
-     "337996",
-     "Otávio Costa",
-     "G"
-    ],
-    [
-     "363020",
-     "Jonathan Jesus",
-     "CD-L"
-    ],
-    [
-     "236111",
-     "Fabrício Bruno",
-     "CD-R"
-    ],
-    [
-     "176810",
-     "Lucas Villalba",
-     "LB"
-    ],
-    [
-     "212077",
-     "William",
-     "RB"
-    ],
-    [
-     "216098",
-     "Matheus Pereira",
-     "AM"
-    ],
-    [
-     "402423",
-     "Zé Lucas",
-     "LM"
-    ],
-    [
-     "77577",
-     "Lucas Romero",
-     "RM"
-    ],
-    [
-     "280978",
-     "Kaio Jorge",
-     "F"
-    ],
-    [
-     "210135",
-     "Gerson",
-     "AM-L"
-    ],
-    [
-     "371534",
-     "Keny Arroyo",
-     "AM-R"
-    ]
-   ],
-   "Remo": [
-    [
-     "206952",
-     "Marcelo Rangel",
-     "G"
-    ],
-    [
-     "319270",
-     "Zé Ivaldo",
-     "CD-L"
-    ],
-    [
-     "157743",
-     "Marllon",
-     "CD-R"
-    ],
-    [
-     "215815",
-     "Marlon Lopes",
-     "LB"
-    ],
-    [
-     "304826",
-     "Marcelinho",
-     "RB"
-    ],
-    [
-     "276661",
-     "Zé Ricardo",
-     "AM"
-    ],
-    [
-     "198362",
-     "Patrick",
-     "LM"
-    ],
-    [
-     "201793",
-     "José Welison",
-     "RM"
-    ],
-    [
-     "338668",
-     "Eduardo",
-     "F"
-    ],
-    [
-     "301185",
-     "Jajá",
-     "AM-L"
-    ],
-    [
-     "254464",
-     "Antonio Galeano",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841285",
   "utc": "2026-10-24T19:30Z",
   "estadio": "Estadio Beira-Rio",
@@ -176,7 +27,7 @@
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
@@ -242,7 +93,7 @@
     ],
     [
      "+0.5",
-     -200
+     -195
     ]
    ]
   }
@@ -270,12 +121,12 @@
    ],
    "spread": [
     [
-     "-1.5",
-     140
+     "-0.5",
+     -200
     ],
     [
-     "+1.5",
-     -195
+     "+0.5",
+     140
     ]
    ]
   }
@@ -298,17 +149,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -125
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     115
+     110
     ]
    ]
   }
@@ -325,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    265,
+    330,
+    270,
     -125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -110
+    -125,
+    -105
    ],
    "spread": [
     [
      "+0.5",
-     -105
+     100
     ],
     [
      "-0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -359,12 +210,12 @@
    "casa": "DraftKings",
    "ml": [
     -105,
-    265,
-    260
+    270,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     105
    ],
    "spread": [
@@ -374,7 +225,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -393,21 +244,21 @@
    "ml": [
     105,
     250,
-    230
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -120
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -431,16 +282,16 @@
    "ou_linea": 2.5,
    "ou": [
     -185,
-    125
+    130
    ],
    "spread": [
     [
      "-1.5",
-     -125
+     -120
     ],
     [
      "+1.5",
-     -125
+     -120
     ]
    ]
   }
@@ -561,6 +412,28 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Santos",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841304",
+  "utc": "2026-11-03T22:30Z",
+  "estadio": "Arena Condá",
+  "local_espn": "Chapecoense",
+  "visita_espn": "Mirassol",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841301",
+  "utc": "2026-11-04T00:30Z",
+  "estadio": "Estadio Beira-Rio",
+  "local_espn": "Internacional",
+  "visita_espn": "Coritiba",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
