@@ -1,160 +1,11 @@
 [
  {
-  "id": "761891",
-  "utc": "2026-10-24T21:30Z",
-  "estadio": "Sports Illustrated Stadium",
-  "local_espn": "Red Bull New York",
-  "visita_espn": "Inter Miami CF",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    215,
-    300,
-    -110
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    -130,
-    105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -125
-    ],
-    [
-     "-0.5",
-     -115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Red Bull New York": [
-    [
-     "192027",
-     "Ethan Horvath",
-     "G"
-    ],
-    [
-     "217009",
-     "Tim Parker",
-     "D"
-    ],
-    [
-     "361422",
-     "Julián Bazán",
-     "D"
-    ],
-    [
-     "242942",
-     "Dylan Nealis",
-     "D"
-    ],
-    [
-     "337030",
-     "Devin Padelford",
-     "D"
-    ],
-    [
-     "380923",
-     "Mohammed Sofo",
-     "M"
-    ],
-    [
-     "362442",
-     "Ronald Donkor",
-     "M"
-    ],
-    [
-     "381687",
-     "Adri Mehmeti",
-     "M"
-    ],
-    [
-     "329917",
-     "Jorge Ruvalcaba",
-     "F"
-    ],
-    [
-     "288041",
-     "Julian Hall",
-     "F"
-    ],
-    [
-     "285698",
-     "Cade Cowell",
-     "F"
-    ]
-   ],
-   "Inter Miami CF": [
-    [
-     "231059",
-     "Dayne St. Clair",
-     "SUB"
-    ],
-    [
-     "290715",
-     "David Ayala",
-     "SUB"
-    ],
-    [
-     "314952",
-     "Micael",
-     "SUB"
-    ],
-    [
-     "174466",
-     "Rodrigo De Paul",
-     "SUB"
-    ],
-    [
-     "125088",
-     "Luis Suárez",
-     "SUB"
-    ],
-    [
-     "315617",
-     "Gonzalo Luján",
-     "SUB"
-    ],
-    [
-     "228394",
-     "Germán Berterame",
-     "SUB"
-    ],
-    [
-     "173666",
-     "Casemiro",
-     "SUB"
-    ],
-    [
-     "231241",
-     "Sergio Reguilón",
-     "SUB"
-    ],
-    [
-     "297328",
-     "Matías Galarza",
-     "SUB"
-    ],
-    [
-     "361433",
-     "Riquelme",
-     "SUB"
-    ]
-   ]
-  }
- },
- {
   "id": "761893",
   "utc": "2026-10-24T23:30Z",
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "Chicago Fire FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -167,7 +18,7 @@
    "ou_linea": 3.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
@@ -303,20 +154,20 @@
   "estadio": "Audi Field",
   "local_espn": "D.C. United",
   "visita_espn": "FC Cincinnati",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    290,
+    175,
+    275,
     120
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    100
+    -110,
+    -115
    ],
    "spread": [
     [
@@ -452,7 +303,7 @@
   "estadio": "Inter&Co Stadium",
   "local_espn": "Orlando City SC",
   "visita_espn": "New York City FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -465,7 +316,7 @@
    "ou_linea": 3.5,
    "ou": [
     100,
-    -125
+    -130
    ],
    "spread": [
     [
@@ -474,7 +325,7 @@
     ],
     [
      "+0.5",
-     -170
+     -175
     ]
    ]
   },
@@ -601,7 +452,7 @@
   "estadio": "Subaru Park",
   "local_espn": "Philadelphia Union",
   "visita_espn": "New England Revolution",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -614,7 +465,7 @@
    "ou_linea": 3.5,
    "ou": [
     -110,
-    -120
+    -115
    ],
    "spread": [
     [
@@ -775,6 +626,122 @@
      -105
     ]
    ]
+  },
+  "alineaciones": {
+   "FC Dallas": [
+    [
+     "243832",
+     "Daniel",
+     "G"
+    ],
+    [
+     "233460",
+     "Sebastien Ibeagha",
+     "CD"
+    ],
+    [
+     "268731",
+     "Osaze Urhoghide",
+     "CD-L"
+    ],
+    [
+     "219275",
+     "Shaq Moore",
+     "CD-R"
+    ],
+    [
+     "380441",
+     "Kaick",
+     "CM-L"
+    ],
+    [
+     "157285",
+     "Ramiro",
+     "CM-R"
+    ],
+    [
+     "318373",
+     "Bernard Kamungo",
+     "LM"
+    ],
+    [
+     "312876",
+     "Herman Johansson",
+     "RM"
+    ],
+    [
+     "277128",
+     "Petar Musa",
+     "F"
+    ],
+    [
+     "381038",
+     "Daniel Job",
+     "CF-L"
+    ],
+    [
+     "359922",
+     "Joaquín Valiente",
+     "CF-R"
+    ]
+   ],
+   "San Jose Earthquakes": [
+    [
+     "181299",
+     "Angus Gunn",
+     "G"
+    ],
+    [
+     "222188",
+     "Dave Romney",
+     "CD"
+    ],
+    [
+     "398860",
+     "Reid Roberts",
+     "CD-L"
+    ],
+    [
+     "281494",
+     "Daniel Munie",
+     "CD-R"
+    ],
+    [
+     "382638",
+     "Beau Leroux",
+     "CM-L"
+    ],
+    [
+     "235593",
+     "Ronaldo Vieira",
+     "CM-R"
+    ],
+    [
+     "380800",
+     "Jamar Ricketts",
+     "LM"
+    ],
+    [
+     "304134",
+     "Jack Jasinski",
+     "RM"
+    ],
+    [
+     "189505",
+     "Eduard Löwen",
+     "F"
+    ],
+    [
+     "191088",
+     "Timo Werner",
+     "CF-L"
+    ],
+    [
+     "300420",
+     "Ousseni Bouda",
+     "CF-R"
+    ]
+   ]
   }
  },
  {
@@ -796,7 +763,7 @@
    "ou_linea": 2.5,
    "ou": [
     -160,
-    125
+    130
    ],
    "spread": [
     [
@@ -806,6 +773,122 @@
     [
      "+0.5",
      -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Houston Dynamo FC": [
+    [
+     "65434",
+     "Jonathan Bond",
+     "G"
+    ],
+    [
+     "266281",
+     "Lucas Halter",
+     "CD-L"
+    ],
+    [
+     "196842",
+     "Antônio Carlos",
+     "CD-R"
+    ],
+    [
+     "242613",
+     "Franco Negri",
+     "LB"
+    ],
+    [
+     "323199",
+     "Lawrence Ennali",
+     "RB"
+    ],
+    [
+     "146866",
+     "Héctor Herrera",
+     "CM-L"
+    ],
+    [
+     "236342",
+     "Artur",
+     "CM-R"
+    ],
+    [
+     "233578",
+     "Guilherme Augusto",
+     "LM"
+    ],
+    [
+     "287841",
+     "Mateusz Bogusz",
+     "RM"
+    ],
+    [
+     "264751",
+     "Lyle Foster",
+     "CF-L"
+    ],
+    [
+     "233725",
+     "Agustín Bouzat",
+     "CF-R"
+    ]
+   ],
+   "Minnesota United FC": [
+    [
+     "245083",
+     "Drake Callender",
+     "G"
+    ],
+    [
+     "337922",
+     "Morris Duggan",
+     "CD-L"
+    ],
+    [
+     "358517",
+     "Jefferson Díaz",
+     "CD-R"
+    ],
+    [
+     "281323",
+     "Anthony Markanich",
+     "LB"
+    ],
+    [
+     "379184",
+     "Cherrion Valerius",
+     "RB"
+    ],
+    [
+     "327355",
+     "Owen Gene",
+     "CM-L"
+    ],
+    [
+     "328543",
+     "Nectarios Triantis",
+     "CM-R"
+    ],
+    [
+     "353246",
+     "Mauricio Gonzalez",
+     "LM"
+    ],
+    [
+     "287784",
+     "Bongokuhle Hlongwane",
+     "RM"
+    ],
+    [
+     "289941",
+     "Kelvin Yeboah",
+     "CF-L"
+    ],
+    [
+     "318536",
+     "Aziel Jackson",
+     "CF-R"
     ]
    ]
   }
@@ -822,23 +905,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    280,
-    180
+    110,
+    290,
+    190
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    105,
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     110
+     105
     ],
     [
      "+0.5",
-     -155
+     -145
     ]
    ]
   }
@@ -933,11 +1016,11 @@
    "spread": [
     [
      "-0.5",
-     -125
+     -120
     ],
     [
      "+0.5",
-     -110
+     -115
     ]
    ]
   }

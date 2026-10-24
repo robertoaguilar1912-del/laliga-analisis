@@ -9,7 +9,7 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Miami Heat",
   "revisado": false,
@@ -38,10 +38,10 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Brooklyn Nets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Rocket Arena",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -500,
-    380
-   ],
-   "ml_abre": [
-    -455,
-    350
-   ],
-   "spread": [
-    -11.5,
-    -108,
-    11.5,
-    -112
-   ],
-   "spread_abre": -11.5,
-   "total": [
-    228.5,
-    -115,
-    -105
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401909855",
@@ -90,10 +67,10 @@
   "visita": "MIL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Milwaukee Bucks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
@@ -107,30 +84,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -675,
-    490
-   ],
-   "ml_abre": [
-    -625,
-    455
-   ],
-   "spread": [
-    -12.5,
-    -118,
-    12.5,
-    -102
-   ],
-   "spread_abre": -12.5,
-   "total": [
-    234.5,
-    -112,
-    -108
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909857",
@@ -301,7 +255,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Denver Nuggets",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Ball Arena",
   "records": {
    "home": [
