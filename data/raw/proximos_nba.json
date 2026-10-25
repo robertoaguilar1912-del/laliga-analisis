@@ -1,121 +1,5 @@
 [
  {
-  "id": "401909854",
-  "utc": "2026-10-24T23:30Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CLE",
-  "visita": "BKN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Cleveland Cavaliers",
-  "visita_espn": "Brooklyn Nets",
-  "revisado": false,
-  "estadio": "Rocket Arena",
-  "records": {
-   "home": [
-    "0-1",
-    "0-0",
-    "0-1"
-   ],
-   "away": [
-    "0-1",
-    "0-1",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909855",
-  "utc": "2026-10-24T23:30Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "PHI",
-  "visita": "MIL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Philadelphia 76ers",
-  "visita_espn": "Milwaukee Bucks",
-  "revisado": false,
-  "estadio": "Xfinity Mobile Arena",
-  "records": {
-   "home": [
-    "2-0",
-    "1-0",
-    "1-0"
-   ],
-   "away": [
-    "0-2",
-    "0-1",
-    "0-1"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909857",
-  "utc": "2026-10-25T00:00Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "WSH",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "Washington Wizards",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "1-1",
-    "0-0",
-    "1-1"
-   ],
-   "away": [
-    "1-1",
-    "1-1",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909858",
-  "utc": "2026-10-25T00:00Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "DAL",
-  "visita": "SA",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Dallas Mavericks",
-  "visita_espn": "San Antonio Spurs",
-  "revisado": false,
-  "estadio": "American Airlines Center",
-  "records": {
-   "home": [
-    "1-1",
-    "0-0",
-    "1-1"
-   ],
-   "away": [
-    "0-2",
-    "0-2",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909856",
   "utc": "2026-10-25T00:30Z",
   "fecha": "2026-10-24",
@@ -183,10 +67,10 @@
   "visita": "GS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Phoenix Suns",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
@@ -200,30 +84,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -410,
-    320
-   ],
-   "ml_abre": [
-    -205,
-    170
-   ],
-   "spread": [
-    -9.5,
-    -115,
-    9.5,
-    -105
-   ],
-   "spread_abre": -6.5,
-   "total": [
-    221.5,
-    -110,
-    -110
-   ],
-   "total_abre": 224.5
-  }
+  "momios": null
  },
  {
   "id": "401909861",
@@ -255,8 +116,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    205,
-    -250
+    195,
+    -238
    ],
    "ml_abre": [
     210,
@@ -264,15 +125,15 @@
    ],
    "spread": [
     6.5,
-    -110,
+    -115,
     -6.5,
-    -110
+    -105
    ],
    "spread_abre": 6.5,
    "total": [
-    235.5,
-    -115,
-    -105
+    236.5,
+    -105,
+    -115
    ],
    "total_abre": 236.5
   }
@@ -294,9 +155,9 @@
   "estadio": "Barclays Center",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-1",
@@ -307,24 +168,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    null,
-    null
+    225,
+    -278
    ],
    "ml_abre": [
-    null,
-    null
+    180,
+    -218
    ],
    "spread": [
-    6.5,
-    -108,
-    -6.5,
-    -112
+    7.5,
+    -115,
+    -7.5,
+    -105
    ],
    "spread_abre": 5.5,
    "total": [
-    232.5,
-    -110,
-    -110
+    231.5,
+    -115,
+    -105
    ],
    "total_abre": 232.5
   }
@@ -411,24 +272,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -130,
-    110
+    -115,
+    -105
    ],
    "ml_abre": [
     -130,
     110
    ],
    "spread": [
-    -2.5,
+    -1.5,
     -105,
-    2.5,
+    1.5,
     -115
    ],
    "spread_abre": -2.5,
    "total": [
     231.5,
-    -110,
-    -110
+    -115,
+    -105
    ],
    "total_abre": 231.5
   }
@@ -502,8 +363,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ],
    "away": [
@@ -588,9 +449,9 @@
     "1-0"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -612,8 +473,8 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ],
    "away": [
@@ -646,8 +507,8 @@
     "0-1"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },
@@ -675,8 +536,8 @@
     "0-1"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },
@@ -699,9 +560,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "1-1",
@@ -849,9 +710,9 @@
     "0-1"
    ],
    "away": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -902,9 +763,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
+    "1-2",
     "0-2",
-    "0-2",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "0-2",
@@ -989,14 +850,14 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1052,8 +913,8 @@
     "1-0"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -1105,8 +966,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ],
    "away": [
@@ -1134,9 +995,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "2-0",
@@ -1226,9 +1087,9 @@
     "0-1"
    ],
    "away": [
+    "1-2",
     "0-2",
-    "0-2",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -1250,8 +1111,8 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ],
    "away": [
@@ -1313,8 +1174,8 @@
     "2-0"
    ],
    "away": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ]
   },
@@ -1395,9 +1256,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
+    "2-1",
     "1-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "2-1",
@@ -1429,8 +1290,8 @@
     "0-1"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },
@@ -1453,9 +1314,9 @@
   "estadio": "Barclays Center",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "2-0",
@@ -1482,8 +1343,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ],
    "away": [
@@ -1569,8 +1430,8 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ],
    "away": [
@@ -1742,8 +1603,8 @@
     "1-0"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -1824,13 +1685,13 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ]
   },
@@ -1853,9 +1714,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
+    "1-2",
     "0-2",
-    "0-2",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "2-0",
@@ -1945,9 +1806,9 @@
     "1-0"
    ],
    "away": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -2027,8 +1888,8 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ],
    "away": [
@@ -2119,9 +1980,9 @@
     "0-1"
    ],
    "away": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -2148,9 +2009,9 @@
     "0-0"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ]
   },
   "momios": null
@@ -2172,13 +2033,13 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },
@@ -2201,8 +2062,8 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ],
    "away": [
@@ -2264,9 +2125,9 @@
     "2-0"
    ],
    "away": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -2317,9 +2178,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
+    "1-2",
     "0-2",
-    "0-2",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "1-1",
@@ -2467,8 +2328,8 @@
     "1-0"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -2491,9 +2352,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
+    "2-1",
     "1-1",
-    "1-1",
-    "0-0"
+    "1-0"
    ],
    "away": [
     "2-0",
@@ -2525,9 +2386,9 @@
     "0-1"
    ],
    "away": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -2549,9 +2410,9 @@
   "estadio": "Barclays Center",
   "records": {
    "home": [
+    "0-2",
     "0-1",
-    "0-1",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "2-1",
@@ -2583,8 +2444,8 @@
     "0-1"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },
@@ -2670,8 +2531,8 @@
     "1-0"
    ],
    "away": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ]
   },
@@ -2781,13 +2642,13 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
+    "1-2",
     "0-2",
-    "0-2",
-    "0-0"
+    "1-0"
    ],
    "away": [
-    "1-1",
-    "0-0",
+    "1-2",
+    "0-1",
     "1-1"
    ]
   },

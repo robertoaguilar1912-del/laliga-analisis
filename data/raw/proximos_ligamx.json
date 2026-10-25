@@ -5,7 +5,7 @@
   "estadio": "Estadio BBVA",
   "local_espn": "Monterrey",
   "visita_espn": "Guadalajara",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    245,
-    185
+    105,
+    265,
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -105
+    -135,
+    100
    ],
    "spread": [
     [
      "-0.5",
-     130
+     100
     ],
     [
      "+0.5",
-     -180
+     -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Pumas UNAM": [
+    [
+     "73247",
+     "Keylor Navas",
+     "G"
+    ],
+    [
+     "177553",
+     "Rubén Duarte",
+     "CD-L"
+    ],
+    [
+     "236597",
+     "Nathan Silva",
+     "CD-R"
+    ],
+    [
+     "286879",
+     "Pablo Bennevendo",
+     "LB"
+    ],
+    [
+     "344568",
+     "Rodrigo López",
+     "RB"
+    ],
+    [
+     "297150",
+     "Pedro Vite",
+     "CM-L"
+    ],
+    [
+     "219508",
+     "Adalberto Carrasquilla",
+     "CM-R"
+    ],
+    [
+     "265969",
+     "César Huerta",
+     "LM"
+    ],
+    [
+     "242715",
+     "Uriel Antuna",
+     "RM"
+    ],
+    [
+     "239983",
+     "Juninho",
+     "CF-L"
+    ],
+    [
+     "255942",
+     "Robert Morales",
+     "CF-R"
+    ]
+   ],
+   "Tigres UANL": [
+    [
+     "68340",
+     "Nahuel Guzmán",
+     "G"
+    ],
+    [
+     "275892",
+     "Rafael Guerrero",
+     "D"
+    ],
+    [
+     "276557",
+     "Jesús Garza",
+     "D"
+    ],
+    [
+     "228493",
+     "Alan Franco",
+     "D"
+    ],
+    [
+     "219471",
+     "Mauro Laínez",
+     "D"
+    ],
+    [
+     "291218",
+     "César Araujo",
+     "M"
+    ],
+    [
+     "245771",
+     "Juan Brunetta",
+     "M"
+    ],
+    [
+     "253830",
+     "Diego Lainez",
+     "M"
+    ],
+    [
+     "380171",
+     "Diego Sánchez",
+     "M"
+    ],
+    [
+     "200636",
+     "Fernando Gorriarán",
+     "M"
+    ],
+    [
+     "159042",
+     "Rodrigo Aguirre",
+     "F"
     ]
    ]
   }
@@ -266,16 +382,16 @@
    "ou_linea": 3.5,
    "ou": [
     135,
-    -180
+    -185
    ],
    "spread": [
     [
      "-0.5",
-     -190
+     -185
     ],
     [
      "+0.5",
-     135
+     130
     ]
    ]
   }
