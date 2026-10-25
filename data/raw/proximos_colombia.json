@@ -5,29 +5,145 @@
   "estadio": "Metropolitano de Techo",
   "local_espn": "Fortaleza CEIF",
   "visita_espn": "Deportivo Cali",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    210,
-    130
+    205,
+    195,
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    120,
     -155
    ],
    "spread": [
     [
      "+0.5",
-     -170
+     -185
     ],
     [
      "-0.5",
-     125
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Fortaleza CEIF": [
+    [
+     "285031",
+     "Williams Barlasina",
+     "G"
+    ],
+    [
+     "408101",
+     "Jeferson Medina",
+     "CD-L"
+    ],
+    [
+     "285359",
+     "Yesid Díaz",
+     "CD-R"
+    ],
+    [
+     "378918",
+     "Santiago Cuero",
+     "LB"
+    ],
+    [
+     "417801",
+     "Joan Cajares",
+     "RB"
+    ],
+    [
+     "170515",
+     "Leonardo Pico",
+     "CM"
+    ],
+    [
+     "413584",
+     "Santiago Vivas",
+     "LM"
+    ],
+    [
+     "200363",
+     "Sebastián Navarro",
+     "RM"
+    ],
+    [
+     "135017",
+     "Juan Sebastian Herrera",
+     "F"
+    ],
+    [
+     "378911",
+     "Jhonier Salas",
+     "LF"
+    ],
+    [
+     "292931",
+     "Franco Pulicastro",
+     "RF"
+    ]
+   ],
+   "Deportivo Cali": [
+    [
+     "150334",
+     "Pedro Gallese",
+     "G"
+    ],
+    [
+     "324044",
+     "Fernando Álvarez",
+     "CD-L"
+    ],
+    [
+     "322554",
+     "José Caldera",
+     "CD-R"
+    ],
+    [
+     "178817",
+     "Edwin Velasco",
+     "LB"
+    ],
+    [
+     "400754",
+     "Keimer Sandoval",
+     "RB"
+    ],
+    [
+     "222126",
+     "Nicolas Benedetti",
+     "AM"
+    ],
+    [
+     "251881",
+     "Leyser Chaverra",
+     "LM"
+    ],
+    [
+     "196719",
+     "Gustavo Cuéllar",
+     "RM"
+    ],
+    [
+     "285357",
+     "Steven Rodríguez",
+     "F"
+    ],
+    [
+     "144157",
+     "Eduard Bello",
+     "AM-L"
+    ],
+    [
+     "334205",
+     "Alexis Castillo Manyoma",
+     "AM-R"
     ]
    ]
   }
