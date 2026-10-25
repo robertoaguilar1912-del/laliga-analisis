@@ -274,6 +274,11 @@ details.xdet .xrow:last-child { border-bottom: 0; }
 .h2h-row .d { font-family: var(--font-data); font-size: 11.5px; color: var(--ink-3); }
 .h2h-row .s { font-family: var(--font-display); font-weight: 850; font-stretch: 80%; font-size: 18px; text-align: center; min-width: 52px; }
 .h2h-row .a { text-align: right; }
+.h2h-row .gan { font-weight: 700; }
+.hist .toggle { margin: 4px 0 10px; }
+.hist h3 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; vertical-align: middle; margin-right: 2px; }
+.hist-sum { font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
+.hist-sum b { font-family: var(--font-data); color: var(--ink); font-weight: 700; }
 .fatigue { display: grid; gap: 6px; font-size: 13.5px; color: var(--ink-2); }
 .fatigue b { color: var(--ink); }
 .btn { font-family: var(--font-data); font-size: 12.5px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 7px 12px; cursor: pointer; white-space: nowrap; }
@@ -714,6 +719,22 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<div class="plist">${t.forma.map(g => `<div class="pr"><span>${formHTML(g.res)} ${g.local ? 'vs' : 'en'} ${esc(g.rival)} <small>${fdate(g.fecha)}</small></span>
       <span class="mono">${g.gf}-${g.gc}${g.xf == null ? '' : ` <small>xG ${g.xf.toFixed(1)}-${g.xc == null ? '—' : g.xc.toFixed(1)}</small>`}</span></div>`).join('')}</div>`;
   }
+  // goles de una lista de marcadores [[a, b], ...]: promedio, más de 2.5 y ambos anotan
+  function resumenGoles(ms) {
+    if (!ms.length) return '';
+    const n = ms.length, tot = ms.reduce((a, [x, y]) => a + x + y, 0), o25 = ms.filter(([x, y]) => x + y > 2.5).length, bt = ms.filter(([x, y]) => x > 0 && y > 0).length;
+    return `<p class="hist-sum">Goles por partido <b>${(tot / n).toFixed(1)}</b> · Más de 2.5 <b>${o25} de ${n}</b> · Ambos anotan <b>${bt} de ${n}</b></p>`;
+  }
+  function histEquipoHTML(t, f) {
+    const todos = t.ultimos || [];
+    const xs = todos.filter(g => f === 'todos' || (f === 'casa' ? g.local : !g.local)).slice(0, 10);
+    if (!xs.length) return `<p class="empty">${todos.length ? 'Sin partidos ' + (f === 'casa' ? 'en casa' : 'fuera') + ' en los datos.' : 'Sin partidos en los datos.'}</p>`;
+    const g = xs.filter(x => x.gf > x.gc).length, e = xs.filter(x => x.gf === x.gc).length, p = xs.length - g - e;
+    const gf = xs.reduce((a, x) => a + x.gf, 0) / xs.length, gc = xs.reduce((a, x) => a + x.gc, 0) / xs.length, cero = xs.filter(x => x.gc === 0).length;
+    return `<div class="h2h-sum"><span class="tag">${g} G · ${e} E · ${p} P</span><span class="tag">Goles ${gf.toFixed(1)} a favor · ${gc.toFixed(1)} en contra</span><span class="tag">Portería a cero ${cero} de ${xs.length}</span></div>
+      ${resumenGoles(xs.map(x => [x.gf, x.gc]))}
+      <div class="plist">${xs.map(x => `<div class="pr"><span>${formHTML(x.res)} ${x.local ? 'vs' : 'en'} ${esc(x.rival)} <small>${fdate(x.fecha, { day: 'numeric', month: 'short', year: '2-digit' })}${x.comp !== I.nombre ? ' · ' + esc(x.comp) : ''}</small></span><span class="mono">${x.gf}-${x.gc}</span></div>`).join('')}</div>`;
+  }
   function absencesHTML(t) {
     const rows = [], ape = n => String(n || '').split(' ').pop().toLowerCase(), enLista = n => (t.lesiones || []).some(s => ape(s.nombre) === ape(n));
     (t.lesiones || []).forEach(s => rows.push(`<div class="pr"><span>${s.importante ? '<b>' : ''}${esc(s.nombre)}${s.importante ? '</b>' : ''} <small>${esc(s.motivo)}${s.importante ? ' · importante' : ''}</small></span><span class="flag ${/missing|out|baja/i.test(s.tipo) ? 'out' : 'doubt'}${s.importante ? ' imp' : ''}">${/missing|out|baja/i.test(s.tipo) ? 'Baja' : 'Duda'} · ${esc(s.fuente || 'parte oficial')}</span></div>`));
@@ -865,7 +886,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.total.pj ? ta.posicion + 'º · ' + ta.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_visita)}</div>
         </div>
         <div class="subtabs" role="tablist">
-          ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'Historial', 'Mercados'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
+          ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'H2H e historial', 'Mercados'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
         </div>
       </div>
 
@@ -909,7 +930,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
       <div class="pane" data-pane="1" hidden>
         <div class="card">
-          <div class="toggle" role="group" aria-label="Partidos a comparar">
+          <div class="toggle" id="cmp-t" role="group" aria-label="Partidos a comparar">
             <button aria-pressed="true" data-split="total">Toda la temporada</button>
             <button aria-pressed="false" data-split="ha">${esc(m.local_es)} en casa · ${esc(m.visita_es)} fuera</button>
           </div>
@@ -940,12 +961,21 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 
       <div class="pane" data-pane="3" hidden>
         <div class="card">
-          <h3>Últimos enfrentamientos</h3>
+          <h3>H2H · enfrentamientos directos</h3>
           ${h2h.length ? `<div class="h2h-sum"><span class="tag">${esc(m.local_es)} ganó ${w.l}</span><span class="tag">Empates ${w.e}</span><span class="tag">${esc(m.visita_es)} ganó ${w.v}</span></div>
-          <div>${h2h.map(g => `<div class="h2h-row"><span class="d">${fdate(g.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}${g.div !== I.nombre ? ' · ' + esc(g.div) : ''}</span><span>${esc(g.local)}</span><span class="s">${g.gl}-${g.gv}</span><span class="a">${esc(g.visita)}</span></div>`).join('')}</div>`
+          ${resumenGoles(h2h.map(g => [g.gl, g.gv]))}
+          <div>${h2h.map(g => `<div class="h2h-row"><span class="d">${fdate(g.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}${g.div !== I.nombre ? ' · ' + esc(g.div) : ''}</span><span class="${g.gl > g.gv ? 'gan' : ''}">${esc(g.local)}</span><span class="s">${g.gl}-${g.gv}</span><span class="a ${g.gv > g.gl ? 'gan' : ''}">${esc(g.visita)}</span></div>`).join('')}</div>`
           : `<p class="empty">No se enfrentaron en ${esc(I.h2h_divs.join(' ni en '))} desde ${I.h2h_desde}.</p>`}
-          <p class="note">Partidos desde ${I.h2h_desde} (${esc(I.h2h_divs.join(' y '))}). El historial pesa poco en el modelo: los planteles cambian mucho.</p>
+          <p class="note">Los últimos ${h2h.length > 1 ? h2h.length + ' partidos' : 'partidos'} entre los dos, desde ${I.h2h_desde} (${esc(I.h2h_divs.join(', '))}). El historial pesa poco en el modelo: los planteles cambian mucho.</p>
         </div>
+        <div class="grid2">
+          ${[['l', th, m.local_es, 'var(--home)'], ['v', ta, m.visita_es, 'var(--away)']].map(([lado, t, nm, c]) => `<div class="card hist" data-lado="${lado}">
+            <h3><span class="dot" style="background:${c}"></span> Últimos 10 · ${esc(nm)}</h3>
+            <div class="toggle" role="group" aria-label="Partidos de ${esc(nm)}"><button aria-pressed="true" data-f="todos">Todos</button><button aria-pressed="false" data-f="casa">En casa</button><button aria-pressed="false" data-f="fuera">Fuera</button></div>
+            <div class="hist-body"></div>
+          </div>`).join('')}
+        </div>
+        <p class="note">Incluye ${esc(I.h2h_divs.join(', '))}; no las copas nacionales (Copa del Rey, FA Cup, Copa do Brasil...). Con los filtros ves solo los partidos en casa o solo los de fuera.</p>
       </div>
 
       <div class="pane" data-pane="4" hidden>
@@ -992,7 +1022,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       $$('.pane[data-pane]', el).forEach(p => { p.hidden = p.dataset.pane !== b.dataset.p; });
     }));
     const renderCmp = split => { $('#cmp', el).innerHTML = split === 'ha' ? cmpHTML(th.casa, ta.fuera, m.local_es + ' (casa)', m.visita_es + ' (fuera)') : cmpHTML(th.total, ta.total, m.local_es, m.visita_es); };
-    $$('.toggle button', el).forEach(b => b.addEventListener('click', () => { $$('.toggle button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderCmp(b.dataset.split); }));
+    $$('#cmp-t button', el).forEach(b => b.addEventListener('click', () => { $$('#cmp-t button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderCmp(b.dataset.split); }));
+    // historial de cada equipo: todos, solo en casa o solo fuera
+    $$('.hist', el).forEach(card => {
+      const t = card.dataset.lado === 'l' ? th : ta, body = $('.hist-body', card);
+      const pinta = f => { body.innerHTML = histEquipoHTML(t, f); };
+      $$('.toggle button', card).forEach(b => b.addEventListener('click', () => { $$('.toggle button', card).forEach(x => x.setAttribute('aria-pressed', String(x === b))); pinta(b.dataset.f); }));
+      pinta('todos');
+    });
     renderCmp('total');
     const sel = $('#calc-sel', el), lin = $('#calc-linea', el), inp = $('#calc-odds', el), out = $('.calc-out', el);
     const leerL = () => { const v = parseFloat(String(lin.value).replace(',', '.').replace('−', '-')); return isFinite(v) ? v : null; };
