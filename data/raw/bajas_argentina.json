@@ -1,7 +1,7 @@
 {
 "401841634": {
 "fotmob": 1000019603,
-"visto": "2026-10-25T23:19+00:00",
+"visto": "2026-10-25T23:51+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -92,7 +92,7 @@
 },
 "401841640": {
 "fotmob": 1000019601,
-"visto": "2026-10-25T23:19+00:00",
+"visto": "2026-10-25T23:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -174,19 +174,10 @@
 },
 "401841639": {
 "fotmob": 1000019591,
-"visto": "2026-10-25T23:19+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-25T23:51+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Santiago Moyano",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 634395.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Fernando Juárez",
 "tipo": "Lesión",
@@ -195,10 +186,19 @@
 "valor": 577800.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Felipe Aguilar",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 464657.0,
+"titular": false,
+"importante": true
 }
 ],
-"valor_xi": 6452060.0,
-"perdida": 0.1878772051096859,
+"valor_xi": 4630942.0,
+"perdida": 0.2251069004967024,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -211,19 +211,10 @@
 "valor": 1763106.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Matías Pellegrini",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1019691.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 12353485.0,
-"perdida": 0.1427213454341022,
+"valor_xi": 13373176.0,
+"perdida": 0.13183898873386546,
 "perdida_duda": 0.0
 }
 },
