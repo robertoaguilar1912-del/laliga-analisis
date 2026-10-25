@@ -1,75 +1,5 @@
 [
  {
-  "id": "401873017",
-  "utc": "2026-10-25T17:00Z",
-  "estadio": "Mercedes-Benz Stadium",
-  "local_espn": "Atlanta Falcons",
-  "visita_espn": "San Francisco 49ers",
-  "local_abbr": "ATL",
-  "visita_abbr": "SF",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873013",
-  "utc": "2026-10-25T17:00Z",
-  "estadio": "Nissan Stadium",
-  "local_espn": "Tennessee Titans",
-  "visita_espn": "Cleveland Browns",
-  "local_abbr": "TEN",
-  "visita_abbr": "CLE",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873015",
-  "utc": "2026-10-25T17:00Z",
-  "estadio": "MetLife Stadium",
-  "local_espn": "New York Jets",
-  "visita_espn": "Miami Dolphins",
-  "local_abbr": "NYJ",
-  "visita_abbr": "MIA",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873012",
-  "utc": "2026-10-25T17:00Z",
-  "estadio": "M&T Bank Stadium",
-  "local_espn": "Baltimore Ravens",
-  "visita_espn": "Cincinnati Bengals",
-  "local_abbr": "BAL",
-  "visita_abbr": "CIN",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873016",
-  "utc": "2026-10-25T17:00Z",
-  "estadio": "Reliant Stadium",
-  "local_espn": "Houston Texans",
-  "visita_espn": "New York Giants",
-  "local_abbr": "HOU",
-  "visita_abbr": "NYG",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873019",
   "utc": "2026-10-25T20:05Z",
   "estadio": "State Farm Stadium",
@@ -78,33 +8,10 @@
   "local_abbr": "ARI",
   "visita_abbr": "DEN",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 7,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    195,
-    -238
-   ],
-   "ml_abre": [
-    285,
-    -360
-   ],
-   "spread": [
-    4.5,
-    -108,
-    -4.5,
-    -112
-   ],
-   "spread_abre": 7.5,
-   "total": [
-    44.5,
-    -105,
-    -115
-   ],
-   "total_abre": 43.5
-  }
+  "momios": null
  },
  {
   "id": "401873020",
@@ -115,33 +22,10 @@
   "local_abbr": "DET",
   "visita_abbr": "GB",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 7,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -192,
-    160
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    -3.5,
-    -112,
-    3.5,
-    -108
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    55.5,
-    -108,
-    -112
-   ],
-   "total_abre": 50.5
-  }
+  "momios": null
  },
  {
   "id": "401873021",
@@ -152,33 +36,10 @@
   "local_abbr": "LV",
   "visita_abbr": "LAR",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 7,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    150,
-    -180
-   ],
-   "ml_abre": [
-    285,
-    -360
-   ],
-   "spread": [
-    3.5,
-    -120,
-    -3.5,
-    100
-   ],
-   "spread_abre": 7.5,
-   "total": [
-    48.5,
-    -115,
-    -105
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401873022",
@@ -211,8 +72,8 @@
    "spread_abre": -3.0,
    "total": [
     42.5,
-    -110,
-    -110
+    -112,
+    -108
    ],
    "total_abre": 45.5
   }
