@@ -5,25 +5,25 @@
   "estadio": "Carlos Belmonte",
   "local_espn": "Albacete",
   "visita_espn": "Eldense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     135,
-    240,
-    195
+    230,
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    105
+    -120,
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
@@ -154,7 +154,7 @@
   "estadio": "Nuevo Mirandilla",
   "local_espn": "Cádiz",
   "visita_espn": "Ceuta",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -315,8 +315,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    115
+    -160,
+    120
    ],
    "spread": [
     [
@@ -325,7 +325,7 @@
     ],
     [
      "+1.5",
-     -185
+     -180
     ]
    ]
   }
@@ -449,7 +449,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    205,
+    155
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -215
+    ],
+    [
+     "-0.5",
+     140
+    ]
+   ]
+  }
  },
  {
   "id": "401883124",
@@ -460,7 +482,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    230,
+    210
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     110
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401883125",

@@ -1,154 +1,5 @@
 [
  {
-  "id": "401876425",
-  "utc": "2026-10-25T14:00Z",
-  "estadio": "Stade Louis II",
-  "local_espn": "AS Monaco",
-  "visita_espn": "Lille",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-ligue-1",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    260,
-    310
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -135,
-    105
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -125
-    ],
-    [
-     "+0.5",
-     -115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "AS Monaco": [
-    [
-     "310640",
-     "Vanderson",
-     "SUB"
-    ],
-    [
-     "195501",
-     "Aleksandr Golovin",
-     "SUB"
-    ],
-    [
-     "134169",
-     "Lukas Hradecky",
-     "SUB"
-    ],
-    [
-     "362288",
-     "Sadibou Sané",
-     "SUB"
-    ],
-    [
-     "38721",
-     "Lamine Camara",
-     "SUB"
-    ],
-    [
-     "292957",
-     "Ansu Fati",
-     "SUB"
-    ],
-    [
-     "222628",
-     "Denis Zakaria",
-     "SUB"
-    ],
-    [
-     "316559",
-     "Názinho",
-     "SUB"
-    ],
-    [
-     "240660",
-     "Jordan Teze",
-     "SUB"
-    ],
-    [
-     "365789",
-     "Paris Brunner",
-     "SUB"
-    ],
-    [
-     "208518",
-     "Mamadou Coulibaly",
-     "SUB"
-    ]
-   ],
-   "Lille": [
-    [
-     "257267",
-     "Berke Özer",
-     "G"
-    ],
-    [
-     "340900",
-     "Alexsandro",
-     "D"
-    ],
-    [
-     "318577",
-     "Nathan Ngoy",
-     "D"
-    ],
-    [
-     "250853",
-     "Romain Perraud",
-     "D"
-    ],
-    [
-     "290165",
-     "Tanguy Nianzou",
-     "D"
-    ],
-    [
-     "123683",
-     "Benjamin André",
-     "M"
-    ],
-    [
-     "179187",
-     "Nabil Bentaleb",
-     "M"
-    ],
-    [
-     "318779",
-     "Hákon Haraldsson",
-     "M"
-    ],
-    [
-     "345988",
-     "Ngal'ayel Mukau",
-     "M"
-    ],
-    [
-     "355971",
-     "Ethan Mbappé",
-     "M"
-    ],
-    [
-     "400352",
-     "Soriba Diaoune",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401876429",
   "utc": "2026-10-25T16:15Z",
   "estadio": "Stade de l'Abbé-Deschamps",
@@ -166,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    115
+    -140,
+    110
    ],
    "spread": [
     [
@@ -177,6 +28,122 @@
     [
      "+0.5",
      -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AJ Auxerre": [
+    [
+     "159312",
+     "Paul Nardi",
+     "G"
+    ],
+    [
+     "229524",
+     "Axel Tuanzebe",
+     "CD"
+    ],
+    [
+     "344520",
+     "Clément Akpa",
+     "CD-L"
+    ],
+    [
+     "362476",
+     "Christ Makosso",
+     "CD-R"
+    ],
+    [
+     "323722",
+     "Kévin Danois",
+     "CM-L"
+    ],
+    [
+     "297775",
+     "Naouirou Ahamada",
+     "CM-R"
+    ],
+    [
+     "310134",
+     "Fredrik Oppegard",
+     "LM"
+    ],
+    [
+     "335320",
+     "Lamine Sy",
+     "RM"
+    ],
+    [
+     "293347",
+     "Cameron Archer",
+     "F"
+    ],
+    [
+     "243748",
+     "Danny Namaso",
+     "CF-L"
+    ],
+    [
+     "268591",
+     "Romain Faivre",
+     "CF-R"
+    ]
+   ],
+   "Le Mans": [
+    [
+     "233308",
+     "Nicolas Kocik",
+     "G"
+    ],
+    [
+     "223117",
+     "Samuel Yohou",
+     "CD"
+    ],
+    [
+     "310024",
+     "Raúl Torrente",
+     "CD-L"
+    ],
+    [
+     "30302",
+     "Djibril Sidibé",
+     "CD-R"
+    ],
+    [
+     "287606",
+     "Alexandre Lauray",
+     "CM-L"
+    ],
+    [
+     "330722",
+     "Lucas Bretelle",
+     "CM-R"
+    ],
+    [
+     "331636",
+     "Lucas Calodat",
+     "LM"
+    ],
+    [
+     "262482",
+     "Lucas Buades",
+     "RM"
+    ],
+    [
+     "268720",
+     "Louis Mafouta",
+     "F"
+    ],
+    [
+     "223376",
+     "Habib Diallo",
+     "CF-L"
+    ],
+    [
+     "232335",
+     "Antoine Rabillard",
+     "CF-R"
     ]
    ]
   }
@@ -193,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
+    215,
     230,
-    140
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    -105,
     -125
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -165
     ],
     [
      "-0.5",
-     130
+     120
     ]
    ]
   },
@@ -349,7 +316,7 @@
    "ou_linea": 3.5,
    "ou": [
     115,
-    -145
+    -150
    ],
    "spread": [
     [
@@ -359,6 +326,122 @@
     [
      "+1.5",
      -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Marseille": [
+    [
+     "228707",
+     "Jeffrey de Lange",
+     "G"
+    ],
+    [
+     "245243",
+     "Nayef Aguerd",
+     "D"
+    ],
+    [
+     "159051",
+     "Emerson",
+     "D"
+    ],
+    [
+     "307115",
+     "CJ Egan-Riley",
+     "D"
+    ],
+    [
+     "266027",
+     "Timothy Weah",
+     "D"
+    ],
+    [
+     "343114",
+     "Tochukwu Nnadi",
+     "M"
+    ],
+    [
+     "289114",
+     "Igor Paixão",
+     "M"
+    ],
+    [
+     "159543",
+     "Pierre-Emile Højbjerg",
+     "M"
+    ],
+    [
+     "277525",
+     "Himad Abdelli",
+     "M"
+    ],
+    [
+     "238917",
+     "Amine Harit",
+     "M"
+    ],
+    [
+     "259743",
+     "Amine Gouiri",
+     "F"
+    ]
+   ],
+   "Le Havre AC": [
+    [
+     "190293",
+     "Gauthier Gallon",
+     "G"
+    ],
+    [
+     "291982",
+     "Rassoul Ndiaye",
+     "SUB"
+    ],
+    [
+     "340583",
+     "Junior Mwanga",
+     "SUB"
+    ],
+    [
+     "411169",
+     "Enzo Koffi",
+     "SUB"
+    ],
+    [
+     "246847",
+     "Ahmed Touba",
+     "SUB"
+    ],
+    [
+     "3132216",
+     "Djibril Ouziad",
+     "SUB"
+    ],
+    [
+     "258270",
+     "Ayumu Seko",
+     "SUB"
+    ],
+    [
+     "401045",
+     "Rayan Fofana",
+     "SUB"
+    ],
+    [
+     "346519",
+     "Simon Ebonog",
+     "SUB"
+    ],
+    [
+     "319285",
+     "Amir Richardson",
+     "SUB"
+    ],
+    [
+     "231366",
+     "Mbwana Samatta",
+     "SUB"
     ]
    ]
   }
@@ -375,23 +458,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    320,
-    300
+    -120,
+    300,
+    295
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    130,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -135
     ],
     [
      "+0.5",
-     100
+     -105
     ]
    ]
   },
@@ -524,9 +607,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -190,
-    350,
-    500
+    -180,
+    340,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -536,11 +619,11 @@
    "spread": [
     [
      "-1.5",
-     130
+     140
     ],
     [
      "+1.5",
-     -185
+     -195
     ]
    ]
   },

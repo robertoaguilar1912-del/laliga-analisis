@@ -5,7 +5,7 @@
   "estadio": "PreZero Arena",
   "local_espn": "TSG Hoffenheim",
   "visita_espn": "Bayer Leverkusen",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -167,16 +167,132 @@
    "ou_linea": 3.5,
    "ou": [
     -130,
-    100
+    105
    ],
    "spread": [
     [
      "+1.5",
-     -160
+     -155
     ],
     [
      "-1.5",
-     115
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "SC Freiburg": [
+    [
+     "338852",
+     "Mio Backhaus",
+     "G"
+    ],
+    [
+     "219316",
+     "Philipp Lienhart",
+     "CD-L"
+    ],
+    [
+     "170209",
+     "Matthias Ginter",
+     "CD-R"
+    ],
+    [
+     "367558",
+     "Jordy Makengo",
+     "LB"
+    ],
+    [
+     "364596",
+     "Philipp Treu",
+     "RB"
+    ],
+    [
+     "303031",
+     "Yuito Suzuki",
+     "AM"
+    ],
+    [
+     "291203",
+     "Patrick Osterhage",
+     "LM"
+    ],
+    [
+     "214203",
+     "Maximilian Eggestein",
+     "RM"
+    ],
+    [
+     "238525",
+     "Lucas Höler",
+     "F"
+    ],
+    [
+     "346619",
+     "Derry Scherhant",
+     "AM-L"
+    ],
+    [
+     "231190",
+     "Niklas Beste",
+     "AM-R"
+    ]
+   ],
+   "Bayern Munich": [
+    [
+     "323790",
+     "Jonas Urbig",
+     "G"
+    ],
+    [
+     "120829",
+     "Nathaniel Brown",
+     "D"
+    ],
+    [
+     "276329",
+     "Josip Stanisic",
+     "D"
+    ],
+    [
+     "222793",
+     "Dayot Upamecano",
+     "D"
+    ],
+    [
+     "188052",
+     "Jonathan Tah",
+     "D"
+    ],
+    [
+     "178980",
+     "Serge Gnabry",
+     "M"
+    ],
+    [
+     "402841",
+     "Lennart Karl",
+     "M"
+    ],
+    [
+     "286831",
+     "Michael Olise",
+     "M"
+    ],
+    [
+     "324660",
+     "Tom Bischof",
+     "M"
+    ],
+    [
+     "169189",
+     "Konrad Laimer",
+     "M"
+    ],
+    [
+     "142200",
+     "Harry Kane",
+     "F"
     ]
    ]
   }
