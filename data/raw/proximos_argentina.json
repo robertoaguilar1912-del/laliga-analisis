@@ -5,29 +5,29 @@
   "estadio": "Estadio Libertadores de América",
   "local_espn": "Independiente",
   "visita_espn": "Boca Juniors",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    300,
-    210,
-    105
+    320,
+    220,
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
-    140,
+    135,
     -185
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -125
     ],
     [
      "-0.5",
-     -105
+     -110
     ]
    ]
   },
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -205,
-    320,
-    550
+    -210,
+    330,
+    600
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -125,
+    -110
    ],
    "spread": [
     [
      "-1.5",
-     145
+     135
     ],
     [
      "+1.5",
-     -200
+     -190
     ]
    ]
   }
@@ -292,9 +292,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    210,
-    390
+    -125,
+    215,
+    400
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -304,11 +304,11 @@
    "spread": [
     [
      "-0.5",
-     -130
+     -135
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   }

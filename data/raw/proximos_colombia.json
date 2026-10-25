@@ -5,7 +5,7 @@
   "estadio": "Metropolitano de Techo",
   "local_espn": "Fortaleza CEIF",
   "visita_espn": "Deportivo Cali",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    215,
-    220
+    115,
+    220,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    -105,
     -130
    ],
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
-     -160
+     -150
     ]
    ]
   }
