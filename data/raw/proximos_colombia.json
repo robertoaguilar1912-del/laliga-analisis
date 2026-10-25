@@ -5,7 +5,7 @@
   "estadio": "Armando Maestre Pavajeau",
   "local_espn": "Alianza FC",
   "visita_espn": "Internacional de Bogotá",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -260,13 +260,13 @@
    "casa": "DraftKings",
    "ml": [
     -115,
-    220,
-    295
+    230,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -150
+    100,
+    -145
    ],
    "spread": [
     [
@@ -355,7 +355,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -210,
+    295,
+    475
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     130
+    ],
+    [
+     "+1.5",
+     -200
+    ]
+   ]
+  }
  },
  {
   "id": "401877878",
