@@ -5,7 +5,7 @@
   "estadio": "Estádio da Madeira",
   "local_espn": "C.D. Nacional",
   "visita_espn": "Braga",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio do Rio Ave",
   "local_espn": "Rio Ave",
   "visita_espn": "FC Famalicao",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -309,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -450,
-    600,
-    1000
+    -425,
+    550,
+    850
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -115
+    100,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     -170
+     -150
     ],
     [
      "+1.5",
-     120
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Sporting CP": [
+    [
+     "332352",
+     "Kaique",
+     "G"
+    ],
+    [
+     "105237",
+     "Ibrahima Ba",
+     "D"
+    ],
+    [
+     "304106",
+     "Gonçalo Inácio",
+     "D"
+    ],
+    [
+     "287025",
+     "Maxi Araújo",
+     "D"
+    ],
+    [
+     "333209",
+     "Iván Fresneda",
+     "D"
+    ],
+    [
+     "361429",
+     "Luis Guilherme",
+     "M"
+    ],
+    [
+     "386592",
+     "Issa Doumbia",
+     "M"
+    ],
+    [
+     "328535",
+     "Nestory Irankunda",
+     "M"
+    ],
+    [
+     "414123",
+     "Flávio Gonçalves",
+     "M"
+    ],
+    [
+     "331426",
+     "Sergi Altimira",
+     "M"
+    ],
+    [
+     "272722",
+     "Luis Suárez",
+     "F"
+    ]
+   ],
+   "Académico de Viseu": [
+    [
+     "286700",
+     "Ewerton",
+     "G"
+    ],
+    [
+     "278901",
+     "Niklaos Michelis",
+     "D"
+    ],
+    [
+     "286966",
+     "Robinho",
+     "D"
+    ],
+    [
+     "340205",
+     "Miguel Ángel Brau",
+     "D"
+    ],
+    [
+     "303126",
+     "Anthony Correia",
+     "D"
+    ],
+    [
+     "192419",
+     "Luís Silva",
+     "M"
+    ],
+    [
+     "321256",
+     "Soufiane Messeguem",
+     "M"
+    ],
+    [
+     "297367",
+     "Nils Mortimer",
+     "M"
+    ],
+    [
+     "384207",
+     "João Guilherme",
+     "M"
+    ],
+    [
+     "233987",
+     "Cihan Kahraman",
+     "M"
+    ],
+    [
+     "270648",
+     "André Clóvis",
+     "F"
     ]
    ]
   }

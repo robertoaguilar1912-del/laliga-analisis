@@ -35,6 +35,16 @@
  ],
  "Brooklyn Nets": [
   {
+   "id": "5105626",
+   "nombre": "Tyler Bilodeau",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-10-25",
+   "tipo": "Shoulder",
+   "regreso": "2026-10-27",
+   "nota": "Bilodeau (shoulder) has been ruled out for Sunday's game against Indiana."
+  },
+  {
    "id": "5101761",
    "nombre": "Mikel Brown Jr.",
    "pos": "G",
@@ -43,16 +53,6 @@
    "tipo": "Rest",
    "regreso": "2026-10-27",
    "nota": "Head coach Jordi Fernandez said Brown (rest) will be held out of Sunday's game against the Pacers, Brian Lewis of the New York Post reports."
-  },
-  {
-   "id": "5105626",
-   "nombre": "Tyler Bilodeau",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-23",
-   "tipo": "Shoulder",
-   "regreso": "2026-10-25",
-   "nota": "Bilodeau (shoulder) has been ruled out for Saturday's game in Cleveland."
   }
  ],
  "Charlotte Hornets": [
@@ -102,21 +102,21 @@
    "id": "4431687",
    "nombre": "Patrick Williams",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Groin",
    "regreso": "2026-10-26",
-   "nota": "Williams (groin) is out for Saturday's game versus the Wizards, Joel Lorenzi of The Athletic reports."
+   "nota": "Williams (groin) is listed as questionable for Monday's game against Boston."
   },
   {
    "id": "5242496",
    "nombre": "Noa Essengue",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Head",
    "regreso": "2026-10-26",
-   "nota": "Essengue (head) won't suit up for Saturday's game against the Wizards, Joel Lorenzi of The Athletic reports."
+   "nota": "Essengue (head) is listed as questionable for Monday's game against Boston."
   },
   {
    "id": "4278067",
@@ -134,8 +134,8 @@
    "id": "6442",
    "nombre": "Kyrie Irving",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Knee",
    "regreso": "2026-10-26",
    "nota": "Irving is out for Saturday's game against the Spurs due to rest, Christian Clark of The Athletic reports."
@@ -193,34 +193,34 @@
  ],
  "Denver Nuggets": [
   {
-   "id": "4065813",
-   "nombre": "Alpha Diallo",
+   "id": "4592427",
+   "nombre": "Spencer Jones",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-10-25",
-   "tipo": "Wrist",
+   "tipo": "Hamstring",
    "regreso": "2026-10-26",
-   "nota": "Diallo (wrist) won't play Saturday against the Pelicans."
+   "nota": "Jones (hamstring) is out for Saturday's game against the Pelicans."
   },
   {
    "id": "3138196",
    "nombre": "Cameron Johnson",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Ankle",
    "regreso": "2026-10-26",
    "nota": "Head coach David Aldeman said that Johnson is \"day-to-day\" due to his sprained right ankle, Vinny Benedetto of The Denver Gazette reports."
   },
   {
-   "id": "4592427",
-   "nombre": "Spencer Jones",
+   "id": "4065813",
+   "nombre": "Alpha Diallo",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-23",
-   "tipo": "Hamstring",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Wrist",
    "regreso": "2026-10-26",
-   "nota": "Jones (hamstring) is out for Saturday's game against the Pelicans."
+   "nota": "Diallo (wrist) won't play Saturday against the Pelicans."
   },
   {
    "id": "4432181",
@@ -239,23 +239,63 @@
    "nombre": "Ausar Thompson",
    "pos": "G",
    "estado": "Day-To-Day",
-   "fecha": "2026-10-24",
+   "fecha": "2026-10-25",
    "tipo": "Ankle",
    "regreso": "2026-10-25",
-   "nota": "Thompson (ankle) is listed as questionable for Sunday's game against Philadelphia."
+   "nota": "Thompson (ankle) did not participate in Sunday morning's shootaround, Coty M. Davis of The Detroit News reports."
   },
   {
    "id": "4433621",
    "nombre": "Jalen Duren",
    "pos": "C",
    "estado": "Out",
-   "fecha": "2026-10-24",
+   "fecha": "2026-10-25",
    "tipo": "Hamstring",
-   "regreso": "2026-10-27",
-   "nota": "Duren has been ruled out for Sunday's game against the 76ers due to a right hamstring strain, Eric Vincent of ClutchPoints.com reports."
+   "regreso": "2026-11-09",
+   "nota": "Duren will be re-evaluated in two weeks due to a right hamstring strain, Eric Vincent of ClutchPoints.com reports."
   }
  ],
  "Golden State Warriors": [
+  {
+   "id": "4709138",
+   "nombre": "Brandin Podziemski",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Back",
+   "regreso": "2026-10-26",
+   "nota": "Podziemski (back) told reporters Friday that he will not play in the second leg of the Warriors' back-to-back set Saturday against the Suns, Nick Friedell of The Athletic reports."
+  },
+  {
+   "id": "3213",
+   "nombre": "Al Horford",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Back",
+   "regreso": "2026-10-26",
+   "nota": "Horford (back) has been ruled out for Saturday's game against the Suns."
+  },
+  {
+   "id": "6589",
+   "nombre": "Draymond Green",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Back",
+   "regreso": "2026-10-26",
+   "nota": "Green (back) won't play Saturday in Phoenix."
+  },
+  {
+   "id": "3975",
+   "nombre": "Stephen Curry",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Rest",
+   "regreso": "2026-10-26",
+   "nota": "Curry (rest) won't play Saturday against the Suns."
+  },
   {
    "id": "4997536",
    "nombre": "Gui Santos",
@@ -265,46 +305,6 @@
    "tipo": "Undisclosed",
    "regreso": "2026-10-26",
    "nota": "Santos exited Saturday's 131-122 loss to the Suns with an undisclosed injury and did not return, Anthony Slater of ESPN.com reports."
-  },
-  {
-   "id": "6589",
-   "nombre": "Draymond Green",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-25",
-   "tipo": "Back",
-   "regreso": "2026-10-26",
-   "nota": "Green (back) won't play Saturday in Phoenix."
-  },
-  {
-   "id": "3213",
-   "nombre": "Al Horford",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-24",
-   "tipo": "Back",
-   "regreso": "2026-10-26",
-   "nota": "Horford (back) has been ruled out for Saturday's game against the Suns."
-  },
-  {
-   "id": "3975",
-   "nombre": "Stephen Curry",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-24",
-   "tipo": "Rest",
-   "regreso": "2026-10-26",
-   "nota": "Curry (rest) won't play Saturday against the Suns."
-  },
-  {
-   "id": "4709138",
-   "nombre": "Brandin Podziemski",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-24",
-   "tipo": "Back",
-   "regreso": "2026-10-26",
-   "nota": "Podziemski (back) told reporters Friday that he will not play in the second leg of the Warriors' back-to-back set Saturday against the Suns, Nick Friedell of The Athletic reports."
   },
   {
    "id": "3102531",
@@ -339,11 +339,21 @@
  ],
  "Houston Rockets": [
   {
+   "id": "2991230",
+   "nombre": "Fred VanVleet",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
+   "tipo": "Knee",
+   "regreso": "2026-10-26",
+   "nota": "VanVleet (knee) has been ruled out for Saturday's game against the Hawks."
+  },
+  {
    "id": "2990992",
    "nombre": "Marcus Smart",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Forearm",
    "regreso": "2026-10-26",
    "nota": "Smart (forearm) has been ruled out for Saturday's game against the Hawks, Varun Shankar of the Houston Chronicle reports."
@@ -352,21 +362,11 @@
    "id": "2991235",
    "nombre": "Steven Adams",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Ankle",
    "regreso": "2026-10-26",
    "nota": "Adams (ankle) has been ruled out for Saturday's game against the Hawks."
-  },
-  {
-   "id": "2991230",
-   "nombre": "Fred VanVleet",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-24",
-   "tipo": "Knee",
-   "regreso": "2026-10-26",
-   "nota": "VanVleet (knee) has been ruled out for Saturday's game against the Hawks."
   }
  ],
  "Indiana Pacers": [
@@ -629,44 +629,34 @@
  ],
  "Philadelphia 76ers": [
   {
-   "id": "3059318",
-   "nombre": "Joel Embiid",
+   "id": "3904625",
+   "nombre": "Tacko Fall",
    "pos": "C",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-10-25",
-   "tipo": "Rest",
-   "regreso": "2026-10-25",
-   "nota": "Embiid produced 28 points (8-20 FG, 0-3 3Pt, 12-14 FT), 11 rebounds, 10 assists, one steal and four turnovers across 36 minutes in Saturday's 127-116 win over the Bucks."
+   "tipo": "Quadriceps",
+   "regreso": "2026-10-28",
+   "nota": "Fall (quadriceps) has been ruled out for Sunday's game against Detroit."
   },
   {
    "id": "4432446",
    "nombre": "Jabari Walker",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-10-25",
    "tipo": "Knee",
-   "regreso": "2026-10-25",
-   "nota": "Walker (ankle) exited Saturday's 127-116 win over the Bucks in the third quarter and did not return, finishing with six points (2-3 FG, 2-3 FT), three rebounds, one assist and one steal across 12 minutes."
+   "regreso": "2026-10-28",
+   "nota": "Walker has been ruled out for Sunday's game against the Pistons due to left knee soreness."
   },
   {
-   "id": "1966",
-   "nombre": "LeBron James",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-24",
-   "tipo": "Back",
-   "regreso": "2026-10-25",
-   "nota": "James (back) has been ruled out for Saturday's game against the Bucks, Adam Aaronson of PhillyVoice.com reports."
-  },
-  {
-   "id": "3904625",
-   "nombre": "Tacko Fall",
+   "id": "3059318",
+   "nombre": "Joel Embiid",
    "pos": "C",
    "estado": "Out",
-   "fecha": "2026-10-23",
-   "tipo": "Quadriceps",
-   "regreso": "2026-10-25",
-   "nota": "Fall (quadriceps) is out for Saturday's game against the Bucks."
+   "fecha": "2026-10-25",
+   "tipo": "Heel",
+   "regreso": "2026-10-28",
+   "nota": "Embiid has been ruled out for Sunday's game against Detroit due to right plantar fasciitis management."
   },
   {
    "id": "4870562",
@@ -694,8 +684,8 @@
    "id": "4601023",
    "nombre": "Oso Ighodaro",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-24",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-25",
    "tipo": "Oblique",
    "regreso": "2026-10-26",
    "nota": "Ighodaro (oblique) has been ruled out for Saturday's game against the Warriors, Duane Rankin of The Arizona Republic reports."
@@ -752,7 +742,7 @@
    "fecha": "2026-10-25",
    "tipo": "Ankle",
    "regreso": "2026-10-25",
-   "nota": "Murray is questionable to play Sunday against the Grizzlies due to left ankle capsulitis."
+   "nota": "Murray (ankle) has been downgraded to doubtful for Sunday's game against Memphis."
   },
   {
    "id": "3907387",
