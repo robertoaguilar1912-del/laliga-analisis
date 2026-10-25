@@ -5,7 +5,7 @@
   "estadio": "Estadi Municipal de la Nova Creu Alta",
   "local_espn": "CD Sabadell",
   "visita_espn": "Tenerife",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,7 +160,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
+    130,
     245,
     200
    ],
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
      -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Albacete": [
+    [
+     "140342",
+     "Diego Mariño",
+     "G"
+    ],
+    [
+     "388337",
+     "Lorenzo Aguado",
+     "D"
+    ],
+    [
+     "236153",
+     "Lluis López",
+     "D"
+    ],
+    [
+     "209592",
+     "Jesús Vallejo",
+     "D"
+    ],
+    [
+     "283862",
+     "Carlos Neva",
+     "D"
+    ],
+    [
+     "297361",
+     "Antonio Pacheco Ruiz",
+     "M"
+    ],
+    [
+     "274015",
+     "Victor San Bartolomé",
+     "M"
+    ],
+    [
+     "264181",
+     "José Corpas",
+     "M"
+    ],
+    [
+     "356770",
+     "Víctor Valverde Da Silva",
+     "M"
+    ],
+    [
+     "331513",
+     "Ortu",
+     "M"
+    ],
+    [
+     "178547",
+     "Higinio Marín",
+     "F"
+    ]
+   ],
+   "Eldense": [
+    [
+     "354450",
+     "Ramon Vila",
+     "G"
+    ],
+    [
+     "325545",
+     "Juan Larios",
+     "D"
+    ],
+    [
+     "346837",
+     "Floris Smand",
+     "D"
+    ],
+    [
+     "311264",
+     "Jesus Clemente",
+     "D"
+    ],
+    [
+     "375724",
+     "Álex Serra",
+     "D"
+    ],
+    [
+     "113146",
+     "Justin Smith",
+     "M"
+    ],
+    [
+     "389266",
+     "Carlos Guirao",
+     "M"
+    ],
+    [
+     "377833",
+     "Aingeru Olabarrieta",
+     "M"
+    ],
+    [
+     "147491",
+     "Fidel",
+     "M"
+    ],
+    [
+     "374618",
+     "Jorge Rastrojo",
+     "F"
+    ],
+    [
+     "278205",
+     "Javier Martínez",
+     "F"
     ]
    ]
   }
@@ -193,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    235,
-    255
+    -105,
+    250,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -115,
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     100
+     -110
     ],
     [
      "+0.5",
-     -140
+     -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cádiz": [
+    [
+     "209578",
+     "Jokin Ezkieta",
+     "G"
+    ],
+    [
+     "409477",
+     "Manuel Fernández",
+     "CD-L"
+    ],
+    [
+     "342140",
+     "Bojan Kovacevic",
+     "CD-R"
+    ],
+    [
+     "399240",
+     "Sergio Arribas",
+     "LB"
+    ],
+    [
+     "374633",
+     "Beñat De Jesús",
+     "RB"
+    ],
+    [
+     "387838",
+     "Dilan Zárate",
+     "CM-L"
+    ],
+    [
+     "341269",
+     "Damián Rodríguez",
+     "CM-R"
+    ],
+    [
+     "375875",
+     "Antonio Cordero",
+     "LM"
+    ],
+    [
+     "411758",
+     "Ibon Sánchez",
+     "RM"
+    ],
+    [
+     "394420",
+     "Vladyslav Kopotun",
+     "CF-L"
+    ],
+    [
+     "354205",
+     "Urko Izeta",
+     "CF-R"
+    ]
+   ],
+   "Ceuta": [
+    [
+     "183413",
+     "Pedro López",
+     "G"
+    ],
+    [
+     "290832",
+     "Adrián Lapeña Ruíz",
+     "CD-L"
+    ],
+    [
+     "354257",
+     "Capa",
+     "CD-R"
+    ],
+    [
+     "261110",
+     "Redru",
+     "LB"
+    ],
+    [
+     "300216",
+     "José Antonio Abad",
+     "RB"
+    ],
+    [
+     "207568",
+     "Yann Bodiger",
+     "CM"
+    ],
+    [
+     "357345",
+     "Marino Illescas",
+     "LM"
+    ],
+    [
+     "300952",
+     "Alejandro Meléndez",
+     "RM"
+    ],
+    [
+     "250658",
+     "Kuki Zalazar",
+     "F"
+    ],
+    [
+     "276645",
+     "Cedric Teguia",
+     "LF"
+    ],
+    [
+     "311104",
+     "Edgar Sevikyan",
+     "RF"
     ]
    ]
   }

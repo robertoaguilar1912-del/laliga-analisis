@@ -5,7 +5,7 @@
   "estadio": "San Mamés",
   "local_espn": "Athletic Club",
   "visita_espn": "Getafe",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    245,
-    125
+    190,
+    225,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -110,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -195
     ],
     [
      "-0.5",
-     115
+     140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Celta Vigo": [
+    [
+     "144720",
+     "Andrei Radu",
+     "G"
+    ],
+    [
+     "146127",
+     "Marcos Alonso",
+     "D"
+    ],
+    [
+     "384643",
+     "Yoel Lago",
+     "D"
+    ],
+    [
+     "376147",
+     "Javi Rodríguez",
+     "D"
+    ],
+    [
+     "231838",
+     "Javi Galán",
+     "M"
+    ],
+    [
+     "331586",
+     "Javi Rueda",
+     "M"
+    ],
+    [
+     "240235",
+     "Aleix Febas",
+     "M"
+    ],
+    [
+     "297829",
+     "Ilaix Moriba",
+     "M"
+    ],
+    [
+     "188391",
+     "Hugo Álvarez",
+     "F"
+    ],
+    [
+     "324811",
+     "Hugo Gonzalez",
+     "F"
+    ],
+    [
+     "138448",
+     "Pablo Durán",
+     "F"
+    ]
+   ],
+   "Real Betis": [
+    [
+     "283892",
+     "Álvaro Valles",
+     "G"
+    ],
+    [
+     "181530",
+     "Diego Llorente",
+     "D"
+    ],
+    [
+     "395941",
+     "Ángel Ortiz",
+     "D"
+    ],
+    [
+     "336480",
+     "Valentín Gómez",
+     "D"
+    ],
+    [
+     "301526",
+     "Natan",
+     "D"
+    ],
+    [
+     "281558",
+     "Antony",
+     "M"
+    ],
+    [
+     "242008",
+     "Marc Roca",
+     "M"
+    ],
+    [
+     "143564",
+     "Isco",
+     "M"
+    ],
+    [
+     "202717",
+     "Dani Ceballos",
+     "M"
+    ],
+    [
+     "300912",
+     "Abde Ezzalzouli",
+     "M"
+    ],
+    [
+     "322908",
+     "Nelson Deossa",
+     "F"
     ]
    ]
   }
@@ -199,7 +315,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    110,
     -140
    ],
    "spread": [
