@@ -5,29 +5,29 @@
   "estadio": "Via Del Mare",
   "local_espn": "Lecce",
   "visita_espn": "Juventus",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    300,
-    -200
+    550,
+    310,
+    -215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -110
+    -120,
+    -105
    ],
    "spread": [
     [
      "+1.5",
-     -200
+     -185
     ],
     [
      "-1.5",
-     140
+     135
     ]
    ]
   },
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
-    245,
-    -130
+    350,
+    255,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,11 @@
    "spread": [
     [
      "+0.5",
-     -105
+     100
     ],
     [
      "-0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -292,8 +292,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    290,
+    -170,
+    295,
     400
    ],
    "ou_linea": 2.5,
@@ -304,7 +304,7 @@
    "spread": [
     [
      "-0.5",
-     -180
+     -175
     ],
     [
      "+0.5",
@@ -325,9 +325,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    210,
-    135
+    190,
+    215,
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -337,11 +337,11 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -185
     ],
     [
      "-0.5",
-     130
+     135
     ]
    ]
   }
@@ -402,9 +402,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    280,
-    -140
+    300,
+    275,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -414,11 +414,11 @@
    "spread": [
     [
      "+0.5",
-     105
+     100
     ],
     [
      "-0.5",
-     -155
+     -145
     ]
    ]
   }
@@ -441,13 +441,13 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -165
+    120,
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -135
     ],
     [
      "+0.5",
@@ -468,14 +468,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    240,
-    190
+    115,
+    250,
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -160,
+    120
    ],
    "spread": [
     [
@@ -484,7 +484,7 @@
     ],
     [
      "+0.5",
-     -165
+     -155
     ]
    ]
   }
@@ -594,7 +594,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401874949",
@@ -622,7 +628,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401874971",
@@ -633,6 +645,12 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  }
 ]
