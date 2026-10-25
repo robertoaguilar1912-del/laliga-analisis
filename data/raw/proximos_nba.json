@@ -1,63 +1,5 @@
 [
  {
-  "id": "401909856",
-  "utc": "2026-10-25T00:30Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "ATL",
-  "visita": "HOU",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Atlanta Hawks",
-  "visita_espn": "Houston Rockets",
-  "revisado": false,
-  "estadio": "State Farm Arena",
-  "records": {
-   "home": [
-    "2-0",
-    "0-0",
-    "2-0"
-   ],
-   "away": [
-    "2-0",
-    "1-0",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909859",
-  "utc": "2026-10-25T01:00Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "DEN",
-  "visita": "NO",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Denver Nuggets",
-  "visita_espn": "New Orleans Pelicans",
-  "revisado": false,
-  "estadio": "Ball Arena",
-  "records": {
-   "home": [
-    "0-1",
-    "0-0",
-    "0-1"
-   ],
-   "away": [
-    "0-2",
-    "0-1",
-    "0-1"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909860",
   "utc": "2026-10-25T02:00Z",
   "fecha": "2026-10-24",
@@ -67,7 +9,7 @@
   "visita": "GS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Phoenix Suns",
   "visita_espn": "Golden State Warriors",
   "revisado": false,
@@ -235,9 +177,9 @@
    ],
    "spread_abre": -7.5,
    "total": [
-    225.5,
-    -108,
-    -112
+    224.5,
+    -110,
+    -110
    ],
    "total_abre": 225.5
   }
@@ -373,7 +315,30 @@
     "1-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -135,
+    114
+   ],
+   "ml_abre": [
+    -130,
+    110
+   ],
+   "spread": [
+    -2.5,
+    -115,
+    2.5,
+    -105
+   ],
+   "spread_abre": -2.5,
+   "total": [
+    226.5,
+    -110,
+    -110
+   ],
+   "total_abre": 226.5
+  }
  },
  {
   "id": "401909867",
@@ -405,18 +370,18 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    136,
-    -162
+    142,
+    -170
    ],
    "ml_abre": [
     136,
     -162
    ],
    "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
+    4.5,
+    -115,
+    -4.5,
+    -105
    ],
    "spread_abre": 3.5,
    "total": [
@@ -618,13 +583,13 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ]
   },
@@ -676,8 +641,8 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ],
    "away": [
@@ -821,8 +786,8 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ],
    "away": [
@@ -1000,9 +965,9 @@
     "0-2"
    ],
    "away": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -1053,13 +1018,13 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ]
   },
@@ -1169,8 +1134,8 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ],
    "away": [
@@ -1198,9 +1163,9 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "0-2",
@@ -1435,9 +1400,9 @@
     "1-1"
    ],
    "away": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -1522,8 +1487,8 @@
     "0-1"
    ],
    "away": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ]
   },
@@ -1627,13 +1592,13 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ]
   },
@@ -1743,9 +1708,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
     "2-0",
@@ -1951,8 +1916,8 @@
     "1-0"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ]
   },
@@ -2096,9 +2061,9 @@
     "1-0"
    ],
    "away": [
-    "0-2",
+    "0-3",
     "0-1",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -2149,9 +2114,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
     "1-1",
@@ -2207,8 +2172,8 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "0-1",
-    "0-0",
+    "1-1",
+    "1-0",
     "0-1"
    ],
    "away": [
@@ -2357,8 +2322,8 @@
     "1-0"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "2-1",
+    "0-1",
     "2-0"
    ]
   },
@@ -2555,9 +2520,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
     "2-0",
