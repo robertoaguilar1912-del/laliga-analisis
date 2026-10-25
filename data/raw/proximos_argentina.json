@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841632",
-  "utc": "2026-10-24T22:15Z",
-  "estadio": "Estadio Pedro Bidegain",
-  "local_espn": "San Lorenzo",
-  "visita_espn": "Newell's Old Boys",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    170,
-    180,
-    200
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -180,
-    135
-   ],
-   "spread": [
-    [
-     "-0.5",
-     155
-    ],
-    [
-     "+0.5",
-     -220
-    ]
-   ]
-  },
-  "alineaciones": {
-   "San Lorenzo": [
-    [
-     "195679",
-     "José Devecchi",
-     "G"
-    ],
-    [
-     "214198",
-     "Emiliano Amor",
-     "CD"
-    ],
-    [
-     "254142",
-     "Guzmán Corujo",
-     "CD-L"
-    ],
-    [
-     "215932",
-     "Danilo Arboleda",
-     "CD-R"
-    ],
-    [
-     "312188",
-     "Gonzalo Alassia",
-     "CM-L"
-    ],
-    [
-     "406931",
-     "Facundo Gulli",
-     "CM-R"
-    ],
-    [
-     "298592",
-     "Facundo Farías",
-     "AM"
-    ],
-    [
-     "401538",
-     "Teo Rodríguez",
-     "LM"
-    ],
-    [
-     "195337",
-     "Nicolas Tripichio",
-     "RM"
-    ],
-    [
-     "364366",
-     "Rodrigo Auzmendi",
-     "CF-L"
-    ],
-    [
-     "283675",
-     "Alexis Cuello",
-     "CF-R"
-    ]
-   ],
-   "Newell's Old Boys": [
-    [
-     "361297",
-     "Josué Reinatti",
-     "G"
-    ],
-    [
-     "240430",
-     "Lucas Carrizo",
-     "CD-L"
-    ],
-    [
-     "420806",
-     "Bruno Cabrera",
-     "CD-R"
-    ],
-    [
-     "361305",
-     "Jeronimo Russo",
-     "LB"
-    ],
-    [
-     "270402",
-     "Martín Ortega",
-     "RB"
-    ],
-    [
-     "397602",
-     "Luca Regiardo",
-     "CM"
-    ],
-    [
-     "400805",
-     "Facundo Gauch",
-     "LM"
-    ],
-    [
-     "407376",
-     "Jerónimo Mattar",
-     "RM"
-    ],
-    [
-     "263095",
-     "Matías Cóccaro",
-     "F"
-    ],
-    [
-     "315926",
-     "Santiago Solari",
-     "LF"
-    ],
-    [
-     "250387",
-     "Walter Mazzantti",
-     "RF"
-    ]
-   ]
-  }
- },
- {
   "id": "401841633",
   "utc": "2026-10-25T00:30Z",
   "estadio": "Gigante de Arroyito",
@@ -160,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    235,
-    380
+    -120,
+    225,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -135
+     -130
     ],
     [
      "+0.5",
      -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Rosario Central": [
+    [
+     "195621",
+     "Jeremias Ledesma",
+     "G"
+    ],
+    [
+     "285885",
+     "Gastón Ávila",
+     "CD-L"
+    ],
+    [
+     "400123",
+     "Ignacio Ovando",
+     "CD-R"
+    ],
+    [
+     "307599",
+     "Agustín Sández",
+     "LB"
+    ],
+    [
+     "262567",
+     "Emanuel Coronel",
+     "RB"
+    ],
+    [
+     "108223",
+     "Ángel Di María",
+     "AM"
+    ],
+    [
+     "289076",
+     "Vicente Pizarro",
+     "LM"
+    ],
+    [
+     "300115",
+     "Franco Ibarra",
+     "RM"
+    ],
+    [
+     "241544",
+     "Enzo Copetti",
+     "F"
+    ],
+    [
+     "255295",
+     "Jáminton Campaz",
+     "AM-L"
+    ],
+    [
+     "363477",
+     "Alan Rodríguez",
+     "AM-R"
+    ]
+   ],
+   "Huracán": [
+    [
+     "207921",
+     "Hernán Galíndez",
+     "G"
+    ],
+    [
+     "396513",
+     "Máximo Palazzo",
+     "CD-L"
+    ],
+    [
+     "278504",
+     "Fabio Pereyra",
+     "CD-R"
+    ],
+    [
+     "289737",
+     "Cesar Ibañez",
+     "LB"
+    ],
+    [
+     "241547",
+     "Lucas Blondel",
+     "RB"
+    ],
+    [
+     "147183",
+     "Rodrigo Fernández",
+     "AM"
+    ],
+    [
+     "241479",
+     "Facundo Waller",
+     "LM"
+    ],
+    [
+     "236365",
+     "Emmanuel Ojeda",
+     "RM"
+    ],
+    [
+     "217079",
+     "Jordy Caicedo",
+     "F"
+    ],
+    [
+     "334106",
+     "Oscar Cortés",
+     "AM-L"
+    ],
+    [
+     "318418",
+     "Juan Bisanz",
+     "AM-R"
     ]
    ]
   }

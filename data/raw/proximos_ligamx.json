@@ -5,7 +5,7 @@
   "estadio": "Estadio León",
   "local_espn": "León",
   "visita_espn": "Toluca",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Monterrey": [
+    [
+     "138328",
+     "Esteban Andrada",
+     "G"
+    ],
+    [
+     "298860",
+     "Fidel Ambríz",
+     "CD-L"
+    ],
+    [
+     "290348",
+     "Víctor Guzmán",
+     "CD-R"
+    ],
+    [
+     "245848",
+     "Gerardo Arteaga",
+     "LB"
+    ],
+    [
+     "202106",
+     "Ricardo Chávez",
+     "RB"
+    ],
+    [
+     "235817",
+     "Diego Rossi",
+     "AM"
+    ],
+    [
+     "207011",
+     "Orbelín Pineda",
+     "LM"
+    ],
+    [
+     "375061",
+     "Cesar Garza",
+     "RM"
+    ],
+    [
+     "235511",
+     "Hugo Cuypers",
+     "F"
+    ],
+    [
+     "117977",
+     "Jesús Corona",
+     "AM-L"
+    ],
+    [
+     "159263",
+     "Lucas Ocampos",
+     "AM-R"
+    ]
+   ],
+   "Guadalajara": [
+    [
+     "290899",
+     "Raúl Rangel",
+     "G"
+    ],
+    [
+     "147715",
+     "Luis Gabriel Rey",
+     "CD"
+    ],
+    [
+     "290889",
+     "Diego Campillo",
+     "CD-L"
+    ],
+    [
+     "133111",
+     "Daniel Aguirre",
+     "CD-R"
+    ],
+    [
+     "131697",
+     "Fernando Gonzalez",
+     "CM-L"
+    ],
+    [
+     "190901",
+     "Omar Govea",
+     "CM-R"
+    ],
+    [
+     "297284",
+     "Bryan González",
+     "LM"
+    ],
+    [
+     "271844",
+     "Richard Ledezma",
+     "RM"
+    ],
+    [
+     "228352",
+     "Ricardo Marín",
+     "F"
+    ],
+    [
+     "194308",
+     "Roberto Alvarado",
+     "CF-L"
+    ],
+    [
+     "118717",
+     "Santiago Sandoval",
+     "CF-R"
     ]
    ]
   }
