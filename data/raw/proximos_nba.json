@@ -9,7 +9,7 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Utah Jazz",
   "visita_espn": "Los Angeles Lakers",
   "revisado": false,
@@ -38,10 +38,10 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Brooklyn Nets",
   "visita_espn": "Indiana Pacers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Barclays Center",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    180,
-    -218
-   ],
-   "ml_abre": [
-    180,
-    -218
-   ],
-   "spread": [
-    5.5,
-    -108,
-    -5.5,
-    -112
-   ],
-   "spread_abre": 5.5,
-   "total": [
-    231.5,
-    -110,
-    -110
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401909863",
@@ -162,24 +139,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    -105
+    -162,
+    136
    ],
    "ml_abre": [
     -130,
     110
    ],
    "spread": [
-    -1.5,
-    -105,
-    1.5,
-    -115
+    -3.5,
+    -115,
+    3.5,
+    -105
    ],
    "spread_abre": -2.5,
    "total": [
     228.5,
-    -115,
-    -105
+    -110,
+    -110
    ],
    "total_abre": 231.5
   }
@@ -229,9 +206,9 @@
    ],
    "spread_abre": -14.5,
    "total": [
-    224.5,
-    -112,
-    -108
+    223.5,
+    -108,
+    -112
    ],
    "total_abre": 221.5
   }
@@ -249,7 +226,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Detroit Pistons",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
@@ -266,8 +243,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    -130
+    105,
+    -125
    ],
    "ml_abre": [
     -130,
@@ -275,15 +252,15 @@
    ],
    "spread": [
     1.5,
-    -110,
+    -105,
     -1.5,
-    -110
+    -115
    ],
    "spread_abre": -2.5,
    "total": [
-    227.5,
-    -115,
-    -105
+    228.5,
+    -112,
+    -108
    ],
    "total_abre": 226.5
   }
