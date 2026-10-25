@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909853",
-  "utc": "2026-10-24T22:00Z",
-  "fecha": "2026-10-24",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHA",
-  "visita": "MIA",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Charlotte Hornets",
-  "visita_espn": "Miami Heat",
-  "revisado": false,
-  "estadio": "Spectrum Center",
-  "records": {
-   "home": [
-    "1-1",
-    "0-1",
-    "1-0"
-   ],
-   "away": [
-    "0-2",
-    "0-2",
-    "0-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909854",
   "utc": "2026-10-24T23:30Z",
   "fecha": "2026-10-24",
@@ -154,10 +125,10 @@
   "visita": "HOU",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Atlanta Hawks",
   "visita_espn": "Houston Rockets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "State Farm Arena",
   "records": {
    "home": [
@@ -171,30 +142,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -108,
-    -112
-   ],
-   "ml_abre": [
-    -115,
-    -105
-   ],
-   "spread": [
-    1.5,
-    -118,
-    -1.5,
-    -102
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    227.5,
-    -108,
-    -112
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909859",
@@ -209,7 +157,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Denver Nuggets",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -261,7 +209,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Phoenix Suns",
   "visita_espn": "Golden State Warriors",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
@@ -520,8 +468,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ],
    "away": [
@@ -607,9 +555,9 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
+    "0-3",
     "0-2",
-    "0-2",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-1",
@@ -902,9 +850,9 @@
     "2-0"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-2",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -960,8 +908,8 @@
     "1-0"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ]
   },
@@ -1337,8 +1285,8 @@
     "0-0"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ]
   },
@@ -1477,9 +1425,9 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
+    "0-3",
     "0-2",
-    "0-2",
-    "0-0"
+    "0-1"
    ],
    "away": [
     "1-1",
@@ -1674,8 +1622,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ],
    "away": [
@@ -1993,8 +1941,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ],
    "away": [
@@ -2375,9 +2323,9 @@
     "0-0"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-2",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
@@ -2491,8 +2439,8 @@
     "0-0"
    ],
    "away": [
+    "2-1",
     "1-1",
-    "0-1",
     "1-0"
    ]
   },
@@ -2781,9 +2729,9 @@
     "0-1"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-2",
-    "0-0"
+    "0-1"
    ]
   },
   "momios": null
