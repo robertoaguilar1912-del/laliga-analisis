@@ -5,7 +5,7 @@
   "estadio": "Estadio Libertadores de América",
   "local_espn": "Independiente",
   "visita_espn": "Boca Juniors",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
+    -205,
     330,
-    600
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -105
+    -110,
+    -120
    ],
    "spread": [
     [
      "-1.5",
-     135
+     145
     ],
     [
      "+1.5",
-     -190
+     -200
     ]
    ]
   }

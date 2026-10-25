@@ -9,10 +9,10 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Los Angeles Lakers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "0-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    205,
-    -250
-   ],
-   "ml_abre": [
-    210,
-    -258
-   ],
-   "spread": [
-    6.5,
-    -110,
-    -6.5,
-    -110
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    237.5,
-    -105,
-    -115
-   ],
-   "total_abre": 236.5
-  }
+  "momios": null
  },
  {
   "id": "401909862",
@@ -289,8 +266,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -108,
-    -112
+    102,
+    -122
    ],
    "ml_abre": [
     -130,
@@ -298,15 +275,15 @@
    ],
    "spread": [
     1.5,
-    -118,
+    -110,
     -1.5,
-    -102
+    -110
    ],
    "spread_abre": -2.5,
    "total": [
-    228.5,
-    -108,
-    -112
+    227.5,
+    -115,
+    -105
    ],
    "total_abre": 226.5
   }
