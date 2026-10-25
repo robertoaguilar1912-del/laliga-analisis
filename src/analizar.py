@@ -389,10 +389,55 @@ def analizar_equipos(liga, df_season, ref, det, mapa, nombre, grupos, calendario
     return equipos, tabla, resumen(T) or VACIO, hay_xg
 
 
-def h2h(hist, a, b, nombre, n=6):
+H2H_N = 10          # enfrentamientos directos que se muestran
+ULTIMOS_N = 24      # partidos de cada equipo que se guardan (la página muestra 10: todos, solo en casa o solo fuera)
+
+
+def h2h(hist, a, b, nombre, n=H2H_N):
     m = hist[((hist.HomeTeam == a) & (hist.AwayTeam == b)) | ((hist.HomeTeam == b) & (hist.AwayTeam == a))].sort_values('Date', ascending=False).head(n)
     return [{'fecha': str(r.Date.date()), 'local': nombre(r.HomeTeam), 'visita': nombre(r.AwayTeam), 'gl': int(r.FTHG), 'gv': int(r.FTAG), 'div': r.div}
             for r in m.itertuples()]
+
+
+def historial_equipos(liga, base, mapa):
+    """Partidos jugados para el historial y los enfrentamientos directos. En las ligas de Europa y Sudamérica que están en el
+    archivo de su región (europa.py) se suman los de copas (UEFA, Libertadores, Sudamericana) y los de liga desde 2020, con
+    los nombres de la liga; los que ya están en la liga (mismo equipo, mismo día ±1, mismo marcador) no se repiten. Las copas
+    nacionales (Copa del Rey, FA Cup...) no están. Devuelve (partidos, región sumada o None)."""
+    L = LIGAS[liga]
+    base = base.dropna(subset=['FTHG', 'FTAG'])[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'div']]
+    if L.get('region'):
+        return base, None
+    import europa
+    region = 'europa' if L.get('espn') in europa.LIGAS_EUROPA else 'sudamerica' if L.get('espn') in europa.LIGAS_SUDAM else None
+    if not region:
+        return base, None
+    r = europa.historial(region).dropna(subset=['FTHG', 'FTAG'])
+    nuestros = set(mapa.values())
+    r = r.assign(HomeTeam=r.HomeTeam.map(lambda x: mapa.get(x, x)), AwayTeam=r.AwayTeam.map(lambda x: mapa.get(x, x)))
+    r = r[r.HomeTeam.isin(nuestros) | r.AwayTeam.isin(nuestros)]
+    ya = set()
+    for x in base.itertuples():
+        d = x.Date.toordinal()
+        for t, lado in ((x.HomeTeam, 'h'), (x.AwayTeam, 'a')):
+            if t in nuestros:
+                ya.add((t, lado, d, int(x.FTHG), int(x.FTAG)))
+    nuevo = [not any((t, lado, x.Date.toordinal() + k, int(x.FTHG), int(x.FTAG)) in ya
+                     for t, lado in ((x.HomeTeam, 'h'), (x.AwayTeam, 'a')) if t in nuestros for k in (-1, 0, 1))
+             for x in r.itertuples()]
+    return pd.concat([base, r[nuevo]], ignore_index=True), region
+
+
+def ultimos(hist, t, nombre, n=ULTIMOS_N):
+    """Los últimos n partidos jugados de un equipo, del más reciente al más viejo."""
+    g = hist[(hist.HomeTeam == t) | (hist.AwayTeam == t)].sort_values('Date').tail(n).iloc[::-1]
+    out = []
+    for r in g.itertuples():
+        loc = r.HomeTeam == t
+        gf, gc = (int(r.FTHG), int(r.FTAG)) if loc else (int(r.FTAG), int(r.FTHG))
+        out.append({'fecha': str(r.Date.date()), 'rival': nombre(r.AwayTeam if loc else r.HomeTeam), 'local': bool(loc),
+                    'gf': gf, 'gc': gc, 'res': 'G' if gf > gc else 'E' if gf == gc else 'P', 'comp': r.div})
+    return out
 
 
 # fases de eliminación que no cuentan para la tabla ('final' como palabra suelta: 'finalizacion' sí cuenta)
@@ -634,9 +679,12 @@ def analizar_liga(liga):
         hist_h2h = europa.historial(L['region'])
     if df2 is not None:
         hist_h2h = pd.concat([hist_h2h, df2.assign(div=L.get('fd2_nombre', 'Segunda'))])
+    hist_h2h, region_extra = historial_equipos(liga, hist_h2h, mapa)
     for p in partidos:
-        p['h2h'] = h2h(hist_h2h, p['local_fd'], p['visita_fd'], nombre)
+        p['h2h'] = h2h(hist_h2h, p['local_fd'], p['visita_fd'], nombre, n=H2H_N)
         p['liga'] = liga
+    for t, e in equipos.items():        # historial de cada equipo (liga, copas y, si subió o bajó, la otra división)
+        e['ultimos'] = ultimos(hist_h2h, t, nombre)
     pb = RAW / f'bajas_{liga}.json'
     bajas = json.load(open(pb)) if pb.exists() else {}
     aplicar_bajas(partidos, bajas, equipos)
@@ -668,7 +716,8 @@ def analizar_liga(liga):
     info = {'liga': liga, 'nombre': L['nombre'], 'pais': L['pais'], 'arriba': L.get('fd2_nombre') if L.get('descienden_de') else None, 'temporada': etiqueta_temporada(liga, temporada_tabla),
             'zonas': ZONAS.get(L.get('zonas'), []), 'grupos': [g['grupo'] for g in grupos],
             'h2h_desde': str(hist_h2h.Date.min().year),
-            'h2h_divs': (H2H_REGION[L['region']] if L.get('region') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])),
+            'h2h_divs': (H2H_REGION[L['region']] if L.get('region') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])
+                         + ([H2H_REGION[region_extra][0]] if region_extra else [])),
             'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'hay_remates': rmodel is not None,
             'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': FUENTE_REGION.get(L.get('region')) or ('por temporada' if L.get('fd') else 'resultados y cuotas'),
             'n_espn_extra': n_espn, 'aviso': L.get('aviso'), 'cuidado': L.get('cuidado') or {},
