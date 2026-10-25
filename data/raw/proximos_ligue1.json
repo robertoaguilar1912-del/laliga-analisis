@@ -5,7 +5,7 @@
   "estadio": "Stade Louis II",
   "local_espn": "AS Monaco",
   "visita_espn": "Lille",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-ligue-1",
   "neutral": false,
   "momios": {
@@ -161,13 +161,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    265,
-    230
+    260,
+    240
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
@@ -212,6 +212,122 @@
      130
     ]
    ]
+  },
+  "alineaciones": {
+   "Angers": [
+    [
+     "131743",
+     "Anthony Lopes",
+     "G"
+    ],
+    [
+     "218703",
+     "Carlens Arcus",
+     "D"
+    ],
+    [
+     "377899",
+     "Joseph Kalulu Kyatengwa",
+     "D"
+    ],
+    [
+     "412232",
+     "Ousmane Camara",
+     "D"
+    ],
+    [
+     "191712",
+     "Jordan Lefort",
+     "D"
+    ],
+    [
+     "357154",
+     "Lilian Raolisoa",
+     "M"
+    ],
+    [
+     "314388",
+     "Amine Sbaï",
+     "M"
+    ],
+    [
+     "196234",
+     "Branco van den Boomen",
+     "M"
+    ],
+    [
+     "338006",
+     "Yassin Belkhdim",
+     "M"
+    ],
+    [
+     "403232",
+     "Prosper Peter",
+     "M"
+    ],
+    [
+     "301262",
+     "Amine El Ouazzani",
+     "F"
+    ]
+   ],
+   "Lorient": [
+    [
+     "199381",
+     "Yvon Mvogo",
+     "G"
+    ],
+    [
+     "265099",
+     "Montassar Talbi",
+     "D"
+    ],
+    [
+     "306535",
+     "Isaak Touré",
+     "D"
+    ],
+    [
+     "345563",
+     "Nathaniel Adjei",
+     "D"
+    ],
+    [
+     "355870",
+     "Arthur Avom",
+     "M"
+    ],
+    [
+     "381626",
+     "Arsène Kouassi",
+     "M"
+    ],
+    [
+     "225557",
+     "Jean-Victor Makengo",
+     "M"
+    ],
+    [
+     "315215",
+     "Noah Cadiou",
+     "M"
+    ],
+    [
+     "297345",
+     "Souleymane Faye",
+     "M"
+    ],
+    [
+     "347940",
+     "Dembo Sylla",
+     "M"
+    ],
+    [
+     "324565",
+     "Ibrahima Baldé",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -226,19 +342,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    390,
+    -220,
+    400,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -155
+    115,
+    -145
    ],
    "spread": [
     [
      "-1.5",
-     115
+     110
     ],
     [
      "+1.5",
@@ -265,8 +381,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    120,
+    -150
    ],
    "spread": [
     [
@@ -276,6 +392,122 @@
     [
      "+0.5",
      100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Stade Rennais": [
+    [
+     "164126",
+     "Brice Samba",
+     "G"
+    ],
+    [
+     "190806",
+     "Przemyslaw Frankowski",
+     "D"
+    ],
+    [
+     "307713",
+     "Charlie Cresswell",
+     "D"
+    ],
+    [
+     "372260",
+     "Mahamadou Nagida",
+     "D"
+    ],
+    [
+     "291614",
+     "Anthony Rouault",
+     "D"
+    ],
+    [
+     "376339",
+     "Abdelhamid Aït Boudlal",
+     "D"
+    ],
+    [
+     "268966",
+     "Mahdi Camara",
+     "M"
+    ],
+    [
+     "207136",
+     "Valentin Rongier",
+     "M"
+    ],
+    [
+     "243844",
+     "Sebastian Szymanski",
+     "M"
+    ],
+    [
+     "282381",
+     "Boulaye Dia",
+     "F"
+    ],
+    [
+     "257489",
+     "Mousa Al-Tamari",
+     "F"
+    ]
+   ],
+   "Strasbourg": [
+    [
+     "304256",
+     "Filip Jørgensen",
+     "G"
+    ],
+    [
+     "374221",
+     "Genesis Antwi",
+     "D"
+    ],
+    [
+     "362926",
+     "Jeyland Mitchell",
+     "D"
+    ],
+    [
+     "224074",
+     "Karim Coulibaly",
+     "D"
+    ],
+    [
+     "377782",
+     "Oso",
+     "D"
+    ],
+    [
+     "316560",
+     "Dário Essugo",
+     "M"
+    ],
+    [
+     "353378",
+     "Pape Diop",
+     "M"
+    ],
+    [
+     "379012",
+     "Gessime Yassine",
+     "M"
+    ],
+    [
+     "368325",
+     "Diogo Sousa",
+     "M"
+    ],
+    [
+     "290230",
+     "Giovanni Reyna",
+     "M"
+    ],
+    [
+     "362794",
+     "Conrad Harder",
+     "F"
     ]
    ]
   }
@@ -309,6 +541,122 @@
     [
      "+1.5",
      -185
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Toulouse": [
+    [
+     "324289",
+     "Guillaume Restes",
+     "G"
+    ],
+    [
+     "77072",
+     "Mark McKenzie",
+     "CD-L"
+    ],
+    [
+     "238213",
+     "Rasmus Nicolaisen",
+     "CD-R"
+    ],
+    [
+     "385000",
+     "Christ Tapé",
+     "LB"
+    ],
+    [
+     "384162",
+     "Rafik Messali",
+     "RB"
+    ],
+    [
+     "363538",
+     "Niko Sigur",
+     "CM-L"
+    ],
+    [
+     "271244",
+     "Cristian Cásseres Jr.",
+     "CM-R"
+    ],
+    [
+     "362777",
+     "Thomas Jørgensen",
+     "LM"
+    ],
+    [
+     "252740",
+     "Aron Donnum",
+     "RM"
+    ],
+    [
+     "306664",
+     "Casper Tengstedt",
+     "CF-L"
+    ],
+    [
+     "297121",
+     "Jacen Russell-Rowe",
+     "CF-R"
+    ]
+   ],
+   "Troyes": [
+    [
+     "206835",
+     "Hillel Konaté",
+     "G"
+    ],
+    [
+     "112988",
+     "Michel Diaz",
+     "CD-L"
+    ],
+    [
+     "181582",
+     "Adrien Monfray",
+     "CD-R"
+    ],
+    [
+     "287576",
+     "Paolo Gozzi Iweru",
+     "LB"
+    ],
+    [
+     "334281",
+     "Lucas Maronnier",
+     "RB"
+    ],
+    [
+     "323058",
+     "Dermane Karim",
+     "CM"
+    ],
+    [
+     "346359",
+     "Mouhamed Diop",
+     "LM"
+    ],
+    [
+     "270173",
+     "Antoine Mille",
+     "RM"
+    ],
+    [
+     "176406",
+     "Renaud Ripart",
+     "F"
+    ],
+    [
+     "386387",
+     "Merwan Ifnaoui",
+     "LF"
+    ],
+    [
+     "287514",
+     "Timothé Nkada",
+     "RF"
     ]
    ]
   }

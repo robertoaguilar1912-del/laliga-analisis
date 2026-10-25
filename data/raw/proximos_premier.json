@@ -5,7 +5,7 @@
   "estadio": "Selhurst Park",
   "local_espn": "Crystal Palace",
   "visita_espn": "Newcastle United",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "The MKM Stadium",
   "local_espn": "Hull City",
   "visita_espn": "Brentford",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Anfield",
   "local_espn": "Liverpool",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Old Trafford",
   "local_espn": "Manchester United",
   "visita_espn": "AFC Bournemouth",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -607,23 +607,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    185,
     215,
-    155
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -145
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -200
+     -210
     ],
     [
      "-0.5",
-     145
+     150
     ]
    ]
   }
