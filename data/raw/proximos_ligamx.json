@@ -1,187 +1,5 @@
 [
  {
-  "id": "401876921",
-  "utc": "2026-10-26T01:00Z",
-  "estadio": "Estadio Corregidora",
-  "local_espn": "Querétaro",
-  "visita_espn": "Cruz Azul",
-  "estado": "STATUS_IN_PROGRESS",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    260,
-    270,
-    -105
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -160,
-    120
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -125
-    ],
-    [
-     "-0.5",
-     -110
-    ]
-   ]
-  }
- },
- {
-  "id": "401876922",
-  "utc": "2026-10-26T01:05Z",
-  "estadio": "Estadio Banorte",
-  "local_espn": "América",
-  "visita_espn": "Pachuca",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -150,
-    310,
-    370
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -175,
-    135
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -165
-    ],
-    [
-     "+0.5",
-     120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "América": [
-    [
-     "200101",
-     "Ángel Malagón",
-     "G"
-    ],
-    [
-     "82782",
-     "Santiago Ramos",
-     "CD-L"
-    ],
-    [
-     "241225",
-     "Santiago Bueno",
-     "CD-R"
-    ],
-    [
-     "386254",
-     "Franco Rossano",
-     "LB"
-    ],
-    [
-     "195312",
-     "Kevin Álvarez",
-     "RB"
-    ],
-    [
-     "3731",
-     "Carlos Álvarez",
-     "AM"
-    ],
-    [
-     "290414",
-     "Israel Reyes",
-     "LM"
-    ],
-    [
-     "129421",
-     "Érick Sánchez",
-     "RM"
-    ],
-    [
-     "93184",
-     "Henry Martín",
-     "F"
-    ],
-    [
-     "144325",
-     "Brian Rodríguez",
-     "AM-L"
-    ],
-    [
-     "336456",
-     "Óscar Perea",
-     "AM-R"
-    ]
-   ],
-   "Pachuca": [
-    [
-     "259439",
-     "Carlos Moreno",
-     "G"
-    ],
-    [
-     "268843",
-     "Sergio Barreto",
-     "D"
-    ],
-    [
-     "194921",
-     "Eduardo Bauermann",
-     "D"
-    ],
-    [
-     "228355",
-     "Francisco Venegas",
-     "D"
-    ],
-    [
-     "364454",
-     "Jorge Berlanga",
-     "D"
-    ],
-    [
-     "229552",
-     "Oussama Idrissi",
-     "M"
-    ],
-    [
-     "326072",
-     "Alan Bautista",
-     "M"
-    ],
-    [
-     "233978",
-     "Christian Rivera",
-     "M"
-    ],
-    [
-     "160562",
-     "Javier Vallejo",
-     "M"
-    ],
-    [
-     "176489",
-     "Rodolfo Pizarro",
-     "M"
-    ],
-    [
-     "127570",
-     "Salomón Rondón",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401876920",
   "utc": "2026-10-26T03:10Z",
   "estadio": "Estadio Caliente",
@@ -190,26 +8,120 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    110,
-    265,
-    225
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    125
-   ],
-   "spread": [
+  "momios": null,
+  "alineaciones": {
+   "Tijuana": [
     [
-     "-0.5",
-     105
+     "175155",
+     "Antonio Rodríguez",
+     "G"
     ],
     [
-     "+0.5",
-     -145
+     "206158",
+     "Jesús Gómez",
+     "CD-L"
+    ],
+    [
+     "286665",
+     "Jackson Porozo",
+     "CD-R"
+    ],
+    [
+     "284241",
+     "Iván Tona",
+     "DM"
+    ],
+    [
+     "189834",
+     "Jesus Vega",
+     "LB"
+    ],
+    [
+     "178142",
+     "Rafael Fernández",
+     "RB"
+    ],
+    [
+     "178042",
+     "Ignacio Rivero",
+     "CM-L"
+    ],
+    [
+     "265861",
+     "Francisco González",
+     "CM-R"
+    ],
+    [
+     "285904",
+     "Adonis Preciado",
+     "LM"
+    ],
+    [
+     "360957",
+     "Ramiro Árciga",
+     "RM"
+    ],
+    [
+     "300710",
+     "Mourad El Ghezouani",
+     "F"
+    ]
+   ],
+   "Santos": [
+    [
+     "236368",
+     "Carlos Acevedo",
+     "G"
+    ],
+    [
+     "358421",
+     "Felipe Sanchez",
+     "CD"
+    ],
+    [
+     "96526",
+     "Jonathan Pérez",
+     "CD-L"
+    ],
+    [
+     "255945",
+     "Franco Pardo",
+     "CD-R"
+    ],
+    [
+     "315609",
+     "Diego González",
+     "LB"
+    ],
+    [
+     "287252",
+     "Mauricio Cuevas",
+     "RB"
+    ],
+    [
+     "110987",
+     "Francisco Villalba",
+     "CM-L"
+    ],
+    [
+     "309575",
+     "Facundo Cáseres",
+     "CM-R"
+    ],
+    [
+     "309463",
+     "Ramiro Sordo",
+     "LM"
+    ],
+    [
+     "282380",
+     "Ezequiel Bullaude",
+     "RM"
+    ],
+    [
+     "304626",
+     "Esteban Lozano",
+     "F"
     ]
    ]
   }
