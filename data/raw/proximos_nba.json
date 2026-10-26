@@ -9,7 +9,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New York Knicks",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -24,64 +24,6 @@
     "0-2",
     "0-2",
     "0-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909864",
-  "utc": "2026-10-25T23:00Z",
-  "fecha": "2026-10-25",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIN",
-  "visita": "TOR",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Minnesota Timberwolves",
-  "visita_espn": "Toronto Raptors",
-  "revisado": false,
-  "estadio": "Target Center",
-  "records": {
-   "home": [
-    "2-0",
-    "0-0",
-    "2-0"
-   ],
-   "away": [
-    "2-0",
-    "1-0",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909865",
-  "utc": "2026-10-25T23:00Z",
-  "fecha": "2026-10-25",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "OKC",
-  "visita": "LAC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Oklahoma City Thunder",
-  "visita_espn": "LA Clippers",
-  "revisado": false,
-  "estadio": "Paycom Center",
-  "records": {
-   "home": [
-    "2-0",
-    "1-0",
-    "1-0"
-   ],
-   "away": [
-    "1-1",
-    "1-0",
-    "0-1"
    ]
   },
   "momios": null
@@ -125,10 +67,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -142,30 +84,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    145,
-    -175
-   ],
-   "ml_abre": [
-    136,
-    -162
-   ],
-   "spread": [
-    3.5,
-    -108,
-    -3.5,
-    -112
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    234.5,
-    -112,
-    -108
-   ],
-   "total_abre": 236.5
-  }
+  "momios": null
  },
  {
   "id": "401909868",
@@ -195,7 +114,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -142,
     120
@@ -241,8 +160,8 @@
     "0-1"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ]
   },
@@ -276,10 +195,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -800,
-    550
+    -850,
+    575
    ],
    "ml_abre": [
     -850,
@@ -287,9 +206,9 @@
    ],
    "spread": [
     -13.5,
-    -110,
+    -115,
     13.5,
-    -110
+    -105
    ],
    "spread_abre": -13.5,
    "total": [
@@ -328,7 +247,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -290,
     235
@@ -346,8 +265,8 @@
    "spread_abre": -7.5,
    "total": [
     235.5,
-    -105,
-    -115
+    -112,
+    -108
    ],
    "total_abre": 235.5
   }
@@ -398,8 +317,8 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ],
    "away": [
@@ -438,7 +357,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -218,
     180
@@ -519,7 +438,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -290,
     235
@@ -792,9 +711,9 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "2-0",
+    "2-1",
     "1-0",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "0-2",
@@ -879,8 +798,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ],
    "away": [
@@ -971,8 +890,8 @@
     "1-1"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -995,9 +914,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "3-0",
@@ -1227,9 +1146,9 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "2-0",
+    "2-1",
     "1-0",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "0-2",
@@ -1314,14 +1233,14 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ],
    "away": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -1383,7 +1302,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
@@ -1574,8 +1493,8 @@
     "1-0"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ]
   },
@@ -1603,8 +1522,8 @@
     "2-0"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -1690,9 +1609,9 @@
     "0-2"
    ],
    "away": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -1719,9 +1638,9 @@
     "1-0"
    ],
    "away": [
-    "2-0",
+    "2-1",
     "1-0",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -1748,8 +1667,8 @@
     "0-1"
    ],
    "away": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ]
   },
@@ -1975,8 +1894,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ],
    "away": [
@@ -2120,14 +2039,14 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
-    "2-0",
+    "2-1",
     "1-0",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2381,8 +2300,8 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
+    "3-0",
     "2-0",
-    "1-0",
     "1-0"
    ],
    "away": [
@@ -2415,8 +2334,8 @@
     "2-0"
    ],
    "away": [
-    "2-0",
-    "0-0",
+    "3-0",
+    "1-0",
     "2-0"
    ]
   },
@@ -2444,9 +2363,9 @@
     "0-1"
    ],
    "away": [
-    "2-0",
+    "2-1",
     "1-0",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2555,9 +2474,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "0-3",
