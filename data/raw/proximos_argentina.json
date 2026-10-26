@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841630",
-  "utc": "2026-10-26T22:00Z",
-  "estadio": "15 de Abril",
-  "local_espn": "Unión (Santa Fe)",
-  "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    215,
-    155
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    115,
-    -155
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -200
-    ],
-    [
-     "-0.5",
-     145
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Unión (Santa Fe)": [
-    [
-     "310768",
-     "Matias Mansilla",
-     "G"
-    ],
-    [
-     "346282",
-     "Juan Ludueña",
-     "CD-L"
-    ],
-    [
-     "359911",
-     "Matías Rocha",
-     "CD-R"
-    ],
-    [
-     "3109245",
-     "Lucas Santiago",
-     "LB"
-    ],
-    [
-     "339805",
-     "Tobías Rubio",
-     "RB"
-    ],
-    [
-     "358259",
-     "Joaquín Mosqueira",
-     "CM-L"
-    ],
-    [
-     "3109240",
-     "Mateo Peresutti",
-     "CM-R"
-    ],
-    [
-     "243287",
-     "Braian Cuello",
-     "LM"
-    ],
-    [
-     "298859",
-     "Julián Palacios",
-     "RM"
-    ],
-    [
-     "212444",
-     "Cristian Tarragona",
-     "CF-L"
-    ],
-    [
-     "96687",
-     "Marcelo Estigarribia",
-     "CF-R"
-    ]
-   ],
-   "Estudiantes de La Plata": [
-    [
-     "108622",
-     "Fernando Muslera",
-     "G"
-    ],
-    [
-     "403329",
-     "Tomás Palacios",
-     "CD-L"
-    ],
-    [
-     "154748",
-     "Leandro González Pírez",
-     "CD-R"
-    ],
-    [
-     "301955",
-     "Gastón Benedetti",
-     "LB"
-    ],
-    [
-     "276020",
-     "Eric Meza",
-     "RB"
-    ],
-    [
-     "240401",
-     "Ezequiel Piovi",
-     "CM"
-    ],
-    [
-     "339804",
-     "Baltasar Rodríguez",
-     "LM"
-    ],
-    [
-     "302051",
-     "Tiago Palacios",
-     "RM"
-    ],
-    [
-     "276024",
-     "Adolfo Gaich",
-     "F"
-    ],
-    [
-     "264844",
-     "Edwin Cetre",
-     "LF"
-    ],
-    [
-     "318082",
-     "Eros Mancuso",
-     "RF"
-    ]
-   ]
-  }
- },
- {
   "id": "401841635",
   "utc": "2026-10-27T00:15Z",
   "estadio": "Monumental Presidente Perón",
@@ -160,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    220,
-    400
+    -130,
+    225,
+    425
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -130
+     -140
     ],
     [
      "+0.5",
-     -105
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Instituto (Córdoba)": [
+    [
+     "213108",
+     "Marcos Ledesma",
+     "G"
+    ],
+    [
+     "229641",
+     "Leonel Mosevich",
+     "CD"
+    ],
+    [
+     "157910",
+     "Fernando Alarcón",
+     "CD-L"
+    ],
+    [
+     "157500",
+     "Jonathan Galván",
+     "CD-R"
+    ],
+    [
+     "361003",
+     "Matías Gallardo",
+     "CM-L"
+    ],
+    [
+     "242672",
+     "Gustavo Abregú",
+     "CM-R"
+    ],
+    [
+     "76156",
+     "Diego Sosa",
+     "LM"
+    ],
+    [
+     "268229",
+     "Hernán De La Fuente",
+     "RM"
+    ],
+    [
+     "241622",
+     "Matias Tissera",
+     "F"
+    ],
+    [
+     "70912",
+     "Alex Luna",
+     "CF-L"
+    ],
+    [
+     "379598",
+     "Jeremías Lázaro",
+     "CF-R"
+    ]
+   ],
+   "Deportivo Riestra": [
+    [
+     "251884",
+     "Marino Arzamendia",
+     "G"
+    ],
+    [
+     "206671",
+     "Cristian Paz",
+     "CD"
+    ],
+    [
+     "105823",
+     "Carlos Quintana",
+     "CD-L"
+    ],
+    [
+     "315728",
+     "Facundo Miño",
+     "CD-R"
+    ],
+    [
+     "194848",
+     "Pedro Ramirez",
+     "LB"
+    ],
+    [
+     "278608",
+     "Mariano Bracamonte",
+     "RB"
+    ],
+    [
+     "379677",
+     "Gabriel Obredor",
+     "CM"
+    ],
+    [
+     "283894",
+     "Nicólas Watson",
+     "CM-L"
+    ],
+    [
+     "195672",
+     "Milton Céliz",
+     "CM-R"
+    ],
+    [
+     "224050",
+     "Miguel Graneros",
+     "CF-L"
+    ],
+    [
+     "235785",
+     "Nicolás Benegas",
+     "CF-R"
     ]
    ]
   }

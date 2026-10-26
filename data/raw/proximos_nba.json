@@ -9,10 +9,10 @@
   "visita": "WSH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Washington Wizards",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Spectrum Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -142,
-    120
-   ],
-   "ml_abre": [
-    -142,
-    120
-   ],
-   "spread": [
-    -2.5,
-    -110,
-    2.5,
-    -110
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    227.5,
-    -105,
-    -115
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909869",
@@ -61,10 +38,10 @@
   "visita": "MIN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Minnesota Timberwolves",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Rocket Arena",
   "records": {
    "home": [
@@ -78,30 +55,7 @@
     "2-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -155,
-    130
-   ],
-   "ml_abre": [
-    -170,
-    142
-   ],
-   "spread": [
-    -3.5,
-    -105,
-    3.5,
-    -115
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    234.5,
-    -108,
-    -112
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401909870",
@@ -113,10 +67,10 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Boston Celtics",
   "visita_espn": "Chicago Bulls",
-  "revisado": true,
+  "revisado": false,
   "estadio": "TD Garden",
   "records": {
    "home": [
@@ -130,30 +84,7 @@
     "1-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -750,
-    525
-   ],
-   "ml_abre": [
-    -850,
-    575
-   ],
-   "spread": [
-    -14.5,
-    -105,
-    14.5,
-    -115
-   ],
-   "spread_abre": -13.5,
-   "total": [
-    233.5,
-    -105,
-    -115
-   ],
-   "total_abre": 233.5
-  }
+  "momios": null
  },
  {
   "id": "401909871",
@@ -165,10 +96,10 @@
   "visita": "DAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Miami Heat",
   "visita_espn": "Dallas Mavericks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -182,30 +113,7 @@
     "1-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -285,
-    230
-   ],
-   "ml_abre": [
-    -290,
-    235
-   ],
-   "spread": [
-    -7.5,
-    -110,
-    7.5,
-    -110
-   ],
-   "spread_abre": -7.5,
-   "total": [
-    240.5,
-    -108,
-    -112
-   ],
-   "total_abre": 235.5
-  }
+  "momios": null
  },
  {
   "id": "401909872",
@@ -237,8 +145,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    -175
+    140,
+    -166
    ],
    "ml_abre": [
     145,
@@ -350,15 +258,15 @@
    ],
    "spread": [
     -4.5,
-    -115,
+    -112,
     4.5,
-    -105
+    -108
    ],
    "spread_abre": -5.5,
    "total": [
-    229.5,
-    -112,
-    -108
+    228.5,
+    -115,
+    -105
    ],
    "total_abre": 229.5
   }
@@ -376,7 +284,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Utah Jazz",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -715,9 +623,9 @@
    ],
    "spread_abre": 1.5,
    "total": [
-    237.5,
-    -110,
-    -110
+    238.5,
+    -115,
+    -105
    ],
    "total_abre": 237.5
   }
