@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909867",
-  "utc": "2026-10-26T01:00Z",
-  "fecha": "2026-10-25",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "SAC",
-  "visita": "MEM",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Sacramento Kings",
-  "visita_espn": "Memphis Grizzlies",
-  "revisado": false,
-  "estadio": "Golden 1 Center",
-  "records": {
-   "home": [
-    "0-2",
-    "0-1",
-    "0-1"
-   ],
-   "away": [
-    "2-0",
-    "1-0",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909868",
   "utc": "2026-10-26T23:00Z",
   "fecha": "2026-10-26",
@@ -56,24 +27,24 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -130,
-    110
+    -120,
+    100
    ],
    "ml_abre": [
     -142,
     120
    ],
    "spread": [
-    -2.5,
-    -105,
-    2.5,
-    -115
+    -1.5,
+    -110,
+    1.5,
+    -110
    ],
    "spread_abre": -2.5,
    "total": [
-    229.5,
+    228.5,
     -105,
     -115
    ],
@@ -108,20 +79,20 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -170,
-    142
+    -155,
+    130
    ],
    "ml_abre": [
     -170,
     142
    ],
    "spread": [
-    -4.5,
-    -105,
-    4.5,
-    -115
+    -3.5,
+    -110,
+    3.5,
+    -110
    ],
    "spread_abre": -4.5,
    "total": [
@@ -160,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -850,
     575
@@ -212,26 +183,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -310,
-    250
+    -340,
+    270
    ],
    "ml_abre": [
     -290,
     235
    ],
    "spread": [
-    -7.5,
-    -115,
-    7.5,
-    -105
+    -8.5,
+    -105,
+    8.5,
+    -115
    ],
    "spread_abre": -7.5,
    "total": [
-    235.5,
-    -112,
-    -108
+    236.5,
+    -110,
+    -110
    ],
    "total_abre": 235.5
   }
@@ -264,7 +235,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     142,
     -170
@@ -315,7 +286,30 @@
     "0-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -395,
+    310
+   ],
+   "ml_abre": [
+    -380,
+    300
+   ],
+   "spread": [
+    -9.5,
+    -115,
+    9.5,
+    -105
+   ],
+   "spread_abre": -9.5,
+   "total": [
+    218.5,
+    -115,
+    -105
+   ],
+   "total_abre": 218.5
+  }
  },
  {
   "id": "401909874",
@@ -345,10 +339,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -218,
-    180
+    -205,
+    170
    ],
    "ml_abre": [
     -218,
@@ -391,12 +385,35 @@
     "0-1"
    ],
    "away": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    -105
+   ],
+   "ml_abre": [
+    -115,
+    -105
+   ],
+   "spread": [
+    -1.5,
+    -105,
+    1.5,
+    -115
+   ],
+   "spread_abre": -1.5,
+   "total": [
+    237.5,
+    -115,
+    -105
+   ],
+   "total_abre": 237.5
+  }
  },
  {
   "id": "401909876",
@@ -426,10 +443,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -290,
-    235
+    -305,
+    245
    ],
    "ml_abre": [
     -290,
@@ -437,15 +454,15 @@
    ],
    "spread": [
     -7.5,
-    -110,
+    -115,
     7.5,
-    -110
+    -105
    ],
    "spread_abre": -7.5,
    "total": [
-    235.5,
-    -110,
-    -110
+    234.5,
+    -105,
+    -115
    ],
    "total_abre": 235.5
   }
@@ -530,8 +547,8 @@
     "1-0"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-1",
     "0-1"
    ]
   },
@@ -965,8 +982,8 @@
     "0-2"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-1",
     "0-1"
    ]
   },
@@ -994,9 +1011,9 @@
     "1-0"
    ],
    "away": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -1290,7 +1307,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
@@ -1418,13 +1435,13 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-1",
     "0-1"
    ]
   },
@@ -1829,8 +1846,8 @@
     "1-1"
    ],
    "away": [
+    "0-3",
     "0-2",
-    "0-1",
     "0-1"
    ]
   },
@@ -1853,9 +1870,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
     "0-3",
@@ -2230,9 +2247,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "2-0",
+    "3-0",
     "1-0",
-    "1-0"
+    "2-0"
    ],
    "away": [
     "2-1",
@@ -2433,8 +2450,8 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
+    "0-3",
     "0-2",
-    "0-1",
     "0-1"
    ],
    "away": [

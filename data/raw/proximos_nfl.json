@@ -1,42 +1,5 @@
 [
  {
-  "id": "401873022",
-  "utc": "2026-10-26T00:20Z",
-  "estadio": "Lumen Field",
-  "local_espn": "Seattle Seahawks",
-  "visita_espn": "Kansas City Chiefs",
-  "local_abbr": "SEA",
-  "visita_abbr": "KC",
-  "neutral": false,
-  "estado": "STATUS_SCHEDULED",
-  "semana": 7,
-  "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -162,
-    136
-   ],
-   "ml_abre": [
-    -155,
-    130
-   ],
-   "spread": [
-    -3.0,
-    -102,
-    3.0,
-    -118
-   ],
-   "spread_abre": -3.0,
-   "total": [
-    43.5,
-    -102,
-    -118
-   ],
-   "total_abre": 45.5
-  }
- },
- {
   "id": "401873009",
   "utc": "2026-10-27T00:15Z",
   "estadio": "Lincoln Financial Field",
@@ -60,15 +23,15 @@
    ],
    "spread": [
     4.5,
-    -112,
+    -108,
     -4.5,
-    -108
+    -112
    ],
    "spread_abre": -3.0,
    "total": [
     43.5,
     -118,
-    -102
+    null
    ],
    "total_abre": 48.5
   }
@@ -88,24 +51,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -192,
-    160
+    -205,
+    170
    ],
    "ml_abre": [
     -325,
     260
    ],
    "spread": [
-    -3.5,
-    -110,
-    3.5,
-    -110
+    -4.5,
+    -108,
+    4.5,
+    -112
    ],
    "spread_abre": -7.0,
    "total": [
     47.5,
-    -105,
-    -115
+    -112,
+    -108
    ],
    "total_abre": 45.5
   }
@@ -125,24 +88,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    150
+    -192,
+    160
    ],
    "ml_abre": [
     -135,
     114
    ],
    "spread": [
-    -3.0,
-    -120,
-    3.0,
-    100
+    -3.5,
+    -102,
+    3.5,
+    -118
    ],
    "spread_abre": -2.5,
    "total": [
-    52.5,
-    -110,
-    -110
+    53.5,
+    -112,
+    -108
    ],
    "total_abre": 51.5
   }
@@ -171,15 +134,15 @@
    ],
    "spread": [
     -10.0,
-    -110,
+    -112,
     10.0,
-    -110
+    -108
    ],
    "spread_abre": -6.5,
    "total": [
     47.5,
-    -110,
-    -110
+    100,
+    -120
    ],
    "total_abre": 49.5
   }
@@ -233,7 +196,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 8,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -162,
+    136
+   ],
+   "ml_abre": [
+    -225,
+    185
+   ],
+   "spread": [
+    -3.0,
+    -102,
+    3.0,
+    -118
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    46.5,
+    -110,
+    -110
+   ],
+   "total_abre": 47.5
+  }
  },
  {
   "id": "401873029",
@@ -250,8 +236,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -118,
-    -102
+    -112,
+    -108
    ],
    "ml_abre": [
     -125,
@@ -259,15 +245,15 @@
    ],
    "spread": [
     -1.5,
-    -102,
+    102,
     1.5,
-    -118
+    -122
    ],
    "spread_abre": -1.5,
    "total": [
     44.5,
-    -105,
-    -115
+    -110,
+    -110
    ],
    "total_abre": 41.5
   }
@@ -287,8 +273,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -185,
-    154
+    -192,
+    160
    ],
    "ml_abre": [
     -245,
@@ -324,8 +310,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    105
+    -130,
+    110
    ],
    "ml_abre": [
     -225,
@@ -339,9 +325,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    44.5,
-    -110,
-    -110
+    45.5,
+    -105,
+    -115
    ],
    "total_abre": 46.5
   }
@@ -361,8 +347,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -345,
-    275
+    -360,
+    285
    ],
    "ml_abre": [
     -218,
@@ -370,9 +356,9 @@
    ],
    "spread": [
     -7.5,
-    -105,
+    -108,
     7.5,
-    -115
+    -112
    ],
    "spread_abre": -4.5,
    "total": [
@@ -398,24 +384,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -360,
-    285
+    -340,
+    270
    ],
    "ml_abre": [
     -192,
     160
    ],
    "spread": [
-    -7.5,
-    -110,
-    7.5,
-    -110
+    -7.0,
+    -112,
+    7.0,
+    -108
    ],
    "spread_abre": -3.5,
    "total": [
-    45.5,
-    -110,
-    -110
+    44.5,
+    -108,
+    -112
    ],
    "total_abre": 48.5
   }
@@ -450,9 +436,9 @@
    ],
    "spread_abre": -1.5,
    "total": [
-    42.5,
-    -110,
-    -110
+    41.5,
+    -115,
+    -105
    ],
    "total_abre": 43.5
   }
@@ -472,8 +458,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    300,
-    -380
+    310,
+    -395
    ],
    "ml_abre": [
     260,
@@ -509,8 +495,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    150
+    -185,
+    154
    ],
    "ml_abre": [
     114,
@@ -518,15 +504,15 @@
    ],
    "spread": [
     -3.5,
-    -110,
+    -115,
     3.5,
-    -110
+    -105
    ],
    "spread_abre": 2.5,
    "total": [
-    41.5,
-    -110,
-    -110
+    40.5,
+    -115,
+    -105
    ],
    "total_abre": 46.5
   }
@@ -546,8 +532,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -162,
-    136
+    -170,
+    142
    ],
    "ml_abre": [
     -218,
@@ -555,17 +541,31 @@
    ],
    "spread": [
     -3.0,
-    -110,
+    -118,
     3.0,
-    -110
+    -102
    ],
    "spread_abre": -4.5,
    "total": [
     46.5,
-    -115,
-    -105
+    -110,
+    -110
    ],
    "total_abre": 47.5
   }
+ },
+ {
+  "id": "401873037",
+  "utc": "2026-11-06T01:15Z",
+  "estadio": "M&T Bank Stadium",
+  "local_espn": "Baltimore Ravens",
+  "visita_espn": "Jacksonville Jaguars",
+  "local_abbr": "BAL",
+  "visita_abbr": "JAX",
+  "neutral": false,
+  "estado": "STATUS_SCHEDULED",
+  "semana": 9,
+  "tipo": "regular-season",
+  "momios": null
  }
 ]
