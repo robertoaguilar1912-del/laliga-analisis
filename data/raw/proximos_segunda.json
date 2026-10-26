@@ -12,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    230,
-    290
+    225,
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -130
+    105,
+    -140
    ],
    "spread": [
     [
@@ -27,7 +27,123 @@
     ],
     [
      "+0.5",
-     -130
+     -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "FC Andorra": [
+    [
+     "287165",
+     "Jesús Owono",
+     "G"
+    ],
+    [
+     "354532",
+     "Lautaro Spatz",
+     "CD-L"
+    ],
+    [
+     "347509",
+     "Marc Bombardó",
+     "CD-R"
+    ],
+    [
+     "278214",
+     "Marti Vila Garcia",
+     "LB"
+    ],
+    [
+     "267058",
+     "Thomas Carrique",
+     "RB"
+    ],
+    [
+     "171552",
+     "Sergio Molina",
+     "CM"
+    ],
+    [
+     "345239",
+     "Efe Akman",
+     "LM"
+    ],
+    [
+     "320854",
+     "Randy Schneider",
+     "RM"
+    ],
+    [
+     "331370",
+     "Jordi Cano",
+     "F"
+    ],
+    [
+     "331382",
+     "Moró Sidibe",
+     "LF"
+    ],
+    [
+     "310973",
+     "Lautaro De León",
+     "RF"
+    ]
+   ],
+   "Burgos": [
+    [
+     "189960",
+     "Ander Cantero",
+     "G"
+    ],
+    [
+     "259821",
+     "Gregorio Sierra",
+     "CD-L"
+    ],
+    [
+     "245822",
+     "Oier Luengo",
+     "CD-R"
+    ],
+    [
+     "331721",
+     "Brais Martínez",
+     "LB"
+    ],
+    [
+     "333167",
+     "Alberto Dadie",
+     "RB"
+    ],
+    [
+     "34390",
+     "Pablo Galdames",
+     "CM-L"
+    ],
+    [
+     "302945",
+     "Unai Vencedor",
+     "CM-R"
+    ],
+    [
+     "331154",
+     "Javi Llabrés",
+     "LM"
+    ],
+    [
+     "375963",
+     "Álex Lizancos",
+     "RM"
+    ],
+    [
+     "324350",
+     "Jon Karrikaburu",
+     "CF-L"
+    ],
+    [
+     "231344",
+     "Curro",
+     "CF-R"
     ]
    ]
   }
@@ -184,7 +300,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    250,
+    155
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -215
+    ],
+    [
+     "-0.5",
+     135
+    ]
+   ]
+  }
  },
  {
   "id": "401883149",
@@ -217,7 +355,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    270,
+    340
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -155
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401883123",
@@ -228,7 +388,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    255,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -135
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
+  }
  },
  {
   "id": "401883147",
