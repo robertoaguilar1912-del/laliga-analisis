@@ -5,7 +5,7 @@
   "estadio": "Estadio Jalisco",
   "local_espn": "Atlas",
   "visita_espn": "Puebla",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    250,
-    275,
-    100
+    260,
+    270,
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    115
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -125
+     -120
     ],
     [
      "-0.5",
-     -110
+     -115
     ]
    ]
   }
@@ -193,9 +193,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
-    330,
-    390
+    -150,
+    310,
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +205,127 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     125
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "América": [
+    [
+     "200101",
+     "Ángel Malagón",
+     "G"
+    ],
+    [
+     "82782",
+     "Santiago Ramos",
+     "CD-L"
+    ],
+    [
+     "241225",
+     "Santiago Bueno",
+     "CD-R"
+    ],
+    [
+     "386254",
+     "Franco Rossano",
+     "LB"
+    ],
+    [
+     "195312",
+     "Kevin Álvarez",
+     "RB"
+    ],
+    [
+     "3731",
+     "Carlos Álvarez",
+     "AM"
+    ],
+    [
+     "290414",
+     "Israel Reyes",
+     "LM"
+    ],
+    [
+     "129421",
+     "Érick Sánchez",
+     "RM"
+    ],
+    [
+     "93184",
+     "Henry Martín",
+     "F"
+    ],
+    [
+     "144325",
+     "Brian Rodríguez",
+     "AM-L"
+    ],
+    [
+     "336456",
+     "Óscar Perea",
+     "AM-R"
+    ]
+   ],
+   "Pachuca": [
+    [
+     "259439",
+     "Carlos Moreno",
+     "G"
+    ],
+    [
+     "268843",
+     "Sergio Barreto",
+     "D"
+    ],
+    [
+     "194921",
+     "Eduardo Bauermann",
+     "D"
+    ],
+    [
+     "228355",
+     "Francisco Venegas",
+     "D"
+    ],
+    [
+     "364454",
+     "Jorge Berlanga",
+     "D"
+    ],
+    [
+     "229552",
+     "Oussama Idrissi",
+     "M"
+    ],
+    [
+     "326072",
+     "Alan Bautista",
+     "M"
+    ],
+    [
+     "233978",
+     "Christian Rivera",
+     "M"
+    ],
+    [
+     "160562",
+     "Javier Vallejo",
+     "M"
+    ],
+    [
+     "176489",
+     "Rodolfo Pizarro",
+     "M"
+    ],
+    [
+     "127570",
+     "Salomón Rondón",
+     "F"
     ]
    ]
   }

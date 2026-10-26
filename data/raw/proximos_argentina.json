@@ -1,168 +1,19 @@
 [
  {
-  "id": "401841634",
-  "utc": "2026-10-25T22:15Z",
-  "estadio": "Estadio Más Monumental",
-  "local_espn": "River Plate",
-  "visita_espn": "Racing Club",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -235,
-    350,
-    650
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -120,
-    -110
-   ],
-   "spread": [
-    [
-     "-1.5",
-     120
-    ],
-    [
-     "+1.5",
-     -165
-    ]
-   ]
-  },
-  "alineaciones": {
-   "River Plate": [
-    [
-     "361402",
-     "Santiago Beltrán",
-     "G"
-    ],
-    [
-     "382912",
-     "Lautaruo Rivero",
-     "CD-L"
-    ],
-    [
-     "119289",
-     "Nicolás Otamendi",
-     "CD-R"
-    ],
-    [
-     "268525",
-     "Francisco Ortega",
-     "LB"
-    ],
-    [
-     "228262",
-     "Gonzalo Montiel",
-     "RB"
-    ],
-    [
-     "195681",
-     "Ángel Correa",
-     "AM"
-    ],
-    [
-     "277208",
-     "Thiago Almada",
-     "LM"
-    ],
-    [
-     "286406",
-     "Aníbal Moreno",
-     "RM"
-    ],
-    [
-     "280381",
-     "Lucas Beltrán",
-     "F"
-    ],
-    [
-     "307332",
-     "Tomás Galván",
-     "AM-L"
-    ],
-    [
-     "402601",
-     "Tobías Andrada",
-     "AM-R"
-    ]
-   ],
-   "Racing Club": [
-    [
-     "233910",
-     "Facundo Cambeses",
-     "G"
-    ],
-    [
-     "361553",
-     "Gonzalo Escudero",
-     "CD-L"
-    ],
-    [
-     "400994",
-     "Mateo Martínez",
-     "CD-R"
-    ],
-    [
-     "317430",
-     "Ignacio Agustin Rodríguez",
-     "LB"
-    ],
-    [
-     "311747",
-     "Ezequiel Cannavo",
-     "RB"
-    ],
-    [
-     "228388",
-     "Tomás Conechny",
-     "M"
-    ],
-    [
-     "195645",
-     "Matías Kranevitter",
-     "CM"
-    ],
-    [
-     "241988",
-     "Matías Zaracho",
-     "AM"
-    ],
-    [
-     "70303",
-     "Alejandro Tello",
-     "LM"
-    ],
-    [
-     "269808",
-     "Gastón Lodico",
-     "RM"
-    ],
-    [
-     "3038",
-     "Adrián Martínez",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841640",
   "utc": "2026-10-26T00:30Z",
   "estadio": "Estadio Claudio Chiqui Tapia",
   "local_espn": "Barracas Central",
   "visita_espn": "Estudiantes de Río Cuarto",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    230,
-    475
+    -125,
+    220,
+    425
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -135
     ],
     [
      "+0.5",
-     110
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Barracas Central": [
+    [
+     "256553",
+     "Marcelo Miño",
+     "G"
+    ],
+    [
+     "194034",
+     "Gastón Campi",
+     "CD-L"
+    ],
+    [
+     "237040",
+     "Yonatthan Rak",
+     "CD-R"
+    ],
+    [
+     "269817",
+     "Elías Pereyra",
+     "LB"
+    ],
+    [
+     "206618",
+     "Rafael Barrios",
+     "RB"
+    ],
+    [
+     "292028",
+     "Iván Tapia",
+     "CM-L"
+    ],
+    [
+     "227730",
+     "Esteban Rolón",
+     "CM-R"
+    ],
+    [
+     "316295",
+     "Enzo Taborda",
+     "LM"
+    ],
+    [
+     "217154",
+     "Rodrigo Bogarín",
+     "RM"
+    ],
+    [
+     "193531",
+     "Nicolás Orsini",
+     "CF-L"
+    ],
+    [
+     "240421",
+     "Norberto Briasco",
+     "CF-R"
+    ]
+   ],
+   "Estudiantes de Río Cuarto": [
+    [
+     "359753",
+     "Lautaro Herrera",
+     "G"
+    ],
+    [
+     "200271",
+     "Sergio Ojeda",
+     "CD"
+    ],
+    [
+     "379092",
+     "Matías Valenti",
+     "CD-L"
+    ],
+    [
+     "292106",
+     "Gonzalo Maffini",
+     "CD-R"
+    ],
+    [
+     "287690",
+     "Alejandro Cabrera",
+     "SW"
+    ],
+    [
+     "206678",
+     "Gabriel Alanís",
+     "CM-L"
+    ],
+    [
+     "379699",
+     "Tomás González",
+     "CM-R"
+    ],
+    [
+     "233928",
+     "Facundo Cobos",
+     "LM"
+    ],
+    [
+     "283928",
+     "Juan Antonini",
+     "RM"
+    ],
+    [
+     "287691",
+     "Ibrahim Hesar",
+     "CF-L"
+    ],
+    [
+     "280382",
+     "Mauro Valiente",
+     "CF-R"
     ]
    ]
   }
@@ -187,25 +154,25 @@
   "estadio": "'Estadio Único Madre de Ciudades",
   "local_espn": "Central Córdoba (Santiago del Estero)",
   "visita_espn": "Vélez Sarsfield",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    280,
-    240,
+    270,
+    245,
     100
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    100,
     -135
    ],
    "spread": [
     [
      "+0.5",
-     -125
+     -130
     ],
     [
      "-0.5",
@@ -375,14 +342,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    215,
-    400
+    -130,
+    225,
+    425
    ],
    "ou_linea": 1.5,
    "ou": [
     -170,
-    120
+    130
    ],
    "spread": [
     [
