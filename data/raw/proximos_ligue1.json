@@ -5,29 +5,145 @@
   "estadio": "Parc des Princes",
   "local_espn": "Paris Saint-Germain",
   "visita_espn": "Lyon",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-ligue-1",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
+    -320,
     475,
     750
    ],
    "ou_linea": 3.5,
    "ou": [
     -120,
-    -110
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -130
+     -135
     ],
     [
      "+1.5",
      -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Paris Saint-Germain": [
+    [
+     "248699",
+     "Matvei Safonov",
+     "G"
+    ],
+    [
+     "287005",
+     "Willian Pacho",
+     "CD-L"
+    ],
+    [
+     "304503",
+     "Illia Zabarnyi",
+     "CD-R"
+    ],
+    [
+     "345581",
+     "Warren Zaïre-Emery",
+     "LB"
+    ],
+    [
+     "240233",
+     "Achraf Hakimi",
+     "RB"
+    ],
+    [
+     "288897",
+     "Vitinha",
+     "CM"
+    ],
+    [
+     "214596",
+     "Fabián Ruiz",
+     "LM"
+    ],
+    [
+     "355061",
+     "João Neves",
+     "RM"
+    ],
+    [
+     "265869",
+     "Ferran Torres",
+     "F"
+    ],
+    [
+     "336388",
+     "Désiré Doué",
+     "LF"
+    ],
+    [
+     "329690",
+     "Maghnes Akliouche",
+     "RF"
+    ]
+   ],
+   "Lyon": [
+    [
+     "221278",
+     "Dominik Greif",
+     "G"
+    ],
+    [
+     "213181",
+     "Moussa Niakhaté",
+     "CD-L"
+    ],
+    [
+     "320945",
+     "Felix Bacher",
+     "CD-R"
+    ],
+    [
+     "285088",
+     "Abner",
+     "LB"
+    ],
+    [
+     "370758",
+     "Zachary Athekame",
+     "RB"
+    ],
+    [
+     "298522",
+     "Tyler Morton",
+     "CM"
+    ],
+    [
+     "192060",
+     "Corentin Tolisso",
+     "LM"
+    ],
+    [
+     "303308",
+     "Tanner Tessmann",
+     "RM"
+    ],
+    [
+     "408345",
+     "Khalis Merah",
+     "F"
+    ],
+    [
+     "341375",
+     "Julien Duranville",
+     "LF"
+    ],
+    [
+     "333310",
+     "Ernest Nuamah",
+     "RF"
     ]
    ]
   }
