@@ -5,10 +5,32 @@
   "estadio": "Estadio Caliente",
   "local_espn": "Tijuana",
   "visita_espn": "Santos",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    265,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -165,
+    125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  },
   "alineaciones": {
    "Tijuana": [
     [
@@ -138,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
-    310,
-    425
+    -240,
+    390,
+    500
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -135,
-    100
+    115,
+    -160
    ],
    "spread": [
     [
-     "-0.5",
-     -175
+     "-1.5",
+     105
     ],
     [
-     "+0.5",
-     125
+     "+1.5",
+     -150
     ]
    ]
   }
@@ -168,7 +190,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    240,
+    150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -210
+    ],
+    [
+     "-0.5",
+     135
+    ]
+   ]
+  }
  },
  {
   "id": "401876918",
@@ -179,7 +223,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    195,
+    240,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -170
+    ],
+    [
+     "-0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401876917",
@@ -190,7 +256,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    185,
+    235,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -185
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401876916",
@@ -201,7 +289,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    115,
+    240,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401876914",
