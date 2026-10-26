@@ -5,15 +5,15 @@
   "estadio": "Estadio Jaraguay (Municipal de Montería)",
   "local_espn": "Jaguares de Córdoba",
   "visita_espn": "Llaneros FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
-    225,
-    145
+    155,
+    230,
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,127 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -205
     ],
     [
      "-0.5",
-     140
+     145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Jaguares de Córdoba": [
+    [
+     "336061",
+     "Franklin Mosquera",
+     "G"
+    ],
+    [
+     "190334",
+     "Jerson Malagón",
+     "CD-L"
+    ],
+    [
+     "416625",
+     "Jonathan Lovera",
+     "CD-R"
+    ],
+    [
+     "198995",
+     "Luis Jiménez",
+     "LB"
+    ],
+    [
+     "120800",
+     "Juan Franco",
+     "RB"
+    ],
+    [
+     "195767",
+     "Cristian Alvarez",
+     "AM"
+    ],
+    [
+     "273390",
+     "Rafael Bustamante",
+     "LM"
+    ],
+    [
+     "3145679",
+     "Jose Yanez",
+     "RM"
+    ],
+    [
+     "181489",
+     "Andrés Rentería",
+     "F"
+    ],
+    [
+     "285204",
+     "Johar Mejía",
+     "AM-L"
+    ],
+    [
+     "201320",
+     "Wilfrido De La Rosa",
+     "AM-R"
+    ]
+   ],
+   "Llaneros FC": [
+    [
+     "400102",
+     "Roameth Romaña",
+     "G"
+    ],
+    [
+     "290096",
+     "Alejandro Moralez",
+     "CD-L"
+    ],
+    [
+     "215929",
+     "Dennis Quintero",
+     "CD-R"
+    ],
+    [
+     "200094",
+     "Marlon Sierra",
+     "DM"
+    ],
+    [
+     "365507",
+     "Jhojan Escobar",
+     "LB"
+    ],
+    [
+     "378909",
+     "Juan Pertúz",
+     "RB"
+    ],
+    [
+     "24324",
+     "Juan Castilla",
+     "CM-L"
+    ],
+    [
+     "366880",
+     "Néider Ospina",
+     "CM-R"
+    ],
+    [
+     "305512",
+     "Frank Castañeda",
+     "LM"
+    ],
+    [
+     "224171",
+     "Jhon Vásquez",
+     "RM"
+    ],
+    [
+     "386889",
+     "Juan Ramírez",
+     "F"
     ]
    ]
   }

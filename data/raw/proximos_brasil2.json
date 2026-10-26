@@ -5,29 +5,29 @@
   "estadio": "Estádio Raimundo Sampaio (Independência)",
   "local_espn": "América Mineiro",
   "visita_espn": "Cuiabá",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
+    165,
     230,
-    145
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    120,
     -155
    ],
    "spread": [
     [
-     "+0.5",
-     -190
+     "-0.5",
+     150
     ],
     [
-     "-0.5",
-     135
+     "+0.5",
+     -215
     ]
    ]
   },
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
+    -250,
     360,
-    650
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     120
+     115
     ],
     [
      "+1.5",
-     -170
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Juventude": [
+    [
+     "198844",
+     "Jandrei",
+     "G"
+    ],
+    [
+     "203809",
+     "Messias",
+     "CD"
+    ],
+    [
+     "285127",
+     "Gabriel",
+     "CD-L"
+    ],
+    [
+     "205451",
+     "Rodrigo Sam",
+     "CD-R"
+    ],
+    [
+     "155466",
+     "Gabriel",
+     "CM-L"
+    ],
+    [
+     "334723",
+     "Raí",
+     "CM-R"
+    ],
+    [
+     "187032",
+     "Diogo Barbosa",
+     "LM"
+    ],
+    [
+     "206537",
+     "Aderlan Silva",
+     "RM"
+    ],
+    [
+     "237013",
+     "Safira",
+     "F"
+    ],
+    [
+     "282588",
+     "Marcos Paulo",
+     "CF-L"
+    ],
+    [
+     "358768",
+     "Fábio Lima",
+     "CF-R"
+    ]
+   ],
+   "Náutico": [
+    [
+     "191701",
+     "Gastón Guruceaga",
+     "G"
+    ],
+    [
+     "384098",
+     "Betão",
+     "D"
+    ],
+    [
+     "309501",
+     "Ryan",
+     "D"
+    ],
+    [
+     "196847",
+     "Igor",
+     "D"
+    ],
+    [
+     "203721",
+     "Reginaldo",
+     "D"
+    ],
+    [
+     "146269",
+     "Vinícius",
+     "M"
+    ],
+    [
+     "255807",
+     "Wenderson",
+     "M"
+    ],
+    [
+     "287726",
+     "Benjamín Borasi",
+     "M"
+    ],
+    [
+     "198580",
+     "Jean",
+     "M"
+    ],
+    [
+     "316797",
+     "Luiz Felipe Oliveira De Paula",
+     "M"
+    ],
+    [
+     "34580",
+     "Derek",
+     "F"
     ]
    ]
   }
@@ -194,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    225,
-    260
+    230,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -150
+    110,
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }

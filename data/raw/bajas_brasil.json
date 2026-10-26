@@ -1,7 +1,7 @@
 {
 "401841279": {
 "fotmob": 5103681,
-"visto": "2026-10-26T22:03+00:00",
+"visto": "2026-10-26T23:03+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -56,8 +56,8 @@
 },
 "401841286": {
 "fotmob": 5103674,
-"visto": "2026-10-26T22:03+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-26T23:03+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -79,8 +79,8 @@
 "importante": false
 }
 ],
-"valor_xi": 125665682.0,
-"perdida": 0.09305040018801633,
+"valor_xi": 92299797.0,
+"perdida": 0.12668762424255386,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -91,6 +91,15 @@
 "regreso": "finales de octubre",
 "duda": false,
 "valor": 8297341.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Tomás Cuello",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 6385907.0,
 "titular": false,
 "importante": true
 },
@@ -113,15 +122,6 @@
 "importante": true
 },
 {
-"nombre": "Gustavo Scarpa",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 2469689.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Fred",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -129,10 +129,19 @@
 "valor": 2125339.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Everson",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1100768.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 41363612.0,
-"perdida": 0.381374286172107,
+"valor_xi": 36695339.0,
+"perdida": 0.6039166173120788,
 "perdida_duda": 0.0
 }
 },

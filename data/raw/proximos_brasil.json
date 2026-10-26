@@ -5,29 +5,29 @@
   "estadio": "Couto Pereira",
   "local_espn": "Coritiba",
   "visita_espn": "Grêmio",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    240,
-    215
+    135,
+    235,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -115,
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     115
+     125
     ],
     [
      "+0.5",
-     -160
+     -175
     ]
    ]
   },
@@ -154,13 +154,13 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Flamengo",
   "visita_espn": "Atlético-MG",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -390,
+    -400,
     500,
     1000
    ],
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-1.5",
-     -140
+     -145
     ],
     [
      "+1.5",
-     100
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Flamengo": [
+    [
+     "215388",
+     "Agustín Rossi",
+     "G"
+    ],
+    [
+     "145405",
+     "Léo Pereira",
+     "CD-L"
+    ],
+    [
+     "252316",
+     "Léo Ortiz",
+     "CD-R"
+    ],
+    [
+     "125514",
+     "Alex Sandro",
+     "LB"
+    ],
+    [
+     "188368",
+     "Guillermo Varela",
+     "RB"
+    ],
+    [
+     "179767",
+     "Giorgian de Arrascaeta",
+     "AM"
+    ],
+    [
+     "165778",
+     "Jorginho",
+     "LM"
+    ],
+    [
+     "202533",
+     "Erick Pulgar",
+     "RM"
+    ],
+    [
+     "235017",
+     "Pedro",
+     "F"
+    ],
+    [
+     "253937",
+     "Samuel Lino",
+     "AM-L"
+    ],
+    [
+     "277352",
+     "Gonzalo Plata",
+     "AM-R"
+    ]
+   ],
+   "Atlético-MG": [
+    [
+     "318191",
+     "Gabriel Delfim",
+     "G"
+    ],
+    [
+     "220747",
+     "Lyanco",
+     "CD-L"
+    ],
+    [
+     "398934",
+     "Vitão",
+     "CD-R"
+    ],
+    [
+     "245858",
+     "Renan Lodi",
+     "LB"
+    ],
+    [
+     "304699",
+     "Natanael",
+     "RB"
+    ],
+    [
+     "334382",
+     "Victor Hugo",
+     "AM"
+    ],
+    [
+     "262111",
+     "Alan Franco",
+     "LM"
+    ],
+    [
+     "233416",
+     "Maycon",
+     "RM"
+    ],
+    [
+     "268472",
+     "Igor Gomes",
+     "F"
+    ],
+    [
+     "158272",
+     "Bernard",
+     "AM-L"
+    ],
+    [
+     "256560",
+     "Ángelo Preciado",
+     "AM-R"
     ]
    ]
   }
