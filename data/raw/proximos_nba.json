@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909868",
-  "utc": "2026-10-26T23:00Z",
-  "fecha": "2026-10-26",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHA",
-  "visita": "WSH",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Charlotte Hornets",
-  "visita_espn": "Washington Wizards",
-  "revisado": false,
-  "estadio": "Spectrum Center",
-  "records": {
-   "home": [
-    "2-1",
-    "1-1",
-    "1-0"
-   ],
-   "away": [
-    "2-1",
-    "1-1",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909869",
   "utc": "2026-10-26T23:00Z",
   "fecha": "2026-10-26",
@@ -38,7 +9,7 @@
   "visita": "MIN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Minnesota Timberwolves",
   "revisado": false,
@@ -67,7 +38,7 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Boston Celtics",
   "visita_espn": "Chicago Bulls",
   "revisado": false,
@@ -125,7 +96,7 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Indiana Pacers",
   "revisado": false,
@@ -183,10 +154,10 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Houston Rockets",
   "visita_espn": "Atlanta Hawks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -200,30 +171,7 @@
     "2-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -192,
-    160
-   ],
-   "ml_abre": [
-    -218,
-    180
-   ],
-   "spread": [
-    -4.5,
-    -112,
-    4.5,
-    -108
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    228.5,
-    -115,
-    -105
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401909875",
@@ -235,10 +183,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -252,30 +200,7 @@
     "2-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    -110
-   ],
-   "ml_abre": [
-    -115,
-    -105
-   ],
-   "spread": [
-    1.5,
-    -120,
-    -1.5,
-    100
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    237.5,
-    -110,
-    -110
-   ],
-   "total_abre": 237.5
-  }
+  "momios": null
  },
  {
   "id": "401909876",
@@ -323,8 +248,8 @@
    "spread_abre": -7.5,
    "total": [
     236.5,
-    -110,
-    -110
+    -105,
+    -115
    ],
    "total_abre": 235.5
   }
@@ -496,9 +421,9 @@
     "0-1"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "1-1",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -525,8 +450,8 @@
     "2-0"
    ],
    "away": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ]
   },
@@ -920,13 +845,13 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "1-1",
-    "1-0"
+    "1-1"
    ],
    "away": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ]
   },
@@ -1262,8 +1187,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ],
    "away": [
@@ -1581,8 +1506,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ],
    "away": [
@@ -1673,9 +1598,9 @@
     "1-0"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "1-1",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2016,9 +1941,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "1-1",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "2-1",
@@ -2079,8 +2004,8 @@
     "0-1"
    ],
    "away": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ]
   },
@@ -2456,9 +2381,9 @@
     "2-0"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "1-1",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2480,8 +2405,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
+    "3-1",
     "2-1",
-    "1-1",
     "1-0"
    ],
    "away": [
