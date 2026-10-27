@@ -279,6 +279,16 @@ details.xdet .xrow:last-child { border-bottom: 0; }
 .hist h3 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; vertical-align: middle; margin-right: 2px; }
 .hist-sum { font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
 .hist-sum b { font-family: var(--font-data); color: var(--ink); font-weight: 700; }
+.vivo .vgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.vivo .vlab { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink-2); min-width: 0; }
+.vivo .vlab span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vivo .vlab input { width: 100%; flex: none; }
+.tiempos td small { display: block; font-family: var(--font-data); font-size: 11px; color: var(--ink-3); }
+table.data.tiempos td.nm { white-space: normal; }
+table.data.tiempos th, table.data.tiempos td { padding: 8px 6px; }
+.vivo #v-base, .vivo #v-sel { flex: 1 1 220px; width: 100%; }
+.vivo #v-odds { flex: 1 1 130px; }
+.v-out .pr span:last-child { white-space: nowrap; }
 .fatigue { display: grid; gap: 6px; font-size: 13.5px; color: var(--ink-2); }
 .fatigue b { color: var(--ink); }
 .btn { font-family: var(--font-data); font-size: 12.5px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 7px 12px; cursor: pointer; white-space: nowrap; }

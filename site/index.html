@@ -279,6 +279,16 @@ details.xdet .xrow:last-child { border-bottom: 0; }
 .hist h3 .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; vertical-align: middle; margin-right: 2px; }
 .hist-sum { font-size: 13px; color: var(--ink-2); margin: 10px 0 4px; }
 .hist-sum b { font-family: var(--font-data); color: var(--ink); font-weight: 700; }
+.vivo .vgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.vivo .vlab { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink-2); min-width: 0; }
+.vivo .vlab span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vivo .vlab input { width: 100%; flex: none; }
+.tiempos td small { display: block; font-family: var(--font-data); font-size: 11px; color: var(--ink-3); }
+table.data.tiempos td.nm { white-space: normal; }
+table.data.tiempos th, table.data.tiempos td { padding: 8px 6px; }
+.vivo #v-base, .vivo #v-sel { flex: 1 1 220px; width: 100%; }
+.vivo #v-odds { flex: 1 1 130px; }
+.v-out .pr span:last-child { white-space: nowrap; }
 .fatigue { display: grid; gap: 6px; font-size: 13.5px; color: var(--ink-2); }
 .fatigue b { color: var(--ink); }
 .btn { font-family: var(--font-data); font-size: 12.5px; border: 1px solid var(--ink); background: var(--ink); color: var(--bg); border-radius: 8px; padding: 7px 12px; cursor: pointer; white-space: nowrap; }
@@ -719,6 +729,35 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<div class="plist">${t.forma.map(g => `<div class="pr"><span>${formHTML(g.res)} ${g.local ? 'vs' : 'en'} ${esc(g.rival)} <small>${fdate(g.fecha)}</small></span>
       <span class="mono">${g.gf}-${g.gc}${g.xf == null ? '' : ` <small>xG ${g.xf.toFixed(1)}-${g.xc == null ? '—' : g.xc.toFixed(1)}</small>`}</span></div>`).join('')}</div>`;
   }
+  // goles por tiempo y en vivo (ver tiempos.py): parte del 1er tiempo, corrección de los tiempos sin gol (c1, c2; en el 2º
+  // tiempo según el marcador) y reparto de los goles por minuto (m1, m2: minutos 1-45 y 46-90; el 45 y el 90 con descuento)
+  function porTiempo(TI, lam, base) {
+    const B = TI.bases[base], s = TI.parte_1t;
+    const p1 = 1 - Math.exp(-B.c1 * s * lam), p2 = 1 - Math.exp(-B.c2 * (1 - s) * lam);
+    return [p1, p2, p1 * p2];
+  }
+  const restoTiempo = (w, m) => { if (m <= 0) return 1; if (m > 45) return 0; let r = 0.5 * w[m - 1]; for (let j = m; j < 45; j++) r += w[j]; return r; };
+  function enVivo(TI, lam, base, minuto, gl, gv) {
+    const B = TI.bases[base], s = TI.parte_1t, tot = gl + gv, dif = Math.abs(gl - gv);
+    if (minuto <= 45) {
+      const e1 = B.c1 * s * lam * restoTiempo(TI.m1, minuto), e2 = B.c2 * (1 - s) * lam;
+      return [{ n: `Gol antes del descanso (más de ${tot}.5 goles en el 1er tiempo)`, p: 1 - Math.exp(-e1) },
+              { n: 'Gol en el 2º tiempo (más de 0.5 goles en el 2º tiempo)', p: 1 - Math.exp(-e2) },
+              { n: `Un gol más en el partido (más de ${tot}.5 goles)`, p: 1 - Math.exp(-e1 - e2) }];
+    }
+    const est = tot === 0 ? '00' : dif === 0 ? 'emp' : dif === 1 ? 'u1' : 'u2';
+    const e = B.est[est] * (1 - s) * lam * restoTiempo(TI.m2, minuto - 45);
+    return [{ n: `Un gol más antes del final (más de ${tot}.5 goles; si todavía no hay gol en el 2º tiempo, es lo mismo que más de 0.5 en el 2º tiempo)`, p: 1 - Math.exp(-e) }];
+  }
+  function tiemposHTML(TI, mt) {
+    const pm = porTiempo(TI, mt.lam, 'modelo'), pk = mt.lam_m ? porTiempo(TI, mt.lam_m, 'mercado') : null;
+    const nombres = ['Más de 0.5 en el 1er tiempo', 'Más de 0.5 en el 2º tiempo', 'Gol en los dos tiempos'];
+    const c = p => `${pct(p, 1)}<small>justo ${p > 0 && p < 1 ? (1 / p).toFixed(2) : '—'}</small>`;
+    return `<table class="data tiempos"><thead><tr><th>Goles</th><th>Modelo</th>${pk ? '<th>Mercado</th>' : ''}</tr></thead><tbody>
+      ${nombres.map((n, k) => `<tr><td class="nm">${n}</td><td>${c(pm[k])}</td>${pk ? `<td>${c(pk[k])}</td>` : ''}</tr>`).join('')}
+      </tbody></table>
+      <p class="note">Modelo: con los ${mt.lam.toFixed(2)} goles que espera el modelo.${pk ? ` Mercado: con los ${mt.lam_m.toFixed(2)} que salen de la línea de ${mt.linea_m} de DraftKings sin margen (en la prueba acertó un poco más).` : ''} Estos tres también están en "Mercados" para compararlos con tu casa y guardarlos en tu registro.</p>`;
+  }
   // goles de una lista de marcadores [[a, b], ...]: promedio, más de 2.5 y ambos anotan
   function resumenGoles(ms) {
     if (!ms.length) return '';
@@ -886,7 +925,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           <div class="side r"><span class="tn" style="color:var(--away)">${esc(m.visita_es)}</span><span class="sub">${ta.total.pj ? ta.posicion + 'º · ' + ta.total.pts + ' pts' : 'Todavía no juega'}</span>${formHTML(m.forma_visita)}</div>
         </div>
         <div class="subtabs" role="tablist">
-          ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'H2H e historial', 'Mercados'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
+          ${['Resumen', 'Estadísticas', 'Bajas y alineación', 'H2H e historial', 'Mercados', 'En vivo'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}
         </div>
       </div>
 
@@ -1015,6 +1054,38 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <div class="chart">${marginSVG(m)}</div>
           </div>
         </div>
+      </div>
+
+      <div class="pane" data-pane="5" hidden>
+        ${I.tiempos && m.tiempos ? `<div class="grid2">
+          <div class="card">
+            <h3>Goles por tiempo · antes del partido</h3>
+            ${tiemposHTML(I.tiempos, m.tiempos)}
+          </div>
+          <div class="card">
+            <h3>En vivo</h3>
+            <div class="calc vivo">
+              <div class="vgrid">
+                <label class="vlab"><span>Minuto</span><input id="v-min" type="number" min="0" max="90" step="1" value="0" inputmode="numeric"></label>
+                <label class="vlab"><span>${esc(m.local_es)}</span><input id="v-gl" type="number" min="0" max="15" step="1" value="0" inputmode="numeric"></label>
+                <label class="vlab"><span>${esc(m.visita_es)}</span><input id="v-gv" type="number" min="0" max="15" step="1" value="0" inputmode="numeric"></label>
+              </div>
+              <div class="calc-row">
+                <select id="v-base" aria-label="Total de goles esperado">
+                  ${m.tiempos.lam_m ? `<option value="mercado">Total del mercado: ${m.tiempos.lam_m.toFixed(2)} goles</option>` : ''}
+                  <option value="modelo">Total del modelo: ${m.tiempos.lam.toFixed(2)} goles</option>
+                </select>
+              </div>
+              <div class="v-out" aria-live="polite"></div>
+              <div class="calc-row">
+                <select id="v-sel" aria-label="Mercado en vivo"></select>
+                <input id="v-odds" placeholder="Tu momio, ej. 1.90" inputmode="decimal" autocomplete="off" aria-label="Tu momio en vivo">
+              </div>
+              <div class="calc-out v-ev" aria-live="polite"></div>
+            </div>
+            <p class="note">Minuto: lo que marca el reloj (en el descuento del 1er tiempo pon 45; en el descanso, 46; en el descuento final, 90). Con el marcador, lo que queda del partido y el total esperado, da la probabilidad de que caiga otro gol. Medido con 21,698 partidos de 8 ligas de Europa (marcador al descanso) y 8,804 goles de ESPN con su minuto: el 44% de los goles cae en el 1er tiempo, los minutos del final llevan más, y en el 2º tiempo hay más goles si alguien va ganando. No sabe de expulsiones, lesiones ni del ritmo del partido: si viste algo así, tenlo en cuenta. El total del mercado (DraftKings antes del partido) acertó un poco más que el del modelo.</p>
+          </div>
+        </div>` : '<p class="empty">Este partido no tiene goles esperados del modelo.</p>'}
       </div>`;
     $('#back', el).addEventListener('click', () => { showList(); history.replaceState(null, '', '#partidos'); window.scrollTo(0, 0); });
     $$('.subtabs button', el).forEach(b => b.addEventListener('click', () => {
@@ -1023,6 +1094,33 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     }));
     const renderCmp = split => { $('#cmp', el).innerHTML = split === 'ha' ? cmpHTML(th.casa, ta.fuera, m.local_es + ' (casa)', m.visita_es + ' (fuera)') : cmpHTML(th.total, ta.total, m.local_es, m.visita_es); };
     $$('#cmp-t button', el).forEach(b => b.addEventListener('click', () => { $$('#cmp-t button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderCmp(b.dataset.split); }));
+    // en vivo: probabilidad de otro gol con el minuto y el marcador
+    if (I.tiempos && m.tiempos) {
+      const vMin = $('#v-min', el), vGl = $('#v-gl', el), vGv = $('#v-gv', el), vBase = $('#v-base', el), vSel = $('#v-sel', el), vOdds = $('#v-odds', el);
+      const vOut = $('.v-out', el), vEv = $('.v-ev', el);
+      const entero = (x, a, b) => { const v = Math.round(parseFloat(x.value)); return isFinite(v) ? Math.min(b, Math.max(a, v)) : a; };
+      let filas = [];
+      const evalua = () => {
+        const f = filas[+vSel.value || 0], dec = parseOdds(vOdds.value);
+        if (!f) { vEv.textContent = ''; return; }
+        if (!dec) { vEv.innerHTML = `Escribe el momio de tu casa para <b>${esc(f.n.split(' (')[0].toLowerCase())}</b>: el justo es <span class="mono">${(1 / f.p).toFixed(2)}</span>.`; return; }
+        const ev = f.p * dec - 1, v = verdictOf(ev, f.p);
+        vEv.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(f.n.split(' (')[0])}: modelo <span class="mono">${pct(f.p, 1)}</span> · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / f.p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`;
+      };
+      const pinta = () => {
+        const mi = entero(vMin, 0, 90), gl = entero(vGl, 0, 15), gv = entero(vGv, 0, 15), base = vBase.value;
+        const lam = base === 'mercado' ? m.tiempos.lam_m : m.tiempos.lam;
+        const prev = vSel.selectedIndex;
+        filas = enVivo(I.tiempos, lam, base, mi, gl, gv);
+        vOut.innerHTML = `<div class="plist">${filas.map(f => `<div class="pr"><span>${esc(f.n)}</span><span class="mono"><b>${pct(f.p, 1)}</b> · ${(1 / f.p).toFixed(2)}</span></div>`).join('')}</div>`;
+        vSel.innerHTML = filas.map((f, k) => `<option value="${k}">${esc(f.n.split(' (')[0])}</option>`).join('');
+        vSel.selectedIndex = prev >= 0 && prev < filas.length ? prev : 0;
+        evalua();
+      };
+      [vMin, vGl, vGv].forEach(x => x.addEventListener('input', pinta));
+      vBase.addEventListener('change', pinta); vSel.addEventListener('change', evalua); vOdds.addEventListener('input', evalua);
+      pinta();
+    }
     // historial de cada equipo: todos, solo en casa o solo fuera
     $$('.hist', el).forEach(card => {
       const t = card.dataset.lado === 'l' ? th : ta, body = $('.hist-body', card);
@@ -1365,6 +1463,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       case 'A2': return b(gv > 0);
       case 'CS1': return b(gv === 0);
       case 'CS2': return b(gl === 0);
+      case 'G1T': return r[8] != null ? linea(x => r[8] + r[9] - x, L) : null;    // goles por tiempo: r[8] y r[9], goles del 1er tiempo
+      case 'G2T': return r[8] != null ? linea(x => t - r[8] - r[9] - x, L) : null;
+      case 'GAMB': return r[8] != null ? b(r[8] + r[9] > 0 && t - r[8] - r[9] > 0) : null;
       case 'O': return linea(x => t - x, L);
       case 'U': return linea(x => x - t, L);
       case 'H1': return linea(x => gl - gv + x, L);

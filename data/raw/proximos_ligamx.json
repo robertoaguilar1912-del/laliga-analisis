@@ -93,7 +93,7 @@
     ],
     [
      "-0.5",
-     115
+     110
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    240,
-    205
+    120,
+    245,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,7 +155,7 @@
    "spread": [
     [
      "-0.5",
-     105
+     110
     ],
     [
      "+0.5",
@@ -166,7 +166,7 @@
  },
  {
   "id": "401876914",
-  "utc": "2026-11-01T01:00Z",
+  "utc": "2026-11-01T01:05Z",
   "estadio": "Estadio BBVA",
   "local_espn": "Monterrey",
   "visita_espn": "Tijuana",
@@ -193,8 +193,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
-    125
+    -190,
+    130
    ],
    "spread": [
     [
@@ -210,7 +210,7 @@
  },
  {
   "id": "401876913",
-  "utc": "2026-11-01T03:00Z",
+  "utc": "2026-11-01T03:10Z",
   "estadio": "Estadio Banorte",
   "local_espn": "América",
   "visita_espn": "Toluca",
@@ -228,18 +228,62 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    295,
+    245
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401876911",
-  "utc": "2026-11-02T01:00Z",
+  "utc": "2026-11-02T01:10Z",
   "estadio": "Estadio Banorte",
   "local_espn": "Cruz Azul",
   "visita_espn": "León",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    310,
+    340
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401876910",

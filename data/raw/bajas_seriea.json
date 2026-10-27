@@ -1,7 +1,7 @@
 {
 "401874980": {
 "fotmob": 5749727,
-"visto": "2026-10-27T18:10+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401874780": {
 "fotmob": 5749721,
-"visto": "2026-10-27T18:10+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -147,7 +147,7 @@
 },
 "401874786": {
 "fotmob": 5749728,
-"visto": "2026-10-27T18:10+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -247,10 +247,28 @@
 },
 "401874993": {
 "fotmob": 5749720,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Mario Gila",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 32318693.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Diego Moreira",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 26460743.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Alexis Saelemaekers",
 "tipo": "Lesión",
@@ -258,7 +276,7 @@
 "duda": false,
 "valor": 22777885.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Matteo Gabbia",
@@ -275,6 +293,15 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 15482395.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adrien Rabiot",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 14865100.0,
 "titular": false,
 "importante": false
 },
@@ -297,8 +324,8 @@
 "importante": false
 }
 ],
-"valor_xi": 290947574.0,
-"perdida": 0.0,
+"valor_xi": 236521004.0,
+"perdida": 0.3448206274314648,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -331,14 +358,14 @@
 "importante": true
 }
 ],
-"valor_xi": 94873413.0,
-"perdida": 0.4072287986519469,
+"valor_xi": 89704272.0,
+"perdida": 0.4306950509558787,
 "perdida_duda": 0.0
 }
 },
 "401874965": {
 "fotmob": 5749726,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -370,12 +397,21 @@
 "importante": false
 }
 ],
-"valor_xi": 74656407.0,
-"perdida": 0.08283035908759981,
+"valor_xi": 89866535.0,
+"perdida": 0.06881112084715406,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Oumar Solet",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 16467316.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Idrissa Gueye",
 "tipo": "Lesión",
@@ -392,7 +428,7 @@
 "duda": false,
 "valor": 3888736.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Vakoun Issouf Bayo",
@@ -413,14 +449,14 @@
 "importante": false
 }
 ],
-"valor_xi": 71352783.0,
-"perdida": 0.2125249270235192,
+"valor_xi": 73179476.0,
+"perdida": 0.3791066364017146,
 "perdida_duda": 0.0
 }
 },
 "401874773": {
 "fotmob": 5749729,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -461,7 +497,7 @@
 "importante": false
 }
 ],
-"valor_xi": 58992175.0,
+"valor_xi": 59278855.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -513,14 +549,14 @@
 "importante": false
 }
 ],
-"valor_xi": 317397398.0,
-"perdida": 0.36640977126094776,
+"valor_xi": 380050388.0,
+"perdida": 0.3060054973552612,
 "perdida_duda": 0.0
 }
 },
 "401874988": {
 "fotmob": 5749724,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -531,16 +567,7 @@
 "duda": false,
 "valor": 4494667.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Lorenzo Venturino",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 6815556.0,
-"titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Samuel Wiafe",
@@ -568,11 +595,20 @@
 "valor": 1136696.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Lorenzo Venturino",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 6815556.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 73234174.0,
-"perdida": 0.061373901752479657,
-"perdida_duda": 0.09306524027976337
+"valor_xi": 99070778.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -656,7 +692,7 @@
 },
 "401874799": {
 "fotmob": 5749725,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -688,8 +724,8 @@
 "importante": false
 }
 ],
-"valor_xi": 44979221.0,
-"perdida": 0.357155807567232,
+"valor_xi": 47011165.0,
+"perdida": 0.34171861088743494,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -758,14 +794,14 @@
 "importante": false
 }
 ],
-"valor_xi": 212106924.0,
-"perdida": 0.270406354108459,
+"valor_xi": 195289963.0,
+"perdida": 0.2936917961318882,
 "perdida_duda": 0.0
 }
 },
 "401874976": {
 "fotmob": 5749723,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -779,7 +815,7 @@
 "importante": false
 }
 ],
-"valor_xi": 45328610.0,
+"valor_xi": 45376114.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -828,7 +864,7 @@
 "duda": false,
 "valor": 1983143.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Lassana Coulibaly",
@@ -840,14 +876,14 @@
 "importante": false
 }
 ],
-"valor_xi": 23564914.0,
-"perdida": 1.396428054012843,
+"valor_xi": 26401627.0,
+"perdida": 1.1712749369574837,
 "perdida_duda": 0.0
 }
 },
 "401874969": {
 "fotmob": 5749722,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -931,6 +967,15 @@
 "importante": true
 },
 {
+"nombre": "Raoul Bellanova",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 16775464.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Isak Hien",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -967,14 +1012,14 @@
 "importante": false
 }
 ],
-"valor_xi": 238776766.0,
-"perdida": 0.4115059377259511,
-"perdida_duda": 0.0746726212046946
+"valor_xi": 231781619.0,
+"perdida": 0.49630130938036116,
+"perdida_duda": 0.07692623374073507
 }
 },
 "401874798": {
 "fotmob": 5749732,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1047,7 +1092,7 @@
 },
 "401874990": {
 "fotmob": 5749739,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1138,7 +1183,7 @@
 },
 "401874795": {
 "fotmob": 5749730,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1274,7 +1319,7 @@
 },
 "401875002": {
 "fotmob": 5749733,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1374,7 +1419,7 @@
 },
 "401874782": {
 "fotmob": 5749734,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1438,7 +1483,7 @@
 },
 "401874983": {
 "fotmob": 5749736,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1511,7 +1556,7 @@
 },
 "401874968": {
 "fotmob": 5749737,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1620,7 +1665,7 @@
 },
 "401874949": {
 "fotmob": 5749735,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1774,7 +1819,7 @@
 },
 "401874963": {
 "fotmob": 5749738,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1865,7 +1910,7 @@
 },
 "401874971": {
 "fotmob": 5749731,
-"visto": "2026-10-27T11:35+00:00",
+"visto": "2026-10-27T18:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1884,6 +1929,15 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 22295051.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gianluca Scamacca",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 20868092.0,
 "titular": false,
 "importante": false
 },

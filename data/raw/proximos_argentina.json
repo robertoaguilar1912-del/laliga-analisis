@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    210,
-    290
+    105,
+    215,
+    295
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -175
+    120,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    350,
-    230,
-    -125
+    360,
+    240,
+    -130
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
+    120,
     -180
    ],
    "spread": [
     [
      "+0.5",
-     -110
+     -105
     ],
     [
      "-0.5",
-     -135
+     -145
     ]
    ]
   }
@@ -173,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    200,
+    270
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -185,
+    125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -150
+    ]
+   ]
+  }
  },
  {
   "id": "401841646",
@@ -217,7 +239,17 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    205,
+    270
+   ],
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401841658",
@@ -228,7 +260,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    205,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    135,
+    -195
+   ],
+   "spread": [
+    [
+     "-0.5",
+     110
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401841645",
@@ -239,7 +293,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    225,
+    360
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -200,
+    135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -135
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401841650",
@@ -250,7 +326,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    225,
+    295
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  }
  },
  {
   "id": "401841651",
@@ -261,7 +359,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -165,
+    270,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -185
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401841657",
@@ -281,8 +401,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -175
+    115,
+    -165
    ],
    "spread": [
     [
@@ -305,7 +425,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    245,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401841644",
