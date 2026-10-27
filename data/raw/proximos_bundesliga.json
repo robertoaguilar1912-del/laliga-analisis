@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    260,
+    200,
+    265,
     105
    ],
    "ou_linea": 3.5,
    "ou": [
     115,
-    -155
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
@@ -44,14 +44,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
+    -130,
     310,
-    260
+    255
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    -105
+    -135,
+    100
    ],
    "spread": [
     [
@@ -159,7 +159,7 @@
     ],
     [
      "-0.5",
-     -130
+     -125
     ]
    ]
   }
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
+    175,
     275,
     115
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -135
+    -105,
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -160
     ],
     [
      "-0.5",
-     105
+     110
     ]
    ]
   }
@@ -215,7 +215,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -155,
+    -160,
     120
    ],
    "spread": [
@@ -240,11 +240,27 @@
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    245,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
   }
  },
  {
@@ -253,6 +269,23 @@
   "estadio": "Deutsche Bank Park",
   "local_espn": "Eintracht Frankfurt",
   "visita_espn": "Hamburg SV",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401884739",
+  "utc": "2026-11-06T19:30Z",
+  "estadio": "Volksparkstadion",
+  "local_espn": "Hamburg SV",
+  "visita_espn": "Borussia Mönchengladbach",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,

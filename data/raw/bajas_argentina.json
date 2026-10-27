@@ -1,43 +1,7 @@
 {
-"401841635": {
-"fotmob": 1000019594,
-"visto": "2026-10-26T23:58+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Lucas Sanseviero",
-"tipo": "Lesión",
-"regreso": "unas semanas",
-"duda": false,
-"valor": 737432.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Luca Rafaelli",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 10960905.0,
-"perdida": 0.06727838622814448,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [],
-"valor_xi": 6149809.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-}
-},
 "401841642": {
 "fotmob": 1000019597,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -92,19 +56,10 @@
 },
 "401841655": {
 "fotmob": 1000019614,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Valentín Fenoglio",
-"tipo": "Lesión",
-"regreso": "finales de octubre",
-"duda": false,
-"valor": 718017.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Raúl Lozano",
 "tipo": "Lesión",
@@ -121,6 +76,33 @@
 "duda": false,
 "valor": 366701.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Gonzalo Maffini",
+"tipo": "Sanción",
+"regreso": "hasta el 30 de octubre",
+"duda": false,
+"valor": 324556.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Matías Valenti",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 450026.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Mauro Valiente",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 348826.0,
+"titular": true,
 "importante": true
 },
 {
@@ -143,8 +125,8 @@
 }
 ],
 "valor_xi": 3411538.0,
-"perdida": 0.44601408514283003,
-"perdida_duda": 0.0
+"perdida": 0.33068164563900504,
+"perdida_duda": 0.23416183551231146
 },
 "visita": {
 "faltan": [
@@ -192,7 +174,7 @@
 },
 "401841653": {
 "fotmob": 1000019616,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -247,7 +229,7 @@
 },
 "401841648": {
 "fotmob": 1000019612,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -320,7 +302,7 @@
 },
 "401841647": {
 "fotmob": 1000019615,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -402,11 +384,11 @@
 },
 "401841656": {
 "fotmob": 1000019606,
-"visto": "2026-10-26T11:41+00:00",
-"xi": "standard",
+"visto": "2026-10-27T11:35+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 6149809.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -417,9 +399,9 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 1765375.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Matías Gómez",
@@ -431,15 +413,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 17855421.0,
+"perdida": 0.09887053349232146,
 "perdida_duda": 0.0
 }
 },
 "401841646": {
 "fotmob": 1000019609,
-"visto": "2026-10-26T11:41+00:00",
-"xi": "standard",
+"visto": "2026-10-27T11:35+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -447,32 +429,50 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 1763106.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Rodrigo Aliendro",
+"tipo": "Sanción",
+"regreso": "hasta el 31 de octubre",
+"duda": false,
+"valor": 579251.0,
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 13373176.0,
+"perdida": 0.17515338166490893,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
+"nombre": "Gastón Hernández",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 2463678.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Gonzalo Abrego",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 910078.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Cristian Nahuel Barrios",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
-"valor": 0.0,
+"valor": 455344.0,
 "titular": false,
 "importante": false
 },
@@ -481,29 +481,20 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Gastón Hernández",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
+"valor": 292425.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 17437493.0,
+"perdida": 0.19347712426321834,
 "perdida_duda": 0.0
 }
 },
 "401841654": {
 "fotmob": 1000019607,
-"visto": "2026-10-26T11:41+00:00",
-"xi": "standard",
+"visto": "2026-10-27T11:35+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -511,7 +502,7 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 1132173.0,
 "titular": false,
 "importante": false
 },
@@ -520,25 +511,25 @@
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 946467.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 25818723.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Giuliano Cerato",
+"nombre": "Lucas Sanseviero",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
+"regreso": "unas semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 737432.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Luca Rafaelli",
@@ -550,14 +541,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 10960905.0,
+"perdida": 0.06727838622814448,
 "perdida_duda": 0.0
 }
 },
 "401841658": {
 "fotmob": 1000019604,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -614,15 +605,6 @@
 "importante": false
 },
 {
-"nombre": "Marcos Acuña",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Agustín Ruberto",
 "tipo": "Lesión",
 "regreso": "finales de enero de 2027",
@@ -639,6 +621,24 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Aníbal Moreno",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Marcos Acuña",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 0.0,
@@ -648,7 +648,7 @@
 },
 "401841645": {
 "fotmob": 1000019613,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -712,7 +712,7 @@
 },
 "401841650": {
 "fotmob": 1000019608,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -785,7 +785,7 @@
 },
 "401841651": {
 "fotmob": 1000019611,
-"visto": "2026-10-26T11:41+00:00",
+"visto": "2026-10-27T11:35+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -845,6 +845,289 @@
 "nombre": "Imanol González",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401841657": {
+"fotmob": 1000019605,
+"visto": "2026-10-27T11:35+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Fernando Román",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Lucas Souto",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Jonathan De Irastorza",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401841649": {
+"fotmob": 1000019610,
+"visto": "2026-10-27T11:35+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Nicolás Sumavil",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolás López",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pablo Ferreira",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Santiago Quirós",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Luciano Giménez",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Héctor Bobadilla",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Tomás Nasif",
+"tipo": "Lesión",
+"regreso": "mediados de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gonzalo Goñi",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Alejandro Maciel",
+"tipo": "Sanción",
+"regreso": "",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Felipe Aguilar",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Fernando Juárez",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401841644": {
+"fotmob": 1000019617,
+"visto": "2026-10-27T11:35+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Ramiro Ruíz",
+"tipo": "Sanción",
+"regreso": "",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kevin Ortíz",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gastón Suso",
+"tipo": "Lesión",
+"regreso": "mediados de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Martín Benítez",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Emiliano Viveros",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401841652": {
+"fotmob": 1000019618,
+"visto": "2026-10-27T11:35+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Luciano Gómez",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ezequiel Bonifacio",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Maximiliano Salas",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Manuel Arteaga",
+"tipo": "Lesión",
+"regreso": "finales de octubre",
 "duda": false,
 "valor": 0.0,
 "titular": false,

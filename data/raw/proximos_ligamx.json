@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -260,
-    400,
-    550
+    -235,
+    380,
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -155
+    120,
+    -170
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     110
     ],
     [
      "+1.5",
-     -140
+     -160
     ]
    ]
   }
@@ -236,6 +236,39 @@
   "estadio": "Estadio Banorte",
   "local_espn": "Cruz Azul",
   "visita_espn": "León",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876910",
+  "utc": "2026-11-07T01:00Z",
+  "estadio": "Estadio Libertad Financiera",
+  "local_espn": "Atlético de San Luis",
+  "visita_espn": "FC Juárez",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876909",
+  "utc": "2026-11-07T01:00Z",
+  "estadio": "Estadio Victoria",
+  "local_espn": "Necaxa",
+  "visita_espn": "Tijuana",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876908",
+  "utc": "2026-11-07T03:00Z",
+  "estadio": "Estadio Banorte",
+  "local_espn": "Atlante",
+  "visita_espn": "Santos",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

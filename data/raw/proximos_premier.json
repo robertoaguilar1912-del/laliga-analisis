@@ -13,21 +13,21 @@
    "ml": [
     -120,
     290,
-    285
+    295
    ],
    "ou_linea": 3.5,
    "ou": [
     135,
-    -175
+    -180
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -135
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    240,
-    235
+    105,
+    245,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -120,
     -110
    ],
    "spread": [
     [
      "-0.5",
-     105
+     -105
     ],
     [
      "+0.5",
-     -150
+     -140
     ]
    ]
   }
@@ -325,6 +325,39 @@
     [
      "+0.5",
      -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879242",
+  "utc": "2026-11-06T20:00Z",
+  "estadio": "Hill Dickinson Stadium",
+  "local_espn": "Everton",
+  "visita_espn": "Coventry City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -145,
+    290,
+    350
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -160
+    ],
+    [
+     "+0.5",
+     105
     ]
    ]
   }
