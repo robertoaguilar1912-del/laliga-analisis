@@ -1,7 +1,7 @@
 {
 "401878065": {
 "fotmob": 1000014198,
-"visto": "2026-10-26T23:58+00:00",
+"visto": "2026-10-27T00:39+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -47,8 +47,8 @@
 },
 "401877841": {
 "fotmob": 1000014180,
-"visto": "2026-10-26T23:58+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-27T00:39+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -70,20 +70,20 @@
 "importante": true
 },
 {
-"nombre": "Christian Mafla",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 330828.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Víctor Moreno",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 393000.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Christian Mafla",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 330828.0,
 "titular": false,
 "importante": false
 },
@@ -97,33 +97,24 @@
 "importante": false
 }
 ],
-"valor_xi": 6226829.0,
-"perdida": 0.3464598112458203,
+"valor_xi": 6144858.0,
+"perdida": 0.2972433211638088,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Cristopher Fiermarín",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 1388574.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Diego Novoa",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 293709.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 6072370.0,
-"perdida": 0.27703894854891914,
+"valor_xi": 7251671.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },

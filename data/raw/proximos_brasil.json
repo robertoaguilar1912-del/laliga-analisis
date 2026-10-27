@@ -1,160 +1,11 @@
 [
  {
-  "id": "401841279",
-  "utc": "2026-10-26T22:30Z",
-  "estadio": "Couto Pereira",
-  "local_espn": "Coritiba",
-  "visita_espn": "Grêmio",
-  "estado": "STATUS_FIRST_HALF",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    135,
-    235,
-    200
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -115,
-    -115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     125
-    ],
-    [
-     "+0.5",
-     -175
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Coritiba": [
-    [
-     "364880",
-     "Pedro Luccas",
-     "G"
-    ],
-    [
-     "319507",
-     "Tiago",
-     "D"
-    ],
-    [
-     "243831",
-     "Bruno Melo",
-     "D"
-    ],
-    [
-     "256018",
-     "Jacy Maranhão",
-     "D"
-    ],
-    [
-     "200826",
-     "Tinga",
-     "D"
-    ],
-    [
-     "333306",
-     "Joaquín Lavega",
-     "M"
-    ],
-    [
-     "276240",
-     "Nicolás Fonseca",
-     "M"
-    ],
-    [
-     "128368",
-     "Sebastián Gómez",
-     "M"
-    ],
-    [
-     "150215",
-     "Josué Pesqueira",
-     "M"
-    ],
-    [
-     "216846",
-     "Pedro Rocha",
-     "M"
-    ],
-    [
-     "417356",
-     "Paulo Roberto",
-     "F"
-    ]
-   ],
-   "Grêmio": [
-    [
-     "198983",
-     "Weverton",
-     "G"
-    ],
-    [
-     "199101",
-     "Fabián Balbuena",
-     "CD"
-    ],
-    [
-     "383983",
-     "Wallace",
-     "CD-L"
-    ],
-    [
-     "314603",
-     "Gustavo Martins",
-     "CD-R"
-    ],
-    [
-     "238449",
-     "Mathías Villasanti",
-     "CM-L"
-    ],
-    [
-     "303030",
-     "Erick Noriega",
-     "CM-R"
-    ],
-    [
-     "229121",
-     "Marlon",
-     "LM"
-    ],
-    [
-     "358811",
-     "Diego Caito",
-     "RM"
-    ],
-    [
-     "269079",
-     "Francis Amuzu",
-     "F"
-    ],
-    [
-     "252576",
-     "Carlos Vinícius",
-     "CF-L"
-    ],
-    [
-     "24388",
-     "Cristian Pavón",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841286",
   "utc": "2026-10-26T23:00Z",
   "estadio": "Estadio do Maracana",
   "local_espn": "Flamengo",
   "visita_espn": "Atlético-MG",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -375,9 +226,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    205,
     235,
-    130
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -633,6 +484,17 @@
   "estadio": "Estadio Mineirão",
   "local_espn": "Cruzeiro",
   "visita_espn": "Bahia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841302",
+  "utc": "2026-11-06T23:00Z",
+  "estadio": "Estadio Manoel Barradas",
+  "local_espn": "Vitória",
+  "visita_espn": "Fluminense",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,

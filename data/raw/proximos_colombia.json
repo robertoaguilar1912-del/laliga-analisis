@@ -5,7 +5,7 @@
   "estadio": "Estadio Jaraguay (Municipal de Montería)",
   "local_espn": "Jaguares de Córdoba",
   "visita_espn": "Llaneros FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    240,
-    265
+    100,
+    235,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -145
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -125
+     -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Independiente Santa Fe": [
+    [
+     "286112",
+     "Weibmar Asprilla",
+     "G"
+    ],
+    [
+     "138391",
+     "Emanuel Olivera",
+     "CD-L"
+    ],
+    [
+     "302914",
+     "Iván Scarpeta",
+     "CD-R"
+    ],
+    [
+     "236480",
+     "Mateo Puerta",
+     "LB"
+    ],
+    [
+     "197051",
+     "Helibelton Palacios",
+     "RB"
+    ],
+    [
+     "318097",
+     "Franco Fagúndez",
+     "CM"
+    ],
+    [
+     "188170",
+     "Daniel Torres",
+     "LM"
+    ],
+    [
+     "171395",
+     "Johan Torres",
+     "RM"
+    ],
+    [
+     "131212",
+     "Hugo Rodallega",
+     "F"
+    ],
+    [
+     "308522",
+     "Emerson Rodríguez",
+     "LF"
+    ],
+    [
+     "216183",
+     "Jáder Obrian",
+     "RF"
+    ]
+   ],
+   "Atlético Bucaramanga": [
+    [
+     "254009",
+     "Cristopher Fiermarin",
+     "G"
+    ],
+    [
+     "266325",
+     "José Ortiz",
+     "D"
+    ],
+    [
+     "117451",
+     "José Daniel García",
+     "D"
+    ],
+    [
+     "272875",
+     "Carlos Romaña",
+     "D"
+    ],
+    [
+     "196715",
+     "Edwin Castro",
+     "M"
+    ],
+    [
+     "248686",
+     "Aldair Gutiérrez",
+     "M"
+    ],
+    [
+     "165909",
+     "Fredy Hinestroza",
+     "M"
+    ],
+    [
+     "285045",
+     "Felix Charrupí",
+     "M"
+    ],
+    [
+     "203945",
+     "Fabián Sambueza",
+     "F"
+    ],
+    [
+     "143522",
+     "Luciano Pons",
+     "F"
+    ],
+    [
+     "303551",
+     "Enmerson Batalla",
+     "F"
     ]
    ]
   }
@@ -517,6 +633,17 @@
   "estadio": "Departamental Libertad",
   "local_espn": "Deportivo Pasto",
   "visita_espn": "Jaguares de Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877916",
+  "utc": "2026-11-07T01:00Z",
+  "estadio": "Metropolitano de Techo",
+  "local_espn": "Fortaleza CEIF",
+  "visita_espn": "Independiente Medellín",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,

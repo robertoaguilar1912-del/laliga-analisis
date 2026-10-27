@@ -67,7 +67,7 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Boston Celtics",
   "visita_espn": "Chicago Bulls",
   "revisado": false,
@@ -125,10 +125,10 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Indiana Pacers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -142,30 +142,7 @@
     "2-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    140,
-    -166
-   ],
-   "ml_abre": [
-    145,
-    -175
-   ],
-   "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    238.5,
-    -110,
-    -110
-   ],
-   "total_abre": 239.5
-  }
+  "momios": null
  },
  {
   "id": "401909873",
@@ -177,10 +154,10 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "Phoenix Suns",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Paycom Center",
   "records": {
    "home": [
@@ -194,30 +171,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -325,
-    260
-   ],
-   "ml_abre": [
-    -380,
-    300
-   ],
-   "spread": [
-    -8.5,
-    -110,
-    8.5,
-    -110
-   ],
-   "spread_abre": -9.5,
-   "total": [
-    221.5,
-    -110,
-    -110
-   ],
-   "total_abre": 218.5
-  }
+  "momios": null
  },
  {
   "id": "401909874",
@@ -309,10 +263,10 @@
     -105
    ],
    "spread": [
-    -1.5,
-    100,
     1.5,
-    -120
+    -120,
+    -1.5,
+    100
    ],
    "spread_abre": -1.5,
    "total": [
@@ -336,7 +290,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Denver Nuggets",
   "visita_espn": "Golden State Warriors",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -2476,6 +2430,267 @@
     "0-3",
     "0-2",
     "0-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909287",
+  "utc": "2026-11-07T00:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ATL",
+  "visita": "WSH",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Atlanta Hawks",
+  "visita_espn": "Washington Wizards",
+  "revisado": false,
+  "estadio": "State Farm Arena",
+  "records": {
+   "home": [
+    "2-1",
+    "0-1",
+    "2-0"
+   ],
+   "away": [
+    "2-1",
+    "1-1",
+    "1-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909288",
+  "utc": "2026-11-07T00:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "CHA",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Charlotte Hornets",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Spectrum Center",
+  "records": {
+   "home": [
+    "2-1",
+    "1-1",
+    "1-0"
+   ],
+   "away": [
+    "1-1",
+    "1-0",
+    "0-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909289",
+  "utc": "2026-11-07T00:30Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "CLE",
+  "visita": "PHI",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Cleveland Cavaliers",
+  "visita_espn": "Philadelphia 76ers",
+  "revisado": false,
+  "estadio": "Rocket Arena",
+  "records": {
+   "home": [
+    "1-1",
+    "1-0",
+    "0-1"
+   ],
+   "away": [
+    "3-1",
+    "2-1",
+    "1-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909290",
+  "utc": "2026-11-07T01:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DAL",
+  "visita": "UTAH",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Dallas Mavericks",
+  "visita_espn": "Utah Jazz",
+  "revisado": false,
+  "estadio": "American Airlines Center",
+  "records": {
+   "home": [
+    "1-2",
+    "0-1",
+    "1-1"
+   ],
+   "away": [
+    "1-2",
+    "1-1",
+    "0-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909291",
+  "utc": "2026-11-07T01:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MEM",
+  "visita": "OKC",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Memphis Grizzlies",
+  "visita_espn": "Oklahoma City Thunder",
+  "revisado": false,
+  "estadio": "FedExForum",
+  "records": {
+   "home": [
+    "3-0",
+    "1-0",
+    "2-0"
+   ],
+   "away": [
+    "3-0",
+    "2-0",
+    "1-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909292",
+  "utc": "2026-11-07T01:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIL",
+  "visita": "TOR",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Milwaukee Bucks",
+  "visita_espn": "Toronto Raptors",
+  "revisado": false,
+  "estadio": "Fiserv Forum",
+  "records": {
+   "home": [
+    "0-3",
+    "0-1",
+    "0-2"
+   ],
+   "away": [
+    "2-1",
+    "1-0",
+    "1-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909293",
+  "utc": "2026-11-07T01:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "NO",
+  "visita": "MIN",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "New Orleans Pelicans",
+  "visita_espn": "Minnesota Timberwolves",
+  "revisado": false,
+  "estadio": "Smoothie King Center",
+  "records": {
+   "home": [
+    "0-3",
+    "0-1",
+    "0-2"
+   ],
+   "away": [
+    "3-0",
+    "1-0",
+    "2-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909294",
+  "utc": "2026-11-07T03:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "LAL",
+  "visita": "POR",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Los Angeles Lakers",
+  "visita_espn": "Portland Trail Blazers",
+  "revisado": false,
+  "estadio": "crypto.com Arena",
+  "records": {
+   "home": [
+    "3-0",
+    "2-0",
+    "1-0"
+   ],
+   "away": [
+    "2-0",
+    "1-0",
+    "1-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909295",
+  "utc": "2026-11-07T03:00Z",
+  "fecha": "2026-11-06",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SAC",
+  "visita": "SA",
+  "neutral": false,
+  "nota": "NBA Cup - Group Play",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Sacramento Kings",
+  "visita_espn": "San Antonio Spurs",
+  "revisado": false,
+  "estadio": "Golden 1 Center",
+  "records": {
+   "home": [
+    "0-3",
+    "0-2",
+    "0-1"
+   ],
+   "away": [
+    "1-2",
+    "0-2",
+    "1-0"
    ]
   },
   "momios": null
