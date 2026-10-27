@@ -12,7 +12,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Boston Celtics",
   "visita_espn": "Brooklyn Nets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "TD Garden",
   "records": {
    "home": [
@@ -38,9 +38,9 @@
    ],
    "spread": [
     -12.5,
-    -108,
+    -110,
     12.5,
-    -112
+    -110
    ],
    "spread_abre": -11.5,
    "total": [
@@ -133,8 +133,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -1650,
-    950
+    -1800,
+    1000
    ],
    "ml_abre": [
     -1800,
@@ -142,9 +142,9 @@
    ],
    "spread": [
     -18.5,
-    -108,
+    -112,
     18.5,
-    -112
+    -108
    ],
    "spread_abre": -18.5,
    "total": [
@@ -324,24 +324,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    -142
+    136,
+    -162
    ],
    "ml_abre": [
     105,
     -125
    ],
    "spread": [
-    2.5,
+    4.5,
     -115,
-    -2.5,
+    -4.5,
     -105
    ],
    "spread_abre": 1.5,
    "total": [
-    239.5,
-    -112,
-    -108
+    237.5,
+    -110,
+    -110
    ],
    "total_abre": 237.5
   }
@@ -373,7 +373,30 @@
     "1-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -175,
+    145
+   ],
+   "ml_abre": [
+    -175,
+    145
+   ],
+   "spread": [
+    -4.5,
+    -110,
+    4.5,
+    -110
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    223.5,
+    -110,
+    -110
+   ],
+   "total_abre": 223.5
+  }
  },
  {
   "id": "401909886",

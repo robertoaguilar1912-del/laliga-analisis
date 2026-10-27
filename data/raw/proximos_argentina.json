@@ -5,7 +5,7 @@
   "estadio": "Diego Armando Maradona",
   "local_espn": "Argentinos Juniors",
   "visita_espn": "Independiente Rivadavia",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -13,12 +13,12 @@
    "ml": [
     105,
     215,
-    295
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -170
+    135,
+    -180
    ],
    "spread": [
     [
@@ -28,6 +28,122 @@
     [
      "+0.5",
      -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Argentinos Juniors": [
+    [
+     "200687",
+     "Brayan Cortés",
+     "G"
+    ],
+    [
+     "118787",
+     "Franco Vázquez",
+     "CD-L"
+    ],
+    [
+     "269818",
+     "Francisco Álvarez",
+     "CD-R"
+    ],
+    [
+     "218629",
+     "Sebastián Prieto",
+     "LB"
+    ],
+    [
+     "290507",
+     "Franco Paredes",
+     "RB"
+    ],
+    [
+     "142172",
+     "Facundo Gutiérrez",
+     "CM"
+    ],
+    [
+     "195711",
+     "Nicolás Oroz",
+     "LM"
+    ],
+    [
+     "414355",
+     "Facundo Carrizo",
+     "RM"
+    ],
+    [
+     "270364",
+     "Gastón Verón",
+     "F"
+    ],
+    [
+     "101537",
+     "Matías Giménez",
+     "LF"
+    ],
+    [
+     "382948",
+     "Diego Porcel",
+     "RF"
+    ]
+   ],
+   "Independiente Rivadavia": [
+    [
+     "414351",
+     "Nicolás Bolcato",
+     "G"
+    ],
+    [
+     "336665",
+     "Alejo Osella",
+     "CD-L"
+    ],
+    [
+     "358754",
+     "Leonard Costa",
+     "CD-R"
+    ],
+    [
+     "236006",
+     "Juan Manuel Elordi",
+     "LB"
+    ],
+    [
+     "276021",
+     "Alex Vigo",
+     "RB"
+    ],
+    [
+     "315719",
+     "Gonzalo Rios",
+     "AM"
+    ],
+    [
+     "217153",
+     "José Florentín",
+     "LM"
+    ],
+    [
+     "302053",
+     "Tomás Bottari",
+     "RM"
+    ],
+    [
+     "257754",
+     "Alex Arce",
+     "F"
+    ],
+    [
+     "185434",
+     "Matías Fernández",
+     "AM-L"
+    ],
+    [
+     "335510",
+     "Matías Reali",
+     "AM-R"
     ]
    ]
   }
@@ -45,13 +161,13 @@
    "casa": "DraftKings",
    "ml": [
     360,
-    240,
+    245,
     -130
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -180
+    125,
+    -175
    ],
    "spread": [
     [
@@ -60,7 +176,7 @@
     ],
     [
      "-0.5",
-     -145
+     -140
     ]
    ]
   }
@@ -78,13 +194,13 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    185,
-    275
+    190,
+    280
    ],
    "ou_linea": 1.5,
    "ou": [
-    -175,
-    120
+    -170,
+    125
    ],
    "spread": [
     [
@@ -93,7 +209,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -401,7 +517,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    110,
     -165
    ],
    "spread": [
