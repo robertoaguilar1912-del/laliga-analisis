@@ -5,7 +5,7 @@
   "estadio": "Mapei Stadium",
   "local_espn": "Sassuolo",
   "visita_espn": "Lazio",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -360,
-    400,
-    900
+    -285,
+    360,
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    100
+    -120,
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     -120
+     110
     ],
     [
      "+1.5",
-     -115
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AS Roma": [
+    [
+     "206587",
+     "Pierluigi Gollini",
+     "G"
+    ],
+    [
+     "242593",
+     "Evan Ndicka",
+     "CD"
+    ],
+    [
+     "336104",
+     "Konstantinos Koulierakis",
+     "CD-L"
+    ],
+    [
+     "212597",
+     "Gianluca Mancini",
+     "CD-R"
+    ],
+    [
+     "360235",
+     "Niccolò Pisilli",
+     "CM-L"
+    ],
+    [
+     "169213",
+     "Bryan Cristante",
+     "CM-R"
+    ],
+    [
+     "146335",
+     "Marten de Roon",
+     "AM"
+    ],
+    [
+     "164826",
+     "Nahuel Molina",
+     "LM"
+    ],
+    [
+     "409371",
+     "Emanuele Lulli",
+     "RM"
+    ],
+    [
+     "250284",
+     "Santiago Castro",
+     "CF-L"
+    ],
+    [
+     "323974",
+     "Matìas Soulè",
+     "CF-R"
+    ]
+   ],
+   "Cagliari": [
+    [
+     "278987",
+     "Elia Caprile",
+     "G"
+    ],
+    [
+     "196901",
+     "Yerry Mina",
+     "CD"
+    ],
+    [
+     "361506",
+     "Juan Rodríguez",
+     "CD-L"
+    ],
+    [
+     "332684",
+     "Zé Pedro",
+     "CD-R"
+    ],
+    [
+     "272745",
+     "Michel Adopo",
+     "CM-L"
+    ],
+    [
+     "6729",
+     "Alessandro Romano",
+     "CM-R"
+    ],
+    [
+     "186437",
+     "Alessandro Deiola",
+     "AM"
+    ],
+    [
+     "322913",
+     "Adam Obert",
+     "LM"
+    ],
+    [
+     "265965",
+     "Yukinari Sugawara",
+     "RM"
+    ],
+    [
+     "261173",
+     "M'Bala Nzola",
+     "F"
+    ],
+    [
+     "324705",
+     "Alieu Fadera",
+     "RCF"
     ]
    ]
   }
@@ -193,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
-    270,
-    -140
+    350,
+    275,
+    -145
    ],
    "ou_linea": 2.5,
    "ou": [
     -150,
-    120
+    115
    ],
    "spread": [
     [
      "+0.5",
-     105
+     110
     ],
     [
      "-0.5",
      -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Torino": [
+    [
+     "252406",
+     "Lucas Perri",
+     "G"
+    ],
+    [
+     "239120",
+     "Adrian Ismajli",
+     "CD"
+    ],
+    [
+     "367168",
+     "Pietro Comuzzo",
+     "CD-L"
+    ],
+    [
+     "274258",
+     "Saúl Coco",
+     "CD-R"
+    ],
+    [
+     "206378",
+     "Nikola Vlasic",
+     "CM-L"
+    ],
+    [
+     "305589",
+     "Kian Fitz-Jim",
+     "CM-R"
+    ],
+    [
+     "290592",
+     "Daniel Bragança",
+     "AM"
+    ],
+    [
+     "403148",
+     "Alessio Cacciamani",
+     "LM"
+    ],
+    [
+     "364590",
+     "Rafik Belghali",
+     "RM"
+    ],
+    [
+     "213725",
+     "Ché Adams",
+     "CF-L"
+    ],
+    [
+     "189974",
+     "Giovanni Simeone",
+     "CF-R"
+    ]
+   ],
+   "Como": [
+    [
+     "108662",
+     "Robert Sánchez",
+     "G"
+    ],
+    [
+     "175887",
+     "Marc-Oliver Kempf",
+     "CD-L"
+    ],
+    [
+     "380318",
+     "Jacobo Ramón",
+     "CD-R"
+    ],
+    [
+     "192146",
+     "Álex Valle",
+     "LB"
+    ],
+    [
+     "297084",
+     "Yan Couto",
+     "RB"
+    ],
+    [
+     "337970",
+     "Nico Paz",
+     "AM"
+    ],
+    [
+     "264211",
+     "Luis Milla",
+     "LM"
+    ],
+    [
+     "309241",
+     "Máximo Perrone",
+     "RM"
+    ],
+    [
+     "262071",
+     "Anastasios Douvikas",
+     "F"
+    ],
+    [
+     "265912",
+     "Maxence Caqueret",
+     "AM-L"
+    ],
+    [
+     "291285",
+     "Lucas Da Cunha",
+     "AM-R"
     ]
    ]
   }
@@ -622,23 +854,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    295,
-    475
+    -205,
+    300,
+    500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -115,
+    -115
    ],
    "spread": [
     [
      "-1.5",
-     140
+     135
     ],
     [
      "+1.5",
-     -205
+     -200
     ]
    ]
   }
@@ -733,11 +965,11 @@
    "spread": [
     [
      "+0.5",
-     -185
+     -180
     ],
     [
      "-0.5",
-     125
+     120
     ]
    ]
   }
