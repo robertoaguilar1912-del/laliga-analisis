@@ -1,92 +1,5 @@
 [
  {
-  "id": "401909872",
-  "utc": "2026-10-27T00:00Z",
-  "fecha": "2026-10-26",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIL",
-  "visita": "IND",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Milwaukee Bucks",
-  "visita_espn": "Indiana Pacers",
-  "revisado": false,
-  "estadio": "Fiserv Forum",
-  "records": {
-   "home": [
-    "0-3",
-    "0-1",
-    "0-2"
-   ],
-   "away": [
-    "2-1",
-    "0-1",
-    "2-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909873",
-  "utc": "2026-10-27T00:00Z",
-  "fecha": "2026-10-26",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "OKC",
-  "visita": "PHX",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Oklahoma City Thunder",
-  "visita_espn": "Phoenix Suns",
-  "revisado": false,
-  "estadio": "Paycom Center",
-  "records": {
-   "home": [
-    "3-0",
-    "2-0",
-    "1-0"
-   ],
-   "away": [
-    "1-1",
-    "1-0",
-    "0-1"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909874",
-  "utc": "2026-10-27T00:30Z",
-  "fecha": "2026-10-26",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "HOU",
-  "visita": "ATL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Houston Rockets",
-  "visita_espn": "Atlanta Hawks",
-  "revisado": false,
-  "estadio": "Toyota Center (Houston)",
-  "records": {
-   "home": [
-    "3-0",
-    "1-0",
-    "2-0"
-   ],
-   "away": [
-    "2-1",
-    "0-1",
-    "2-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909875",
   "utc": "2026-10-27T01:00Z",
   "fecha": "2026-10-26",
@@ -96,7 +9,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -172,7 +85,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -575,
     425
@@ -224,10 +137,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -162,
-    136
+    -155,
+    130
    ],
    "ml_abre": [
     -162,
@@ -235,9 +148,9 @@
    ],
    "spread": [
     -3.5,
-    -115,
+    -110,
     3.5,
-    -105
+    -110
    ],
    "spread_abre": -3.5,
    "total": [
@@ -276,7 +189,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -1800,
     1000
@@ -328,7 +241,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -142,
     120
@@ -338,10 +251,10 @@
     120
    ],
    "spread": [
-    -3.5,
-    -105,
-    3.5,
-    -115
+    -2.5,
+    -115,
+    2.5,
+    -105
    ],
    "spread_abre": -2.5,
    "total": [
@@ -369,9 +282,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
     "0-4",
@@ -456,9 +369,9 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
     "3-1",
@@ -467,7 +380,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     105,
     -125
@@ -566,13 +479,13 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "1-3",
+    "1-1",
     "0-2"
    ],
    "away": [
-    "3-0",
-    "1-0",
+    "4-0",
+    "2-0",
     "2-0"
    ]
   },
@@ -687,8 +600,8 @@
     "2-1"
    ],
    "away": [
+    "4-0",
     "3-0",
-    "2-0",
     "1-0"
    ]
   },
@@ -740,9 +653,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
     "2-1",
@@ -977,9 +890,9 @@
     "0-1"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ]
   },
   "momios": null
@@ -1006,8 +919,8 @@
     "2-1"
    ],
    "away": [
-    "3-0",
-    "1-0",
+    "4-0",
+    "2-0",
     "2-0"
    ]
   },
@@ -1088,9 +1001,9 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "1-1",
@@ -1099,7 +1012,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     null,
     null
@@ -1203,9 +1116,9 @@
     "0-2"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ]
   },
   "momios": null
@@ -1256,8 +1169,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "1-3",
+    "1-1",
     "0-2"
    ],
    "away": [
@@ -1314,13 +1227,13 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "3-0",
-    "1-0",
+    "4-0",
+    "2-0",
     "2-0"
    ],
    "away": [
+    "4-0",
     "3-0",
-    "2-0",
     "1-0"
    ]
   },
@@ -1372,9 +1285,9 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
     "0-3",
@@ -1464,8 +1377,8 @@
     "0-1"
    ],
    "away": [
+    "4-0",
     "3-0",
-    "2-0",
     "1-0"
    ]
   },
@@ -1517,14 +1430,14 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ]
   },
   "momios": null
@@ -1696,8 +1609,8 @@
     "2-1"
    ],
    "away": [
-    "0-3",
-    "0-1",
+    "1-3",
+    "1-1",
     "0-2"
    ]
   },
@@ -1720,8 +1633,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "3-0",
-    "1-0",
+    "4-0",
+    "2-0",
     "2-0"
    ],
    "away": [
@@ -1812,9 +1725,9 @@
     "0-2"
    ],
    "away": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ]
   },
   "momios": null
@@ -1928,9 +1841,9 @@
     "1-1"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ]
   },
   "momios": null
@@ -1957,8 +1870,8 @@
     "0-1"
    ],
    "away": [
-    "0-3",
-    "0-1",
+    "1-3",
+    "1-1",
     "0-2"
    ]
   },
@@ -2044,9 +1957,9 @@
     "2-0"
    ],
    "away": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ]
   },
   "momios": null
@@ -2097,8 +2010,8 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
+    "4-0",
     "3-0",
-    "2-0",
     "1-0"
    ],
    "away": [
@@ -2126,8 +2039,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "3-0",
-    "1-0",
+    "4-0",
+    "2-0",
     "2-0"
    ],
    "away": [
@@ -2184,9 +2097,9 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "2-0",
@@ -2300,9 +2213,9 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "1-1",
+    "1-2",
     "1-0",
-    "0-1"
+    "0-2"
    ],
    "away": [
     "1-2",
@@ -2358,9 +2271,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "2-1",
+    "2-2",
     "0-1",
-    "2-0"
+    "2-1"
    ],
    "away": [
     "2-2",
@@ -2479,8 +2392,8 @@
     "2-0"
    ],
    "away": [
+    "4-0",
     "3-0",
-    "2-0",
     "1-0"
    ]
   },
@@ -2503,8 +2416,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "1-3",
+    "1-1",
     "0-2"
    ],
    "away": [
