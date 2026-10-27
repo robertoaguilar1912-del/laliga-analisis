@@ -86,6 +86,18 @@ def ventajas(m, h, a):
     return [vl, vv]
 
 
+def medio_tiempo(m, h, a):
+    """Goles de cada equipo en el 1er tiempo (los del 45'+x cuentan), para "más de 0.5 goles en el 1er tiempo" y
+    parecidos. [None, None] si la lista de goles de ESPN no cuadra con el marcador a los 90."""
+    goles = [(_minuto(reloj), equipo) for equipo, reloj, tipo in m.get('goals') or [] if 'shootout' not in (tipo or '').lower()]
+    if any(t is None for t, _ in goles):
+        return [None, None]
+    a90 = [(t, e) for t, e in goles if t[0] <= 90]
+    if (sum(e == h['name'] for _, e in a90), sum(e == a['name'] for _, e in a90)) != noventa(m, h, a):
+        return [None, None]
+    return [sum(e == h['name'] for t, e in a90 if t[0] <= 45), sum(e == a['name'] for t, e in a90 if t[0] <= 45)]
+
+
 def _fam(k):
     k = EQUIVALENTE.get(k, k)
     f = familia(k)
@@ -136,7 +148,8 @@ def marcar_reemplazados(picks):
 
 def resultados():
     """{id de ESPN: [goles local, goles visita, córners local, córners visita, remates a puerta local, remates a puerta visita,
-    mayor ventaja del local, mayor ventaja de la visita]} de los partidos ya jugados (goles y ventajas a los 90 minutos)."""
+    mayor ventaja del local, mayor ventaja de la visita, goles del local en el 1er tiempo, de la visita en el 1er tiempo]} de
+    los partidos ya jugados (goles y ventajas a los 90 minutos)."""
     out = {}
     for f in ESPN_DIR.glob('*/*.json'):
         m = _leer(f, None)
@@ -147,7 +160,7 @@ def resultados():
             h, a = lados['home'], lados['away']
             gl, gv = noventa(m, h, a)
             out[str(m['id'])] = [gl, gv, _stat(h, 'wonCorners'), _stat(a, 'wonCorners'),
-                                 _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')] + ventajas(m, h, a)
+                                 _stat(h, 'shotsOnTarget'), _stat(a, 'shotsOnTarget')] + ventajas(m, h, a) + medio_tiempo(m, h, a)
     return out
 
 
