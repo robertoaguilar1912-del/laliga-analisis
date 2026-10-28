@@ -11,14 +11,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    265,
+    205,
+    270,
     105
    ],
    "ou_linea": 3.5,
    "ou": [
     115,
-    -150
+    -145
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
@@ -51,7 +51,7 @@
    "ou_linea": 3.5,
    "ou": [
     -135,
-    100
+    105
    ],
    "spread": [
     [
@@ -83,8 +83,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -160
+    115,
+    -155
    ],
    "spread": [
     [
@@ -117,7 +117,7 @@
    "ou_linea": 3.5,
    "ou": [
     115,
-    -155
+    -150
    ],
    "spread": [
     [
@@ -182,7 +182,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    -105,
     -130
    ],
    "spread": [
@@ -209,7 +209,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -290,
+    -295,
     400,
     550
    ],
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
+    145,
     245,
-    160
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    115
+    120
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -195
+     -200
     ]
    ]
   }
@@ -295,6 +295,171 @@
    "ou_linea": null,
    "ou": null,
    "spread": []
+  }
+ },
+ {
+  "id": "401884745",
+  "utc": "2026-11-07T14:30Z",
+  "estadio": "Signal Iduna Park",
+  "local_espn": "Borussia Dortmund",
+  "visita_espn": "SV Elversberg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -370,
+    450,
+    600
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -145
+    ],
+    [
+     "+1.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884740",
+  "utc": "2026-11-07T14:30Z",
+  "estadio": "MEWA ARENA",
+  "local_espn": "Mainz",
+  "visita_espn": "Bayern Munich",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    425,
+    -230
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    115,
+    -160
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -150
+    ],
+    [
+     "-1.5",
+     -105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884744",
+  "utc": "2026-11-07T14:30Z",
+  "estadio": "Red Bull Arena",
+  "local_espn": "RB Leipzig",
+  "visita_espn": "FC Augsburg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -235,
+    390,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -155,
+    110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     100
+    ],
+    [
+     "+1.5",
+     -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884737",
+  "utc": "2026-11-07T14:30Z",
+  "estadio": "Home Deluxe Arena",
+  "local_espn": "SC Paderborn 07",
+  "visita_espn": "Eintracht Frankfurt",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    180,
+    260,
+    115
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -160
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884743",
+  "utc": "2026-11-07T17:30Z",
+  "estadio": "MHPArena",
+  "local_espn": "VfB Stuttgart",
+  "visita_espn": "Werder Bremen",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -235,
+    380,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-1.5",
+     105
+    ],
+    [
+     "+1.5",
+     -155
+    ]
+   ]
   }
  }
 ]

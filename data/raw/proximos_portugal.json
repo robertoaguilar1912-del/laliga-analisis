@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    750,
-    450,
-    -350
+    850,
+    475,
+    -370
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
-    125
+    -180,
+    130
    ],
    "spread": [
     [
      "+1.5",
-     -115
+     -110
     ],
     [
      "-1.5",
@@ -84,16 +84,16 @@
    "ou_linea": 3.5,
    "ou": [
     120,
-    -175
+    -180
    ],
    "spread": [
     [
      "-1.5",
-     -170
+     -160
     ],
     [
      "+1.5",
-     110
+     105
     ]
    ]
   }
@@ -149,13 +149,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -125
+    -120,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -525,
-    550,
-    1100
+    -650,
+    600,
+    1200
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -145
+    -110,
+    -130
    ],
    "spread": [
     [
-     "-1.5",
-     -190
+     "-2.5",
+     120
     ],
     [
-     "+1.5",
-     120
+     "+2.5",
+     -185
     ]
    ]
   }
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
+    175,
     205,
-    170
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
     115,
-    -170
+    -165
    ],
    "spread": [
     [
-     "-0.5",
-     145
+     "+0.5",
+     -220
     ],
     [
-     "+0.5",
-     -230
+     "-0.5",
+     140
     ]
    ]
   }
@@ -302,6 +302,39 @@
   "estadio": "Estádio Municipal 22 de Junho",
   "local_espn": "FC Famalicao",
   "visita_espn": "Arouca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885398",
+  "utc": "2026-11-07T15:30Z",
+  "estadio": "Estádio da Madeira",
+  "local_espn": "C.D. Nacional",
+  "visita_espn": "Académico de Viseu",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885402",
+  "utc": "2026-11-07T18:00Z",
+  "estadio": "Complexo Desportivo FC Alverca",
+  "local_espn": "Alverca",
+  "visita_espn": "Casa Pia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885395",
+  "utc": "2026-11-07T20:30Z",
+  "estadio": "Estádio José Alvalade",
+  "local_espn": "Sporting CP",
+  "visita_espn": "Moreirense",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,

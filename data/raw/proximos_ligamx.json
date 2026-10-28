@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -235,
-    380,
-    500
+    -250,
+    400,
+    600
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    130,
     -170
    ],
    "spread": [
     [
      "-1.5",
-     110
+     105
     ],
     [
      "+1.5",
-     -160
+     -145
     ]
    ]
   }
@@ -44,7 +44,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
+    165,
     240,
     150
    ],
@@ -56,11 +56,11 @@
    "spread": [
     [
      "+0.5",
-     -210
+     -205
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    250,
-    125
+    185,
+    255,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     100
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -170
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   }
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    235,
-    130
+    190,
+    240,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    -105
+    -135,
+    100
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -180
     ],
     [
      "-0.5",
@@ -313,6 +313,50 @@
   "estadio": "Estadio Banorte",
   "local_espn": "Atlante",
   "visita_espn": "Santos",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876907",
+  "utc": "2026-11-07T23:00Z",
+  "estadio": "Estadio Jalisco",
+  "local_espn": "Atlas",
+  "visita_espn": "Pachuca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876906",
+  "utc": "2026-11-07T23:00Z",
+  "estadio": "Estadio Universitario",
+  "local_espn": "Tigres UANL",
+  "visita_espn": "Cruz Azul",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876905",
+  "utc": "2026-11-08T01:00Z",
+  "estadio": "Estadio Nemesio Díez Riega",
+  "local_espn": "Toluca",
+  "visita_espn": "Monterrey",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401876904",
+  "utc": "2026-11-08T03:00Z",
+  "estadio": "Estadio Olímpico Universitario",
+  "local_espn": "Pumas UNAM",
+  "visita_espn": "América",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

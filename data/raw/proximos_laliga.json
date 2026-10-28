@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -225,
-    390,
+    -230,
+    400,
     550
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -160
+    -155
    ],
    "spread": [
     [
      "-1.5",
-     110
+     105
     ],
     [
      "+1.5",
-     -160
+     -150
     ]
    ]
   }
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    370,
-    350,
-    -165
+    380,
+    360,
+    -170
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -56,11 +56,11 @@
    "spread": [
     [
      "+0.5",
-     125
+     130
     ],
     [
      "-0.5",
-     -185
+     -190
     ]
    ]
   }
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -265,
+    -275,
     425,
-    600
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -165
+    -160
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     -110
     ],
     [
      "+1.5",
@@ -147,10 +147,10 @@
     750,
     2200
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 4.5,
    "ou": [
-    -170,
-    130
+    130,
+    -165
    ],
    "spread": [
     [
@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
+    220,
     195,
-    150
+    145
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -188,11 +188,11 @@
    "spread": [
     [
      "+0.5",
-     -200
+     -195
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   }
@@ -209,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    850,
-    600,
-    -450
+    900,
+    650,
+    -475
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -221,11 +221,11 @@
    "spread": [
     [
      "+2.5",
-     -180
+     -170
     ],
     [
      "-2.5",
-     120
+     115
     ]
    ]
   }
@@ -248,7 +248,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -105,
     -120
    ],
    "spread": [
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    265,
-    230
+    110,
+    255,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
     -140,
-    110
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -140
+     -145
     ]
    ]
   }
@@ -358,6 +358,138 @@
     [
      "+0.5",
      -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882812",
+  "utc": "2026-11-07T13:00Z",
+  "estadio": "La Rosaleda",
+  "local_espn": "Málaga",
+  "visita_espn": "Racing Santander",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    245,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882813",
+  "utc": "2026-11-07T15:15Z",
+  "estadio": "RCDE Stadium",
+  "local_espn": "Espanyol",
+  "visita_espn": "Deportivo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    115,
+    240,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882811",
+  "utc": "2026-11-07T17:30Z",
+  "estadio": "El Sadar",
+  "local_espn": "Osasuna",
+  "visita_espn": "Athletic Club",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    230,
+    115
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -135
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -160
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882808",
+  "utc": "2026-11-07T20:00Z",
+  "estadio": "Mestalla Stadium",
+  "local_espn": "Valencia",
+  "visita_espn": "Real Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    475,
+    390,
+    -225
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -140
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -160
+    ],
+    [
+     "-1.5",
+     105
     ]
    ]
   }

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    275,
-    370
+    -145,
+    255,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    105,
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     115
+     110
     ]
    ]
   }
@@ -44,19 +44,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
+    170,
     205,
-    155
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -150
+    100,
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -210
+     -215
     ],
     [
      "-0.5",
@@ -79,21 +79,21 @@
    "ml": [
     600,
     425,
-    -300
+    -295
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -105,
+    -120
    ],
    "spread": [
     [
      "+1.5",
-     -120
+     -125
     ],
     [
      "-1.5",
-     -120
+     -110
     ]
    ]
   }
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    400,
-    260,
-    -155
+    390,
+    230,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -135
+    135,
+    -175
    ],
    "spread": [
     [
      "+0.5",
-     110
+     105
     ],
     [
      "-0.5",
-     -155
+     -145
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    310,
-    290,
-    -135
+    320,
+    280,
+    -140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,11 +155,11 @@
    "spread": [
     [
      "+0.5",
-     105
+     100
     ],
     [
      "-0.5",
-     -145
+     -140
     ]
    ]
   }
@@ -215,7 +215,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -165,
     130
    ],
    "spread": [
@@ -225,7 +225,7 @@
     ],
     [
      "+0.5",
-     -150
+     -155
     ]
    ]
   }
@@ -347,8 +347,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -125
+    100,
+    -130
    ],
    "spread": [
     [
@@ -407,9 +407,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -260,
-    340,
-    600
+    -235,
+    320,
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -419,11 +419,11 @@
    "spread": [
     [
      "-1.5",
-     105
+     120
     ],
     [
      "+1.5",
-     -155
+     -180
     ]
    ]
   }
@@ -545,17 +545,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    100
+    -145,
+    110
    ],
    "spread": [
     [
      "-1.5",
-     120
+     115
     ],
     [
      "+1.5",
-     -175
+     -170
     ]
    ]
   }
@@ -566,6 +566,50 @@
   "estadio": "Stadio Pier Luigi Penzo",
   "local_espn": "Venezia",
   "visita_espn": "Udinese",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874791",
+  "utc": "2026-11-07T14:00Z",
+  "estadio": "Unipol Domus",
+  "local_espn": "Cagliari",
+  "visita_espn": "Frosinone",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874811",
+  "utc": "2026-11-07T14:00Z",
+  "estadio": "Stadio Olimpico Grande Torino",
+  "local_espn": "Torino",
+  "visita_espn": "Lecce",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874974",
+  "utc": "2026-11-07T17:00Z",
+  "estadio": "Ennio Tardini",
+  "local_espn": "Parma",
+  "visita_espn": "Bologna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874803",
+  "utc": "2026-11-07T19:45Z",
+  "estadio": "Olimpico",
+  "local_espn": "AS Roma",
+  "visita_espn": "Sassuolo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,

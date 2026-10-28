@@ -13,21 +13,21 @@
    "ml": [
     155,
     235,
-    175
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -120
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -200
+     -195
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    330,
-    425
+    -185,
+    340,
+    450
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -175
+    135,
+    -180
    ],
    "spread": [
     [
-     "-0.5",
-     -195
+     "-1.5",
+     135
     ],
     [
-     "+0.5",
-     130
+     "+1.5",
+     -195
     ]
    ]
   }
@@ -149,13 +149,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -130,
+    100
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -180
     ],
     [
      "-0.5",
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -340,
-    475,
+    -350,
+    500,
     800
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -140
+    100,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     -145
+     -150
     ],
     [
      "+1.5",
-     100
+     105
     ]
    ]
   }
@@ -275,14 +275,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    310,
-    320
+    -130,
+    300,
+    310
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -170
+    135,
+    -180
    ],
    "spread": [
     [
@@ -341,23 +341,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    340,
-    425
+    -160,
+    310,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    130
+    -160,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -195
+     -175
     ],
     [
      "+0.5",
-     135
+     120
     ]
    ]
   }
@@ -374,23 +374,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    340,
-    370
+    -155,
+    330,
+    350
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -145
+    115,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     120
+     115
     ]
    ]
   }
@@ -533,6 +533,127 @@
   "estadio": "Pride Park",
   "local_espn": "Derby County",
   "visita_espn": "Bolton Wanderers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880170",
+  "utc": "2026-11-07T12:30Z",
+  "estadio": "Ashton Gate",
+  "local_espn": "Bristol City",
+  "visita_espn": "Norwich City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880166",
+  "utc": "2026-11-07T12:30Z",
+  "estadio": "Fratton Park",
+  "local_espn": "Portsmouth",
+  "visita_espn": "Stoke City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880161",
+  "utc": "2026-11-07T12:30Z",
+  "estadio": "STōK Cae Ras",
+  "local_espn": "Wrexham",
+  "visita_espn": "Wolverhampton Wanderers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880172",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "St. Andrew's Stadium",
+  "local_espn": "Birmingham City",
+  "visita_espn": "Swansea City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880171",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "Ewood Park",
+  "local_espn": "Blackburn Rovers",
+  "visita_espn": "West Ham United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880169",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "Cardiff City Stadium",
+  "local_espn": "Cardiff City",
+  "visita_espn": "Burnley",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880168",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "The Valley",
+  "local_espn": "Charlton Athletic",
+  "visita_espn": "Sheffield United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880165",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "Deepdale",
+  "local_espn": "Preston North End",
+  "visita_espn": "Southampton",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880164",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "MATRADE Loftus Road",
+  "local_espn": "Queens Park Rangers",
+  "visita_espn": "Lincoln City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880163",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "Vicarage Road",
+  "local_espn": "Watford",
+  "visita_espn": "Middlesbrough",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880162",
+  "utc": "2026-11-07T15:00Z",
+  "estadio": "The Hawthorns",
+  "local_espn": "West Bromwich Albion",
+  "visita_espn": "Millwall",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

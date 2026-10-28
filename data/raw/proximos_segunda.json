@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    115
+    -155,
+    105
    ],
    "spread": [
     [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    230,
-    180
+    145,
+    240,
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -110
+    -140,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -195
+     -200
     ]
    ]
   }
@@ -88,23 +88,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
+    160,
     205,
-    180
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -150
+    115,
+    -170
    ],
    "spread": [
     [
      "-0.5",
-     140
+     145
     ],
     [
      "+0.5",
-     -220
+     -225
     ]
    ]
   }
@@ -154,23 +154,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
+    145,
     250,
-    155
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -110
+    -125,
+    -115
    ],
    "spread": [
     [
-     "+0.5",
-     -215
-    ],
-    [
      "-0.5",
      135
+    ],
+    [
+     "+0.5",
+     -210
     ]
    ]
   }
@@ -184,7 +184,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    250,
+    230,
+    105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     -105
+    ]
+   ]
+  }
  },
  {
   "id": "401883144",
@@ -195,7 +217,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    220,
+    215
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     110
+    ],
+    [
+     "+0.5",
+     -170
+    ]
+   ]
+  }
  },
  {
   "id": "401883146",
@@ -209,13 +253,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -145,
     270,
-    340
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -115,
     -130
    ],
    "spread": [
@@ -225,7 +269,7 @@
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
@@ -272,7 +316,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -210,
+    300,
+    550
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     130
+    ],
+    [
+     "+1.5",
+     -200
+    ]
+   ]
+  }
  },
  {
   "id": "401883120",
@@ -280,6 +346,61 @@
   "estadio": "Nou Estadi Castalia",
   "local_espn": "Castellón",
   "visita_espn": "Eibar",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883306",
+  "utc": "2026-11-07T13:00Z",
+  "estadio": "Estadio Municipal de El Plantío",
+  "local_espn": "Burgos",
+  "visita_espn": "RC Celta Fortuna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883121",
+  "utc": "2026-11-07T15:15Z",
+  "estadio": "Nuevo Mirandilla",
+  "local_espn": "Cádiz",
+  "visita_espn": "Real Oviedo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883143",
+  "utc": "2026-11-07T17:30Z",
+  "estadio": "Estadio Municipal Nuevo El Arcángel",
+  "local_espn": "Córdoba",
+  "visita_espn": "Ceuta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883141",
+  "utc": "2026-11-07T17:30Z",
+  "estadio": "Estadio Municipal de Butarque",
+  "local_espn": "Leganés",
+  "visita_espn": "Albacete",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883142",
+  "utc": "2026-11-07T20:00Z",
+  "estadio": "Nuevo Estadio de Los Cármenes",
+  "local_espn": "Granada",
+  "visita_espn": "Tenerife",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

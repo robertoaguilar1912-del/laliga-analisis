@@ -77,19 +77,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    250,
+    150,
+    255,
     175
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    110
+    115
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
@@ -225,7 +225,7 @@
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
@@ -243,13 +243,13 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    285,
-    255
+    290,
+    260
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -276,8 +276,8 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    235,
-    180
+    225,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -291,7 +291,7 @@
     ],
     [
      "+0.5",
-     -195
+     -190
     ]
    ]
   }
@@ -325,6 +325,72 @@
     [
      "+0.5",
      -140
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876411",
+  "utc": "2026-11-07T16:15Z",
+  "estadio": "Stade de l'Abbé-Deschamps",
+  "local_espn": "AJ Auxerre",
+  "visita_espn": "Paris FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    260,
+    275,
+    -110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -125
+    ],
+    [
+     "-0.5",
+     -125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876407",
+  "utc": "2026-11-07T19:45Z",
+  "estadio": "Parc des Princes",
+  "local_espn": "Paris Saint-Germain",
+  "visita_espn": "Troyes",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -750,
+    800,
+    1200
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -140,
+    100
+   ],
+   "spread": [
+    [
+     "-2.5",
+     -105
+    ],
+    [
+     "+2.5",
+     -150
     ]
    ]
   }
