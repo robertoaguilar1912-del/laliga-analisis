@@ -5,29 +5,145 @@
   "estadio": "San Siro",
   "local_espn": "AC Milan",
   "visita_espn": "Bologna",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    260,
+    -145,
+    250,
     400
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -135
+    110,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     115
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AC Milan": [
+    [
+     "189026",
+     "Mike Maignan",
+     "G"
+    ],
+    [
+     "290375",
+     "Strahinja Pavlovic",
+     "CD-L"
+    ],
+    [
+     "309570",
+     "Koni De Winter",
+     "CD-R"
+    ],
+    [
+     "214689",
+     "Pervis Estupiñán",
+     "LB"
+    ],
+    [
+     "236210",
+     "Fikayo Tomori",
+     "RB"
+    ],
+    [
+     "359754",
+     "Alphadjo Cissè",
+     "AM"
+    ],
+    [
+     "303973",
+     "Ardon Jashari",
+     "LM"
+    ],
+    [
+     "307527",
+     "Yunus Musah",
+     "RM"
+    ],
+    [
+     "288896",
+     "Gonçalo Ramos",
+     "F"
+    ],
+    [
+     "345637",
+     "Davide Bartesaghi",
+     "AM-L"
+    ],
+    [
+     "322771",
+     "Omari Hutchinson",
+     "AM-R"
+    ]
+   ],
+   "Bologna": [
+    [
+     "179358",
+     "Lukasz Skorupski",
+     "G"
+    ],
+    [
+     "250707",
+     "Nicoló",
+     "CD"
+    ],
+    [
+     "304222",
+     "Arthur Theate",
+     "CD-L"
+    ],
+    [
+     "91873",
+     "Matteo Darmian",
+     "CD-R"
+    ],
+    [
+     "276654",
+     "Tommaso Pobega",
+     "CM-L"
+    ],
+    [
+     "202429",
+     "Lewis Ferguson",
+     "CM-R"
+    ],
+    [
+     "331770",
+     "Rahim Alhassane",
+     "LM"
+    ],
+    [
+     "291560",
+     "Nadir Zortea",
+     "RM"
+    ],
+    [
+     "238407",
+     "Jens Odgaard",
+     "F"
+    ],
+    [
+     "355997",
+     "Samuel Mbangula",
+     "CF-L"
+    ],
+    [
+     "180956",
+     "Federico Bernardeschi",
+     "CF-R"
     ]
    ]
   }
@@ -38,29 +154,145 @@
   "estadio": "Ennio Tardini",
   "local_espn": "Parma",
   "visita_espn": "Udinese",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
+    190,
     200,
-    160
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    100,
     -130
    ],
    "spread": [
     [
      "+0.5",
-     -215
+     -200
     ],
     [
      "-0.5",
-     155
+     140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Parma": [
+    [
+     "366510",
+     "Giovanni Daffara",
+     "G"
+    ],
+    [
+     "366526",
+     "Mariano Troilo",
+     "CD"
+    ],
+    [
+     "417783",
+     "Dominik Drobnic",
+     "CD-L"
+    ],
+    [
+     "272694",
+     "Enrico Del Prato",
+     "CD-R"
+    ],
+    [
+     "316609",
+     "Mandela Keita",
+     "CM-L"
+    ],
+    [
+     "218857",
+     "Vincent Sierro",
+     "CM-R"
+    ],
+    [
+     "308939",
+     "Franco Carboni",
+     "LM"
+    ],
+    [
+     "396009",
+     "Sascha Britschgi",
+     "RM"
+    ],
+    [
+     "301980",
+     "José Romero",
+     "F"
+    ],
+    [
+     "287430",
+     "El Bilal Toure",
+     "CF-L"
+    ],
+    [
+     "276653",
+     "Adrián Bernabé",
+     "CF-R"
+    ]
+   ],
+   "Udinese": [
+    [
+     "295476",
+     "Maduka Okoye",
+     "G"
+    ],
+    [
+     "150081",
+     "Christian Kabasele",
+     "CD"
+    ],
+    [
+     "384519",
+     "Matteo Palma",
+     "CD-L"
+    ],
+    [
+     "342837",
+     "James Abankwah",
+     "CD-R"
+    ],
+    [
+     "258933",
+     "Giorgi Chakvetadze",
+     "CM-L"
+    ],
+    [
+     "237055",
+     "Jesper Karlström",
+     "CM-R"
+    ],
+    [
+     "193919",
+     "Hassane Kamara",
+     "LM"
+    ],
+    [
+     "319437",
+     "Nicolò Bertola",
+     "RM"
+    ],
+    [
+     "233654",
+     "Keinan Davis",
+     "F"
+    ],
+    [
+     "270817",
+     "Jurgen Ekkelenkamp",
+     "CF-L"
+    ],
+    [
+     "251388",
+     "Nicolò Zaniolo",
+     "CF-R"
     ]
    ]
   }
@@ -71,29 +303,145 @@
   "estadio": "Stadio Pier Luigi Penzo",
   "local_espn": "Venezia",
   "visita_espn": "Internazionale",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    600,
+    550,
     425,
-    -300
+    -285
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -105,
+    -120
    ],
    "spread": [
     [
      "+1.5",
-     -120
+     -135
     ],
     [
      "-1.5",
-     -115
+     -105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Venezia": [
+    [
+     "289560",
+     "Filip Stankovic",
+     "G"
+    ],
+    [
+     "186457",
+     "Matías Moreno",
+     "CD"
+    ],
+    [
+     "170663",
+     "Juan Jesus",
+     "CD-L"
+    ],
+    [
+     "328300",
+     "Redouane Halhal",
+     "CD-R"
+    ],
+    [
+     "275227",
+     "Thorir Johann Helgason",
+     "CM-L"
+    ],
+    [
+     "276636",
+     "Enrique Perez",
+     "CM-R"
+    ],
+    [
+     "275015",
+     "Simon Sohm",
+     "AM"
+    ],
+    [
+     "260188",
+     "Pasquale Mazzocchi",
+     "LM"
+    ],
+    [
+     "346916",
+     "Antoine Hainaut",
+     "RM"
+    ],
+    [
+     "259357",
+     "Lion Lauberbach",
+     "CF-L"
+    ],
+    [
+     "288472",
+     "Akor Adams",
+     "CF-R"
+    ]
+   ],
+   "Internazionale": [
+    [
+     "181836",
+     "Ivan Provedel",
+     "G"
+    ],
+    [
+     "249280",
+     "Alessandro Bastoni",
+     "CD"
+    ],
+    [
+     "271769",
+     "Carlos Augusto",
+     "CD-L"
+    ],
+    [
+     "266660",
+     "Yann Bisseck",
+     "CD-R"
+    ],
+    [
+     "177782",
+     "Piotr Zielinski",
+     "CM-L"
+    ],
+    [
+     "341494",
+     "Petar Sucic",
+     "CM-R"
+    ],
+    [
+     "240109",
+     "Aleksandar Stankovic",
+     "AM"
+    ],
+    [
+     "194748",
+     "Federico Dimarco",
+     "LM"
+    ],
+    [
+     "319167",
+     "Andy Diouf",
+     "RM"
+    ],
+    [
+     "309185",
+     "Ange-Yoan Bonny",
+     "CF-L"
+    ],
+    [
+     "217331",
+     "Marcus Thuram",
+     "CF-R"
     ]
    ]
   }
@@ -116,8 +464,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
-    -170
+    140,
+    -175
    ],
    "spread": [
     [
@@ -143,23 +491,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
-    280,
-    -140
+    350,
+    285,
+    -150
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -150,
+    115
    ],
    "spread": [
     [
      "+0.5",
-     105
+     110
     ],
     [
      "-0.5",
-     -150
+     -155
     ]
    ]
   }
@@ -275,23 +623,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    400,
-    310,
-    -185
+    425,
+    330,
+    -190
    ],
    "ou_linea": 2.5,
    "ou": [
     -160,
-    120
+    125
    ],
    "spread": [
     [
-     "+0.5",
-     130
+     "+1.5",
+     -200
     ],
     [
-     "-0.5",
-     -195
+     "-1.5",
+     140
     ]
    ]
   }
@@ -309,7 +657,7 @@
    "casa": "DraftKings",
    "ml": [
     215,
-    250,
+    255,
     105
    ],
    "ou_linea": 2.5,
