@@ -17,7 +17,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -120
    ],
    "spread": [
@@ -27,7 +27,7 @@
     ],
     [
      "+1.5",
-     -180
+     -175
     ]
    ]
   }
@@ -45,22 +45,22 @@
    "casa": "DraftKings",
    "ml": [
     170,
-    210,
-    145
+    220,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -115,
     -115
    ],
    "spread": [
     [
      "+0.5",
-     -205
+     -200
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    225,
-    215
+    105,
+    230,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -115,
     -125
    ],
    "spread": [
     [
      "-0.5",
-     105
+     -105
     ],
     [
      "+0.5",
-     -155
+     -145
     ]
    ]
   }
@@ -176,8 +176,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    245,
+    -155,
+    250,
     400
    ],
    "ou_linea": 2.5,
@@ -206,7 +206,62 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    195,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     150
+    ],
+    [
+     "+0.5",
+     -235
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401877913",
+  "utc": "2026-11-01T21:05Z",
+  "estadio": "Deportivo Cali",
+  "local_espn": "Deportivo Cali",
+  "visita_espn": "Boyacá Chicó FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -310,
+    330,
+    750
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -135
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -105
+    ],
+    [
+     "+1.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401878061",
@@ -220,33 +275,11 @@
   "momios": null
  },
  {
-  "id": "401877913",
-  "utc": "2026-11-02T01:15Z",
-  "estadio": "Deportivo Cali",
-  "local_espn": "Deportivo Cali",
-  "visita_espn": "Boyacá Chicó FC",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
   "id": "401877772",
   "utc": "2026-11-02T21:05Z",
   "estadio": "Estadio Cincuentenario",
   "local_espn": "Águilas Doradas",
   "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401877959",
-  "utc": "2026-11-02T23:10Z",
-  "estadio": "General Santander",
-  "local_espn": "Cúcuta Deportivo",
-  "visita_espn": "Independiente Santa Fe",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
@@ -275,22 +308,33 @@
   "momios": null
  },
  {
-  "id": "401877910",
-  "utc": "2026-11-04T01:10Z",
-  "estadio": "Estadio Nemesio Camacho El Campín",
-  "local_espn": "Millonarios",
-  "visita_espn": "América de Cali",
+  "id": "401877896",
+  "utc": "2026-11-04T01:00Z",
+  "estadio": "Departamental Libertad",
+  "local_espn": "Deportivo Pasto",
+  "visita_espn": "Jaguares de Córdoba",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
   "momios": null
  },
  {
-  "id": "401877896",
-  "utc": "2026-11-05T00:00Z",
-  "estadio": "Departamental Libertad",
-  "local_espn": "Deportivo Pasto",
-  "visita_espn": "Jaguares de Córdoba",
+  "id": "401877959",
+  "utc": "2026-11-04T23:30Z",
+  "estadio": "General Santander",
+  "local_espn": "Cúcuta Deportivo",
+  "visita_espn": "Independiente Santa Fe",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877910",
+  "utc": "2026-11-05T01:30Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Millonarios",
+  "visita_espn": "América de Cali",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,

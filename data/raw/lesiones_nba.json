@@ -1,16 +1,6 @@
 {
  "Atlanta Hawks": [
   {
-   "id": "4397183",
-   "nombre": "Aaron Wiggins",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Knee",
-   "regreso": "2026-10-28",
-   "nota": "Wiggins is questionable for Wednesday's game against the Heat due to a left knee contusion."
-  },
-  {
    "id": "4712863",
    "nombre": "Mouhamed Gueye",
    "pos": "F",
@@ -141,24 +131,34 @@
  ],
  "Dallas Mavericks": [
   {
-   "id": "4593125",
-   "nombre": "Santi Aldama",
+   "id": "4278594",
+   "nombre": "Naji Marshall",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-10-28",
-   "tipo": "Knee",
+   "tipo": "Illness",
    "regreso": "2026-10-28",
-   "nota": "The Mavericks recalled Aldama (knee) from the G League's Texas Legends on Tuesday."
+   "nota": "Marshall (illness) is now doubtful for Wednesday against the Thunder."
   },
   {
    "id": "5148538",
    "nombre": "Tarik Biberovic",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Heel",
-   "regreso": "2026-10-28",
-   "nota": "Biberovic is listed as doubtful for Wednesday's game against the Thunder."
+   "regreso": "2026-10-30",
+   "nota": "Biberovic (knee) is out for Wednesday's game against the Thunder."
+  },
+  {
+   "id": "4593125",
+   "nombre": "Santi Aldama",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Knee",
+   "regreso": "2026-10-30",
+   "nota": "Aldama (knee) is out for Wednesday's game against the Thunder."
   },
   {
    "id": "5279129",
@@ -179,16 +179,6 @@
    "tipo": "Thumb",
    "regreso": "2026-10-28",
    "nota": "Martin (thumb) is questionable for Wednesday's game against the Thunder."
-  },
-  {
-   "id": "4278594",
-   "nombre": "Naji Marshall",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Illness",
-   "regreso": "2026-10-28",
-   "nota": "Marshall (illness) is questionable for Wednesday's game against the Thunder."
   },
   {
    "id": "6442",
@@ -258,11 +248,21 @@
    "id": "4395702",
    "nombre": "Isaiah Joe",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-10-28",
    "tipo": "Hip",
+   "regreso": "2026-10-30",
+   "nota": "Joe (hip) is out for Wednesday's game against the Hornets."
+  },
+  {
+   "id": "4684742",
+   "nombre": "Ausar Thompson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-28",
+   "tipo": "Ankle",
    "regreso": "2026-10-28",
-   "nota": "Joe (hip) has been ruled out for Tuesday's game against the Knicks."
+   "nota": "Thompson (ankle) is probable for Wednesday against the Hornets."
   },
   {
    "id": "4433621",
@@ -281,20 +281,20 @@
    "nombre": "Yaxel Lendeborg",
    "pos": "F",
    "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Foot",
    "regreso": "2026-10-28",
-   "nota": "Lendeborg (foot) is questionable for Wednesday's game against Minnesota."
+   "nota": "Lendeborg (foot) went through Wednesday's morning shootaround, per Nick Friedell of The Athletic."
   },
   {
    "id": "3102531",
    "nombre": "Kristaps Porzingis",
    "pos": "C",
    "estado": "Out",
-   "fecha": "2026-10-21",
+   "fecha": "2026-10-28",
    "tipo": "Illness",
    "regreso": "2026-12-01",
-   "nota": "Porzingis is contemplating his future in basketball as he deals with recurring symptoms from the autoimmune condition termed as postural orthostatic tachycardia syndrome, per Shams Charania of ESPN."
+   "nota": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports."
   },
   {
    "id": "4432171",
@@ -322,11 +322,11 @@
    "id": "2990992",
    "nombre": "Marcus Smart",
    "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
+   "estado": "Out",
+   "fecha": "2026-10-28",
    "tipo": "Forearm",
-   "regreso": "2026-10-28",
-   "nota": "Smart (forearm) is questionable for Wednesday's game versus the Bucks."
+   "regreso": "2026-10-30",
+   "nota": "Smart (forearm) is out for Wednesday's game against the Bucks."
   },
   {
    "id": "4871144",
@@ -351,6 +351,16 @@
  ],
  "Indiana Pacers": [
   {
+   "id": "4396993",
+   "nombre": "Tyrese Haliburton",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-09",
+   "nota": "Haliburton (hamstring) will miss time, though his timetable has yet to be announced, Shams Charania of ESPN reports."
+  },
+  {
    "id": "4395712",
    "nombre": "Andrew Nembhard",
    "pos": "G",
@@ -359,16 +369,6 @@
    "tipo": "Neck",
    "regreso": "2026-10-28",
    "nota": "Nembhard (neck) is listed as questionable for Wednesday's game against Philadelphia."
-  },
-  {
-   "id": "4396993",
-   "nombre": "Tyrese Haliburton",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Hamstring",
-   "regreso": "2026-10-28",
-   "nota": "Haliburton is listed as questionable for Wednesday's game against the 76ers due to left hamstring tightness."
   },
   {
    "id": "4278355",
@@ -499,42 +499,52 @@
    "nombre": "Cameron Carr",
    "pos": "G",
    "estado": "Out",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Oblique",
-   "regreso": "2026-10-28",
-   "nota": "The Lakers recalled Carr (oblique) from the G League's Coachella Valley Lakers on Tuesday, Mark Medina of TheSportingTribune.com reports."
+   "regreso": "2026-10-30",
+   "nota": "Carr (oblique) is out for Wednesday's game against the Clippers."
   },
   {
    "id": "5060631",
    "nombre": "Adou Thiero",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Knee",
-   "regreso": "2026-10-28",
-   "nota": "Thiero (knee) is out for Tuesday's game against Portland."
+   "regreso": "2026-10-30",
+   "nota": "Thiero (knee) is out for Wednesday's game against the Clippers."
+  },
+  {
+   "id": "4433137",
+   "nombre": "Ziaire Williams",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Foot",
+   "regreso": "2026-10-30",
+   "nota": "Williams (foot) is out for Wednesday's game against the Clippers."
+  },
+  {
+   "id": "3945274",
+   "nombre": "Luka Doncic",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Back",
+   "regreso": "2026-10-30",
+   "nota": "Doncic (back) is out for Wednesday's game against the Clippers."
   }
  ],
  "Miami Heat": [
   {
-   "id": "4601025",
-   "nombre": "Pelle Larsson",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Ankle",
-   "regreso": "2026-10-28",
-   "nota": "Larsson is listed as probable for Wednesday's game at Atlanta due to a right ankle sprain."
-  },
-  {
    "id": "3899664",
    "nombre": "Simone Fontecchio",
    "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
+   "estado": "Out",
+   "fecha": "2026-10-28",
    "tipo": "Illness",
-   "regreso": "2026-10-28",
-   "nota": "Fontecchio is doubtful for Wednesday's game in Atlanta due to an illness, per Tim Reynolds of Associated Press."
+   "regreso": "2026-10-30",
+   "nota": "Fontecchio (illness) is out for Wednesday's game against the Hawks."
   }
  ],
  "Minnesota Timberwolves": [
@@ -561,16 +571,6 @@
  ],
  "New Orleans Pelicans": [
   {
-   "id": "4277956",
-   "nombre": "Jordan Poole",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Illness",
-   "regreso": "2026-10-28",
-   "nota": "Poole (illness) is listed as probable for Wednesday's game against Denver."
-  },
-  {
    "id": "5061589",
    "nombre": "Yves Missi",
    "pos": "C",
@@ -586,14 +586,24 @@
    "id": "4277869",
    "nombre": "Jose Alvarado",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-10-28",
    "tipo": "Ankle",
-   "regreso": "2026-10-28",
-   "nota": "Alvarado (ankle) is out for Tuesday's game against the Pistons."
+   "regreso": "2026-10-30",
+   "nota": "Alvarado (ankle) is out for Wednesday's game against the Bulls."
   }
  ],
  "Oklahoma City Thunder": [
+  {
+   "id": "2991350",
+   "nombre": "Alex Caruso",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Ankle",
+   "regreso": "2026-11-04",
+   "nota": "Caruso (ankle) is expected to miss time due to an ankle sprain, Clemente Almanza of USA Today reports."
+  },
   {
    "id": "5061603",
    "nombre": "Thomas Sorber",
@@ -635,16 +645,6 @@
    "nota": "Mitchell (ankle) is questionable for Wednesday's game against Dallas."
   },
   {
-   "id": "2991350",
-   "nombre": "Alex Caruso",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Ankle",
-   "regreso": "2026-10-31",
-   "nota": "Caruso (ankle) won't play Wednesday in Dallas."
-  },
-  {
    "id": "4593803",
    "nombre": "Jalen Williams",
    "pos": "G",
@@ -676,6 +676,16 @@
   }
  ],
  "Orlando Magic": [
+  {
+   "id": "4712849",
+   "nombre": "Anthony Black",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-28",
+   "tipo": "Personal",
+   "regreso": "2026-10-28",
+   "nota": "Black (personal) was not present at Wednesday's morning shootaround, Jason Beede of the Orlando Sentinel reports."
+  },
   {
    "id": "4065654",
    "nombre": "Jonathan Isaac",
@@ -755,7 +765,7 @@
    "estado": "Out",
    "fecha": "2026-10-19",
    "tipo": "Back",
-   "regreso": "2026-11-02",
+   "regreso": "2026-11-04",
    "nota": "Barlow will miss at least the next two weeks of action due to a lumbar spine bone stress response, Adam Aaronson of PhillyVoice.com reports."
   },
   {
@@ -861,10 +871,10 @@
    "nombre": "Tobias Harris",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-10-26",
+   "fecha": "2026-10-28",
    "tipo": "Calf",
-   "regreso": "2026-10-28",
-   "nota": "Harris (calf) has been ruled out for Tuesday's game against the Kings."
+   "regreso": "2026-10-31",
+   "nota": "Harris (calf) is out for Wednesday's game against Utah, Paul Garcia of ProjectSpurs.com reports."
   },
   {
    "id": "5101845",
@@ -957,20 +967,10 @@
    "nombre": "Justin Champagnie",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Foot",
-   "regreso": "2026-10-30",
-   "nota": "Champagnie (foot) is out for Wednesday's game versus Cleveland."
-  },
-  {
-   "id": "5142718",
-   "nombre": "AJ Dybantsa",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Ankle",
-   "regreso": "2026-10-28",
-   "nota": "Dybantsa (ankle) is questionable for Wednesday's game versus Cleveland."
+   "regreso": "2027-02-25",
+   "nota": "Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic."
   },
   {
    "id": "4997537",
