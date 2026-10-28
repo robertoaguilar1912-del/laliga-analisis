@@ -33,16 +33,6 @@
  ],
  "Boston Celtics": [
   {
-   "id": "3078576",
-   "nombre": "Derrick White",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "",
-   "regreso": "",
-   "nota": "White (right hip) is probable for Tuesday's game against the Nets."
-  },
-  {
    "id": "4433188",
    "nombre": "Devin Carter",
    "pos": "G",
@@ -54,6 +44,16 @@
   }
  ],
  "Brooklyn Nets": [
+  {
+   "id": "5175643",
+   "nombre": "Egor Demin",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-28",
+   "tipo": "Leg",
+   "regreso": "2026-10-30",
+   "nota": "Demin (leg) won't return to Tuesday's game against Boston, C.J. Holmes of the New York Daily News reports. He finished with two points (1-3 FG, 0-2 3Pt), one rebound, two assists and one steal over 10 minutes."
+  },
   {
    "id": "5105626",
    "nombre": "Tyler Bilodeau",
@@ -141,6 +141,16 @@
  ],
  "Dallas Mavericks": [
   {
+   "id": "4593125",
+   "nombre": "Santi Aldama",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-10-28",
+   "tipo": "Knee",
+   "regreso": "2026-10-28",
+   "nota": "The Mavericks recalled Aldama (knee) from the G League's Texas Legends on Tuesday."
+  },
+  {
    "id": "5148538",
    "nombre": "Tarik Biberovic",
    "pos": "F",
@@ -149,16 +159,6 @@
    "tipo": "Heel",
    "regreso": "2026-10-28",
    "nota": "Biberovic is listed as doubtful for Wednesday's game against the Thunder."
-  },
-  {
-   "id": "4593125",
-   "nombre": "Santi Aldama",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Knee",
-   "regreso": "2026-10-28",
-   "nota": "Aldama (knee) is doubtful for Wednesday's game against the Thunder."
   },
   {
    "id": "5279129",
@@ -255,24 +255,14 @@
  ],
  "Detroit Pistons": [
   {
-   "id": "4684742",
-   "nombre": "Ausar Thompson",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Ankle",
-   "regreso": "2026-10-27",
-   "nota": "Thompson (ankle) was a full participant at Tuesday's shootaround, Coty M. Davis of The Detroit News reports."
-  },
-  {
    "id": "4395702",
    "nombre": "Isaiah Joe",
    "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-26",
+   "estado": "Out",
+   "fecha": "2026-10-27",
    "tipo": "Hip",
-   "regreso": "2026-10-27",
-   "nota": "Joe (hip) is questionable for Tuesday's game against the Knicks."
+   "regreso": "2026-10-28",
+   "nota": "Joe (hip) has been ruled out for Tuesday's game against the Knicks."
   },
   {
    "id": "4433621",
@@ -505,6 +495,16 @@
  ],
  "Los Angeles Lakers": [
   {
+   "id": "5113969",
+   "nombre": "Cameron Carr",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-10-27",
+   "tipo": "Oblique",
+   "regreso": "2026-10-28",
+   "nota": "The Lakers recalled Carr (oblique) from the G League's Coachella Valley Lakers on Tuesday, Mark Medina of TheSportingTribune.com reports."
+  },
+  {
    "id": "5060631",
    "nombre": "Adou Thiero",
    "pos": "F",
@@ -546,7 +546,7 @@
    "fecha": "2026-10-27",
    "tipo": "Knee",
    "regreso": "2026-12-21",
-   "nota": "Edwards (knee) is questionable for Wednesday's game against the Warriors."
+   "nota": "Edwards will undergo arthroscopic right knee surgery and is expected to miss up to two months, Shams Charania of ESPN reports."
   },
   {
    "id": "3934673",
@@ -775,10 +775,10 @@
    "nombre": "Oso Ighodaro",
    "pos": "F",
    "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
+   "fecha": "2026-10-28",
    "tipo": "Oblique",
    "regreso": "2026-10-30",
-   "nota": "Ighodaro (oblique) is out for Monday's matchup with the Thunder."
+   "nota": "Ighodaro (oblique) is feeling better and considered day-to-day ahead of Friday's game against the Nuggets, John Gambadoro of Arizona Sports 98.7 FM reports."
   },
   {
    "id": "4701232",
@@ -911,6 +911,16 @@
  ],
  "Utah Jazz": [
   {
+   "id": "4397077",
+   "nombre": "Jaxson Hayes",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-27",
+   "tipo": "Shoulder",
+   "regreso": "2026-10-28",
+   "nota": "Hayes (shoulder) is listed as questionable for Wednesday's game against the Spurs."
+  },
+  {
    "id": "4066336",
    "nombre": "Lauri Markkanen",
    "pos": "F",
@@ -918,7 +928,7 @@
    "fecha": "2026-10-27",
    "tipo": "Wrist",
    "regreso": "2026-10-28",
-   "nota": "Markkanen is day-to-day with a right wrist sprain, per NBA reporter Marc Stein."
+   "nota": "Markkanen (wrist) is questionable for Wednesday's game against the Spurs."
   },
   {
    "id": "4277961",
@@ -931,23 +941,13 @@
    "nota": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN."
   },
   {
-   "id": "4397077",
-   "nombre": "Jaxson Hayes",
-   "pos": "C",
-   "estado": "Day-To-Day",
-   "fecha": "2026-10-27",
-   "tipo": "Shoulder",
-   "regreso": "2026-10-28",
-   "nota": "Hayes (shoulder) is out for Monday's game against the Grizzlies."
-  },
-  {
    "id": "4433268",
    "nombre": "Trey Alexander",
    "pos": "G",
    "estado": "Out",
    "fecha": "2026-10-24",
    "tipo": "Knee",
-   "regreso": "2026-10-28",
+   "regreso": "2026-11-06",
    "nota": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise."
   },
   {
