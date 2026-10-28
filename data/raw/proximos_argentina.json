@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841642",
-  "utc": "2026-10-27T22:00Z",
-  "estadio": "Diego Armando Maradona",
-  "local_espn": "Argentinos Juniors",
-  "visita_espn": "Independiente Rivadavia",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    105,
-    215,
-    290
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    135,
-    -180
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -135
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Argentinos Juniors": [
-    [
-     "200687",
-     "Brayan Cortés",
-     "G"
-    ],
-    [
-     "118787",
-     "Franco Vázquez",
-     "CD-L"
-    ],
-    [
-     "269818",
-     "Francisco Álvarez",
-     "CD-R"
-    ],
-    [
-     "218629",
-     "Sebastián Prieto",
-     "LB"
-    ],
-    [
-     "290507",
-     "Franco Paredes",
-     "RB"
-    ],
-    [
-     "142172",
-     "Facundo Gutiérrez",
-     "CM"
-    ],
-    [
-     "195711",
-     "Nicolás Oroz",
-     "LM"
-    ],
-    [
-     "414355",
-     "Facundo Carrizo",
-     "RM"
-    ],
-    [
-     "270364",
-     "Gastón Verón",
-     "F"
-    ],
-    [
-     "101537",
-     "Matías Giménez",
-     "LF"
-    ],
-    [
-     "382948",
-     "Diego Porcel",
-     "RF"
-    ]
-   ],
-   "Independiente Rivadavia": [
-    [
-     "414351",
-     "Nicolás Bolcato",
-     "G"
-    ],
-    [
-     "336665",
-     "Alejo Osella",
-     "CD-L"
-    ],
-    [
-     "358754",
-     "Leonard Costa",
-     "CD-R"
-    ],
-    [
-     "236006",
-     "Juan Manuel Elordi",
-     "LB"
-    ],
-    [
-     "276021",
-     "Alex Vigo",
-     "RB"
-    ],
-    [
-     "315719",
-     "Gonzalo Rios",
-     "AM"
-    ],
-    [
-     "217153",
-     "José Florentín",
-     "LM"
-    ],
-    [
-     "302053",
-     "Tomás Bottari",
-     "RM"
-    ],
-    [
-     "257754",
-     "Alex Arce",
-     "F"
-    ],
-    [
-     "185434",
-     "Matías Fernández",
-     "AM-L"
-    ],
-    [
-     "335510",
-     "Matías Reali",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841655",
   "utc": "2026-10-30T22:00Z",
   "estadio": "Ciudad de Río Cuarto Antonio Candini",
@@ -226,8 +77,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    280,
+    -165,
+    285,
     425
    ],
    "ou_linea": 2.5,
@@ -238,11 +89,11 @@
    "spread": [
     [
      "-0.5",
-     -185
+     -180
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -259,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    280,
-    225,
+    285,
+    230,
     -105
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -160
+    -155
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -130
     ],
     [
      "-0.5",
-     -115
+     -110
     ]
    ]
   }
@@ -574,7 +425,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    195,
+    190,
+    155
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    140,
+    -205
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -215
+    ],
+    [
+     "-0.5",
+     135
+    ]
+   ]
+  }
  },
  {
   "id": "401841652",
@@ -585,6 +458,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -195,
+    310,
+    475
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -215
+    ],
+    [
+     "+0.5",
+     135
+    ]
+   ]
+  }
  }
 ]
