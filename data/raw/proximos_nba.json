@@ -1,150 +1,5 @@
 [
  {
-  "id": "401909883",
-  "utc": "2026-10-28T23:00Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "DET",
-  "visita": "CHA",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Detroit Pistons",
-  "visita_espn": "Charlotte Hornets",
-  "revisado": false,
-  "estadio": "Little Caesars Arena",
-  "records": {
-   "home": [
-    "3-1",
-    "1-0",
-    "2-1"
-   ],
-   "away": [
-    "3-1",
-    "2-1",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909884",
-  "utc": "2026-10-28T23:00Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "IND",
-  "visita": "PHI",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Indiana Pacers",
-  "visita_espn": "Philadelphia 76ers",
-  "revisado": false,
-  "estadio": "Gainbridge Fieldhouse",
-  "records": {
-   "home": [
-    "2-2",
-    "0-1",
-    "2-1"
-   ],
-   "away": [
-    "3-1",
-    "2-1",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909885",
-  "utc": "2026-10-28T23:30Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "TOR",
-  "visita": "ORL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_END_PERIOD",
-  "local_espn": "Toronto Raptors",
-  "visita_espn": "Orlando Magic",
-  "revisado": false,
-  "estadio": "Scotiabank Arena",
-  "records": {
-   "home": [
-    "2-1",
-    "1-0",
-    "1-1"
-   ],
-   "away": [
-    "1-2",
-    "0-2",
-    "1-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909886",
-  "utc": "2026-10-29T00:00Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "NY",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "New York Knicks",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "1-3",
-    "0-1",
-    "1-2"
-   ],
-   "away": [
-    "1-3",
-    "1-2",
-    "0-1"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909887",
-  "utc": "2026-10-29T00:00Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIL",
-  "visita": "HOU",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Milwaukee Bucks",
-  "visita_espn": "Houston Rockets",
-  "revisado": false,
-  "estadio": "Fiserv Forum",
-  "records": {
-   "home": [
-    "1-3",
-    "1-1",
-    "0-2"
-   ],
-   "away": [
-    "4-0",
-    "2-0",
-    "2-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909888",
   "utc": "2026-10-29T00:00Z",
   "fecha": "2026-10-28",
@@ -169,35 +24,6 @@
     "1-3",
     "0-1",
     "1-2"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909889",
-  "utc": "2026-10-29T00:00Z",
-  "fecha": "2026-10-28",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NO",
-  "visita": "DEN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New Orleans Pelicans",
-  "visita_espn": "Denver Nuggets",
-  "revisado": false,
-  "estadio": "Smoothie King Center",
-  "records": {
-   "home": [
-    "0-3",
-    "0-1",
-    "0-2"
-   ],
-   "away": [
-    "1-2",
-    "1-1",
-    "0-1"
    ]
   },
   "momios": null
@@ -241,10 +67,10 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": true,
+  "revisado": false,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -258,30 +84,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    160,
-    -192
-   ],
-   "ml_abre": [
-    170,
-    -205
-   ],
-   "spread": [
-    5.5,
-    -115,
-    -5.5,
-    -105
-   ],
-   "spread_abre": 5.5,
-   "total": [
-    228.5,
-    -105,
-    -115
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909892",
@@ -293,10 +96,10 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "Los Angeles Lakers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -310,30 +113,7 @@
     "1-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -112,
-    -108
-   ],
-   "ml_abre": [
-    164,
-    -198
-   ],
-   "spread": [
-    -1.5,
-    -102,
-    1.5,
-    -118
-   ],
-   "spread_abre": 5.5,
-   "total": [
-    224.5,
-    -110,
-    -110
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909893",
@@ -362,7 +142,30 @@
     "0-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    -110
+   ],
+   "ml_abre": [
+    -110,
+    -110
+   ],
+   "spread": [
+    -1.5,
+    100,
+    1.5,
+    -120
+   ],
+   "spread_abre": -1.5,
+   "total": [
+    239.5,
+    -105,
+    -115
+   ],
+   "total_abre": 239.5
+  }
  },
  {
   "id": "401909894",
@@ -381,8 +184,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ],
    "away": [
@@ -394,8 +197,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -198,
-    164
+    -205,
+    170
    ],
    "ml_abre": [
     -192,
@@ -403,15 +206,15 @@
    ],
    "spread": [
     -5.5,
-    -115,
+    -112,
     5.5,
-    -105
+    -108
    ],
    "spread_abre": -5.5,
    "total": [
-    237.5,
-    -115,
-    -105
+    238.5,
+    -110,
+    -110
    ],
    "total_abre": 237.5
   }
@@ -446,18 +249,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -258,
-    210
+    -265,
+    215
    ],
    "ml_abre": [
     -285,
     230
    ],
    "spread": [
-    -6.5,
-    -115,
-    6.5,
-    -105
+    -7.5,
+    -105,
+    7.5,
+    -115
    ],
    "spread_abre": -7.5,
    "total": [
@@ -490,9 +293,9 @@
     "1-2"
    ],
    "away": [
-    "3-1",
+    "3-2",
     "2-1",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -519,8 +322,8 @@
     "0-1"
    ],
    "away": [
-    "1-3",
-    "0-1",
+    "1-4",
+    "0-2",
     "1-2"
    ]
   },
@@ -548,8 +351,8 @@
     "0-2"
    ],
    "away": [
-    "3-1",
-    "1-0",
+    "4-1",
+    "2-0",
     "2-1"
    ]
   },
@@ -572,14 +375,14 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ],
    "away": [
-    "1-3",
+    "2-3",
     "1-2",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -601,14 +404,14 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "2-1",
-    "1-0",
+    "3-1",
+    "2-0",
     "1-1"
    ],
    "away": [
-    "1-2",
+    "1-3",
     "0-2",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -635,8 +438,8 @@
     "1-1"
    ],
    "away": [
-    "2-2",
-    "0-1",
+    "2-3",
+    "0-2",
     "2-1"
    ]
   },
@@ -664,9 +467,9 @@
     "2-1"
    ],
    "away": [
-    "4-0",
+    "5-0",
     "2-0",
-    "2-0"
+    "3-0"
    ]
   },
   "momios": null
@@ -751,9 +554,9 @@
     "0-2"
    ],
    "away": [
-    "1-2",
+    "2-2",
     "1-1",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": {
@@ -827,14 +630,14 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "3-1",
+    "3-2",
     "2-1",
-    "1-0"
+    "1-1"
    ],
    "away": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -856,8 +659,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ],
    "away": [
@@ -914,8 +717,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-3",
-    "1-1",
+    "1-4",
+    "1-2",
     "0-2"
    ],
    "away": [
@@ -972,9 +775,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "4-0",
+    "5-0",
     "2-0",
-    "2-0"
+    "3-0"
    ],
    "away": [
     "4-0",
@@ -1001,9 +804,9 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "1-2",
+    "1-3",
     "0-2",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "3-1",
@@ -1030,8 +833,8 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "2-2",
-    "0-1",
+    "2-3",
+    "0-2",
     "2-1"
    ],
    "away": [
@@ -1093,8 +896,8 @@
     "1-0"
    ],
    "away": [
-    "2-1",
-    "1-0",
+    "3-1",
+    "2-0",
     "1-1"
    ]
   },
@@ -1146,13 +949,13 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "3-1",
+    "3-2",
     "2-1",
-    "1-0"
+    "1-1"
    ],
    "away": [
-    "3-1",
-    "1-0",
+    "4-1",
+    "2-0",
     "2-1"
    ]
   },
@@ -1175,8 +978,8 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "2-2",
-    "0-1",
+    "2-3",
+    "0-2",
     "2-1"
    ],
    "away": [
@@ -1204,9 +1007,9 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "1-3",
+    "2-3",
     "1-2",
-    "0-1"
+    "1-1"
    ],
    "away": [
     "0-4",
@@ -1233,9 +1036,9 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "1-2",
+    "1-3",
     "0-2",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "2-3",
@@ -1262,13 +1065,13 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ],
    "away": [
-    "1-3",
-    "0-1",
+    "1-4",
+    "0-2",
     "1-2"
    ]
   },
@@ -1325,8 +1128,8 @@
     "3-0"
    ],
    "away": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ]
   },
@@ -1354,8 +1157,8 @@
     "2-1"
    ],
    "away": [
-    "1-3",
-    "1-1",
+    "1-4",
+    "1-2",
     "0-2"
    ]
   },
@@ -1378,9 +1181,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "4-0",
+    "5-0",
     "2-0",
-    "2-0"
+    "3-0"
    ],
    "away": [
     "3-1",
@@ -1436,9 +1239,9 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "1-2",
+    "2-2",
     "1-1",
-    "0-1"
+    "1-1"
    ],
    "away": [
     "3-0",
@@ -1499,8 +1302,8 @@
     "0-2"
    ],
    "away": [
-    "2-1",
-    "1-0",
+    "3-1",
+    "2-0",
     "1-1"
    ]
   },
@@ -1552,14 +1355,14 @@
   "estadio": "Little Caesars Arena",
   "records": {
    "home": [
-    "3-1",
-    "1-0",
+    "4-1",
+    "2-0",
     "2-1"
    ],
    "away": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -1615,8 +1418,8 @@
     "0-1"
    ],
    "away": [
-    "1-3",
-    "1-1",
+    "1-4",
+    "1-2",
     "0-2"
    ]
   },
@@ -1644,9 +1447,9 @@
     "0-2"
    ],
    "away": [
-    "3-1",
+    "3-2",
     "2-1",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -1668,13 +1471,13 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "1-3",
+    "2-3",
     "1-2",
-    "0-1"
+    "1-1"
    ],
    "away": [
-    "1-3",
-    "0-1",
+    "1-4",
+    "0-2",
     "1-2"
    ]
   },
@@ -1702,8 +1505,8 @@
     "3-0"
    ],
    "away": [
-    "2-2",
-    "0-1",
+    "2-3",
+    "0-2",
     "2-1"
    ]
   },
@@ -1726,8 +1529,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ],
    "away": [
@@ -1784,9 +1587,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "4-0",
+    "5-0",
     "2-0",
-    "2-0"
+    "3-0"
    ],
    "away": [
     "3-1",
@@ -1813,13 +1616,13 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "1-2",
+    "2-2",
     "1-1",
-    "0-1"
+    "1-1"
    ],
    "away": [
-    "2-1",
-    "1-0",
+    "3-1",
+    "2-0",
     "1-1"
    ]
   },
@@ -1963,9 +1766,9 @@
     "0-2"
    ],
    "away": [
-    "1-2",
+    "1-3",
     "0-2",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2045,9 +1848,9 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "3-1",
+    "3-2",
     "2-1",
-    "1-0"
+    "1-1"
    ],
    "away": [
     "3-1",
@@ -2079,9 +1882,9 @@
     "0-1"
    ],
    "away": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -2161,13 +1964,13 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-3",
-    "1-1",
+    "1-4",
+    "1-2",
     "0-2"
    ],
    "away": [
-    "2-1",
-    "1-0",
+    "3-1",
+    "2-0",
     "1-1"
    ]
   },
@@ -2190,8 +1993,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ],
    "away": [
@@ -2277,14 +2080,14 @@
   "estadio": "Arena CDMX",
   "records": {
    "home": [
-    "2-2",
-    "0-1",
+    "2-3",
+    "0-2",
     "2-1"
    ],
    "away": [
-    "1-2",
+    "2-2",
     "1-1",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -2340,9 +2143,9 @@
     "0-1"
    ],
    "away": [
-    "1-3",
+    "2-3",
     "1-2",
-    "0-1"
+    "1-1"
    ]
   },
   "momios": null
@@ -2398,9 +2201,9 @@
     "1-2"
    ],
    "away": [
-    "1-2",
+    "1-3",
     "0-2",
-    "1-0"
+    "1-1"
    ]
   },
   "momios": null
@@ -2427,9 +2230,9 @@
     "0-2"
    ],
    "away": [
-    "4-0",
+    "5-0",
     "2-0",
-    "2-0"
+    "3-0"
    ]
   },
   "momios": null
@@ -2480,14 +2283,14 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-3",
-    "0-1",
+    "1-4",
+    "0-2",
     "1-2"
    ],
    "away": [
-    "3-1",
+    "4-1",
     "2-1",
-    "1-0"
+    "2-0"
    ]
   },
   "momios": null
@@ -2509,8 +2312,8 @@
   "estadio": "Little Caesars Arena",
   "records": {
    "home": [
-    "3-1",
-    "1-0",
+    "4-1",
+    "2-0",
     "2-1"
    ],
    "away": [
@@ -2596,8 +2399,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-3",
-    "1-1",
+    "1-4",
+    "1-2",
     "0-2"
    ],
    "away": [
@@ -2630,8 +2433,8 @@
     "0-2"
    ],
    "away": [
-    "0-3",
-    "0-1",
+    "0-4",
+    "0-2",
     "0-2"
    ]
   },
