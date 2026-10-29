@@ -102,8 +102,8 @@
    "id": "5105555",
    "nombre": "Tobe Awaka",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-28",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
    "tipo": "Ankle",
    "regreso": "2026-10-30",
    "nota": "Awaka (ankle) is out for Wednesday's game against the Knicks, Joel Lorenzi of The Athletic reports."
@@ -131,11 +131,21 @@
  ],
  "Dallas Mavericks": [
   {
+   "id": "5279129",
+   "nombre": "Sergio de Larrea",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Knee",
+   "regreso": "2026-10-30",
+   "nota": "De Larrea (knee) has been ruled out for Wednesday's game against the Thunder."
+  },
+  {
    "id": "4278594",
    "nombre": "Naji Marshall",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-28",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
    "tipo": "Illness",
    "regreso": "2026-10-30",
    "nota": "Marshall (illness) won't play in Wednesday's game against Oklahoma City."
@@ -159,16 +169,6 @@
    "tipo": "Knee",
    "regreso": "2026-10-30",
    "nota": "Aldama (knee) is out for Wednesday's game against the Thunder."
-  },
-  {
-   "id": "5279129",
-   "nombre": "Sergio de Larrea",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Knee",
-   "regreso": "2026-10-30",
-   "nota": "De Larrea (knee) has been ruled out for Wednesday's game against the Thunder."
   },
   {
    "id": "4683688",
@@ -250,8 +250,8 @@
    "id": "4997536",
    "nombre": "Gui Santos",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-28",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
    "tipo": "Knee",
    "regreso": "2026-10-30",
    "nota": "Santos has been ruled out for Wednesday's game against the Timberwolves due to left knee tendinitis."
@@ -289,6 +289,16 @@
  ],
  "Houston Rockets": [
   {
+   "id": "4871144",
+   "nombre": "Alperen Sengun",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Back",
+   "regreso": "2026-10-30",
+   "nota": "Sengun (back) has been ruled out for Wednesday's game against the Bucks."
+  },
+  {
    "id": "2990992",
    "nombre": "Marcus Smart",
    "pos": "G",
@@ -297,16 +307,6 @@
    "tipo": "Forearm",
    "regreso": "2026-10-30",
    "nota": "Smart (forearm) is out for Wednesday's game against the Bucks."
-  },
-  {
-   "id": "4871144",
-   "nombre": "Alperen Sengun",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Back",
-   "regreso": "2026-10-30",
-   "nota": "Sengun (back) has been ruled out for Wednesday's game against the Bucks."
   },
   {
    "id": "2991235",
@@ -373,6 +373,16 @@
  ],
  "LA Clippers": [
   {
+   "id": "4066648",
+   "nombre": "Rui Hachimura",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Quadriceps",
+   "regreso": "2026-10-30",
+   "nota": "Hachimura (quadriceps) has been ruled out for Wednesday's game against the Lakers, Joey Linn of SI.com reports."
+  },
+  {
    "id": "5108024",
    "nombre": "Yanic Konan Niederhauser",
    "pos": "C",
@@ -403,16 +413,6 @@
    "nota": "Ingram (Achilles) is making progress but is set to miss at least one more week, Ohm Youngmisuk of ESPN.com reports."
   },
   {
-   "id": "4066648",
-   "nombre": "Rui Hachimura",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Quadriceps",
-   "regreso": "2026-10-30",
-   "nota": "Hachimura (quadriceps) has been ruled out for Wednesday's game against the Lakers, Joey Linn of SI.com reports."
-  },
-  {
    "id": "6580",
    "nombre": "Bradley Beal",
    "pos": "G",
@@ -435,6 +435,26 @@
  ],
  "Los Angeles Lakers": [
   {
+   "id": "4433137",
+   "nombre": "Ziaire Williams",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Foot",
+   "regreso": "2026-10-30",
+   "nota": "Williams (foot) is out for Wednesday's game against the Clippers."
+  },
+  {
+   "id": "3945274",
+   "nombre": "Luka Doncic",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Back",
+   "regreso": "2026-10-30",
+   "nota": "Doncic (back) is out for Wednesday's game against the Clippers."
+  },
+  {
    "id": "5113969",
    "nombre": "Cameron Carr",
    "pos": "G",
@@ -453,26 +473,6 @@
    "tipo": "Knee",
    "regreso": "2026-10-30",
    "nota": "Thiero (knee) is out for Wednesday's game against the Clippers."
-  },
-  {
-   "id": "4433137",
-   "nombre": "Ziaire Williams",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-28",
-   "tipo": "Foot",
-   "regreso": "2026-10-30",
-   "nota": "Williams (foot) is out for Wednesday's game against the Clippers."
-  },
-  {
-   "id": "3945274",
-   "nombre": "Luka Doncic",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-28",
-   "tipo": "Back",
-   "regreso": "2026-10-30",
-   "nota": "Doncic (back) is out for Wednesday's game against the Clippers."
   }
  ],
  "Miami Heat": [
@@ -545,6 +545,16 @@
  ],
  "Oklahoma City Thunder": [
   {
+   "id": "4433255",
+   "nombre": "Chet Holmgren",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-10-29",
+   "tipo": "Knee",
+   "regreso": "2026-10-31",
+   "nota": "Holmgren (knee) has been ruled out for Wednesday's game against the Mavericks."
+  },
+  {
    "id": "4593803",
    "nombre": "Jalen Williams",
    "pos": "G",
@@ -573,16 +583,6 @@
    "tipo": "Knee",
    "regreso": "2026-11-04",
    "nota": "Sorber (knee) has been ruled out for Wednesday's game against the Mavericks."
-  },
-  {
-   "id": "4433255",
-   "nombre": "Chet Holmgren",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-27",
-   "tipo": "Knee",
-   "regreso": "2026-10-31",
-   "nota": "Holmgren (knee) has been ruled out for Wednesday's game against the Mavericks."
   },
   {
    "id": "5159925",
@@ -834,7 +834,7 @@
    "id": "4066336",
    "nombre": "Lauri Markkanen",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-10-29",
    "tipo": "Wrist",
    "regreso": "2026-10-31",
