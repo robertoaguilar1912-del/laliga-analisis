@@ -1,168 +1,19 @@
 [
  {
-  "id": "401877998",
-  "utc": "2026-10-28T23:00Z",
-  "estadio": "Palogrande",
-  "local_espn": "Once Caldas",
-  "visita_espn": "Alianza FC",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -215,
-    320,
-    550
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -115,
-    -115
-   ],
-   "spread": [
-    [
-     "-1.5",
-     125
-    ],
-    [
-     "+1.5",
-     -180
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Once Caldas": [
-    [
-     "302154",
-     "Joan Parra",
-     "G"
-    ],
-    [
-     "286864",
-     "Juan Cuesta",
-     "D"
-    ],
-    [
-     "206188",
-     "Daniel Londoño",
-     "D"
-    ],
-    [
-     "199007",
-     "Juan Patiño",
-     "D"
-    ],
-    [
-     "180635",
-     "Jorge Cardona",
-     "D"
-    ],
-    [
-     "203357",
-     "Luis Gómez",
-     "M"
-    ],
-    [
-     "322986",
-     "Jader Quiñónes",
-     "M"
-    ],
-    [
-     "41652",
-     "Juan Pablo Nieto",
-     "M"
-    ],
-    [
-     "162716",
-     "Michael Barrios",
-     "M"
-    ],
-    [
-     "266037",
-     "Andres Colorado",
-     "M"
-    ],
-    [
-     "387396",
-     "Jefry Zapata",
-     "F"
-    ]
-   ],
-   "Alianza FC": [
-    [
-     "398879",
-     "Eduar Esteban",
-     "G"
-    ],
-    [
-     "199392",
-     "Pedro Franco",
-     "CD-L"
-    ],
-    [
-     "193475",
-     "Kevin Moreno",
-     "CD-R"
-    ],
-    [
-     "31750",
-     "Juan Viveros",
-     "LB"
-    ],
-    [
-     "276184",
-     "Yilson Rosales",
-     "RB"
-    ],
-    [
-     "272557",
-     "Wiston Fernández",
-     "AM"
-    ],
-    [
-     "301336",
-     "Jair Castillo",
-     "LM"
-    ],
-    [
-     "366879",
-     "Jhildrey Lasso",
-     "RM"
-    ],
-    [
-     "296556",
-     "Misael Martínez",
-     "F"
-    ],
-    [
-     "336820",
-     "Jesús Muñoz",
-     "AM-L"
-    ],
-    [
-     "109940",
-     "Felipe Pardo",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401877878",
   "utc": "2026-10-29T01:05Z",
   "estadio": "Metropolitano de Techo",
   "local_espn": "Internacional de Bogotá",
   "visita_espn": "Independiente Medellín",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    220,
-    140
+    210,
+    225,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "+0.5",
-     -185
+     -160
     ],
     [
      "-0.5",
-     135
+     115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Internacional de Bogotá": [
+    [
+     "220056",
+     "Wuilker Faríñez",
+     "G"
+    ],
+    [
+     "302480",
+     "Carlos Vivas",
+     "CD"
+    ],
+    [
+     "315810",
+     "Agustín Irazoque",
+     "CD-L"
+    ],
+    [
+     "217454",
+     "Joan Castro",
+     "CD-R"
+    ],
+    [
+     "197568",
+     "Larry Vásquez",
+     "CM-L"
+    ],
+    [
+     "312619",
+     "Ruben Manjarres",
+     "CM-R"
+    ],
+    [
+     "359505",
+     "Miguel Pernía",
+     "LM"
+    ],
+    [
+     "403073",
+     "Ronaldo Julio",
+     "RM"
+    ],
+    [
+     "379730",
+     "Fabricio Sanguinetti",
+     "F"
+    ],
+    [
+     "222678",
+     "Cristián Dájome",
+     "CF-L"
+    ],
+    [
+     "270510",
+     "Johan Caballero",
+     "CF-R"
+    ]
+   ],
+   "Independiente Medellín": [
+    [
+     "155033",
+     "Salvador Ichazo",
+     "G"
+    ],
+    [
+     "323854",
+     "Alfonso Simarra",
+     "CD-L"
+    ],
+    [
+     "318224",
+     "Kevin Mantilla",
+     "CD-R"
+    ],
+    [
+     "149496",
+     "Frank Fabra",
+     "LB"
+    ],
+    [
+     "254236",
+     "Esneyder Mena",
+     "RB"
+    ],
+    [
+     "155160",
+     "Didier Moreno",
+     "CM-L"
+    ],
+    [
+     "153751",
+     "Baldomero Perlaza",
+     "CM-R"
+    ],
+    [
+     "365166",
+     "John Montaño",
+     "LM"
+    ],
+    [
+     "197533",
+     "Yony González",
+     "RM"
+    ],
+    [
+     "270236",
+     "Jeison Medina",
+     "CF-L"
+    ],
+    [
+     "288697",
+     "Agustín Martegani",
+     "CF-R"
     ]
    ]
   }

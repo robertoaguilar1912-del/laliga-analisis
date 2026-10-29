@@ -5,7 +5,7 @@
   "estadio": "Bank of America Stadium",
   "local_espn": "Charlotte FC",
   "visita_espn": "CF Montréal",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Nu Stadium",
   "local_espn": "Inter Miami CF",
   "visita_espn": "FC Cincinnati",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Gillette Stadium",
   "local_espn": "New England Revolution",
   "visita_espn": "Red Bull New York",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "Atlanta United FC",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "BMO Field",
   "local_espn": "Toronto FC",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "Q2 Stadium",
   "local_espn": "Austin FC",
   "visita_espn": "Real Salt Lake",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -762,8 +762,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    140,
-    -180
+    135,
+    -170
    ],
    "spread": [
     [
@@ -899,7 +899,7 @@
   "estadio": "Soldier Field",
   "local_espn": "Chicago Fire FC",
   "visita_espn": "Orlando City SC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -911,7 +911,7 @@
    ],
    "ou_linea": 4.5,
    "ou": [
-    125,
+    120,
     -155
    ],
    "spread": [
@@ -1048,20 +1048,20 @@
   "estadio": "Toyota Stadium",
   "local_espn": "FC Dallas",
   "visita_espn": "Columbus Crew",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     120,
-    265,
-    185
+    270,
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -150
+    110,
+    -140
    ],
    "spread": [
     [
@@ -1070,7 +1070,7 @@
     ],
     [
      "+0.5",
-     -155
+     -160
     ]
    ]
   },
@@ -1197,7 +1197,7 @@
   "estadio": "Allianz Field",
   "local_espn": "Minnesota United FC",
   "visita_espn": "Sporting Kansas City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1209,8 +1209,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    100
+    -135,
+    105
    ],
    "spread": [
     [
@@ -1346,7 +1346,7 @@
   "estadio": "GEODIS Park",
   "local_espn": "Nashville SC",
   "visita_espn": "Philadelphia Union",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1358,8 +1358,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    115
+    -140,
+    110
    ],
    "spread": [
     [
@@ -1368,7 +1368,7 @@
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
   },
@@ -1495,7 +1495,7 @@
   "estadio": "Energizer Park",
   "local_espn": "St. Louis CITY SC",
   "visita_espn": "Portland Timbers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1507,8 +1507,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    115,
+    -145
    ],
    "spread": [
     [
@@ -1656,7 +1656,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     115
    ],
    "spread": [
@@ -1683,9 +1683,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
+    -150,
     295,
-    320
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1695,7 +1695,7 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -155
     ],
     [
      "+0.5",
@@ -1723,7 +1723,7 @@
    "ou_linea": 3.5,
    "ou": [
     -130,
-    100
+    105
    ],
    "spread": [
     [
@@ -1732,7 +1732,7 @@
     ],
     [
      "+1.5",
-     -150
+     -145
     ]
    ]
   }
