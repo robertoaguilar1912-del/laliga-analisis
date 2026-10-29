@@ -8,29 +8,7 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-allsvenskan",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -225,
-    390,
-    500
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    125,
-    -165
-   ],
-   "spread": [
-    [
-     "-1.5",
-     115
-    ],
-    [
-     "+1.5",
-     -160
-    ]
-   ]
-  },
+  "momios": null,
   "alineaciones": {
    "Hammarby IF": [
     [
@@ -176,7 +154,123 @@
     ],
     [
      "+0.5",
-     -170
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Kalmar FF": [
+    [
+     "258458",
+     "Samuel Brolin",
+     "G"
+    ],
+    [
+     "284201",
+     "Jesper Lofgren",
+     "CD-L"
+    ],
+    [
+     "139665",
+     "Lars Saetra",
+     "CD-R"
+    ],
+    [
+     "334035",
+     "Victor Larsson",
+     "LB"
+    ],
+    [
+     "337142",
+     "Miska Ylitolva",
+     "RB"
+    ],
+    [
+     "289994",
+     "Carl Gustafsson",
+     "CM-L"
+    ],
+    [
+     "235466",
+     "Robert Gojani",
+     "CM-R"
+    ],
+    [
+     "329556",
+     "Charles Sagoe Junior",
+     "LM"
+    ],
+    [
+     "312873",
+     "Noah Shamoun",
+     "RM"
+    ],
+    [
+     "367361",
+     "Vilmer Tyren",
+     "CF-L"
+    ],
+    [
+     "378041",
+     "Amara Camara",
+     "CF-R"
+    ]
+   ],
+   "GAIS": [
+    [
+     "353095",
+     "Andreas Hermansen",
+     "G"
+    ],
+    [
+     "333728",
+     "Oskar Ågren",
+     "D"
+    ],
+    [
+     "378826",
+     "Filip Beckman",
+     "D"
+    ],
+    [
+     "379958",
+     "Robin Wendin Thomasson",
+     "D"
+    ],
+    [
+     "378806",
+     "August Wängberg",
+     "D"
+    ],
+    [
+     "399708",
+     "Henry Sletsjøe",
+     "M"
+    ],
+    [
+     "356377",
+     "Robin Frej",
+     "M"
+    ],
+    [
+     "378822",
+     "Mohamed Bawa",
+     "M"
+    ],
+    [
+     "296277",
+     "Samuel Salter",
+     "F"
+    ],
+    [
+     "418295",
+     "Max Andersson",
+     "F"
+    ],
+    [
+     "400217",
+     "Matteo de Brienne",
+     "F"
     ]
    ]
   }
@@ -193,9 +287,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    210,
     250,
-    130
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +299,127 @@
    "spread": [
     [
      "+0.5",
-     -165
+     -155
     ],
     [
      "-0.5",
-     120
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Örgryte IS": [
+    [
+     "334040",
+     "Hampus Gustafsson",
+     "G"
+    ],
+    [
+     "136804",
+     "Mikael Dyrestam",
+     "CD"
+    ],
+    [
+     "414819",
+     "Christoffer Styffe",
+     "CD-L"
+    ],
+    [
+     "156555",
+     "Johan Hammar",
+     "CD-R"
+    ],
+    [
+     "261188",
+     "Michael Parker",
+     "LB"
+    ],
+    [
+     "219406",
+     "Adam Andersson",
+     "RB"
+    ],
+    [
+     "134075",
+     "Tobias Sana",
+     "CM-L"
+    ],
+    [
+     "334032",
+     "Charlie Rikard Vindehall",
+     "CM-R"
+    ],
+    [
+     "418341",
+     "Benjamin Laturnus",
+     "LM"
+    ],
+    [
+     "228282",
+     "Owen Parker-Prince",
+     "RM"
+    ],
+    [
+     "396526",
+     "Viktor Ekblom",
+     "F"
+    ]
+   ],
+   "Mjällby AIF": [
+    [
+     "151931",
+     "Alexander Lundin",
+     "G"
+    ],
+    [
+     "356281",
+     "Abdullah Iqbal",
+     "CD-L"
+    ],
+    [
+     "306289",
+     "Axel Norén",
+     "CD-R"
+    ],
+    [
+     "172917",
+     "Tom Pettersson",
+     "LB"
+    ],
+    [
+     "342493",
+     "Tony Miettinen",
+     "RB"
+    ],
+    [
+     "192793",
+     "Jesper Gustavsson",
+     "CM-L"
+    ],
+    [
+     "303651",
+     "Viktor Gustafson",
+     "CM-R"
+    ],
+    [
+     "357140",
+     "Villiam Granath",
+     "LM"
+    ],
+    [
+     "416646",
+     "Max Nielsen",
+     "RM"
+    ],
+    [
+     "293925",
+     "Jacob Bergstrom",
+     "CF-L"
+    ],
+    [
+     "305758",
+     "Jeppe Kjaer Jensen",
+     "CF-R"
     ]
    ]
   }
