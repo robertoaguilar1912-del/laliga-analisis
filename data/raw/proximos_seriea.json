@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
+    -145,
     300,
-    340
+    310
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -165
+     -150
     ],
     [
      "+0.5",
-     120
+     105
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    125,
     250,
-    195
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    130
+    -175,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -160
+     -170
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    270,
-    330
+    -150,
+    280,
+    360
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -125,
     -105
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -155
     ],
     [
      "+0.5",
-     105
+     110
     ]
    ]
   }
@@ -112,7 +112,7 @@
    "ml": [
     425,
     330,
-    -190
+    -195
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+1.5",
-     -195
+     -190
     ],
     [
      "-1.5",
-     140
+     135
     ]
    ]
   }
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    245,
+    250,
     265,
-    -105
+    -110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    125
+    -165,
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -125
+     -120
     ],
     [
      "-0.5",
-     -110
+     -115
     ]
    ]
   }
@@ -221,11 +221,11 @@
    "spread": [
     [
      "-0.5",
-     110
+     105
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   }
@@ -275,9 +275,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
     195,
-    145
+    195,
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -287,11 +287,11 @@
    "spread": [
     [
      "+0.5",
-     -200
+     -195
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   }
@@ -309,12 +309,12 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    220,
-    225
+    225,
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -125
    ],
    "spread": [
@@ -324,7 +324,7 @@
     ],
     [
      "+0.5",
-     -150
+     -155
     ]
    ]
   }
@@ -445,6 +445,61 @@
   "estadio": "Olimpico",
   "local_espn": "AS Roma",
   "visita_espn": "Sassuolo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874810",
+  "utc": "2026-11-08T11:30Z",
+  "estadio": "Stadio Diego Armando Maradona",
+  "local_espn": "Napoli",
+  "visita_espn": "Lazio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401875018",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "Stadio Luigi Ferraris",
+  "local_espn": "Genoa",
+  "visita_espn": "AC Milan",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874800",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "U-Power Stadium",
+  "local_espn": "Monza",
+  "visita_espn": "Atalanta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401874808",
+  "utc": "2026-11-08T17:00Z",
+  "estadio": "San Siro",
+  "local_espn": "Internazionale",
+  "visita_espn": "Como",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401875003",
+  "utc": "2026-11-08T19:45Z",
+  "estadio": "Stadio Artemio Franchi",
+  "local_espn": "Fiorentina",
+  "visita_espn": "Juventus",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,

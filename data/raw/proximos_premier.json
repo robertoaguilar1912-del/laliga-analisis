@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    300,
-    310
+    -120,
+    295,
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
-    135
+    -170,
+    140
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -130
     ],
     [
      "+0.5",
@@ -44,19 +44,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    240,
-    245
+    115,
+    245,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -115,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     100
+     105
     ],
     [
      "+0.5",
@@ -78,13 +78,13 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    265,
-    240
+    270,
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    105
+    -135,
+    110
    ],
    "spread": [
     [
@@ -110,8 +110,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    230,
+    210,
+    235,
     135
    ],
    "ou_linea": 2.5,
@@ -122,7 +122,7 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -170
     ],
     [
      "-0.5",
@@ -143,8 +143,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    240,
+    165,
+    245,
     165
    ],
    "ou_linea": 2.5,
@@ -154,12 +154,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -220
-    ],
-    [
      "-0.5",
      145
+    ],
+    [
+     "+0.5",
+     -205
     ]
    ]
   }
@@ -176,14 +176,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    340,
+    -150,
+    350,
     360
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -140
+    -130
    ],
    "spread": [
     [
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -190,
-    350,
+    -185,
+    360,
     450
    ],
    "ou_linea": 2.5,
    "ou": [
     -170,
-    130
+    135
    ],
    "spread": [
     [
      "-1.5",
-     130
+     135
     ],
     [
      "+1.5",
-     -190
+     -185
     ]
    ]
   }
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    265,
-    250
+    -105,
+    275,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
     -150,
-    115
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -115
     ],
     [
      "+0.5",
-     -130
+     -120
     ]
    ]
   }
@@ -275,9 +275,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    190,
     245,
-    130
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -287,11 +287,11 @@
    "spread": [
     [
      "+0.5",
-     -170
+     -175
     ],
     [
      "-0.5",
-     115
+     120
     ]
    ]
   }
@@ -347,8 +347,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    105
+    -135,
+    100
    ],
    "spread": [
     [
@@ -407,23 +407,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -750,
-    700,
-    1500
+    -650,
+    650,
+    1300
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -155
+    125,
+    -175
    ],
    "spread": [
     [
      "-2.5",
-     110
+     125
     ],
     [
      "+2.5",
-     -170
+     -195
     ]
    ]
   }
@@ -456,7 +456,7 @@
     ],
     [
      "+0.5",
-     -160
+     -165
     ]
    ]
   }
@@ -490,6 +490,171 @@
     [
      "-0.5",
      -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879244",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "American Express Stadium",
+  "local_espn": "Brighton & Hove Albion",
+  "visita_espn": "Brentford",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -115,
+    275,
+    270
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879243",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "Selhurst Park",
+  "local_espn": "Crystal Palace",
+  "visita_espn": "Liverpool",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    340,
+    300,
+    -145
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    135,
+    -190
+   ],
+   "spread": [
+    [
+     "+0.5",
+     105
+    ],
+    [
+     "-0.5",
+     -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878759",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "Portman Road",
+  "local_espn": "Ipswich Town",
+  "visita_espn": "AFC Bournemouth",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    265,
+    265,
+    -110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -125
+    ],
+    [
+     "-0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879239",
+  "utc": "2026-11-08T14:00Z",
+  "estadio": "Stadium of Light",
+  "local_espn": "Sunderland",
+  "visita_espn": "Chelsea",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    225,
+    240,
+    110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -155
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879240",
+  "utc": "2026-11-08T16:30Z",
+  "estadio": "Old Trafford",
+  "local_espn": "Manchester United",
+  "visita_espn": "Aston Villa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    260,
+    190
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -160
     ]
    ]
   }

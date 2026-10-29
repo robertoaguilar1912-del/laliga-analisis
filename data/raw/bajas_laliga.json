@@ -1,7 +1,7 @@
 {
 "401882817": {
 "fotmob": 5868120,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -67,6 +67,15 @@
 "importante": false
 },
 {
+"nombre": "Eder Sarabia",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Jofre Carreras",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -83,8 +92,8 @@
 },
 "401882820": {
 "fotmob": 5868117,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -102,8 +111,8 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 1519475.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Adrián De La Fuente",
@@ -112,24 +121,15 @@
 "duda": true,
 "valor": 2355976.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 45132996.0,
-"perdida": 0.1777792238742582,
-"perdida_duda": 0.052200744661400275
+"valor_xi": 46506667.0,
+"perdida": 0.13985594796548204,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Cristian Romero",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 56787269.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Johnny Cardoso",
 "tipo": "Lesión",
@@ -150,14 +150,14 @@
 }
 ],
 "valor_xi": 444576486.0,
-"perdida": 0.1277334064852004,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882818": {
 "fotmob": 5868119,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -197,8 +197,8 @@
 "importante": false
 }
 ],
-"valor_xi": 17867964.0,
-"perdida": 1.3848413283125038,
+"valor_xi": 31734952.0,
+"perdida": 0.7797174232373189,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -256,8 +256,8 @@
 },
 "401882825": {
 "fotmob": 5868112,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -304,6 +304,15 @@
 "importante": true
 },
 {
+"nombre": "Joaquín Muñoz",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 1083845.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Pablo Martínez",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -322,15 +331,6 @@
 "importante": true
 },
 {
-"nombre": "Joaquín Muñoz",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 1083845.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Julen Lobete",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -340,26 +340,17 @@
 "importante": false
 }
 ],
-"valor_xi": 17555062.0,
-"perdida": 0.15723424958567506,
-"perdida_duda": 0.1859731967907604
+"valor_xi": 25730026.0,
+"perdida": 0.14940140363635854,
+"perdida_duda": 0.12688564714236977
 }
 },
 "401882822": {
 "fotmob": 5868115,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Xavi Espart",
-"tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
-"valor": 1805536.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Jules Koundé",
 "tipo": "Lesión",
@@ -404,11 +395,20 @@
 "valor": 12170982.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Xavi Espart",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 1805536.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 908972434.0,
-"perdida": 0.0019863484660966077,
-"perdida_duda": 0.06444154168926096
+"valor_xi": 959676437.0,
+"perdida": 0.0,
+"perdida_duda": 0.06103680651273508
 },
 "visita": {
 "faltan": [
@@ -438,7 +438,7 @@
 },
 "401882821": {
 "fotmob": 5868116,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -461,21 +461,21 @@
 "importante": true
 },
 {
-"nombre": "Orel Mangala",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 8854152.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Johan Mojica",
 "tipo": "Sanción",
 "regreso": "hasta el 1 de noviembre",
 "duda": false,
 "valor": 1136653.0,
 "titular": true,
+"importante": true
+},
+{
+"nombre": "Orel Mangala",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 8854152.0,
+"titular": false,
 "importante": true
 },
 {
@@ -498,8 +498,8 @@
 }
 ],
 "valor_xi": 42563217.0,
-"perdida": 0.8247830515254522,
-"perdida_duda": 0.04937725924241112
+"perdida": 0.6167594897725893,
+"perdida_duda": 0.25740082099527395
 },
 "visita": {
 "faltan": [
@@ -529,7 +529,7 @@
 },
 "401882819": {
 "fotmob": 5868118,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -620,7 +620,7 @@
 },
 "401882823": {
 "fotmob": 5868114,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -720,24 +720,15 @@
 },
 "401882826": {
 "fotmob": 5868111,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
-"nombre": "Oihan Sancet",
+"nombre": "Iñigo Ruiz de Galarreta",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 31457451.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Íñigo Ruíz de Galarreta",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 1451138.0,
 "titular": true,
 "importante": true
@@ -762,8 +753,8 @@
 }
 ],
 "valor_xi": 153797939.0,
-"perdida": 0.2139728868538349,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.00943535400692203
 },
 "visita": {
 "faltan": [
@@ -793,8 +784,8 @@
 },
 "401882824": {
 "fotmob": 5868113,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "unavailable",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -804,7 +795,7 @@
 "duda": false,
 "valor": 16365470.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Zakaria Eddahchouri",
@@ -812,15 +803,6 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 2017033.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Noé",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 1400901.0,
 "titular": false,
 "importante": false
 },
@@ -843,8 +825,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 66479022.0,
+"perdida": 0.24617495125003494,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -856,7 +838,7 @@
 "duda": false,
 "valor": 10237877.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Romain Del Castillo",
@@ -865,7 +847,7 @@
 "duda": false,
 "valor": 4356006.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jorge Herrando",
@@ -874,12 +856,12 @@
 "duda": true,
 "valor": 4434183.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 41595370.0,
+"perdida": 0.3508535445170941,
+"perdida_duda": 0.10660280218687801
 }
 }
 }

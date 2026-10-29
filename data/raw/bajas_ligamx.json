@@ -1,61 +1,7 @@
 {
-"401876986": {
-"fotmob": 1000014558,
-"visto": "2026-10-29T02:42+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Raphael Veiga",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 4833800.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Alex Zendejas",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5211651.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Víctor Dávila",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1831498.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Raúl Zúñiga",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1058656.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 23866754.0,
-"perdida": 0.20253277844150905,
-"perdida_duda": 0.2183644663199696
-},
-"visita": {
-"faltan": [],
-"valor_xi": 10182301.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-}
-},
 "401876919": {
 "fotmob": 1000014625,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -119,7 +65,7 @@
 },
 "401876918": {
 "fotmob": 1000014626,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -201,7 +147,7 @@
 },
 "401876917": {
 "fotmob": 1000014627,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -274,7 +220,7 @@
 },
 "401876916": {
 "fotmob": 1000014628,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -374,7 +320,7 @@
 },
 "401876914": {
 "fotmob": 1000014630,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -422,14 +368,14 @@
 "importante": true
 }
 ],
-"valor_xi": 19198026.0,
+"valor_xi": 10182301.0,
 "perdida": 0.0,
-"perdida_duda": 0.7091663486652221
+"perdida_duda": 1.337084220943773
 }
 },
 "401876915": {
 "fotmob": 1000014629,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -493,7 +439,7 @@
 },
 "401876913": {
 "fotmob": 1000014631,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -504,7 +450,7 @@
 "duda": false,
 "valor": 4833800.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Alex Zendejas",
@@ -513,7 +459,7 @@
 "duda": true,
 "valor": 5211651.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Víctor Dávila",
@@ -534,9 +480,9 @@
 "importante": false
 }
 ],
-"valor_xi": 70367489.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 23866754.0,
+"perdida": 0.20253277844150905,
+"perdida_duda": 0.2183644663199696
 },
 "visita": {
 "faltan": [
@@ -566,10 +512,19 @@
 },
 "401876912": {
 "fotmob": 1000014632,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Diego González",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 3824673.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Bruno Amione",
 "tipo": "Lesión",
@@ -587,14 +542,32 @@
 "valor": 1891056.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Efraín Orona",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 681591.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 18499140.0,
-"perdida": 0.21743254010726984,
+"perdida": 0.4241812322086324,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Javier Ruiz",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5595123.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Alexis Peña",
 "tipo": "Lesión",
@@ -607,12 +580,12 @@
 ],
 "valor_xi": 20076676.0,
 "perdida": 0.0,
-"perdida_duda": 0.09330279574168553
+"perdida_duda": 0.3719905127721342
 }
 },
 "401876911": {
 "fotmob": 1000014633,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

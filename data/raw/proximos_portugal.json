@@ -27,7 +27,7 @@
     ],
     [
      "-1.5",
-     -130
+     -135
     ]
    ]
   }
@@ -45,22 +45,22 @@
    "casa": "DraftKings",
    "ml": [
     190,
-    215,
+    220,
     140
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -130
+    -110,
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
@@ -77,19 +77,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -475,
+    -450,
     500,
-    950
+    1100
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    120,
-    -180
+    -140,
+    100
    ],
    "spread": [
     [
      "-1.5",
-     -160
+     -150
     ],
     [
      "+1.5",
@@ -111,12 +111,12 @@
    "casa": "DraftKings",
    "ml": [
     -130,
-    270,
+    265,
     310
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -130,
     -110
    ],
    "spread": [
@@ -126,7 +126,7 @@
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -182,8 +182,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    130,
-    -190
+    135,
+    -195
    ],
    "spread": [
     [
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    255,
-    370
+    -145,
+    265,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -145
+    -105,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -160
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
@@ -242,14 +242,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -650,
+    -600,
     600,
-    1200
+    1100
    ],
    "ou_linea": 3.5,
    "ou": [
     -110,
-    -130
+    -135
    ],
    "spread": [
     [
@@ -275,23 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    205,
-    155
+    180,
+    210,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -165
+    110,
+    -160
    ],
    "spread": [
     [
      "+0.5",
-     -220
+     -205
     ],
     [
      "-0.5",
-     140
+     130
     ]
    ]
   }
@@ -335,6 +335,61 @@
   "estadio": "Estádio José Alvalade",
   "local_espn": "Sporting CP",
   "visita_espn": "Moreirense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885400",
+  "utc": "2026-11-08T15:30Z",
+  "estadio": "Estádio António Coimbra da Mota",
+  "local_espn": "Estoril",
+  "visita_espn": "Maritimo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885396",
+  "utc": "2026-11-08T15:30Z",
+  "estadio": "Estádio de São Miguel",
+  "local_espn": "Santa Clara",
+  "visita_espn": "Gil Vicente",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885394",
+  "utc": "2026-11-08T18:00Z",
+  "estadio": "Estádio D. Afonso Henriques",
+  "local_espn": "Vitória de Guimaraes",
+  "visita_espn": "FC Porto",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885401",
+  "utc": "2026-11-08T20:30Z",
+  "estadio": "Estádio José Gomes",
+  "local_espn": "Estrela",
+  "visita_espn": "Benfica",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885397",
+  "utc": "2026-11-08T20:30Z",
+  "estadio": "Estádio do Rio Ave",
+  "local_espn": "Rio Ave",
+  "visita_espn": "Braga",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,

@@ -1,7 +1,7 @@
 {
 "401883145": {
 "fotmob": 5868522,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -37,7 +37,7 @@
 },
 "401883148": {
 "fotmob": 5868518,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -128,7 +128,7 @@
 },
 "401883307": {
 "fotmob": 5868516,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -228,7 +228,7 @@
 },
 "401883126": {
 "fotmob": 5868514,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -328,7 +328,7 @@
 },
 "401883124": {
 "fotmob": 5868519,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -410,7 +410,7 @@
 },
 "401883125": {
 "fotmob": 5868517,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -474,7 +474,7 @@
 },
 "401883149": {
 "fotmob": 5868515,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -556,7 +556,7 @@
 },
 "401883144": {
 "fotmob": 5868523,
-"visto": "2026-10-28T11:41+00:00",
+"visto": "2026-10-29T07:30+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -619,8 +619,8 @@
 },
 "401883146": {
 "fotmob": 5868521,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "unavailable",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -630,7 +630,7 @@
 "duda": false,
 "valor": 1733394.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Carlos Fernández",
@@ -639,7 +639,7 @@
 "duda": false,
 "valor": 1040169.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ilyas Chaira",
@@ -648,7 +648,7 @@
 "duda": true,
 "valor": 2850518.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Juan Cruz",
@@ -657,12 +657,12 @@
 "duda": true,
 "valor": 906953.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 9292192.0,
+"perdida": 0.2984831781349331,
+"perdida_duda": 0.4043686355167866
 },
 "visita": {
 "faltan": [
@@ -673,7 +673,7 @@
 "duda": false,
 "valor": 1244449.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jeremía Recoba",
@@ -682,7 +682,7 @@
 "duda": false,
 "valor": 1101095.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Viti",
@@ -691,7 +691,7 @@
 "duda": false,
 "valor": 856280.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sergio Ruiz",
@@ -700,16 +700,7 @@
 "duda": false,
 "valor": 648656.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Sandro Ramírez",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 242435.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Giovanni Bonfanti",
@@ -717,8 +708,8 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 3669641.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Ale García",
@@ -726,8 +717,8 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 1519103.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Marvin Park",
@@ -735,6 +726,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 1036968.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Sandro Ramírez",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 242435.0,
 "titular": false,
 "importante": false
 },
@@ -748,15 +748,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 8988459.0,
+"perdida": 0.4283804376256264,
+"perdida_duda": 0.6926339653994082
 }
 },
 "401883123": {
 "fotmob": 5868524,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "unavailable",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -765,8 +765,8 @@
 "regreso": "hasta el 2 de noviembre",
 "duda": false,
 "valor": 1990009.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Juanmi Latasa",
@@ -775,7 +775,7 @@
 "duda": false,
 "valor": 1485897.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Guille Bueno",
@@ -784,7 +784,7 @@
 "duda": false,
 "valor": 1259656.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Miguel Rubio",
@@ -793,7 +793,7 @@
 "duda": true,
 "valor": 1136825.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Luis Chacón",
@@ -802,7 +802,7 @@
 "duda": true,
 "valor": 1111920.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Dani Pérez",
@@ -814,9 +814,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 8941401.0,
+"perdida": 0.529621923902082,
+"perdida_duda": 0.25149805942044207
 },
 "visita": {
 "faltan": [
@@ -827,7 +827,7 @@
 "duda": false,
 "valor": 498186.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Miguel Atienza",
@@ -836,18 +836,18 @@
 "duda": true,
 "valor": 1127828.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 10808039.0,
+"perdida": 0.046094023161833524,
+"perdida_duda": 0.1043508447739687
 }
 },
 "401883147": {
 "fotmob": 5868520,
-"visto": "2026-10-28T11:41+00:00",
-"xi": "unavailable",
+"visto": "2026-10-29T07:30+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -857,7 +857,7 @@
 "duda": false,
 "valor": 1898793.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jan Salas",
@@ -878,8 +878,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 24725213.0,
+"perdida": 0.07679581971649749,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -891,16 +891,7 @@
 "duda": false,
 "valor": 6896459.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Iuri Tabatadze",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 963778.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Giorgi Gocholeishvili",
@@ -908,6 +899,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 1665474.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Iuri Tabatadze",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 963778.0,
 "titular": false,
 "importante": false
 },
@@ -921,9 +921,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 11284427.0,
+"perdida": 0.6111483551623844,
+"perdida_duda": 0.1475904802255356
 }
 }
 }
