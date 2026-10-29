@@ -138,9 +138,10 @@ def preparar(df, solo_cierre):
     return df
 
 
-def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX):
+def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, ev_max=None):
     """reglas: las de la página en las 8 ligas de Europa (picks.py): sin "Gana" con momio de GANA_MAX o más ni "Menos de"
-    en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias')."""
+    en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias'). ev_max: sin PICK con EV de ev_max o más (las ligas
+    con 'ev_max' en config.py)."""
     out = []
     sel = []
     if '1x2' in mercados:
@@ -151,6 +152,8 @@ def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX):
         p, odds = df[pm], df[oc]
         ev = p * odds - 1
         m = (ev >= thr) & odds.notna() & p.notna() & (p >= PICK_P_MIN)     # con menos de 30% no es PICK (config.py)
+        if ev_max is not None:
+            m &= ev < ev_max
         if reglas and outcome in 'HA':
             m &= odds < gana_max
         if reglas and outcome == 'U':
@@ -204,6 +207,9 @@ def evaluar(liga, df):
         mtxt = '1X2 y más/menos 2.5 goles'
     df['dias'] = (df.Date - df.groupby('Season').Date.transform('min')).dt.days
     reglas = not solo_cierre
+    ev_max = LIGAS[liga].get('ev_max')
+    if ev_max:
+        ref += f'; sin PICK con EV de +{ev_max:.0%} o más (regla de esta liga)'
     r = df.res.map({'H': 0, 'D': 1, 'A': 2}).values
     i = np.arange(len(df))
     ll = {'1x2': {'modelo': float(-np.mean(np.log(np.c_[df.pH, df.pD, df.pA][i, r]))),
@@ -212,8 +218,8 @@ def evaluar(liga, df):
     out = {'partidos': int(len(df)), 'desde': str(df.Date.min().date()), 'hasta': str(df.Date.max().date()), 'logloss': ll,
            'estrategias': {}, 'principal': principal, 'referencia': ref, 'mercados': mtxt}
     for thr in (0.0, 0.03, 0.05, 0.10):
-        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas))
-    b = apuestas(df, book, 0.05, mercados, con_clv, reglas)
+        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas, ev_max=ev_max))
+    b = apuestas(df, book, 0.05, mercados, con_clv, reglas, ev_max=ev_max)
     b['mes'] = b.Date.dt.to_period('M').astype(str)
     mensual = b.groupby('mes').agg(n=('profit', 'size'), ganancia=('profit', 'sum')).reset_index()
     out['mensual'] = mensual.to_dict('records')

@@ -125,7 +125,17 @@ LIGAS = {
                  'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
     # Allsvenskan (Suecia, 16 equipos, abril-noviembre). oculta: se bajan sus datos pero no sale en la página ni en el registro
     'suecia': {'nombre': 'Allsvenskan', 'fotmob': 67, 'pais': 'Suecia', 'espn': 'swe.1', 'fd_extra': 'SWE', 'calendario': 'anual',
-               'api_football': 113, 'copas': dict(COPAS_UEFA), 'zonas': 'suecia16', 'nuevo': 'subió esta temporada', 'oculta': True},
+               'api_football': 113, 'copas': dict(COPAS_UEFA), 'zonas': 'suecia16', 'nuevo': 'subió esta temporada',
+               # ev_max: sin PICK con EV de +20% o más. Prueba 2021-26 contra el cierre (solo 1X2): 454 PICK −5.7% sin la regla; con
+               # ella 307 PICK +1.7% (2021-23 +1.9%, 2024-26 +1.4%), y los quitados perdían en los dos periodos (−14% y −25%). Se
+               # probó también sin la ventaja de local propia (−9.8%) y con la corrección de Europa (−12.4%): peor (29 oct 2026)
+               'ev_max': 0.20,
+               'aviso': 'Liga nueva en la página (29 oct 2026). En la prueba 2021-2026 contra el momio de cierre (solo resultado 1X2: '
+                        'para Suecia no hay momios históricos de goles), con la regla de esta liga (sin PICK con EV de +20% o más) los '
+                        'PICK quedaron parejos: 307 apuestas, ROI +1.7% (rango probable −13% a +16%); sin la regla perdían −5.7%. '
+                        'Ojo con el final de temporada: de septiembre a noviembre los PICK perdieron en la prueba (−10% en 2021-23 y '
+                        '−30% en 2024-26), mientras que de junio a agosto ganaron. Esta temporada ya está en esa parte: tómalo con '
+                        'mucho cuidado hasta que vuelva la liga en abril.'},
     # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
     'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',

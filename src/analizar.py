@@ -717,6 +717,12 @@ def analizar_liga(liga):
             dias = int((fecha - inicio_copa_uefa(fecha)).days)
             reglas_europa(p['con_momio'], dias, GANA_MAX_COPAS)
             p['reglas'] = {'gana_max': GANA_MAX_COPAS, 'sin_menos': dias < SIN_MENOS_DIAS}
+    if L.get('ev_max'):     # ligas donde los PICK "lejos del mercado" perdían en la prueba (ver config.py): sin PICK
+        for p in partidos:
+            for r in p['con_momio']:
+                if r['veredicto'] == 'PICK' and r['ev'] >= L['ev_max']:
+                    r['veredicto'], r['regla'] = 'MAYBE', 'lejos'
+            p['reglas'] = {**(p.get('reglas') or {}), 'ev_max': L['ev_max']}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'
