@@ -5,7 +5,7 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Fluminense",
   "visita_espn": "Internacional",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Chapecoense",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Estádio Vila Belmiro (Urbano Caldeira)",
   "local_espn": "Santos",
   "visita_espn": "Palmeiras",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -477,6 +477,122 @@
      -115
     ]
    ]
+  },
+  "alineaciones": {
+   "Bahia": [
+    [
+     "224106",
+     "Ronaldo",
+     "G"
+    ],
+    [
+     "219090",
+     "David Duarte",
+     "D"
+    ],
+    [
+     "124439",
+     "Cristian Olivera",
+     "D"
+    ],
+    [
+     "304757",
+     "Luciano Juba",
+     "D"
+    ],
+    [
+     "294932",
+     "Marco Moreno",
+     "D"
+    ],
+    [
+     "334243",
+     "Marcos Victor",
+     "D"
+    ],
+    [
+     "266664",
+     "Rodrigo Nestor",
+     "M"
+    ],
+    [
+     "269910",
+     "Jean Lucas",
+     "M"
+    ],
+    [
+     "285757",
+     "Nicolás Acevedo",
+     "M"
+    ],
+    [
+     "333907",
+     "Erick Pulga",
+     "F"
+    ],
+    [
+     "318291",
+     "Alejo Veliz",
+     "F"
+    ]
+   ],
+   "São Paulo": [
+    [
+     "199013",
+     "Rafael",
+     "SUB"
+    ],
+    [
+     "319168",
+     "Pablo Maia",
+     "SUB"
+    ],
+    [
+     "199065",
+     "Wendell",
+     "SUB"
+    ],
+    [
+     "190483",
+     "Luciano",
+     "SUB"
+    ],
+    [
+     "162558",
+     "Jonathan Calleri",
+     "SUB"
+    ],
+    [
+     "130711",
+     "Lucas Moura",
+     "SUB"
+    ],
+    [
+     "285010",
+     "Sabino",
+     "SUB"
+    ],
+    [
+     "301516",
+     "Damián Bobadilla",
+     "SUB"
+    ],
+    [
+     "376489",
+     "Pedro Lima",
+     "SUB"
+    ],
+    [
+     "201531",
+     "Robert Arboleda",
+     "SUB"
+    ],
+    [
+     "357362",
+     "Newton",
+     "SUB"
+    ]
+   ]
   }
  },
  {
@@ -491,23 +607,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    255,
-    155
+    150,
+    250,
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     110
    ],
    "spread": [
     [
-     "+0.5",
-     -200
+     "-0.5",
+     135
     ],
     [
-     "-0.5",
-     140
+     "+0.5",
+     -190
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Remo": [
+    [
+     "206952",
+     "Marcelo Rangel",
+     "G"
+    ],
+    [
+     "304826",
+     "Marcelinho",
+     "D"
+    ],
+    [
+     "215815",
+     "Marlon Lopes",
+     "D"
+    ],
+    [
+     "157743",
+     "Marllon",
+     "D"
+    ],
+    [
+     "254447",
+     "Duplexe Tchamba",
+     "D"
+    ],
+    [
+     "201793",
+     "José Welison",
+     "M"
+    ],
+    [
+     "198362",
+     "Patrick",
+     "M"
+    ],
+    [
+     "359364",
+     "David Francisco",
+     "M"
+    ],
+    [
+     "301185",
+     "Jajá",
+     "M"
+    ],
+    [
+     "286532",
+     "Leonel Picco",
+     "M"
+    ],
+    [
+     "235385",
+     "Gabriel Taliari",
+     "F"
+    ]
+   ],
+   "Botafogo": [
+    [
+     "228401",
+     "Gabriel Batista",
+     "G"
+    ],
+    [
+     "199734",
+     "Alex Telles",
+     "D"
+    ],
+    [
+     "268700",
+     "Vitinho",
+     "D"
+    ],
+    [
+     "170362",
+     "Fernando Marçal",
+     "D"
+    ],
+    [
+     "245291",
+     "Nahuel Ferraresi",
+     "D"
+    ],
+    [
+     "314841",
+     "Matheus Martins",
+     "M"
+    ],
+    [
+     "297039",
+     "Domingos",
+     "M"
+    ],
+    [
+     "398719",
+     "Victor Hugo",
+     "M"
+    ],
+    [
+     "297056",
+     "Cristian Medina",
+     "M"
+    ],
+    [
+     "176733",
+     "Hakim Ziyech",
+     "M"
+    ],
+    [
+     "224103",
+     "Arthur Cabral",
+     "F"
     ]
    ]
   }
