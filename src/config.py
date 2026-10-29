@@ -123,6 +123,9 @@ LIGAS = {
     'colombia': {'nombre': 'Liga Colombiana', 'fotmob': 274, 'pais': 'Colombia', 'espn': 'col.1', 'solo_espn': True, 'por_fecha': True,
                  'calendario': 'anual', 'torneos': {1: 'Apertura', 7: 'Finalización'}, 'api_football': 239,
                  'zonas': 'colombia', 'copas': dict(COPAS_CONMEBOL)},
+    # Allsvenskan (Suecia, 16 equipos, abril-noviembre). oculta: se bajan sus datos pero no sale en la página ni en el registro
+    'suecia': {'nombre': 'Allsvenskan', 'fotmob': 67, 'pais': 'Suecia', 'espn': 'swe.1', 'fd_extra': 'SWE', 'calendario': 'anual',
+               'api_football': 113, 'copas': dict(COPAS_UEFA), 'zonas': 'suecia16', 'nuevo': 'subió esta temporada', 'oculta': True},
     # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
     'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
@@ -144,7 +147,7 @@ LIGAS = {
                               'no sigas los PICK a ciegas. No hay córners ni remates a puerta.'},
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
-SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items()}, 'nfl': 'NFL', 'nba': 'NBA'}
+SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items() if not v.get('oculta')}, 'nfl': 'NFL', 'nba': 'NBA'}
 
 # Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
 # Son aproximadas: los cupos exactos cambian según copas y coeficientes.
@@ -161,6 +164,7 @@ ZONAS = {
     'brasil2': [[1, 4, 'cl', 'Ascenso'], [-4, -1, 'des', 'Descenso']],
     'argentina': [[1, 8, 'cl', 'Playoffs']],
     'colombia': [[1, 8, 'cl', 'Cuadrangulares']],
+    'suecia16': [[1, 1, 'cl', 'Champions (previa)'], [2, 3, 'eu', 'Conference (previa)'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
     # por grupo (de 4)
     'libertadores': [[1, 2, 'cl', 'Octavos'], [3, 3, 'eu', 'Pasa a la Sudamericana'], [4, 4, 'des', 'Eliminado']],
     'sudamericana': [[1, 1, 'cl', 'Octavos'], [2, 2, 'eu', 'Playoff de octavos'], [3, 4, 'des', 'Eliminado']],
