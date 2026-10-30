@@ -1,8 +1,8 @@
 {
 "401882817": {
 "fotmob": 5868120,
-"visto": "2026-10-30T18:39+00:00",
-"xi": "predicted",
+"visto": "2026-10-30T19:41+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -30,11 +30,11 @@
 "duda": false,
 "valor": 8882446.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 150702117.0,
-"perdida": 0.3838394386987941,
+"valor_xi": 186834217.0,
+"perdida": 0.26206639654234215,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -58,6 +58,33 @@
 "importante": true
 },
 {
+"nombre": "Álex Calatrava",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3777234.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jofre Carreras",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3544832.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Andoni Gorosabel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2387400.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Kike García",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -74,38 +101,11 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Álex Calatrava",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 3777234.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Jofre Carreras",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 3544832.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Andoni Gorosabel",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2387400.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 76361082.0,
-"perdida": 0.17715318648837375,
-"perdida_duda": 0.06914774989699596
+"valor_xi": 47989403.0,
+"perdida": 0.2818874200206241,
+"perdida_duda": 0.31235360439887117
 }
 },
 "401882820": {

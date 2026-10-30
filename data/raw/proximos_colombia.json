@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    175,
-    245,
-    130
+    125,
+    250,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -135,
+    100
    ],
    "spread": [
     [
-     "+0.5",
-     -175
-    ],
-    [
      "-0.5",
      120
+    ],
+    [
+     "+0.5",
+     -165
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    255,
-    380
+    -175,
+    265,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -135
+    115,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -180
     ],
     [
      "+0.5",
-     110
+     130
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    205,
-    175
+    150,
+    200,
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -135
+    105,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -205
+     -215
     ]
    ]
   }
@@ -110,14 +110,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -300,
-    340,
+    -290,
+    330,
     700
    ],
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -130
+    -125
    ],
    "spread": [
     [
@@ -167,7 +167,7 @@
  {
   "id": "401877772",
   "utc": "2026-11-02T21:05Z",
-  "estadio": "Estadio Cincuentenario",
+  "estadio": "Atanasio Girardot",
   "local_espn": "Águilas Doradas",
   "visita_espn": "Fortaleza CEIF",
   "estado": "STATUS_SCHEDULED",
@@ -221,7 +221,7 @@
  },
  {
   "id": "401877896",
-  "utc": "2026-11-04T01:00Z",
+  "utc": "2026-11-03T23:20Z",
   "estadio": "Departamental Libertad",
   "local_espn": "Deportivo Pasto",
   "visita_espn": "Jaguares de Córdoba",
@@ -239,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    185,
+    220,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401877910",
@@ -250,7 +272,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    230,
+    310
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
+  }
  },
  {
   "id": "401877916",

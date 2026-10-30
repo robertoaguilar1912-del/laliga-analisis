@@ -5,7 +5,7 @@
   "estadio": "Stade Océane",
   "local_espn": "Le Havre AC",
   "visita_espn": "Paris Saint-Germain",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-ligue-1",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Allianz Riviera",
   "local_espn": "Nice",
   "visita_espn": "Stade Rennais",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-ligue-1",
   "neutral": false,
   "momios": {
@@ -309,9 +309,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
+    170,
     225,
-    175
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -321,11 +321,127 @@
    "spread": [
     [
      "-0.5",
-     145
+     150
     ],
     [
      "+0.5",
-     -205
+     -215
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Lille": [
+    [
+     "340900",
+     "Alexsandro",
+     "SUB"
+    ],
+    [
+     "257267",
+     "Berke Özer",
+     "SUB"
+    ],
+    [
+     "179187",
+     "Nabil Bentaleb",
+     "SUB"
+    ],
+    [
+     "123683",
+     "Benjamin André",
+     "SUB"
+    ],
+    [
+     "345988",
+     "Ngal'ayel Mukau",
+     "SUB"
+    ],
+    [
+     "408359",
+     "Maxima Goffi",
+     "SUB"
+    ],
+    [
+     "400352",
+     "Soriba Diaoune",
+     "SUB"
+    ],
+    [
+     "250853",
+     "Romain Perraud",
+     "SUB"
+    ],
+    [
+     "355971",
+     "Ethan Mbappé",
+     "SUB"
+    ],
+    [
+     "318779",
+     "Hákon Haraldsson",
+     "SUB"
+    ],
+    [
+     "318577",
+     "Nathan Ngoy",
+     "SUB"
+    ]
+   ],
+   "Lens": [
+    [
+     "344517",
+     "Robin Risser",
+     "G"
+    ],
+    [
+     "329484",
+     "Samson Baidoo",
+     "D"
+    ],
+    [
+     "277327",
+     "Jean-Clair Todibo",
+     "D"
+    ],
+    [
+     "181946",
+     "Ruben Aguilar",
+     "D"
+    ],
+    [
+     "258871",
+     "Michaël Cuisance",
+     "M"
+    ],
+    [
+     "286011",
+     "Saud Abdulhamid",
+     "M"
+    ],
+    [
+     "156898",
+     "Florian Thauvin",
+     "M"
+    ],
+    [
+     "233199",
+     "Matthieu Udol",
+     "M"
+    ],
+    [
+     "215687",
+     "Florian Sotoca",
+     "M"
+    ],
+    [
+     "228557",
+     "Amadou Haidara",
+     "M"
+    ],
+    [
+     "158066",
+     "Thorgan Hazard",
+     "F"
     ]
    ]
   }
@@ -672,9 +788,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    250,
-    110
+    240,
+    255,
+    100
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -684,11 +800,11 @@
    "spread": [
     [
      "+0.5",
-     -150
+     -140
     ],
     [
      "-0.5",
-     100
+     -110
     ]
    ]
   }
