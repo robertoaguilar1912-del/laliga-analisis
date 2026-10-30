@@ -1,7 +1,7 @@
 {
 "401841655": {
 "fotmob": 1000019614,
-"visto": "2026-10-30T22:33+00:00",
+"visto": "2026-10-30T23:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -110,7 +110,7 @@
 },
 "401841653": {
 "fotmob": 1000019616,
-"visto": "2026-10-30T22:33+00:00",
+"visto": "2026-10-30T23:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -183,7 +183,7 @@
 },
 "401841648": {
 "fotmob": 1000019612,
-"visto": "2026-10-30T22:33+00:00",
+"visto": "2026-10-30T23:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -231,6 +231,15 @@
 "visita": {
 "faltan": [
 {
+"nombre": "Nicolás Cordero",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 580928.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Nicolás Linares",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -250,14 +259,14 @@
 }
 ],
 "valor_xi": 6478870.0,
-"perdida": 0.0,
+"perdida": 0.08966501874555285,
 "perdida_duda": 0.0
 }
 },
 "401841647": {
 "fotmob": 1000019615,
-"visto": "2026-10-30T22:33+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-30T23:29+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -266,7 +275,7 @@
 "regreso": "hasta el 31 de octubre",
 "duda": false,
 "valor": 979477.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -288,8 +297,8 @@
 "importante": false
 }
 ],
-"valor_xi": 7112584.0,
-"perdida": 0.24769942963063776,
+"valor_xi": 7473177.0,
+"perdida": 0.23574752745719793,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -300,7 +309,7 @@
 "regreso": "hasta el 31 de octubre",
 "duda": false,
 "valor": 6290093.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -327,15 +336,6 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1022714.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Axel Werner",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 456259.0,
 "titular": false,
 "importante": false
 },
@@ -367,8 +367,8 @@
 "importante": false
 }
 ],
-"valor_xi": 36104038.0,
-"perdida": 0.17422131563234008,
+"valor_xi": 30265230.0,
+"perdida": 0.20783232111568292,
 "perdida_duda": 0.0
 }
 },

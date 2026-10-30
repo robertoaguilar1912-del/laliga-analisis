@@ -5,7 +5,7 @@
   "estadio": "Ciudad de Río Cuarto Antonio Candini",
   "local_espn": "Estudiantes de Río Cuarto",
   "visita_espn": "Gimnasia La Plata",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Tomás Adolfo Ducó",
   "local_espn": "Huracán",
   "visita_espn": "Tigre",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -193,9 +193,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    280,
-    425
+    -140,
+    265,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +205,11 @@
    "spread": [
     [
      "-0.5",
-     -165
+     -150
     ],
     [
      "+0.5",
-     120
+     110
     ]
    ]
   }
