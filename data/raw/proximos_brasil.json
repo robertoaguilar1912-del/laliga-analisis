@@ -18,16 +18,16 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -125
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -130
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   }
@@ -44,13 +44,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    230,
+    135,
+    235,
     200
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -105,
     -125
    ],
    "spread": [
@@ -60,7 +60,7 @@
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -138,8 +138,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    -105
+    -145,
+    100
    ],
    "spread": [
     [
@@ -165,23 +165,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -525,
-    550,
-    1000
+    -600,
+    600,
+    1100
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -150
+    -110,
+    -135
    ],
    "spread": [
     [
-     "-1.5",
-     -180
+     "-2.5",
+     120
     ],
     [
-     "+1.5",
-     115
+     "+2.5",
+     -180
     ]
    ]
   }
@@ -195,7 +195,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -105,
+    260,
+    240
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
  },
  {
   "id": "401841298",
@@ -217,7 +239,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -450,
+    500,
+    900
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -160
+    ],
+    [
+     "+1.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401841303",
@@ -228,7 +272,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    310,
+    320
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401841302",
