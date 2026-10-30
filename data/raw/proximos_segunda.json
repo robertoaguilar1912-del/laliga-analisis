@@ -12,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     220,
-    275,
+    265,
     105
    ],
    "ou_linea": 2.5,
    "ou": [
     -150,
-    110
+    105
    ],
    "spread": [
     [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
+    160,
     245,
-    170
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -105
+    -140,
+    100
    ],
    "spread": [
     [
-     "-0.5",
-     130
+     "+0.5",
+     -200
     ],
     [
-     "+0.5",
-     -195
+     "-0.5",
+     135
     ]
    ]
   }
@@ -88,23 +88,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    210,
-    175
+    155,
+    200,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -170
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     145
+     140
     ],
     [
      "+0.5",
-     -215
+     -210
     ]
    ]
   }
@@ -122,18 +122,18 @@
    "casa": "DraftKings",
    "ml": [
     125,
-    225,
-    200
+    230,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -120
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
@@ -154,23 +154,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    250,
+    150,
+    255,
     160
    ],
    "ou_linea": 2.5,
    "ou": [
     -125,
-    -115
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -210
+     -205
     ]
    ]
   }
@@ -187,19 +187,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    250,
+    255,
     230,
     105
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -125,
     -110
    ],
    "spread": [
     [
      "+0.5",
-     -145
+     -140
     ],
     [
      "-0.5",
@@ -221,13 +221,13 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    225,
+    230,
     230
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -145
+    -140
    ],
    "spread": [
     [
@@ -236,7 +236,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -260,7 +260,7 @@
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -125
+    -130
    ],
    "spread": [
     [
@@ -293,16 +293,16 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -130
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -140
     ],
     [
      "+0.5",
-     -105
+     -110
     ]
    ]
   }
@@ -319,7 +319,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
+    -215,
     310,
     550
    ],
@@ -331,11 +331,11 @@
    "spread": [
     [
      "-1.5",
-     125
+     130
     ],
     [
      "+1.5",
-     -195
+     -205
     ]
    ]
   }
@@ -445,6 +445,17 @@
   "estadio": "Estadio El Molinón-Enrique Castro \"Quini\"",
   "local_espn": "Sporting Gijón",
   "visita_espn": "Real Valladolid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883139",
+  "utc": "2026-11-09T19:30Z",
+  "estadio": "Estadi Municipal de la Nova Creu Alta",
+  "local_espn": "CD Sabadell",
+  "visita_espn": "Real Sociedad II",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
