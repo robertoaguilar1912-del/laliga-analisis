@@ -5,10 +5,32 @@
   "estadio": "Pascual Guerrero",
   "local_espn": "América de Cali",
   "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -190,
+    275,
+    500
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -200
+    ],
+    [
+     "+0.5",
+     140
+    ]
+   ]
+  },
   "alineaciones": {
    "América de Cali": [
     [
@@ -594,6 +616,17 @@
   "estadio": "Armando Maestre Pavajeau",
   "local_espn": "Alianza FC",
   "visita_espn": "Llaneros FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877958",
+  "utc": "2026-11-10T00:30Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
+  "local_espn": "Independiente Santa Fe",
+  "visita_espn": "Deportivo Pasto",
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,

@@ -5,7 +5,7 @@
   "estadio": "Arena MRV",
   "local_espn": "Atlético-MG",
   "visita_espn": "Cruzeiro",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Joao Havelange Stadium",
   "local_espn": "Vasco da Gama",
   "visita_espn": "Flamengo",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -309,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    235,
-    210
+    125,
+    240,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
      -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Grêmio": [
+    [
+     "198983",
+     "Weverton",
+     "G"
+    ],
+    [
+     "199101",
+     "Fabián Balbuena",
+     "CD"
+    ],
+    [
+     "383983",
+     "Wallace",
+     "CD-L"
+    ],
+    [
+     "314603",
+     "Gustavo Martins",
+     "CD-R"
+    ],
+    [
+     "238449",
+     "Mathías Villasanti",
+     "CM-L"
+    ],
+    [
+     "303030",
+     "Erick Noriega",
+     "CM-R"
+    ],
+    [
+     "229121",
+     "Marlon",
+     "LM"
+    ],
+    [
+     "213260",
+     "João Pedro",
+     "RM"
+    ],
+    [
+     "252576",
+     "Carlos Vinícius",
+     "F"
+    ],
+    [
+     "269079",
+     "Francis Amuzu",
+     "CF-L"
+    ],
+    [
+     "286714",
+     "José Enamorado",
+     "CF-R"
+    ]
+   ],
+   "Athletico Paranaense": [
+    [
+     "322655",
+     "Mycael",
+     "G"
+    ],
+    [
+     "309499",
+     "Lucas Esquivel",
+     "D"
+    ],
+    [
+     "270242",
+     "Juan Felipe Aguirre",
+     "D"
+    ],
+    [
+     "381170",
+     "Arthur Dias",
+     "D"
+    ],
+    [
+     "197049",
+     "Stiven Mendoza",
+     "M"
+    ],
+    [
+     "380327",
+     "Leozinho",
+     "M"
+    ],
+    [
+     "113352",
+     "Luiz Gustavo",
+     "M"
+    ],
+    [
+     "361359",
+     "João Cruz",
+     "M"
+    ],
+    [
+     "94976",
+     "Juan Portilla",
+     "M"
+    ],
+    [
+     "338881",
+     "Leonardo Derik",
+     "M"
+    ],
+    [
+     "268476",
+     "Kevin Viveros",
+     "F"
     ]
    ]
   }

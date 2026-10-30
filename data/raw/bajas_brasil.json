@@ -1,7 +1,7 @@
 {
 "401841288": {
 "fotmob": 5103689,
-"visto": "2026-10-29T23:30+00:00",
+"visto": "2026-10-30T00:07+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -110,7 +110,7 @@
 },
 "401841292": {
 "fotmob": 5103685,
-"visto": "2026-10-29T23:30+00:00",
+"visto": "2026-10-30T00:07+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -192,8 +192,8 @@
 },
 "401841290": {
 "fotmob": 5103690,
-"visto": "2026-10-29T23:30+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-30T00:07+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -206,29 +206,20 @@
 "importante": true
 },
 {
-"nombre": "Cristian Pavón",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1053666.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Diego Caito",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Danilo",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 1472215.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Cristian Pavón",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1053666.0,
 "titular": false,
 "importante": false
 },
@@ -240,10 +231,19 @@
 "valor": 1004436.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Diego Caito",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 28383739.0,
-"perdida": 0.4472407951609194,
+"valor_xi": 31649254.0,
+"perdida": 0.36780329798610734,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -254,8 +254,8 @@
 "regreso": "hasta el 30 de octubre",
 "duda": false,
 "valor": 1547194.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Jádson",
@@ -263,8 +263,8 @@
 "regreso": "hasta el 30 de octubre",
 "duda": false,
 "valor": 746175.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Claudinho",
@@ -276,8 +276,8 @@
 "importante": false
 }
 ],
-"valor_xi": 25935117.0,
-"perdida": 0.08842717000274185,
+"valor_xi": 36749595.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
