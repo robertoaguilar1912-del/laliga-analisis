@@ -1,168 +1,19 @@
 [
  {
-  "id": "401878035",
-  "utc": "2026-10-29T23:30Z",
-  "estadio": "Pascual Guerrero",
-  "local_espn": "América de Cali",
-  "visita_espn": "Fortaleza CEIF",
+  "id": "401877845",
+  "utc": "2026-10-30T01:30Z",
+  "estadio": "Atanasio Girardot",
+  "local_espn": "Atlético Nacional",
+  "visita_espn": "Independiente Santa Fe",
   "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -190,
-    275,
+    -240,
+    370,
     500
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -125
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -200
-    ],
-    [
-     "+0.5",
-     140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "América de Cali": [
-    [
-     "278481",
-     "Juan Pablo Montoya",
-     "G"
-    ],
-    [
-     "253561",
-     "Cristian Tovar",
-     "CD-L"
-    ],
-    [
-     "252018",
-     "Marlon Torres",
-     "CD-R"
-    ],
-    [
-     "254278",
-     "Omar Bertel",
-     "LB"
-    ],
-    [
-     "322985",
-     "Yani Quintero",
-     "RB"
-    ],
-    [
-     "252584",
-     "Yeison Guzmán",
-     "AM"
-    ],
-    [
-     "399221",
-     "José Cavadía",
-     "LM"
-    ],
-    [
-     "171514",
-     "Rafael Carrascal",
-     "RM"
-    ],
-    [
-     "312610",
-     "Tomás Ángel",
-     "F"
-    ],
-    [
-     "301499",
-     "Edson Tortolero",
-     "AM-L"
-    ],
-    [
-     "197445",
-     "Jhon Palacios",
-     "AM-R"
-    ]
-   ],
-   "Fortaleza CEIF": [
-    [
-     "285031",
-     "Williams Barlasina",
-     "G"
-    ],
-    [
-     "408101",
-     "Jeferson Medina",
-     "CD-L"
-    ],
-    [
-     "285359",
-     "Yesid Díaz",
-     "CD-R"
-    ],
-    [
-     "378918",
-     "Santiago Cuero",
-     "LB"
-    ],
-    [
-     "417801",
-     "Joan Cajares",
-     "RB"
-    ],
-    [
-     "378912",
-     "Jordan Garcia",
-     "AM"
-    ],
-    [
-     "413584",
-     "Santiago Vivas",
-     "LM"
-    ],
-    [
-     "170515",
-     "Leonardo Pico",
-     "RM"
-    ],
-    [
-     "292931",
-     "Franco Pulicastro",
-     "F"
-    ],
-    [
-     "378911",
-     "Jhonier Salas",
-     "AM-L"
-    ],
-    [
-     "233181",
-     "Mariano Vazquez",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
-  "id": "401877845",
-  "utc": "2026-10-30T01:30Z",
-  "estadio": "Atanasio Girardot",
-  "local_espn": "Atlético Nacional",
-  "visita_espn": "Independiente Santa Fe",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -210,
-    350,
-    450
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +23,127 @@
    "spread": [
     [
      "-1.5",
-     125
+     115
     ],
     [
      "+1.5",
-     -175
+     -160
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Nacional": [
+    [
+     "118577",
+     "Franco Armani",
+     "G"
+    ],
+    [
+     "133628",
+     "William Tesillo",
+     "CD-L"
+    ],
+    [
+     "182014",
+     "Andrés Reyes",
+     "CD-R"
+    ],
+    [
+     "336455",
+     "Samuel Velásquez",
+     "LB"
+    ],
+    [
+     "252488",
+     "Andres Román",
+     "RB"
+    ],
+    [
+     "339197",
+     "Elías Cabrera",
+     "CM-L"
+    ],
+    [
+     "270221",
+     "Jorman Campuzano",
+     "CM-R"
+    ],
+    [
+     "70721",
+     "Andrés Sarmiento",
+     "LM"
+    ],
+    [
+     "407306",
+     "Andrés Marín",
+     "RM"
+    ],
+    [
+     "82816",
+     "James Rodríguez",
+     "CF-L"
+    ],
+    [
+     "345363",
+     "Juan Manuel Rengifo",
+     "CF-R"
+    ]
+   ],
+   "Independiente Santa Fe": [
+    [
+     "286112",
+     "Weibmar Asprilla",
+     "G"
+    ],
+    [
+     "195785",
+     "Víctor Moreno",
+     "CD-L"
+    ],
+    [
+     "138391",
+     "Emanuel Olivera",
+     "CD-R"
+    ],
+    [
+     "236480",
+     "Mateo Puerta",
+     "LB"
+    ],
+    [
+     "197051",
+     "Helibelton Palacios",
+     "RB"
+    ],
+    [
+     "171395",
+     "Johan Torres",
+     "CM-L"
+    ],
+    [
+     "336454",
+     "Kilian Toscano",
+     "CM-R"
+    ],
+    [
+     "186383",
+     "Alexis Zapata",
+     "LM"
+    ],
+    [
+     "323262",
+     "Luis Palacios",
+     "RM"
+    ],
+    [
+     "236061",
+     "Maximiliano Lovera",
+     "CF-L"
+    ],
+    [
+     "131212",
+     "Hugo Rodallega",
+     "CF-R"
     ]
    ]
   }
