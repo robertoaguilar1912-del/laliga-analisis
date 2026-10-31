@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
+    225,
     240,
-    130
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    350,
-    450
+    -175,
+    340,
+    425
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -175
+    -180,
+    140
    ],
    "spread": [
     [
-     "-1.5",
-     135
+     "-0.5",
+     -190
     ],
     [
-     "+1.5",
-     -190
+     "+0.5",
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Norwich City": [
+    [
+     "259837",
+     "Daniel Grimshaw",
+     "G"
+    ],
+    [
+     "286667",
+     "José Córdoba",
+     "CD-L"
+    ],
+    [
+     "328008",
+     "Ruairi McConville",
+     "CD-R"
+    ],
+    [
+     "292004",
+     "Benjamin Chrisene",
+     "LB"
+    ],
+    [
+     "206219",
+     "Jack Stacey",
+     "RB"
+    ],
+    [
+     "267458",
+     "Paris Maghoma",
+     "AM"
+    ],
+    [
+     "236119",
+     "Sam Field",
+     "LM"
+    ],
+    [
+     "365340",
+     "Jacob Wright",
+     "RM"
+    ],
+    [
+     "304073",
+     "Mathias Kvistgaarden",
+     "F"
+    ],
+    [
+     "286947",
+     "Anthony Musaba",
+     "AM-L"
+    ],
+    [
+     "350353",
+     "Andre Brooks",
+     "AM-R"
+    ]
+   ],
+   "Watford": [
+    [
+     "245626",
+     "Federico Ravaglia",
+     "G"
+    ],
+    [
+     "281721",
+     "Matthew Pollock",
+     "CD"
+    ],
+    [
+     "406061",
+     "Branimir Mlacic",
+     "CD-L"
+    ],
+    [
+     "313891",
+     "Kévin Keben",
+     "CD-R"
+    ],
+    [
+     "283171",
+     "Jordan Zemura",
+     "LB"
+    ],
+    [
+     "253992",
+     "Krépin Diatta",
+     "RB"
+    ],
+    [
+     "289365",
+     "Hector Kyprianou",
+     "CM"
+    ],
+    [
+     "262565",
+     "Martín Payero",
+     "CM-L"
+    ],
+    [
+     "268986",
+     "Edo Kayembe",
+     "CM-R"
+    ],
+    [
+     "259143",
+     "Myron Boadu",
+     "CF-L"
+    ],
+    [
+     "330242",
+     "Iker Bravo",
+     "CF-R"
     ]
    ]
   }
@@ -194,13 +310,13 @@
    "casa": "DraftKings",
    "ml": [
     -135,
-    295,
-    360
+    290,
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -105
+    -110,
+    -115
    ],
    "spread": [
     [
@@ -210,6 +326,122 @@
     [
      "+0.5",
      105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Stoke City": [
+    [
+     "258902",
+     "Viktor Johansson",
+     "G"
+    ],
+    [
+     "246945",
+     "Ben Wilmot",
+     "CD"
+    ],
+    [
+     "163274",
+     "Ethan Galbraith",
+     "CD-L"
+    ],
+    [
+     "40299",
+     "Luke Graham",
+     "CD-R"
+    ],
+    [
+     "366358",
+     "Djibril Soumaré",
+     "CM-L"
+    ],
+    [
+     "303512",
+     "Jack McGlynn",
+     "CM-R"
+    ],
+    [
+     "381072",
+     "Luca Bombino",
+     "LM"
+    ],
+    [
+     "9426",
+     "Ben Johnson",
+     "RM"
+    ],
+    [
+     "277100",
+     "Róbert Bozeník",
+     "F"
+    ],
+    [
+     "291468",
+     "Justin Devenny",
+     "CF-L"
+    ],
+    [
+     "323201",
+     "Bosun Lawal",
+     "CF-R"
+    ]
+   ],
+   "Preston North End": [
+    [
+     "233301",
+     "Daniel Iversen",
+     "G"
+    ],
+    [
+     "241314",
+     "Jordan Storey",
+     "CD"
+    ],
+    [
+     "10176",
+     "Andrew Hughes",
+     "CD-L"
+    ],
+    [
+     "308243",
+     "Odeluga Offiah",
+     "CD-R"
+    ],
+    [
+     "223046",
+     "Jordan Thompson",
+     "CM-L"
+    ],
+    [
+     "286120",
+     "Leo Leroy",
+     "CM-R"
+    ],
+    [
+     "221307",
+     "Andrija Vukcevic",
+     "LM"
+    ],
+    [
+     "173744",
+     "Brad Potts",
+     "RM"
+    ],
+    [
+     "318052",
+     "Johnny Kenny",
+     "F"
+    ],
+    [
+     "240158",
+     "Callum Lang",
+     "CF-L"
+    ],
+    [
+     "268606",
+     "Delano Burgzorg",
+     "CF-R"
     ]
    ]
   }
@@ -226,13 +458,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
+    195,
     250,
-    130
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -105
    ],
    "spread": [
@@ -259,9 +491,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    235,
-    210
+    125,
+    240,
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -271,11 +503,11 @@
    "spread": [
     [
      "-0.5",
-     125
+     115
     ],
     [
      "+0.5",
-     -170
+     -160
     ]
    ]
   }
@@ -397,8 +629,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -120,
+    -105
    ],
    "spread": [
     [
