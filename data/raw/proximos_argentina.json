@@ -1,187 +1,5 @@
 [
  {
-  "id": "401841655",
-  "utc": "2026-10-30T22:00Z",
-  "estadio": "Ciudad de Río Cuarto Antonio Candini",
-  "local_espn": "Estudiantes de Río Cuarto",
-  "visita_espn": "Gimnasia La Plata",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    300,
-    235,
-    -105
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    125,
-    -165
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -125
-    ],
-    [
-     "-0.5",
-     -110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Estudiantes de Río Cuarto": [
-    [
-     "359753",
-     "Lautaro Herrera",
-     "G"
-    ],
-    [
-     "283928",
-     "Juan Antonini",
-     "D"
-    ],
-    [
-     "200271",
-     "Sergio Ojeda",
-     "D"
-    ],
-    [
-     "361259",
-     "Agustin Quiroga",
-     "D"
-    ],
-    [
-     "341980",
-     "Gonzalo Gonzalez",
-     "M"
-    ],
-    [
-     "379699",
-     "Tomás González",
-     "M"
-    ],
-    [
-     "309477",
-     "Fernando Rodríguez",
-     "M"
-    ],
-    [
-     "287690",
-     "Alejandro Cabrera",
-     "M"
-    ],
-    [
-     "206678",
-     "Gabriel Alanís",
-     "M"
-    ],
-    [
-     "288428",
-     "Martín Garnerone",
-     "F"
-    ],
-    [
-     "287691",
-     "Ibrahim Hesar",
-     "F"
-    ]
-   ],
-   "Gimnasia La Plata": [
-    [
-     "301464",
-     "Harlen Castillo",
-     "G"
-    ],
-    [
-     "173742",
-     "Enzo Martínez",
-     "D"
-    ],
-    [
-     "185458",
-     "Germán Conti",
-     "D"
-    ],
-    [
-     "233913",
-     "Pedro Silva Torrejón",
-     "D"
-    ],
-    [
-     "346867",
-     "Alexis Steimbach",
-     "D"
-    ],
-    [
-     "310476",
-     "Ignacio Miramon",
-     "M"
-    ],
-    [
-     "336537",
-     "Mateo Seoane",
-     "M"
-    ],
-    [
-     "176813",
-     "Lucas Janson",
-     "M"
-    ],
-    [
-     "106583",
-     "Ignacio Fernández",
-     "M"
-    ],
-    [
-     "334165",
-     "Agustín Auzmendi",
-     "F"
-    ],
-    [
-     "85513",
-     "Marcelo Torres",
-     "F"
-    ]
-   ]
-  }
- },
- {
-  "id": "401841653",
-  "utc": "2026-10-30T22:00Z",
-  "estadio": "Estadio Tomás Adolfo Ducó",
-  "local_espn": "Huracán",
-  "visita_espn": "Tigre",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    145,
-    190,
-    225
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -185,
-    140
-   ],
-   "spread": [
-    [
-     "-0.5",
-     135
-    ],
-    [
-     "+0.5",
-     -185
-    ]
-   ]
-  }
- },
- {
   "id": "401841648",
   "utc": "2026-10-31T00:15Z",
   "estadio": "Presidente Perón (Cilindro de Avellaneda)",
@@ -193,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -135,
     265,
-    390
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -145
     ],
     [
      "+0.5",
-     110
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Racing Club": [
+    [
+     "269808",
+     "Gastón Lodico",
+     ""
+    ],
+    [
+     "361553",
+     "Gonzalo Escudero",
+     ""
+    ],
+    [
+     "317430",
+     "Ignacio Agustin Rodríguez",
+     ""
+    ],
+    [
+     "228388",
+     "Tomás Conechny",
+     ""
+    ],
+    [
+     "195645",
+     "Matías Kranevitter",
+     ""
+    ],
+    [
+     "400994",
+     "Mateo Martínez",
+     ""
+    ],
+    [
+     "3038",
+     "Adrián Martínez",
+     ""
+    ],
+    [
+     "241988",
+     "Matías Zaracho",
+     ""
+    ],
+    [
+     "233910",
+     "Facundo Cambeses",
+     ""
+    ],
+    [
+     "70303",
+     "Alejandro Tello",
+     ""
+    ],
+    [
+     "311747",
+     "Ezequiel Cannavo",
+     ""
+    ]
+   ],
+   "Aldosivi": [
+    [
+     "84273",
+     "Lucas Acosta",
+     "G"
+    ],
+    [
+     "257734",
+     "Santiago Moyano",
+     "D"
+    ],
+    [
+     "312192",
+     "Joaquin Pombo",
+     "D"
+    ],
+    [
+     "227931",
+     "Braian Cufré",
+     "D"
+    ],
+    [
+     "206619",
+     "Néstor Breitenbruch",
+     "D"
+    ],
+    [
+     "149621",
+     "Nicolás Gaitán",
+     "M"
+    ],
+    [
+     "130004",
+     "Lucas Castro",
+     "M"
+    ],
+    [
+     "420160",
+     "Felipe Anso",
+     "M"
+    ],
+    [
+     "329754",
+     "Blas Palavecino",
+     "M"
+    ],
+    [
+     "387408",
+     "Martín García",
+     "M"
+    ],
+    [
+     "212843",
+     "Andrés Vombergar",
+     "F"
     ]
    ]
   }
@@ -226,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    320,
-    265,
+    330,
+    250,
     -120
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -115
+    -110,
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -105
+     -110
     ],
     [
      "-0.5",
-     -130
+     -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Sarmiento (Junín)": [
+    [
+     "365450",
+     "Thyago Ayala",
+     "G"
+    ],
+    [
+     "118725",
+     "Juan Insaurralde",
+     "CD"
+    ],
+    [
+     "202225",
+     "Lucas Suarez",
+     "CD-L"
+    ],
+    [
+     "335361",
+     "Thiago Santamaría",
+     "CD-R"
+    ],
+    [
+     "279074",
+     "Cristian Zabala",
+     "CM-L"
+    ],
+    [
+     "200174",
+     "Manuel Garcia",
+     "CM-R"
+    ],
+    [
+     "288430",
+     "Gastón González",
+     "LM"
+    ],
+    [
+     "361356",
+     "Ulises Giménez",
+     "RM"
+    ],
+    [
+     "253308",
+     "Junior Marabel",
+     "F"
+    ],
+    [
+     "379769",
+     "Julián Mavilla",
+     "CF-L"
+    ],
+    [
+     "399171",
+     "Elián Giménez",
+     "CF-R"
+    ]
+   ],
+   "Rosario Central": [
+    [
+     "195621",
+     "Jeremias Ledesma",
+     "G"
+    ],
+    [
+     "285885",
+     "Gastón Ávila",
+     "CD-L"
+    ],
+    [
+     "400123",
+     "Ignacio Ovando",
+     "CD-R"
+    ],
+    [
+     "307599",
+     "Agustín Sández",
+     "LB"
+    ],
+    [
+     "262567",
+     "Emanuel Coronel",
+     "RB"
+    ],
+    [
+     "108223",
+     "Ángel Di María",
+     "AM"
+    ],
+    [
+     "289076",
+     "Vicente Pizarro",
+     "LM"
+    ],
+    [
+     "363477",
+     "Alan Rodríguez",
+     "RM"
+    ],
+    [
+     "241544",
+     "Enzo Copetti",
+     "F"
+    ],
+    [
+     "255295",
+     "Jáminton Campaz",
+     "AM-L"
+    ],
+    [
+     "204014",
+     "Franco Cervi",
+     "AM-R"
     ]
    ]
   }
