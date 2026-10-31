@@ -5,7 +5,7 @@
   "estadio": "Estadio Libertad Financiera",
   "local_espn": "Atlético de San Luis",
   "visita_espn": "Atlas",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -38,7 +38,7 @@
   "estadio": "Estadio Olímpico Benito Juárez",
   "local_espn": "FC Juárez",
   "visita_espn": "Querétaro",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -83,7 +83,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -135,
     100
    ],
    "spread": [
@@ -94,6 +94,122 @@
     [
      "-0.5",
      -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Puebla": [
+    [
+     "276399",
+     "Ricardo Gutiérrez",
+     "G"
+    ],
+    [
+     "235122",
+     "Juan Pablo Vargas",
+     "CD-L"
+    ],
+    [
+     "283788",
+     "Facundo Almada",
+     "CD-R"
+    ],
+    [
+     "284657",
+     "Fernando Monarrez",
+     "LB"
+    ],
+    [
+     "338844",
+     "Iker Moreno",
+     "RB"
+    ],
+    [
+     "364703",
+     "Jose Pachuca",
+     "AM"
+    ],
+    [
+     "286080",
+     "Eduardo Armenta",
+     "LM"
+    ],
+    [
+     "284658",
+     "Alejandro Organista",
+     "RM"
+    ],
+    [
+     "316225",
+     "Luifer Hernández",
+     "F"
+    ],
+    [
+     "357211",
+     "Omar Moreno",
+     "AM-L"
+    ],
+    [
+     "227939",
+     "Brayan Garnica",
+     "AM-R"
+    ]
+   ],
+   "Pumas UNAM": [
+    [
+     "73247",
+     "Keylor Navas",
+     "G"
+    ],
+    [
+     "344568",
+     "Rodrigo López",
+     "D"
+    ],
+    [
+     "286879",
+     "Pablo Bennevendo",
+     "D"
+    ],
+    [
+     "177553",
+     "Rubén Duarte",
+     "D"
+    ],
+    [
+     "236597",
+     "Nathan Silva",
+     "D"
+    ],
+    [
+     "297150",
+     "Pedro Vite",
+     "M"
+    ],
+    [
+     "219508",
+     "Adalberto Carrasquilla",
+     "M"
+    ],
+    [
+     "265969",
+     "César Huerta",
+     "M"
+    ],
+    [
+     "242715",
+     "Uriel Antuna",
+     "M"
+    ],
+    [
+     "239983",
+     "Juninho",
+     "F"
+    ],
+    [
+     "255942",
+     "Robert Morales",
+     "F"
     ]
    ]
   }
@@ -149,8 +265,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -165
+    130,
+    -175
    ],
    "spread": [
     [
@@ -248,7 +364,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
+    105,
     -150
    ],
    "spread": [
