@@ -5,7 +5,7 @@
   "estadio": "Estadio de Vallecas",
   "local_espn": "Rayo Vallecano",
   "visita_espn": "Celta Vigo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -330,
-    475,
-    800
+    -300,
+    450,
+    750
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-1.5",
-     -130
+     -120
     ],
     [
      "+1.5",
-     -105
+     -115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Real Betis": [
+    [
+     "283892",
+     "Álvaro Valles",
+     "G"
+    ],
+    [
+     "301526",
+     "Natan",
+     "CD-L"
+    ],
+    [
+     "145078",
+     "Marc Bartra",
+     "CD-R"
+    ],
+    [
+     "213050",
+     "Fran García",
+     "LB"
+    ],
+    [
+     "178978",
+     "Héctor Bellerín",
+     "RB"
+    ],
+    [
+     "143564",
+     "Isco",
+     "AM"
+    ],
+    [
+     "242008",
+     "Marc Roca",
+     "LM"
+    ],
+    [
+     "227714",
+     "Pablo Fornals",
+     "RM"
+    ],
+    [
+     "279790",
+     "Troy Parrott",
+     "F"
+    ],
+    [
+     "300912",
+     "Abde Ezzalzouli",
+     "AM-L"
+    ],
+    [
+     "70224",
+     "Rodrigo Riquelme",
+     "AM-R"
+    ]
+   ],
+   "Málaga": [
+    [
+     "240624",
+     "Alfonso Herrero",
+     "G"
+    ],
+    [
+     "192430",
+     "Einar Galilea",
+     "CD-L"
+    ],
+    [
+     "261199",
+     "Fernando Calero",
+     "CD-R"
+    ],
+    [
+     "376166",
+     "Rafa Garrido",
+     "LB"
+    ],
+    [
+     "331785",
+     "Carlos Puga",
+     "RB"
+    ],
+    [
+     "331533",
+     "Daniel Lorenzo",
+     "CM-L"
+    ],
+    [
+     "292225",
+     "Ramón Enríquez",
+     "CM-R"
+    ],
+    [
+     "379032",
+     "Adam Aznou",
+     "LM"
+    ],
+    [
+     "297828",
+     "David Larrubia",
+     "RM"
+    ],
+    [
+     "373542",
+     "Adrián Niño",
+     "CF-L"
+    ],
+    [
+     "324098",
+     "Carlos Dotor",
+     "CF-R"
     ]
    ]
   }
@@ -209,7 +325,7 @@
     ],
     [
      "+2.5",
-     -105
+     -110
     ]
    ]
   }

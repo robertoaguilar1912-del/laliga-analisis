@@ -5,7 +5,7 @@
   "estadio": "Stadio Friuli",
   "local_espn": "Udinese",
   "visita_espn": "AS Roma",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -30,6 +30,122 @@
      135
     ]
    ]
+  },
+  "alineaciones": {
+   "Udinese": [
+    [
+     "295476",
+     "Maduka Okoye",
+     "G"
+    ],
+    [
+     "150081",
+     "Christian Kabasele",
+     "CD"
+    ],
+    [
+     "384519",
+     "Matteo Palma",
+     "CD-L"
+    ],
+    [
+     "342837",
+     "James Abankwah",
+     "CD-R"
+    ],
+    [
+     "347009",
+     "Lennon Miller",
+     "CM-L"
+    ],
+    [
+     "237055",
+     "Jesper Karlström",
+     "CM-R"
+    ],
+    [
+     "193919",
+     "Hassane Kamara",
+     "LM"
+    ],
+    [
+     "221436",
+     "Mërgim Vojvoda",
+     "RM"
+    ],
+    [
+     "233654",
+     "Keinan Davis",
+     "F"
+    ],
+    [
+     "270817",
+     "Jurgen Ekkelenkamp",
+     "CF-L"
+    ],
+    [
+     "251388",
+     "Nicolò Zaniolo",
+     "CF-R"
+    ]
+   ],
+   "AS Roma": [
+    [
+     "206587",
+     "Pierluigi Gollini",
+     "G"
+    ],
+    [
+     "242593",
+     "Evan Ndicka",
+     "CD"
+    ],
+    [
+     "222529",
+     "Mario Hermoso",
+     "CD-L"
+    ],
+    [
+     "340705",
+     "Daniele Ghilardi",
+     "CD-R"
+    ],
+    [
+     "169213",
+     "Bryan Cristante",
+     "CM-L"
+    ],
+    [
+     "146335",
+     "Marten de Roon",
+     "CM-R"
+    ],
+    [
+     "332354",
+     "Wesley",
+     "LM"
+    ],
+    [
+     "164826",
+     "Nahuel Molina",
+     "RM"
+    ],
+    [
+     "259481",
+     "Donyell Malen",
+     "F"
+    ],
+    [
+     "387204",
+     "Rodrigo Mora",
+     "CF-L"
+    ],
+    [
+     "323974",
+     "Matìas Soulè",
+     "CF-R"
+    ]
+   ]
   }
  },
  {
@@ -50,8 +166,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
