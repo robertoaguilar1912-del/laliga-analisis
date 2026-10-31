@@ -5,7 +5,7 @@
   "estadio": "Bank of America Stadium",
   "local_espn": "Charlotte FC",
   "visita_espn": "Orlando City SC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "ScottsMiracle-Gro Field",
   "local_espn": "Columbus Crew",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "TQL Stadium",
   "local_espn": "FC Cincinnati",
   "visita_espn": "Philadelphia Union",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "CF Montréal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -607,23 +607,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    255,
-    290,
-    -120
+    215,
+    275,
+    100
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    115,
+    -145
    ],
    "spread": [
     [
      "+0.5",
-     -115
+     -135
     ],
     [
      "-0.5",
-     -125
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Sporting Kansas City": [
+    [
+     "249729",
+     "Stefan Cleveland",
+     "G"
+    ],
+    [
+     "389905",
+     "Wyatt Meyer",
+     "CD-L"
+    ],
+    [
+     "286804",
+     "Jansen Miller",
+     "CD-R"
+    ],
+    [
+     "274906",
+     "Emir Karic",
+     "LB"
+    ],
+    [
+     "286760",
+     "Jacob Davis",
+     "RB"
+    ],
+    [
+     "304535",
+     "Owen Wolff",
+     "CM-L"
+    ],
+    [
+     "395357",
+     "Jacob Bartlett",
+     "CM-R"
+    ],
+    [
+     "297034",
+     "Capita",
+     "LM"
+    ],
+    [
+     "324574",
+     "André Luiz",
+     "RM"
+    ],
+    [
+     "321370",
+     "Ruben Ramos",
+     "CF-L"
+    ],
+    [
+     "381688",
+     "Taylor Calheira",
+     "CF-R"
+    ]
+   ],
+   "FC Dallas": [
+    [
+     "303555",
+     "Jonathan Sirois",
+     "G"
+    ],
+    [
+     "312876",
+     "Herman Johansson",
+     "D"
+    ],
+    [
+     "251801",
+     "Lalas Abubakar",
+     "D"
+    ],
+    [
+     "233460",
+     "Sebastien Ibeagha",
+     "D"
+    ],
+    [
+     "268731",
+     "Osaze Urhoghide",
+     "D"
+    ],
+    [
+     "380441",
+     "Kaick",
+     "M"
+    ],
+    [
+     "362657",
+     "Ran Binyamin",
+     "M"
+    ],
+    [
+     "157285",
+     "Ramiro",
+     "M"
+    ],
+    [
+     "359922",
+     "Joaquín Valiente",
+     "M"
+    ],
+    [
+     "381038",
+     "Daniel Job",
+     "F"
+    ],
+    [
+     "285201",
+     "Santiago Moreno",
+     "F"
     ]
    ]
   }
@@ -640,23 +756,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    330,
-    270
+    -175,
+    340,
+    360
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -120,
+    -105
    ],
    "spread": [
     [
-     "-0.5",
-     -145
+     "-1.5",
+     130
     ],
     [
-     "+0.5",
-     105
+     "+1.5",
+     -185
+    ]
+   ]
+  },
+  "alineaciones": {
+   "St. Louis CITY SC": [
+    [
+     "198189",
+     "Timo Baumgartl",
+     "SUB"
+    ],
+    [
+     "312934",
+     "Conrad Wallem",
+     "SUB"
+    ],
+    [
+     "296222",
+     "Dante Polvara",
+     "SUB"
+    ],
+    [
+     "334716",
+     "Lukas MacNaughton",
+     "SUB"
+    ],
+    [
+     "288791",
+     "Rafael Navarro",
+     "SUB"
+    ],
+    [
+     "304164",
+     "Daniel Edelman",
+     "SUB"
+    ],
+    [
+     "297256",
+     "Jeong Sang-Bin",
+     "SUB"
+    ],
+    [
+     "255313",
+     "Carlo Holse",
+     "SUB"
+    ],
+    [
+     "220478",
+     "Christopher Durkin",
+     "SUB"
+    ],
+    [
+     "178054",
+     "Benjamin Lundt",
+     "SUB"
+    ],
+    [
+     "252749",
+     "Tomas Totland",
+     "SUB"
+    ]
+   ],
+   "San Diego FC": [
+    [
+     "286424",
+     "Pablo Sisniega",
+     "G"
+    ],
+    [
+     "285939",
+     "Dagur Thórhallsson",
+     "D"
+    ],
+    [
+     "257114",
+     "Christopher McVey",
+     "D"
+    ],
+    [
+     "296216",
+     "Ian Murphy",
+     "D"
+    ],
+    [
+     "380677",
+     "Kieran Sargeant",
+     "D"
+    ],
+    [
+     "303619",
+     "Alejandro Alvarado Jr.",
+     "M"
+    ],
+    [
+     "371488",
+     "Pedro Soma",
+     "M"
+    ],
+    [
+     "277212",
+     "Onni Valakari",
+     "M"
+    ],
+    [
+     "250454",
+     "Anders Dreyer",
+     "F"
+    ],
+    [
+     "186324",
+     "Marcus Ingvartsen",
+     "F"
+    ],
+    [
+     "419201",
+     "Bryan Zamblé",
+     "F"
     ]
    ]
   }
