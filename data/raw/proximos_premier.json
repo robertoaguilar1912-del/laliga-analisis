@@ -5,7 +5,7 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Chelsea",
   "visita_espn": "Manchester United",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    235,
-    270
+    105,
+    245,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -120
+    -120,
+    100
    ],
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
-     -140
+     -135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AFC Bournemouth": [
+    [
+     "289824",
+     "Djordje Petrovic",
+     "G"
+    ],
+    [
+     "346588",
+     "António Silva",
+     "D"
+    ],
+    [
+     "305684",
+     "Adrien Truffert",
+     "D"
+    ],
+    [
+     "279155",
+     "James Hill",
+     "D"
+    ],
+    [
+     "122268",
+     "Adam Smith",
+     "D"
+    ],
+    [
+     "243364",
+     "Marcus Tavernier",
+     "M"
+    ],
+    [
+     "245916",
+     "Justin Kluivert",
+     "M"
+    ],
+    [
+     "357719",
+     "Rayan",
+     "M"
+    ],
+    [
+     "222776",
+     "Tyler Adams",
+     "M"
+    ],
+    [
+     "93435",
+     "Ryan Christie",
+     "M"
+    ],
+    [
+     "102368",
+     "Evanilson",
+     "F"
+    ]
+   ],
+   "Leeds United": [
+    [
+     "307118",
+     "James Trafford",
+     "G"
+    ],
+    [
+     "231863",
+     "James Justin",
+     "D"
+    ],
+    [
+     "212237",
+     "Nico Elvedi",
+     "D"
+    ],
+    [
+     "318390",
+     "Tarik Muharemovic",
+     "D"
+    ],
+    [
+     "250166",
+     "Gabriel Gudmundsson",
+     "M"
+    ],
+    [
+     "241317",
+     "Ethan Ampadu",
+     "M"
+    ],
+    [
+     "203072",
+     "Daniel James",
+     "M"
+    ],
+    [
+     "194801",
+     "Harry Wilson",
+     "M"
+    ],
+    [
+     "243408",
+     "Jayden Bogle",
+     "M"
+    ],
+    [
+     "253173",
+     "Ao Tanaka",
+     "M"
+    ],
+    [
+     "197717",
+     "Dominic Calvert-Lewin",
+     "F"
     ]
    ]
   }
@@ -199,8 +315,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -140,
+    115
    ],
    "spread": [
     [
@@ -210,6 +326,122 @@
     [
      "+0.5",
      -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Brentford": [
+    [
+     "275599",
+     "Caoimhín Kelleher",
+     "G"
+    ],
+    [
+     "206173",
+     "Kristoffer Ajer",
+     "CD-L"
+    ],
+    [
+     "270507",
+     "Sepp van den Berg",
+     "CD-R"
+    ],
+    [
+     "284490",
+     "Keane Lewis-Potter",
+     "LB"
+    ],
+    [
+     "356640",
+     "Michael Kayode",
+     "RB"
+    ],
+    [
+     "227472",
+     "Mathias Jensen",
+     "AM"
+    ],
+    [
+     "225564",
+     "Vitaly Janelt",
+     "LM"
+    ],
+    [
+     "228547",
+     "Mamadou Sangare",
+     "RM"
+    ],
+    [
+     "301894",
+     "Igor Thiago",
+     "F"
+    ],
+    [
+     "310958",
+     "Kevin Schade",
+     "AM-L"
+    ],
+    [
+     "315530",
+     "Dango Ouattara",
+     "AM-R"
+    ]
+   ],
+   "Nottingham Forest": [
+    [
+     "179497",
+     "Matz Sels",
+     "G"
+    ],
+    [
+     "238990",
+     "Nikola Milenkovic",
+     "CD"
+    ],
+    [
+     "338894",
+     "Murillo",
+     "CD-L"
+    ],
+    [
+     "338876",
+     "Jair Paula",
+     "CD-R"
+    ],
+    [
+     "238886",
+     "Xaver Schlager",
+     "CM-L"
+    ],
+    [
+     "298518",
+     "James McAtee",
+     "CM-R"
+    ],
+    [
+     "291638",
+     "Neco Williams",
+     "LM"
+    ],
+    [
+     "206227",
+     "Ola Aina",
+     "RM"
+    ],
+    [
+     "307114",
+     "Liam Delap",
+     "F"
+    ],
+    [
+     "275842",
+     "Dan Ndoye",
+     "CF-L"
+    ],
+    [
+     "243396",
+     "Morgan Gibbs-White",
+     "CF-R"
     ]
    ]
   }
@@ -232,17 +464,133 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -120
+    -115,
+    -105
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -180
     ],
     [
      "-0.5",
      125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Coventry City": [
+    [
+     "307069",
+     "Carl Rushworth",
+     "G"
+    ],
+    [
+     "374220",
+     "Stephen Mfuni",
+     "D"
+    ],
+    [
+     "281139",
+     "Milan van Ewijk",
+     "D"
+    ],
+    [
+     "206172",
+     "Jay Da Silva",
+     "D"
+    ],
+    [
+     "241093",
+     "Ethan Pinnock",
+     "D"
+    ],
+    [
+     "387659",
+     "Caleb Yirenkyi",
+     "M"
+    ],
+    [
+     "302002",
+     "Tatsuhiro Sakamoto",
+     "M"
+    ],
+    [
+     "286967",
+     "Jack Rudoni",
+     "M"
+    ],
+    [
+     "256015",
+     "Victor Torp",
+     "M"
+    ],
+    [
+     "277383",
+     "Yann Gboho",
+     "M"
+    ],
+    [
+     "194686",
+     "Taiwo Awoniyi",
+     "F"
+    ]
+   ],
+   "Sunderland": [
+    [
+     "301449",
+     "Robin Roefs",
+     "G"
+    ],
+    [
+     "191574",
+     "Luke O'Nien",
+     "D"
+    ],
+    [
+     "290207",
+     "Trai Hume",
+     "D"
+    ],
+    [
+     "230081",
+     "Reinildo Mandava",
+     "D"
+    ],
+    [
+     "215401",
+     "Omar Alderete",
+     "D"
+    ],
+    [
+     "149981",
+     "Granit Xhaka",
+     "M"
+    ],
+    [
+     "340240",
+     "Noah Sadiki",
+     "M"
+    ],
+    [
+     "288340",
+     "Enzo Le Fée",
+     "M"
+    ],
+    [
+     "318090",
+     "Nilson Angulo",
+     "M"
+    ],
+    [
+     "356295",
+     "Chris Rigg",
+     "M"
+    ],
+    [
+     "282229",
+     "Brian Brobbey",
+     "F"
     ]
    ]
   }
@@ -265,17 +613,133 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -200
+     -190
     ],
     [
      "-0.5",
-     140
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Hull City": [
+    [
+     "284199",
+     "Konstantinos Tzolakis",
+     "G"
+    ],
+    [
+     "231826",
+     "Lewie Coyle",
+     "D"
+    ],
+    [
+     "178051",
+     "Semi Ajayi",
+     "D"
+    ],
+    [
+     "243576",
+     "Ryan Giles",
+     "D"
+    ],
+    [
+     "168424",
+     "John Egan",
+     "D"
+    ],
+    [
+     "356212",
+     "Nobel Mendy",
+     "D"
+    ],
+    [
+     "357145",
+     "Elliot Stroud",
+     "M"
+    ],
+    [
+     "320417",
+     "Mohamed Belloumi",
+     "M"
+    ],
+    [
+     "310599",
+     "Tim Iroegbunam",
+     "M"
+    ],
+    [
+     "249851",
+     "Regan Slater",
+     "M"
+    ],
+    [
+     "193010",
+     "Oliver McBurnie",
+     "F"
+    ]
+   ],
+   "Ipswich Town": [
+    [
+     "168746",
+     "Christian Walton",
+     "G"
+    ],
+    [
+     "283086",
+     "Leif Davis",
+     "D"
+    ],
+    [
+     "230963",
+     "Issa Diop",
+     "D"
+    ],
+    [
+     "243440",
+     "Dara O'Shea",
+     "D"
+    ],
+    [
+     "336794",
+     "Abdoul Ouattara",
+     "D"
+    ],
+    [
+     "318680",
+     "Fatawu Issahaku",
+     "M"
+    ],
+    [
+     "295370",
+     "Jaden Philogene",
+     "M"
+    ],
+    [
+     "20975",
+     "Julio Enciso",
+     "M"
+    ],
+    [
+     "256607",
+     "Florentino",
+     "M"
+    ],
+    [
+     "228393",
+     "Exequiel Palacios",
+     "M"
+    ],
+    [
+     "322654",
+     "Emersonn",
+     "F"
     ]
    ]
   }
@@ -292,23 +756,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -135,
     320,
-    350
+    330
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    125,
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -145
     ],
     [
      "+0.5",
-     110
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Manchester City": [
+    [
+     "217092",
+     "Gianluigi Donnarumma",
+     "G"
+    ],
+    [
+     "299910",
+     "Josko Gvardiol",
+     "D"
+    ],
+    [
+     "362211",
+     "Abdukodir Khusanov",
+     "D"
+    ],
+    [
+     "234878",
+     "Rúben Dias",
+     "D"
+    ],
+    [
+     "303785",
+     "Matheus Nunes",
+     "D"
+    ],
+    [
+     "238472",
+     "Elliot Anderson",
+     "M"
+    ],
+    [
+     "373927",
+     "Ayyoub Bouaddi",
+     "M"
+    ],
+    [
+     "268641",
+     "Iliman Ndiaye",
+     "M"
+    ],
+    [
+     "285450",
+     "Enzo Fernández",
+     "M"
+    ],
+    [
+     "283672",
+     "Jérémy Doku",
+     "M"
+    ],
+    [
+     "253989",
+     "Erling Haaland",
+     "F"
+    ]
+   ],
+   "Brighton & Hove Albion": [
+    [
+     "291609",
+     "Bart Verbruggen",
+     "G"
+    ],
+    [
+     "364962",
+     "Luka Vuskovic",
+     "D"
+    ],
+    [
+     "274285",
+     "Costinha",
+     "D"
+    ],
+    [
+     "147106",
+     "Lewis Dunk",
+     "D"
+    ],
+    [
+     "216017",
+     "Olivier Boscagli",
+     "D"
+    ],
+    [
+     "387489",
+     "Chema Andrés",
+     "M"
+    ],
+    [
+     "304242",
+     "Yasin Ayari",
+     "M"
+    ],
+    [
+     "192278",
+     "Diego Gómez",
+     "M"
+    ],
+    [
+     "301327",
+     "Maxim De Cuyper",
+     "M"
+    ],
+    [
+     "132659",
+     "Pascal Gross",
+     "M"
+    ],
+    [
+     "387655",
+     "Charalambos Kostoulas",
+     "F"
     ]
    ]
   }
@@ -397,7 +977,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -105
    ],
    "spread": [
@@ -623,13 +1203,13 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    270,
-    260
+    275,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    130
+    -175,
+    135
    ],
    "spread": [
     [
@@ -638,7 +1218,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -655,14 +1235,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
+    350,
     300,
-    -145
+    -140
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    130
+    -175,
+    135
    ],
    "spread": [
     [
@@ -671,7 +1251,7 @@
     ],
     [
      "-0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -688,14 +1268,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    265,
-    -110
+    270,
+    270,
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
     -150,
-    110
+    115
    ],
    "spread": [
     [
@@ -721,19 +1301,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    250,
-    115
+    215,
+    255,
+    120
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -125,
     -105
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -155
     ],
     [
      "-0.5",

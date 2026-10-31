@@ -5,7 +5,7 @@
   "estadio": "Renato Dall'Ara",
   "local_espn": "Bologna",
   "visita_espn": "Monza",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -13,7 +13,7 @@
    "ml": [
     -160,
     275,
-    400
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -165
+     -175
     ],
     [
      "+0.5",
-     120
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Bologna": [
+    [
+     "179358",
+     "Lukasz Skorupski",
+     "G"
+    ],
+    [
+     "250707",
+     "Nicoló Casale",
+     "CD"
+    ],
+    [
+     "304222",
+     "Arthur Theate",
+     "CD-L"
+    ],
+    [
+     "309110",
+     "Martin Vitík",
+     "CD-R"
+    ],
+    [
+     "276654",
+     "Tommaso Pobega",
+     "CM-L"
+    ],
+    [
+     "202429",
+     "Lewis Ferguson",
+     "CM-R"
+    ],
+    [
+     "261616",
+     "Juan Miranda",
+     "LM"
+    ],
+    [
+     "291560",
+     "Nadir Zortea",
+     "RM"
+    ],
+    [
+     "238407",
+     "Jens Odgaard",
+     "F"
+    ],
+    [
+     "287790",
+     "Nicolò Cambiaghi",
+     "CF-L"
+    ],
+    [
+     "180956",
+     "Federico Bernardeschi",
+     "CF-R"
+    ]
+   ],
+   "Monza": [
+    [
+     "301377",
+     "Noel Törnqvist",
+     "G"
+    ],
+    [
+     "367635",
+     "Lorenzo Lucchesi",
+     "CD"
+    ],
+    [
+     "363886",
+     "Saba Goglichidze",
+     "CD-L"
+    ],
+    [
+     "390673",
+     "Eddy Kouadio",
+     "CD-R"
+    ],
+    [
+     "353013",
+     "Leonardo Colombo",
+     "CM-L"
+    ],
+    [
+     "376261",
+     "Manga Foe Ondoa",
+     "CM-R"
+    ],
+    [
+     "259871",
+     "Ricardo Mangas",
+     "LM"
+    ],
+    [
+     "248440",
+     "Samuele Birindelli",
+     "RM"
+    ],
+    [
+     "384482",
+     "Gustavo Varela",
+     "F"
+    ],
+    [
+     "297051",
+     "Exequiel Zeballos",
+     "CF-L"
+    ],
+    [
+     "235453",
+     "Dany Mota",
+     "CF-R"
     ]
    ]
   }
