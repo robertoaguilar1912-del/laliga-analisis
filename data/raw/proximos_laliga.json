@@ -1,154 +1,5 @@
 [
  {
-  "id": "401882825",
-  "utc": "2026-10-31T17:30Z",
-  "estadio": "Estadio La Cartuja",
-  "local_espn": "Real Betis",
-  "visita_espn": "Málaga",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-laliga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -330,
-    475,
-    850
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    130,
-    -160
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -130
-    ],
-    [
-     "+1.5",
-     -110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Real Betis": [
-    [
-     "283892",
-     "Álvaro Valles",
-     "G"
-    ],
-    [
-     "301526",
-     "Natan",
-     "CD-L"
-    ],
-    [
-     "145078",
-     "Marc Bartra",
-     "CD-R"
-    ],
-    [
-     "213050",
-     "Fran García",
-     "LB"
-    ],
-    [
-     "178978",
-     "Héctor Bellerín",
-     "RB"
-    ],
-    [
-     "143564",
-     "Isco",
-     "AM"
-    ],
-    [
-     "242008",
-     "Marc Roca",
-     "LM"
-    ],
-    [
-     "227714",
-     "Pablo Fornals",
-     "RM"
-    ],
-    [
-     "279790",
-     "Troy Parrott",
-     "F"
-    ],
-    [
-     "300912",
-     "Abde Ezzalzouli",
-     "AM-L"
-    ],
-    [
-     "70224",
-     "Rodrigo Riquelme",
-     "AM-R"
-    ]
-   ],
-   "Málaga": [
-    [
-     "240624",
-     "Alfonso Herrero",
-     "G"
-    ],
-    [
-     "192430",
-     "Einar Galilea",
-     "CD-L"
-    ],
-    [
-     "261199",
-     "Fernando Calero",
-     "CD-R"
-    ],
-    [
-     "376166",
-     "Rafa Garrido",
-     "LB"
-    ],
-    [
-     "331785",
-     "Carlos Puga",
-     "RB"
-    ],
-    [
-     "331533",
-     "Daniel Lorenzo",
-     "CM-L"
-    ],
-    [
-     "292225",
-     "Ramón Enríquez",
-     "CM-R"
-    ],
-    [
-     "379032",
-     "Adam Aznou",
-     "LM"
-    ],
-    [
-     "297828",
-     "David Larrubia",
-     "RM"
-    ],
-    [
-     "373542",
-     "Adrián Niño",
-     "CF-L"
-    ],
-    [
-     "324098",
-     "Carlos Dotor",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401882822",
   "utc": "2026-10-31T20:00Z",
   "estadio": "Spotify Camp Nou",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -900,
-    950,
-    1900
+    -1000,
+    1000,
+    2000
    ],
    "ou_linea": 4.5,
    "ou": [
-    120,
-    -150
+    110,
+    -140
    ],
    "spread": [
     [
      "-2.5",
-     -130
+     -140
     ],
     [
      "+2.5",
-     -110
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Barcelona": [
+    [
+     "297362",
+     "Joan García",
+     "G"
+    ],
+    [
+     "176399",
+     "João Cancelo",
+     "D"
+    ],
+    [
+     "403575",
+     "Brian Fariñas",
+     "D"
+    ],
+    [
+     "219022",
+     "Frenkie de Jong",
+     "D"
+    ],
+    [
+     "368992",
+     "Pau Cubarsí",
+     "D"
+    ],
+    [
+     "231828",
+     "Rodri",
+     "M"
+    ],
+    [
+     "354334",
+     "Fermín López",
+     "M"
+    ],
+    [
+     "250465",
+     "Pedri",
+     "M"
+    ],
+    [
+     "274913",
+     "Karim Adeyemi",
+     "F"
+    ],
+    [
+     "231050",
+     "Raphinha",
+     "F"
+    ],
+    [
+     "362150",
+     "Lamine Yamal",
+     "F"
+    ]
+   ],
+   "Alavés": [
+    [
+     "200910",
+     "Antonio Sivera",
+     "SUB"
+    ],
+    [
+     "253754",
+     "Carlos Protesoni",
+     "SUB"
+    ],
+    [
+     "345991",
+     "Abde Rebbach",
+     "SUB"
+    ],
+    [
+     "260256",
+     "Ander Guevara",
+     "SUB"
+    ],
+    [
+     "176312",
+     "Jonny",
+     "SUB"
+    ],
+    [
+     "163068",
+     "Denis Suárez",
+     "SUB"
+    ],
+    [
+     "149306",
+     "Ville Koski",
+     "SUB"
+    ],
+    [
+     "262491",
+     "Nahuel Tenaglia",
+     "SUB"
+    ],
+    [
+     "374621",
+     "Ángel Pérez",
+     "SUB"
+    ],
+    [
+     "382532",
+     "Youssef Lekhedim",
+     "SUB"
+    ],
+    [
+     "207236",
+     "Lucas Boyé",
+     "SUB"
     ]
    ]
   }

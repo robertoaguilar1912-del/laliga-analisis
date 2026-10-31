@@ -1,160 +1,11 @@
 [
  {
-  "id": "761922",
-  "utc": "2026-10-31T17:00Z",
-  "estadio": "Bank of America Stadium",
-  "local_espn": "Charlotte FC",
-  "visita_espn": "Orlando City SC",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -115,
-    320,
-    225
-   ],
-   "ou_linea": 4.5,
-   "ou": [
-    120,
-    -155
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -120
-    ],
-    [
-     "+0.5",
-     -115
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Charlotte FC": [
-    [
-     "221408",
-     "Kristijan Kahlina",
-     "G"
-    ],
-    [
-     "294222",
-     "Henry Kessler",
-     "CD-L"
-    ],
-    [
-     "419242",
-     "Morrison Agyemang",
-     "CD-R"
-    ],
-    [
-     "172833",
-     "Harry Toffolo",
-     "LB"
-    ],
-    [
-     "156506",
-     "Nathan Byrne",
-     "RB"
-    ],
-    [
-     "7567",
-     "Ashley Westwood",
-     "CM"
-    ],
-    [
-     "268604",
-     "Pep Biel",
-     "LM"
-    ],
-    [
-     "282755",
-     "Djibril Diani",
-     "RM"
-    ],
-    [
-     "340698",
-     "Idan Toklomati",
-     "F"
-    ],
-    [
-     "193281",
-     "Allan Saint-Maximin",
-     "LF"
-    ],
-    [
-     "312976",
-     "Liel Abada",
-     "RF"
-    ]
-   ],
-   "Orlando City SC": [
-    [
-     "159382",
-     "Maxime Crépeau",
-     "G"
-    ],
-    [
-     "340588",
-     "Iago Teodoro",
-     "CD-L"
-    ],
-    [
-     "181558",
-     "Wilder Cartagena",
-     "CD-R"
-    ],
-    [
-     "357210",
-     "Vinícius Nogueira",
-     "LB"
-    ],
-    [
-     "401054",
-     "Zakaria Taifi",
-     "RB"
-    ],
-    [
-     "382896",
-     "Luis Otávio",
-     "CM-L"
-    ],
-    [
-     "265977",
-     "Braian Ojeda",
-     "CM-R"
-    ],
-    [
-     "250448",
-     "Iván Angulo",
-     "LM"
-    ],
-    [
-     "324270",
-     "Marco Pasalic",
-     "RM"
-    ],
-    [
-     "233401",
-     "Martín Ojeda",
-     "CF-L"
-    ],
-    [
-     "140416",
-     "Antoine Griezmann",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "761924",
   "utc": "2026-10-31T18:00Z",
   "estadio": "ScottsMiracle-Gro Field",
   "local_espn": "Columbus Crew",
   "visita_espn": "D.C. United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +154,7 @@
   "estadio": "TQL Stadium",
   "local_espn": "FC Cincinnati",
   "visita_espn": "Philadelphia Union",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +303,7 @@
   "estadio": "Citi Field",
   "local_espn": "New York City FC",
   "visita_espn": "CF Montréal",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,25 +452,25 @@
   "estadio": "Sporting Park",
   "local_espn": "Sporting Kansas City",
   "visita_espn": "FC Dallas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
+    210,
     275,
-    100
+    105
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -145
+    110,
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -140
     ],
     [
      "-0.5",
@@ -750,7 +601,7 @@
   "estadio": "Energizer Park",
   "local_espn": "St. Louis CITY SC",
   "visita_espn": "San Diego FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -768,11 +619,11 @@
    "spread": [
     [
      "-1.5",
-     130
+     125
     ],
     [
      "+1.5",
-     -185
+     -180
     ]
    ]
   },
@@ -983,7 +834,7 @@
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
