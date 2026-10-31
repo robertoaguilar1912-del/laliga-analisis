@@ -5,7 +5,7 @@
   "estadio": "Vitality Stadium",
   "local_espn": "AFC Bournemouth",
   "visita_espn": "Leeds United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Gtech Community Stadium",
   "local_espn": "Brentford",
   "visita_espn": "Nottingham Forest",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Coventry Building Society Arena",
   "local_espn": "Coventry City",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "The MKM Stadium",
   "local_espn": "Hull City",
   "visita_espn": "Ipswich Town",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -601,15 +601,31 @@
   "estadio": "Etihad Stadium",
   "local_espn": "Manchester City",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -145,
+    320,
+    360
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -160
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
   },
   "alineaciones": {
    "Manchester City": [
@@ -773,9 +789,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
+    110,
     250,
-    235
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -785,11 +801,11 @@
    "spread": [
     [
      "-0.5",
-     105
+     100
     ],
     [
      "+0.5",
-     -145
+     -140
     ]
    ]
   }
