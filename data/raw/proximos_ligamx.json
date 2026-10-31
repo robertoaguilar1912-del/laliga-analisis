@@ -1,84 +1,18 @@
 [
  {
-  "id": "401876919",
-  "utc": "2026-10-31T01:00Z",
-  "estadio": "Estadio Libertad Financiera",
-  "local_espn": "Atlético de San Luis",
-  "visita_espn": "Atlas",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    130,
-    265,
-    190
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     115
-    ],
-    [
-     "+0.5",
-     -160
-    ]
-   ]
-  }
- },
- {
-  "id": "401876918",
-  "utc": "2026-10-31T01:00Z",
-  "estadio": "Estadio Olímpico Benito Juárez",
-  "local_espn": "FC Juárez",
-  "visita_espn": "Querétaro",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    195,
-    255,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    -105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -170
-    ],
-    [
-     "-0.5",
-     120
-    ]
-   ]
-  }
- },
- {
   "id": "401876917",
   "utc": "2026-10-31T03:00Z",
   "estadio": "Estadio Cuauhtémoc",
   "local_espn": "Puebla",
   "visita_espn": "Pumas UNAM",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
+    275,
     260,
-    265,
     -105
    ],
    "ou_linea": 2.5,
@@ -89,11 +23,11 @@
    "spread": [
     [
      "+0.5",
-     -125
+     -120
     ],
     [
      "-0.5",
-     -110
+     -115
     ]
    ]
   },
@@ -263,10 +197,10 @@
     350,
     425
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -175
+    -180,
+    135
    ],
    "spread": [
     [
@@ -325,23 +259,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    275,
-    175
+    130,
+    280,
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -155
+    115,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     115
+     120
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
@@ -397,7 +331,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    120,
     -165
    ],
    "spread": [
@@ -421,7 +355,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    280,
+    330
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -155
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401876909",
