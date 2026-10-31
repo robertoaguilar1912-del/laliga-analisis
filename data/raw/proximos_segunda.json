@@ -5,29 +5,145 @@
   "estadio": "Estadio Zubieta XXI",
   "local_espn": "Real Sociedad II",
   "visita_espn": "Girona",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    240,
-    270,
+    250,
+    275,
     100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    110
+    -140,
+    105
    ],
    "spread": [
     [
      "+0.5",
-     -130
+     -125
     ],
     [
      "-0.5",
-     -105
+     -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Real Sociedad II": [
+    [
+     "406381",
+     "Lander Olasagasti",
+     "G"
+    ],
+    [
+     "360178",
+     "Kazunari Kita",
+     "CD-L"
+    ],
+    [
+     "411583",
+     "Iker Calderon",
+     "CD-R"
+    ],
+    [
+     "396608",
+     "Jon Balda",
+     "LB"
+    ],
+    [
+     "379457",
+     "Iñaki Rupérez",
+     "RB"
+    ],
+    [
+     "366886",
+     "Alex Lebarbier",
+     "CM-L"
+    ],
+    [
+     "406396",
+     "Tomás Carbonell",
+     "CM-R"
+    ],
+    [
+     "396613",
+     "Alex Marchal",
+     "LM"
+    ],
+    [
+     "387496",
+     "Daniel Díaz",
+     "RM"
+    ],
+    [
+     "406384",
+     "Javier Soroeta",
+     "CF-L"
+    ],
+    [
+     "396610",
+     "Arkaitz Mariezkurrena",
+     "CF-R"
+    ]
+   ],
+   "Girona": [
+    [
+     "164469",
+     "Paulo Gazzaniga",
+     "G"
+    ],
+    [
+     "422939",
+     "Holmes Zamorano",
+     "CD-L"
+    ],
+    [
+     "160740",
+     "David López",
+     "CD-R"
+    ],
+    [
+     "30377",
+     "Álex Moreno",
+     "LB"
+    ],
+    [
+     "265992",
+     "Mateu Morey",
+     "RB"
+    ],
+    [
+     "242383",
+     "Fran Beltrán",
+     "CM-L"
+    ],
+    [
+     "375753",
+     "Izan González",
+     "CM-R"
+    ],
+    [
+     "261468",
+     "Carles Pérez",
+     "LM"
+    ],
+    [
+     "311056",
+     "Yáser Asprilla",
+     "RM"
+    ],
+    [
+     "279748",
+     "Unai Hernandez",
+     "CF-L"
+    ],
+    [
+     "314176",
+     "Vladyslav Vanat",
+     "CF-R"
     ]
    ]
   }
@@ -60,7 +176,7 @@
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -121,23 +237,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    230,
+    135,
+    235,
     200
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -120
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }

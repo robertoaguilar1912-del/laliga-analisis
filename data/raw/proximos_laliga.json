@@ -5,29 +5,145 @@
   "estadio": "Estadi Ciutat de València",
   "local_espn": "Levante",
   "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    370,
-    -200
+    550,
+    400,
+    -225
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -165
+    120,
+    -150
    ],
    "spread": [
     [
      "+1.5",
-     -175
+     -145
     ],
     [
      "-1.5",
-     125
+     105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Levante": [
+    [
+     "141438",
+     "Mathew Ryan",
+     "G"
+    ],
+    [
+     "407397",
+     "Ifeanyi Ndukwe",
+     "CD-L"
+    ],
+    [
+     "150451",
+     "Aïssa Mandi",
+     "CD-R"
+    ],
+    [
+     "409383",
+     "Nacho Pérez",
+     "LB"
+    ],
+    [
+     "186024",
+     "Jeremy Toljan",
+     "RB"
+    ],
+    [
+     "311054",
+     "Iván Romero",
+     "AM"
+    ],
+    [
+     "362752",
+     "Dani Requena",
+     "LM"
+    ],
+    [
+     "317784",
+     "Jon Ander Olasagasti",
+     "RM"
+    ],
+    [
+     "346676",
+     "Etta Eyong",
+     "F"
+    ],
+    [
+     "339195",
+     "Thiago Fernández",
+     "AM-L"
+    ],
+    [
+     "267591",
+     "Roger Brugué",
+     "AM-R"
+    ]
+   ],
+   "Atlético Madrid": [
+    [
+     "149622",
+     "Jan Oblak",
+     "G"
+    ],
+    [
+     "257786",
+     "Dávid Hancko",
+     "CD-L"
+    ],
+    [
+     "332613",
+     "Marc Pubill",
+     "CD-R"
+    ],
+    [
+     "166396",
+     "Alejandro Grimaldo",
+     "LB"
+    ],
+    [
+     "206474",
+     "Marcos Llorente",
+     "RB"
+    ],
+    [
+     "274911",
+     "Morten Hjulmand",
+     "CM-L"
+    ],
+    [
+     "336634",
+     "Pablo Barrios",
+     "CM-R"
+    ],
+    [
+     "297373",
+     "Álex Baena",
+     "LM"
+    ],
+    [
+     "323838",
+     "Giuliano Simeone",
+     "RM"
+    ],
+    [
+     "277206",
+     "Julián Álvarez",
+     "CF-L"
+    ],
+    [
+     "274197",
+     "Lee Kang-In",
+     "CF-R"
     ]
    ]
   }
@@ -110,13 +226,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -1000,
-    1000,
-    2000
+    -900,
+    950,
+    1900
    ],
    "ou_linea": 4.5,
    "ou": [
-    125,
+    120,
     -150
    ],
    "spread": [
@@ -209,14 +325,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    235,
-    215
+    135,
+    240,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -120
+    -115
    ],
    "spread": [
     [
@@ -225,7 +341,7 @@
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
@@ -473,23 +589,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    265,
-    110
+    210,
+    270,
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
     -155,
-    115
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -150
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
