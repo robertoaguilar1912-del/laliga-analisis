@@ -5,7 +5,7 @@
   "estadio": "Estádio Santa Cruz",
   "local_espn": "Botafogo-SP",
   "visita_espn": "Sport",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -166,8 +166,8 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -190,
-    140
+    -180,
+    135
    ],
    "spread": [
     [
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -180
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vila Nova": [
+    [
+     "186507",
+     "Helton Leite",
+     "G"
+    ],
+    [
+     "204133",
+     "Douglas Mendes",
+     "CD-L"
+    ],
+    [
+     "198245",
+     "Jonathan Costa",
+     "CD-R"
+    ],
+    [
+     "396038",
+     "Higor Luiz De Souza",
+     "LB"
+    ],
+    [
+     "235539",
+     "Igor Cariús",
+     "RB"
+    ],
+    [
+     "131532",
+     "Marquinhos Gabriel",
+     "AM"
+    ],
+    [
+     "420672",
+     "Dudu",
+     "LM"
+    ],
+    [
+     "270363",
+     "João Pedro Vieira",
+     "RM"
+    ],
+    [
+     "222200",
+     "André Luis",
+     "F"
+    ],
+    [
+     "249846",
+     "Janderson",
+     "AM-L"
+    ],
+    [
+     "214192",
+     "Everton",
+     "AM-R"
+    ]
+   ],
+   "Juventude": [
+    [
+     "198844",
+     "Jandrei",
+     "G"
+    ],
+    [
+     "203809",
+     "Messias",
+     "CD"
+    ],
+    [
+     "333835",
+     "Marcos Paulo",
+     "CD-L"
+    ],
+    [
+     "205451",
+     "Rodrigo Sam",
+     "CD-R"
+    ],
+    [
+     "155466",
+     "Gabriel",
+     "CM-L"
+    ],
+    [
+     "334723",
+     "Raí",
+     "CM-R"
+    ],
+    [
+     "187032",
+     "Diogo Barbosa",
+     "LM"
+    ],
+    [
+     "206537",
+     "Aderlan Silva",
+     "RM"
+    ],
+    [
+     "237013",
+     "Safira",
+     "F"
+    ],
+    [
+     "282588",
+     "Marcos Paulo",
+     "CF-L"
+    ],
+    [
+     "48484",
+     "Luis Amarilla",
+     "CF-R"
     ]
    ]
   }
