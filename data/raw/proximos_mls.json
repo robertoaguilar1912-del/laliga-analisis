@@ -1,168 +1,35 @@
 [
  {
-  "id": "761928",
-  "utc": "2026-10-31T19:00Z",
-  "estadio": "Sporting Park",
-  "local_espn": "Sporting Kansas City",
-  "visita_espn": "FC Dallas",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    210,
-    275,
-    105
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    110,
-    -140
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -140
-    ],
-    [
-     "-0.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Sporting Kansas City": [
-    [
-     "249729",
-     "Stefan Cleveland",
-     "G"
-    ],
-    [
-     "389905",
-     "Wyatt Meyer",
-     "CD-L"
-    ],
-    [
-     "286804",
-     "Jansen Miller",
-     "CD-R"
-    ],
-    [
-     "274906",
-     "Emir Karic",
-     "LB"
-    ],
-    [
-     "286760",
-     "Jacob Davis",
-     "RB"
-    ],
-    [
-     "304535",
-     "Owen Wolff",
-     "CM-L"
-    ],
-    [
-     "395357",
-     "Jacob Bartlett",
-     "CM-R"
-    ],
-    [
-     "297034",
-     "Capita",
-     "LM"
-    ],
-    [
-     "324574",
-     "André Luiz",
-     "RM"
-    ],
-    [
-     "321370",
-     "Ruben Ramos",
-     "CF-L"
-    ],
-    [
-     "381688",
-     "Taylor Calheira",
-     "CF-R"
-    ]
-   ],
-   "FC Dallas": [
-    [
-     "303555",
-     "Jonathan Sirois",
-     "G"
-    ],
-    [
-     "312876",
-     "Herman Johansson",
-     "D"
-    ],
-    [
-     "251801",
-     "Lalas Abubakar",
-     "D"
-    ],
-    [
-     "233460",
-     "Sebastien Ibeagha",
-     "D"
-    ],
-    [
-     "268731",
-     "Osaze Urhoghide",
-     "D"
-    ],
-    [
-     "380441",
-     "Kaick",
-     "M"
-    ],
-    [
-     "362657",
-     "Ran Binyamin",
-     "M"
-    ],
-    [
-     "157285",
-     "Ramiro",
-     "M"
-    ],
-    [
-     "359922",
-     "Joaquín Valiente",
-     "M"
-    ],
-    [
-     "381038",
-     "Daniel Job",
-     "F"
-    ],
-    [
-     "285201",
-     "Santiago Moreno",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "761925",
   "utc": "2026-10-31T21:00Z",
   "estadio": "Dignity Health Sports Park",
   "local_espn": "LA Galaxy",
   "visita_espn": "Austin FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -290,
+    450,
+    550
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    105
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -120
+    ],
+    [
+     "+1.5",
+     -120
+    ]
+   ]
   },
   "alineaciones": {
    "LA Galaxy": [
@@ -287,15 +154,31 @@
   "estadio": "PayPal Park",
   "local_espn": "San Jose Earthquakes",
   "visita_espn": "Real Salt Lake",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    150,
+    270,
+    145
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -190
+    ],
+    [
+     "-0.5",
+     135
+    ]
+   ]
   },
   "alineaciones": {
    "San Jose Earthquakes": [
@@ -432,7 +315,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -175,
     135
    ],
    "spread": [
@@ -564,7 +447,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
+    -120,
     -110
    ],
    "spread": [
@@ -598,7 +481,7 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -160
+    -165
    ],
    "spread": [
     [
@@ -630,17 +513,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -180,
     140
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -140
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }

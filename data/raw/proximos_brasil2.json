@@ -5,7 +5,7 @@
   "estadio": "Estádio Onésio Brasileiro Alvarenga",
   "local_espn": "Vila Nova",
   "visita_espn": "Juventude",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -166,7 +166,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -125
    ],
    "spread": [
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Náutico": [
+    [
+     "101731",
+     "Muriel",
+     "G"
+    ],
+    [
+     "384098",
+     "Betão",
+     "CD-L"
+    ],
+    [
+     "216292",
+     "Luiz Paulo",
+     "CD-R"
+    ],
+    [
+     "196847",
+     "Igor",
+     "LB"
+    ],
+    [
+     "157631",
+     "Arnaldo",
+     "RB"
+    ],
+    [
+     "198580",
+     "Jean",
+     "AM"
+    ],
+    [
+     "384209",
+     "Samuel",
+     "LM"
+    ],
+    [
+     "255807",
+     "Wenderson",
+     "RM"
+    ],
+    [
+     "201753",
+     "Paulo Sérgio",
+     "F"
+    ],
+    [
+     "287726",
+     "Benjamín Borasi",
+     "AM-L"
+    ],
+    [
+     "146269",
+     "Vinícius",
+     "AM-R"
+    ]
+   ],
+   "Avaí": [
+    [
+     "218903",
+     "Bruno",
+     "G"
+    ],
+    [
+     "318259",
+     "Jefferson",
+     "CD-L"
+    ],
+    [
+     "384024",
+     "Guilherme Aquino",
+     "CD-R"
+    ],
+    [
+     "314568",
+     "Douglas",
+     "LB"
+    ],
+    [
+     "379367",
+     "João Vitor",
+     "RB"
+    ],
+    [
+     "303480",
+     "Wenderson",
+     "AM"
+    ],
+    [
+     "361977",
+     "Paulo Vitor",
+     "LM"
+    ],
+    [
+     "234886",
+     "Zé Ricardo",
+     "RM"
+    ],
+    [
+     "417809",
+     "Caio Suassuna",
+     "F"
+    ],
+    [
+     "265250",
+     "Jean Lucas Figueiredo",
+     "AM-L"
+    ],
+    [
+     "250594",
+     "Daniel Penha",
+     "AM-R"
     ]
    ]
   }
@@ -226,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    250,
-    360
+    -130,
+    255,
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -140
+    105,
+    -135
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -140
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -259,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -205,
-    320,
+    -200,
+    330,
     500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -105
+    -130,
+    100
    ],
    "spread": [
     [
      "-1.5",
-     130
+     135
     ],
     [
      "+1.5",
-     -195
+     -190
     ]
    ]
   }

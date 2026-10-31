@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841656",
-  "utc": "2026-10-31T20:00Z",
-  "estadio": "Guillermo Laza",
-  "local_espn": "Deportivo Riestra",
-  "visita_espn": "Talleres (Córdoba)",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    165,
-    195,
-    190
-   ],
-   "ou_linea": 1.5,
-   "ou": [
-    -175,
-    130
-   ],
-   "spread": [
-    [
-     "-0.5",
-     155
-    ],
-    [
-     "+0.5",
-     -215
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Deportivo Riestra": [
-    [
-     "251884",
-     "Marino Arzamendia",
-     "G"
-    ],
-    [
-     "105823",
-     "Carlos Quintana",
-     "CD"
-    ],
-    [
-     "206671",
-     "Cristian Paz",
-     "CD-L"
-    ],
-    [
-     "315728",
-     "Facundo Miño",
-     "CD-R"
-    ],
-    [
-     "195672",
-     "Milton Céliz",
-     "CM-L"
-    ],
-    [
-     "283894",
-     "Nicólas Watson",
-     "CM-R"
-    ],
-    [
-     "213487",
-     "Brian Sánchez",
-     "AM"
-    ],
-    [
-     "278608",
-     "Mariano Bracamonte",
-     "LM"
-    ],
-    [
-     "194848",
-     "Pedro Ramirez",
-     "RM"
-    ],
-    [
-     "114767",
-     "Alexander Díaz",
-     "CF-L"
-    ],
-    [
-     "310778",
-     "Antony Alonso",
-     "CF-R"
-    ]
-   ],
-   "Talleres (Córdoba)": [
-    [
-     "200935",
-     "Ezequiel Unsain",
-     "G"
-    ],
-    [
-     "318179",
-     "Román Riquelme",
-     "CD-L"
-    ],
-    [
-     "173449",
-     "Matías Catalán",
-     "CD-R"
-    ],
-    [
-     "399687",
-     "Alexandro Maidana",
-     "LB"
-    ],
-    [
-     "276302",
-     "Augusto Schott",
-     "RB"
-    ],
-    [
-     "379507",
-     "Valentín Fascendini",
-     "AM"
-    ],
-    [
-     "309398",
-     "Alejandro Galarza",
-     "LM"
-    ],
-    [
-     "187475",
-     "Federico Fattori",
-     "RM"
-    ],
-    [
-     "307473",
-     "Agustín Álvarez Martínez",
-     "F"
-    ],
-    [
-     "292245",
-     "Valentin Depietri",
-     "AM-L"
-    ],
-    [
-     "288678",
-     "Rick",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841646",
   "utc": "2026-10-31T22:15Z",
   "estadio": "José Amalfitani",
@@ -177,6 +28,122 @@
     [
      "+0.5",
      -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vélez Sarsfield": [
+    [
+     "216697",
+     "Tomás Marchiori",
+     "G"
+    ],
+    [
+     "195714",
+     "Lisandro Magallán",
+     "CD-L"
+    ],
+    [
+     "387781",
+     "Thiago Silvero",
+     "CD-R"
+    ],
+    [
+     "196592",
+     "Elias Gomez",
+     "LB"
+    ],
+    [
+     "213346",
+     "Joaquín García",
+     "RB"
+    ],
+    [
+     "149381",
+     "Manuel Lanzini",
+     "AM"
+    ],
+    [
+     "241823",
+     "Lucas Robertone",
+     "LM"
+    ],
+    [
+     "177279",
+     "Claudio Baeza",
+     "RM"
+    ],
+    [
+     "252617",
+     "Ronaldo Martínez",
+     "F"
+    ],
+    [
+     "422531",
+     "Juan Policella",
+     "AM-L"
+    ],
+    [
+     "276287",
+     "Matías Pellegrini",
+     "AM-R"
+    ]
+   ],
+   "San Lorenzo": [
+    [
+     "195679",
+     "José Devecchi",
+     "G"
+    ],
+    [
+     "215932",
+     "Danilo Arboleda",
+     "CD"
+    ],
+    [
+     "214198",
+     "Emiliano Amor",
+     "CD-L"
+    ],
+    [
+     "254142",
+     "Guzmán Corujo",
+     "CD-R"
+    ],
+    [
+     "406931",
+     "Facundo Gulli",
+     "CM-L"
+    ],
+    [
+     "195337",
+     "Nicolas Tripichio",
+     "CM-R"
+    ],
+    [
+     "298592",
+     "Facundo Farías",
+     "AM"
+    ],
+    [
+     "401538",
+     "Teo Rodríguez",
+     "LM"
+    ],
+    [
+     "361312",
+     "Oscar Arias",
+     "RM"
+    ],
+    [
+     "364366",
+     "Rodrigo Auzmendi",
+     "CF-L"
+    ],
+    [
+     "283675",
+     "Alexis Cuello",
+     "CF-R"
     ]
    ]
   }
@@ -261,11 +228,11 @@
    "ml": [
     -105,
     210,
-    340
+    350
    ],
    "ou_linea": 1.5,
    "ou": [
-    -200,
+    -195,
     145
    ],
    "spread": [
@@ -275,7 +242,7 @@
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -293,13 +260,13 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    230,
-    280
+    235,
+    285
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -165
+    -160
    ],
    "spread": [
     [
@@ -364,8 +331,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -160
+    110,
+    -155
    ],
    "spread": [
     [
@@ -403,11 +370,11 @@
    "spread": [
     [
      "-0.5",
-     -190
+     -195
     ],
     [
      "+0.5",
-     130
+     135
     ]
    ]
   }
