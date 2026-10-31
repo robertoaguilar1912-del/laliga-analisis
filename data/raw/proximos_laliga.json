@@ -1,154 +1,5 @@
 [
  {
-  "id": "401882820",
-  "utc": "2026-10-31T13:00Z",
-  "estadio": "Estadi Ciutat de València",
-  "local_espn": "Levante",
-  "visita_espn": "Atlético Madrid",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-laliga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    550,
-    400,
-    -225
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    120,
-    -150
-   ],
-   "spread": [
-    [
-     "+1.5",
-     -145
-    ],
-    [
-     "-1.5",
-     105
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Levante": [
-    [
-     "141438",
-     "Mathew Ryan",
-     "G"
-    ],
-    [
-     "407397",
-     "Ifeanyi Ndukwe",
-     "CD-L"
-    ],
-    [
-     "150451",
-     "Aïssa Mandi",
-     "CD-R"
-    ],
-    [
-     "409383",
-     "Nacho Pérez",
-     "LB"
-    ],
-    [
-     "186024",
-     "Jeremy Toljan",
-     "RB"
-    ],
-    [
-     "311054",
-     "Iván Romero",
-     "AM"
-    ],
-    [
-     "362752",
-     "Dani Requena",
-     "LM"
-    ],
-    [
-     "317784",
-     "Jon Ander Olasagasti",
-     "RM"
-    ],
-    [
-     "346676",
-     "Etta Eyong",
-     "F"
-    ],
-    [
-     "339195",
-     "Thiago Fernández",
-     "AM-L"
-    ],
-    [
-     "267591",
-     "Roger Brugué",
-     "AM-R"
-    ]
-   ],
-   "Atlético Madrid": [
-    [
-     "149622",
-     "Jan Oblak",
-     "G"
-    ],
-    [
-     "257786",
-     "Dávid Hancko",
-     "CD-L"
-    ],
-    [
-     "332613",
-     "Marc Pubill",
-     "CD-R"
-    ],
-    [
-     "166396",
-     "Alejandro Grimaldo",
-     "LB"
-    ],
-    [
-     "206474",
-     "Marcos Llorente",
-     "RB"
-    ],
-    [
-     "274911",
-     "Morten Hjulmand",
-     "CM-L"
-    ],
-    [
-     "336634",
-     "Pablo Barrios",
-     "CM-R"
-    ],
-    [
-     "297373",
-     "Álex Baena",
-     "LM"
-    ],
-    [
-     "323838",
-     "Giuliano Simeone",
-     "RM"
-    ],
-    [
-     "277206",
-     "Julián Álvarez",
-     "CF-L"
-    ],
-    [
-     "274197",
-     "Lee Kang-In",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401882818",
   "utc": "2026-10-31T15:15Z",
   "estadio": "Estadio de Vallecas",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    215,
-    200
+    145,
+    210,
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -145
+    120,
+    -150
    ],
    "spread": [
     [
      "-0.5",
-     135
+     130
     ],
     [
      "+0.5",
-     -190
+     -185
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Rayo Vallecano": [
+    [
+     "207834",
+     "Emil Audero",
+     "SUB"
+    ],
+    [
+     "140754",
+     "Florian Lejeune",
+     "SUB"
+    ],
+    [
+     "277292",
+     "Adrià Pedrosa",
+     "SUB"
+    ],
+    [
+     "264217",
+     "Óscar Valentín",
+     "SUB"
+    ],
+    [
+     "287224",
+     "Andrei Ratiu",
+     "SUB"
+    ],
+    [
+     "276652",
+     "Sergio Camello",
+     "SUB"
+    ],
+    [
+     "125200",
+     "Álvaro García",
+     "SUB"
+    ],
+    [
+     "265996",
+     "Mujaid Sadick",
+     "SUB"
+    ],
+    [
+     "264078",
+     "Pedro Díaz",
+     "SUB"
+    ],
+    [
+     "260740",
+     "Jorge de Frutos",
+     "SUB"
+    ],
+    [
+     "203711",
+     "Unai López",
+     "SUB"
+    ]
+   ],
+   "Celta Vigo": [
+    [
+     "144720",
+     "Andrei Radu",
+     "G"
+    ],
+    [
+     "384643",
+     "Yoel Lago",
+     "D"
+    ],
+    [
+     "376147",
+     "Javi Rodríguez",
+     "D"
+    ],
+    [
+     "285756",
+     "Sebastián Cáceres",
+     "D"
+    ],
+    [
+     "231838",
+     "Javi Galán",
+     "M"
+    ],
+    [
+     "240235",
+     "Aleix Febas",
+     "M"
+    ],
+    [
+     "331586",
+     "Javi Rueda",
+     "M"
+    ],
+    [
+     "297829",
+     "Ilaix Moriba",
+     "M"
+    ],
+    [
+     "188391",
+     "Hugo Álvarez",
+     "F"
+    ],
+    [
+     "279904",
+     "Ferran Jutglà",
+     "F"
+    ],
+    [
+     "324811",
+     "Hugo Gonzalez",
+     "F"
     ]
    ]
   }

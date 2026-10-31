@@ -1,178 +1,29 @@
 [
  {
-  "id": "401879248",
-  "utc": "2026-10-31T12:30Z",
-  "estadio": "Stamford Bridge",
-  "local_espn": "Chelsea",
-  "visita_espn": "Manchester United",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-english-premier-league",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    125,
-    270,
-    205
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    135
-   ],
-   "spread": [
-    [
-     "-0.5",
-     110
-    ],
-    [
-     "+0.5",
-     -155
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Chelsea": [
-    [
-     "332343",
-     "Mike Penders",
-     "G"
-    ],
-    [
-     "296410",
-     "Levi Colwill",
-     "D"
-    ],
-    [
-     "270190",
-     "Wesley Fofana",
-     "D"
-    ],
-    [
-     "368317",
-     "Josh Acheampong",
-     "D"
-    ],
-    [
-     "256115",
-     "Pedro Neto",
-     "M"
-    ],
-    [
-     "362486",
-     "Marco Palestra",
-     "M"
-    ],
-    [
-     "376481",
-     "Estêvão",
-     "M"
-    ],
-    [
-     "289877",
-     "Moisés Caicedo",
-     "M"
-    ],
-    [
-     "308217",
-     "Romeo Lavia",
-     "M"
-    ],
-    [
-     "296395",
-     "Cole Palmer",
-     "M"
-    ],
-    [
-     "265653",
-     "Morgan Rogers",
-     "F"
-    ]
-   ],
-   "Manchester United": [
-    [
-     "301425",
-     "Senne Lammens",
-     "G"
-    ],
-    [
-     "340206",
-     "Leny Yoro",
-     "D"
-    ],
-    [
-     "157073",
-     "Harry Maguire",
-     "D"
-    ],
-    [
-     "238902",
-     "Diogo Dalot",
-     "D"
-    ],
-    [
-     "233937",
-     "Lisandro Martínez",
-     "D"
-    ],
-    [
-     "338814",
-     "Carlos Baleba",
-     "M"
-    ],
-    [
-     "314858",
-     "Andrey Santos",
-     "M"
-    ],
-    [
-     "291630",
-     "Amad Diallo",
-     "M"
-    ],
-    [
-     "259902",
-     "Matheus Cunha",
-     "M"
-    ],
-    [
-     "124091",
-     "Bruno Fernandes",
-     "M"
-    ],
-    [
-     "271170",
-     "Bryan Mbeumo",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401879251",
   "utc": "2026-10-31T15:00Z",
   "estadio": "Vitality Stadium",
   "local_espn": "AFC Bournemouth",
   "visita_espn": "Leeds United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     105,
-    245,
-    265
+    240,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    100
+    -115,
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
@@ -303,15 +154,15 @@
   "estadio": "Gtech Community Stadium",
   "local_espn": "Brentford",
   "visita_espn": "Nottingham Forest",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     115,
-    260,
-    235
+    255,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -452,29 +303,29 @@
   "estadio": "Coventry Building Society Arena",
   "local_espn": "Coventry City",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     210,
-    230,
-    140
+    235,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -105
+    -110
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -170
     ],
     [
      "-0.5",
-     125
+     120
     ]
    ]
   },
@@ -601,29 +452,29 @@
   "estadio": "The MKM Stadium",
   "local_espn": "Hull City",
   "visita_espn": "Ipswich Town",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    235,
-    155
+    190,
+    240,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -105,
     -115
    ],
    "spread": [
     [
      "+0.5",
-     -190
+     -180
     ],
     [
      "-0.5",
-     135
+     130
     ]
    ]
   },
@@ -750,31 +601,15 @@
   "estadio": "Etihad Stadium",
   "local_espn": "Manchester City",
   "visita_espn": "Brighton & Hove Albion",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": [
-    -135,
-    320,
-    330
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    125,
-    -155
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -145
-    ],
-    [
-     "+0.5",
-     105
-    ]
-   ]
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   },
   "alineaciones": {
    "Manchester City": [
@@ -944,8 +779,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    105
+    -125,
+    100
    ],
    "spread": [
     [
@@ -1004,23 +839,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    265,
-    195
+    140,
+    255,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     115
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -170
+     -175
     ]
    ]
   }
@@ -1301,23 +1136,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
-    255,
-    120
+    230,
+    260,
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -105
+    -130,
+    100
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -145
     ],
     [
      "-0.5",
-     105
+     100
     ]
    ]
   }
