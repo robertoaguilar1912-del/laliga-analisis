@@ -5,15 +5,31 @@
   "estadio": "Bank of America Stadium",
   "local_espn": "Charlotte FC",
   "visita_espn": "Orlando City SC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -115,
+    320,
+    225
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    120,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -120
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
   },
   "alineaciones": {
    "Charlotte FC": [
@@ -145,13 +161,13 @@
    "casa": "DraftKings",
    "ml": [
     -235,
-    380,
-    500
+    350,
+    550
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    115,
-    -145
+    -180,
+    140
    ],
    "spread": [
     [
@@ -160,7 +176,123 @@
     ],
     [
      "+1.5",
-     -150
+     -155
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Columbus Crew": [
+    [
+     "275080",
+     "Patrick Schulte",
+     "G"
+    ],
+    [
+     "271075",
+     "Malte Amundsen",
+     "CD-L"
+    ],
+    [
+     "296221",
+     "Sean Zawadzki",
+     "CD-R"
+    ],
+    [
+     "323725",
+     "Anass Zaroury",
+     "LB"
+    ],
+    [
+     "180113",
+     "Steven Moreira",
+     "RB"
+    ],
+    [
+     "346869",
+     "Sékou Tidiany Bangoura",
+     "CM-L"
+    ],
+    [
+     "270189",
+     "Dylan Chambost",
+     "CM-R"
+    ],
+    [
+     "83178",
+     "Santiago Rodríguez",
+     "LM"
+    ],
+    [
+     "317021",
+     "Mohamed Farsi",
+     "RM"
+    ],
+    [
+     "297128",
+     "Gonzalo Tapia",
+     "CF-L"
+    ],
+    [
+     "362812",
+     "Taha Habroune",
+     "CF-R"
+    ]
+   ],
+   "D.C. United": [
+    [
+     "217514",
+     "Alex Bono",
+     "G"
+    ],
+    [
+     "228416",
+     "Kye Rowles",
+     "CD-L"
+    ],
+    [
+     "333699",
+     "Lucas Bartlett",
+     "CD-R"
+    ],
+    [
+     "288348",
+     "Keisuke Kurokawa",
+     "LB"
+    ],
+    [
+     "227891",
+     "Silvan Hefti",
+     "RB"
+    ],
+    [
+     "227789",
+     "Andre Dozzell",
+     "CM-L"
+    ],
+    [
+     "320300",
+     "Matti Peltola",
+     "CM-R"
+    ],
+    [
+     "271884",
+     "Jared Stroud",
+     "LM"
+    ],
+    [
+     "379749",
+     "Kimito Nono",
+     "RM"
+    ],
+    [
+     "297079",
+     "João Peglow",
+     "CF-L"
+    ],
+    [
+     "340613",
+     "Nathan Ordaz",
+     "CF-R"
     ]
    ]
   }
@@ -177,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    275,
-    165
+    120,
+    270,
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -145
+    110,
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
-     -170
+     -160
+    ]
+   ]
+  },
+  "alineaciones": {
+   "FC Cincinnati": [
+    [
+     "232755",
+     "Teenage Hadebe",
+     "SUB"
+    ],
+    [
+     "315972",
+     "Roman Celentano",
+     "SUB"
+    ],
+    [
+     "201354",
+     "Nick Hagglund",
+     "SUB"
+    ],
+    [
+     "275106",
+     "Obinna Nwobodo",
+     "SUB"
+    ],
+    [
+     "236049",
+     "Bryan Ramirez",
+     "SUB"
+    ],
+    [
+     "388854",
+     "Kenji Mboma Dem",
+     "SUB"
+    ],
+    [
+     "249926",
+     "Tom Barlow",
+     "SUB"
+    ],
+    [
+     "363908",
+     "Samuel Gidi",
+     "SUB"
+    ],
+    [
+     "279180",
+     "Pavel Bucha",
+     "SUB"
+    ],
+    [
+     "236641",
+     "Kyle Smith",
+     "SUB"
+    ],
+    [
+     "251694",
+     "Kévin Denkey",
+     "SUB"
+    ]
+   ],
+   "Philadelphia Union": [
+    [
+     "186943",
+     "Andre Blake",
+     "G"
+    ],
+    [
+     "286778",
+     "Nathan Harriel",
+     "D"
+    ],
+    [
+     "366034",
+     "Frankie Westfield",
+     "D"
+    ],
+    [
+     "261317",
+     "Kai Wagner",
+     "D"
+    ],
+    [
+     "366558",
+     "Neil Pierre",
+     "D"
+    ],
+    [
+     "304130",
+     "Quinn Sullivan",
+     "M"
+    ],
+    [
+     "288060",
+     "Ben Bender",
+     "M"
+    ],
+    [
+     "266026",
+     "Indiana Vassilev",
+     "M"
+    ],
+    [
+     "322063",
+     "Jovan Lukic",
+     "M"
+    ],
+    [
+     "322680",
+     "Bruno Damiani",
+     "F"
+    ],
+    [
+     "399426",
+     "Ezekiel Alladoh",
+     "F"
     ]
    ]
   }
@@ -210,23 +458,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -245,
-    370,
+    -240,
+    350,
     550
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    140,
-    -175
+    -180,
+    140
    ],
    "spread": [
     [
      "-1.5",
-     105
+     110
     ],
     [
      "+1.5",
-     -145
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "New York City FC": [
+    [
+     "252974",
+     "Matt Freese",
+     "G"
+    ],
+    [
+     "258855",
+     "James Sands",
+     "CD-L"
+    ],
+    [
+     "185792",
+     "Thiago Martins",
+     "CD-R"
+    ],
+    [
+     "254450",
+     "Kevin O'Toole",
+     "LB"
+    ],
+    [
+     "297380",
+     "Tayvon Gray",
+     "RB"
+    ],
+    [
+     "108107",
+     "Nicolás Fernández",
+     "CM"
+    ],
+    [
+     "259199",
+     "Andrés Perea",
+     "LM"
+    ],
+    [
+     "358680",
+     "Jonathan Shore",
+     "RM"
+    ],
+    [
+     "288930",
+     "Talles Magno",
+     "F"
+    ],
+    [
+     "312850",
+     "Bénie Traoré",
+     "LF"
+    ],
+    [
+     "337149",
+     "Agustin Ojeda",
+     "RF"
+    ]
+   ],
+   "CF Montréal": [
+    [
+     "413767",
+     "Samsy Keita",
+     "G"
+    ],
+    [
+     "270238",
+     "Brayan Vera",
+     "CD-L"
+    ],
+    [
+     "304135",
+     "Brandan Craig",
+     "CD-R"
+    ],
+    [
+     "355245",
+     "Viktor Radojevic",
+     "LB"
+    ],
+    [
+     "364675",
+     "Dawid Bugaj",
+     "RB"
+    ],
+    [
+     "377044",
+     "Olger Escobar",
+     "AM"
+    ],
+    [
+     "316077",
+     "Dani Pereira",
+     "LM"
+    ],
+    [
+     "87387",
+     "Samuel Piette",
+     "RM"
+    ],
+    [
+     "92055",
+     "Alexis Sánchez",
+     "F"
+    ],
+    [
+     "315924",
+     "Wikelman Carmona",
+     "AM-L"
+    ],
+    [
+     "384984",
+     "Hennadii Synchuk",
+     "AM-R"
     ]
    ]
   }
@@ -249,7 +613,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    120,
     -150
    ],
    "spread": [
@@ -276,23 +640,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
+    -135,
     330,
-    250
+    270
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    -110,
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -145
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
@@ -481,7 +845,7 @@
    "ou_linea": 3.5,
    "ou": [
     115,
-    -150
+    -145
    ],
    "spread": [
     [
@@ -573,23 +937,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
+    -130,
     285,
-    275
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
     -175,
-    135
+    140
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -135
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }

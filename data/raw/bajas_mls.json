@@ -1,7 +1,7 @@
 {
 "761922": {
 "fotmob": 5071470,
-"visto": "2026-10-31T17:05+00:00",
+"visto": "2026-10-31T18:00+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -101,8 +101,8 @@
 },
 "761924": {
 "fotmob": 5071472,
-"visto": "2026-10-31T17:05+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-31T18:00+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -131,20 +131,11 @@
 "valor": 50000.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Eric Bailly",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 467778.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 29391977.0,
-"perdida": 0.1756730756832043,
-"perdida_duda": 0.26716964292670753
+"valor_xi": 29208875.0,
+"perdida": 0.17677431944914004,
+"perdida_duda": 0.2688444522426831
 },
 "visita": {
 "faltan": [
@@ -155,15 +146,6 @@
 "duda": false,
 "valor": 6068748.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Sean Johnson",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 103334.0,
-"titular": true,
 "importante": true
 },
 {
@@ -192,17 +174,26 @@
 "valor": 146632.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Sean Johnson",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 103334.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 9994584.0,
-"perdida": 0.6175426611052546,
-"perdida_duda": 0.5199135851977431
+"valor_xi": 9941250.0,
+"perdida": 0.6104612599019238,
+"perdida_duda": 0.5227028794165723
 }
 },
 "761919": {
 "fotmob": 5071471,
-"visto": "2026-10-31T17:05+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-31T18:00+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -233,21 +224,12 @@
 "importante": false
 }
 ],
-"valor_xi": 38479858.0,
-"perdida": 0.10159819196837992,
+"valor_xi": 23651867.0,
+"perdida": 0.1652928286802898,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Cavan Sullivan",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 7153903.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Milan Iloski",
 "tipo": "Lesión",
@@ -263,7 +245,7 @@
 "regreso": "hasta el 31 de octubre",
 "duda": false,
 "valor": 1820348.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -272,15 +254,6 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 1033777.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Jesús Bueno",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 246196.0,
 "titular": false,
 "importante": false
 },
@@ -292,26 +265,17 @@
 "valor": 50000.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Geiner Martínez",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 464629.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 21962435.0,
-"perdida": 0.553722390071957,
+"valor_xi": 21775759.0,
+"perdida": 0.1824695065738007,
 "perdida_duda": 0.0
 }
 },
 "761930": {
 "fotmob": 5071474,
-"visto": "2026-10-31T17:05+00:00",
-"xi": "lastStarting11",
+"visto": "2026-10-31T18:00+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -320,16 +284,7 @@
 "regreso": "unas semanas",
 "duda": false,
 "valor": 3927905.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Aiden O'Neill",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1799053.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -367,11 +322,20 @@
 "valor": 85187.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Aiden O'Neill",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1799053.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 37850496.0,
-"perdida": 0.10377420153225997,
-"perdida_duda": 0.04753049999661827
+"valor_xi": 43232604.0,
+"perdida": 0.09085515644627837,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -421,14 +385,14 @@
 "importante": true
 }
 ],
-"valor_xi": 11714218.0,
-"perdida": 0.6171532747640517,
+"valor_xi": 13411664.0,
+"perdida": 0.5390433282551665,
 "perdida_duda": 0.0
 }
 },
 "761928": {
 "fotmob": 5071476,
-"visto": "2026-10-31T17:05+00:00",
+"visto": "2026-10-31T18:00+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -528,7 +492,7 @@
 },
 "761926": {
 "fotmob": 5071479,
-"visto": "2026-10-31T17:05+00:00",
+"visto": "2026-10-31T18:00+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -592,7 +556,7 @@
 },
 "761925": {
 "fotmob": 5071477,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-10-31T18:00+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -620,6 +584,15 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 114729.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Maya Yoshida",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 59700.0,
 "titular": false,
 "importante": false
 }
@@ -665,7 +638,7 @@
 },
 "761929": {
 "fotmob": 5071478,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-10-31T18:00+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -722,6 +695,15 @@
 "importante": true
 },
 {
+"nombre": "Morgan Guilavogui",
+"tipo": "Sanción",
+"regreso": "hasta el 31 de octubre",
+"duda": false,
+"valor": 2270210.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Emeka Eneli",
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
@@ -750,7 +732,7 @@
 }
 ],
 "valor_xi": 15777411.0,
-"perdida": 0.4813124282558146,
+"perdida": 0.6252023224849755,
 "perdida_duda": 0.110845499302769
 }
 },

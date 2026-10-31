@@ -1,163 +1,20 @@
 [
  {
-  "id": "401883148",
-  "utc": "2026-10-31T15:15Z",
-  "estadio": "Ipurua",
-  "local_espn": "Eibar",
-  "visita_espn": "Almería",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    135,
-    260,
-    185
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     120
-    ],
-    [
-     "+0.5",
-     -170
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Eibar": [
-    [
-     "347412",
-     "Malcom Adu Ares",
-     "SUB"
-    ],
-    [
-     "331283",
-     "Iván Gil",
-     "SUB"
-    ],
-    [
-     "150806",
-     "Anaitz Arbilla",
-     "SUB"
-    ],
-    [
-     "367721",
-     "Ander Madariaga",
-     "SUB"
-    ],
-    [
-     "361257",
-     "Aleix Garrido",
-     "SUB"
-    ],
-    [
-     "271822",
-     "Peru Nolaskoain",
-     "SUB"
-    ],
-    [
-     "234335",
-     "Jon Bautista",
-     "SUB"
-    ],
-    [
-     "164194",
-     "Juan Bernat",
-     "SUB"
-    ],
-    [
-     "290751",
-     "Jon Mikel Magunagoitia",
-     "SUB"
-    ],
-    [
-     "251661",
-     "Álvaro Rodríguez Pérez",
-     "SUB"
-    ],
-    [
-     "376033",
-     "Jon Guruzeta",
-     "SUB"
-    ]
-   ],
-   "Almería": [
-    [
-     "87897",
-     "Andrés Fernández",
-     "G"
-    ],
-    [
-     "152557",
-     "Jorge Pulido",
-     "D"
-    ],
-    [
-     "214275",
-     "Javi Muñoz",
-     "D"
-    ],
-    [
-     "347438",
-     "Marcos Luna Marcos Ruiz",
-     "D"
-    ],
-    [
-     "178896",
-     "Álex Muñoz",
-     "D"
-    ],
-    [
-     "352285",
-     "Brian Cipenga",
-     "M"
-    ],
-    [
-     "307917",
-     "Sergio Arribas",
-     "M"
-    ],
-    [
-     "389437",
-     "Stefan Dzodic",
-     "M"
-    ],
-    [
-     "376425",
-     "Quim Junyent",
-     "M"
-    ],
-    [
-     "283833",
-     "Federico Bonini",
-     "M"
-    ],
-    [
-     "277717",
-     "Miguel de la Fuente",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401883307",
   "utc": "2026-10-31T17:30Z",
   "estadio": "Balaidos",
   "local_espn": "RC Celta Fortuna",
   "visita_espn": "Córdoba",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
   "alineaciones": {
    "RC Celta Fortuna": [
     [
@@ -386,13 +243,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    255,
-    230,
+    260,
+    235,
     105
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -110
    ],
    "spread": [
@@ -402,7 +259,7 @@
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
