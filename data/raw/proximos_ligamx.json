@@ -5,15 +5,31 @@
   "estadio": "Estadio Hidalgo",
   "local_espn": "Pachuca",
   "visita_espn": "Tigres UANL",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -105,
+    275,
+    265
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
   },
   "alineaciones": {
    "Pachuca": [
@@ -181,19 +197,19 @@
     380,
     550
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    130
+    135,
+    -185
    ],
    "spread": [
     [
      "-1.5",
-     115
+     110
     ],
     [
      "+1.5",
-     -160
+     -155
     ]
    ]
   }

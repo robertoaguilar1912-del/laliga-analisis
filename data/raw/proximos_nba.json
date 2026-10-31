@@ -38,10 +38,10 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Atlanta Hawks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "2-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    164,
-    -198
-   ],
-   "ml_abre": [
-    130,
-    -155
-   ],
-   "spread": [
-    5.5,
-    -118,
-    -5.5,
-    -102
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    239.5,
-    -108,
-    -112
-   ],
-   "total_abre": 239.5
-  }
+  "momios": null
  },
  {
   "id": "401909899",
@@ -110,24 +87,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -360,
-    285
+    -298,
+    240
    ],
    "ml_abre": [
     -440,
     340
    ],
    "spread": [
-    -9.5,
-    -105,
-    9.5,
-    -115
+    -7.5,
+    -115,
+    7.5,
+    -105
    ],
    "spread_abre": -10.5,
    "total": [
     229.5,
-    -110,
-    -110
+    -108,
+    -112
    ],
    "total_abre": 234.5
   }
@@ -223,15 +200,15 @@
    ],
    "spread": [
     -12.5,
-    -105,
+    -115,
     12.5,
-    -115
+    -105
    ],
    "spread_abre": -11.5,
    "total": [
-    228.5,
-    -115,
-    -105
+    230.5,
+    -108,
+    -112
    ],
    "total_abre": 227.5
   }
