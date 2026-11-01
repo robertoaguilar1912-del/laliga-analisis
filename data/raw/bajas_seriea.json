@@ -1,7 +1,7 @@
 {
 "401874782": {
 "fotmob": 5749734,
-"visto": "2026-11-01T15:06+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401874983": {
 "fotmob": 5749736,
-"visto": "2026-11-01T15:06+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -129,7 +129,7 @@
 },
 "401874968": {
 "fotmob": 5749737,
-"visto": "2026-11-01T15:06+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -220,7 +220,7 @@
 },
 "401874949": {
 "fotmob": 5749735,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -374,7 +374,7 @@
 },
 "401874963": {
 "fotmob": 5749738,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -465,7 +465,7 @@
 },
 "401874971": {
 "fotmob": 5749731,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -583,7 +583,7 @@
 },
 "401874815": {
 "fotmob": 5749749,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -683,7 +683,7 @@
 },
 "401874791": {
 "fotmob": 5749741,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -729,7 +729,7 @@
 },
 "401874811": {
 "fotmob": 5749748,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -829,7 +829,7 @@
 },
 "401874974": {
 "fotmob": 5749747,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -893,7 +893,7 @@
 },
 "401874803": {
 "fotmob": 5749740,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -975,7 +975,7 @@
 },
 "401874810": {
 "fotmob": 5749746,
-"visto": "2026-11-01T14:26+00:00",
+"visto": "2026-11-01T15:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1084,25 +1084,25 @@
 },
 "401875018": {
 "fotmob": 5749743,
-"visto": "2026-11-01T14:26+00:00",
-"xi": "standard",
+"visto": "2026-11-01T15:10+00:00",
+"xi": "unavailable",
 "local": {
 "faltan": [
-{
-"nombre": "Elias Havel",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Lorenzo Venturino",
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
-"valor": 0.0,
+"valor": 7423916.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Elias Havel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1687216.0,
 "titular": false,
 "importante": false
 }
@@ -1114,20 +1114,11 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Fikayo Tomori",
+"nombre": "Alexis Saelemaekers",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
+"regreso": "mediados de enero de 2027",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Ruben Loftus-Cheek",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 0.0,
+"valor": 20500097.0,
 "titular": false,
 "importante": false
 },
@@ -1136,7 +1127,7 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 17030634.0,
 "titular": false,
 "importante": false
 },
@@ -1145,16 +1136,25 @@
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
 "duda": false,
-"valor": 0.0,
+"valor": 16648271.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Alexis Saelemaekers",
+"nombre": "Fikayo Tomori",
 "tipo": "Lesión",
-"regreso": "mediados de enero de 2027",
+"regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 10253281.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ruben Loftus-Cheek",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 3226402.0,
 "titular": false,
 "importante": false
 },
@@ -1163,7 +1163,7 @@
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 578308.0,
 "titular": false,
 "importante": false
 }
@@ -1175,8 +1175,8 @@
 },
 "401874800": {
 "fotmob": 5749745,
-"visto": "2026-11-01T14:26+00:00",
-"xi": "standard",
+"visto": "2026-11-01T15:10+00:00",
+"xi": "unavailable",
 "local": {
 "faltan": [
 {
@@ -1184,16 +1184,7 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Yvan Kouadio Maye",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 0.0,
+"valor": 4152985.0,
 "titular": false,
 "importante": false
 },
@@ -1202,7 +1193,7 @@
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 16065742.0,
 "titular": false,
 "importante": false
 },
@@ -1211,7 +1202,16 @@
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
-"valor": 0.0,
+"valor": 2177470.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Yvan Kouadio Maye",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 613964.0,
 "titular": false,
 "importante": false
 }
@@ -1223,20 +1223,11 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Gianluca Gaetano",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Thomas Kristensen",
+"nombre": "Giacomo Raspadori",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 22306529.0,
 "titular": false,
 "importante": false
 },
@@ -1245,52 +1236,7 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Raoul Bellanova",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Sead Kolašinac",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Giacomo Raspadori",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Franck Kessié",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Thomas Pompei",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
+"valor": 20611149.0,
 "titular": false,
 "importante": false
 },
@@ -1299,7 +1245,61 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 17524973.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Raoul Bellanova",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 16775464.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Thomas Kristensen",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 14204176.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Franck Kessié",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 12672710.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gianluca Gaetano",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 8314645.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Sead Kolašinac",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1909358.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Thomas Pompei",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 548553.0,
 "titular": false,
 "importante": false
 },
@@ -1308,7 +1308,7 @@
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
-"valor": 0.0,
+"valor": 17293012.0,
 "titular": false,
 "importante": false
 }
