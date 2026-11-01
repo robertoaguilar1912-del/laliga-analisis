@@ -100,6 +100,16 @@ def main():
         inj = get('/injuries', league=L['api_football'], season=season)
         e['lesiones'] = inj.get('results'); e['lesiones_errores'] = inj.get('errors') or None
         out['ligas'][liga] = e
+    # muestra cruda de los mercados de Pinnacle y Bet365 en un partido (para leer los nombres exactos de cada valor)
+    o = get('/odds', league=39, season=inicio_temporada('premier').year)
+    for f in o.get('response') or []:
+        bks = [b for b in f.get('bookmakers') or [] if b.get('name') in ('Pinnacle', 'Bet365')]
+        if len(bks) == 2:
+            out['muestra'] = {'fixture': f.get('fixture'), 'update': f.get('update'),
+                              'casas': [{'name': b['name'], 'bets': [{'name': x.get('name'), 'values': x.get('values')} for x in b.get('bets') or []]} for b in bks]}
+            break
+    fx = get('/fixtures', league=39, season=inicio_temporada('premier').year, next=2)
+    out['muestra_fixtures'] = [{'fixture': f.get('fixture'), 'teams': f.get('teams')} for f in fx.get('response') or []]
     lv = get('/odds/live')
     out['en_vivo'] = {'partidos': len(lv.get('response') or []), 'errores': lv.get('errors') or None,
                       'mercados_ejemplo': sorted({b.get('name') for f in (lv.get('response') or [])[:5] for b in f.get('odds') or []})[:40]}
