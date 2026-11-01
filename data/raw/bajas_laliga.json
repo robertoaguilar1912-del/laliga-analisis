@@ -1,7 +1,7 @@
 {
 "401882821": {
 "fotmob": 5868116,
-"visto": "2026-11-01T14:10+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -83,7 +83,7 @@
 },
 "401882819": {
 "fotmob": 5868118,
-"visto": "2026-11-01T14:10+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -165,7 +165,7 @@
 },
 "401882823": {
 "fotmob": 5868114,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -256,7 +256,7 @@
 },
 "401882826": {
 "fotmob": 5868111,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -329,7 +329,7 @@
 },
 "401882824": {
 "fotmob": 5868113,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -411,7 +411,7 @@
 },
 "401882809": {
 "fotmob": 5868128,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -466,7 +466,7 @@
 },
 "401882812": {
 "fotmob": 5868125,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -557,7 +557,7 @@
 },
 "401882813": {
 "fotmob": 5868124,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -684,7 +684,7 @@
 },
 "401882811": {
 "fotmob": 5868126,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -757,7 +757,7 @@
 },
 "401882808": {
 "fotmob": 5868129,
-"visto": "2026-11-01T11:33+00:00",
+"visto": "2026-11-01T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -855,6 +855,70 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 2506810.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882814": {
+"fotmob": 5868123,
+"visto": "2026-11-01T14:26+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Marc Aguado",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 2227795.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pedro Bigas",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 445971.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Juan Hernández",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 19221216.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Facundo Bernal",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 8786590.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Júnior Firpo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2285642.0,
 "titular": false,
 "importante": false
 }
