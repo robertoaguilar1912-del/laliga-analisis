@@ -5,15 +5,15 @@
   "estadio": "Bravida Arena",
   "local_espn": "BK Häcken",
   "visita_espn": "IFK Göteborg",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    320,
-    340
+    -130,
+    310,
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -160
+     -140
     ],
     [
      "+0.5",
-     115
+     100
     ]
    ]
   },
@@ -143,304 +143,6 @@
     [
      "178330",
      "Sam Larsson",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
-  "id": "401842871",
-  "utc": "2026-11-01T15:30Z",
-  "estadio": "Boras Arena",
-  "local_espn": "IF Elfsborg",
-  "visita_espn": "Örgryte IS",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-allsvenskan",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -310,
-    450,
-    700
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    125,
-    -165
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -115
-    ],
-    [
-     "+1.5",
-     -120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "IF Elfsborg": [
-    [
-     "318008",
-     "Theo Sander",
-     "G"
-    ],
-    [
-     "258904",
-     "Thomas Isherwood",
-     "CD-L"
-    ],
-    [
-     "286729",
-     "Rasmus Wikstrom",
-     "CD-R"
-    ],
-    [
-     "134644",
-     "Niklas Hult",
-     "LB"
-    ],
-    [
-     "259529",
-     "Alexander Jensen",
-     "RB"
-    ],
-    [
-     "319174",
-     "Julius Beck",
-     "AM"
-    ],
-    [
-     "245883",
-     "Simon Olsson",
-     "LM"
-    ],
-    [
-     "305401",
-     "Júlíus Magnússon",
-     "RM"
-    ],
-    [
-     "388173",
-     "Leo Östman",
-     "F"
-    ],
-    [
-     "342093",
-     "Ari Sigurpálsson",
-     "AM-L"
-    ],
-    [
-     "173040",
-     "Simon Hedlund",
-     "AM-R"
-    ]
-   ],
-   "Örgryte IS": [
-    [
-     "334040",
-     "Hampus Gustafsson",
-     "G"
-    ],
-    [
-     "136804",
-     "Mikael Dyrestam",
-     "CD"
-    ],
-    [
-     "414819",
-     "Christoffer Styffe",
-     "CD-L"
-    ],
-    [
-     "325346",
-     "Sebastian Lagerlund",
-     "CD-R"
-    ],
-    [
-     "202706",
-     "Anton Andreasson",
-     "LB"
-    ],
-    [
-     "414818",
-     "Daniel Paulson",
-     "RB"
-    ],
-    [
-     "334032",
-     "Charlie Rikard Vindehall",
-     "CM"
-    ],
-    [
-     "134075",
-     "Tobias Sana",
-     "CM-L"
-    ],
-    [
-     "228282",
-     "Owen Parker-Prince",
-     "CM-R"
-    ],
-    [
-     "414823",
-     "Liam Andersson",
-     "CF-L"
-    ],
-    [
-     "399425",
-     "William Hofvander",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
-  "id": "401842873",
-  "utc": "2026-11-01T15:30Z",
-  "estadio": "Hitachi Energy Arena",
-  "local_espn": "Västerås SK",
-  "visita_espn": "IF Brommapojkarna",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-allsvenskan",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -115,
-    285,
-    275
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -160,
-    120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -125
-    ],
-    [
-     "+0.5",
-     -110
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Västerås SK": [
-    [
-     "239936",
-     "Anton Fagerström",
-     "G"
-    ],
-    [
-     "247551",
-     "Frederic Nsabiyumva",
-     "CD"
-    ],
-    [
-     "378831",
-     "Herman Magnusson",
-     "CD-L"
-    ],
-    [
-     "416652",
-     "Philip Bonde",
-     "CD-R"
-    ],
-    [
-     "349208",
-     "Mamadou Diagné",
-     "CM-L"
-    ],
-    [
-     "286930",
-     "Ismet Lushaku",
-     "CM-R"
-    ],
-    [
-     "399509",
-     "Jonathan Karlsson",
-     "LM"
-    ],
-    [
-     "301373",
-     "Simon Gefvert",
-     "RM"
-    ],
-    [
-     "416653",
-     "Axel Taonsa",
-     "F"
-    ],
-    [
-     "313974",
-     "Abdelrahman Boudah Saidi",
-     "CF-L"
-    ],
-    [
-     "382562",
-     "Jens Magnusson",
-     "CF-R"
-    ]
-   ],
-   "IF Brommapojkarna": [
-    [
-     "146116",
-     "Davor Blazevic",
-     "G"
-    ],
-    [
-     "418563",
-     "Andreas Troelsen",
-     "CD-L"
-    ],
-    [
-     "418302",
-     "Jordan Simpson",
-     "CD-R"
-    ],
-    [
-     "313932",
-     "Oliver Zandén",
-     "LB"
-    ],
-    [
-     "399427",
-     "Oskar Cotton",
-     "RB"
-    ],
-    [
-     "356378",
-     "Wilmer Odefalk",
-     "CM-L"
-    ],
-    [
-     "347458",
-     "Kaare Barslund",
-     "CM-R"
-    ],
-    [
-     "357143",
-     "Anton Kurochkin",
-     "LM"
-    ],
-    [
-     "336115",
-     "Rasmus Örqvist",
-     "RM"
-    ],
-    [
-     "138055",
-     "Oliver Berg",
-     "CF-L"
-    ],
-    [
-     "298069",
-     "Mads Hansen",
      "CF-R"
     ]
    ]
