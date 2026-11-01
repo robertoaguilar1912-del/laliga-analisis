@@ -21,6 +21,7 @@ import construir
 import revisar
 import oddsapi
 import apifootball
+import af_historia
 from config import RAW, ESPN_DIR, LIGAS, ahora
 
 LIMITE_DESCARGA_S = 11 * 60     # la corrida completa tiene 20 min; el detalle que falte se baja en la siguiente
@@ -90,6 +91,8 @@ def main(modo):
             _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
         _paso('bajas FotMob', fuentes.descargar_bajas)
         _paso('momios de varias casas (API-Football)', apifootball.descargar)
+        # xG y minutos de los partidos que se jugaron desde la última vez (temporada actual; ver model.XG_PESO)
+        _paso('xG (API-Football)', af_historia.bajar, 400, None, 0)
         for liga in LIGAS:
             _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
         _paso('copas', fuentes.descargar_copas)

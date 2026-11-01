@@ -12,8 +12,6 @@ on:
   push:
     branches: [main]
     paths: ['src/af_historia.py', '.github/workflows/historia_af.yml']
-  schedule:
-    - cron: '23 10 * * *'      # 4:23 am en Honduras: completa lo que falte y suma los partidos del día anterior
 
 permissions:
   contents: write

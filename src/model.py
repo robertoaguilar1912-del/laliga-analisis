@@ -56,6 +56,26 @@ LOCAL_PROPIO_HL = 1500
 FORMA_N = 10
 FORMA_PESO = 0.124
 
+# xG de API-Football (plan Pro, ver xg.py y af_historia.py), en las 8 ligas de Europa y en Liga MX, MLS, Brasil, Argentina y
+# Suecia (las que tienen prueba; en las demás no se usa):
+# - XG_PESO: en lo que pasó en la cancha (antes de mezclarlo con lo que esperaba el mercado), 25% xG y 75% la mezcla de goles
+#   y remates a puerta de siempre.
+# - FORMA_XG: la forma reciente (ver FORMA_PESO) mitad con remates a puerta y mitad con xG en Europa; en América, donde
+#   football-data no trae remates, la forma sale solo del xG (antes ahí no había forma).
+# Afinado en 2024-25 (2024 en las ligas de año calendario) y probado en 2025-26 y lo que va de 2026-27 (1 nov 2026; 7,432
+# partidos de prueba, 85% con xG). Log loss, en diezmilésimas (negativo = mejor):
+#                    afinar 1X2 · más/menos 2.5        prueba 1X2 · más/menos 2.5
+#   Europa              −9.5 ± 4.5 · −10.9 ± 3.7            +1.6 ± 4.4 · −7.7 ± 3.8
+#   América            −16.7 ± 8.7 ·  +9.1 ± 7.1           −33.7 ± 8.3 · −15.9 ± 7.4
+# (forma solo con xG en Europa: 1X2 −9.9 y +7.8, peor; xG en el ajuste al 50% o 100%: más/menos igual, 1X2 peor en la prueba.)
+# Los PICK con EV de +5%: Europa contra la apertura de Bet365 de −8.8% a −3.4% (afinar) y −0.1% igual (prueba), el valor
+# contra el cierre igual (−4.1%); América contra el cierre de −17.2% a −18.4% y de −10.3% a −9.5%. Mejora la probabilidad
+# un poco; no cambia el resultado de las apuestas (scratchpad xg/ de la sesión del 1 nov 2026).
+XG_PESO = 0.25
+FORMA_XG = 0.5
+XG_LIGAS = {'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'ligue1', 'portugal',
+            'ligamx', 'mls', 'brasil', 'argentina', 'suecia'}
+
 
 # Corrección del 1X2 para las ligas de Europa (las que tienen tiros a puerta de football-data). Comparado con lo que pasó,
 # el modelo aprieta de más la diferencia entre local y visita (los favoritos ganan más de lo que dice) y le da al empate
@@ -82,7 +102,7 @@ def recalibrar(M, th=RECAL_1X2):
 
 class DixonColes:
     def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None, peso_mercado=0.0,
-                 local_propio=False, forma=False, xg_peso=0.0, forma_xg=False, forma_peso=FORMA_PESO):
+                 local_propio=False, forma=False, xg_peso=0.0, forma_xg=0.0, forma_peso=FORMA_PESO):
         self.half_life = half_life
         self.prior_sd = prior_sd
         self.alpha = alpha  # 1.0 = solo goles; <1 mezcla goles con tiros a puerta
@@ -90,8 +110,9 @@ class DixonColes:
         self.peso_mercado = peso_mercado  # 0 = no usa los momios; PESO_MERCADO en las ligas (columnas imp_l, imp_v)
         self.local_propio = local_propio  # ventaja de local de cada equipo (LOCAL_PROPIO_SD): MLS, Liga MX, Brasil, Argentina
         self.forma = forma                # forma reciente en remates a puerta (FORMA_PESO): las 8 ligas de Europa
-        # en prueba (nov 2026, sin usar en la página): xG de API-Football (columnas HxGa, AxGa, ver xg.py). xg_peso = cuánto pesa
-        # el xG en lo que pasó en la cancha (0 = como siempre, 1 = solo xG); forma_xg = la forma reciente con xG en vez de remates
+        # xG de API-Football (columnas HxGa, AxGa, ver xg.py y XG_PESO): xg_peso = cuánto pesa el xG en lo que pasó en la cancha
+        # (0 = como siempre, 1 = solo xG); forma_xg = parte de la forma reciente que sale del xG (0 = solo remates a puerta,
+        # 1 = solo xG; sin remates, o con forma=False, la forma sale solo del xG)
         self.xg_peso = xg_peso
         self.forma_xg = forma_xg
         self.forma_peso = forma_peso
@@ -185,10 +206,17 @@ class DixonColes:
         lam = np.exp(self.icpt + self.home + self.eta[h] + self.att[h] + self.dfn[a])
         mu = np.exp(self.icpt + self.att[a] + self.dfn[h] - self.eta[h])
         self.forma_f, self.forma_c = np.zeros(n), np.zeros(n)
-        if self.forma_xg and okx.sum() >= 30:
-            self._forma(matches, h, a, xh, xa, gx, gy, lam, mu, n)
-        elif self.forma and ok.sum() >= 30:
+        con_rem = self.forma and ok.sum() >= 30
+        if con_rem:
             self._forma(matches, h, a, hst, ast, gx, gy, lam, mu, n)
+        if self.forma_xg and okx.sum() >= 30:
+            f1, c1 = self.forma_f.copy(), self.forma_c.copy()
+            self.forma_f, self.forma_c = np.zeros(n), np.zeros(n)
+            self._forma(matches, h, a, xh, xa, gx, gy, lam, mu, n)
+            if con_rem:              # mitad y mitad (FORMA_XG) donde hay las dos; si un equipo no tiene xG, la de remates
+                wx, usa = float(self.forma_xg), (self.forma_f != 0) | (self.forma_c != 0)
+                self.forma_f = np.where(usa, (1 - wx) * f1 + wx * self.forma_f, f1)
+                self.forma_c = np.where(usa, (1 - wx) * c1 + wx * self.forma_c, c1)
         self.rho = self._fit_rho(gx, gy, lam, mu, w)
         return self
 

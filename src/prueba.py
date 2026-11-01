@@ -20,9 +20,10 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, PICK_P_MIN, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
-from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
+from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
 from mercado import implicitas
 from picks import GANA_MAX, SIN_MENOS_DIAS
+import xg
 
 VENTANA = 3 * 365
 DESDE = {'europa': '2020-08-01', 'torneos': '2020-07-01', 'anual': '2021-01-01'}
@@ -82,6 +83,9 @@ def cargar_historia_div(div):
 
 def predecir(liga):
     df = implicitas(cargar_historia(liga))       # goles que esperaba el mercado (cierre) de cada partido, para el ajuste
+    con_x = liga in XG_LIGAS                     # xG de API-Football (desde 2023 en casi todas; ver XG_PESO en model.py)
+    if con_x:
+        df = xg.unir(df, liga)
     promo = ascendidos(df)
     arriba = cargar_historia_div(LIGAS[liga]['descienden_de']) if LIGAS[liga].get('descienden_de') else None
     desde = pd.Timestamp(DESDE[LIGAS[liga].get('calendario', 'europa')])
@@ -101,7 +105,8 @@ def predecir(liga):
         con_m = hist.imp_l.notna().mean() >= 0.5
         m = DixonColes(recal=RECAL_1X2 if LIGAS[liga].get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
                        half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE, local_propio=con_m and bool(LIGAS[liga].get('fd_extra')),
-                       forma=con_m and bool(LIGAS[liga].get('fd'))).fit(hist, d0, promoted=nuevos)
+                       forma=con_m and bool(LIGAS[liga].get('fd')), xg_peso=XG_PESO if con_x else 0.0,
+                       forma_xg=FORMA_XG if con_x else 0.0).fit(hist, d0, promoted=nuevos)
         for i, r in dia.iterrows():
             if r.HomeTeam not in m.idx or r.AwayTeam not in m.idx:
                 continue

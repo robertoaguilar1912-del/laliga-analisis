@@ -17,13 +17,14 @@ import pandas as pd
 from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
-from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO
+from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
 from mercado import implicitas
 from picks import un_pick_por_familia, reglas_europa, inicio_copa_uefa, GANA_MAX, GANA_MAX_COPAS, SIN_MENOS_DIAS
 from config import COPAS_UEFA
 from corners import CornerModel, RematesModel
 from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
+import xg
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -655,10 +656,18 @@ def analizar_liga(liga):
         # si la liga tiene momios de cierre; si no, como antes (solo goles y tiros a puerta, vida media de un año)
         hist = implicitas(hist)
         con_m = hist.imp_l.notna().mean() >= 0.5
+        con_x = liga in XG_LIGAS      # xG de API-Football en el ajuste y en la forma reciente (ver XG_PESO en model.py)
+        if con_x:
+            try:
+                hist = xg.unir(hist, liga)
+            except Exception as e:    # sin el xG el modelo sigue como antes
+                print(f'  xG {liga}: {e!r}')
+                con_x = False
         # con momios: ventaja de local de cada equipo en América y forma en remates a puerta en Europa (ver model.py)
         modelo = DixonColes(recal=RECAL_1X2 if L.get('fd') else None, peso_mercado=PESO_MERCADO if con_m else 0.0,
                             half_life=HALF_LIFE_MERCADO if con_m else HALF_LIFE,
-                            local_propio=con_m and bool(L.get('fd_extra')), forma=con_m and bool(L.get('fd'))).fit(hist, ref, promoted=nuevos)
+                            local_propio=con_m and bool(L.get('fd_extra')), forma=con_m and bool(L.get('fd')),
+                            xg_peso=XG_PESO if con_x else 0.0, forma_xg=FORMA_XG if con_x else 0.0).fit(hist, ref, promoted=nuevos)
         hc = hist.dropna(subset=['HC', 'AC'])
         cmodel = CornerModel().fit(hc, ref, {t for t in nuevos if t in set(hc.HomeTeam) | set(hc.AwayTeam)}) if len(hc) >= 80 else None
         hs = hist.dropna(subset=['HST', 'AST'])
