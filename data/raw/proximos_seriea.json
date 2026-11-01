@@ -1,173 +1,24 @@
 [
  {
-  "id": "401875002",
-  "utc": "2026-11-01T11:30Z",
-  "estadio": "Giuseppe Sinigaglia",
-  "local_espn": "Como",
-  "visita_espn": "Venezia",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-italian-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -380,
-    450,
-    800
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    100,
-    -130
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -135
-    ],
-    [
-     "+1.5",
-     100
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Como": [
-    [
-     "214740",
-     "Jean Butez",
-     "G"
-    ],
-    [
-     "175887",
-     "Marc-Oliver Kempf",
-     "CD-L"
-    ],
-    [
-     "380318",
-     "Jacobo Ramón",
-     "CD-R"
-    ],
-    [
-     "317233",
-     "Kaiki",
-     "LB"
-    ],
-    [
-     "297084",
-     "Yan Couto",
-     "RB"
-    ],
-    [
-     "337970",
-     "Nico Paz",
-     "AM"
-    ],
-    [
-     "276822",
-     "Samuele Ricci",
-     "LM"
-    ],
-    [
-     "264211",
-     "Luis Milla",
-     "RM"
-    ],
-    [
-     "262071",
-     "Anastasios Douvikas",
-     "F"
-    ],
-    [
-     "311475",
-     "Martin Baturina",
-     "AM-L"
-    ],
-    [
-     "291285",
-     "Lucas Da Cunha",
-     "AM-R"
-    ]
-   ],
-   "Venezia": [
-    [
-     "289560",
-     "Filip Stankovic",
-     "G"
-    ],
-    [
-     "170663",
-     "Juan Jesus",
-     "CD"
-    ],
-    [
-     "186457",
-     "Matías Moreno",
-     "CD-L"
-    ],
-    [
-     "328300",
-     "Redouane Halhal",
-     "CD-R"
-    ],
-    [
-     "275227",
-     "Thorir Johann Helgason",
-     "CM-L"
-    ],
-    [
-     "275015",
-     "Simon Sohm",
-     "CM-R"
-    ],
-    [
-     "263705",
-     "Gianluca Busio",
-     "AM"
-    ],
-    [
-     "260188",
-     "Pasquale Mazzocchi",
-     "LM"
-    ],
-    [
-     "346916",
-     "Antoine Hainaut",
-     "RM"
-    ],
-    [
-     "288472",
-     "Akor Adams",
-     "CF-L"
-    ],
-    [
-     "259357",
-     "Lion Lauberbach",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401874782",
   "utc": "2026-11-01T14:00Z",
   "estadio": "Stadio Benito Stirpe",
   "local_espn": "Frosinone",
   "visita_espn": "Torino",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     105,
-    275,
-    210
+    280,
+    205
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -125
+    -115,
+    -110
    ],
    "spread": [
     [
@@ -303,29 +154,29 @@
   "estadio": "Olimpico",
   "local_espn": "Lazio",
   "visita_espn": "Cagliari",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    310,
+    -215,
+    320,
     500
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    105
+    -145,
+    115
    ],
    "spread": [
     [
      "-1.5",
-     145
+     135
     ],
     [
      "+1.5",
-     -205
+     -190
     ]
    ]
   },
@@ -458,8 +309,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    190,
+    210,
+    185,
     145
    ],
    "ou_linea": 2.5,
@@ -470,11 +321,11 @@
    "spread": [
     [
      "+0.5",
-     -200
+     -190
     ],
     [
      "-0.5",
-     140
+     135
     ]
    ]
   }
@@ -642,7 +493,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401875018",
@@ -653,7 +510,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401874800",
@@ -675,7 +538,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "401875003",
@@ -686,6 +555,12 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  }
 ]
