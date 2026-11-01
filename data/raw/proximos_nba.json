@@ -9,7 +9,7 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Orlando Magic",
   "visita_espn": "Boston Celtics",
   "revisado": false,
@@ -38,10 +38,10 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Indiana Pacers",
   "visita_espn": "Brooklyn Nets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "0-2"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -170,
-    142
-   ],
-   "ml_abre": [
-    -162,
-    136
-   ],
-   "spread": [
-    -3.5,
-    -112,
-    3.5,
-    -108
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    230.5,
-    -112,
-    -108
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909905",

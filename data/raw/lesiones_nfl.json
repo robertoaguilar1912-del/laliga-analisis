@@ -1,9 +1,23 @@
 {
  "Arizona Cardinals": [
   {
+   "nombre": "Bam Knight",
+   "pos": "RB",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Concussion"
+  },
+  {
    "nombre": "Jeremiyah Love",
    "pos": "RB",
-   "estado": "Out",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "Kendrick Bourne",
+   "pos": "WR",
+   "estado": "Questionable",
    "fecha": "2026-11-01",
    "tipo": "Ankle"
   },
@@ -20,20 +34,6 @@
    "estado": "Active",
    "fecha": "2026-11-01",
    "tipo": ""
-  },
-  {
-   "nombre": "Bam Knight",
-   "pos": "RB",
-   "estado": "Out",
-   "fecha": "2026-11-01",
-   "tipo": "Concussion"
-  },
-  {
-   "nombre": "Kendrick Bourne",
-   "pos": "WR",
-   "estado": "Out",
-   "fecha": "2026-11-01",
-   "tipo": "Ankle"
   },
   {
    "nombre": "Max Melton",
@@ -355,13 +355,6 @@
  ],
  "Baltimore Ravens": [
   {
-   "nombre": "Nate Wiggins",
-   "pos": "CB",
-   "estado": "Questionable",
-   "fecha": "2026-11-01",
-   "tipo": "Neck"
-  },
-  {
    "nombre": "Tyler Huntley",
    "pos": "QB",
    "estado": "Questionable",
@@ -374,6 +367,13 @@
    "estado": "Out",
    "fecha": "2026-11-01",
    "tipo": "Thumb"
+  },
+  {
+   "nombre": "Nate Wiggins",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Neck"
   },
   {
    "nombre": "T.J. Tampa",
@@ -543,7 +543,7 @@
    "pos": "WR",
    "estado": "Questionable",
    "fecha": "2026-11-01",
-   "tipo": "Undisclosed"
+   "tipo": "Knee"
   },
   {
    "nombre": "James Cook III",
@@ -1426,7 +1426,7 @@
   {
    "nombre": "Jake Ferguson",
    "pos": "TE",
-   "estado": "Out",
+   "estado": "Questionable",
    "fecha": "2026-11-01",
    "tipo": "Ankle"
   },
@@ -1771,6 +1771,13 @@
  ],
  "Detroit Lions": [
   {
+   "nombre": "Jahmyr Gibbs",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Jimmy Rolder",
    "pos": "LB",
    "estado": "Questionable",
@@ -1892,13 +1899,6 @@
   {
    "nombre": "Tyleik Williams",
    "pos": "DT",
-   "estado": "Active",
-   "fecha": "2026-10-29",
-   "tipo": ""
-  },
-  {
-   "nombre": "Jahmyr Gibbs",
-   "pos": "RB",
    "estado": "Active",
    "fecha": "2026-10-29",
    "tipo": ""
@@ -2302,6 +2302,13 @@
  ],
  "Indianapolis Colts": [
   {
+   "nombre": "Daniel Jones",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Riley Leonard",
    "pos": "QB",
    "estado": "Out",
@@ -2467,13 +2474,6 @@
    "pos": "RB",
    "estado": "Active",
    "fecha": "2026-10-27",
-   "tipo": ""
-  },
-  {
-   "nombre": "Keenan Allen",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-26",
    "tipo": ""
   }
  ],
@@ -4249,6 +4249,27 @@
  ],
  "New York Jets": [
   {
+   "nombre": "Adonai Mitchell",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
+   "nombre": "Garrett Wilson",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
+   "nombre": "Braelon Allen",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Dylan Parham",
    "pos": "G",
    "estado": "Active",
@@ -4305,13 +4326,6 @@
    "tipo": "Quadriceps"
   },
   {
-   "nombre": "Braelon Allen",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-11-01",
-   "tipo": ""
-  },
-  {
    "nombre": "T'Vondre Sweat",
    "pos": "DT",
    "estado": "Injured Reserve",
@@ -4323,13 +4337,6 @@
    "pos": "RB",
    "estado": "Active",
    "fecha": "2026-10-29",
-   "tipo": ""
-  },
-  {
-   "nombre": "Garrett Wilson",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-28",
    "tipo": ""
   },
   {
@@ -4358,13 +4365,6 @@
    "pos": "S",
    "estado": "Active",
    "fecha": "2026-10-28",
-   "tipo": ""
-  },
-  {
-   "nombre": "Adonai Mitchell",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-27",
    "tipo": ""
   },
   {

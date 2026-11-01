@@ -524,15 +524,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     // con línea de la casa: curvas centradas en la línea de la casa movida hacia el modelo (dist_mc/dist_tc, MEZCLA en nfl.py)
     const pM = g.dist_mc ? (f => g.dist_mc.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0)) : (f => probM(g, f));
     const pT = g.dist_tc ? (f => g.dist_tc.reduce((a, p, i) => a + (f(i + 10) ? p : 0), 0)) : (f => probT(g, f));
-    if (tipo === 'ML1') { gana = probM(g, k => k > 0); push = probM(g, k => k === 0); }
-    else if (tipo === 'ML2') { gana = probM(g, k => k < 0); push = probM(g, k => k === 0); }
+    // ganador (desde el 1 nov 2026): con línea de la casa, su curva movida hacia el modelo (dist_mml, MEZCLA['Moneyline'] en nfl.py)
+    const pML = g.dist_mml ? (f => g.dist_mml.reduce((a, p, i) => a + (f(i - 50) ? p : 0), 0)) : (f => probM(g, f));
+    if (tipo === 'ML1') { gana = pML(k => k > 0); push = pML(k => k === 0); }
+    else if (tipo === 'ML2') { gana = pML(k => k < 0); push = pML(k => k === 0); }
     else if (tipo === 'H1') { gana = pM(k => k + linea > 0); push = pM(k => k + linea === 0); }
     else if (tipo === 'H2') { gana = pM(k => -k + linea > 0); push = pM(k => -k + linea === 0); }
     else if (tipo === 'O') { gana = pT(t => t > linea); push = pT(t => t === linea); }
     else { gana = pT(t => t < linea); push = pT(t => t === linea); }
     const pierde = Math.max(0, 1 - gana - push);
     const r = { gana, push, pierde, p: gana / Math.max(gana + pierde, 1e-9) };
-    return /^ML/.test(tipo) ? ajustar(r, tipo) : (/^H/.test(tipo) ? g.dist_mc : g.dist_tc) ? r : ajustar(r, tipo);
+    return /^ML/.test(tipo) ? (g.dist_mml ? r : ajustar(r, tipo)) : (/^H/.test(tipo) ? g.dist_mc : g.dist_tc) ? r : ajustar(r, tipo);
   }
 
   // ---------------- lista de juegos
