@@ -609,6 +609,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       ? `En la prueba con temporadas pasadas de ${I.nombre}, seguirlos perdió dinero (${spct(PRINCIPAL.roi)}; pestaña "El modelo"). Úsalos como información y compara siempre con el momio de tu casa.`
       : `En la prueba con temporadas pasadas de ${I.nombre} salió ${spct(PRINCIPAL.roi)}, ${PRINCIPAL.roi_ic95 && PRINCIPAL.roi_ic95[0] < 0 ? 'pero el rango probable incluye perder: puede ser suerte' : 'aunque lo pasado no garantiza lo que viene'} (pestaña "El modelo"). Compara siempre con el momio de tu casa.`);
   if (M.some(m => m.bajas)) $('#p-warning').textContent += ' Las bajas (FotMob) ya están en la probabilidad del modelo, con lo que el mercado suele moverse por ellas.';
+  if (M.some(m => m.alineacion)) $('#p-warning').textContent += ' Con el once confirmado, también los titulares habituales que el técnico deja afuera.';
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
   // ---------------- navegación
@@ -647,7 +648,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const sancFM = (lado, n) => { const B = m.bajas && m.bajas[lado]; return B ? B.faltan.some(f => f.tipo === 'Sanción' && f.nombre.split(' ').pop() === n.split(' ').pop()) : false; };
     const alerts = [...th.sancionados.filter(s => !sancFM('local', s.nombre)).map(s => `${m.local_es}: ${s.nombre} sancionado`),
                     ...ta.sancionados.filter(s => !sancFM('visita', s.nombre)).map(s => `${m.visita_es}: ${s.nombre} sancionado`),
-                    ...bajasTxt('local', m.local_es, th), ...bajasTxt('visita', m.visita_es, ta)];
+                    ...bajasTxt('local', m.local_es, th), ...bajasTxt('visita', m.visita_es, ta),
+                    ...(m.alineacion ? [['local', m.local_es], ['visita', m.visita_es]].filter(([l]) => m.alineacion[l] && m.alineacion[l].rot >= 0.08)
+                      .map(([l, n]) => `${n}: deja afuera a ${m.alineacion[l].afuera.slice(0, 3).join(', ')}${m.alineacion[l].afuera.length > 3 ? ' y más' : ''} (titulares habituales)`) : [])];
     const rev = m.con_momio.filter(r => r.veredicto === 'REVISAR').sort((a, b) => b.ev - a.ev)[0];
     const nextExtra = (t, name) => { const x = (t.proximos_extra || []).find(e => e.fecha > m.utc.slice(0, 10)); const d = x ? daysBetween(m.utc.slice(0, 10), x.fecha) : 99; return x && d <= 5 ? `${name} juega ${x.comp} ${d} días después` : null; };
     const nMias = mias.filter(b => b.id === m.id).length;
@@ -1171,15 +1174,19 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const bajasK = k => { const l = ladoK(k); return l && m.bajas ? m.bajas[l] : null; };
     const vB = v => v;
     const avisoBajas = k => {
-      const l = ladoK(k), B = bajasK(k), imp = B ? B.faltan.filter(f => f.importante) : [];
-      if (!l || !m.bajas) return '';
-      const otro = l === 'local' ? 'visita' : 'local', Bo = m.bajas[otro], impO = Bo ? Bo.faltan.filter(f => f.importante) : [];
+      const l = ladoK(k);
+      if (!l || !(m.bajas || m.alineacion)) return '';
+      const otro = l === 'local' ? 'visita' : 'local';
       const lista = xs => esc(xs.slice(0, 3).map(f => f.nombre + (f.duda ? ' (en duda)' : '')).join(', ')) + (xs.length > 3 ? ` y ${xs.length - 3} más` : '');
       const eq = l === 'local' ? m.local_es : m.visita_es, eqO = l === 'local' ? m.visita_es : m.local_es;
-      if (!imp.length && !impO.length) return '';
-      const aj = m.bajas_ajuste, mov = aj ? aj[l] * 100 : 0;
+      const B = bajasK(k), imp = B ? B.faltan.filter(f => f.importante) : [], Bo = m.bajas && m.bajas[otro], impO = Bo ? Bo.faltan.filter(f => f.importante) : [];
       const partes = [imp.length ? `a ${esc(eq)} le falta${imp.length > 1 ? 'n' : ''} ${lista(imp)}` : '', impO.length ? `a ${esc(eqO)} le falta${impO.length > 1 ? 'n' : ''} ${lista(impO)}` : ''].filter(Boolean);
-      return `<br>Bajas (FotMob): ${partes.join('; ')}. ${Math.abs(mov) >= 0.05 ? `<b>El modelo ya las cuenta: le ${mov < 0 ? 'quitan' : 'suman'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya las cuenta; se compensan entre los dos equipos'}, lo que el mercado suele moverse por bajas así (30% más del once fuera que el rival ≈ 1 punto).`;
+      // once confirmado (API-Football): titulares habituales que el técnico dejó afuera, sin contar a los de baja
+      const A = m.alineacion, once = A ? [[eq, A[l]], [eqO, A[otro]]].filter(([, x]) => x && x.afuera.length && x.rot >= 0.04)
+        .map(([n, x]) => `${esc(n)} deja afuera a ${lista(x.afuera.map(nombre => ({ nombre })))} (${pct(x.rot)} de los minutos de su once habitual)`) : [];
+      if (!partes.length && !once.length) return '';
+      const aj = m.bajas_ajuste, mov = aj ? aj[l] * 100 : 0;
+      return `<br>${partes.length ? `Bajas (FotMob): ${partes.join('; ')}. ` : ''}${once.length ? `Once confirmado: ${once.join('; ')}. ` : ''}${Math.abs(mov) >= 0.05 ? `<b>El modelo ya lo cuenta: le ${mov < 0 ? 'quita' : 'suma'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya lo cuenta; se compensa entre los dos equipos'}, lo que el mercado suele moverse por esto (30% más del once de baja que el rival ≈ 1 punto; 3 titulares habituales afuera ≈ 1 punto).`;
     };
     const calc = () => {
       const o = elegido();
