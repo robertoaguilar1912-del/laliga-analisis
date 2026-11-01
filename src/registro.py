@@ -70,6 +70,57 @@ def archivar(picks, cierres, res, t):
     return quedan
 
 
+def _pareja(k):
+    """Las claves que se reparten la probabilidad con k (para quitarle el margen a Pinnacle)."""
+    if k in ('ML1', 'ML2'):
+        return ['ML1', 'ML2']
+    from apifootball import _grupo
+    return _grupo(k)
+
+
+def _justo(casa, k):
+    """Probabilidad sin margen de k en los momios de una casa ({clave: momio}), o None."""
+    from apifootball import norm_k
+    d = {norm_k(x): o for x, o in casa.items()}
+    k = norm_k(k)
+    g = _pareja(k)
+    if g and all(x in d for x in g):
+        return (1 / d[k]) / sum(1 / d[x] for x in g)
+    if k in ('1X', 'X2', '12') and all(x in d for x in '1X2'):
+        s = sum(1 / d[x] for x in '1X2')
+        return sum(1 / d[x] for x in k) / s
+    return None
+
+
+def pinnacle_cierre(picks, t):
+    """A cada PICK cuyo partido ya empezó le anota el precio justo de Pinnacle en la última foto antes de empezar ('pin_c',
+    probabilidad sin margen; 'pin_m', momio de Pinnacle si hay). El valor contra el cierre de Pinnacle es momio × pin_c − 1:
+    si sale positivo seguido, el modelo encuentra precios mejores que los de la casa más afilada (desde el 1 nov 2026 en el
+    fútbol con API-Football; la NFL y la NBA con The Odds API)."""
+    af = _leer(DATOS / 'cierres_af.json', {})
+    oa = _leer(DATOS / 'cierres_oddsapi.json', {})
+    n = 0
+    for r in picks:
+        if 'pin_c' in r or datetime.fromisoformat(r['utc'].replace('Z', '+00:00')) > t:
+            continue
+        liga = r.get('liga', 'laliga')
+        c = ((oa if liga in ('nba', 'nfl') else af).get(liga) or {}).get(str(r['id']))
+        pin = ((c or {}).get('casas') or {}).get('pinnacle')
+        if not pin:
+            continue
+        for k in (r['k'], EQUIVALENTE.get(r['k'], r['k']), *[a for a, b in EQUIVALENTE.items() if b == r['k']]):
+            p = _justo(pin, k)
+            if p:
+                r['pin_c'] = round(p, 4)
+                from apifootball import norm_k
+                m = {norm_k(x): o for x, o in pin.items()}.get(norm_k(k))
+                if m:
+                    r['pin_m'] = m
+                n += 1
+                break
+    return n
+
+
 def archivos():
     return sorted((p.stem for p in ARCHIVO.glob('*.json')), reverse=True) if ARCHIVO.exists() else []
 
@@ -273,6 +324,9 @@ def actualizar():
     reemplazados = marcar_reemplazados(picks)
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))
     res = resultados()
+    con_pin = pinnacle_cierre(picks, t)
+    if con_pin:
+        print(f'  registro: {con_pin} picks con el cierre de Pinnacle')
     picks = archivar(picks, cierres, res, t)       # cada mes empieza de cero; los meses pasados quedan en el archivo
     json.dump(picks, open(REG / 'modelo.json', 'w'), ensure_ascii=False, indent=1)
     json.dump(cierres, open(REG / 'cierres.json', 'w'), ensure_ascii=False, separators=(',', ':'))

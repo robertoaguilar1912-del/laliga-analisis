@@ -82,7 +82,7 @@ def recalibrar(M, th=RECAL_1X2):
 
 class DixonColes:
     def __init__(self, half_life=HALF_LIFE, prior_sd=PRIOR_SD, alpha=ALPHA, recal=None, peso_mercado=0.0,
-                 local_propio=False, forma=False):
+                 local_propio=False, forma=False, xg_peso=0.0, forma_xg=False, forma_peso=FORMA_PESO):
         self.half_life = half_life
         self.prior_sd = prior_sd
         self.alpha = alpha  # 1.0 = solo goles; <1 mezcla goles con tiros a puerta
@@ -90,6 +90,11 @@ class DixonColes:
         self.peso_mercado = peso_mercado  # 0 = no usa los momios; PESO_MERCADO en las ligas (columnas imp_l, imp_v)
         self.local_propio = local_propio  # ventaja de local de cada equipo (LOCAL_PROPIO_SD): MLS, Liga MX, Brasil, Argentina
         self.forma = forma                # forma reciente en remates a puerta (FORMA_PESO): las 8 ligas de Europa
+        # en prueba (nov 2026, sin usar en la página): xG de API-Football (columnas HxGa, AxGa, ver xg.py). xg_peso = cuánto pesa
+        # el xG en lo que pasó en la cancha (0 = como siempre, 1 = solo xG); forma_xg = la forma reciente con xG en vez de remates
+        self.xg_peso = xg_peso
+        self.forma_xg = forma_xg
+        self.forma_peso = forma_peso
 
     # ------------------------------------------------------------------ ajuste
     def fit(self, matches, ref_date, promoted=()):
@@ -113,6 +118,12 @@ class DixonColes:
             y = np.where(ok, self.alpha * gy + (1 - self.alpha) * c * np.nan_to_num(ast), gy)
         else:
             x, y = gx, gy
+        xh = matches.HxGa.values.astype(float) if 'HxGa' in matches else np.full(len(matches), np.nan)
+        xa = matches.AxGa.values.astype(float) if 'AxGa' in matches else np.full(len(matches), np.nan)
+        okx = np.isfinite(xh) & np.isfinite(xa)
+        if self.xg_peso and okx.sum() >= 30:
+            x = np.where(okx, (1 - self.xg_peso) * x + self.xg_peso * np.nan_to_num(xh), x)
+            y = np.where(okx, (1 - self.xg_peso) * y + self.xg_peso * np.nan_to_num(xa), y)
         days = (ref_date - matches.Date).dt.days.values.astype(float)
         w = np.exp(-np.log(2) * days / self.half_life)
         # lo que esperaba el mercado de cada partido jugado (si hay momios): tiene mucho menos ruido que los goles
@@ -174,7 +185,9 @@ class DixonColes:
         lam = np.exp(self.icpt + self.home + self.eta[h] + self.att[h] + self.dfn[a])
         mu = np.exp(self.icpt + self.att[a] + self.dfn[h] - self.eta[h])
         self.forma_f, self.forma_c = np.zeros(n), np.zeros(n)
-        if self.forma and ok.sum() >= 30:
+        if self.forma_xg and okx.sum() >= 30:
+            self._forma(matches, h, a, xh, xa, gx, gy, lam, mu, n)
+        elif self.forma and ok.sum() >= 30:
             self._forma(matches, h, a, hst, ast, gx, gy, lam, mu, n)
         self.rho = self._fit_rho(gx, gy, lam, mu, w)
         return self
@@ -211,8 +224,9 @@ class DixonColes:
     # --------------------------------------------------------------- predicción
     def rates(self, home, away):
         i, j = self.idx[home], self.idx[away]
-        lam = np.exp(self.icpt + self.home + self.eta[i] + self.att[i] + self.dfn[j] + FORMA_PESO * (self.forma_f[i] + self.forma_c[j]))
-        mu = np.exp(self.icpt + self.att[j] + self.dfn[i] - self.eta[i] + FORMA_PESO * (self.forma_f[j] + self.forma_c[i]))
+        fp = self.forma_peso
+        lam = np.exp(self.icpt + self.home + self.eta[i] + self.att[i] + self.dfn[j] + fp * (self.forma_f[i] + self.forma_c[j]))
+        mu = np.exp(self.icpt + self.att[j] + self.dfn[i] - self.eta[i] + fp * (self.forma_f[j] + self.forma_c[i]))
         return lam, mu
 
     def score_matrix(self, home, away):

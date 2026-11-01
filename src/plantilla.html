@@ -1585,11 +1585,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   function filaHTML(x, mia) {
     const b = x.bet, e = x.e, r = e.r, cie = cierreDe(b), empezo = new Date(b.utc) <= new Date();
     const clv = cie ? b.momio / cie - 1 : null;
-    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct((1 - (b.nula || 0)) * (b.p * b.momio - 1), 0)}` : ''}`
+    const det = mia ? `momio ${b.momio.toFixed(2)} · apostaste ${fmtM(b.monto)}${b.p != null ? ` · modelo ${pct(b.p, 1)} · EV ${spct((1 - (b.nula || 0)) * (b.p * b.momio - 1), 0)}` : ''}${b.p_pin != null ? ` · Pinnacle al guardarla ${pct(b.p_pin, 1)} (${spct(b.momio * b.p_pin - 1, 0)})` : ''}`
                     : `momio ${b.momio.toFixed(2)} (${esc(b.casa || 'casa')}) · modelo ${pct(b.p, 1)} · EV ${spct(b.ev, 0)}`;
     const res = r ? `Final ${r[0]}-${r[1]}${(b.k || '').startsWith('C') && r[2] != null ? ` · córners ${r[2]}-${r[3]}` : ''}${e.pa ? ` · llegó a ir 2 goles arriba: se cobra por pago anticipado (sin él, ${sM(e.plSin)})` : ''}` : '';
     const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
-    const linea2 = [res, cl].filter(Boolean).join(' · ');
+    const vpin = !mia && b.pin_c != null ? b.momio * b.pin_c - 1 : null;
+    const pinc = vpin != null ? `Pinnacle al cierre ${pct(b.pin_c, 1)}: ${vpin > 0.005 ? `le ganó (${spct(vpin, 0)})` : vpin < -0.005 ? `no le ganó (${spct(vpin, 0)})` : 'igual'}` : '';
+    const linea2 = [res, cl, pinc].filter(Boolean).join(' · ');
     return `<div class="bet" data-uid="${esc(b.uid || '')}">
       <div class="b-main">
         <span class="b-meta">${b.liga && LIGAS[b.liga] ? esc(corto(LIGAS[b.liga])) + ' · ' : ''}${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
@@ -1781,6 +1783,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             return c && m && c._total != null ? (m[1] === 'O' ? c._total - parseFloat(m[2]) : parseFloat(m[2]) - c._total) : null; }).filter(v => v != null);
           const prom = movs.length ? movs.reduce((a, v) => a + v, 0) / movs.length : null;
           return `<p class="note"><b>⏰ PICK temprano (total de la NBA, desde el 22 oct 2026):</b> ${num(sub.length)} pick${sub.length === 1 ? '' : 's'}${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.${prom != null ? ` Hasta el cierre la línea se movió <b>${prom >= 0 ? '+' : '−'}${Math.abs(prom).toFixed(1)} puntos</b> a favor en promedio (${movs.filter(v => v > 0).length} de ${movs.length} a favor).` : ''} En la prueba 2023-26 la línea se movió a favor entre +1.7 y +5.7 puntos por temporada: si en vivo también se mueve a favor, la ventaja es real aunque los resultados tarden en notarse.</p>`; })()}
+        ${(() => { const con = lista.filter(x => x.bet.pin_c != null); if (!con.length) return '';
+          const v = con.map(x => x.bet.momio * x.bet.pin_c - 1), med = v.reduce((a, y) => a + y, 0) / v.length;
+          return `<p class="note"><b>Contra el cierre de Pinnacle</b> (la casa más afilada; fútbol desde el 1 nov 2026, NFL y NBA desde oct): el momio del PICK fue mejor que el precio justo de Pinnacle al empezar en <b>${v.filter(y => y > 0).length} de ${con.length}</b>, valor medio <b class="${med > 0 ? 'up' : 'down'}">${spct(med, 1)}</b>. Es la señal más rápida: si sale positivo durante semanas, el modelo encuentra precios buenos de verdad aunque los resultados tarden en notarse.</p>`; })()}
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
       </div>
