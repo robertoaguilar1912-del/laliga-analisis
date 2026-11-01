@@ -14,18 +14,64 @@ Registro de picks.
   (sirve para saber si el momio que tomaste fue mejor que el de cierre).
 - data/registro.json: lo anterior más los resultados de todos los partidos jugados y la lista de ligas,
   que es lo que lee la página.
+- data/registro/archivo/AAAA-MM.json: los picks de los meses que ya terminaron (por la fecha del partido en hora de
+  Honduras), con sus momios de cierre y resultados. Cada mes empieza de cero en la página; los meses pasados se ven
+  eligiéndolos arriba de "Picks del modelo" (desde nov 2026; octubre 2026 fue el primer mes archivado).
 
 La liquidación (ganada, perdida, nula) la hace la página con los resultados de data/espn,
 igual para los picks del modelo que para las apuestas que guardas tú.
 """
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
-from config import DATOS, ESPN_DIR, SECCIONES, ahora
+from config import DATOS, ESPN_DIR, SECCIONES, ZONA, ahora
 from picks import familia
 
 REG = DATOS / 'registro'
+ARCHIVO = REG / 'archivo'
+
+
+def mes_local(utc):
+    """'AAAA-MM' del partido en hora de Honduras (un partido del 31 oct a las 7 pm es de octubre aunque en UTC sea 1 nov)."""
+    t = utc if isinstance(utc, datetime) else datetime.fromisoformat(utc.replace('Z', '+00:00'))
+    return t.astimezone(ZoneInfo(ZONA)).strftime('%Y-%m')
+
+
+def archivar(picks, cierres, res, t):
+    """Pasa a data/registro/archivo/AAAA-MM.json los picks de meses que ya terminaron, cuando el partido ya tiene
+    resultado (o empezó hace más de 3 días: suspendido o sin dato). Si un mes ya tenía archivo, se le suman. Devuelve los
+    picks que siguen en el registro del mes en curso."""
+    hoy = mes_local(t)
+    quedan, salen = [], {}
+    for r in picks:
+        inicio = datetime.fromisoformat(r['utc'].replace('Z', '+00:00'))
+        m = mes_local(inicio)
+        if m < hoy and (str(r['id']) in res or inicio < t - timedelta(days=3)):
+            salen.setdefault(m, []).append(r)
+        else:
+            quedan.append(r)
+    if salen:
+        ARCHIVO.mkdir(exist_ok=True)
+    for m, rs in salen.items():
+        p = ARCHIVO / f'{m}.json'
+        viejo = _leer(p, {'mes': m, 'picks': [], 'cierres': {}, 'resultados': {}})
+        claves = {(x['id'], x['k'], x['visto']) for x in rs}
+        todos = [x for x in viejo['picks'] if (x['id'], x['k'], x['visto']) not in claves] + rs
+        todos.sort(key=lambda r: (r['utc'], r['id'], r['k']))
+        ids = {str(x['id']) for x in todos}
+        viejo.update(picks=todos,
+                     cierres={**viejo.get('cierres', {}), **{i: cierres[i] for i in ids if i in cierres}},
+                     resultados={**viejo.get('resultados', {}), **{i: res[i] for i in ids if i in res}},
+                     archivado=t.isoformat(timespec='minutes'))
+        json.dump(viejo, open(p, 'w'), ensure_ascii=False, separators=(',', ':'))
+        print(f'  registro: {len(rs)} picks de {m} pasaron al archivo ({len(todos)} en ese mes)')
+    return quedan
+
+
+def archivos():
+    return sorted((p.stem for p in ARCHIVO.glob('*.json')), reverse=True) if ARCHIVO.exists() else []
 
 # Mercados que son la misma apuesta con otro nombre: no se cuentan dos veces.
 EQUIVALENTE = {'H1:-0.5': '1', 'H2:-0.5': '2', 'H1:+0.5': '1X', 'H2:+0.5': 'X2'}
@@ -226,9 +272,12 @@ def actualizar():
     retirados = marcar_retirados(picks, t, vistos)
     reemplazados = marcar_reemplazados(picks)
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))
+    res = resultados()
+    picks = archivar(picks, cierres, res, t)       # cada mes empieza de cero; los meses pasados quedan en el archivo
     json.dump(picks, open(REG / 'modelo.json', 'w'), ensure_ascii=False, indent=1)
     json.dump(cierres, open(REG / 'cierres.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-    out = {'actualizado': t.isoformat(timespec='minutes'), 'ligas': ligas, 'modelo': picks, 'cierres': cierres, 'resultados': resultados()}
+    out = {'actualizado': t.isoformat(timespec='minutes'), 'ligas': ligas, 'modelo': picks, 'cierres': cierres, 'resultados': res,
+           'mes': mes_local(t), 'archivos': archivos()}
     json.dump(out, open(DATOS / 'registro.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f'  registro: {nuevos} picks nuevos del modelo, {len(picks)} en total ({reemplazados} reemplazados por otro del mismo partido, {retirados} que dejaron de ser PICK antes del partido)')
 

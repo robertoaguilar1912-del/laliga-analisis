@@ -47,6 +47,11 @@ def main():
         total += p.stat().st_size
     if (DATOS / 'registro.json').exists():
         shutil.copyfile(DATOS / 'registro.json', salida / 'registro.json')
+    arch = DATOS / 'registro' / 'archivo'          # picks del modelo de los meses pasados (la página los pide al elegir el mes)
+    if arch.exists():
+        (salida / 'archivo').mkdir(exist_ok=True)
+        for p in arch.glob('*.json'):
+            shutil.copyfile(p, salida / 'archivo' / p.name)
     viejo = DATOS / 'sitio.json'          # formato anterior (una sola liga)
     if viejo.exists():
         viejo.unlink()

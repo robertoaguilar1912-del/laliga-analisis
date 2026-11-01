@@ -124,6 +124,7 @@ button { font: inherit; color: inherit; }
 .form i.P { background: color-mix(in srgb, var(--crit) 18%, var(--surface)); border-color: color-mix(in srgb, var(--crit) 50%, var(--surface)); }
 .subtabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
 .subtabs button { flex: none; }
+.subtabs .sel-lbl { flex: none; align-self: center; font-family: var(--font-data); font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-3); padding-right: 2px; }
 #team-profile { scroll-margin-top: 64px; }
 .subtabs button { border: 1px solid var(--line); background: var(--surface); padding: 7px 13px; border-radius: 999px; font-family: var(--font-data); font-size: 12.5px; color: var(--ink-2); cursor: pointer; }
 .subtabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
@@ -1627,21 +1628,48 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     }));
   }
 
+  // ---- cada mes empieza de cero (por la fecha del partido, hora de Honduras); los meses pasados se eligen arriba
+  const mesDe = iso => new Date(iso).toLocaleDateString('en-CA', { timeZone: tz }).slice(0, 7);
+  const MES_HOY = mesDe(new Date().toISOString());
+  const nomMes = m => m === 'todo' ? 'todos los meses' : fdate(m + '-15', { month: 'long', year: 'numeric' });
+  const Mayus = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const mesesCon = isos => [...new Set([MES_HOY, ...isos.map(mesDe)])].sort().reverse();
+  const selectorMes = (id, meses, sel) => meses.length > 1
+    ? `<div class="subtabs mes-sel" id="${id}" role="tablist" aria-label="Mes"><span class="sel-lbl">Mes</span>${[...meses.map(m => [m, Mayus(nomMes(m)).replace(' de ', ' ')]), ['todo', 'Todo']].map(([m, n]) => `<button data-m="${m}" aria-selected="${m === sel}">${esc(n)}</button>`).join('')}</div>` : '';
+  function porMesHTML(lista, unidad) {         // con "Todo": ganancia de cada mes
+    const meses = [...new Set(lista.map(x => mesDe(x.bet.utc)))].sort().reverse();
+    if (meses.length < 2) return '';
+    const u = unidad ? ' ' + unidad : '';
+    return `<div class="card"><h3>Por mes</h3><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Mes</th><th>Apuestas</th><th>Liquidadas</th><th>Ganancia</th><th>ROI</th></tr></thead><tbody>
+      ${meses.map(m => { const sub = lista.filter(x => mesDe(x.bet.utc) === m), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0), ap = fin.reduce((a, x) => a + x.stake, 0), c = pl < 0 ? 'neg' : pl > 0 ? 'posv' : '';
+        return `<tr><td class="nm l">${esc(Mayus(nomMes(m)))}</td><td>${num(sub.length)}</td><td>${num(fin.length)}</td><td class="${c}">${fin.length ? sM(pl) + u : '—'}</td><td class="${c}">${ap ? spct(pl / ap, 1) : '—'}</td></tr>`; }).join('')}
+      </tbody></table></div></div>`;
+  }
+  let mesMias = MES_HOY;
+
   function renderMias() {
     const el = $('#reg-mias');
-    const lista = mias.map(b => ({ bet: b, stake: b.monto, e: estado(b, b.monto) }));
+    const meses = mesesCon(mias.map(b => b.utc));
+    if (mesMias !== 'todo' && !meses.includes(mesMias)) mesMias = MES_HOY;
+    const delMes = mesMias === 'todo' ? mias : mias.filter(b => mesDe(b.utc) === mesMias);
+    const lista = delMes.map(b => ({ bet: b, stake: b.monto, e: estado(b, b.monto) }));
+    const otros = mias.length - delMes.length;
     const pts = curva(lista);
     el.innerHTML = `
       ${lsOK ? '' : '<p class="warning">Este navegador no permite guardar datos (puede ser modo privado). Lo que guardes se perderá al cerrar la página.</p>'}
+      ${selectorMes('mias-mes', meses, mesMias)}
       <div class="card">
-        <h3>Resumen</h3>
+        <h3>Resumen · ${esc(nomMes(mesMias))}</h3>
         ${resumen(lista, '')}
         ${notaPA(lista, '')}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada</h4><div class="chart" id="chart-mias"></div><p class="note">Cada punto es una apuesta ya liquidada, en orden de fecha.</p>' : ''}
+        ${mesMias !== 'todo' ? `<p class="note">Cada mes empieza de cero, por la fecha del partido.${otros ? ` Tus ${num(otros)} apuestas de otros meses siguen guardadas: elige el mes arriba, o "Todo" para verlas juntas.` : ''}</p>` : ''}
       </div>
+      ${mesMias === 'todo' ? porMesHTML(lista, '') : ''}
       <div class="card">
         <h3>Apuestas</h3>
         ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, true)).join('')}</div>`
+          : mias.length ? `<p class="empty">Todavía no guardas apuestas de ${esc(nomMes(mesMias))}. Abre un partido, ve a Mercados, escribe el momio de tu casa y el monto, y toca "Guardar en mi registro".</p>`
           : '<p class="empty">Todavía no guardas ninguna apuesta. Abre un partido, ve a Mercados, escribe el momio de tu casa y el monto, y toca "Guardar en mi registro".</p>'}
         <p class="note">Se liquidan solas con el resultado oficial, normalmente entre 30 minutos y 2 horas después del partido. Si algo no cuadra, cambia "Resultado" a mano. "Le ganaste al cierre" compara tu momio con el último de DraftKings antes del partido: si pasa seguido, es la mejor señal de que eliges bien.</p>
       </div>
@@ -1656,6 +1684,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         </div>
       </div>`;
     if (pts.length >= 2) cumChart($('#chart-mias'), pts, '');
+    $$('#mias-mes button', el).forEach(btn => btn.addEventListener('click', () => { mesMias = btn.dataset.m; renderMias(); }));
     $$('.bet', el).forEach(row => {
       const b = mias.find(x => x.uid === row.dataset.uid); if (!b) return;
       const s = $('select[data-act="manual"]', row), del = $('button[data-act="borrar"]', row);
@@ -1686,30 +1715,57 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
 
   let filtroModelo = (R.modelo || []).some(b => (b.liga || 'laliga') === (origen || I.liga)) ? (origen || I.liga) : '';
+  // meses pasados: data/registro/archivo/AAAA-MM.json, se piden al elegirlos
+  let mesModelo = MES_HOY;
+  const ARCH = {};
+  const mesesModelo = () => [...new Set([...mesesCon((R.modelo || []).map(b => b.utc)), ...(R.archivos || [])])].sort().reverse();
+  function cargarArchivos(meses) {
+    return Promise.all(meses.filter(m => !ARCH[m]).map(m => getJSON(`datos/archivo/${m}.json`).then(a => {
+      ARCH[m] = a;
+      for (const [id, c] of Object.entries(a.cierres || {})) if (!R.cierres[id]) R.cierres[id] = c;
+      for (const [id, r] of Object.entries(a.resultados || {})) if (!R.resultados[id]) R.resultados[id] = r;
+    })));
+  }
+  function picksDelMes() {
+    const vivos = R.modelo || [], clave = b => b.id + '|' + b.k + '|' + b.visto, ya = new Set(vivos.map(clave));
+    const arch = (mesModelo === 'todo' ? Object.values(ARCH) : [ARCH[mesModelo]]).filter(Boolean).flatMap(a => a.picks || []);
+    const todos = [...arch.filter(b => !ya.has(clave(b))), ...vivos];
+    return mesModelo === 'todo' ? todos : todos.filter(b => mesDe(b.utc) === mesModelo);
+  }
   function renderModelo() {
     const el = $('#reg-modelo');
-    const todosR = (R.modelo || []).map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
+    const meses = mesesModelo();
+    if (mesModelo !== 'todo' && !meses.includes(mesModelo)) mesModelo = MES_HOY;
+    const faltan = (mesModelo === 'todo' ? R.archivos || [] : (R.archivos || []).filter(m => m === mesModelo)).filter(m => !ARCH[m]);
+    if (faltan.length) {
+      el.innerHTML = `${selectorMes('mod-mes', meses, mesModelo)}<div class="card"><p class="muted">Cargando los picks de ${esc(nomMes(mesModelo))}…</p></div>`;
+      cargarArchivos(faltan).then(renderModelo).catch(() => { el.innerHTML = `${selectorMes('mod-mes', meses, mesModelo)}<div class="card"><p class="warning">No se pudieron cargar los picks de ${esc(nomMes(mesModelo))}. Revisa tu conexión y vuelve a tocar el mes.</p></div>`;
+        $$('#mod-mes button', el).forEach(btn => btn.addEventListener('click', () => { mesModelo = btn.dataset.m; renderModelo(); })); });
+      return;
+    }
+    const todosR = picksDelMes().map(b => ({ bet: Object.assign({ liga: 'laliga' }, b, { momio: parseFloat(b.momio) }), stake: 1, e: null }));
     todosR.forEach(x => { x.e = estado(x.bet, 1, true); });
     // un PICK por partido y familia: si cambió antes de empezar, cuenta el último (los demás llevan 'reemplazado')
-    const reempl = todosR.filter(x => x.bet.reemplazado && !x.bet.revisar && (!filtroModelo || x.bet.liga === filtroModelo)).length;
-    const retir = todosR.filter(x => x.bet.retirado && !x.bet.revisar && !x.bet.reemplazado && (!filtroModelo || x.bet.liga === filtroModelo)).length;
     const todos = todosR.filter(x => !x.bet.revisar && !x.bet.reemplazado && !x.bet.retirado);   // los REVISAR (bajas importantes) y los que dejaron de ser PICK antes del partido no cuentan
-    const revs = todosR.filter(x => x.bet.revisar && !x.bet.reemplazado && (!filtroModelo || x.bet.liga === filtroModelo));
     const ligasCon = Object.keys(LIGAS).filter(id => todos.some(x => x.bet.liga === id));
-    if (filtroModelo && !ligasCon.includes(filtroModelo)) filtroModelo = '';
-    const lista = filtroModelo ? todos.filter(x => x.bet.liga === filtroModelo) : todos;
+    const filtro = ligasCon.includes(filtroModelo) ? filtroModelo : '';     // la liga elegida se recuerda aunque este mes no tenga picks de ella
+    const enFiltro = x => !filtro || x.bet.liga === filtro;
+    const reempl = todosR.filter(x => x.bet.reemplazado && !x.bet.revisar && enFiltro(x)).length;
+    const retir = todosR.filter(x => x.bet.retirado && !x.bet.revisar && !x.bet.reemplazado && enFiltro(x)).length;
+    const revs = todosR.filter(x => x.bet.revisar && !x.bet.reemplazado && enFiltro(x));
+    const lista = filtro ? todos.filter(x => x.bet.liga === filtro) : todos;
     const pts = curva(lista);
     const conCierre = lista.filter(x => new Date(x.bet.utc) <= new Date() && cierreDe(x.bet));
     const mejor = conCierre.filter(x => x.bet.momio > cierreDe(x.bet) + 1e-9).length;
-    const desde = (R.modelo || []).map(b => b.visto).sort()[0];
-    const nomFiltro = filtroModelo ? LIGAS[filtroModelo] : 'todas las ligas';
+    const nomFiltro = filtro ? LIGAS[filtro] : 'todas las ligas';
     const porLiga = ligasCon.map(id => { const sub = todos.filter(x => x.bet.liga === id), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
       return { id, n: sub.length, fin: fin.length, pl, roi: fin.length ? pl / fin.length : null }; });
     el.innerHTML = `
-      ${ligasCon.length > 1 ? `<div class="subtabs" id="mod-filtro">${[['', 'Todas'], ...ligasCon.map(id => [id, corto(LIGAS[id])])].map(([id, n]) => `<button data-l="${id}" aria-selected="${id === filtroModelo}">${esc(n)}</button>`).join('')}</div>` : ''}
+      ${selectorMes('mod-mes', meses, mesModelo)}
+      ${ligasCon.length > 1 ? `<div class="subtabs" id="mod-filtro">${[['', 'Todas'], ...ligasCon.map(id => [id, corto(LIGAS[id])])].map(([id, n]) => `<button data-l="${id}" aria-selected="${id === filtro}">${esc(n)}</button>`).join('')}</div>` : ''}
       <div class="card">
-        <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)}</h3>
-        <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento${desde ? `, desde el ${fdate(desde, { day: 'numeric', month: 'long', year: 'numeric' })}` : ''}. Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no. Cuenta un solo PICK por partido en el resultado (ganador, hándicap) y uno en el total: si cambió antes de empezar (otra línea u otro lado), el último que marcó la página${reempl ? ` (${num(reempl)} anteriores no se suman)` : ''}. Si la página deja de marcarlo antes del partido (cambió el momio, entró una regla o una baja), tampoco cuenta${retir ? ` (${num(retir)} así, desde el 18 oct 2026)` : ''}.</p>
+        <h3>Si hubieras apostado 1 unidad a cada PICK · ${esc(nomFiltro)} · ${esc(nomMes(mesModelo))}</h3>
+        <p class="note">Cada vez que el modelo marca un PICK (EV de +5% o más contra DraftKings) queda guardado aquí con el momio de ese momento. Cada mes empieza de cero, por la fecha del partido (el registro empezó el 6 oct 2026; los meses pasados se eligen arriba). Es la prueba en vivo: así se ve si el modelo de verdad le gana a la casa o no. Cuenta un solo PICK por partido en el resultado (ganador, hándicap) y uno en el total: si cambió antes de empezar (otra línea u otro lado), el último que marcó la página${reempl ? ` (${num(reempl)} anteriores no se suman)` : ''}. Si la página deja de marcarlo antes del partido (cambió el momio, entró una regla o una baja), tampoco cuenta${retir ? ` (${num(retir)} así)` : ''}.</p>
         ${resumen(lista, 'u')}
         ${notaPA(lista, 'u')}
         ${(() => { const sub = lista.filter(x => x.bet.ev < 0.2), fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
@@ -1728,15 +1784,17 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         ${conCierre.length ? `<p class="note">El momio del PICK fue mejor que el de cierre en <b>${mejor} de ${conCierre.length}</b> partidos ya jugados. Si eso pasa más de la mitad de las veces durante meses, el modelo está encontrando algo; si no, el mercado lo corrige.</p>` : ''}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada, en unidades</h4><div class="chart" id="chart-modelo"></div>' : ''}
       </div>
+      ${mesModelo === 'todo' ? porMesHTML(lista, 'u') : ''}
       ${porLiga.length > 1 ? `<div class="card"><h3>Por liga</h3><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Liga</th><th>Picks</th><th>Liquidados</th><th>Ganancia</th><th>ROI</th></tr></thead><tbody>
         ${porLiga.map(r => `<tr><td class="nm l">${esc(LIGAS[r.id])}</td><td>${num(r.n)}</td><td>${num(r.fin)}</td><td class="${r.pl < 0 ? 'neg' : r.pl > 0 ? 'posv' : ''}">${r.fin ? sM(r.pl) + ' u' : '—'}</td><td class="${r.pl < 0 ? 'neg' : r.pl > 0 ? 'posv' : ''}">${r.roi == null ? '—' : spct(r.roi, 1)}</td></tr>`).join('')}
         </tbody></table></div><p class="note">Con pocos partidos liquidados, la diferencia entre ligas es casi pura suerte.</p></div>` : ''}
       <div class="card">
         <h3>Picks</h3>
-        ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, false)).join('')}</div>` : '<p class="empty">Todavía no hay picks registrados. Se agregan solos en la próxima actualización.</p>'}
+        ${lista.length ? `<div class="bets">${ordenar(lista).map(x => filaHTML(x, false)).join('')}</div>` : `<p class="empty">Todavía no hay picks de ${esc(nomMes(mesModelo))}. Se agregan solos en la próxima actualización.</p>`}
       </div>`;
     if (pts.length >= 2) cumChart($('#chart-modelo'), pts, 'u');
     $$('#mod-filtro button', el).forEach(btn => btn.addEventListener('click', () => { filtroModelo = btn.dataset.l; renderModelo(); }));
+    $$('#mod-mes button', el).forEach(btn => btn.addEventListener('click', () => { mesModelo = btn.dataset.m; renderModelo(); }));
     const fsel = $('#mod-filtro [aria-selected="true"]', el);          // que se vea el filtro elegido (p. ej. NFL, al final)
     if (fsel) fsel.parentElement.scrollLeft = Math.max(0, fsel.offsetLeft - fsel.parentElement.offsetLeft - 16);
   }
