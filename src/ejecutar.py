@@ -92,7 +92,7 @@ def main(modo):
         _paso('bajas FotMob', fuentes.descargar_bajas)
         _paso('momios de varias casas (API-Football)', apifootball.descargar)
         # xG y minutos de los partidos que se jugaron desde la última vez (temporada actual; ver model.XG_PESO)
-        _paso('xG (API-Football)', af_historia.bajar, 400, None, 0)
+        _paso('xG (API-Football)', af_historia.bajar, 400, None, 0, False)
         for liga in LIGAS:
             _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
         _paso('copas', fuentes.descargar_copas)

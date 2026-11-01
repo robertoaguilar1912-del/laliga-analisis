@@ -1,4 +1,6 @@
 name: Historia de API-Football (xG y minutos)
+# Solo a mano (Actions → Run workflow): la corrida diaria de actualizar.yml ya suma los partidos nuevos de la temporada.
+# No correrla mientras corre la completa: las dos escriben data/af.
 
 on:
   workflow_dispatch:
@@ -9,9 +11,6 @@ on:
       ligas:
         description: 'Ligas separadas por coma (vacío = todas)'
         default: ''
-  push:
-    branches: [main]
-    paths: ['src/af_historia.py', '.github/workflows/historia_af.yml']
 
 permissions:
   contents: write

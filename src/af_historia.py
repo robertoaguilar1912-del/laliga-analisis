@@ -178,7 +178,8 @@ def falta(m, ahora):
     return not m['x'] and ahora - t < timedelta(days=4)
 
 
-def bajar(max_consultas=3000, ligas=None, atras=ATRAS):
+def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
+    """guardar_resumen: data/af/resumen.json solo en la corrida a mano (la diaria no lo toca, para no chocar con ella)."""
     if not os.environ.get('API_FOOTBALL_KEY', '').strip():
         print('  API-Football: falta la clave (secreto API_FOOTBALL_KEY)')
         return
@@ -229,7 +230,8 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS):
                            + (f', faltan {len(pend) - hechos}' if len(pend) > hechos else ''))
     print('\n'.join('  ' + r for r in resumen))
     print(f'  API-Football: {CONSULTAS[0]} consultas en esta corrida')
-    _guardar(DIR / 'resumen.json', {'fecha': ahora.isoformat(timespec='minutes'), 'consultas': CONSULTAS[0], 'ligas': resumen})
+    if guardar_resumen:
+        _guardar(DIR / 'resumen.json', {'fecha': ahora.isoformat(timespec='minutes'), 'consultas': CONSULTAS[0], 'ligas': resumen})
 
 
 if __name__ == '__main__':
