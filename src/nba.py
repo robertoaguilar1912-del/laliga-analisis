@@ -480,6 +480,15 @@ def con_pretemporada(g, box):
 # Parámetros elegidos con la temporada 2022-23 (ver prueba_nba.py)
 HL_EQUIPOS, RIDGE_EQUIPOS = 45, 10.0      # modelo de equipos (total de puntos): días de vida media y freno
 HL_JUGADORES, RIDGE_JUGADORES = 540, 20.0 # modelo de jugadores (diferencia de puntos)
+# +/- de cada jugador en cada juego (desde el 1 nov 2026): además de la diferencia del juego, el modelo de jugadores aprende
+# de lo que pasó mientras cada uno estaba en la cancha (filas_mas_menos). Elegido con 2023-24 y probado con 2024-26
+# (scratchpad nbamejora/): lo que el modelo sabe que la línea de cierre no sabe pasó de nada (k 0.02 ± 0.14 en 2023-24,
+# 0.05 en 2024-25, −0.02 en 2025-26) a k 0.19 ± 0.09, 0.22 ± 0.09 y 0.12 ± 0.09; la mezcla con el cierre baja el log loss
+# del moneyline en las cuatro temporadas (2024-25: 0.5851 -> 0.5835). Sola, la diferencia del modelo se equivoca un poco
+# más (14.11 -> 14.13 en 2023-24): es otra información, no la misma con menos error. Pesos 5, 10, 20, 50 y 100: de 50 en
+# adelante ya no mejora.
+PM_PESO = 50.0
+PM_MIN = 5.0        # minutos mínimos para usar el +/- de un jugador en un juego
 SIGMA_M = 14.0       # desviación de la diferencia alrededor de lo esperado (se toma de la última temporada de la prueba)
 SIGMA_T = 18.8       # desviación del total de puntos
 VENTANA_DIAS = 3 * 365
@@ -489,12 +498,17 @@ PICK_EV = 0.05
 # información. logit p' = c·logit p, c elegido con 2022-23 y 2023-24 (scratchpad nbacal/calib.py); en 2024-26 el log loss
 # de spread y total pasa de 0.704-0.716 a 0.693 y los PICK de −164.8 u (4,011) a −14.4 u (1,065, casi todos moneyline).
 # El ⏰ PICK temprano no depende de esto (usa la distancia del total a la línea de apertura).
-CALIB = {'Moneyline': 1.086, 'Spread': 0.068, 'Total': 0.028}
+CALIB = {'Moneyline': 0.92, 'Spread': 0.068, 'Total': 0.028}
+# Moneyline con el modelo de +/- (1 nov 2026): 0.92 elegido con 2023-24. PICK EV ≥ 5% al cierre: 2023-24 +0.8% (597),
+# 2024-25 +3.5% (705), 2025-26 +3.0% (638); con el modelo anterior y 1.086: −4.2%, +2.2%, −6.6% (2024-26: 1,081 PICK −2.1%
+# -> 1,343 PICK +3.3%).
 # Con línea de la casa (desde el 23 oct 2026): la probabilidad de spread y total para CUALQUIER línea sale de una curva
 # centrada en la línea de la casa movida hacia el modelo solo lo que de verdad se cumplió: centro = línea + k·(modelo −
 # línea). (real − línea) contra (modelo − línea), 2022-26: k = 0.106 en spread y ≈ 0 en total. La calibración de arriba
 # (logit) solo valía en la línea de la casa: con otra línea (p. ej. +12.5 cuando la casa da +4.5) seguía diciendo ~50%.
-MEZCLA = {'Spread': 0.10, 'Total': 0.0}
+MEZCLA = {'Spread': 0.19, 'Total': 0.0}
+# Spread con el modelo de +/- (1 nov 2026): k 0.19 elegido con 2023-24 (antes 0.10). PICK EV ≥ 5% al cierre: 2023-24 −4.6%
+# (43), 2024-25 +30.9% (41), 2025-26 +6.9% (32): pocos, solo donde el modelo se aparta 9 puntos o más de la línea.
 # PICK temprano (total): el total del modelo a TEMPRANO_DIF puntos o más de la línea de APERTURA y la línea todavía a
 # TEMPRANO_MOV puntos o menos de la apertura (aún no se ha movido). Prueba 2023-26 (claude/ventaja-apertura-nba-oct-2026.md):
 # en esos juegos la línea se movió hacia el modelo en las 3 temporadas (+2.4, +5.7 y +1.7 puntos de media) y apostar a la
@@ -627,12 +641,39 @@ class ModeloNBA:
         return k, p / p.sum()
 
 
+def filas_mas_menos(g, box, J):
+    """Una fila por jugador y juego con su +/- (lo que hizo su equipo contra el rival mientras él jugaba):
+    +/- ≈ s·[su valor + Σ compañeros 4·s_j/(S − s)·valor_j − Σ rivales 5·s_k/S_r·valor_k + local + cansancio], con s la
+    parte del juego que estuvo en la cancha (minutos / 48) y S la suma del equipo. Peso: 48/minutos (el ruido crece con los
+    minutos). Devuelve (X, base, y, peso, fila del juego)."""
+    from scipy import sparse
+    fila = pd.Series(np.arange(len(g)), index=g.id.values)
+    b = box[['id', 'lado', 'jugador', 'min', 'mas_menos']].copy()
+    b['gk'] = fila.reindex(b.id.values).values
+    b['j'] = b.jugador.map(J)
+    b = b[b.gk.notna() & b.j.notna() & b.mas_menos.notna() & (b['min'] >= PM_MIN)].copy()
+    b['gk'], b['j'] = b.gk.astype(int), b.j.astype(int)
+    b['s'] = (b['min'] / 48.0).clip(upper=1.0)
+    b = b.reset_index(drop=True)
+    b['r'] = np.arange(len(b))
+    b['S'] = b.groupby(['gk', 'lado']).s.transform('sum')
+    rows, cols, vals = [b.r.values], [b.j.values], [b.s.values]
+    m = b[['gk', 'lado', 'r', 's', 'S']].merge(b[['gk', 'lado', 'r', 'j', 's']].rename(columns={'r': 'r2', 's': 's2'}), on=['gk', 'lado'])
+    m = m[m.r != m.r2]
+    rows.append(m.r.values); cols.append(m.j.values); vals.append((m.s * 4 * m.s2 / (m.S - m.s).clip(lower=1e-6)).values)
+    o = b[['gk', 'lado', 'j', 's', 'S']].rename(columns={'j': 'jo', 's': 'so', 'S': 'So'}).assign(lado=lambda x: -x.lado)
+    o = b[['gk', 'lado', 'r', 's']].merge(o, on=['gk', 'lado'])
+    rows.append(o.r.values); cols.append(o.jo.values); vals.append((-o.s * 5 * o.so / o.So.clip(lower=1e-6)).values)
+    X = sparse.csr_matrix((np.concatenate(vals), (np.concatenate(rows), np.concatenate(cols))), shape=(len(b), len(J)))
+    return X, b.s.values[:, None] * b.lado.values[:, None], b.mas_menos.values.astype(float), 48.0 / np.maximum(b['min'].values, PM_MIN), b.gk.values
+
+
 class ModeloJugadores:
     """Diferencia de puntos = local + cansancio + suma del valor de los jugadores de cada lado según sus minutos.
     El valor de un jugador son los puntos que le saca a un jugador promedio en un juego completo (48 minutos).
     El freno no lleva a todos a cero sino a lo que se espera por sus minutos y su anotación (un jugador al que su
     entrenador le da 34 minutos suele ser mejor que uno de 10): así las estrellas no quedan aplanadas."""
-    def __init__(self, g, box, half_life=HL_JUGADORES, ridge=RIDGE_JUGADORES, peso_pre=PESO_PRETEMPORADA):
+    def __init__(self, g, box, half_life=HL_JUGADORES, ridge=RIDGE_JUGADORES, peso_pre=PESO_PRETEMPORADA, pm_peso=PM_PESO):
         from scipy import sparse
         self.half_life, self.ridge = half_life, ridge
         self.peso = np.where(g.tipo.values == 1, peso_pre or 0.0, 1.0)     # juegos de pretemporada: la mitad
@@ -649,14 +690,29 @@ class ModeloJugadores:
         self.f = g.fecha_dt.values
         self.bj, self.bf = j, box.fecha_dt.values
         self.bmin, self.bpts = box['min'].values.astype(float), box.pts.fillna(0).values.astype(float)
+        self.pm_peso = pm_peso
+        if pm_peso and 'mas_menos' in box:
+            self.Xp, sb, self.yp, self.wp, gp = filas_mas_menos(g, box, self.J)
+            self.Bp = sb * self.base[gp]          # local y cansancio, desde el lado del jugador
+            self.fp, self.pesop = self.f[gp], self.peso[gp]
+        else:
+            self.pm_peso = 0
 
-    def _ridge(self, ref, y_menos):
+    def _ridge(self, ref, y_menos, y_menos_p=None):
         from scipy import sparse
         m = (self.f < ref) & (self.f >= ref - np.timedelta64(VENTANA_DIAS, 'D')) & (self.peso > 0)
         w = np.exp(-np.log(2) * ((ref - self.f[m]) / np.timedelta64(1, 'D')) / self.half_life) * self.peso[m]
         X = sparse.hstack([sparse.csr_matrix(self.base[m]), self.Xs[m]]).tocsr()
         A = (X.T @ sparse.diags(w) @ X).toarray() + np.diag([1e-6, 1e-6] + [self.ridge] * len(self.jug))
-        return np.linalg.solve(A, X.T @ (w * (self.y[m] - y_menos[m])))
+        rhs = X.T @ (w * (self.y[m] - y_menos[m]))
+        if self.pm_peso:           # filas de +/- (ver PM_PESO)
+            mp = (self.fp < ref) & (self.fp >= ref - np.timedelta64(VENTANA_DIAS, 'D')) & (self.pesop > 0)
+            wp = (np.exp(-np.log(2) * ((ref - self.fp[mp]) / np.timedelta64(1, 'D')) / self.half_life) * self.pesop[mp]
+                  * self.wp[mp] * self.pm_peso / 48.0)
+            Xp = sparse.hstack([sparse.csr_matrix(self.Bp[mp]), self.Xp[mp]]).tocsr()
+            A = A + (Xp.T @ sparse.diags(wp) @ Xp).toarray()
+            rhs = rhs + Xp.T @ (wp * (self.yp[mp] - (y_menos_p[mp] if y_menos_p is not None else 0)))
+        return np.linalg.solve(A, rhs)
 
     def fit(self, ref):
         ref = np.datetime64(pd.Timestamp(ref))
@@ -674,7 +730,7 @@ class ModeloJugadores:
         self.b_def = float(self.coef @ [8, 12, 1])                    # jugador sin historial: de banca
         b0 = np.where(tiene, Z @ self.coef, self.b_def)
         # 3) freno hacia lo esperado
-        d = self._ridge(ref, self.Xs @ b0)
+        d = self._ridge(ref, self.Xs @ b0, self.Xp @ b0 if self.pm_peso else None)
         self.hfa, self.b2b, self.beta = float(d[0]), float(d[1]), b0 + d[2:]
         self.valor = dict(zip(self.jug, self.beta))
         return self

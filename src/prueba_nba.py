@@ -20,7 +20,7 @@ import pandas as pd
 
 from config import DATOS, PICK_P_MIN
 from nba import (cargar_juegos, cargar_box, con_pretemporada, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
-                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB, MEZCLA)
+                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB, MEZCLA, PM_PESO)
 from picks import calibrar, centro_mercado
 
 warnings.filterwarnings('ignore')
@@ -156,7 +156,7 @@ def main(elegir_parametros=False):
            'sigma_actual': {'m': round(err[ult][0], 2), 't': round(err[ult][1], 2), 'temporada': nombre_temporada(ult)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre de la casa que muestra ESPN (' + ', '.join(casas.index[:3]) + ')',
            'mercados': 'spread, total y moneyline', 'estrategias': {},
-           'calib': CALIB, 'nota_calib': 'spread y total: curva de la casa movida hacia el modelo lo que se cumplió (k 0.10 y 0, con 2022-26); moneyline ajustado (elegido con 2022-24)'}
+           'calib': CALIB, 'nota_calib': f"modelo de jugadores con el +/- de cada juego (peso {PM_PESO:g}); spread y total: curva de la casa movida hacia el modelo lo que se cumplió (k {MEZCLA['Spread']:g} y {MEZCLA['Total']:g}); moneyline ajustado ({CALIB['Moneyline']:g}); elegidos con 2023-24"}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):

@@ -36,5 +36,15 @@
   "n": null,
   "sin_roi": "no se usa",
   "nota": "Mezclar los minutos de pretemporada con los de la temporada pasada casi no mejora la predicción de minutos (error 6.70 a 6.57) ni la de puntos (13.29 a 13.31). En pretemporada los titulares juegan poco."
+ },
+ {
+  "prueba": "Valor de los jugadores con su +/- de cada juego (1 nov 2026, aplicado)",
+  "periodo": "2024-26",
+  "modelo": 14.26,
+  "casa": 13.86,
+  "roi": 0.033,
+  "n": 1343,
+  "sin_roi": null,
+  "nota": "Además de la diferencia del juego, el modelo aprende de lo que pasó mientras cada jugador estaba en la cancha. Solo, se equivoca un poco más (14.11 a 14.26 de error, contra 13.86 de la línea de cierre), pero sabe cosas que la línea de cierre no: cuando se aparta 6 a 9 puntos de la línea, el lado del modelo cubrió 54.4%, y con 9 o más, 56.6% (antes, ~50% en todos los casos). Moneyline (ajuste 0.92, elegido con 2023-24) en 2024-26: 1,343 PICK +3.3% (antes 1,081 PICK −2.1%). Spread (k 0.19): vuelven unos 40 PICK por temporada."
  }
 ]
