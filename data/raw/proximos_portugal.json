@@ -5,7 +5,7 @@
   "estadio": "Estádio do Fontelo",
   "local_espn": "Académico de Viseu",
   "visita_espn": "Rio Ave",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio do Marítimo",
   "local_espn": "Maritimo",
   "visita_espn": "Santa Clara",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -167,7 +167,7 @@
    "ou_linea": 2.5,
    "ou": [
     125,
-    -170
+    -165
    ],
    "spread": [
     [
@@ -315,17 +315,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    -110,
     -125
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -170
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
