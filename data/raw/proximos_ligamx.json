@@ -5,7 +5,7 @@
   "estadio": "Estadio BBVA",
   "local_espn": "Monterrey",
   "visita_espn": "Tijuana",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Akron",
   "local_espn": "Guadalajara",
   "visita_espn": "Atlante",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -309,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    275,
-    175
+    125,
+    265,
+    190
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -170
+    125,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
-     -170
+     -160
+    ]
+   ]
+  },
+  "alineaciones": {
+   "América": [
+    [
+     "200101",
+     "Ángel Malagón",
+     "G"
+    ],
+    [
+     "195312",
+     "Kevin Álvarez",
+     "D"
+    ],
+    [
+     "386254",
+     "Franco Rossano",
+     "D"
+    ],
+    [
+     "241225",
+     "Santiago Bueno",
+     "D"
+    ],
+    [
+     "82782",
+     "Santiago Ramos",
+     "D"
+    ],
+    [
+     "3731",
+     "Carlos Álvarez",
+     "M"
+    ],
+    [
+     "308956",
+     "Isaías Violante",
+     "M"
+    ],
+    [
+     "129421",
+     "Érick Sánchez",
+     "M"
+    ],
+    [
+     "290414",
+     "Israel Reyes",
+     "M"
+    ],
+    [
+     "144325",
+     "Brian Rodríguez",
+     "M"
+    ],
+    [
+     "93184",
+     "Henry Martín",
+     "F"
+    ]
+   ],
+   "Toluca": [
+    [
+     "184845",
+     "Luis García",
+     "G"
+    ],
+    [
+     "297057",
+     "Santiago Simón",
+     "D"
+    ],
+    [
+     "269902",
+     "Bruno Méndez",
+     "D"
+    ],
+    [
+     "132098",
+     "Jesús Gallardo",
+     "D"
+    ],
+    [
+     "288735",
+     "Federico Pereira",
+     "D"
+    ],
+    [
+     "128422",
+     "Franco Romero",
+     "M"
+    ],
+    [
+     "57149",
+     "Nicolás Castro",
+     "M"
+    ],
+    [
+     "266679",
+     "Helinho",
+     "M"
+    ],
+    [
+     "202164",
+     "Fernando Arce",
+     "M"
+    ],
+    [
+     "269177",
+     "Jorge Díaz",
+     "M"
+    ],
+    [
+     "295847",
+     "Federico Viñas",
+     "F"
     ]
    ]
   }

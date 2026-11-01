@@ -1,121 +1,5 @@
 [
  {
-  "id": "401909899",
-  "utc": "2026-11-01T00:00Z",
-  "fecha": "2026-10-31",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MEM",
-  "visita": "SAC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Memphis Grizzlies",
-  "visita_espn": "Sacramento Kings",
-  "revisado": false,
-  "estadio": "FedExForum",
-  "records": {
-   "home": [
-    "5-0",
-    "1-0",
-    "4-0"
-   ],
-   "away": [
-    "0-5",
-    "0-2",
-    "0-3"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909900",
-  "utc": "2026-11-01T00:00Z",
-  "fecha": "2026-10-31",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIL",
-  "visita": "CLE",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Milwaukee Bucks",
-  "visita_espn": "Cleveland Cavaliers",
-  "revisado": false,
-  "estadio": "Fiserv Forum",
-  "records": {
-   "home": [
-    "1-4",
-    "1-2",
-    "0-2"
-   ],
-   "away": [
-    "3-2",
-    "3-0",
-    "0-2"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909901",
-  "utc": "2026-11-01T00:00Z",
-  "fecha": "2026-10-31",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "SA",
-  "visita": "MIN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "San Antonio Spurs",
-  "visita_espn": "Minnesota Timberwolves",
-  "revisado": false,
-  "estadio": "Frost Bank Center",
-  "records": {
-   "home": [
-    "3-2",
-    "1-2",
-    "2-0"
-   ],
-   "away": [
-    "4-2",
-    "2-1",
-    "2-1"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909902",
-  "utc": "2026-11-01T00:30Z",
-  "fecha": "2026-10-31",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "HOU",
-  "visita": "OKC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Houston Rockets",
-  "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
-  "estadio": "Toyota Center (Houston)",
-  "records": {
-   "home": [
-    "5-1",
-    "2-0",
-    "3-1"
-   ],
-   "away": [
-    "4-1",
-    "3-0",
-    "1-1"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909903",
   "utc": "2026-11-01T20:30Z",
   "fecha": "2026-11-01",
@@ -161,8 +45,8 @@
    "spread_abre": 6.5,
    "total": [
     222.5,
-    -110,
-    -110
+    -105,
+    -115
    ],
    "total_abre": 222.5
   }
@@ -197,8 +81,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -170,
-    142
+    -175,
+    145
    ],
    "ml_abre": [
     -162,
@@ -317,14 +201,14 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ],
    "away": [
-    "4-1",
+    "4-2",
     "3-0",
-    "1-1"
+    "1-2"
    ]
   },
   "momios": null
@@ -496,9 +380,9 @@
     "2-1"
    ],
    "away": [
-    "0-5",
+    "0-6",
     "0-2",
-    "0-3"
+    "0-4"
    ]
   },
   "momios": null
@@ -520,8 +404,8 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "5-0",
-    "1-0",
+    "6-0",
+    "2-0",
     "4-0"
    ],
    "away": [
@@ -549,13 +433,13 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "4-2",
+    "4-3",
     "2-1",
-    "2-1"
+    "2-2"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ]
   },
@@ -578,8 +462,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "5-1",
-    "2-0",
+    "6-1",
+    "3-0",
     "3-1"
    ],
    "away": [
@@ -607,8 +491,8 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ],
    "away": [
@@ -815,8 +699,8 @@
     "0-1"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ]
   },
@@ -897,8 +781,8 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "5-0",
-    "1-0",
+    "6-0",
+    "2-0",
     "4-0"
    ],
    "away": [
@@ -955,14 +839,14 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "4-1",
+    "4-2",
     "3-0",
-    "1-1"
+    "1-2"
    ],
    "away": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ]
   },
   "momios": null
@@ -984,14 +868,14 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "5-1",
-    "2-0",
+    "6-1",
+    "3-0",
     "3-1"
    ],
    "away": [
-    "4-2",
+    "4-3",
     "2-1",
-    "2-1"
+    "2-2"
    ]
   },
   "momios": null
@@ -1071,8 +955,8 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ],
    "away": [
@@ -1100,9 +984,9 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
-    "0-5",
+    "0-6",
     "0-2",
-    "0-3"
+    "0-4"
    ],
    "away": [
     "4-2",
@@ -1274,9 +1158,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ],
    "away": [
     "6-1",
@@ -1332,14 +1216,14 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "5-0",
-    "1-0",
+    "6-0",
+    "2-0",
     "4-0"
    ],
    "away": [
-    "4-1",
+    "4-2",
     "3-0",
-    "1-1"
+    "1-2"
    ]
   },
   "momios": null
@@ -1361,8 +1245,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ],
    "away": [
@@ -1395,9 +1279,9 @@
     "0-2"
    ],
    "away": [
-    "4-2",
+    "4-3",
     "2-1",
-    "2-1"
+    "2-2"
    ]
   },
   "momios": null
@@ -1448,13 +1332,13 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
-    "0-5",
+    "0-6",
     "0-2",
-    "0-3"
+    "0-4"
    ],
    "away": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ]
   },
@@ -1535,9 +1419,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ],
    "away": [
     "2-4",
@@ -1564,9 +1448,9 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "4-1",
+    "4-2",
     "3-0",
-    "1-1"
+    "1-2"
    ],
    "away": [
     "3-3",
@@ -1627,8 +1511,8 @@
     "0-2"
    ],
    "away": [
-    "5-1",
-    "2-0",
+    "6-1",
+    "3-0",
     "3-1"
    ]
   },
@@ -1656,8 +1540,8 @@
     "3-0"
    ],
    "away": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ]
   },
@@ -1738,9 +1622,9 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "4-2",
+    "4-3",
     "2-1",
-    "2-1"
+    "2-2"
    ],
    "away": [
     "1-5",
@@ -1796,8 +1680,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ],
    "away": [
@@ -1854,9 +1738,9 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
-    "0-5",
+    "0-6",
     "0-2",
-    "0-3"
+    "0-4"
    ],
    "away": [
     "2-4",
@@ -1917,9 +1801,9 @@
     "1-2"
    ],
    "away": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ]
   },
   "momios": null
@@ -1975,8 +1859,8 @@
     "1-1"
    ],
    "away": [
-    "5-0",
-    "1-0",
+    "6-0",
+    "2-0",
     "4-0"
    ]
   },
@@ -2028,8 +1912,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "5-1",
-    "2-0",
+    "6-1",
+    "3-0",
     "3-1"
    ],
    "away": [
@@ -2062,8 +1946,8 @@
     "0-2"
    ],
    "away": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ]
   },
@@ -2120,8 +2004,8 @@
     "1-2"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ]
   },
@@ -2231,9 +2115,9 @@
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
-    "0-5",
+    "0-6",
     "0-2",
-    "0-3"
+    "0-4"
    ],
    "away": [
     "2-3",
@@ -2265,9 +2149,9 @@
     "3-0"
    ],
    "away": [
-    "4-1",
+    "4-2",
     "3-0",
-    "1-1"
+    "1-2"
    ]
   },
   "momios": null
@@ -2323,9 +2207,9 @@
     "1-2"
    ],
    "away": [
-    "3-2",
+    "4-2",
     "3-0",
-    "0-2"
+    "1-2"
    ]
   },
   "momios": null
@@ -2381,8 +2265,8 @@
     "1-3"
    ],
    "away": [
-    "3-2",
-    "1-2",
+    "4-2",
+    "2-2",
     "2-0"
    ]
   },
@@ -2405,8 +2289,8 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "5-0",
-    "1-0",
+    "6-0",
+    "2-0",
     "4-0"
    ],
    "away": [
@@ -2434,8 +2318,8 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "1-5",
+    "1-3",
     "0-2"
    ],
    "away": [
