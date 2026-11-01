@@ -731,6 +731,27 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<div class="plist">${t.forma.map(g => `<div class="pr"><span>${formHTML(g.res)} ${g.local ? 'vs' : 'en'} ${esc(g.rival)} <small>${fdate(g.fecha)}</small></span>
       <span class="mono">${g.gf}-${g.gc}${g.xf == null ? '' : ` <small>xG ${g.xf.toFixed(1)}-${g.xc == null ? '—' : g.xc.toFixed(1)}</small>`}</span></div>`).join('')}</div>`;
   }
+  // Pinnacle y otras casas (API-Football, desde el 1 nov 2026). En el fútbol el modelo casi no sabe más que el mercado; si tu
+  // casa paga más que el precio justo de Pinnacle (la casa más afilada), eso sí es valor. VALOR: EV de +3% o más contra Pinnacle.
+  const VALOR_PIN = 0.03;
+  const normK = k => { const [t, l] = String(k).split(':'); const L = parseFloat(l); if (l == null || !isFinite(L)) return k; return t + ':' + (/^H[12]$/.test(t) && L > 0 ? '+' : '') + L; };
+  const pinDe = (m, k) => { const o = m.otras_casas; if (!o) return null; const x = o.pin[normK(k)]; return x ? { p: x[0], momio: x[1] } : null; };
+  function valorPinnacle(m, k, dec) {          // sin el pago anticipado (Pinnacle no lo tiene): si tu casa lo paga, es un extra
+    const pn = pinDe(m, k); if (!pn) return '';
+    const p = pn.p;
+    const ev = p * dec - 1, minimo = (1 + VALOR_PIN) / p;
+    return ev >= VALOR_PIN
+      ? `<br><span class="pill PICK">VALOR</span> <b>Tu momio le gana al precio justo de Pinnacle</b> (justo ${(1 / p).toFixed(2)}, EV <span class="mono">${spct(ev, 1)}</span>). Es la señal más confiable que tenemos.`
+      : `<br><b>Contra Pinnacle no hay valor</b> (justo ${(1 / p).toFixed(2)}, EV <span class="mono">${spct(ev, 1)}</span>): para que lo haya, tu casa tendría que pagar ${minimo.toFixed(2)} o más.`;
+  }
+  function otrasCasas(m, k) {
+    const o = m.otras_casas; if (!o) return '';
+    const kk = normK(k), cs = o.cons[kk], mj = o.mej[kk], out = [];
+    if (cs) out.push(`promedio de ${cs[1]} casas sin margen <span class="mono">${pct(cs[0], 1)}</span>`);
+    if (mj) out.push(`mejor momio ${mj[0].toFixed(2)} (${esc(mj[1])})`);
+    return out.length ? `<br>Otras casas: ${out.join(' · ')}.` : '';
+  }
+  const pinSinMomio = (m, k) => { const pn = pinDe(m, k); return pn ? ` Pinnacle sin margen: <span class="mono">${pct(pn.p, 1)}</span> · justo <span class="mono">${(1 / pn.p).toFixed(2)}</span>; para VALOR tu casa tiene que pagar <b>${((1 + VALOR_PIN) / pn.p).toFixed(2)} o más</b>.` : ''; };
   // goles por tiempo y en vivo (ver tiempos.py): parte del 1er tiempo, corrección de los tiempos sin gol (c1, c2; en el 2º
   // tiempo según el marcador) y reparto de los goles por minuto (m1, m2: minutos 1-45 y 46-90; el 45 y el 90 con descuento)
   function porTiempo(TI, lam, base) {
@@ -873,7 +894,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const dd = (a, b) => { const d = (a - b) * 100; return Math.abs(d) < 0.5 ? '=' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(0) + ' pts'; };
     const priced = m.con_momio.map(r => `<div class="mrow ${r.veredicto.toLowerCase()}"><span class="mname">${esc(r.mercado)}${r.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${r.ev >= 0.05 && r.p < 0.30 ? '<span class="far" title="El modelo le da menos de 30%: en la prueba estos perdieron mucho más, por eso no cuentan como PICK">Poco probable</span>' : ''}${CUIDADO[r.k] && r.veredicto !== 'SKIP' ? `<span class="far" title="${esc(CUIDADO[r.k])}">Cuidado en esta liga</span>` : ''}${r.revisar ? `<span class="far" title="${esc(r.revisar)}">Bajas importantes</span>` : ''}${r.bajas_pp != null && Math.abs(r.bajas_pp) >= 0.005 ? `<span class="bj" title="Las bajas de FotMob ya están en la probabilidad: sin ellas el modelo le daba ${pct(r.p_sin_bajas, 1)}">bajas ${r.bajas_pp > 0 ? '+' : '−'}${Math.abs(r.bajas_pp * 100).toFixed(1)} pts</span>` : ''}${r.otro_pick ? `<span class="far" title="Depende del mismo resultado que ${esc(r.otro_pick)}: solo cuenta como PICK el que el modelo ve más probable">Ya hay PICK: ${esc(r.otro_pick)}</span>` : ''}${r.regla ? `<span class="far" title="${esc(REGLA_TXT[r.regla])}">${r.regla === 'gana' ? 'Momio alto: sin PICK' : r.regla === 'lejos' ? 'Sin PICK en esta liga' : 'Inicio de temporada: sin PICK'}</span>` : ''}</span>
         <span class="pill ${r.veredicto}">${r.veredicto}</span>
-        <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}</span></div>`).join('');
+        <span class="mline">modelo ${pct(r.p, 1)}${paDe(m, r.k) != null ? ' (con pago anticipado ' + pct(paDe(m, r.k), 1) + ')' : ''}${r.p_mercado != null ? ' · casa ' + pct(r.p_mercado, 1) : ''}${r.p_pinnacle != null ? ' · Pinnacle ' + pct(r.p_pinnacle, 1) : ''} · momio ${r.momio} · justo ${r.justo} · EV ${spct(r.ev, 0)}${r.p_pinnacle != null && parseFloat(r.momio) * r.p_pinnacle - 1 >= VALOR_PIN ? ` <span class="pill PICK" title="${esc(m.casa_momios || 'La casa')} paga más que el precio justo de Pinnacle">VALOR ${spct(parseFloat(r.momio) * r.p_pinnacle - 1, 0)}</span>` : ''}</span></div>`).join('');
     const conLinea = tiposDe(m);
     // todos los mercados: los fijos que manda el modelo y, con sus distribuciones, tablas de líneas
     // (hándicap asiático, córners y remates a puerta): cada línea con sus dos lados
@@ -1196,7 +1217,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
                  : `<br><b>No llega a PICK:</b> necesitaría un momio de ${minPick.toFixed(2)} o más, y ${esc(minus(REGLA_TXT.gana))}`;
         else minimo = normal(!topeGana ? '' : desde ? ` y menor que ${topeGana.toFixed(2)}, o de ${desde.toFixed(2)} o más${porMercado}`
                                     : minEx ? '' : ` y menor que ${topeGana.toFixed(2)}`);
-        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${minimo}${avisoBajas(o.k)}`;
+        out.innerHTML = `${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · momio justo <span class="mono">${just}</span>${pa != null ? `; con el pago anticipado de tu casa (2 goles arriba) <span class="mono">${pct(pa, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span>` : ''}${pm0 ? `. Mercado sin margen: <span class="mono">${pct(pm0, 1)}</span> · justo <span class="mono">${(1 / pm0).toFixed(2)}</span>` : ''}. Escribe el momio de tu casa en decimal (por ejemplo 1.90).${pinSinMomio(m, o.k)}${minimo}${avisoBajas(o.k)}`;
         return null;
       }
       if (!dec) { out.textContent = 'Ese momio no se entiende. Escríbelo en decimal, por ejemplo 2.50 o 1.85.'; return null; }
@@ -1222,11 +1243,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       };
       if (pa != null) {          // la casa paga si se pone 2 arriba: esa es la probabilidad que cuenta
         const evPA = pa * dec - 1, vR = vB(verdictOf(evPA, pa), o.k), v0 = sinPickDK(vR), op = v0 === 'PICK' ? otroPick(m, o.k, pa) : null, v = op ? 'MAYBE' : v0;
-        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
+        out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)} con pago anticipado: modelo <span class="mono">${pct(pa, 1)}</span> (sin él ${pct(p, 1)}) · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / pa).toFixed(2)}</span> · EV <span class="mono">${spct(evPA, 1)}</span> (sin pago anticipado ${spct(ev, 1)})${linMk()}${valorPinnacle(m, o.k, dec)}${otrasCasas(m, o.k)}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
         return { o, p: pa, push, dec, pa: true };
       }
       const vR = vB(verdictOf(ev, p), o.k), v0 = sinPickDK(vR), op = v0 === 'PICK' ? otroPick(m, o.k, p) : null, v = op ? 'MAYBE' : v0;
-      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${esc(o.n)}: modelo <span class="mono">${pct(p, 1)}</span>${nula} · tu momio ${dec.toFixed(2)} implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${just}</span> · EV <span class="mono">${spct(ev, 1)}</span>${linMk()}${valorPinnacle(m, o.k, dec)}${otrasCasas(m, o.k)}${notaOtro(op)}${vR === 'PICK' && rg && !menorQueDK ? notaRegla(rg) : ''}${vR === 'PICK' && rg0 && !rg ? notaExcepcion : ''}${avisoBajas(o.k)}`;
       return { o, p, push, dec };
     };
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
@@ -1249,7 +1270,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: m.id, liga: I.liga, utc: m.utc, local: m.local_es, visita: m.visita_es,
                   mercado: r.o.n, k: r.o.k, p: r.p, nula: r.push > 0.005 ? +r.push.toFixed(4) : undefined, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null,
-                  pa: r.pa || undefined });
+                  pa: r.pa || undefined, p_pin: pinDe(m, r.o.k) ? +pinDe(m, r.o.k).p.toFixed(4) : undefined });
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(r.o.n)} a ${r.dec.toFixed(2)} por ${fmtM(amt)}. <button class="linkbtn" id="go-reg">Ver mi registro →</button>`
                            : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';

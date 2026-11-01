@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-01T06:33+00:00",
+ "fecha": "2026-11-01T06:38+00:00",
  "clave_presente": true,
  "ligas": {
   "laliga": {
@@ -58,6 +58,27 @@
    "resultados": 0,
    "lesiones_proximas": 0
   },
+  "champions": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": [],
+   "resultados": 1195,
+   "lesiones_proximas": 182
+  },
+  "europa": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": [],
+   "resultados": 1080,
+   "lesiones_proximas": 0
+  },
+  "conference": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": [],
+   "resultados": 0,
+   "lesiones_proximas": 0
+  },
   "ligamx": {
    "temporada_pedida": 2026,
    "http": 200,
@@ -106,6 +127,20 @@
    "errores": [],
    "resultados": 1534,
    "lesiones_proximas": 90
+  },
+  "libertadores": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": [],
+   "resultados": 0,
+   "lesiones_proximas": 0
+  },
+  "sudamericana": {
+   "temporada_pedida": 2026,
+   "http": 200,
+   "errores": [],
+   "resultados": 0,
+   "lesiones_proximas": 0
   }
  }
 }
