@@ -1,22 +1,15 @@
 {
  "Arizona Cardinals": [
   {
-   "nombre": "Bam Knight",
-   "pos": "RB",
+   "nombre": "Michael Wilson",
+   "pos": "WR",
    "estado": "Questionable",
    "fecha": "2026-11-01",
-   "tipo": "Concussion"
+   "tipo": "Ribs"
   },
   {
    "nombre": "Jeremiyah Love",
    "pos": "RB",
-   "estado": "Questionable",
-   "fecha": "2026-11-01",
-   "tipo": "Ankle"
-  },
-  {
-   "nombre": "Kendrick Bourne",
-   "pos": "WR",
    "estado": "Questionable",
    "fecha": "2026-11-01",
    "tipo": "Ankle"
@@ -29,11 +22,18 @@
    "tipo": "Knee"
   },
   {
-   "nombre": "Michael Wilson",
-   "pos": "WR",
-   "estado": "Active",
+   "nombre": "Bam Knight",
+   "pos": "RB",
+   "estado": "Questionable",
    "fecha": "2026-11-01",
-   "tipo": ""
+   "tipo": "Concussion"
+  },
+  {
+   "nombre": "Kendrick Bourne",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Ankle"
   },
   {
    "nombre": "Max Melton",
@@ -355,6 +355,20 @@
  ],
  "Baltimore Ravens": [
   {
+   "nombre": "Joe Fagnano",
+   "pos": "QB",
+   "estado": "Out",
+   "fecha": "2026-11-01",
+   "tipo": "Coach's Decision"
+  },
+  {
+   "nombre": "Derrick Henry",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Tyler Huntley",
    "pos": "QB",
    "estado": "Questionable",
@@ -381,13 +395,6 @@
    "estado": "Active",
    "fecha": "2026-11-01",
    "tipo": ""
-  },
-  {
-   "nombre": "Joe Fagnano",
-   "pos": "QB",
-   "estado": "Out",
-   "fecha": "2026-11-01",
-   "tipo": "Coach's Decision"
   },
   {
    "nombre": "Aeneas Peebles",
@@ -521,13 +528,6 @@
    "estado": "Active",
    "fecha": "2026-10-26",
    "tipo": ""
-  },
-  {
-   "nombre": "Tyler Loop",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-25",
-   "tipo": ""
   }
  ],
  "Buffalo Bills": [
@@ -539,18 +539,25 @@
    "tipo": "Suspension"
   },
   {
-   "nombre": "DJ Moore",
-   "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-11-01",
-   "tipo": "Knee"
-  },
-  {
    "nombre": "James Cook III",
    "pos": "RB",
    "estado": "Active",
    "fecha": "2026-11-01",
    "tipo": ""
+  },
+  {
+   "nombre": "Josh Allen",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
+   "nombre": "DJ Moore",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Knee"
   },
   {
    "nombre": "Joshua Palmer",
@@ -697,13 +704,6 @@
    "pos": "TE",
    "estado": "Active",
    "fecha": "2026-10-21",
-   "tipo": ""
-  },
-  {
-   "nombre": "Tyler Bass",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-10-20",
    "tipo": ""
   }
  ],
@@ -1063,6 +1063,20 @@
  ],
  "Cincinnati Bengals": [
   {
+   "nombre": "Tee Higgins",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
+   "nombre": "Ja'Marr Chase",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Joe Burrow",
    "pos": "QB",
    "estado": "Active",
@@ -1147,13 +1161,6 @@
    "tipo": "Thumb"
   },
   {
-   "nombre": "Ja'Marr Chase",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-29",
-   "tipo": ""
-  },
-  {
    "nombre": "Erick All Jr.",
    "pos": "TE",
    "estado": "Injured Reserve",
@@ -1226,13 +1233,6 @@
   {
    "nombre": "Samaje Perine",
    "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-10-26",
-   "tipo": ""
-  },
-  {
-   "nombre": "Drew Sample",
-   "pos": "TE",
    "estado": "Active",
    "fecha": "2026-10-26",
    "tipo": ""
@@ -1771,6 +1771,13 @@
  ],
  "Detroit Lions": [
   {
+   "nombre": "Amon-Ra St. Brown",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Jahmyr Gibbs",
    "pos": "RB",
    "estado": "Active",
@@ -1825,13 +1832,6 @@
    "estado": "Questionable",
    "fecha": "2026-11-01",
    "tipo": "Concussion"
-  },
-  {
-   "nombre": "Amon-Ra St. Brown",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-01",
-   "tipo": ""
   },
   {
    "nombre": "Roger McCreary",
@@ -3012,9 +3012,9 @@
   {
    "nombre": "Daiyan Henley",
    "pos": "LB",
-   "estado": "Questionable",
+   "estado": "Active",
    "fecha": "2026-11-01",
-   "tipo": "Shoulder"
+   "tipo": ""
   },
   {
    "nombre": "Rodney Shelley",
@@ -3364,6 +3364,13 @@
  ],
  "Miami Dolphins": [
   {
+   "nombre": "Malik Herring",
+   "pos": "DE",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Undisclosed"
+  },
+  {
    "nombre": "Reese Taylor",
    "pos": "CB",
    "estado": "Active",
@@ -3530,16 +3537,16 @@
    "estado": "Active",
    "fecha": "2026-10-26",
    "tipo": ""
-  },
-  {
-   "nombre": "Chukwuebuka Godrick",
-   "pos": "OT",
-   "estado": "Active",
-   "fecha": "2026-10-26",
-   "tipo": ""
   }
  ],
  "Minnesota Vikings": [
+  {
+   "nombre": "Justin Jefferson",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
   {
    "nombre": "Kyler Murray",
    "pos": "QB",
@@ -3681,13 +3688,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Justin Jefferson",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-10-25",
-   "tipo": ""
-  },
-  {
    "nombre": "Will Reichard",
    "pos": "PK",
    "estado": "Active",
@@ -3717,6 +3717,13 @@
   }
  ],
  "New England Patriots": [
+  {
+   "nombre": "Hunter Henry",
+   "pos": "TE",
+   "estado": "Questionable",
+   "fecha": "2026-11-01",
+   "tipo": "Foot"
+  },
   {
    "nombre": "Behren Morton",
    "pos": "QB",
@@ -3862,13 +3869,6 @@
    "pos": "WR",
    "estado": "Active",
    "fecha": "2026-10-24",
-   "tipo": ""
-  },
-  {
-   "nombre": "Hunter Henry",
-   "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-10-23",
    "tipo": ""
   },
   {
@@ -5311,6 +5311,20 @@
  ],
  "Tennessee Titans": [
   {
+   "nombre": "Cam Ward",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
+   "nombre": "Tony Pollard",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-11-01",
+   "tipo": ""
+  },
+  {
    "nombre": "Peter Skoronski",
    "pos": "G",
    "estado": "Questionable",
@@ -5444,13 +5458,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Tony Pollard",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-10-30",
-   "tipo": ""
-  },
-  {
    "nombre": "Jonah Laulu",
    "pos": "DT",
    "estado": "Active",
@@ -5474,13 +5481,6 @@
   {
    "nombre": "Nicholas Singleton",
    "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-10-26",
-   "tipo": ""
-  },
-  {
-   "nombre": "Gunnar Helm",
-   "pos": "TE",
    "estado": "Active",
    "fecha": "2026-10-26",
    "tipo": ""
