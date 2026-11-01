@@ -5,29 +5,145 @@
   "estadio": "Estadio Municipal Nuevo Pepico Amat",
   "local_espn": "Eldense",
   "visita_espn": "Granada",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    230,
-    195
+    130,
+    235,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -115
+    -110,
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     130
+     120
     ],
     [
      "+0.5",
-     -180
+     -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Eldense": [
+    [
+     "354450",
+     "Ramon Vila",
+     "G"
+    ],
+    [
+     "346837",
+     "Floris Smand",
+     "CD-L"
+    ],
+    [
+     "375724",
+     "Álex Serra",
+     "CD-R"
+    ],
+    [
+     "325545",
+     "Juan Larios",
+     "LB"
+    ],
+    [
+     "311264",
+     "Jesus Clemente",
+     "RB"
+    ],
+    [
+     "278205",
+     "Javier Martínez",
+     "CM-L"
+    ],
+    [
+     "389266",
+     "Carlos Guirao",
+     "CM-R"
+    ],
+    [
+     "377833",
+     "Aingeru Olabarrieta",
+     "LM"
+    ],
+    [
+     "147491",
+     "Fidel",
+     "RM"
+    ],
+    [
+     "354251",
+     "Marcos Bustillo",
+     "CF-L"
+    ],
+    [
+     "374618",
+     "Jorge Rastrojo",
+     "CF-R"
+    ]
+   ],
+   "Granada": [
+    [
+     "185100",
+     "Alberto Flores",
+     "G"
+    ],
+    [
+     "312144",
+     "Manu Lama",
+     "CD-L"
+    ],
+    [
+     "412251",
+     "Juanjo",
+     "CD-R"
+    ],
+    [
+     "264488",
+     "Diego Pampín",
+     "LB"
+    ],
+    [
+     "173611",
+     "Sergio López",
+     "RB"
+    ],
+    [
+     "330246",
+     "Pedro Alemañ",
+     "AM"
+    ],
+    [
+     "186181",
+     "Gerard Gumbau",
+     "LM"
+    ],
+    [
+     "214317",
+     "Rubén Alcaraz",
+     "RM"
+    ],
+    [
+     "343634",
+     "Jorge Pascual Medina",
+     "F"
+    ],
+    [
+     "409385",
+     "Mario Jiménez Gambin",
+     "AM-L"
+    ],
+    [
+     "384447",
+     "Sergio Rodelas",
+     "AM-R"
     ]
    ]
   }
@@ -83,13 +199,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -145
     ],
     [
      "-0.5",
@@ -110,9 +226,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    125,
     225,
-    245
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -122,11 +238,11 @@
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -150
+     -155
     ]
    ]
   }
@@ -176,23 +292,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    265,
-    295
+    105,
+    250,
+    245
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -135
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -105
     ],
     [
      "+0.5",
-     -115
+     -140
     ]
    ]
   }

@@ -5,29 +5,145 @@
   "estadio": "Estadio Coliseum",
   "local_espn": "Getafe",
   "visita_espn": "Sevilla",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    255,
-    205,
+    260,
+    195,
     130
    ],
    "ou_linea": 2.5,
    "ou": [
-    150,
-    -185
+    155,
+    -195
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -165
     ],
     [
      "-0.5",
-     115
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Getafe": [
+    [
+     "196339",
+     "David Soria",
+     "G"
+    ],
+    [
+     "181355",
+     "Djené",
+     "CD-L"
+    ],
+    [
+     "359826",
+     "Sebastián Boselli",
+     "CD-R"
+    ],
+    [
+     "395479",
+     "Jean Ives Valou",
+     "LB"
+    ],
+    [
+     "168531",
+     "Dani Carvajal",
+     "RB"
+    ],
+    [
+     "309838",
+     "Ramón Terrats",
+     "AM"
+    ],
+    [
+     "307186",
+     "Francho Serrano",
+     "LM"
+    ],
+    [
+     "136673",
+     "Nemanja Gudelj",
+     "RM"
+    ],
+    [
+     "218122",
+     "Enes Ünal",
+     "F"
+    ],
+    [
+     "284854",
+     "Martín Satriano",
+     "AM-L"
+    ],
+    [
+     "356080",
+     "Andrés García",
+     "AM-R"
+    ]
+   ],
+   "Sevilla": [
+    [
+     "159135",
+     "Odisseas Vlachodimos",
+     "G"
+    ],
+    [
+     "334163",
+     "Enrique Salas",
+     "CD-L"
+    ],
+    [
+     "332246",
+     "Andrés Castrín",
+     "CD-R"
+    ],
+    [
+     "222037",
+     "Gabriel Suazo",
+     "LB"
+    ],
+    [
+     "279738",
+     "Juan Iglesias",
+     "RB"
+    ],
+    [
+     "277307",
+     "Youssouf Fofana",
+     "CM-L"
+    ],
+    [
+     "282289",
+     "Lucien Agoumé",
+     "CM-R"
+    ],
+    [
+     "288900",
+     "Felix Correia",
+     "LM"
+    ],
+    [
+     "254270",
+     "Chidera Ejuke",
+     "RM"
+    ],
+    [
+     "365821",
+     "Isaac Romero",
+     "CF-L"
+    ],
+    [
+     "323033",
+     "Lucas Stassin",
+     "CF-R"
     ]
    ]
   }
@@ -84,7 +200,7 @@
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -115
+    -120
    ],
    "spread": [
     [
@@ -126,7 +242,7 @@
     ],
     [
      "+0.5",
-     -120
+     -125
     ]
    ]
   }

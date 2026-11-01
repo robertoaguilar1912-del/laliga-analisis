@@ -5,7 +5,7 @@
   "estadio": "Tele2 Arena",
   "local_espn": "Djurgården",
   "visita_espn": "Degerfors IF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
@@ -18,7 +18,7 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -170
+    -175
    ],
    "spread": [
     [
@@ -27,7 +27,123 @@
     ],
     [
      "+1.5",
-     -105
+     -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Djurgården": [
+    [
+     "203266",
+     "Jacob Rinne",
+     "G"
+    ],
+    [
+     "237053",
+     "Jacob Une",
+     "CD-L"
+    ],
+    [
+     "289721",
+     "Miro Tenho",
+     "CD-R"
+    ],
+    [
+     "205729",
+     "Piotr Johansson",
+     "LB"
+    ],
+    [
+     "269457",
+     "Adam Stahl",
+     "RB"
+    ],
+    [
+     "397300",
+     "Bo Hegland",
+     "AM"
+    ],
+    [
+     "364226",
+     "Matias Siltanen",
+     "LM"
+    ],
+    [
+     "334021",
+     "Daniel Stensson",
+     "RM"
+    ],
+    [
+     "300052",
+     "Kristian Stromland Lien",
+     "F"
+    ],
+    [
+     "239166",
+     "Jeppe Okkels",
+     "AM-L"
+    ],
+    [
+     "416649",
+     "Charlie Rosenquist",
+     "AM-R"
+    ]
+   ],
+   "Degerfors IF": [
+    [
+     "194803",
+     "Matvei Igonen",
+     "G"
+    ],
+    [
+     "390697",
+     "Nikolai Skuseth",
+     "CD"
+    ],
+    [
+     "205158",
+     "Sebastian Ohlsson",
+     "CD-L"
+    ],
+    [
+     "330244",
+     "Ahmad Faqa",
+     "CD-R"
+    ],
+    [
+     "419952",
+     "Samba Diatara",
+     "LB"
+    ],
+    [
+     "235489",
+     "Daniel Sundgren",
+     "RB"
+    ],
+    [
+     "264482",
+     "Bilal Hussein",
+     "CM"
+    ],
+    [
+     "301374",
+     "Nahom Netabay",
+     "CM-L"
+    ],
+    [
+     "309271",
+     "Noel Milleskog",
+     "CM-R"
+    ],
+    [
+     "334867",
+     "Dijan Vukojevic",
+     "CF-L"
+    ],
+    [
+     "253666",
+     "Ludvig Fritzson",
+     "CF-R"
     ]
    ]
   }
@@ -38,29 +154,145 @@
   "estadio": "Eleda Stadion",
   "local_espn": "Malmö FF",
   "visita_espn": "Hammarby IF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    380,
     360,
-    -170
+    310,
+    -145
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -135
+    125,
+    -170
    ],
    "spread": [
     [
      "+0.5",
-     130
+     115
     ],
     [
      "-0.5",
-     -185
+     -160
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Malmö FF": [
+    [
+     "178176",
+     "Robin Olsen",
+     "G"
+    ],
+    [
+     "188454",
+     "Stian Gregersen",
+     "CD-L"
+    ],
+    [
+     "312108",
+     "Andrej Duric",
+     "CD-R"
+    ],
+    [
+     "301219",
+     "Busanello",
+     "LB"
+    ],
+    [
+     "193186",
+     "Jens Stryger Larsen",
+     "RB"
+    ],
+    [
+     "364698",
+     "Adrian Skogmar",
+     "CM"
+    ],
+    [
+     "386844",
+     "Jovan Milosavljevic",
+     "LM"
+    ],
+    [
+     "315679",
+     "Otto Rosengren",
+     "RM"
+    ],
+    [
+     "395376",
+     "Diego García",
+     "F"
+    ],
+    [
+     "218450",
+     "Sead Haksabanovic",
+     "LF"
+    ],
+    [
+     "411015",
+     "Anton Höög",
+     "RF"
+    ]
+   ],
+   "Hammarby IF": [
+    [
+     "170727",
+     "Warner Hahn",
+     "G"
+    ],
+    [
+     "272714",
+     "Frederik Winther",
+     "CD-L"
+    ],
+    [
+     "334038",
+     "Victor Eriksson",
+     "CD-R"
+    ],
+    [
+     "318778",
+     "Noah Persson",
+     "LB"
+    ],
+    [
+     "382504",
+     "Hampus Skoglund",
+     "RB"
+    ],
+    [
+     "344869",
+     "Frank Junior Adjei",
+     "AM"
+    ],
+    [
+     "22967",
+     "Markus Karlsson",
+     "LM"
+    ],
+    [
+     "218436",
+     "Tesfaldet Tekie",
+     "RM"
+    ],
+    [
+     "303670",
+     "Paulos Abraham",
+     "F"
+    ],
+    [
+     "320883",
+     "Victor Lind",
+     "AM-L"
+    ],
+    [
+     "312880",
+     "Montader Madjed",
+     "AM-R"
     ]
    ]
   }
@@ -83,8 +315,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -165
+    130,
+    -175
    ],
    "spread": [
     [
@@ -114,19 +346,19 @@
     400,
     600
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    -180,
+    135
    ],
    "spread": [
     [
      "-1.5",
-     100
+     105
     ],
     [
      "+1.5",
-     -140
+     -145
     ]
    ]
   }
@@ -182,7 +414,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     120
    ],
    "spread": [
@@ -192,7 +424,7 @@
     ],
     [
      "+0.5",
-     -110
+     -105
     ]
    ]
   }
