@@ -1,0 +1,51 @@
+name: Historia de API-Football (xG y minutos)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: 'Tope de consultas de esta corrida'
+        default: '3000'
+      ligas:
+        description: 'Ligas separadas por coma (vacío = todas)'
+        default: ''
+  push:
+    branches: [main]
+    paths: ['src/af_historia.py', '.github/workflows/historia_af.yml']
+  schedule:
+    - cron: '23 10 * * *'      # 4:23 am en Honduras: completa lo que falte y suma los partidos del día anterior
+
+permissions:
+  contents: write
+
+concurrency:
+  group: historia-af
+  cancel-in-progress: false
+
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Bajar xG, estadísticas y minutos (la clave no se imprime)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: cd src && python af_historia.py --max "${{ github.event.inputs.max || '3000' }}" --ligas "${{ github.event.inputs.ligas || '' }}"
+      - name: Guardar
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/af
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Historia de API-Football $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase --autostash && git push -q && exit 0
+            sleep 15
+          done
+          echo "No se pudo guardar"; exit 1
