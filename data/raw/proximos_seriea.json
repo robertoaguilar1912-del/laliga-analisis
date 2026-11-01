@@ -5,29 +5,145 @@
   "estadio": "Via Del Mare",
   "local_espn": "Lecce",
   "visita_espn": "Genoa",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
+    235,
     185,
-    145
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
-    -170
+    120,
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -190
+     -175
     ],
     [
      "-0.5",
-     135
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Lecce": [
+    [
+     "177812",
+     "Wladimiro Falcone",
+     "G"
+    ],
+    [
+     "379865",
+     "Tiago Gabriel",
+     "CD-L"
+    ],
+    [
+     "307391",
+     "Jamil Siebert",
+     "CD-R"
+    ],
+    [
+     "277441",
+     "Antonino Gallo",
+     "LB"
+    ],
+    [
+     "344844",
+     "Danilo Veiga",
+     "RB"
+    ],
+    [
+     "334793",
+     "Oumar Ngom",
+     "CM"
+    ],
+    [
+     "241405",
+     "Youssef Maleh",
+     "LM"
+    ],
+    [
+     "374812",
+     "Olaf Gorter",
+     "RM"
+    ],
+    [
+     "304512",
+     "Nikola Stulic",
+     "F"
+    ],
+    [
+     "307893",
+     "Joel Monteiro",
+     "LF"
+    ],
+    [
+     "286582",
+     "Konan N’Dri",
+     "RF"
+    ]
+   ],
+   "Genoa": [
+    [
+     "205653",
+     "Justin Bijlow",
+     "G"
+    ],
+    [
+     "281736",
+     "Leo Østigard",
+     "CD"
+    ],
+    [
+     "259975",
+     "Johan Vásquez",
+     "CD-L"
+    ],
+    [
+     "364761",
+     "Alessandro Marcandalli",
+     "CD-R"
+    ],
+    [
+     "418840",
+     "Samuel Wiafe",
+     "CM-L"
+    ],
+    [
+     "270884",
+     "Morten Frendrup",
+     "CM-R"
+    ],
+    [
+     "130036",
+     "Stephan El Shaarawy",
+     "LM"
+    ],
+    [
+     "324256",
+     "Mikael Ellertsson",
+     "RM"
+    ],
+    [
+     "275444",
+     "Milutin Osmajic",
+     "F"
+    ],
+    [
+     "257058",
+     "Hamed Traoré",
+     "CF-L"
+    ],
+    [
+     "261054",
+     "Junior Messias",
+     "CF-R"
     ]
    ]
   }
@@ -50,17 +166,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -155
+     -160
     ]
    ]
   }

@@ -5,7 +5,7 @@
   "estadio": "Estadio Alfonso Murube",
   "local_espn": "Ceuta",
   "visita_espn": "Sporting Gijón",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    255,
-    225,
-    115
+    290,
+    215,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "+0.5",
-     -145
+     -135
     ],
     [
      "-0.5",
-     105
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Burgos": [
+    [
+     "189960",
+     "Ander Cantero",
+     "G"
+    ],
+    [
+     "259821",
+     "Gregorio Sierra",
+     "CD-L"
+    ],
+    [
+     "245822",
+     "Oier Luengo",
+     "CD-R"
+    ],
+    [
+     "331721",
+     "Brais Martínez",
+     "LB"
+    ],
+    [
+     "375963",
+     "Álex Lizancos",
+     "RB"
+    ],
+    [
+     "302945",
+     "Unai Vencedor",
+     "CM-L"
+    ],
+    [
+     "34390",
+     "Pablo Galdames",
+     "CM-R"
+    ],
+    [
+     "331154",
+     "Javi Llabrés",
+     "LM"
+    ],
+    [
+     "333167",
+     "Alberto Dadie",
+     "RM"
+    ],
+    [
+     "343629",
+     "Alex Fores",
+     "CF-L"
+    ],
+    [
+     "231344",
+     "Curro",
+     "CF-R"
+    ]
+   ],
+   "Castellón": [
+    [
+     "290546",
+     "Romain Matthys",
+     "G"
+    ],
+    [
+     "192132",
+     "Alberto",
+     "CD-L"
+    ],
+    [
+     "289894",
+     "Jeremy Mellot",
+     "CD-R"
+    ],
+    [
+     "303324",
+     "Agustín Sienra",
+     "LB"
+    ],
+    [
+     "375769",
+     "Pablo Santiago",
+     "RB"
+    ],
+    [
+     "405713",
+     "Matías Orozco",
+     "CM-L"
+    ],
+    [
+     "261186",
+     "Diego Hernández Barriuso",
+     "CM-R"
+    ],
+    [
+     "227414",
+     "Iñigo Córdoba",
+     "LM"
+    ],
+    [
+     "278015",
+     "Israel Suero",
+     "RM"
+    ],
+    [
+     "331546",
+     "Álvaro Martín",
+     "CF-L"
+    ],
+    [
+     "274984",
+     "Adam Jakobsen",
+     "CF-R"
     ]
    ]
   }
@@ -194,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     135,
-    225,
-    205
+    235,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -160
+    125,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
-     -175
+     -170
     ]
    ]
   }

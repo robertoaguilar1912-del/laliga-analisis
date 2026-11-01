@@ -5,7 +5,7 @@
   "estadio": "Estádio Municipal de Arouca",
   "local_espn": "Arouca",
   "visita_espn": "C.D. Nacional",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
   "momios": {
@@ -193,23 +193,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    245,
-    210,
-    125
+    235,
+    200,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
-    140,
-    -185
+    145,
+    -195
    ],
    "spread": [
     [
      "+0.5",
-     -160
+     -170
     ],
     [
      "-0.5",
-     115
+     120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Maritimo": [
+    [
+     "271914",
+     "Fran Vieites",
+     "G"
+    ],
+    [
+     "274283",
+     "Romain Correia",
+     "D"
+    ],
+    [
+     "363445",
+     "Gábor Szalai",
+     "D"
+    ],
+    [
+     "346675",
+     "Rafaël Fernandes",
+     "D"
+    ],
+    [
+     "324713",
+     "Rodrigo Andrade",
+     "M"
+    ],
+    [
+     "219235",
+     "Raphael Guzzo",
+     "M"
+    ],
+    [
+     "200659",
+     "Igor Julião",
+     "M"
+    ],
+    [
+     "222217",
+     "Paulo Henrique",
+     "M"
+    ],
+    [
+     "300872",
+     "Adrián Butzke",
+     "F"
+    ],
+    [
+     "367656",
+     "Martín Tejón",
+     "F"
+    ],
+    [
+     "276452",
+     "Mons Bassouamina",
+     "F"
+    ]
+   ],
+   "Santa Clara": [
+    [
+     "338678",
+     "Neneca",
+     "G"
+    ],
+    [
+     "141692",
+     "Pedro Pacheco",
+     "D"
+    ],
+    [
+     "271772",
+     "Lucas Soares",
+     "D"
+    ],
+    [
+     "256866",
+     "Guilherme Romão",
+     "D"
+    ],
+    [
+     "3100806",
+     "Emanuel Moreira",
+     "D"
+    ],
+    [
+     "318190",
+     "Daniel Borges",
+     "M"
+    ],
+    [
+     "403567",
+     "Djé",
+     "M"
+    ],
+    [
+     "334366",
+     "Tiago Ribeiro",
+     "M"
+    ],
+    [
+     "298067",
+     "Vinícius Lopes",
+     "F"
+    ],
+    [
+     "338644",
+     "Brenner",
+     "F"
+    ],
+    [
+     "374766",
+     "Fernando",
+     "F"
     ]
    ]
   }

@@ -5,7 +5,7 @@
   "estadio": "El Sardineros",
   "local_espn": "Racing Santander",
   "visita_espn": "Real Madrid",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
+    130,
     230,
-    215
+    220
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -176,7 +176,123 @@
     ],
     [
      "+0.5",
-     -170
+     -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Elche": [
+    [
+     "173749",
+     "Matías Dituro",
+     "G"
+    ],
+    [
+     "265995",
+     "Víctor Chust",
+     "D"
+    ],
+    [
+     "323286",
+     "Roy Revivo",
+     "D"
+    ],
+    [
+     "371608",
+     "Buba Sangaré",
+     "D"
+    ],
+    [
+     "318181",
+     "Federico Redondo",
+     "D"
+    ],
+    [
+     "190291",
+     "Thomas Lemar",
+     "M"
+    ],
+    [
+     "421310",
+     "Javier Morcillo",
+     "M"
+    ],
+    [
+     "273424",
+     "Gonzalo Villar",
+     "M"
+    ],
+    [
+     "301684",
+     "Fer Niño",
+     "F"
+    ],
+    [
+     "297358",
+     "Germán Valera",
+     "F"
+    ],
+    [
+     "320648",
+     "Lucas Cepeda",
+     "F"
+    ]
+   ],
+   "Valencia": [
+    [
+     "165334",
+     "Stole Dimitrievski",
+     "G"
+    ],
+    [
+     "178747",
+     "José Gayà",
+     "D"
+    ],
+    [
+     "231603",
+     "Pepelu",
+     "D"
+    ],
+    [
+     "330552",
+     "César Tárrega",
+     "D"
+    ],
+    [
+     "308728",
+     "Arnau Martínez",
+     "D"
+    ],
+    [
+     "222661",
+     "Pablo Maffeo",
+     "M"
+    ],
+    [
+     "419048",
+     "Aaron Mayol",
+     "M"
+    ],
+    [
+     "212185",
+     "Guido Rodríguez",
+     "M"
+    ],
+    [
+     "264177",
+     "Luis Rioja",
+     "M"
+    ],
+    [
+     "231618",
+     "Arnaut Danjuma",
+     "F"
+    ],
+    [
+     "16340",
+     "Javi Guerra",
+     "F"
     ]
    ]
   }
@@ -193,9 +309,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    265,
-    280
+    100,
+    260,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -457,9 +573,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    295,
-    310
+    -140,
+    300,
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -469,11 +585,11 @@
    "spread": [
     [
      "-0.5",
-     -140
+     -155
     ],
     [
      "+0.5",
-     -105
+     105
     ]
    ]
   }
