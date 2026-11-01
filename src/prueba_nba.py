@@ -99,8 +99,12 @@ def apuestas(d, sigma):
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.o_odds), r.total - r.tot),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.u_odds), r.tot - r.total)]
         if not np.isnan(r.ml_l) and not np.isnan(r.ml_v):
-            h, e, a = prob_linea(km, pm, 0)
-            h, _, a = calibrar(h / (h + a), 0, a / (h + a), CALIB['Moneyline'])
+            if not np.isnan(r.sp) and not np.isnan(r.sp_ol) and not np.isnan(r.sp_ov):      # como nba.py desde el 1 nov 2026
+                kml, pml = mod.dist_margen(cm + MEZCLA['Moneyline'] * (r.pm - cm))
+                h, e, a = prob_linea(kml, pml, 0)
+            else:
+                h, e, a = prob_linea(km, pm, 0)
+                h, _, a = calibrar(h / (h + a), 0, a / (h + a), CALIB['Moneyline'])
             sel += [('Moneyline', 'local', h, 0, a, am_to_dec(r.ml_l), r.margen),
                     ('Moneyline', 'visita', a, 0, h, am_to_dec(r.ml_v), -r.margen)]
         for mk, lado, gana, push, pierde, dec, x in sel:

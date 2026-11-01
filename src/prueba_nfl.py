@@ -83,7 +83,11 @@ def apuestas(d, sm, st, clave, umbral=0.0):
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.over_odds), r.total - r.total_line),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.under_odds), r.total_line - r.total)]
         if not np.isnan(r.home_moneyline) and not np.isnan(r.away_moneyline):
-            h, e, a = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
+            if not np.isnan(r.spread_line) and not np.isnan(r.home_spread_odds) and not np.isnan(r.away_spread_odds):
+                kml, pml = mod.dist_margen(cm + MEZCLA['Moneyline'] * (r.pm - cm))      # como en nfl.py desde el 1 nov 2026
+                h, e, a = prob_linea(kml, pml, 0)
+            else:
+                h, e, a = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
             sel += [('Moneyline', 'local', h, e, a, am_to_dec(r.home_moneyline), r.result),
                     ('Moneyline', 'visita', a, e, h, am_to_dec(r.away_moneyline), -r.result)]
         for mk, lado, gana, push, pierde, dec, x in sel:

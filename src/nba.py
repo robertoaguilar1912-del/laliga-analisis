@@ -506,7 +506,12 @@ CALIB = {'Moneyline': 0.92, 'Spread': 0.068, 'Total': 0.028}
 # centrada en la línea de la casa movida hacia el modelo solo lo que de verdad se cumplió: centro = línea + k·(modelo −
 # línea). (real − línea) contra (modelo − línea), 2022-26: k = 0.106 en spread y ≈ 0 en total. La calibración de arriba
 # (logit) solo valía en la línea de la casa: con otra línea (p. ej. +12.5 cuando la casa da +4.5) seguía diciendo ~50%.
-MEZCLA = {'Spread': 0.19, 'Total': 0.0}
+MEZCLA = {'Spread': 0.19, 'Total': 0.0, 'Moneyline': 0.19}
+# Ganador (desde el 1 nov 2026): antes salía solo del modelo (CALIB 0.92); ahora, de la misma curva que el spread (centro de la
+# línea de la casa + k·(modelo − ese centro)). k elegido con 2023-24 (log loss del ganador: modelo solo 0.6002, k 0.19 0.5850,
+# el cierre sin margen 0.5846) y probado en 2024-27: 0.5924 -> 0.5797 (cierre 0.5798). PICK de ganador con EV de +5% al cierre:
+# 1,385 +3.5% -> 287 −0.4%: en la prueba, el modelo solo ganaba algo, pero sus probabilidades estaban muy lejos de lo que pasaba
+# (en vivo, octubre 2026: 53 PICK −13.6% y solo 8 de 33 le ganaron al cierre de Pinnacle). Sin línea de spread, como antes.
 # Spread con el modelo de +/- (1 nov 2026): k 0.19 elegido con 2023-24 (antes 0.10). PICK EV ≥ 5% al cierre: 2023-24 −4.6%
 # (43), 2024-25 +30.9% (41), 2025-26 +6.9% (32): pocos, solo donde el modelo se aparta 9 puntos o más de la línea.
 # PICK temprano (total): el total del modelo a TEMPRANO_DIF puntos o más de la línea de APERTURA y la línea todavía a
@@ -1008,16 +1013,27 @@ def analizar():
         ph, pa = (t + m) / 2, (t - m) / 2
         km, pm = modelo.dist_margen(m)
         kt, pt = modelo.dist_total(t)
-        pH, _, pA = prob_linea(km, pm, 0)
-        pH, pA = pH / (pH + pA), pA / (pH + pA)
-        pH, _, pA = calibrar(pH, 0, pA, CALIB['Moneyline'])
+        mom = e.get('momios') or {}
+        sp = mom.get('spread') or [None] * 4
+        cm = None
+        if sp[0] is not None:          # centro de la casa: su probabilidad sin margen en su línea
+            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
+            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline'])
+            kml, pml = modelo.dist_margen(cm + MEZCLA['Moneyline'] * (m - cm))
+            pH, _, pA = prob_linea(kml, pml, 0)
+            pH, pA = pH / (pH + pA), pA / (pH + pA)
+        else:
+            kml = pml = None
+            pH, _, pA = prob_linea(km, pm, 0)
+            pH, pA = pH / (pH + pA), pA / (pH + pA)
+            pH, _, pA = calibrar(pH, 0, pA, CALIB['Moneyline'])
         L, V = EQUIPOS[h], EQUIPOS[a]
         les = {'local': equipos[h].get('lesiones', []), 'visita': equipos[a].get('lesiones', [])}
         fuera = [x['nombre'] for lado in les.values() for x in lado if x['estado'] in FUERA and (x['impacto'] or 0) >= 1]
         # en duda y con peso: el resultado depende de si juega; el modelo supone que sí (o que no, si es "Doubtful")
         alerta = [x['nombre'] for lado in les.values() for x in lado
                   if x['estado'] in DUDA and (x['peso'] == 'estrella' or (x['impacto'] or 0) >= 1.0)]
-        mom = e.get('momios') or {}
         con, mkt = [], None
 
         def fila(k_, nm, grupo, gana, push, pierde, d, pmk):
@@ -1037,11 +1053,8 @@ def analizar():
             imp = np.array([1 / d for d in dec]); mkt = (imp / imp.sum()).tolist()
             fila('ML1', f'Gana {L}', 'Moneyline', pH, 0, pA, dec[0], mkt[0])
             fila('ML2', f'Gana {V}', 'Moneyline', pA, 0, pH, dec[1], mkt[1])
-        sp = mom.get('spread') or [None] * 4
         mc = None
-        if sp[0] is not None:          # centro: el de la casa (su probabilidad sin margen en su línea) + k·(modelo − ese centro)
-            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
-            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+        if cm is not None:             # centro: el de la casa + k·(modelo − ese centro)
             mc = cm + MEZCLA['Spread'] * (m - cm)
         kmc, pmc = modelo.dist_margen(mc) if mc is not None else (km, pm)
         if sp[0] is not None and None not in sp:
@@ -1090,6 +1103,7 @@ def analizar():
             't0': t0, 'dist_t': [round(float(x), 5) for x in pt[(kt >= t0) & (kt <= t0 + 120)]],
             # curvas para la calculadora, centradas en la línea de la casa movida hacia el modelo (MEZCLA)
             'dist_mc': None if mc is None else [round(float(x), 5) for x in pmc[(kmc >= -50) & (kmc <= 50)]],
+            'dist_mml': None if kml is None else [round(float(x), 5) for x in pml[(kml >= -50) & (kml <= 50)]],
             't0c': None if tc is None else int(round(tc)) - 60,
             'dist_tc': None if tc is None else [round(float(x), 5) for x in ptc[(ktc >= int(round(tc)) - 60) & (ktc <= int(round(tc)) + 60)]],
             'texto': texto_juego(L, V, m, t, sp[0], tt[0], dsc, fuera), 'descanso': dsc,

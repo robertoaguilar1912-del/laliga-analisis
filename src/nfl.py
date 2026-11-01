@@ -159,7 +159,15 @@ CALIB = {'Moneyline': 1.214, 'Spread': 0.241, 'Total': 0.0}
 # la casa movida hacia el modelo lo que de verdad se cumplió: centro = línea + k·(modelo − línea); (real − línea) contra
 # (modelo con bajas − línea), 2013-26: k = 0.183 en spread y negativo en total (queda en 0). La calibración logit solo valía
 # en la línea de la casa.
-MEZCLA = {'Spread': 0.18, 'Total': 0.0}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
+MEZCLA = {'Spread': 0.18, 'Total': 0.0, 'Moneyline': 0.25}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
+# Ganador (desde el 1 nov 2026): antes salía solo del modelo (CALIB 1.214) aunque el spread ya usaba la línea movida hacia el
+# modelo; así, el 1 nov el modelo daba 51% a los Vikings en Detroit (línea Lions −3, mercado 40%) y lo marcaba PICK con EV +23%.
+# Ahora sale de la misma curva que el spread: centro de la línea de la casa + k·(modelo − ese centro). k elegido con 2013-17
+# (log loss del ganador: solo modelo 0.6155, k 0.25 0.6112, el cierre sin margen 0.6110) y probado en 2018-26: 0.6305 -> 0.6132
+# (cierre 0.6113); PICK de ganador con EV de +5% al momio de cierre: 1,216 apuestas −3.4% -> 371 apuestas +8.2%. Donde más
+# fallaba era al empezar la temporada (semanas 1-6: 0.6460 -> 0.6332). Sin línea de spread, como antes (CALIB).
+# Probado también (1 nov 2026): eficiencia por jugada (EPA de nflverse) en vez de puntos: la diferencia no mejoró (2012-17
+# 13.312 -> 13.340 con 25%; 2018-26 13.017 -> 13.014), así que no se usa. Scratchpad nflepa/ de esa sesión.
 
 # Bajas (desde el 22 oct 2026). Puntos que pierde un equipo por cada titular completo (100% de los snaps) que no juega: Out
 # o Doubtful en el parte, o en la lista de reserva (lesionados, PUP); por grupo de posición. La importancia ("papel") de
@@ -583,9 +591,19 @@ def analizar():
         m, t = ph - pa, ph + pa
         km, pm = modelo.dist_margen(m)
         kt, pt = modelo.dist_total(t)
-        pH, pT, pA = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
         L, V = info[h]['nombre'], info[a]['nombre']
         mom = e.get('momios') or {}
+        sp = mom.get('spread') or [None] * 4
+        cm = None
+        if sp[0] is not None:          # centro de la casa: su probabilidad sin margen en su línea
+            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
+            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline'])
+            kml, pml = modelo.dist_margen(cm + MEZCLA['Moneyline'] * (m - cm))
+            pH, pT, pA = prob_linea(kml, pml, 0)
+        else:
+            kml = pml = None
+            pH, pT, pA = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
         con, mkt = [], None
         ml = mom.get('ml') or [None, None]
         if None not in ml:
@@ -595,11 +613,8 @@ def analizar():
                 pc, ev = mercado(gana, pT, pierde, d)
                 con.append({'k': k_, 'mercado': nm, 'grupo': 'Moneyline', 'p': pc, 'momio': f'{d:.2f}', 'p_mercado': pmk,
                             'justo': fair(pc), 'ev': ev, 'veredicto': veredicto(ev, pc)})
-        sp = mom.get('spread') or [None] * 4
         mc = None
-        if sp[0] is not None:          # centro: el de la casa (su probabilidad sin margen en su línea) + k·(modelo − ese centro)
-            qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
-            cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+        if cm is not None:             # centro: el de la casa + k·(modelo − ese centro)
             mc = cm + MEZCLA['Spread'] * (m - cm)
         kmc, pmc = modelo.dist_margen(mc) if mc is not None else (km, pm)
         if sp[0] is not None and None not in sp:
@@ -644,6 +659,7 @@ def analizar():
             'con_momio': con, 'otras_casas': otras, 'sin_momio': sin,
             'dist_m': [round(float(x), 5) for x in pm[(km >= -50) & (km <= 50)]], 'dist_t': [round(float(x), 5) for x in pt[(kt >= 10) & (kt <= 90)]],
             'dist_mc': None if mc is None else [round(float(x), 5) for x in pmc[(kmc >= -50) & (kmc <= 50)]],
+            'dist_mml': None if kml is None else [round(float(x), 5) for x in pml[(kml >= -50) & (kml <= 50)]],
             'dist_tc': None if tc is None else [round(float(x), 5) for x in ptc[(ktc >= 10) & (ktc <= 90)]],
             'texto': texto_juego(L, V, m, t, ml, sp[0], tt[0]) + texto_bajas(lesiones, L if bh else None, V if ba else None), 'lesiones': lesiones,
             'ajuste_bajas': [bh, ba],
