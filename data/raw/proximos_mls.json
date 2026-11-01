@@ -5,7 +5,7 @@
   "estadio": "BC Place",
   "local_espn": "Vancouver Whitecaps",
   "visita_espn": "Seattle Sounders FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,29 +154,29 @@
   "estadio": "Mercedes-Benz Stadium",
   "local_espn": "Atlanta United FC",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    295,
-    205
+    -105,
+    300,
+    215
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
+    100,
     -130
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
   },
@@ -303,29 +303,29 @@
   "estadio": "GEODIS Park",
   "local_espn": "Nashville SC",
   "visita_espn": "Red Bull New York",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
+    -250,
     400,
-    475
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
     -125,
-    -105
+    100
    ],
    "spread": [
     [
      "-1.5",
-     100
+     -105
     ],
     [
      "+1.5",
-     -140
+     -130
     ]
    ]
   },
@@ -464,17 +464,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
-    -120
+    -110,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -135
     ],
     [
      "-0.5",
-     100
+     -105
     ]
    ]
   }

@@ -5,7 +5,7 @@
   "estadio": "El Gigante de Alberdi",
   "local_espn": "Belgrano (Córdoba)",
   "visita_espn": "Barracas Central",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -120
+     -125
     ],
     [
      "+0.5",
-     -115
+     -110
     ]
    ]
   },
@@ -154,7 +154,7 @@
   "estadio": "Marcelo Bielsa",
   "local_espn": "Newell's Old Boys",
   "visita_espn": "Unión (Santa Fe)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -166,8 +166,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -160
+    115,
+    -155
    ],
    "spread": [
     [
@@ -228,12 +228,12 @@
    "ml": [
     120,
     220,
-    235
+    240
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -155
+    -150
    ],
    "spread": [
     [
@@ -242,7 +242,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -260,18 +260,18 @@
    "casa": "DraftKings",
    "ml": [
     -185,
-    285,
+    290,
     550
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -150
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     -205
+     -200
     ],
     [
      "+0.5",
