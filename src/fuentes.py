@@ -319,15 +319,27 @@ def descargar_copas():
     for L in LIGAS.values():
         copas.update(L.get('copas', {}))
     filas = set()
+    resultados = {}          # partidos jugados con marcador, para el historial de cada equipo (data/raw/copas_resultados.json)
     for lg, nom in copas.items():
         for yy in (y - 1, y, y + 1):
             for e in _scoreboard(lg, str(yy)):
                 comp = e['competitions'][0]
+                hecho = bool(comp['status']['type'].get('completed'))
                 for c in comp['competitors']:
-                    filas.add(f"{nom}|{e['date']}|{c['team']['displayName']}|{int(bool(comp['status']['type'].get('completed')))}")
+                    filas.add(f"{nom}|{e['date']}|{c['team']['displayName']}|{int(hecho)}")
+                lados = {c.get('homeAway'): c for c in comp['competitors']}
+                if hecho and 'home' in lados and 'away' in lados:
+                    try:
+                        gl, gv = int(lados['home'].get('score')), int(lados['away'].get('score'))
+                    except (TypeError, ValueError):
+                        continue
+                    resultados[str(e['id'])] = {'comp': nom, 'utc': e['date'], 'local': lados['home']['team']['displayName'],
+                                                'visita': lados['away']['team']['displayName'], 'gl': gl, 'gv': gv}
     if filas:
         (RAW / 'copas.txt').write_text('\n'.join(sorted(filas)) + '\n', encoding='utf-8')
-    print(f'  ESPN copas: {len(filas)} filas')
+    if resultados:
+        json.dump(sorted(resultados.values(), key=lambda r: r['utc']), open(RAW / 'copas_resultados.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    print(f'  ESPN copas: {len(filas)} filas, {len(resultados)} partidos jugados')
 
 
 def descargar_tablas():

@@ -20,7 +20,7 @@ from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
 from mercado import implicitas
 from picks import un_pick_por_familia, reglas_europa, inicio_copa_uefa, GANA_MAX, GANA_MAX_COPAS, SIN_MENOS_DIAS
-from config import COPAS_UEFA
+from config import COPAS_UEFA, COPAS_CONMEBOL
 from corners import CornerModel, RematesModel
 from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
@@ -422,23 +422,28 @@ def h2h(hist, a, b, nombre, n=H2H_N):
             for r in m.itertuples()]
 
 
-def historial_equipos(liga, base, mapa):
-    """Partidos jugados para el historial y los enfrentamientos directos. En las ligas de Europa y Sudamérica que están en el
-    archivo de su región (europa.py) se suman los de copas (UEFA, Libertadores, Sudamericana) y los de liga desde 2020, con
-    los nombres de la liga; los que ya están en la liga (mismo equipo, mismo día ±1, mismo marcador) no se repiten. Las copas
-    nacionales (Copa del Rey, FA Cup...) no están. Devuelve (partidos, región sumada o None)."""
+def copas_jugadas(liga, mapa, region=None):
+    """Partidos jugados de las copas de la liga (copas nacionales, Concachampions, Leagues Cup...; fuentes.descargar_copas) con
+    los nombres de la liga donde los hay. Las copas que ya trae el archivo de la región (UEFA o Conmebol) no se repiten."""
     L = LIGAS[liga]
-    base = base.dropna(subset=['FTHG', 'FTAG'])[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'div']]
-    if L.get('region'):
-        return base, None
-    import europa
-    region = 'europa' if L.get('espn') in europa.LIGAS_EUROPA else 'sudamerica' if L.get('espn') in europa.LIGAS_SUDAM else None
-    if not region:
-        return base, None
-    r = europa.historial(region).dropna(subset=['FTHG', 'FTAG'])
+    ya_region = set(COPAS_UEFA.values()) if region == 'europa' else set(COPAS_CONMEBOL.values()) if region == 'sudamerica' else set()
+    nombres = {n for n in (L.get('copas') or {}).values() if n not in ya_region}
+    p = RAW / 'copas_resultados.json'
+    if not nombres or not p.exists():
+        return None
+    filas = [r for r in json.load(open(p)) if r['comp'] in nombres]
+    if not filas:
+        return None
+    df = pd.DataFrame(filas)
     nuestros = set(mapa.values())
-    r = r.assign(HomeTeam=r.HomeTeam.map(lambda x: mapa.get(x, x)), AwayTeam=r.AwayTeam.map(lambda x: mapa.get(x, x)))
-    r = r[r.HomeTeam.isin(nuestros) | r.AwayTeam.isin(nuestros)]
+    df = pd.DataFrame({'Date': pd.to_datetime(df.utc, utc=True).dt.tz_convert(None).dt.normalize(),
+                       'HomeTeam': df.local.map(lambda x: mapa.get(x, x)), 'AwayTeam': df.visita.map(lambda x: mapa.get(x, x)),
+                       'FTHG': df.gl, 'FTAG': df.gv, 'div': df.comp})
+    return df[df.HomeTeam.isin(nuestros) | df.AwayTeam.isin(nuestros)]
+
+
+def _sin_repetir(base, extra, nuestros):
+    """Los partidos de extra que no están ya en base (mismo equipo y lado, mismo día ±1, mismo marcador)."""
     ya = set()
     for x in base.itertuples():
         d = x.Date.toordinal()
@@ -447,8 +452,36 @@ def historial_equipos(liga, base, mapa):
                 ya.add((t, lado, d, int(x.FTHG), int(x.FTAG)))
     nuevo = [not any((t, lado, x.Date.toordinal() + k, int(x.FTHG), int(x.FTAG)) in ya
                      for t, lado in ((x.HomeTeam, 'h'), (x.AwayTeam, 'a')) if t in nuestros for k in (-1, 0, 1))
-             for x in r.itertuples()]
-    return pd.concat([base, r[nuevo]], ignore_index=True), region
+             for x in extra.itertuples()]
+    return extra[nuevo]
+
+
+def historial_equipos(liga, base, mapa):
+    """Partidos jugados para el historial y los enfrentamientos directos. En las ligas de Europa y Sudamérica que están en el
+    archivo de su región (europa.py) se suman los de copas (UEFA, Libertadores, Sudamericana) y los de liga desde 2020, con
+    los nombres de la liga; los que ya están en la liga (mismo equipo, mismo día ±1, mismo marcador) no se repiten. Desde el
+    1 nov 2026 también las copas nacionales y las de Concacaf (Copa del Rey, FA Cup, Leagues Cup...: copas_jugadas), de las
+    2 últimas temporadas. Devuelve (partidos, región sumada o None)."""
+    L = LIGAS[liga]
+    base = base.dropna(subset=['FTHG', 'FTAG'])[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'div']]
+    if L.get('region'):
+        return base, None
+    import europa
+    region = 'europa' if L.get('espn') in europa.LIGAS_EUROPA else 'sudamerica' if L.get('espn') in europa.LIGAS_SUDAM else None
+    nuestros = set(mapa.values())
+    if region:
+        r = europa.historial(region).dropna(subset=['FTHG', 'FTAG'])
+        r = r.assign(HomeTeam=r.HomeTeam.map(lambda x: mapa.get(x, x)), AwayTeam=r.AwayTeam.map(lambda x: mapa.get(x, x)))
+        r = r[r.HomeTeam.isin(nuestros) | r.AwayTeam.isin(nuestros)]
+        base = pd.concat([base, _sin_repetir(base, r, nuestros)], ignore_index=True)
+    try:
+        c = copas_jugadas(liga, mapa, region)
+    except (OSError, ValueError, KeyError) as e:
+        print(f'  copas {liga}: {e!r}')
+        c = None
+    if c is not None and len(c):
+        base = pd.concat([base, _sin_repetir(base, c, nuestros)], ignore_index=True)
+    return base, region
 
 
 def ultimos(hist, t, nombre, n=ULTIMOS_N):
@@ -763,7 +796,9 @@ def analizar_liga(liga):
             'zonas': ZONAS.get(L.get('zonas'), []), 'grupos': [g['grupo'] for g in grupos],
             'h2h_desde': str(hist_h2h.Date.min().year),
             'h2h_divs': (H2H_REGION[L['region']] if L.get('region') else [L['nombre']] + ([L['fd2_nombre']] if df2 is not None else [])
-                         + ([H2H_REGION[region_extra][0]] if region_extra else [])),
+                         + ([H2H_REGION[region_extra][0]] if region_extra else [])
+                         + ([] if L.get('region') else sorted(set(hist_h2h['div'].dropna())
+                                                              & (set((L.get('copas') or {}).values()) - set(COPAS_UEFA.values()) - set(COPAS_CONMEBOL.values()))))),
             'hay_xg': hay_xg, 'hay_corners': cmodel is not None, 'hay_remates': rmodel is not None,
             'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': FUENTE_REGION.get(L.get('region')) or ('por temporada' if L.get('fd') else 'resultados y cuotas'),
             'tiempos': TIEMPOS_INFO,
