@@ -5,15 +5,31 @@
   "estadio": "Giuseppe Sinigaglia",
   "local_espn": "Como",
   "visita_espn": "Venezia",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -380,
+    450,
+    800
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -130
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -135
+    ],
+    [
+     "+1.5",
+     100
+    ]
+   ]
   },
   "alineaciones": {
    "Como": [
@@ -150,7 +166,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
+    -105,
     -120
    ],
    "spread": [
@@ -177,14 +193,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    330,
+    -225,
+    320,
     550
    ],
    "ou_linea": 2.5,
    "ou": [
     -125,
-    100
+    -105
    ],
    "spread": [
     [
@@ -216,7 +232,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
+    130,
     -170
    ],
    "spread": [
