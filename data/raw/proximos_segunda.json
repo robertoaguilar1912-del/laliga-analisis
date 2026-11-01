@@ -1,14 +1,36 @@
 [
  {
   "id": "401883144",
-  "utc": "2026-11-01T20:00Z",
+  "utc": "2026-11-02T13:00Z",
   "estadio": "Estadio Heliodoro Rodríguez López",
   "local_espn": "Tenerife",
   "visita_espn": "FC Andorra",
-  "estado": "STATUS_POSTPONED",
+  "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    225,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -160
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401883146",
@@ -88,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -205,
-    310,
+    -200,
+    320,
     550
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -120
    ],
    "spread": [
     [
      "-1.5",
-     135
+     140
     ],
     [
      "+1.5",
-     -200
+     -195
     ]
    ]
   }
