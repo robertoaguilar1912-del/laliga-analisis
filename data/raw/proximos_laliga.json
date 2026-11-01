@@ -5,15 +5,31 @@
   "estadio": "El Sardineros",
   "local_espn": "Racing Santander",
   "visita_espn": "Real Madrid",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    1100,
+    700,
+    -500
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -155,
+    125
+   ],
+   "spread": [
+    [
+     "+2.5",
+     -165
+    ],
+    [
+     "-2.5",
+     120
+    ]
+   ]
   },
   "alineaciones": {
    "Racing Santander": [
