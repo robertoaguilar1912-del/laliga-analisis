@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909898",
-  "utc": "2026-10-31T23:00Z",
-  "fecha": "2026-10-31",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NO",
-  "visita": "ATL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New Orleans Pelicans",
-  "visita_espn": "Atlanta Hawks",
-  "revisado": false,
-  "estadio": "Smoothie King Center",
-  "records": {
-   "home": [
-    "1-4",
-    "1-2",
-    "0-2"
-   ],
-   "away": [
-    "3-3",
-    "1-2",
-    "2-1"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909899",
   "utc": "2026-11-01T00:00Z",
   "fecha": "2026-10-31",
@@ -171,7 +142,30 @@
     "0-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    210,
+    -258
+   ],
+   "ml_abre": [
+    210,
+    -258
+   ],
+   "spread": [
+    6.5,
+    -112,
+    -6.5,
+    -108
+   ],
+   "spread_abre": 6.5,
+   "total": [
+    222.5,
+    -110,
+    -110
+   ],
+   "total_abre": 222.5
+  }
  },
  {
   "id": "401909904",
@@ -200,7 +194,30 @@
     "0-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -170,
+    142
+   ],
+   "ml_abre": [
+    -162,
+    136
+   ],
+   "spread": [
+    -4.5,
+    -105,
+    4.5,
+    -115
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    231.5,
+    -105,
+    -115
+   ],
+   "total_abre": 230.5
+  }
  },
  {
   "id": "401909905",
@@ -258,7 +275,30 @@
     "1-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -180,
+    150
+   ],
+   "ml_abre": [
+    -175,
+    145
+   ],
+   "spread": [
+    -4.5,
+    -110,
+    4.5,
+    -110
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    227.5,
+    -110,
+    -110
+   ],
+   "total_abre": 227.5
+  }
  },
  {
   "id": "401909907",
@@ -340,9 +380,9 @@
     "2-2"
    ],
    "away": [
-    "3-3",
+    "3-4",
     "1-2",
-    "2-1"
+    "2-2"
    ]
   },
   "momios": null
@@ -485,8 +525,8 @@
     "4-0"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ]
   },
@@ -746,9 +786,9 @@
     "1-2"
    ],
    "away": [
-    "3-3",
+    "3-4",
     "1-2",
-    "2-1"
+    "2-2"
    ]
   },
   "momios": null
@@ -886,8 +926,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ],
    "away": [
@@ -1176,9 +1216,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "3-3",
+    "3-4",
     "1-2",
-    "2-1"
+    "2-2"
    ],
    "away": [
     "3-3",
@@ -1350,8 +1390,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ],
    "away": [
@@ -1466,9 +1506,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "3-3",
+    "3-4",
     "1-2",
-    "2-1"
+    "2-2"
    ],
    "away": [
     "0-5",
@@ -1790,8 +1830,8 @@
     "0-3"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ]
   },
@@ -1843,9 +1883,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "3-3",
+    "3-4",
     "1-2",
-    "2-1"
+    "2-2"
    ],
    "away": [
     "4-2",
@@ -2051,8 +2091,8 @@
     "2-2"
    ],
    "away": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ]
   },
@@ -2423,8 +2463,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "1-4",
-    "1-2",
+    "2-4",
+    "2-2",
     "0-2"
    ],
    "away": [
