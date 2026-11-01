@@ -11,6 +11,9 @@ on:
       ligas:
         description: 'Ligas separadas por coma (vacío = todas)'
         default: ''
+      lesiones:
+        description: 'si = solo las lesiones de cada partido (para la prueba de alineaciones)'
+        default: 'no'
 
 permissions:
   contents: write
@@ -32,7 +35,7 @@ jobs:
       - name: Bajar xG, estadísticas y minutos (la clave no se imprime)
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: cd src && python af_historia.py --max "${{ github.event.inputs.max || '3000' }}" --ligas "${{ github.event.inputs.ligas || '' }}"
+        run: cd src && python af_historia.py --max "${{ github.event.inputs.max || '3000' }}" --ligas "${{ github.event.inputs.ligas || '' }}" ${{ github.event.inputs.lesiones == 'si' && '--lesiones' || '' }}
       - name: Guardar
         if: always()
         run: |

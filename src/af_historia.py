@@ -234,10 +234,41 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
         _guardar(DIR / 'resumen.json', {'fecha': ahora.isoformat(timespec='minutes'), 'consultas': CONSULTAS[0], 'ligas': resumen})
 
 
+# ligas con lesiones en API-Football (revisión del 1 nov 2026: no hay en Portugal, Segunda, Liga MX, Argentina ni Colombia)
+CON_LESIONES = ['premier', 'laliga', 'seriea', 'bundesliga', 'ligue1', 'championship', 'mls', 'brasil', 'suecia']
+
+
+def lesiones(ligas=None, atras=CON_JUGADORES):
+    """Bajas de cada partido (/injuries?league&season, 1 consulta por temporada): data/af/<liga>/lesiones_<temporada>.json =
+    {id de partido: {id de equipo: [[id de jugador, 'fuera' o 'duda'], ...]}}. Para separar, en la prueba de las alineaciones,
+    a los titulares que no jugaron por lesión o sanción de los que el técnico dejó afuera."""
+    for liga in ligas or CON_LESIONES:
+        actual = inicio_temporada(liga).year
+        for temporada in range(actual, actual - atras - 1, -1):
+            j = _get('/injuries', league=LIGAS[liga]['api_football'], season=temporada)
+            if not j or j.get('errors'):
+                print(f'  lesiones {liga} {temporada}: no se pudieron bajar')
+                continue
+            out = {}
+            for x in j.get('response') or []:
+                f, t, pl = (x.get('fixture') or {}).get('id'), (x.get('team') or {}).get('id'), (x.get('player') or {})
+                if f is None or t is None or pl.get('id') is None:
+                    continue
+                tipo = 'duda' if 'question' in (pl.get('type') or '').lower() else 'fuera'
+                out.setdefault(str(f), {}).setdefault(str(t), []).append([pl['id'], tipo])
+            _guardar(DIR / liga / f'lesiones_{temporada}.json', out)
+            print(f'  lesiones {liga} {temporada}: {len(out)} partidos, {len(j.get("response") or [])} registros')
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--max', type=int, default=3000)
     ap.add_argument('--ligas', default='')
     ap.add_argument('--atras', type=int, default=ATRAS)
+    ap.add_argument('--lesiones', action='store_true', help='solo las lesiones de cada partido (2 temporadas)')
     a = ap.parse_args()
-    bajar(a.max, [x for x in a.ligas.split(',') if x] or None, a.atras)
+    ligas = [x for x in a.ligas.split(',') if x] or None
+    if a.lesiones:
+        lesiones(ligas)
+    else:
+        bajar(a.max, ligas, a.atras)
