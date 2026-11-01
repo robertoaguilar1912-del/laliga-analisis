@@ -30,6 +30,14 @@ def pendientes():
             dura = {'nfl': 200, 'nba': 150}.get(liga, 110)
             if -24 * 60 <= faltan <= -dura and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 t['resultados'].append(f'{nombre} empezó hace {-faltan:.0f} min')
+        # fútbol: el once confirmado de API-Football (alineacion.py), que puede salir después que el de ESPN
+        if liga not in ('nfl', 'nba'):
+            try:
+                import alineacion
+                for e in alineacion.pendientes(liga, ahora):
+                    t['alineaciones'].append(f"{e.get('local_espn')} vs {e.get('visita_espn')} (once de API-Football)")
+            except Exception:
+                pass
         # NFL y NBA: guardar el cierre de varias casas (The Odds API) de los juegos que empiezan en 5 a 40 minutos
         if liga in ('nfl', 'nba') and os.environ.get('ODDS_API_KEY'):
             try:

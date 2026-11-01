@@ -25,6 +25,8 @@ from corners import CornerModel, RematesModel
 from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
 import xg
+import alineacion
+from alineacion import ROTACION_LOGIT
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -539,15 +541,17 @@ def ajustar_bajas(p):
     mueva BAJAS_LOGIT·(peso local − peso visita) en logit, y rehace los mercados de resultado y hándicap con su momio, los de
     resultado sin momio, el pago anticipado, la gráfica de diferencia de goles y la distribución que usa la calculadora. Los de
     goles no cambian. Cada mercado que cambió lleva 'bajas_pp' (lo que movió) y 'p_sin_bajas'."""
-    B, d = p.get('bajas'), p.get('dist') or {}
-    if not B or not d.get('goles'):
+    B, A, d = p.get('bajas'), p.get('alineacion'), p.get('dist') or {}
+    if not (B or A) or not d.get('goles'):
         return
-    neto = B['local']['peso'] - B['visita']['peso']
-    if abs(neto) < 0.005:
+    neto = (B['local']['peso'] - B['visita']['peso']) if B else 0.0
+    rot = A['neto'] if A else 0.0              # once confirmado: titulares habituales que el técnico dejó afuera (alineacion.py)
+    mov = BAJAS_LOGIT * neto + ROTACION_LOGIT * rot
+    if abs(mov) < 0.001:
         return
     M0 = np.array(d['goles'], dtype=float)
     M0 /= M0.sum()
-    obj, a, b = _log_lv(M0) - BAJAS_LOGIT * neto, -3.0, 3.0
+    obj, a, b = _log_lv(M0) - mov, -3.0, 3.0
     for _ in range(50):
         th = (a + b) / 2
         a, b = (th, b) if _log_lv(_inclinar(M0, th)) < obj else (a, th)
@@ -593,11 +597,12 @@ def ajustar_bajas(p):
         for x in p['margen']:
             x['p'] = float(x['p'] + M1.ravel()[dc == x['m']].sum() - M0.ravel()[dc == x['m']].sum())
     d['goles'] = [[round(float(x), 5) for x in fila] for fila in M1]
-    p['bajas_ajuste'] = {'neto': round(neto, 3), 'local': round(dr['1'], 4), 'visita': round(dr['2'], 4)}
+    p['bajas_ajuste'] = {'neto': round(neto, 3), 'rotacion': round(rot, 3), 'local': round(dr['1'], 4), 'visita': round(dr['2'], 4)}
     quien = [(p['local_es'], dr['1']), (p['visita_es'], dr['2'])]
     eq, dv = min(quien, key=lambda x: x[1])
     if dv <= -0.005:
-        p['texto'] = (p.get('texto') or '') + (f" Con las bajas (FotMob) el modelo le quita {abs(dv) * 100:.1f} puntos a {eq}"
+        por = ' y '.join(x for x, v in (('las bajas (FotMob)', abs(neto) >= 0.005), ('los titulares que quedaron afuera del once', abs(rot) >= 0.005)) if v)
+        p['texto'] = (p.get('texto') or '') + (f" Con {por or 'las bajas'} el modelo le quita {abs(dv) * 100:.1f} puntos a {eq}"
                                                f" ({'local' if eq == p['local_es'] else 'visita'} {p['pH']:.0%} / empate {p['pD']:.0%} / visita {p['pA']:.0%}).")
 
 
@@ -606,11 +611,13 @@ def aplicar_bajas(partidos, bajas, equipos):
     vistos = set()
     for p in sorted(partidos, key=lambda x: x['utc']):
         b = bajas.get(str(p['id']))
+        if b:
+            p['bajas'] = {lado: _lado_bajas(b[lado], (equipos.get(t) or {}).get('habituales') or [])
+                          for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd']))}
+        if b or p.get('alineacion'):
+            ajustar_bajas(p)
         if not b:
             continue
-        p['bajas'] = {lado: _lado_bajas(b[lado], (equipos.get(t) or {}).get('habituales') or [])
-                      for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd']))}
-        ajustar_bajas(p)
         for lado, t in (('local', p['local_fd']), ('visita', p['visita_fd'])):
             if t in equipos and t not in vistos:
                 vistos.add(t)
@@ -716,6 +723,10 @@ def analizar_liga(liga):
         e['ultimos'] = ultimos(hist_h2h, t, nombre)
     pb = RAW / f'bajas_{liga}.json'
     bajas = json.load(open(pb)) if pb.exists() else {}
+    try:                                  # once confirmado de API-Football contra el habitual (ver alineacion.py)
+        alineacion.aplicar(partidos, liga, bajas)
+    except Exception as e:
+        print(f'  alineaciones {liga}: {e!r}')
     aplicar_bajas(partidos, bajas, equipos)
     # 8 ligas de Europa con momios: sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" al empezar la temporada
     # (ver picks.py); la calculadora aplica lo mismo con el momio de tu casa ('reglas' de cada partido)

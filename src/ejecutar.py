@@ -22,6 +22,7 @@ import revisar
 import oddsapi
 import apifootball
 import af_historia
+import alineacion
 from config import RAW, ESPN_DIR, LIGAS, ahora
 
 LIMITE_DESCARGA_S = 11 * 60     # la corrida completa tiene 20 min; el detalle que falte se baja en la siguiente
@@ -78,6 +79,7 @@ def main(modo):
         if con_xi:      # bajas de última hora de los partidos por empezar
             _paso('bajas FotMob', fuentes.descargar_bajas, con_xi, dentro_de_h=3)
             _paso('momios de varias casas (API-Football)', apifootball.descargar, con_xi, 2)     # y su cierre contra Pinnacle
+            _paso('alineaciones (API-Football)', alineacion.bajar, con_xi)      # once confirmado contra el habitual
         if _foto(list(tareas)) == antes and 'nba' not in tareas and not cierres:    # en la NBA cambian las lesiones aunque no cambie lo demás
             return salida('no')
     else:
@@ -93,6 +95,7 @@ def main(modo):
         _paso('momios de varias casas (API-Football)', apifootball.descargar)
         # xG y minutos de los partidos que se jugaron desde la última vez (temporada actual; ver model.XG_PESO)
         _paso('xG (API-Football)', af_historia.bajar, 400, None, 0, False)
+        _paso('alineaciones (API-Football)', alineacion.bajar, list(LIGAS))
         for liga in LIGAS:
             _paso(f'detalle {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + LIMITE_DESCARGA_S)
         _paso('copas', fuentes.descargar_copas)
