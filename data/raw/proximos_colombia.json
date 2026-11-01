@@ -5,29 +5,145 @@
   "estadio": "Deportivo Cali",
   "local_espn": "Deportivo Cali",
   "visita_espn": "Boyacá Chicó FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
-    500,
-    900
+    -390,
+    425,
+    1000
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -175
+    -170,
+    130
    ],
    "spread": [
     [
      "-1.5",
-     -150
+     -140
     ],
     [
      "+1.5",
-     105
+     100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Deportivo Cali": [
+    [
+     "150334",
+     "Pedro Gallese",
+     "G"
+    ],
+    [
+     "324044",
+     "Fernando Álvarez",
+     "CD-L"
+    ],
+    [
+     "132555",
+     "José David Moya",
+     "CD-R"
+    ],
+    [
+     "316241",
+     "Juan José Tello",
+     "LB"
+    ],
+    [
+     "251881",
+     "Leyser Chaverra",
+     "RB"
+    ],
+    [
+     "222126",
+     "Nicolas Benedetti",
+     "AM"
+    ],
+    [
+     "196719",
+     "Gustavo Cuéllar",
+     "LM"
+    ],
+    [
+     "157256",
+     "Daniel Giraldo",
+     "RM"
+    ],
+    [
+     "121232",
+     "Carlos Bacca",
+     "F"
+    ],
+    [
+     "334205",
+     "Alexis Castillo Manyoma",
+     "AM-L"
+    ],
+    [
+     "348929",
+     "Johan Andrés Martínez",
+     "AM-R"
+    ]
+   ],
+   "Boyacá Chicó FC": [
+    [
+     "171512",
+     "David Agudelo",
+     "G"
+    ],
+    [
+     "3100467",
+     "Jhonier Camilo Alomía Díaz",
+     "CD-L"
+    ],
+    [
+     "333356",
+     "Daniel Polanco",
+     "CD-R"
+    ],
+    [
+     "92528",
+     "Cristian Blanco",
+     "LB"
+    ],
+    [
+     "345702",
+     "Cristian Mosquera",
+     "RB"
+    ],
+    [
+     "106782",
+     "Juan Díaz",
+     "CM-L"
+    ],
+    [
+     "3142020",
+     "Jesús Cárdenas",
+     "CM-R"
+    ],
+    [
+     "339961",
+     "Santiago Mera",
+     "LM"
+    ],
+    [
+     "322906",
+     "Estiven Sarria",
+     "RM"
+    ],
+    [
+     "3134024",
+     "Alejandro Maya Giraldo",
+     "CF-L"
+    ],
+    [
+     "302117",
+     "Jacobo Pimentel",
+     "CF-R"
     ]
    ]
   }
@@ -150,7 +266,7 @@
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -120
+    -125
    ],
    "spread": [
     [

@@ -1,154 +1,5 @@
 [
  {
-  "id": "401860418",
-  "utc": "2026-11-01T19:00Z",
-  "estadio": "Estadio VGD",
-  "local_espn": "Londrina",
-  "visita_espn": "América Mineiro",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    110,
-    250,
-    235
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -110,
-    -120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Londrina": [
-    [
-     "418227",
-     "Caio",
-     "SUB"
-    ],
-    [
-     "390376",
-     "Vitinho Mota",
-     "SUB"
-    ],
-    [
-     "271559",
-     "Luan",
-     "SUB"
-    ],
-    [
-     "204245",
-     "Lucas Marques",
-     "SUB"
-    ],
-    [
-     "199044",
-     "Wallace Reis",
-     "SUB"
-    ],
-    [
-     "349559",
-     "Geovane Santana Meurer",
-     "SUB"
-    ],
-    [
-     "196882",
-     "Artur",
-     "SUB"
-    ],
-    [
-     "250391",
-     "Herbert Mateus Almeida De Oliveira",
-     "SUB"
-    ],
-    [
-     "166488",
-     "William Pottker",
-     "SUB"
-    ],
-    [
-     "398498",
-     "Kauê Leonardo",
-     "SUB"
-    ],
-    [
-     "202561",
-     "Tarik",
-     "SUB"
-    ]
-   ],
-   "América Mineiro": [
-    [
-     "201680",
-     "Bruno Brigido",
-     "G"
-    ],
-    [
-     "361584",
-     "Rafael Barcelos",
-     "D"
-    ],
-    [
-     "187381",
-     "Ricardo Silva",
-     "D"
-    ],
-    [
-     "292036",
-     "Tobías Ostchega",
-     "D"
-    ],
-    [
-     "145146",
-     "Emerson Santos",
-     "D"
-    ],
-    [
-     "289868",
-     "Matías Segovia",
-     "M"
-    ],
-    [
-     "194600",
-     "Jorge Roa",
-     "M"
-    ],
-    [
-     "225172",
-     "Guilherme Parede",
-     "M"
-    ],
-    [
-     "211347",
-     "Barreto",
-     "M"
-    ],
-    [
-     "334161",
-     "Paulo Victor",
-     "M"
-    ],
-    [
-     "119170",
-     "Willian",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401860415",
   "utc": "2026-11-01T21:30Z",
   "estadio": "Arena Pantanal",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    230,
-    370
+    -140,
+    255,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    115,
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -150
     ],
     [
      "+0.5",
-     -110
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cuiabá": [
+    [
+     "119069",
+     "João Carlos",
+     "G"
+    ],
+    [
+     "345704",
+     "Calebe",
+     "CD"
+    ],
+    [
+     "290099",
+     "Vitor Mendes",
+     "CD-L"
+    ],
+    [
+     "231850",
+     "Joao Basso",
+     "CD-R"
+    ],
+    [
+     "395391",
+     "David Miguel De Souza Arcanjo",
+     "CM-L"
+    ],
+    [
+     "224731",
+     "Raul",
+     "CM-R"
+    ],
+    [
+     "402827",
+     "Lorenzo",
+     "LM"
+    ],
+    [
+     "298951",
+     "Igor",
+     "RM"
+    ],
+    [
+     "385289",
+     "Vinicius Peixoto Trindade Da Silva",
+     "F"
+    ],
+    [
+     "155056",
+     "Jean Dias",
+     "CF-L"
+    ],
+    [
+     "382994",
+     "Kauan",
+     "CF-R"
+    ]
+   ],
+   "São Bernardo": [
+    [
+     "94304",
+     "Alex Alves",
+     "G"
+    ],
+    [
+     "187396",
+     "Jemerson",
+     "CD"
+    ],
+    [
+     "318175",
+     "Luizão",
+     "CD-L"
+    ],
+    [
+     "203880",
+     "Marcão Silva",
+     "CD-R"
+    ],
+    [
+     "287045",
+     "Lucas Lima",
+     "CM-L"
+    ],
+    [
+     "203206",
+     "Foguinho",
+     "CM-R"
+    ],
+    [
+     "201618",
+     "Pará",
+     "LM"
+    ],
+    [
+     "270352",
+     "Hugo",
+     "RM"
+    ],
+    [
+     "304817",
+     "Fabrício Daniel",
+     "F"
+    ],
+    [
+     "262873",
+     "Pedrinho",
+     "CF-L"
+    ],
+    [
+     "234713",
+     "Lucas Fernandes",
+     "CF-R"
     ]
    ]
   }
@@ -193,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -260,
-    390,
-    650
+    -270,
+    400,
+    700
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    105
+    110
    ],
    "spread": [
     [
      "-1.5",
-     105
+     100
     ],
     [
      "+1.5",
-     -145
+     -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Novorizontino": [
+    [
+     "200677",
+     "Jordi",
+     "G"
+    ],
+    [
+     "169883",
+     "Eduardo Brock",
+     "CD-L"
+    ],
+    [
+     "357170",
+     "Carlinhos",
+     "CD-R"
+    ],
+    [
+     "357185",
+     "Patrick",
+     "LB"
+    ],
+    [
+     "169078",
+     "Mádson",
+     "RB"
+    ],
+    [
+     "314545",
+     "Rômulo Simão",
+     "AM"
+    ],
+    [
+     "269642",
+     "Luis",
+     "LM"
+    ],
+    [
+     "287791",
+     "Matheus Bianqui",
+     "RM"
+    ],
+    [
+     "145107",
+     "Carlão",
+     "F"
+    ],
+    [
+     "212417",
+     "Nicolas Careca",
+     "AM-L"
+    ],
+    [
+     "3093312",
+     "Francisco Reidiney Duarte Gomes",
+     "AM-R"
+    ]
+   ],
+   "Operário PR": [
+    [
+     "217421",
+     "Elias",
+     "G"
+    ],
+    [
+     "312608",
+     "José Cuenú",
+     "D"
+    ],
+    [
+     "250809",
+     "Joseph",
+     "D"
+    ],
+    [
+     "357387",
+     "Gabriel Feliciano",
+     "D"
+    ],
+    [
+     "270195",
+     "Miranda",
+     "D"
+    ],
+    [
+     "383986",
+     "Dudu",
+     "M"
+    ],
+    [
+     "379922",
+     "Vinícius Diniz",
+     "M"
+    ],
+    [
+     "237485",
+     "Juninho",
+     "M"
+    ],
+    [
+     "203967",
+     "Maguinho",
+     "M"
+    ],
+    [
+     "287803",
+     "Bruno Aparecido Reis Ezequiel",
+     "M"
+    ],
+    [
+     "198283",
+     "Caio Dantas",
+     "F"
     ]
    ]
   }
@@ -259,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    220,
-    195
+    140,
+    225,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -170
+    125,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }

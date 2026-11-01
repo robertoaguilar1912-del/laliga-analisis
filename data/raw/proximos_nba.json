@@ -9,10 +9,10 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Orlando Magic",
   "visita_espn": "Boston Celtics",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kia Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    240,
-    -298
-   ],
-   "ml_abre": [
-    210,
-    -258
-   ],
-   "spread": [
-    7.5,
-    -108,
-    -7.5,
-    -112
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    221.5,
-    -108,
-    -112
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909904",
@@ -64,7 +41,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Indiana Pacers",
   "visita_espn": "Brooklyn Nets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
@@ -149,8 +126,8 @@
    "spread_abre": -2.5,
    "total": [
     220.5,
-    -115,
-    -105
+    -112,
+    -108
    ],
    "total_abre": 219.5
   }
@@ -201,8 +178,8 @@
    "spread_abre": -4.5,
    "total": [
     224.5,
-    -115,
-    -105
+    -110,
+    -110
    ],
    "total_abre": 227.5
   }

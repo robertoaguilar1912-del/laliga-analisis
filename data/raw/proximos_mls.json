@@ -5,7 +5,7 @@
   "estadio": "BC Place",
   "local_espn": "Vancouver Whitecaps",
   "visita_espn": "Seattle Sounders FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -17,17 +17,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    110,
     -145
    ],
    "spread": [
     [
      "-0.5",
-     -120
+     -115
     ],
     [
      "+0.5",
-     -115
+     -120
     ]
    ]
   },
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
+    100,
     295,
-    180
+    205
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
      "-0.5",
-     105
+     -105
     ],
     [
      "+0.5",
-     -145
+     -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlanta United FC": [
+    [
+     "185897",
+     "Alexey Miranchuk",
+     "SUB"
+    ],
+    [
+     "48128",
+     "Miguel Almirón",
+     "SUB"
+    ],
+    [
+     "361498",
+     "Elías Baez",
+     "SUB"
+    ],
+    [
+     "359927",
+     "Mauricio Amaro",
+     "SUB"
+    ],
+    [
+     "184465",
+     "Paulo Díaz",
+     "SUB"
+    ],
+    [
+     "402315",
+     "Cooper Sanchez",
+     "SUB"
+    ],
+    [
+     "202099",
+     "Breel Embolo",
+     "SUB"
+    ],
+    [
+     "330082",
+     "Tomás Jacob",
+     "SUB"
+    ],
+    [
+     "109193",
+     "Lucas Hoyos",
+     "SUB"
+    ],
+    [
+     "270889",
+     "Giuliano Galoppo",
+     "SUB"
+    ],
+    [
+     "181657",
+     "Júnior Alonso",
+     "SUB"
+    ]
+   ],
+   "Toronto FC": [
+    [
+     "294040",
+     "Luka Gavran",
+     "G"
+    ],
+    [
+     "301819",
+     "Matheus Pereira",
+     "D"
+    ],
+    [
+     "337361",
+     "Nickseon Gomis",
+     "D"
+    ],
+    [
+     "204888",
+     "Benjamín Kuscevic",
+     "D"
+    ],
+    [
+     "230626",
+     "Richie Laryea",
+     "D"
+    ],
+    [
+     "184221",
+     "Jonathan Osorio",
+     "M"
+    ],
+    [
+     "233050",
+     "Dániel Sallói",
+     "M"
+    ],
+    [
+     "225567",
+     "Niklas Dorsch",
+     "M"
+    ],
+    [
+     "252351",
+     "Djordje Mihailovic",
+     "M"
+    ],
+    [
+     "256613",
+     "Josh Sargent",
+     "F"
+    ],
+    [
+     "290190",
+     "Theo Corbeanu",
+     "F"
     ]
    ]
   }
@@ -193,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -205,
-    370,
-    400
+    -240,
+    400,
+    475
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -125,
     -105
    ],
    "spread": [
     [
      "-1.5",
-     115
+     100
     ],
     [
      "+1.5",
-     -155
+     -140
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Nashville SC": [
+    [
+     "296695",
+     "Brian Schwake",
+     "G"
+    ],
+    [
+     "290031",
+     "Maxwell Woledzi",
+     "CD-L"
+    ],
+    [
+     "167061",
+     "Jeisson Palacios",
+     "CD-R"
+    ],
+    [
+     "304120",
+     "Reed Baker-Whiting",
+     "LB"
+    ],
+    [
+     "146355",
+     "Andy Nájar",
+     "RB"
+    ],
+    [
+     "318341",
+     "Matthew Corcoran",
+     "CM"
+    ],
+    [
+     "323950",
+     "Elias Saad",
+     "LM"
+    ],
+    [
+     "315524",
+     "Patrick Yazbek",
+     "RM"
+    ],
+    [
+     "174548",
+     "Hany Mukhtar",
+     "F"
+    ],
+    [
+     "227627",
+     "Sam Surridge",
+     "LF"
+    ],
+    [
+     "73200",
+     "Cristian Espinoza",
+     "RF"
+    ]
+   ],
+   "Red Bull New York": [
+    [
+     "192027",
+     "Ethan Horvath",
+     "G"
+    ],
+    [
+     "361422",
+     "Julián Bazán",
+     "CD-L"
+    ],
+    [
+     "217009",
+     "Tim Parker",
+     "CD-R"
+    ],
+    [
+     "337030",
+     "Devin Padelford",
+     "LB"
+    ],
+    [
+     "302060",
+     "Jahkeele Marshall-Rutty",
+     "RB"
+    ],
+    [
+     "372068",
+     "Sekou Kone",
+     "CM"
+    ],
+    [
+     "329917",
+     "Jorge Ruvalcaba",
+     "LM"
+    ],
+    [
+     "381687",
+     "Adri Mehmeti",
+     "RM"
+    ],
+    [
+     "288041",
+     "Julian Hall",
+     "F"
+    ],
+    [
+     "270302",
+     "Cameron Harper",
+     "LF"
+    ],
+    [
+     "285698",
+     "Cade Cowell",
+     "RF"
     ]
    ]
   }
@@ -292,23 +524,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    290,
-    310
+    -145,
+    295,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    130
+    -170,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -150
     ],
     [
      "+0.5",
-     105
+     110
     ]
    ]
   }
@@ -333,7 +565,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761936",
@@ -344,7 +582,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761937",
@@ -355,7 +599,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761938",
@@ -366,7 +616,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761940",
@@ -377,7 +633,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761941",
@@ -388,7 +650,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761939",
@@ -399,7 +667,13 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
  },
  {
   "id": "761942",
