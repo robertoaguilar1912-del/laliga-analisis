@@ -1,89 +1,7 @@
 {
-"401882822": {
-"fotmob": 5868115,
-"visto": "2026-10-31T19:33+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Dani Olmo",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 55875641.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Eric García",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 39599399.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Roony Bardghji",
-"tipo": "Lesión",
-"regreso": "finales de febrero de 2027",
-"duda": false,
-"valor": 19846013.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Andreas Christensen",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 12170982.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Xavi Espart",
-"tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
-"valor": 1805536.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 877401746.0,
-"perdida": 0.06368307477701327,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Facundo Garcés",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 1699051.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Mikel Rodríguez",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 710974.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 20456475.0,
-"perdida": 0.08305688052315954,
-"perdida_duda": 0.0
-}
-},
 "401882821": {
 "fotmob": 5868116,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -165,7 +83,7 @@
 },
 "401882819": {
 "fotmob": 5868118,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -204,6 +122,15 @@
 "importante": true
 },
 {
+"nombre": "Federico Valverde",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 110470178.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Rodrygo",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
@@ -232,13 +159,13 @@
 }
 ],
 "valor_xi": 749257927.0,
-"perdida": 0.15495057952186336,
+"perdida": 0.3023900313035994,
 "perdida_duda": 0.0
 }
 },
 "401882823": {
 "fotmob": 5868114,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -286,6 +213,15 @@
 "importante": true
 },
 {
+"nombre": "José Copete",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 5098623.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Kayne van Oevelen",
 "tipo": "Lesión",
 "regreso": "mediados de diciembre",
@@ -311,25 +247,16 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Dimitri Foulquier",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 596524.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 69301555.0,
 "perdida": 0.4564299459081402,
-"perdida_duda": 0.0
+"perdida_duda": 0.07357155261523353
 }
 },
 "401882826": {
 "fotmob": 5868111,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -348,15 +275,6 @@
 "regreso": "mediados de enero de 2027",
 "duda": false,
 "valor": 586218.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Peio Canales",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5691409.0,
 "titular": false,
 "importante": false
 },
@@ -411,7 +329,7 @@
 },
 "401882824": {
 "fotmob": 5868113,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -493,7 +411,7 @@
 },
 "401882809": {
 "fotmob": 5868128,
-"visto": "2026-10-31T11:34+00:00",
+"visto": "2026-11-01T05:38+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -537,6 +455,406 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 710974.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882812": {
+"fotmob": 5868125,
+"visto": "2026-11-01T05:38+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Diego Murillo",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 1398466.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aarón Ochoa",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1361791.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Joaquín Muñoz",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1083845.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Julen Lobete",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 713104.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ángel Recio",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 696019.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pablo Martínez",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1723934.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Juan Cruz",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1540837.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Andrés Martin",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 7431288.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882813": {
+"fotmob": 5868124,
+"visto": "2026-11-01T05:38+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Urko González",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 13527609.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Roger Hinojo",
+"tipo": "Sanción",
+"regreso": "hasta el 7 de noviembre",
+"duda": false,
+"valor": 1678146.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kike García",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 699792.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Eder Sarabia",
+"tipo": "Sanción",
+"regreso": "hasta el 7 de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Clemens Riedel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5280197.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Álex Calatrava",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3777234.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jofre Carreras",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3544832.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Andoni Gorosabel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2387400.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Marc Casadó",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 16365470.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Zakaria Eddahchouri",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 2017033.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Bright Ede",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1134613.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pierre-Emerick Aubameyang",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1850774.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882811": {
+"fotmob": 5868126,
+"visto": "2026-11-01T05:38+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Romain Del Castillo",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 4356006.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aimar Oroz",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 10237877.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jorge Herrando",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 4434183.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Gorka Guruzeta",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 5006473.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Unai Eguiluz",
+"tipo": "Lesión",
+"regreso": "mediados de enero de 2027",
+"duda": false,
+"valor": 586218.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Iñigo Ruiz de Galarreta",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1451138.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882808": {
+"fotmob": 5868129,
+"visto": "2026-11-01T05:38+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Diego López",
+"tipo": "Lesión",
+"regreso": "mediados de febrero de 2027",
+"duda": false,
+"valor": 10873126.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kayne van Oevelen",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 2118593.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Sergi Canós",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 363105.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "David Otorbi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "José Copete",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 5098623.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Vinícius Júnior",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 116097950.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Federico Valverde",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 110470178.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Rodrygo",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 39970483.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Raúl Asencio",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 23986589.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ferland Mendy",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 2925649.0,
 "titular": false,
 "importante": false
 }

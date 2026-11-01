@@ -1,6 +1,16 @@
 {
  "Atlanta Hawks": [
   {
+   "id": "3146557",
+   "nombre": "Jock Landale",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Hip",
+   "regreso": "2026-11-02",
+   "nota": "Landale (hip) won't return to Saturday's game against the Pelicans."
+  },
+  {
    "id": "4701230",
    "nombre": "Jalen Johnson",
    "pos": "F",
@@ -9,16 +19,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-02",
    "nota": "Johnson (ankle) did not return to Saturday's 121-99 loss to the Pelicans. He finished with 13 points (5-11 FG, 1-3 3Pt, 2-2 FT), seven rebounds, four assists and one block over 28 minutes."
-  },
-  {
-   "id": "3146557",
-   "nombre": "Jock Landale",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-01",
-   "tipo": "Hip",
-   "regreso": "2026-11-02",
-   "nota": "Landale (hip) won't return to Saturday's game against the Pelicans."
   },
   {
    "id": "4712863",
@@ -164,8 +164,8 @@
    "id": "4683747",
    "nombre": "Jaylon Tyson",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-30",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Ankle",
    "regreso": "2026-11-02",
    "nota": "Tyson (ankle) has been ruled out for Saturday's game against the Bucks."
@@ -331,24 +331,24 @@
  ],
  "Houston Rockets": [
   {
-   "id": "4711272",
-   "nombre": "Reed Sheppard",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-31",
-   "tipo": "Back",
-   "regreso": "2026-11-02",
-   "nota": "Sheppard (back) is out for Saturday's game against the Thunder."
-  },
-  {
    "id": "2991230",
    "nombre": "Fred VanVleet",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-31",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Knee",
    "regreso": "2026-11-02",
    "nota": "VanVleet (knee) won't play Saturday against the Thunder."
+  },
+  {
+   "id": "4711272",
+   "nombre": "Reed Sheppard",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Back",
+   "regreso": "2026-11-02",
+   "nota": "Sheppard (back) is out for Saturday's game against the Thunder."
   },
   {
    "id": "2991235",
@@ -509,34 +509,34 @@
  ],
  "Memphis Grizzlies": [
   {
-   "id": "4065733",
-   "nombre": "Ty Jerome",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-31",
-   "tipo": "Back",
+   "id": "4593016",
+   "nombre": "Quinten Post",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Ankle",
    "regreso": "2026-11-02",
-   "nota": "Jerome (back) won't play in Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian."
+   "nota": "Post (ankle) has been ruled out for Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian reports."
   },
   {
    "id": "4431785",
    "nombre": "Scotty Pippen Jr.",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-31",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Back",
    "regreso": "2026-11-02",
    "nota": "Pippen (back) has been ruled out for Saturday's game against the Kings, Chris Herrington of The Daily Memphian reports."
   },
   {
-   "id": "4593016",
-   "nombre": "Quinten Post",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-31",
-   "tipo": "Ankle",
+   "id": "4065733",
+   "nombre": "Ty Jerome",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Back",
    "regreso": "2026-11-02",
-   "nota": "Post (ankle) has been ruled out for Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian reports."
+   "nota": "Jerome (back) won't play in Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian."
   }
  ],
  "Minnesota Timberwolves": [
@@ -544,8 +544,8 @@
    "id": "3032976",
    "nombre": "Rudy Gobert",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-31",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Back",
    "regreso": "2026-11-02",
    "nota": "Gobert (back) is out for Saturday's game against the Spurs, Dane Moore of 'The Dane Moore NBA Podcast' reports."
@@ -573,11 +573,21 @@
  ],
  "New Orleans Pelicans": [
   {
+   "id": "4277956",
+   "nombre": "Jordan Poole",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Ankle",
+   "regreso": "2026-11-02",
+   "nota": "Poole (ankle) has been ruled out for Saturday's game against the Hawks."
+  },
+  {
    "id": "3907497",
    "nombre": "Dejounte Murray",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-31",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Personal",
    "regreso": "2026-11-02",
    "nota": "Murray (personal) won't play in Saturday's game against the Hawks, Jim Eichenhofer of the Pelicans' official site reports."
@@ -591,16 +601,6 @@
    "tipo": "Knee",
    "regreso": "2026-11-08",
    "nota": "Missi (knee) won't play in Saturday's game against Atlanta."
-  },
-  {
-   "id": "4277956",
-   "nombre": "Jordan Poole",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-30",
-   "tipo": "Ankle",
-   "regreso": "2026-11-02",
-   "nota": "Poole (ankle) has been ruled out for Saturday's game against the Hawks."
   }
  ],
  "New York Knicks": [
@@ -731,24 +731,24 @@
  ],
  "Philadelphia 76ers": [
   {
-   "id": "1966",
-   "nombre": "LeBron James",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-31",
-   "tipo": "Back",
-   "regreso": "2026-11-02",
-   "nota": "James (back) has been ruled out for Saturday's meeting in Charlotte."
-  },
-  {
    "id": "3059318",
    "nombre": "Joel Embiid",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-10-31",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
    "tipo": "Foot",
    "regreso": "2026-11-02",
    "nota": "Embiid (foot) is out for Saturday's game in Charlotte."
+  },
+  {
+   "id": "1966",
+   "nombre": "LeBron James",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-01",
+   "tipo": "Back",
+   "regreso": "2026-11-02",
+   "nota": "James (back) has been ruled out for Saturday's meeting in Charlotte."
   },
   {
    "id": "4870562",
