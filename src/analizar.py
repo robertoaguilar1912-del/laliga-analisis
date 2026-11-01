@@ -23,6 +23,7 @@ from picks import un_pick_por_familia, reglas_europa, inicio_copa_uefa, GANA_MAX
 from config import COPAS_UEFA
 from corners import CornerModel, RematesModel
 from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
+import apifootball
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -212,6 +213,14 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
             dec_ou = [am_to_dec(x) for x in mom['ou']]
             lam_m = round(lam_mercado(mom['ou_linea'], (1 / dec_ou[0]) / (1 / dec_ou[0] + 1 / dec_ou[1])), 3)
         tiempos = {'lam': round(float(lam + mu), 3), 'lam_m': lam_m, 'linea_m': mom.get('ou_linea') if lam_m else None}
+        # Pinnacle y otras casas (API-Football, desde el 1 nov 2026): precio justo para la calculadora y el aviso de VALOR
+        otras = apifootball.para_partido(liga, g['id'])
+        apifootball.enriquecer(con_momio + sin, otras)
+        otras_c = None if not otras else {
+            't': otras.get('update') or otras['t'],
+            'pin': {k: [v['p'], v['momio']] for k, v in otras['pinnacle'].items()},
+            'cons': {k: [v['p'], v['n']] for k, v in otras['consenso'].items() if v['n'] >= 3},
+            'mej': {k: [v['momio'], v['casa']] for k, v in otras['mejor'].items() if k in otras['pinnacle'] or k in otras['consenso']}}
         add('A1', f'Anota {L}', 'Goles por equipo', 1 - M[0, :].sum()); add('A2', f'Anota {V}', 'Goles por equipo', 1 - M[:, 0].sum())
         add('CS1', f'Portería en cero {L}', 'Goles por equipo', M[:, 0].sum()); add('CS2', f'Portería en cero {V}', 'Goles por equipo', M[0, :].sum())
         # córners y remates a puerta: la página arma todas las líneas con estas distribuciones
@@ -250,7 +259,7 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         out.append({'id': g['id'], 'utc': g['utc'], 'estadio': g['estadio'], 'local_es': L, 'visita_es': V, 'local_fd': h, 'visita_fd': a,
                     'xg_local': float(lam), 'xg_visita': float(mu), 'corners': [cn['c_local'], cn['c_visita']] if cn else None, 'tipo': g.get('tipo', ''),
                     'forma_local': equipos_info[h]['forma_str'] if h in equipos_info else '', 'forma_visita': equipos_info[a]['forma_str'] if a in equipos_info else '',
-                    'pH': pH, 'pD': pD, 'pA': pA, 'pa': pago_anticipado(M), 'mercado': mkt, 'casa_momios': mom.get('casa'), 'tiempos': tiempos,
+                    'pH': pH, 'pD': pD, 'pA': pA, 'pa': pago_anticipado(M), 'mercado': mkt, 'casa_momios': mom.get('casa'), 'tiempos': tiempos, 'otras_casas': otras_c,
                     'con_momio': con_momio, 'sin_momio': sin, 'marcadores': [{'m': s_, 'p': p_} for s_, p_ in sc.items()],
                     'margen': [{'m': int(v), 'p': float(pM[dclip == v].sum())} for v in range(-4, 5)],
                     'remates': [dist_r['ml'], dist_r['mv']] if dist_r else None,

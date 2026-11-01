@@ -80,21 +80,21 @@ LIGAS = {
     # region: copa entre equipos de ligas distintas ('europa' o 'sudamerica'). Se usa el modelo de toda la región
     # (src/europa.py), que mide cuánto vale cada liga con los partidos de las copas. Sus resultados (y los de las ligas de la
     # región) los baja europa.py, no football-data. fase_tabla: la fase de la copa que va en la tabla (las eliminatorias no).
-    'champions': {'nombre': 'Champions League', 'fotmob': 42, 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'region': 'europa',
+    'champions': {'nombre': 'Champions League', 'fotmob': 42, 'api_football': 2, 'pais': 'Europa', 'espn': 'uefa.champions', 'solo_espn': True, 'region': 'europa',
                   'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (396 partidos) quedó casi igual de '
                            'preciso que el momio de cierre y los PICK dieron +7.2% (208 apuestas, rango probable −9% a +24%: puede ser suerte). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
                            'pierden. No hay córners ni remates a puerta.'},
-    'europa': {'nombre': 'Europa League', 'fotmob': 73, 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'region': 'europa',
+    'europa': {'nombre': 'Europa League', 'fotmob': 73, 'api_football': 3, 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'region': 'europa',
                'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (395 partidos) fue menos preciso '
                            'que el momio de cierre y los PICK dieron +1.6% (315 apuestas, rango probable −11% a +15%). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
                            'pierden. No hay córners ni remates a puerta.'},
-    'conference': {'nombre': 'Conference League', 'fotmob': 10216, 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'region': 'europa',
+    'conference': {'nombre': 'Conference League', 'fotmob': 10216, 'api_football': 848, 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'region': 'europa',
                    'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (301 partidos) fue menos preciso '
                            'que el momio de cierre y los PICK dieron −6.7% (266 apuestas, rango probable −20% a +6%). Muchos equipos son de países sin liga en '
@@ -137,7 +137,7 @@ LIGAS = {
                         '−30% en 2024-26), mientras que de junio a agosto ganaron. Esta temporada ya está en esa parte: tómalo con '
                         'mucho cuidado hasta que vuelva la liga en abril.'},
     # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
-    'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
+    'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'api_football': 13, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
                      'copas': {}, 'zonas': 'libertadores',
                      'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Sudamérica (12 ligas), que además suma la altura del '
@@ -146,7 +146,7 @@ LIGAS = {
                               'cosas que el modelo no: rotaciones (equipos que guardan titulares para su liga), lesiones y el marcador global '
                               'en la vuelta de las eliminatorias. Usa la página para estadísticas, la tabla y el momio justo; no sigas los PICK '
                               'a ciegas. No hay córners ni remates a puerta.'},
-    'sudamericana': {'nombre': 'Copa Sudamericana', 'fotmob': 299, 'pais': 'Sudamérica', 'espn': 'conmebol.sudamericana', 'solo_espn': True,
+    'sudamericana': {'nombre': 'Copa Sudamericana', 'fotmob': 299, 'api_football': 11, 'pais': 'Sudamérica', 'espn': 'conmebol.sudamericana', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
                      'copas': {}, 'zonas': 'sudamericana',
                      'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Sudamérica (12 ligas), que además suma la altura del '
