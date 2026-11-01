@@ -1,154 +1,5 @@
 [
  {
-  "id": "401882823",
-  "utc": "2026-11-01T17:30Z",
-  "estadio": "Estadio Martínez Valero",
-  "local_espn": "Elche",
-  "visita_espn": "Valencia",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-laliga",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    120,
-    240,
-    235
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    100
-   ],
-   "spread": [
-    [
-     "-0.5",
-     110
-    ],
-    [
-     "+0.5",
-     -155
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Elche": [
-    [
-     "173749",
-     "Matías Dituro",
-     "G"
-    ],
-    [
-     "265995",
-     "Víctor Chust",
-     "D"
-    ],
-    [
-     "323286",
-     "Roy Revivo",
-     "D"
-    ],
-    [
-     "371608",
-     "Buba Sangaré",
-     "D"
-    ],
-    [
-     "318181",
-     "Federico Redondo",
-     "D"
-    ],
-    [
-     "190291",
-     "Thomas Lemar",
-     "M"
-    ],
-    [
-     "421310",
-     "Javier Morcillo",
-     "M"
-    ],
-    [
-     "273424",
-     "Gonzalo Villar",
-     "M"
-    ],
-    [
-     "301684",
-     "Fer Niño",
-     "F"
-    ],
-    [
-     "297358",
-     "Germán Valera",
-     "F"
-    ],
-    [
-     "320648",
-     "Lucas Cepeda",
-     "F"
-    ]
-   ],
-   "Valencia": [
-    [
-     "165334",
-     "Stole Dimitrievski",
-     "G"
-    ],
-    [
-     "178747",
-     "José Gayà",
-     "D"
-    ],
-    [
-     "231603",
-     "Pepelu",
-     "D"
-    ],
-    [
-     "330552",
-     "César Tárrega",
-     "D"
-    ],
-    [
-     "308728",
-     "Arnau Martínez",
-     "D"
-    ],
-    [
-     "222661",
-     "Pablo Maffeo",
-     "M"
-    ],
-    [
-     "419048",
-     "Aaron Mayol",
-     "M"
-    ],
-    [
-     "212185",
-     "Guido Rodríguez",
-     "M"
-    ],
-    [
-     "264177",
-     "Luis Rioja",
-     "M"
-    ],
-    [
-     "231618",
-     "Arnaut Danjuma",
-     "F"
-    ],
-    [
-     "16340",
-     "Javi Guerra",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401882826",
   "utc": "2026-11-01T20:00Z",
   "estadio": "San Mamés",
@@ -161,13 +12,13 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    260,
-    270
+    270,
+    265
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -135,
+    110
    ],
    "spread": [
     [
@@ -177,6 +28,122 @@
     [
      "+0.5",
      -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Athletic Club": [
+    [
+     "222375",
+     "Unai Simón",
+     "G"
+    ],
+    [
+     "133768",
+     "Yuri Berchiche",
+     "D"
+    ],
+    [
+     "274016",
+     "Dani Vivian",
+     "D"
+    ],
+    [
+     "362572",
+     "Hugo Rincón",
+     "D"
+    ],
+    [
+     "159317",
+     "Aymeric Laporte",
+     "D"
+    ],
+    [
+     "388803",
+     "Beñat Gerenabarrena",
+     "M"
+    ],
+    [
+     "312146",
+     "Nico Williams",
+     "M"
+    ],
+    [
+     "388805",
+     "Peio Canales",
+     "M"
+    ],
+    [
+     "209579",
+     "Álex Berenguer",
+     "M"
+    ],
+    [
+     "214412",
+     "Iñaki Williams",
+     "M"
+    ],
+    [
+     "393762",
+     "Maroan Sannadi",
+     "F"
+    ]
+   ],
+   "Real Sociedad": [
+    [
+     "217319",
+     "Álex Remiro",
+     "G"
+    ],
+    [
+     "355433",
+     "Mamadou Sarr",
+     "D"
+    ],
+    [
+     "265993",
+     "Sergio Gómez",
+     "D"
+    ],
+    [
+     "318063",
+     "Jon Aramburu",
+     "D"
+    ],
+    [
+     "366885",
+     "Jon Martín",
+     "D"
+    ],
+    [
+     "388601",
+     "Jon Gorrotxategi",
+     "M"
+    ],
+    [
+     "213141",
+     "Gonçalo Guedes",
+     "M"
+    ],
+    [
+     "283941",
+     "Ander Barrenetxea",
+     "M"
+    ],
+    [
+     "235072",
+     "Carlos Soler",
+     "M"
+    ],
+    [
+     "306263",
+     "Luka Sucic",
+     "F"
+    ],
+    [
+     "229018",
+     "Mikel Oyarzabal",
+     "F"
     ]
    ]
   }

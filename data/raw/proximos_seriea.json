@@ -1,154 +1,5 @@
 [
  {
-  "id": "401874968",
-  "utc": "2026-11-01T17:00Z",
-  "estadio": "Via Del Mare",
-  "local_espn": "Lecce",
-  "visita_espn": "Genoa",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-italian-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    235,
-    185,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -150
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -175
-    ],
-    [
-     "-0.5",
-     125
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Lecce": [
-    [
-     "177812",
-     "Wladimiro Falcone",
-     "G"
-    ],
-    [
-     "379865",
-     "Tiago Gabriel",
-     "CD-L"
-    ],
-    [
-     "307391",
-     "Jamil Siebert",
-     "CD-R"
-    ],
-    [
-     "277441",
-     "Antonino Gallo",
-     "LB"
-    ],
-    [
-     "344844",
-     "Danilo Veiga",
-     "RB"
-    ],
-    [
-     "334793",
-     "Oumar Ngom",
-     "CM"
-    ],
-    [
-     "241405",
-     "Youssef Maleh",
-     "LM"
-    ],
-    [
-     "374812",
-     "Olaf Gorter",
-     "RM"
-    ],
-    [
-     "304512",
-     "Nikola Stulic",
-     "F"
-    ],
-    [
-     "307893",
-     "Joel Monteiro",
-     "LF"
-    ],
-    [
-     "286582",
-     "Konan N’Dri",
-     "RF"
-    ]
-   ],
-   "Genoa": [
-    [
-     "205653",
-     "Justin Bijlow",
-     "G"
-    ],
-    [
-     "281736",
-     "Leo Østigard",
-     "CD"
-    ],
-    [
-     "259975",
-     "Johan Vásquez",
-     "CD-L"
-    ],
-    [
-     "364761",
-     "Alessandro Marcandalli",
-     "CD-R"
-    ],
-    [
-     "418840",
-     "Samuel Wiafe",
-     "CM-L"
-    ],
-    [
-     "270884",
-     "Morten Frendrup",
-     "CM-R"
-    ],
-    [
-     "130036",
-     "Stephan El Shaarawy",
-     "LM"
-    ],
-    [
-     "324256",
-     "Mikael Ellertsson",
-     "RM"
-    ],
-    [
-     "275444",
-     "Milutin Osmajic",
-     "F"
-    ],
-    [
-     "257058",
-     "Hamed Traoré",
-     "CF-L"
-    ],
-    [
-     "261054",
-     "Junior Messias",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401874949",
   "utc": "2026-11-01T19:45Z",
   "estadio": "Allianz Stadium",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    220,
-    210
+    115,
+    225,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -125,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     120
+     110
     ],
     [
      "+0.5",
-     -165
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Juventus": [
+    [
+     "24412",
+     "Juan Cabal",
+     "SUB"
+    ],
+    [
+     "256715",
+     "Weston McKennie",
+     "SUB"
+    ],
+    [
+     "252971",
+     "Randal Kolo Muani",
+     "SUB"
+    ],
+    [
+     "320074",
+     "Douglas Luiz",
+     "SUB"
+    ],
+    [
+     "290129",
+     "Pierre Kalulu",
+     "SUB"
+    ],
+    [
+     "227697",
+     "Jhon Lucumí",
+     "SUB"
+    ],
+    [
+     "298349",
+     "Nick Woltemade",
+     "SUB"
+    ],
+    [
+     "204082",
+     "Guglielmo Vicario",
+     "SUB"
+    ],
+    [
+     "258968",
+     "Teun Koopmeiners",
+     "SUB"
+    ],
+    [
+     "258307",
+     "Bremer",
+     "SUB"
+    ],
+    [
+     "391034",
+     "Kerim Alajbegovic",
+     "SUB"
+    ]
+   ],
+   "Napoli": [
+    [
+     "209746",
+     "Alex Meret",
+     "G"
+    ],
+    [
+     "155904",
+     "Giovanni Di Lorenzo",
+     "D"
+    ],
+    [
+     "367690",
+     "Luca Marianucci",
+     "D"
+    ],
+    [
+     "297360",
+     "Rafa Marín",
+     "D"
+    ],
+    [
+     "234881",
+     "Mathías Olivera",
+     "D"
+    ],
+    [
+     "215721",
+     "Frank Anguissa",
+     "M"
+    ],
+    [
+     "255850",
+     "Scott McTominay",
+     "M"
+    ],
+    [
+     "134947",
+     "Kevin De Bruyne",
+     "M"
+    ],
+    [
+     "188306",
+     "Matteo Politano",
+     "F"
+    ],
+    [
+     "255344",
+     "Noa Lang",
+     "F"
+    ],
+    [
+     "282564",
+     "Lorenzo Lucca",
+     "F"
     ]
    ]
   }
