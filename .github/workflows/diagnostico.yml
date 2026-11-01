@@ -1,0 +1,32 @@
+name: Revisar API-Football
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/diag_api_football.py']
+
+permissions:
+  contents: write
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Qué trae el plan (sin guardar la clave ni datos de la cuenta)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: cd src && python diag_api_football.py
+      - name: Guardar el resultado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/api_football_diag.json
+          git diff --cached --quiet || git commit -m "Revisión de API-Football $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash || true
+          git push || echo "No se pudo guardar"
