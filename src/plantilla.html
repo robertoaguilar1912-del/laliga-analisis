@@ -1186,7 +1186,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         .map(([n, x]) => `${esc(n)} deja afuera a ${lista(x.afuera.map(nombre => ({ nombre })))} (${pct(x.rot)} de los minutos de su once habitual)`) : [];
       if (!partes.length && !once.length) return '';
       const aj = m.bajas_ajuste, mov = aj ? aj[l] * 100 : 0;
-      return `<br>${partes.length ? `Bajas (FotMob): ${partes.join('; ')}. ` : ''}${once.length ? `Once confirmado: ${once.join('; ')}. ` : ''}${Math.abs(mov) >= 0.05 ? `<b>El modelo ya lo cuenta: le ${mov < 0 ? 'quita' : 'suma'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya lo cuenta; se compensa entre los dos equipos'}, lo que el mercado suele moverse por esto (30% más del once de baja que el rival ≈ 1 punto; 3 titulares habituales afuera ≈ 1 punto).`;
+      return `<br>${partes.length ? `Bajas (FotMob): ${partes.join('; ')}. ` : ''}${once.length ? `Once confirmado: ${once.join('; ')}. ` : ''}${Math.abs(mov) >= 0.05 ? `<b>El modelo ya lo cuenta: le ${mov < 0 ? 'quita' : 'suma'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya lo cuenta; se compensa entre los dos equipos'}, lo que el mercado suele moverse por esto (30% más del once de baja que el rival ≈ 1 punto; 3 titulares habituales afuera ≈ 3 puntos en América, ≈ 0.5 en las grandes ligas de Europa).`;
     };
     const calc = () => {
       const o = elegido();

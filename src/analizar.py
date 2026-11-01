@@ -26,7 +26,7 @@ from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
 import xg
 import alineacion
-from alineacion import ROTACION_LOGIT
+from alineacion import peso_rotacion
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -579,7 +579,7 @@ def ajustar_bajas(p):
         return
     neto = (B['local']['peso'] - B['visita']['peso']) if B else 0.0
     rot = A['neto'] if A else 0.0              # once confirmado: titulares habituales que el técnico dejó afuera (alineacion.py)
-    mov = BAJAS_LOGIT * neto + ROTACION_LOGIT * rot
+    mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
     if abs(mov) < 0.001:
         return
     M0 = np.array(d['goles'], dtype=float)

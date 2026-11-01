@@ -11,8 +11,15 @@ Prueba (1 nov 2026, scratchpad xi/ de esa sesión), 2025-26 y lo que va de 2026-
   −0.25 ± 0.02 por unidad de (rotación local − rotación visita). Sin separar (3,533 partidos): −0.31 ± 0.015.
 - Resultados contra el modelo (con xG), 6,939 partidos de 13 ligas: el mejor coeficiente sale −0.35 en Europa y más de −1 en
   América (log loss 1.0136 -> 1.0127 con −0.25); solo los dejados afuera: −0.42 (rango −0.9 a 0).
-Se usa ROTACION_LOGIT = 0.25, lo que mueve el mercado (lo más prudente): un equipo con 3 titulares habituales afuera
-(~25% de los minutos) frente a uno completo pierde ~1 punto de probabilidad de ganar.
+Por región (1 nov 2026, scratchpad xi/region.py), contra el modelo y solo los dejados afuera (lo que se ajusta en vivo):
+- Premier, La Liga, Serie A, Bundesliga, Ligue 1 y Championship (2,490 partidos): −0.05 (rango −0.66 a +0.65): casi nada.
+- MLS, Brasil y Suecia (1,802): −1.00 (rango −1.66 a −0.49); Liga MX y Argentina (rotación total, 1,346): −1.05 (−1.70 a −0.39).
+- Portugal y Segunda (rotación total, sin lesiones en API-Football; 892): −1.25 (−2.22 a −0.47).
+Y contra el CIERRE de la casa: en América el cierre se queda corto (−0.55 más, rango −0.96 a −0.05; 3,405 partidos: el
+mercado no descuenta del todo la rotación) y en Europa se pasa (+0.70 contra el cierre de Pinnacle, 1,278 partidos).
+ROTACION_LOGIT por grupo, un poco por debajo de lo medido (prudencia): grandes de Europa 0.10, América 0.70, Portugal y
+Segunda 0.40, copas internacionales 0.25 (sin prueba propia). 3 titulares habituales afuera (~25% de los minutos) frente
+a un rival completo: ~3 puntos menos de probabilidad de ganar en América, ~0.5 en las grandes de Europa.
 
 - bajar(ligas): pide /fixtures/lineups de los partidos que empiezan en VENTANA minutos (1 consulta por partido, en la corrida
   de cada 30 minutos) y guarda data/raw/xi_af_<liga>.json: {id de ESPN: {'af', 't', 'h': [ids], 'a': [ids]}}.
@@ -24,7 +31,20 @@ from datetime import datetime, timezone
 
 from config import RAW, DATOS, LIGAS
 
-ROTACION_LOGIT = 0.25
+ROTACION_LOGIT = {'grandes': 0.10, 'america': 0.70, 'otras': 0.40, 'copas': 0.25}
+GRANDES = {'premier', 'laliga', 'seriea', 'bundesliga', 'ligue1', 'championship'}
+AMERICA = {'ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia'}
+
+
+def peso_rotacion(liga):
+    """Logit que mueve cada unidad de rotación (local − visita) en esta liga."""
+    if liga in GRANDES:
+        return ROTACION_LOGIT['grandes']
+    if liga in AMERICA:
+        return ROTACION_LOGIT['america']
+    if (LIGAS.get(liga) or {}).get('region'):
+        return ROTACION_LOGIT['copas']
+    return ROTACION_LOGIT['otras']
 N_PREVIOS = 5
 VENTANA = (-20, 80)          # minutos antes de empezar en que se piden las alineaciones
 TERMINADO = {'FT', 'AET', 'PEN'}
