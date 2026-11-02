@@ -1,154 +1,5 @@
 [
  {
-  "id": "401860412",
-  "utc": "2026-11-02T21:00Z",
-  "estadio": "Estádio Joaquim Portugal",
-  "local_espn": "Athletic",
-  "visita_espn": "Ceará",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    140,
-    180,
-    250
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    130,
-    -175
-   ],
-   "spread": [
-    [
-     "-0.5",
-     125
-    ],
-    [
-     "+0.5",
-     -180
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Athletic": [
-    [
-     "189787",
-     "Luan Polli",
-     "G"
-    ],
-    [
-     "390864",
-     "Jhan Torres",
-     "CD-L"
-    ],
-    [
-     "323125",
-     "Lucas Belezi",
-     "CD-R"
-    ],
-    [
-     "379395",
-     "Enzo",
-     "LB"
-    ],
-    [
-     "321358",
-     "Diogo Batista",
-     "RB"
-    ],
-    [
-     "361627",
-     "Felipe Negrucci",
-     "CM"
-    ],
-    [
-     "339036",
-     "Jota",
-     "LM"
-    ],
-    [
-     "409515",
-     "João Miguel Da Costa Pereira",
-     "RM"
-    ],
-    [
-     "246711",
-     "Carlinhos",
-     "F"
-    ],
-    [
-     "359193",
-     "Kauan",
-     "LF"
-    ],
-    [
-     "398918",
-     "Assis",
-     "RF"
-    ]
-   ],
-   "Ceará": [
-    [
-     "170456",
-     "Richard",
-     "G"
-    ],
-    [
-     "201054",
-     "Luiz Otavio",
-     "CD"
-    ],
-    [
-     "400877",
-     "Gabriel",
-     "CD-L"
-    ],
-    [
-     "218928",
-     "Éder",
-     "CD-R"
-    ],
-    [
-     "285116",
-     "Vinicius",
-     "CM-L"
-    ],
-    [
-     "236189",
-     "Richardson",
-     "CM-R"
-    ],
-    [
-     "314389",
-     "Lenny Lobato",
-     "LM"
-    ],
-    [
-     "257010",
-     "Bryan",
-     "RM"
-    ],
-    [
-     "252956",
-     "Saulo",
-     "F"
-    ],
-    [
-     "418256",
-     "Melk",
-     "CF-L"
-    ],
-    [
-     "418255",
-     "Enzo",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401860419",
   "utc": "2026-11-02T23:30Z",
   "estadio": "Estádio da Serrinha",
@@ -160,23 +11,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    250,
-    180
+    115,
+    260,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
     -135,
-    100
+    105
    ],
    "spread": [
     [
      "-0.5",
-     130
+     105
     ],
     [
      "+0.5",
-     -180
+     -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Goiás": [
+    [
+     "202304",
+     "Tadeu",
+     "G"
+    ],
+    [
+     "285068",
+     "Silva",
+     "D"
+    ],
+    [
+     "218909",
+     "Luiz Felipe",
+     "D"
+    ],
+    [
+     "277436",
+     "Lucas Ribeiro",
+     "D"
+    ],
+    [
+     "236729",
+     "Nicolas",
+     "D"
+    ],
+    [
+     "418241",
+     "Kadu",
+     "M"
+    ],
+    [
+     "175092",
+     "Lucas Lima",
+     "M"
+    ],
+    [
+     "400935",
+     "Luquinhas",
+     "M"
+    ],
+    [
+     "256021",
+     "Lourenco",
+     "M"
+    ],
+    [
+     "240051",
+     "Machado",
+     "M"
+    ],
+    [
+     "285058",
+     "Felipe Clemente",
+     "F"
+    ]
+   ],
+   "CRB": [
+    [
+     "272529",
+     "Vitor Caetano",
+     "SUB"
+    ],
+    [
+     "250382",
+     "Luis Vinicius Nunes Cavalcante",
+     "SUB"
+    ],
+    [
+     "199061",
+     "Bressan",
+     "SUB"
+    ],
+    [
+     "143849",
+     "Dadá",
+     "SUB"
+    ],
+    [
+     "233429",
+     "Danielzinho",
+     "SUB"
+    ],
+    [
+     "201848",
+     "Hereda",
+     "SUB"
+    ],
+    [
+     "191412",
+     "Pedro Castro",
+     "SUB"
+    ],
+    [
+     "252805",
+     "Crystopher",
+     "SUB"
+    ],
+    [
+     "293875",
+     "Mikael",
+     "SUB"
+    ],
+    [
+     "250761",
+     "Reverson",
+     "SUB"
+    ],
+    [
+     "357310",
+     "Lyncon",
+     "SUB"
     ]
    ]
   }
@@ -194,13 +161,13 @@
    "casa": "DraftKings",
    "ml": [
     -135,
-    255,
+    260,
     340
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -125
+    -120
    ],
    "spread": [
     [
@@ -289,7 +256,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    230,
+    320
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
+  }
  },
  {
   "id": "401860429",
@@ -355,7 +344,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    265,
+    245,
+    -110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -130
+    ],
+    [
+     "-0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401860430",
@@ -366,7 +377,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    265,
+    400
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401860428",
