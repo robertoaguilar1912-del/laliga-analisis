@@ -5,15 +5,15 @@
   "estadio": "Atanasio Girardot",
   "local_espn": "Águilas Doradas",
   "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -110,
+    -120,
     235,
-    280
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -125
     ],
     [
      "+0.5",
-     -125
+     -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Águilas Doradas": [
+    [
+     "216564",
+     "Jorge Soto",
+     "G"
+    ],
+    [
+     "172884",
+     "John Edison García",
+     "CD-L"
+    ],
+    [
+     "148264",
+     "Andres Mosquera",
+     "CD-R"
+    ],
+    [
+     "336013",
+     "John Ontaneda",
+     "LB"
+    ],
+    [
+     "327120",
+     "Dylan Lozano",
+     "RB"
+    ],
+    [
+     "197551",
+     "Andrés Ricaurte",
+     "AM"
+    ],
+    [
+     "234941",
+     "Iván Rojas",
+     "LM"
+    ],
+    [
+     "181800",
+     "Frank Lozano",
+     "RM"
+    ],
+    [
+     "327119",
+     "Antony Vásquez",
+     "F"
+    ],
+    [
+     "381438",
+     "Javier Mena",
+     "AM-L"
+    ],
+    [
+     "195525",
+     "Matías Ramírez",
+     "AM-R"
+    ]
+   ],
+   "Fortaleza CEIF": [
+    [
+     "285031",
+     "Williams Barlasina",
+     "G"
+    ],
+    [
+     "408101",
+     "Jeferson Medina",
+     "CD-L"
+    ],
+    [
+     "285359",
+     "Yesid Díaz",
+     "CD-R"
+    ],
+    [
+     "378918",
+     "Santiago Cuero",
+     "LB"
+    ],
+    [
+     "417801",
+     "Joan Cajares",
+     "RB"
+    ],
+    [
+     "200363",
+     "Sebastián Navarro",
+     "AM"
+    ],
+    [
+     "413584",
+     "Santiago Vivas",
+     "LM"
+    ],
+    [
+     "170515",
+     "Leonardo Pico",
+     "RM"
+    ],
+    [
+     "292931",
+     "Franco Pulicastro",
+     "F"
+    ],
+    [
+     "5324604",
+     "Armando David Larrans Ruiz",
+     "AM-L"
+    ],
+    [
+     "233181",
+     "Mariano Vazquez",
+     "AM-R"
     ]
    ]
   }
