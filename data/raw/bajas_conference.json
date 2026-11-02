@@ -1,7 +1,7 @@
 {
 "401915831": {
 "fotmob": 6112532,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -11,7 +11,7 @@
 "regreso": "hasta el 5 de noviembre",
 "duda": false,
 "valor": 2288024.0,
-"titular": false,
+"titular": true,
 "importante": true
 },
 {
@@ -51,8 +51,8 @@
 "importante": false
 }
 ],
-"valor_xi": 16099925.0,
-"perdida": 0.14211395394699045,
+"valor_xi": 21867446.0,
+"perdida": 0.10463151480973132,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -64,17 +64,17 @@
 "duda": false,
 "valor": 4283325.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 77306764.0,
-"perdida": 0.0,
+"valor_xi": 53467060.0,
+"perdida": 0.08011147424227179,
 "perdida_duda": 0.0
 }
 },
 "401915830": {
 "fotmob": 6112388,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -182,7 +182,7 @@
 },
 "401915829": {
 "fotmob": 6112405,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -232,8 +232,8 @@
 "importante": false
 }
 ],
-"valor_xi": 39954448.0,
-"perdida": 0.3635069366995134,
+"valor_xi": 39741202.0,
+"perdida": 0.36545746653561206,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -291,19 +291,10 @@
 },
 "401915828": {
 "fotmob": 6112539,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Louis Passavant",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Marc Gutbub",
 "tipo": "Lesión",
@@ -339,9 +330,18 @@
 "valor": 294931.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Louis Passavant",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 6748598.0,
+"valor_xi": 9157995.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -371,15 +371,6 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 877916.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Rogers Mato",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
 "titular": true,
 "importante": true
 },
@@ -427,20 +418,29 @@
 "valor": 259078.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Rogers Mato",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 11621332.0,
-"perdida": 0.15581802499059488,
-"perdida_duda": 0.07554349191641715
+"valor_xi": 11866507.0,
+"perdida": 0.1525986543470627,
+"perdida_duda": 0.07398268083438539
 }
 },
 "401915826": {
 "fotmob": 6112477,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 2278135.0,
+"valor_xi": 2552131.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -456,14 +456,14 @@
 "importante": false
 }
 ],
-"valor_xi": 37196755.0,
+"valor_xi": 34512343.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915742": {
 "fotmob": 6112485,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -526,7 +526,7 @@
 },
 "401915741": {
 "fotmob": 6112548,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -562,7 +562,7 @@
 },
 "401915825": {
 "fotmob": 6112501,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -572,7 +572,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 19623071.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -581,7 +581,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 11008794.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -591,7 +591,7 @@
 "duda": false,
 "valor": 10929542.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ruslan Malinovsky",
@@ -630,8 +630,8 @@
 "importante": false
 }
 ],
-"valor_xi": 108784017.0,
-"perdida": 0.28158424228809276,
+"valor_xi": 86387228.0,
+"perdida": 0.48110592227823307,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -662,7 +662,7 @@
 },
 "401915824": {
 "fotmob": 6112401,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -672,7 +672,7 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 17364760.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -682,11 +682,11 @@
 "duda": false,
 "valor": 12766857.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 161715428.0,
-"perdida": 0.10737849947130586,
+"valor_xi": 153972666.0,
+"perdida": 0.19569458516747382,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -697,7 +697,7 @@
 "regreso": "hasta el 5 de noviembre",
 "duda": false,
 "valor": 2546939.0,
-"titular": false,
+"titular": true,
 "importante": true
 },
 {
@@ -719,14 +719,14 @@
 "importante": false
 }
 ],
-"valor_xi": 18770054.0,
-"perdida": 0.13569161814878103,
+"valor_xi": 30029484.0,
+"perdida": 0.08481461086710647,
 "perdida_duda": 0.0
 }
 },
 "401915817": {
 "fotmob": 6112506,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -753,7 +753,7 @@
 },
 "401915740": {
 "fotmob": 6112404,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -798,7 +798,7 @@
 },
 "401915823": {
 "fotmob": 6112471,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -814,9 +814,18 @@
 {
 "nombre": "Renato Steffen",
 "tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 422655.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Dereck Moncada",
+"tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 422655.0,
+"valor": 4965454.0,
 "titular": false,
 "importante": false
 }
@@ -834,7 +843,7 @@
 },
 "401915822": {
 "fotmob": 6112480,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -888,7 +897,7 @@
 },
 "401915821": {
 "fotmob": 6112474,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -902,15 +911,6 @@
 "importante": true
 },
 {
-"nombre": "Zaid Abner Romero",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 1988037.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Juanmi",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -918,11 +918,20 @@
 "valor": 649155.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Zaid Abner Romero",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 1988037.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 25916707.0,
-"perdida": 0.4869361296556696,
-"perdida_duda": 0.07670870377166358
+"valor_xi": 41586982.0,
+"perdida": 0.3034550812078645,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -997,7 +1006,7 @@
 },
 "401915819": {
 "fotmob": 6112416,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1029,8 +1038,8 @@
 "importante": false
 }
 ],
-"valor_xi": 33808615.0,
-"perdida": 0.7702169994245549,
+"valor_xi": 34204284.0,
+"perdida": 0.7613072678264512,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1042,11 +1051,11 @@
 },
 "401915818": {
 "fotmob": 6112522,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 1496792.0,
+"valor_xi": 1962640.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -1078,11 +1087,11 @@
 },
 "401915820": {
 "fotmob": 6112490,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 21211158.0,
+"valor_xi": 20830102.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -1121,7 +1130,7 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 1538699.0,
-"titular": false,
+"titular": true,
 "importante": true
 },
 {
@@ -1134,14 +1143,14 @@
 "importante": false
 }
 ],
-"valor_xi": 9682451.0,
-"perdida": 0.33967752586612626,
-"perdida_duda": 0.15891627027082295
+"valor_xi": 10539901.0,
+"perdida": 0.3120438228025102,
+"perdida_duda": 0.14598799362536707
 }
 },
 "401915827": {
 "fotmob": 6112410,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],

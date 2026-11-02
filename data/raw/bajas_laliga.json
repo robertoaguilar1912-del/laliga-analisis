@@ -1,7 +1,7 @@
 {
 "401882824": {
 "fotmob": 5868113,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -83,8 +83,8 @@
 },
 "401882809": {
 "fotmob": 5868128,
-"visto": "2026-11-02T04:58+00:00",
-"xi": "unavailable",
+"visto": "2026-11-02T11:51+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -93,8 +93,8 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 15002095.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Isaac Romero",
@@ -102,8 +102,8 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 5195665.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Marcão",
@@ -133,8 +133,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 87923992.0,
+"perdida": 0.22971841405927065,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -158,14 +158,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 20879750.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882812": {
 "fotmob": 5868125,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -265,7 +265,7 @@
 },
 "401882813": {
 "fotmob": 5868124,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -392,7 +392,7 @@
 },
 "401882811": {
 "fotmob": 5868126,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -440,6 +440,15 @@
 "importante": false
 },
 {
+"nombre": "Maroan Sannadi",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 3434413.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Unai Eguiluz",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
@@ -465,7 +474,7 @@
 },
 "401882808": {
 "fotmob": 5868129,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -574,7 +583,7 @@
 },
 "401882814": {
 "fotmob": 5868123,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -638,7 +647,7 @@
 },
 "401882810": {
 "fotmob": 5868127,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -720,7 +729,7 @@
 },
 "401882815": {
 "fotmob": 5868122,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -811,7 +820,7 @@
 },
 "401882807": {
 "fotmob": 5868130,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -834,11 +843,29 @@
 "importante": false
 },
 {
+"nombre": "Juan Foyth",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 7094742.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Gerard Moreno",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 1393810.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Alassane Diatta",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1165561.0,
 "titular": false,
 "importante": false
 }
@@ -884,14 +911,14 @@
 },
 "401882816": {
 "fotmob": 5868121,
-"visto": "2026-11-02T04:58+00:00",
+"visto": "2026-11-02T11:51+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
 {
 "nombre": "Johnny Cardoso",
 "tipo": "Lesión",
-"regreso": "ya entrena",
+"regreso": "en duda",
 "duda": true,
 "valor": 22350133.0,
 "titular": false,
@@ -941,9 +968,18 @@
 "importante": false
 },
 {
+"nombre": "Jules Koundé",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 53309565.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Andreas Christensen",
 "tipo": "Lesión",
-"regreso": "ya entrena",
+"regreso": "en duda",
 "duda": true,
 "valor": 10953883.0,
 "titular": false,
