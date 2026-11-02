@@ -5,7 +5,7 @@
   "estadio": "Estadio José Zorrilla",
   "local_espn": "Real Valladolid",
   "visita_espn": "Leganés",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    330,
-    550
+    -220,
+    340,
+    600
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-1.5",
-     130
+     125
     ],
     [
      "+1.5",
-     -180
+     -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Mallorca": [
+    [
+     "290043",
+     "Arnau Tenas",
+     "G"
+    ],
+    [
+     "193397",
+     "Martin Valjent",
+     "D"
+    ],
+    [
+     "172998",
+     "Alberto Moreno",
+     "D"
+    ],
+    [
+     "279511",
+     "Antonio Sánchez",
+     "D"
+    ],
+    [
+     "222333",
+     "Antonio Raíllo",
+     "D"
+    ],
+    [
+     "119310",
+     "Álex Sala",
+     "M"
+    ],
+    [
+     "381682",
+     "Adrián Liso",
+     "M"
+    ],
+    [
+     "165519",
+     "Sergi Darder",
+     "M"
+    ],
+    [
+     "297035",
+     "Zito Luvumbo",
+     "M"
+    ],
+    [
+     "206110",
+     "Pablo Torre",
+     "F"
+    ],
+    [
+     "331787",
+     "Fuentes",
+     "F"
+    ]
+   ],
+   "Cádiz": [
+    [
+     "209578",
+     "Jokin Ezkieta",
+     "G"
+    ],
+    [
+     "342140",
+     "Bojan Kovacevic",
+     "D"
+    ],
+    [
+     "415372",
+     "Noah Ukwuije",
+     "D"
+    ],
+    [
+     "399240",
+     "Sergio Arribas",
+     "D"
+    ],
+    [
+     "128374",
+     "Javier Castro",
+     "D"
+    ],
+    [
+     "375875",
+     "Antonio Cordero",
+     "M"
+    ],
+    [
+     "387838",
+     "Dilan Zárate",
+     "M"
+    ],
+    [
+     "341269",
+     "Damián Rodríguez",
+     "M"
+    ],
+    [
+     "411758",
+     "Ibon Sánchez",
+     "M"
+    ],
+    [
+     "397997",
+     "García Pascual",
+     "F"
+    ],
+    [
+     "384598",
+     "Borja Vázquez",
+     "F"
     ]
    ]
   }
