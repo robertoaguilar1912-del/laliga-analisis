@@ -5,32 +5,10 @@
   "estadio": "Estadio Heliodoro Rodríguez López",
   "local_espn": "Tenerife",
   "visita_espn": "FC Andorra",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SUSPENDED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    125,
-    205,
-    245
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    130,
-    -170
-   ],
-   "spread": [
-    [
-     "-0.5",
-     115
-    ],
-    [
-     "+0.5",
-     -165
-    ]
-   ]
-  },
+  "momios": null,
   "alineaciones": {
    "Tenerife": [
     [
@@ -154,7 +132,7 @@
   "estadio": "Estadio Carlos Tartiere",
   "local_espn": "Real Oviedo",
   "visita_espn": "Las Palmas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -176,7 +154,123 @@
     ],
     [
      "+0.5",
-     115
+     110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Real Oviedo": [
+    [
+     "200964",
+     "Aarón Escandell",
+     "G"
+    ],
+    [
+     "312376",
+     "Carlos Domínguez",
+     "CD-L"
+    ],
+    [
+     "192796",
+     "David Costas",
+     "CD-R"
+    ],
+    [
+     "395613",
+     "Samu Rodríguez",
+     "LB"
+    ],
+    [
+     "240102",
+     "Nacho Vidal",
+     "RB"
+    ],
+    [
+     "347357",
+     "Youness Lachhab",
+     "CM-L"
+    ],
+    [
+     "320768",
+     "Aritz Aldasoro",
+     "CM-R"
+    ],
+    [
+     "3128635",
+     "Enzo Pérez Miranda",
+     "LM"
+    ],
+    [
+     "353537",
+     "Pablo Sáenz",
+     "RM"
+    ],
+    [
+     "396611",
+     "Mikel Goti",
+     "CF-L"
+    ],
+    [
+     "3108501",
+     "Víctor García Mingo",
+     "CF-R"
+    ]
+   ],
+   "Las Palmas": [
+    [
+     "239387",
+     "Caro",
+     "G"
+    ],
+    [
+     "367729",
+     "Juanma Herzog",
+     "CD-L"
+    ],
+    [
+     "121611",
+     "Álex Suárez",
+     "CD-R"
+    ],
+    [
+     "375799",
+     "Andrés Rodríguez",
+     "LB"
+    ],
+    [
+     "388727",
+     "Valentín Pezzolesi",
+     "RB"
+    ],
+    [
+     "288936",
+     "Kirian Rodríguez",
+     "CM-L"
+    ],
+    [
+     "272870",
+     "Enzo Loiodice",
+     "CM-R"
+    ],
+    [
+     "280489",
+     "Iván Jaime",
+     "LM"
+    ],
+    [
+     "265959",
+     "Taisei Miyashiro",
+     "RM"
+    ],
+    [
+     "292774",
+     "Manu Fuster",
+     "CF-L"
+    ],
+    [
+     "162453",
+     "Jesé",
+     "CF-R"
     ]
    ]
   }
@@ -193,9 +287,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    240,
-    255
+    115,
+    235,
+    240
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -205,11 +299,11 @@
    "spread": [
     [
      "-0.5",
-     100
+     105
     ],
     [
      "+0.5",
-     -140
+     -145
     ]
    ]
   }
