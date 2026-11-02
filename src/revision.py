@@ -2,6 +2,7 @@
 
     python src/revision.py                       # la semana pasada (lunes a domingo, hora de Honduras)
     python src/revision.py 2026-11-02 2026-11-08 # otro rango (fechas del partido, hora de Honduras)
+    python src/revision.py 2026-11-01 2026-11-01 --mias mis-apuestas.json   # las apuestas de Roberto (respaldo de la página)
 
 Imprime el resumen en markdown. Cuenta los PICK como la página (sin REVISAR, reemplazados ni retirados), con el momio con
 que se registraron y sin pago anticipado. Lee data/registro/modelo.json, los meses archivados (data/registro/archivo) y los
@@ -68,6 +69,16 @@ def liquidar(k, r):
         'H1': lambda: _linea(lambda x: gl - gv + x, L), 'H2': lambda: _linea(lambda x: gv - gl + x, L),
         'CO': lambda: _linea(lambda x: cl + cv - x, L) if cl is not None and cv is not None else None,
         'CU': lambda: _linea(lambda x: x - cl - cv, L) if cl is not None and cv is not None else None,
+        'C1O': lambda: _linea(lambda x: cl - x, L) if cl is not None else None,
+        'C2O': lambda: _linea(lambda x: cv - x, L) if cv is not None else None,
+        'C1U': lambda: _linea(lambda x: x - cl, L) if cl is not None else None,
+        'C2U': lambda: _linea(lambda x: x - cv, L) if cv is not None else None,
+        'RO': lambda: _linea(lambda x: sl + sv - x, L) if sl is not None and sv is not None else None,
+        'RU': lambda: _linea(lambda x: x - sl - sv, L) if sl is not None and sv is not None else None,
+        'R1O': lambda: _linea(lambda x: sl - x, L) if sl is not None else None,
+        'R1U': lambda: _linea(lambda x: x - sl, L) if sl is not None else None,
+        'R2O': lambda: _linea(lambda x: sv - x, L) if sv is not None else None,
+        'R2U': lambda: _linea(lambda x: x - sv, L) if sv is not None else None,
     }
     f = casos.get(tipo)
     return f() if f else None
@@ -82,7 +93,9 @@ def tipo_de(r):
     if r.get('liga') in ('nba', 'nfl'):
         return {'ML1': 'Ganador', 'ML2': 'Ganador', 'H1': 'Spread', 'H2': 'Spread', 'O': 'Más de', 'U': 'Menos de'}.get(k, k)
     return {'1': 'Gana', '2': 'Gana', 'X': 'Empate', '1X': 'Doble oportunidad', 'X2': 'Doble oportunidad', 'H1': 'Hándicap',
-            'H2': 'Hándicap', 'O': 'Más de', 'U': 'Menos de', 'CO': 'Córners', 'CU': 'Córners', 'BTTS': 'Ambos anotan'}.get(k, k)
+            'H2': 'Hándicap', 'O': 'Más de', 'U': 'Menos de', 'CO': 'Córners', 'CU': 'Córners', 'C1O': 'Córners', 'C2O': 'Córners',
+            'C1U': 'Córners', 'C2U': 'Córners', 'BTTS': 'Ambos anotan', 'G1T': 'Goles por tiempo', 'G2T': 'Goles por tiempo',
+            'GAMB': 'Goles por tiempo', 'DNB1': 'Empate no va', 'DNB2': 'Empate no va'}.get(k, 'Remates' if k[:1] == 'R' else k)
 
 
 def grupo_de(r):
@@ -122,21 +135,38 @@ def dia_local(utc):
     return datetime.fromisoformat(utc.replace('Z', '+00:00')).astimezone(ZoneInfo(ZONA)).date()
 
 
-def filas(desde, hasta):
+MANUAL = {'w': [1, 1], 'l': [0, 0], 'p': [0.5, 0.5]}
+
+
+def cargar_mias(ruta):
+    """Apuestas de Roberto desde el respaldo de la página (Registro → Mis apuestas → Descargar respaldo)."""
+    j = json.load(open(ruta))
+    lst = j if isinstance(j, list) else j.get('apuestas') or []
+    out = [dict(b) for b in lst if b.get('id') and b.get('utc') and b.get('k')]
+    from registro import pinnacle_cierre               # el precio justo de Pinnacle al cierre, como en los picks del modelo
+    pinnacle_cierre(out, datetime.now(ZoneInfo(ZONA)))
+    return out
+
+
+def filas(desde, hasta, mias=None):
+    """mias: lista de apuestas de Roberto (cargar_mias); sin ella, los picks del modelo."""
     res, cie = cargar_resultados()
     out = []
-    for r in cargar_picks():
+    for r in (mias if mias is not None else cargar_picks()):
         d = dia_local(r['utc'])
         if not (desde <= d <= hasta):
             continue
         m = float(r['momio'])
-        c = liquidar(r['k'], res.get(str(r['id'])))
+        stake = float(r.get('monto') or 1) if mias is not None else 1.0
+        c = MANUAL.get(r.get('manual')) or liquidar(r['k'], res.get(str(r['id'])))
         cc = cie.get(str(r['id'])) or {}
         kc = next((k for k in (r['k'], EQ.get(r['k']), EQR.get(r['k'])) if k and k in cc), None)
         mc = float(cc[kc]) if kc else None
         estado = 'cuenta' if not (r.get('revisar') or r.get('reemplazado') or r.get('retirado')) else \
                  'revisar' if r.get('revisar') and not r.get('reemplazado') else 'retirado' if r.get('retirado') and not r.get('reemplazado') else 'reemplazado'
-        out.append({**r, 'dia': d, 'm': m, 'c': c, 'pl': ganancia(c, m) if c else None, 'gano': (sum(c) / 2) if c else None,
+        if mias is not None:
+            estado = 'cuenta'
+        out.append({**r, 'dia': d, 'm': m, 'stake': stake, 'c': c, 'pl': stake * ganancia(c, m) if c else None, 'gano': (sum(c) / 2) if c else None,
                     'dk_cierre': mc, 'clv_dk': (m / mc - 1) if mc else None,
                     'v_pin': (m * r['pin_c'] - 1) if r.get('pin_c') else None, 'estado': estado,
                     'grupo': grupo_de(r), 'tipo': tipo_de(r)})
@@ -164,19 +194,27 @@ def tabla(fs, clave, titulo):
         dk = [f['clv_dk'] for f in x if f['clv_dk'] is not None]
         vp = [f['v_pin'] for f in x if f['v_pin'] is not None]
         esp = [(f['pin_c'], f['gano']) for f in fin if f.get('pin_c') is not None]
-        lin.append(f"| {g} | {len(x)} | {g_}-{p_}-{len(fin) - g_ - p_} | {_fmt(pl, False)} | {_fmt(pl / len(fin)) if fin else '—'} | "
+        ap = sum(f['stake'] for f in fin)
+        lin.append(f"| {g} | {len(x)} | {g_}-{p_}-{len(fin) - g_ - p_} | {_fmt(pl, False)} | {_fmt(pl / ap) if ap else '—'} | "
                    f"{_fmt(sum(dk) / len(dk)) if dk else '—'} | "
                    + (f"{_fmt(sum(vp) / len(vp))} ({sum(v > 0 for v in vp)} de {len(vp)})" if vp else '—') + ' | '
                    + (f"{sum(e for e, _ in esp):.1f} ganados esperados, {sum(w for _, w in esp):.1f} reales ({len(esp)})" if esp else '—') + ' |')
     return '\n'.join(lin)
 
 
-def resumen(desde, hasta):
-    fs = filas(desde, hasta)
+def resumen(desde, hasta, mias=None):
+    fs = filas(desde, hasta, mias)
     cuenta = [f for f in fs if f['estado'] == 'cuenta']
-    out = [f'# Revisión de los picks del modelo, {desde:%d %b} al {hasta:%d %b %Y}', '',
-           f'PICK que la página marcaba al empezar el partido: {len(cuenta)} (sin REVISAR, reemplazados ni retirados; '
-           'momio con que se registraron; sin pago anticipado).', '',
+    if mias is not None:
+        ap = sum(f['stake'] for f in cuenta if f['pl'] is not None)
+        cab = [f'# Tus apuestas, {desde:%d %b} al {hasta:%d %b %Y}', '',
+               f'Apuestas guardadas en la página: {len(cuenta)}, {ap:g} apostado en las ya liquidadas (unidades = tu monto; con tu '
+               'momio; "Resultado" manual si lo cambiaste; sin pago anticipado).', '']
+    else:
+        cab = [f'# Revisión de los picks del modelo, {desde:%d %b} al {hasta:%d %b %Y}', '',
+               f'PICK que la página marcaba al empezar el partido: {len(cuenta)} (sin REVISAR, reemplazados ni retirados; '
+               'momio con que se registraron; sin pago anticipado).', '']
+    out = cab + [
            tabla(cuenta, 'grupo', 'Grupo'), '', tabla(cuenta, 'tipo', 'Mercado'), '']
     pend = [f for f in cuenta if f['pl'] is None]
     if pend:
@@ -188,6 +226,15 @@ def resumen(desde, hasta):
             vp = [f['v_pin'] for f in x if f['v_pin'] is not None]
             out.append(f"- **{nom}:** {len(x)}, {_fmt(pl, False)} u ({_fmt(pl / len(x))})"
                        + (f"; contra Pinnacle {_fmt(sum(vp) / len(vp))} ({sum(v > 0 for v in vp)} de {len(vp)} le ganaron)" if vp else '') + '.')
+    if mias is not None:
+        modelo = {(str(r['id']), r['k']) for r in cargar_picks() if not (r.get('revisar') or r.get('reemplazado') or r.get('retirado'))}
+        x = [f for f in cuenta if f['pl'] is not None]
+        con = [f for f in x if (str(f['id']), f['k']) in modelo]
+        sin = [f for f in x if (str(f['id']), f['k']) not in modelo]
+        for nom, y in (('que también eran PICK del modelo', con), ('por tu cuenta (no eran PICK)', sin)):
+            if y:
+                pl, ap = sum(f['pl'] for f in y), sum(f['stake'] for f in y)
+                out.append(f"- **Apuestas {nom}:** {len(y)}, {_fmt(pl, False)} ({_fmt(pl / ap) if ap else '—'}).")
     mejores = sorted([f for f in cuenta if f['pl'] is not None], key=lambda f: -f['pl'])
     if mejores:
         fmt = lambda f: f"{f['local']} – {f['visita']}: {f['mercado']} a {f['m']:.2f} ({_fmt(f['pl'], False)})"
@@ -197,10 +244,16 @@ def resumen(desde, hasta):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) >= 3:
-        desde, hasta = date.fromisoformat(sys.argv[1]), date.fromisoformat(sys.argv[2])
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    mias = None
+    if '--mias' in sys.argv:                 # python revision.py [desde hasta] --mias respaldo.json
+        ruta = sys.argv[sys.argv.index('--mias') + 1]
+        args = [a for a in args if a != ruta]
+        mias = cargar_mias(ruta)
+    if len(args) >= 2:
+        desde, hasta = date.fromisoformat(args[0]), date.fromisoformat(args[1])
     else:
         hoy = datetime.now(ZoneInfo(ZONA)).date()
         hasta = hoy - timedelta(days=hoy.weekday() + 1)        # el domingo pasado
         desde = hasta - timedelta(days=6)
-    print(resumen(desde, hasta))
+    print(resumen(desde, hasta, mias))
