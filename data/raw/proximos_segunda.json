@@ -1,138 +1,11 @@
 [
  {
-  "id": "401883144",
-  "utc": "2026-11-02T13:00Z",
-  "estadio": "Estadio Heliodoro Rodríguez López",
-  "local_espn": "Tenerife",
-  "visita_espn": "FC Andorra",
-  "estado": "STATUS_SUSPENDED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": null,
-  "alineaciones": {
-   "Tenerife": [
-    [
-     "264077",
-     "Dani Martín",
-     "G"
-    ],
-    [
-     "355507",
-     "Neal Viereck",
-     "CD-L"
-    ],
-    [
-     "235018",
-     "Anthony Landázuri",
-     "CD-R"
-    ],
-    [
-     "346838",
-     "Roko Jureskin",
-     "LB"
-    ],
-    [
-     "308453",
-     "David Rodríguez Ramos",
-     "RB"
-    ],
-    [
-     "102805",
-     "Jesús Álvarez",
-     "CM-L"
-    ],
-    [
-     "185866",
-     "Juanjo",
-     "CM-R"
-    ],
-    [
-     "231574",
-     "Nacho Gil",
-     "LM"
-    ],
-    [
-     "331987",
-     "Noel López",
-     "RM"
-    ],
-    [
-     "276634",
-     "Enric Gallego",
-     "CF-L"
-    ],
-    [
-     "322156",
-     "Christian Gomis",
-     "CF-R"
-    ]
-   ],
-   "FC Andorra": [
-    [
-     "287165",
-     "Jesús Owono",
-     "G"
-    ],
-    [
-     "354532",
-     "Lautaro Spatz",
-     "CD-L"
-    ],
-    [
-     "219073",
-     "Diego Alende",
-     "CD-R"
-    ],
-    [
-     "278214",
-     "Marti Vila Garcia",
-     "LB"
-    ],
-    [
-     "267058",
-     "Thomas Carrique",
-     "RB"
-    ],
-    [
-     "389455",
-     "Marc Domenech",
-     "CM"
-    ],
-    [
-     "320854",
-     "Randy Schneider",
-     "LM"
-    ],
-    [
-     "345239",
-     "Efe Akman",
-     "RM"
-    ],
-    [
-     "396027",
-     "Diego Diaz",
-     "F"
-    ],
-    [
-     "331382",
-     "Moró Sidibe",
-     "LF"
-    ],
-    [
-     "310973",
-     "Lautaro De León",
-     "RF"
-    ]
-   ]
-  }
- },
- {
   "id": "401883146",
   "utc": "2026-11-02T15:15Z",
   "estadio": "Estadio Carlos Tartiere",
   "local_espn": "Real Oviedo",
   "visita_espn": "Las Palmas",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -287,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    235,
-    240
+    -105,
+    250,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -140
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     105
+     -115
     ],
     [
      "+0.5",
-     -145
+     -125
     ]
    ]
   }
@@ -320,8 +193,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -205,
-    330,
+    -195,
+    320,
     550
    ],
    "ou_linea": 2.5,
