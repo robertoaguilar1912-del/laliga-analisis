@@ -5,15 +5,15 @@
   "estadio": "Norberto Tomaghello",
   "local_espn": "Defensa y Justicia",
   "visita_espn": "Independiente",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    130,
     220,
-    240
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,127 @@
    "spread": [
     [
      "-0.5",
-     110
+     120
     ],
     [
      "+0.5",
-     -150
+     -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Defensa y Justicia": [
+    [
+     "273253",
+     "Matias Borgogno",
+     "G"
+    ],
+    [
+     "228387",
+     "Héctor Martínez",
+     "CD-L"
+    ],
+    [
+     "384316",
+     "Nazareno Roselli",
+     "CD-R"
+    ],
+    [
+     "402600",
+     "Demian Domínguez",
+     "LB"
+    ],
+    [
+     "418765",
+     "Valentín Loza",
+     "RB"
+    ],
+    [
+     "186887",
+     "David Barbona",
+     "AM"
+    ],
+    [
+     "192087",
+     "César Pérez",
+     "LM"
+    ],
+    [
+     "271473",
+     "Santiago Sosa",
+     "RM"
+    ],
+    [
+     "40376",
+     "Leandro Miguel Fernandez",
+     "F"
+    ],
+    [
+     "366938",
+     "Jeremías Lucco",
+     "AM-L"
+    ],
+    [
+     "284845",
+     "Juan Gutiérrez",
+     "AM-R"
+    ]
+   ],
+   "Independiente": [
+    [
+     "203067",
+     "Santiago Mele",
+     "G"
+    ],
+    [
+     "3112633",
+     "Juan Migue Arrayago",
+     "CD-L"
+    ],
+    [
+     "236681",
+     "Sebastian Valdez",
+     "CD-R"
+    ],
+    [
+     "292059",
+     "Nahuel Banegas",
+     "LB"
+    ],
+    [
+     "164756",
+     "Santiago Arias",
+     "RB"
+    ],
+    [
+     "172539",
+     "Maximiliano Meza",
+     "AM"
+    ],
+    [
+     "3112632",
+     "Facundo Lionel Cruz",
+     "LM"
+    ],
+    [
+     "317219",
+     "Mateo Pérez",
+     "RM"
+    ],
+    [
+     "217588",
+     "Chimy Ávila",
+     "F"
+    ],
+    [
+     "414360",
+     "Josias Palais",
+     "AM-L"
+    ],
+    [
+     "307331",
+     "Santiago Montiel",
+     "AM-R"
     ]
    ]
   }
@@ -38,29 +154,145 @@
   "estadio": "Ciudad de Vicente López",
   "local_espn": "Platense",
   "visita_espn": "Central Córdoba (Santiago del Estero)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    320,
-    600
+    -235,
+    340,
+    650
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -135
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     130
+     120
     ],
     [
      "+1.5",
-     -180
+     -170
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Platense": [
+    [
+     "271254",
+     "Juan Pablo Cozzani",
+     "G"
+    ],
+    [
+     "200303",
+     "Víctor Cuesta",
+     "CD-L"
+    ],
+    [
+     "3518",
+     "Ignacio Vázquez",
+     "CD-R"
+    ],
+    [
+     "335100",
+     "Tomas Silva",
+     "LB"
+    ],
+    [
+     "292394",
+     "Agustín Lagos",
+     "RB"
+    ],
+    [
+     "322911",
+     "Franco Zapiola",
+     "AM"
+    ],
+    [
+     "166297",
+     "Ivan Gomez",
+     "LM"
+    ],
+    [
+     "274441",
+     "Pablo Thomaz",
+     "RM"
+    ],
+    [
+     "285380",
+     "Gonzalo Lencina",
+     "F"
+    ],
+    [
+     "310736",
+     "Nicolas Retamar",
+     "AM-L"
+    ],
+    [
+     "213170",
+     "Guido Mainero",
+     "AM-R"
+    ]
+   ],
+   "Central Córdoba (Santiago del Estero)": [
+    [
+     "149387",
+     "Alan Aguerre",
+     "G"
+    ],
+    [
+     "412316",
+     "Nicolás Garrido",
+     "CD-L"
+    ],
+    [
+     "382884",
+     "Yuri Casermeiro",
+     "CD-R"
+    ],
+    [
+     "269809",
+     "Dario Cáceres",
+     "LB"
+    ],
+    [
+     "257734",
+     "Santiago Moyano",
+     "RB"
+    ],
+    [
+     "3144422",
+     "Enzo Tiziano Ramirez Suarez",
+     "CM-L"
+    ],
+    [
+     "218440",
+     "Matías Vera",
+     "CM-R"
+    ],
+    [
+     "266508",
+     "Diego Barrera",
+     "LM"
+    ],
+    [
+     "317313",
+     "Fernando Martínez",
+     "RM"
+    ],
+    [
+     "216663",
+     "Leonardo Sequeira",
+     "CF-L"
+    ],
+    [
+     "131758",
+     "Michael Santos",
+     "CF-R"
     ]
    ]
   }
