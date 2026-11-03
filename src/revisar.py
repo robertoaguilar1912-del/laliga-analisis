@@ -1,13 +1,44 @@
-"""Revisión rápida (sin instalar nada) para la corrida de cada 30 minutos, en todas las ligas:
+"""Revisión rápida (sin instalar nada) para la corrida de cada 15 minutos, en todas las ligas:
 - ¿hay un partido por empezar sin alineación guardada?
 - ¿hay un partido que ya terminó y todavía no tiene resultado (para liquidar los picks)?
-Escribe seguir=si/no en GITHUB_OUTPUT."""
+Escribe seguir=si/no en GITHUB_OUTPUT.
+
+    python src/revisar.py --cadena    # cadena=si si hay alineaciones por salir en la próxima hora y cuarto: la corrida se
+                                      # vuelve a lanzar sola a los pocos minutos (GitHub atrasa las programadas ~1 hora)"""
 import json
 import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+
+
+def _xi_af(liga):
+    """Partidos con el once de API-Football ya guardado (alineacion.py)."""
+    try:
+        return json.load(open(RAIZ / 'data' / 'raw' / f'xi_af_{liga}.json'))
+    except (OSError, ValueError):
+        return {}
+
+
+def cadena(ahora=None):
+    """Partidos que empiezan en los próximos 75 minutos (o empezaron hace menos de 20) y todavía no tienen alineación
+    (ESPN o API-Football) o, en la NBA, el último parte de lesiones."""
+    ahora = ahora or datetime.now(timezone.utc)
+    out = []
+    for p in sorted((RAIZ / 'data' / 'raw').glob('proximos_*.json')):
+        liga = p.stem.replace('proximos_', '')
+        if liga == 'nfl':
+            continue
+        xi = _xi_af(liga)
+        for e in json.load(open(p)):
+            faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
+            if liga == 'nba':
+                if -10 <= faltan <= 60 and not e.get('revisado'):
+                    out.append(f"{liga}: {e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min")
+            elif -20 <= faltan <= 75 and not e.get('alineaciones') and str(e['id']) not in xi:
+                out.append(f"{liga}: {e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min")
+    return out
 
 
 def pendientes():
@@ -20,7 +51,7 @@ def pendientes():
         for e in json.load(open(p)):
             faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
             nombre = f"{e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}"
-            if liga not in ('nfl', 'nba') and -30 <= faltan <= 120 and not e.get('alineaciones'):
+            if liga not in ('nfl', 'nba') and -30 <= faltan <= 120 and not e.get('alineaciones') and str(e['id']) not in _xi_af(liga):
                 t['alineaciones'].append(f'{nombre} en {faltan:.0f} min')
             # NBA: el reporte de lesiones se vuelve a bajar en la última hora y media (descansos de último momento)
             if liga == 'nba' and -10 <= faltan <= 90 and not e.get('revisado'):
@@ -54,6 +85,16 @@ def pendientes():
 
 
 if __name__ == '__main__':
+    import sys
+    if '--cadena' in sys.argv:
+        c = cadena()
+        for x in c:
+            print(f'Alineación por salir: {x}')
+        print(f"cadena={'si' if c else 'no'}")
+        if os.environ.get('GITHUB_OUTPUT'):
+            with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                f.write(f"cadena={'si' if c else 'no'}\n")
+        sys.exit(0)
     t = pendientes()
     for liga, tareas in t.items():
         for k, v in tareas.items():

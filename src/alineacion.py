@@ -178,6 +178,9 @@ def aplicar(partidos, liga, bajas):
         por_eq = dict(zip(x['eq'], x['xi']))
         if h not in por_eq or a not in por_eq:
             h, a = x['eq']                  # sin el partido en data/af: el orden de API-Football (local primero)
+        if not (p.get('alineaciones') or {}).get('local'):     # ESPN todavía no la tiene: la de API-Football en la página
+            p['alineaciones'] = {lado: [{'nombre': _NOMBRES.get(str(j)) or str(j), 'pos': ''} for j in por_eq[eq]]
+                                 for lado, eq in (('local', h), ('visita', a))}
         B = bajas.get(str(p['id'])) or {}
         t0 = _t(p['utc'])
         lados = {}

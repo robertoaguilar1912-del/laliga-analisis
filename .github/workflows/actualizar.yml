@@ -3,8 +3,12 @@ name: Actualizar página
 on:
   schedule:
     - cron: '7 11 * * *'      # todos los días, 5:07 a. m. de Honduras: actualización completa
-    - cron: '*/30 * * * *'    # cada 30 minutos: alineaciones de partidos por empezar y resultados recién terminados
-  workflow_dispatch:          # botón "Run workflow" para actualizar a mano
+    - cron: '*/15 * * * *'    # cada 15 minutos (GitHub suele atrasarlas): alineaciones por salir y resultados recién terminados
+  workflow_dispatch:          # botón "Run workflow" para actualizar a mano (y la cadena de alineaciones, abajo)
+    inputs:
+      modo:
+        description: 'completo o rapido'
+        default: 'completo'
   push:
     branches: [main]
     paths: ['src/**', 'data/modelo/**', '.github/workflows/**']
@@ -13,6 +17,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: actualizar
@@ -38,7 +43,7 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ "${{ github.event.schedule }}" = "*/30 * * * *" ]; then
+          if [ "${{ github.event.schedule }}" = "*/15 * * * *" ] || [ "${{ github.event.inputs.modo }}" = "rapido" ]; then
             echo "modo=rapido" >> "$GITHUB_OUTPUT"
             python src/revisar.py
           else
@@ -87,3 +92,24 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
+
+  # Alineaciones: GitHub atrasa las corridas programadas (a veces una hora), y el once sale ~1 hora antes. Si hay partidos que
+  # empiezan en la próxima hora y cuarto sin alineación todavía, la corrida se vuelve a lanzar sola a los 3 minutos.
+  cadena:
+    needs: [actualizar, publicar]
+    if: always() && needs.actualizar.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: ¿Hay alineaciones por salir?
+        id: c
+        run: python src/revisar.py --cadena
+      - name: Lanzar otra corrida rápida
+        if: steps.c.outputs.cadena == 'si'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 180
+          gh workflow run actualizar.yml --ref main -f modo=rapido
