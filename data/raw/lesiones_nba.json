@@ -134,11 +134,11 @@
    "id": "4576087",
    "nombre": "Peyton Watson",
    "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-01",
+   "estado": "Out",
+   "fecha": "2026-11-02",
    "tipo": "Hamstring",
-   "regreso": "2026-11-02",
-   "nota": "Watson (hamstring) is questionable to play in Monday's game against Oklahoma City."
+   "regreso": "2026-11-04",
+   "nota": "Watson (hamstring) is out for Monday's game against the Thunder, Chris Fedor of The Cleveland Plain Dealer reports."
   },
   {
    "id": "4683747",
@@ -156,11 +156,21 @@
    "id": "6442",
    "nombre": "Kyrie Irving",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-02",
    "tipo": "Knee",
-   "regreso": "2026-11-02",
-   "nota": "Irving (knee) is now doubtful for Monday against the Kings."
+   "regreso": "2026-11-04",
+   "nota": "Irving (knee) has been ruled out for Monday's game against the Kings."
+  },
+  {
+   "id": "4593125",
+   "nombre": "Santi Aldama",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-02",
+   "tipo": "Knee",
+   "regreso": "2026-11-04",
+   "nota": "Aldama (knee) has been ruled out for Monday's matchup with Sacramento."
   },
   {
    "id": "5148538",
@@ -181,16 +191,6 @@
    "tipo": "Foot",
    "regreso": "2026-11-12",
    "nota": "Lively (foot) is listed as out for Monday's game against the Kings."
-  },
-  {
-   "id": "4593125",
-   "nombre": "Santi Aldama",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-01",
-   "tipo": "Knee",
-   "regreso": "2026-11-02",
-   "nota": "Aldama (knee) is listed as doubtful for Monday's game against the Kings."
   },
   {
    "id": "5279129",
@@ -336,8 +336,8 @@
    "pos": "G",
    "estado": "Day-To-Day",
    "fecha": "2026-11-01",
-   "tipo": "Back",
-   "regreso": "2026-11-02",
+   "tipo": "",
+   "regreso": "",
    "nota": "Sheppard (back) is questionable for Monday's game against the Celtics."
   },
   {
@@ -352,6 +352,26 @@
   }
  ],
  "Indiana Pacers": [
+  {
+   "id": "2580365",
+   "nombre": "Larry Nance Jr.",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-02",
+   "tipo": "Illness",
+   "regreso": "2026-11-04",
+   "nota": "Nance (illness) has been ruled out for Monday's game against the Hawks."
+  },
+  {
+   "id": "4278355",
+   "nombre": "Obi Toppin",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-02",
+   "tipo": "Coach's Decision",
+   "regreso": "2026-11-04",
+   "nota": "Toppin (back) will dress for Monday's game against  Hawks but will only play in an emergency, Tony East of Forbes.com reports."
+  },
   {
    "id": "2530530",
    "nombre": "T.J. McConnell",
@@ -371,26 +391,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-09",
    "nota": "Zubac (ankle) has been ruled out for Monday's game against the Hawks."
-  },
-  {
-   "id": "2580365",
-   "nombre": "Larry Nance Jr.",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-02",
-   "tipo": "Illness",
-   "regreso": "2026-11-04",
-   "nota": "Nance (illness) is doubtful for Monday against the Hawks."
-  },
-  {
-   "id": "4278355",
-   "nombre": "Obi Toppin",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-02",
-   "tipo": "Back",
-   "regreso": "2026-11-02",
-   "nota": "Toppin (back) is questionable for Monday's game against Atlanta."
   },
   {
    "id": "4396909",
@@ -554,11 +554,11 @@
    "id": "4432847",
    "nombre": "Terrence Shannon Jr.",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-02",
    "tipo": "Hip",
-   "regreso": "2026-11-02",
-   "nota": "Shannon has a left hip contusion and is questionable to face the Bucks on Monday."
+   "regreso": "2026-11-04",
+   "nota": "Shannon (hip) has been ruled out for Monday's game against the Bucks, Jon Krawczynski of The Athletic reports."
   },
   {
    "id": "4432816",
@@ -749,6 +749,16 @@
  ],
  "Philadelphia 76ers": [
   {
+   "id": "4870562",
+   "nombre": "Dominick Barlow",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-02",
+   "tipo": "Back",
+   "regreso": "2026-11-04",
+   "nota": "Barlow (back) has been on the court \"a little bit\" and will be re-evaluated Tuesday, Austin Krell of OnPattison.com reports."
+  },
+  {
    "id": "3059318",
    "nombre": "Joel Embiid",
    "pos": "C",
@@ -757,16 +767,6 @@
    "tipo": "Foot",
    "regreso": "2026-11-02",
    "nota": "Embiid (foot) is questionable to suit up for Monday's game against the Bulls."
-  },
-  {
-   "id": "4870562",
-   "nombre": "Dominick Barlow",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-19",
-   "tipo": "Back",
-   "regreso": "2026-11-04",
-   "nota": "Barlow will miss at least the next two weeks of action due to a lumbar spine bone stress response, Adam Aaronson of PhillyVoice.com reports."
   },
   {
    "id": "4871141",
@@ -821,18 +821,8 @@
    "estado": "Out",
    "fecha": "2026-11-02",
    "tipo": "Calf",
-   "regreso": "2026-11-02",
-   "nota": "Cardwell (calf) has been downgraded to doubtful for Monday's game against Dallas."
-  },
-  {
-   "id": "3064440",
-   "nombre": "Zach LaVine",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-01",
-   "tipo": "Elbow",
-   "regreso": "2026-11-02",
-   "nota": "LaVine (elbow) is questionable to play in Monday's game against Dallas."
+   "regreso": "2026-11-04",
+   "nota": "Cardwell (calf) has been ruled out for Monday's game against the Mavericks."
   },
   {
    "id": "4898371",
