@@ -5,7 +5,7 @@
   "estadio": "RAMS Park",
   "local_espn": "Galatasaray",
   "visita_espn": "VfB Stuttgart",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Shakhtar Donetsk",
   "visita_espn": "Sporting CP",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -309,19 +309,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    205,
     285,
     120
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -155
+    120,
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -150
     ],
     [
      "-0.5",
@@ -375,9 +375,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    340,
-    380
+    -160,
+    330,
+    400
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -387,7 +387,7 @@
    "spread": [
     [
      "-0.5",
-     -170
+     -175
     ],
     [
      "+0.5",
@@ -441,23 +441,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -295,
+    -275,
     475,
-    650
+    600
    ],
    "ou_linea": 3.5,
    "ou": [
     -120,
-    -105
+    100
    ],
    "spread": [
     [
      "-1.5",
-     -125
+     -120
     ],
     [
      "+1.5",
-     -110
+     -115
     ]
    ]
   }
@@ -480,17 +480,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    125,
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     110
+     105
     ],
     [
      "+0.5",
-     -150
+     -145
     ]
    ]
   }
@@ -507,9 +507,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
-    340,
-    -140
+    350,
+    350,
+    -150
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -523,7 +523,7 @@
     ],
     [
      "-0.5",
-     -155
+     -160
     ]
    ]
   }
@@ -540,14 +540,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    900,
+    950,
     600,
-    -400
+    -425
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
@@ -739,8 +739,8 @@
    "casa": "DraftKings",
    "ml": [
     425,
-    380,
-    -180
+    390,
+    -190
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -771,9 +771,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    950,
-    500,
-    -380
+    1000,
+    550,
+    -390
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -787,7 +787,7 @@
     ],
     [
      "-1.5",
-     -145
+     -150
     ]
    ]
   }
