@@ -5,7 +5,7 @@
   "estadio": "Ewood Park",
   "local_espn": "Blackburn Rovers",
   "visita_espn": "Stoke City",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "The Valley",
   "local_espn": "Charlton Athletic",
   "visita_espn": "Bolton Wanderers",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Pride Park",
   "local_espn": "Derby County",
   "visita_espn": "Norwich City",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Fratton Park",
   "local_espn": "Portsmouth",
   "visita_espn": "Swansea City",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Deepdale",
   "local_espn": "Preston North End",
   "visita_espn": "Sheffield United",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -745,310 +745,12 @@
   }
  },
  {
-  "id": "401880179",
-  "utc": "2026-11-03T19:45Z",
-  "estadio": "MATRADE Loftus Road",
-  "local_espn": "Queens Park Rangers",
-  "visita_espn": "Burnley",
-  "estado": "STATUS_FIRST_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -105,
-    275,
-    280
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -130,
-    100
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -115
-    ],
-    [
-     "+0.5",
-     -120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Queens Park Rangers": [
-    [
-     "352759",
-     "Pierce Charles",
-     "G"
-    ],
-    [
-     "259089",
-     "Jimmy Dunne",
-     "D"
-    ],
-    [
-     "300966",
-     "Ronnie Edwards",
-     "D"
-    ],
-    [
-     "354937",
-     "Kealey Adamson",
-     "D"
-    ],
-    [
-     "301487",
-     "Dennis Cirkin",
-     "D"
-    ],
-    [
-     "175064",
-     "Glen Kamara",
-     "M"
-    ],
-    [
-     "306532",
-     "Harvey Vale",
-     "M"
-    ],
-    [
-     "265960",
-     "Koki Saito",
-     "M"
-    ],
-    [
-     "318388",
-     "Jonathan Varane",
-     "M"
-    ],
-    [
-     "378784",
-     "Richard Kone",
-     "F"
-    ],
-    [
-     "231890",
-     "Paul Smyth",
-     "F"
-    ]
-   ],
-   "Burnley": [
-    [
-     "260239",
-     "Grégoire Coudert",
-     "G"
-    ],
-    [
-     "285790",
-     "Lucas Pires",
-     "D"
-    ],
-    [
-     "129358",
-     "Kyle Walker",
-     "D"
-    ],
-    [
-     "234143",
-     "Igor Julio",
-     "D"
-    ],
-    [
-     "290413",
-     "Hjalmar Ekdal",
-     "D"
-    ],
-    [
-     "288891",
-     "Reo Hatate",
-     "M"
-    ],
-    [
-     "225552",
-     "Marcus Edwards",
-     "M"
-    ],
-    [
-     "291435",
-     "Largie Ramazani",
-     "M"
-    ],
-    [
-     "190936",
-     "Josh Laurent",
-     "M"
-    ],
-    [
-     "317322",
-     "Andreas Hountondji",
-     "M"
-    ],
-    [
-     "165648",
-     "Jamie Vardy",
-     "F"
-    ]
-   ]
-  }
- },
- {
-  "id": "401880178",
-  "utc": "2026-11-03T19:45Z",
-  "estadio": "Vicarage Road",
-  "local_espn": "Watford",
-  "visita_espn": "Lincoln City",
-  "estado": "STATUS_FIRST_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    160,
-    240,
-    175
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     140
-    ],
-    [
-     "+0.5",
-     -195
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Watford": [
-    [
-     "245626",
-     "Federico Ravaglia",
-     "G"
-    ],
-    [
-     "313891",
-     "Kévin Keben",
-     "CD-L"
-    ],
-    [
-     "281721",
-     "Matthew Pollock",
-     "CD-R"
-    ],
-    [
-     "249112",
-     "Marc Bola",
-     "LB"
-    ],
-    [
-     "291914",
-     "Omar-Haktab Traoré",
-     "RB"
-    ],
-    [
-     "330242",
-     "Iker Bravo",
-     "AM"
-    ],
-    [
-     "289365",
-     "Hector Kyprianou",
-     "LM"
-    ],
-    [
-     "268986",
-     "Edo Kayembe",
-     "RM"
-    ],
-    [
-     "259143",
-     "Myron Boadu",
-     "F"
-    ],
-    [
-     "225549",
-     "Stephy Mavididi",
-     "AM-L"
-    ],
-    [
-     "376535",
-     "Othmane Maamma",
-     "AM-R"
-    ]
-   ],
-   "Lincoln City": [
-    [
-     "279794",
-     "George Wickens",
-     "G"
-    ],
-    [
-     "342108",
-     "Andrei Coubis",
-     "CD"
-    ],
-    [
-     "154794",
-     "Sonny Bradley",
-     "CD-L"
-    ],
-    [
-     "324580",
-     "Ayodeji Elerewe",
-     "CD-R"
-    ],
-    [
-     "366990",
-     "Yunus Konak",
-     "CM-L"
-    ],
-    [
-     "260816",
-     "Tom Bayliss",
-     "CM-R"
-    ],
-    [
-     "191425",
-     "Callum Elder",
-     "LM"
-    ],
-    [
-     "296613",
-     "Daniel Oyegoke",
-     "RM"
-    ],
-    [
-     "312600",
-     "Freddie Draper",
-     "F"
-    ],
-    [
-     "263120",
-     "Ben House",
-     "CF-L"
-    ],
-    [
-     "238192",
-     "Chiedozie Ogbene",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401880184",
   "utc": "2026-11-03T20:00Z",
   "estadio": "St. Andrew's Stadium",
   "local_espn": "Birmingham City",
   "visita_espn": "Millwall",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1060,17 +762,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -120
     ],
     [
      "+0.5",
-     -125
+     -115
     ]
    ]
   },
@@ -1197,7 +899,7 @@
   "estadio": "The Hawthorns",
   "local_espn": "West Bromwich Albion",
   "visita_espn": "Southampton",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
