@@ -5,7 +5,7 @@
   "estadio": "Ewood Park",
   "local_espn": "Blackburn Rovers",
   "visita_espn": "Stoke City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "The Valley",
   "local_espn": "Charlton Athletic",
   "visita_espn": "Bolton Wanderers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Pride Park",
   "local_espn": "Derby County",
   "visita_espn": "Norwich City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -316,7 +316,7 @@
    "ou_linea": 2.5,
    "ou": [
     -155,
-    120
+    125
    ],
    "spread": [
     [
@@ -452,7 +452,7 @@
   "estadio": "Fratton Park",
   "local_espn": "Portsmouth",
   "visita_espn": "Swansea City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -465,7 +465,7 @@
    "ou_linea": 2.5,
    "ou": [
     110,
-    -135
+    -140
    ],
    "spread": [
     [
@@ -606,26 +606,10 @@
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": [
-    275,
-    265,
-    -105
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -125,
-    100
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -125
-    ],
-    [
-     "-0.5",
-     -115
-    ]
-   ]
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   },
   "alineaciones": {
    "Preston North End": [
@@ -755,26 +739,10 @@
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": [
-    -105,
-    275,
-    280
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -130,
-    100
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -115
-    ],
-    [
-     "+0.5",
-     -120
-    ]
-   ]
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   },
   "alineaciones": {
    "Queens Park Rangers": [
@@ -904,26 +872,10 @@
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": [
-    160,
-    240,
-    175
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -105,
-    -120
-   ],
-   "spread": [
-    [
-     "-0.5",
-     140
-    ],
-    [
-     "+0.5",
-     -195
-    ]
-   ]
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   },
   "alineaciones": {
    "Watford": [
@@ -1203,9 +1155,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
+    125,
     245,
-    195
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1215,11 +1167,11 @@
    "spread": [
     [
      "-0.5",
-     125
+     115
     ],
     [
      "+0.5",
-     -175
+     -160
     ]
    ]
   },
@@ -1430,11 +1382,11 @@
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   }
