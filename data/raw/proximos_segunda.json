@@ -52,7 +52,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    170,
+    205,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -165
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -230
+    ],
+    [
+     "-0.5",
+     145
+    ]
+   ]
+  }
  },
  {
   "id": "401883143",
@@ -63,7 +85,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -195,
+    360,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -150
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -190
+    ]
+   ]
+  }
  },
  {
   "id": "401883141",
@@ -74,7 +118,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -105,
+    240,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
  },
  {
   "id": "401883142",
@@ -88,9 +154,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
-    240,
-    295
+    -120,
+    250,
+    310
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -100,11 +166,11 @@
    "spread": [
     [
      "-0.5",
-     -125
+     -135
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
@@ -118,7 +184,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    175,
+    230,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -195
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
+  }
  },
  {
   "id": "401883119",
@@ -173,7 +261,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    215,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -185
+    ]
+   ]
+  }
  },
  {
   "id": "401883139",
@@ -181,6 +291,39 @@
   "estadio": "Estadi Municipal de la Nova Creu Alta",
   "local_espn": "CD Sabadell",
   "visita_espn": "Real Sociedad II",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -170,
+    285,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -190
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401883136",
+  "utc": "2026-11-13T19:30Z",
+  "estadio": "Estadio Municipal de Butarque",
+  "local_espn": "Leganés",
+  "visita_espn": "Burgos",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
