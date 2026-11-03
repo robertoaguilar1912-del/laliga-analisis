@@ -601,15 +601,31 @@
   "estadio": "Deepdale",
   "local_espn": "Preston North End",
   "visita_espn": "Sheffield United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    275,
+    265,
+    -105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -125
+    ],
+    [
+     "-0.5",
+     -115
+    ]
+   ]
   },
   "alineaciones": {
    "Preston North End": [
@@ -734,15 +750,31 @@
   "estadio": "MATRADE Loftus Road",
   "local_espn": "Queens Park Rangers",
   "visita_espn": "Burnley",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -105,
+    275,
+    280
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
   },
   "alineaciones": {
    "Queens Park Rangers": [
@@ -867,15 +899,31 @@
   "estadio": "Vicarage Road",
   "local_espn": "Watford",
   "visita_espn": "Lincoln City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    160,
+    240,
+    175
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
   },
   "alineaciones": {
    "Watford": [
@@ -1012,17 +1060,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -130,
     105
    ],
    "spread": [
     [
      "-0.5",
-     -115
+     -110
     ],
     [
      "+0.5",
-     -120
+     -125
     ]
    ]
   },
