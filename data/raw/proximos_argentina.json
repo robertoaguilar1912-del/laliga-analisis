@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    600,
+    350,
+    -235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -170
+    ],
+    [
+     "-1.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401841667",
@@ -19,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    220,
+    210
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
  },
  {
   "id": "401841670",
@@ -30,11 +74,33 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    220,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -150
+    ]
+   ]
+  }
  },
  {
   "id": "401841665",
-  "utc": "2026-11-06T22:00Z",
+  "utc": "2026-11-06T22:15Z",
   "estadio": "Estadio Libertadores de América",
   "local_espn": "Independiente",
   "visita_espn": "Deportivo Riestra",
@@ -44,30 +110,30 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    235,
-    400
+    -150,
+    240,
+    425
    ],
    "ou_linea": 1.5,
    "ou": [
-    -205,
+    -210,
     140
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -165
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
  },
  {
   "id": "401841662",
-  "utc": "2026-11-06T22:00Z",
+  "utc": "2026-11-06T22:15Z",
   "estadio": "Estadio Pedro Bidegain",
   "local_espn": "San Lorenzo",
   "visita_espn": "Platense",
@@ -83,7 +149,7 @@
    ],
    "ou_linea": 1.5,
    "ou": [
-    -185,
+    -180,
     125
    ],
    "spread": [
@@ -100,7 +166,7 @@
  },
  {
   "id": "401841660",
-  "utc": "2026-11-06T22:00Z",
+  "utc": "2026-11-06T22:15Z",
   "estadio": "15 de Abril",
   "local_espn": "Unión (Santa Fe)",
   "visita_espn": "Vélez Sarsfield",
@@ -111,7 +177,7 @@
    "casa": "DraftKings",
    "ml": [
     150,
-    220,
+    215,
     175
    ],
    "ou_linea": 2.5,
@@ -176,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    230,
-    350
+    -120,
+    225,
+    340
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     -135
+     -130
     ],
     [
      "+0.5",
-     -110
+     -115
     ]
    ]
   }
@@ -248,8 +314,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -175
+    115,
+    -170
    ],
    "spread": [
     [
@@ -277,7 +343,7 @@
    "ml": [
     -125,
     230,
-    350
+    360
    ],
    "ou_linea": 1.5,
    "ou": [
@@ -363,41 +429,8 @@
   }
  },
  {
-  "id": "401841668",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Alfredo Terrera",
-  "local_espn": "Central Córdoba (Santiago del Estero)",
-  "visita_espn": "Lanús",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    320,
-    225,
-    -115
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    115,
-    -165
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -120
-    ],
-    [
-     "-0.5",
-     -125
-    ]
-   ]
-  }
- },
- {
   "id": "401841664",
-  "utc": "2026-11-08T22:30Z",
+  "utc": "2026-11-08T01:00Z",
   "estadio": "Monumental Presidente Perón",
   "local_espn": "Instituto (Córdoba)",
   "visita_espn": "Newell's Old Boys",
@@ -424,6 +457,39 @@
     [
      "+0.5",
      -130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841668",
+  "utc": "2026-11-08T22:30Z",
+  "estadio": "Alfredo Terrera",
+  "local_espn": "Central Córdoba (Santiago del Estero)",
+  "visita_espn": "Lanús",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    400,
+    250,
+    -145
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "+0.5",
+     105
+    ],
+    [
+     "-0.5",
+     -160
     ]
    ]
   }
