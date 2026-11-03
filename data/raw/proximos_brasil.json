@@ -5,15 +5,31 @@
   "estadio": "Arena Condá",
   "local_espn": "Chapecoense",
   "visita_espn": "Mirassol",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    270,
+    265,
+    -105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -125
+    ],
+    [
+     "-0.5",
+     -115
+    ]
+   ]
   },
   "alineaciones": {
    "Chapecoense": [
@@ -189,11 +205,11 @@
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
-     -135
+     -130
     ]
    ]
   }
