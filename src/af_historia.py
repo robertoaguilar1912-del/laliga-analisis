@@ -30,10 +30,31 @@ from config import DATOS, LIGAS, inicio_temporada
 BASE = 'https://v3.football.api-sports.io'
 UA = {'User-Agent': 'Mozilla/5.0 (laliga-analisis; uso personal)'}
 DIR = DATOS / 'af'
+# Ligas que no tienen página pero sí equipos en las copas internacionales: sus córners y remates hacen falta para los modelos
+# de córners y remates de las copas (copas_conteo.py). Solo estadísticas (sin minutos), 2 temporadas. {clave: (id, calendario)}
+EXTRA = {'ned': (88, 'europa'), 'bel': (144, 'europa'), 'sco': (179, 'europa'), 'tur': (203, 'europa'), 'gre': (197, 'europa'),
+         'aut': (218, 'europa'), 'sui': (207, 'europa'), 'den': (119, 'europa'), 'nor': (103, 'anual'), 'rou': (283, 'europa'),
+         'cyp': (318, 'europa'), 'isr': (383, 'europa'), 'irl': (357, 'anual'), 'cze': (345, 'europa'), 'pol': (106, 'europa'),
+         'cro': (210, 'europa'), 'srb': (286, 'europa'), 'ukr': (333, 'europa'),
+         'chi': (265, 'anual'), 'uru': (268, 'anual'), 'par': (250, 'anual'), 'per': (281, 'anual'), 'ecu': (242, 'anual'),
+         'bol': (344, 'anual'), 'ven': (299, 'anual')}
+ATRAS_EXTRA = 1
 # primero América (donde football-data no trae remates), después Europa y las copas
 ORDEN = ['ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia',
          'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'ligue1', 'portugal',
-         'champions', 'europa', 'conference', 'libertadores', 'sudamericana']
+         'champions', 'europa', 'conference', 'libertadores', 'sudamericana'] + list(EXTRA)
+
+
+def _id(liga):
+    return EXTRA[liga][0] if liga in EXTRA else (LIGAS.get(liga) or {}).get('api_football')
+
+
+def _actual(liga):
+    """Año de la temporada actual como lo usa API-Football (2026 para 2026-27 en Europa y para 2026 en las anuales)."""
+    if liga in EXTRA:
+        f = datetime.now(timezone.utc)
+        return f.year if EXTRA[liga][1] == 'anual' or f.month >= 7 else f.year - 1
+    return inicio_temporada(liga).year
 ATRAS = 4                     # temporadas anteriores a la actual
 CON_JUGADORES = 1             # minutos de los jugadores: temporada actual y la anterior
 RESERVA = 2500                # consultas del día que se dejan para la página
@@ -111,7 +132,7 @@ def cupo():
 
 def lista(liga, temporada, d):
     """Actualiza la lista de partidos de la temporada (sin borrar estadísticas ya bajadas)."""
-    j = _get('/fixtures', league=LIGAS[liga]['api_football'], season=temporada)
+    j = _get('/fixtures', league=_id(liga), season=temporada)
     if not j or j.get('errors'):
         return False
     for f in j.get('response') or []:
@@ -125,6 +146,9 @@ def lista(liga, temporada, d):
         m.update({'f': fx.get('date'), 'r': (f.get('league') or {}).get('round'), 'h': h.get('id'), 'a': a.get('id'),
                   'est': (fx.get('status') or {}).get('short'), 'g': [gl.get('home'), gl.get('away')],
                   'ht': [ht.get('home'), ht.get('away')]})
+    lg = ((j.get('response') or [{}])[0].get('league') or {})
+    if lg.get('name'):
+        d['af_liga'] = f"{lg.get('name')} ({lg.get('country')})"
     d['lista'] = datetime.now(timezone.utc).isoformat(timespec='minutes')
     return True
 
@@ -189,10 +213,10 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
     ahora = datetime.now(timezone.utc)
     resumen = []
     for liga in ligas or ORDEN:
-        if liga not in LIGAS or not LIGAS[liga].get('api_football'):
+        if not _id(liga):
             continue
-        actual = inicio_temporada(liga).year
-        for temporada in range(actual, actual - atras - 1, -1):
+        actual = _actual(liga)
+        for temporada in range(actual, actual - (min(atras, ATRAS_EXTRA) if liga in EXTRA else atras) - 1, -1):
             if CONSULTAS[0] >= tope:
                 break
             p = DIR / liga / f'{temporada}.json'
@@ -207,7 +231,7 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
                 _guardar(p, d)
                 continue
             pend = sorted((i for i, m in d['partidos'].items() if falta(m, ahora)), key=lambda i: d['partidos'][i]['f'], reverse=True)
-            con_j = temporada >= actual - CON_JUGADORES
+            con_j = temporada >= actual - CON_JUGADORES and liga not in EXTRA
             hechos = 0
             for k in range(0, len(pend), 20):
                 if CONSULTAS[0] >= tope:
@@ -225,7 +249,8 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
             _guardar(p, d)
             ps = [m for m in d['partidos'].values() if m.get('est') in TERMINADO]
             con_xg = sum(1 for m in ps if (m.get('x') or {}).get('h', {}).get('xg') is not None)
-            resumen.append(f'{liga} {temporada}: {len(ps)} jugados, {con_xg} con xG, {hechos} bajados ahora'
+            resumen.append(f'{liga} {temporada}' + (f" [{d['af_liga']}]" if liga in EXTRA and d.get('af_liga') else '')
+                           + f': {len(ps)} jugados, {con_xg} con xG, {hechos} bajados ahora'
                            + (' (sin xG en API-Football)' if d.get('sin_xg') else '')
                            + (f', faltan {len(pend) - hechos}' if len(pend) > hechos else ''))
     print('\n'.join('  ' + r for r in resumen))
@@ -266,8 +291,9 @@ if __name__ == '__main__':
     ap.add_argument('--ligas', default='')
     ap.add_argument('--atras', type=int, default=ATRAS)
     ap.add_argument('--lesiones', action='store_true', help='solo las lesiones de cada partido (2 temporadas)')
+    ap.add_argument('--extras', action='store_true', help='solo las ligas sin página de los equipos de copa (EXTRA)')
     a = ap.parse_args()
-    ligas = [x for x in a.ligas.split(',') if x] or None
+    ligas = [x for x in a.ligas.split(',') if x] or (list(EXTRA) if a.extras else None)
     if a.lesiones:
         lesiones(ligas)
     else:
