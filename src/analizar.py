@@ -684,11 +684,16 @@ def analizar_liga(liga):
     con_m = False
     if L.get('region'):
         # un solo modelo por región: 21 ligas de Europa y las tres copas de la UEFA, o 12 ligas de Sudamérica con
-        # Libertadores y Sudamericana (ver europa.py); córners y remates no: no hay suficientes partidos de copa con esas
-        # estadísticas para probarlos
+        # Libertadores y Sudamericana (ver europa.py). Córners y remates: modelo aparte con API-Football (abajo)
         import europa
         modelo = europa.ModeloEuropa(L['region']).fit(europa.cargar_partidos(L['region']), ref)
-        cmodel = rmodel = None
+        # córners y remates a puerta (desde nov 2026): con API-Football, liga y copas de cada equipo (copas_conteo.py)
+        try:
+            import copas_conteo
+            cmodel, rmodel = copas_conteo.modelos(L['region'], ref)
+        except Exception as e:
+            print(f'  córners y remates de {liga}: {e!r}')
+            cmodel = rmodel = None
         calendario = europa.calendario_equipos(ref, L['region'])
     else:
         # ligas de Europa: con la corrección de favoritos y empates (ver RECAL_1X2 en model.py)

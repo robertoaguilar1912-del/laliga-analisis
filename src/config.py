@@ -86,14 +86,14 @@ LIGAS = {
                            'preciso que el momio de cierre y los PICK dieron +7.2% (208 apuestas, rango probable −9% a +24%: puede ser suerte). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
-                           'pierden. No hay córners ni remates a puerta.'},
+                           'pierden. Córners y remates a puerta: desde nov 2026, con API-Football (lo que cada equipo hace en su liga y en las copas).'},
     'europa': {'nombre': 'Europa League', 'fotmob': 73, 'api_football': 3, 'pais': 'Europa', 'espn': 'uefa.europa', 'solo_espn': True, 'region': 'europa',
                'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (395 partidos) fue menos preciso '
                            'que el momio de cierre y los PICK dieron +1.6% (315 apuestas, rango probable −11% a +15%). '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
-                           'pierden. No hay córners ni remates a puerta.'},
+                           'pierden. Córners y remates a puerta: desde nov 2026, con API-Football (lo que cada equipo hace en su liga y en las copas).'},
     'conference': {'nombre': 'Conference League', 'fotmob': 10216, 'api_football': 848, 'pais': 'Europa', 'espn': 'uefa.europa.conf', 'solo_espn': True, 'region': 'europa',
                    'fase_tabla': 'league-phase', 'calendario': 'europa', 'copas': {}, 'zonas': 'uefa36',
                'aviso': 'Equipos de ligas distintas: aquí trabaja un modelo de toda Europa. En la prueba 2024-2026 (301 partidos) fue menos preciso '
@@ -101,7 +101,7 @@ LIGAS = {
                            'los datos (Chequia, Croacia, Polonia...): de ellos sabe menos. '
                            'El modelo no sabe de rotaciones (equipos ya clasificados o que cuidan titulares para su liga) ni del marcador global en la '
                            'vuelta de las eliminatorias. Desconfía de los "Lejos del mercado" (EV de +20% o más): en las ligas son los que más '
-                           'pierden. No hay córners ni remates a puerta.'},
+                           'pierden. Córners y remates a puerta: desde nov 2026, con API-Football (lo que cada equipo hace en su liga y en las copas).'},
     'ligamx': {'nombre': 'Liga MX', 'fotmob': 230, 'pais': 'México', 'espn': 'mex.1', 'fd_extra': 'MEX',
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'fotmob': 130, 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
@@ -145,7 +145,7 @@ LIGAS = {
                               'perdieron −7.8% (285 apuestas, rango probable −22% a +7%); solo en 2026, −44% (91 apuestas). El mercado sabe '
                               'cosas que el modelo no: rotaciones (equipos que guardan titulares para su liga), lesiones y el marcador global '
                               'en la vuelta de las eliminatorias. Usa la página para estadísticas, la tabla y el momio justo; no sigas los PICK '
-                              'a ciegas. No hay córners ni remates a puerta.'},
+                              'a ciegas. Córners y remates a puerta: desde nov 2026, con API-Football (lo que cada equipo hace en su liga y en las copas).'},
     'sudamericana': {'nombre': 'Copa Sudamericana', 'fotmob': 299, 'api_football': 11, 'pais': 'Sudamérica', 'espn': 'conmebol.sudamericana', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
                      'copas': {}, 'zonas': 'sudamericana',
@@ -154,7 +154,7 @@ LIGAS = {
                               'quedaron casi parejos: −0.7% (300 apuestas, rango probable −16% a +14%: puede ser suerte); en 2026, −11%. El '
                               'mercado sabe cosas que el modelo no: rotaciones (aquí muchos equipos juegan con suplentes), lesiones y el '
                               'marcador global en la vuelta de las eliminatorias. Usa la página para estadísticas, la tabla y el momio justo; '
-                              'no sigas los PICK a ciegas. No hay córners ni remates a puerta.'},
+                              'no sigas los PICK a ciegas. Córners y remates a puerta: desde nov 2026, con API-Football (lo que cada equipo hace en su liga y en las copas).'},
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
 SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items() if not v.get('oculta')}, 'nfl': 'NFL', 'nba': 'NBA'}
