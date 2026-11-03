@@ -92,7 +92,7 @@
 },
 "401841672": {
 "fotmob": 1000019628,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -131,15 +131,6 @@
 "importante": true
 },
 {
-"nombre": "Fabio Pereyra",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 419450.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Rodrigo Fernández",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -150,13 +141,13 @@
 }
 ],
 "valor_xi": 8714478.0,
-"perdida": 0.15501662864947274,
+"perdida": 0.1068840841643068,
 "perdida_duda": 0.0
 }
 },
 "401841671": {
 "fotmob": 1000019627,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -211,7 +202,7 @@
 },
 "401841670": {
 "fotmob": 1000019632,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -311,7 +302,7 @@
 },
 "401841669": {
 "fotmob": 1000019626,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -356,62 +347,35 @@
 },
 "401841668": {
 "fotmob": 1000019620,
-"visto": "2026-11-03T07:21+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-03T11:48+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Fernando Juárez",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 540048.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Felipe Aguilar",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 440040.0,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Fernando Juárez",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 4627607.0,
-"perdida": 0.11670135342089334,
+"valor_xi": 0.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Agustín Cardozo",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1762773.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "José Canale",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1242332.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Luciano Romero",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 574484.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Agustín Medina",
 "tipo": "Lesión",
@@ -420,16 +384,43 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Luciano Romero",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Agustín Cardozo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "José Canale",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 15235542.0,
+"valor_xi": 0.0,
 "perdida": 0.0,
-"perdida_duda": 0.19724306493329874
+"perdida_duda": 0.0
 }
 },
 "401841666": {
 "fotmob": 1000019619,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -584,7 +575,7 @@
 },
 "401841665": {
 "fotmob": 1000019625,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -611,34 +602,25 @@
 },
 "401841664": {
 "fotmob": 1000019623,
-"visto": "2026-11-03T07:21+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-03T11:48+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
 "nombre": "Leonel Mosevich",
 "tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
+"regreso": "",
 "duda": false,
-"valor": 815582.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Jeremías Lázaro",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 783166.0,
-"titular": true,
-"importante": true
+"valor": 0.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Lucas Sanseviero",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 536030.0,
+"valor": 0.0,
 "titular": false,
 "importante": false
 },
@@ -650,38 +632,29 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Jeremías Lázaro",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 15109365.0,
-"perdida": 0.053978575539077915,
-"perdida_duda": 0.051833151161547825
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Rodrigo Herrera",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 1246251.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Lautaro Giannetti",
+"nombre": "Franco Escobar",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 851346.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Mateo García",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 842147.0,
+"valor": 0.0,
 "titular": false,
 "importante": false
 },
@@ -690,28 +663,46 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 570385.0,
+"valor": 0.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Franco Escobar",
+"nombre": "Rodrigo Herrera",
+"tipo": "Lesión",
+"regreso": "principios de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Lautaro Giannetti",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 493773.0,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Mateo García",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 25413341.0,
+"valor_xi": 0.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401841663": {
 "fotmob": 1000019630,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -795,15 +786,6 @@
 "importante": true
 },
 {
-"nombre": "Juan Antonini",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 302940.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Gonzalo Maffini",
 "tipo": "Sanción",
 "regreso": "hasta el 8 de noviembre",
@@ -832,13 +814,13 @@
 }
 ],
 "valor_xi": 4097082.0,
-"perdida": 0.36762578830494486,
+"perdida": 0.2936853594826757,
 "perdida_duda": 0.0
 }
 },
 "401841662": {
 "fotmob": 1000019621,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -965,7 +947,7 @@
 },
 "401841661": {
 "fotmob": 1000019624,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1004,15 +986,6 @@
 "importante": true
 },
 {
-"nombre": "Santiago Núñez",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 1652886.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Jalil Elías",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -1032,13 +1005,13 @@
 }
 ],
 "valor_xi": 16735180.0,
-"perdida": 0.7069068274138671,
+"perdida": 0.6081396794058982,
 "perdida_duda": 0.0
 }
 },
 "401841673": {
 "fotmob": 1000019629,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1077,15 +1050,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Santiago Salle",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 1407837.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Jhon Rentería",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
@@ -1095,15 +1059,6 @@
 "importante": true
 },
 {
-"nombre": "Renzo Orihuela",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 588188.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Carlos Villalba",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
@@ -1111,25 +1066,16 @@
 "valor": 314306.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Facundo Sava",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 8985428.0,
-"perdida": 0.252524086776946,
+"perdida": 0.09584407108932373,
 "perdida_duda": 0.0
 }
 },
 "401841660": {
 "fotmob": 1000019622,
-"visto": "2026-11-03T07:21+00:00",
+"visto": "2026-11-03T11:48+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

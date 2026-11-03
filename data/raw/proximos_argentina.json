@@ -1,7 +1,7 @@
 [
  {
   "id": "401841659",
-  "utc": "2026-11-08T20:00Z",
+  "utc": "2026-11-05T18:00Z",
   "estadio": "José María Minella",
   "local_espn": "Aldosivi",
   "visita_espn": "River Plate",
@@ -11,22 +11,11 @@
   "momios": null
  },
  {
-  "id": "401841672",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Diego Armando Maradona",
-  "local_espn": "Argentinos Juniors",
-  "visita_espn": "Huracán",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841671",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Florencio Solá",
-  "local_espn": "Banfield",
-  "visita_espn": "Atlético Tucumán",
+  "id": "401841667",
+  "utc": "2026-11-05T22:15Z",
+  "estadio": "Juan Carmelo Zerillo (El Bosque)",
+  "local_espn": "Gimnasia La Plata",
+  "visita_espn": "Belgrano (Córdoba)",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
@@ -34,7 +23,7 @@
  },
  {
   "id": "401841670",
-  "utc": "2026-11-08T20:00Z",
+  "utc": "2026-11-06T18:00Z",
   "estadio": "Estadio Claudio Chiqui Tapia",
   "local_espn": "Barracas Central",
   "visita_espn": "Racing Club",
@@ -44,15 +33,334 @@
   "momios": null
  },
  {
+  "id": "401841665",
+  "utc": "2026-11-06T22:00Z",
+  "estadio": "Estadio Libertadores de América",
+  "local_espn": "Independiente",
+  "visita_espn": "Deportivo Riestra",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -145,
+    235,
+    400
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -205,
+    140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -155
+    ],
+    [
+     "+0.5",
+     100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841662",
+  "utc": "2026-11-06T22:00Z",
+  "estadio": "Estadio Pedro Bidegain",
+  "local_espn": "San Lorenzo",
+  "visita_espn": "Platense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    175,
+    195
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -185,
+    125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     145
+    ],
+    [
+     "+0.5",
+     -225
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841660",
+  "utc": "2026-11-06T22:00Z",
+  "estadio": "15 de Abril",
+  "local_espn": "Unión (Santa Fe)",
+  "visita_espn": "Vélez Sarsfield",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    220,
+    175
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -210
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841671",
+  "utc": "2026-11-07T01:00Z",
+  "estadio": "Florencio Solá",
+  "local_espn": "Banfield",
+  "visita_espn": "Atlético Tucumán",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    215,
+    190
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841673",
+  "utc": "2026-11-07T01:00Z",
+  "estadio": "Monumental de Victoria (José Dellagiovanna)",
+  "local_espn": "Tigre",
+  "visita_espn": "Sarmiento (Junín)",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    230,
+    350
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -135
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841666",
+  "utc": "2026-11-07T18:00Z",
+  "estadio": "Estadio Víctor Antonio Legrotaglie",
+  "local_espn": "Gimnasia (Mendoza)",
+  "visita_espn": "Independiente Rivadavia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    210,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -225
+    ],
+    [
+     "-0.5",
+     145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841661",
+  "utc": "2026-11-07T18:00Z",
+  "estadio": "Mario Alberto Kempes",
+  "local_espn": "Talleres (Córdoba)",
+  "visita_espn": "Estudiantes de La Plata",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    205,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -215
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841672",
+  "utc": "2026-11-07T20:30Z",
+  "estadio": "Diego Armando Maradona",
+  "local_espn": "Argentinos Juniors",
+  "visita_espn": "Huracán",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    230,
+    350
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -210,
+    140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -140
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
+  }
+ },
+ {
   "id": "401841669",
-  "utc": "2026-11-08T20:00Z",
+  "utc": "2026-11-07T20:30Z",
   "estadio": "Alberto José Armando (La Bombonera)",
   "local_espn": "Boca Juniors",
   "visita_espn": "Defensa y Justicia",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -280,
+    360,
+    700
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     105
+    ],
+    [
+     "+1.5",
+     -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401841663",
+  "utc": "2026-11-07T20:30Z",
+  "estadio": "Gigante de Arroyito",
+  "local_espn": "Rosario Central",
+  "visita_espn": "Estudiantes de Río Cuarto",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -525,
+    500,
+    1200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -165
+    ],
+    [
+     "+1.5",
+     110
+    ]
+   ]
+  }
  },
  {
   "id": "401841668",
@@ -63,105 +371,61 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841666",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Estadio Víctor Antonio Legrotaglie",
-  "local_espn": "Gimnasia (Mendoza)",
-  "visita_espn": "Independiente Rivadavia",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841667",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Juan Carmelo Zerillo (El Bosque)",
-  "local_espn": "Gimnasia La Plata",
-  "visita_espn": "Belgrano (Córdoba)",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841665",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Estadio Libertadores de América",
-  "local_espn": "Independiente",
-  "visita_espn": "Deportivo Riestra",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    320,
+    225,
+    -115
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -165
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -120
+    ],
+    [
+     "-0.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401841664",
-  "utc": "2026-11-08T20:00Z",
+  "utc": "2026-11-08T22:30Z",
   "estadio": "Monumental Presidente Perón",
   "local_espn": "Instituto (Córdoba)",
   "visita_espn": "Newell's Old Boys",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-clausura",
   "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841663",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Gigante de Arroyito",
-  "local_espn": "Rosario Central",
-  "visita_espn": "Estudiantes de Río Cuarto",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841662",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Estadio Pedro Bidegain",
-  "local_espn": "San Lorenzo",
-  "visita_espn": "Platense",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841661",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Mario Alberto Kempes",
-  "local_espn": "Talleres (Córdoba)",
-  "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841673",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "Monumental de Victoria (José Dellagiovanna)",
-  "local_espn": "Tigre",
-  "visita_espn": "Sarmiento (Junín)",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401841660",
-  "utc": "2026-11-08T20:00Z",
-  "estadio": "15 de Abril",
-  "local_espn": "Unión (Santa Fe)",
-  "visita_espn": "Vélez Sarsfield",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -105,
+    200,
+    330
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    135,
+    -200
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  }
  }
 ]

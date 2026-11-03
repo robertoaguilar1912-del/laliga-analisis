@@ -48,10 +48,10 @@
     265,
     165
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -190
+    -185,
+    125
    ],
    "spread": [
     [
@@ -184,7 +184,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    200,
+    260,
+    110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -190,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -155
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401876903",
