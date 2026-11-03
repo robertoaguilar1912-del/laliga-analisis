@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909907",
-  "utc": "2026-11-03T00:00Z",
-  "fecha": "2026-11-02",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CLE",
-  "visita": "OKC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Cleveland Cavaliers",
-  "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
-  "estadio": "Rocket Arena",
-  "records": {
-   "home": [
-    "4-2",
-    "3-0",
-    "1-2"
-   ],
-   "away": [
-    "4-2",
-    "3-0",
-    "1-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909908",
   "utc": "2026-11-03T00:30Z",
   "fecha": "2026-11-02",
@@ -67,7 +38,7 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Indiana Pacers",
   "visita_espn": "Atlanta Hawks",
   "revisado": false,
@@ -154,7 +125,7 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Chicago Bulls",
   "revisado": false,
@@ -183,7 +154,7 @@
   "visita": "SAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Sacramento Kings",
   "revisado": false,
@@ -212,7 +183,7 @@
   "visita": "NO",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "New Orleans Pelicans",
   "revisado": false,
@@ -270,10 +241,10 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Houston Rockets",
   "visita_espn": "Boston Celtics",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -287,30 +258,7 @@
     "1-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -179,
-    150
-   ],
-   "ml_abre": [
-    -185,
-    154
-   ],
-   "spread": [
-    -4.5,
-    -106,
-    4.5,
-    -114
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    215.5,
-    -113,
-    -107
-   ],
-   "total_abre": 218.5
-  }
+  "momios": null
  },
  {
   "id": "401909917",
@@ -322,10 +270,10 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Utah Jazz",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
@@ -339,30 +287,7 @@
     "0-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -1180,
-    740
-   ],
-   "ml_abre": [
-    -800,
-    550
-   ],
-   "spread": [
-    -16.5,
-    -108,
-    16.5,
-    -112
-   ],
-   "spread_abre": -15.5,
-   "total": [
-    227.5,
-    -108,
-    -112
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401909918",
@@ -374,10 +299,10 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Denver Nuggets",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -391,30 +316,7 @@
     "3-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -174,
-    146
-   ],
-   "ml_abre": [
-    -162,
-    136
-   ],
-   "spread": [
-    -4.5,
-    -104,
-    4.5,
-    -116
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    231.5,
-    -112,
-    -108
-   ],
-   "total_abre": 231.5
-  }
+  "momios": null
  },
  {
   "id": "401909919",
@@ -446,8 +348,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -142,
-    120
+    -136,
+    115
    ],
    "ml_abre": [
     -180,
@@ -498,18 +400,18 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    151,
-    -180
+    179,
+    -216
    ],
    "ml_abre": [
     164,
     -198
    ],
    "spread": [
-    4.5,
-    -113,
-    -4.5,
-    -107
+    6.5,
+    -115,
+    -6.5,
+    -105
    ],
    "spread_abre": 5.5,
    "total": [
@@ -565,9 +467,9 @@
    ],
    "spread_abre": -1.5,
    "total": [
-    236.5,
-    -110,
-    -110
+    237.5,
+    -107,
+    -113
    ],
    "total_abre": 239.5
   }
@@ -792,13 +694,13 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ],
    "away": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ]
   },
@@ -1111,8 +1013,8 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ],
    "away": [
@@ -1174,9 +1076,9 @@
     "4-0"
    ],
    "away": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -1372,8 +1274,8 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ],
    "away": [
@@ -1401,9 +1303,9 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ],
    "away": [
     "3-3",
@@ -1754,8 +1656,8 @@
     "1-2"
    ],
    "away": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ]
   },
@@ -2102,9 +2004,9 @@
     "3-0"
    ],
    "away": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -2160,8 +2062,8 @@
     "1-2"
    ],
    "away": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ]
   },
@@ -2392,9 +2294,9 @@
     "3-0"
    ],
    "away": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -2595,8 +2497,8 @@
     "1-1"
    ],
    "away": [
-    "4-2",
-    "3-0",
+    "4-3",
+    "3-1",
     "1-2"
    ]
   },
@@ -2769,9 +2671,9 @@
     "0-4"
    ],
    "away": [
-    "4-2",
+    "5-2",
     "3-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
