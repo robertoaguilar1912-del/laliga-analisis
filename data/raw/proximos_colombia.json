@@ -5,29 +5,145 @@
   "estadio": "Estadio Alfonso López",
   "local_espn": "Atlético Bucaramanga",
   "visita_espn": "Atlético Nacional",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
-    225,
-    125
+    170,
+    230,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -115,
+    -115
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -195
     ],
     [
      "-0.5",
-     120
+     135
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Atlético Bucaramanga": [
+    [
+     "254009",
+     "Cristopher Fiermarin",
+     "G"
+    ],
+    [
+     "266325",
+     "José Ortiz",
+     "CD-L"
+    ],
+    [
+     "272875",
+     "Carlos Romaña",
+     "CD-R"
+    ],
+    [
+     "117451",
+     "José Daniel García",
+     "LB"
+    ],
+    [
+     "208143",
+     "Nilson Castrillón",
+     "RB"
+    ],
+    [
+     "196715",
+     "Edwin Fabri Castro",
+     "CM"
+    ],
+    [
+     "201060",
+     "Leonardo Flores",
+     "LM"
+    ],
+    [
+     "285045",
+     "Felix Charrupí",
+     "RM"
+    ],
+    [
+     "143522",
+     "Luciano Pons",
+     "F"
+    ],
+    [
+     "303551",
+     "Enmerson Batalla",
+     "LF"
+    ],
+    [
+     "203945",
+     "Fabián Sambueza",
+     "RF"
+    ]
+   ],
+   "Atlético Nacional": [
+    [
+     "118577",
+     "Franco Armani",
+     "G"
+    ],
+    [
+     "133628",
+     "William Tesillo",
+     "CD-L"
+    ],
+    [
+     "182014",
+     "Andrés Reyes",
+     "CD-R"
+    ],
+    [
+     "135867",
+     "Milton Casco",
+     "LB"
+    ],
+    [
+     "418464",
+     "Xavi Rios",
+     "RB"
+    ],
+    [
+     "196767",
+     "Edwin Cardona",
+     "AM"
+    ],
+    [
+     "287997",
+     "Juan Zapata",
+     "LM"
+    ],
+    [
+     "407306",
+     "Andrés Marín",
+     "RM"
+    ],
+    [
+     "70721",
+     "Andrés Sarmiento",
+     "F"
+    ],
+    [
+     "5323390",
+     "José Rafael Escorcia De La Cruz",
+     "AM-L"
+    ],
+    [
+     "378916",
+     "Nicolás Rodríguez",
+     "AM-R"
     ]
    ]
   }
