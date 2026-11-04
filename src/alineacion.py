@@ -59,6 +59,22 @@ ONCE = {'grandes': {'n': 15, 'rot': 0.65, 'nota': 0.0}, 'otras': {'n': 15, 'rot'
         'america': {'n': 5, 'rot': 0.70, 'nota': 1.6}}
 N_NOTA, NOTA_DIAS, FRENO = 15, 365, 5.0      # nota: media por minutos del último año + FRENO partidos de la media de su posición
 
+# Bajas ANTES del once (prueba del 4 nov 2026, scratchpad bajl/ de esa sesión): lesionados y sancionados de cada partido según
+# API-Football, 5 temporadas de 9 ligas (Premier, La Liga, Serie A, Bundesliga, Ligue 1, Championship, MLS, Brasil, Suecia;
+# 13,382 partidos), contra el modelo actual. Variable: parte de los minutos del once habitual de cada equipo que está de baja
+# ('duda' cuenta la mitad), local − visita. Log loss del 1X2 en diezmilésimas:
+# - Contar solo a los que están en el once habitual (15 partidos en Europa, 5 en América) o a todos los de la temporada
+#   (habitual de 38): casi igual en las grandes (+2 ± 6 y −7 ± 9); en América mejor sin los de hace meses (−14 ± 11 y −13 ± 11
+#   con 15, −23 ± 14 y −15 ± 13 con 5). Darle peso aparte a los que faltan hace meses no mejora la prueba (+7 ± 5 y +3 ± 5).
+# - Con el once confirmado tampoco: el habitual de 38 sale peor que el de 15 en Europa (+11 ± 5 y +7 ± 9).
+#   Es decir: el que falta hace meses ya está en los resultados del equipo; no hay que restarlo otra vez.
+# - Cuánto pesan, con todos los partidos: grandes −1.12 (rango −1.59 a −0.60) por unidad, con 15 (log loss −12.6); América
+#   −1.06 (−1.90 a −0.34) con 5 (−7.6). Antes FotMob contaba 0.20 por unidad de valor de mercado del once que falta (también los
+#   de hace meses): unas 4 veces menos. 1 titular habitual de baja (~9% de los minutos) ≈ 1.5 puntos menos de ganar.
+# Se aplica con las bajas de FotMob (mismos nombres, por equipo de API-Football) en las ligas; las copas siguen como antes.
+# Portugal, Segunda, Liga MX, Argentina y Colombia no tienen lesiones en API-Football para probar: usan el peso de su grupo.
+BAJAS_HAB = {'grandes': 0.90, 'otras': 0.90, 'america': 0.85}
+
 
 def grupo(liga):
     if liga in GRANDES:
@@ -78,6 +94,11 @@ def peso_rotacion(liga):
 def peso_once(liga):
     """Pesos del once confirmado en esta liga (ONCE), o None en las copas."""
     return ONCE.get(grupo(liga))
+
+
+def peso_bajas_hab(liga):
+    """Logit por unidad de bajas del once habitual antes del once (BAJAS_HAB), o None en las copas."""
+    return BAJAS_HAB.get(grupo(liga))
 N_PREVIOS = 5
 VENTANA = (-20, 80)          # minutos antes de empezar en que se piden las alineaciones
 TERMINADO = {'FT', 'AET', 'PEN'}
@@ -276,3 +297,38 @@ def aplicar(partidos, liga, bajas):
                 p['alineacion']['neto_total'] = round(o['local']['rot_total'] - o['visita']['rot_total'], 3)
                 if 'dnota' in o['local']:
                     p['alineacion']['neto_nota'] = round(o['local']['dnota'] - o['visita']['dnota'], 4)
+
+
+def bajas_habituales(partidos, liga, bajas):
+    """p['bajas_hab'] antes del once (ver BAJAS_HAB): por lado, parte de los minutos de su once habitual que está en la lista de
+    bajas de FotMob ('duda' la mitad) y a quiénes cuenta; 'neto' = local − visita. Solo en las ligas y si los dos equipos
+    tienen historia en API-Football; si no, ajustar_bajas sigue con el valor de FotMob."""
+    from analizar import _mismo_jugador
+    W = peso_once(liga)
+    if not W or not bajas:
+        return
+    _cargar()
+    af = (_leer(RAW / f'af_{liga}.json', {}) or {}).get('partidos') or {}
+    for p in partidos:
+        B, x = bajas.get(str(p['id'])), af.get(str(p['id']))
+        if not B or not x or str(x.get('af')) not in _FIX:
+            continue
+        h, a = _FIX[str(x['af'])]
+        t0 = _t(p['utc'])
+        lados = {}
+        for lado, eq in (('local', h), ('visita', a)):
+            top = habitual(eq, t0, W['n'])
+            if not top:
+                break
+            faltan = [(f.get('nombre'), 0.5 if f.get('duda') else 1.0) for f in (B.get(lado) or {}).get('faltan') or [] if f.get('nombre')]
+            peso, quienes = sum(v for _, v in top) or 1, []
+            tot = 0.0
+            for pid, v in top:
+                n = _NOMBRES.get(str(pid)) or str(pid)
+                k = next((w for b, w in faltan if _mismo_jugador(n, b)), 0.0)
+                if k:
+                    tot += k * v / peso
+                    quienes.append(n)
+            lados[lado] = {'peso': round(tot, 3), 'cuenta': quienes}
+        if len(lados) == 2:
+            p['bajas_hab'] = {**lados, 'neto': round(lados['local']['peso'] - lados['visita']['peso'], 3), 'n': W['n']}

@@ -26,7 +26,7 @@ from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
 import xg
 import alineacion
-from alineacion import peso_rotacion, peso_once
+from alineacion import peso_rotacion, peso_once, peso_bajas_hab
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -584,6 +584,10 @@ def ajustar_bajas(p):
         # ligas con el once confirmado (alineacion.ONCE, prueba del 4 nov 2026): todos los titulares habituales que no salen
         # (de baja o dejados afuera) y, en América, la nota de los que entran; reemplaza a las bajas de FotMob
         mov = WO['rot'] * A['neto_total'] - WO['nota'] * A.get('neto_nota', 0.0)
+    elif p.get('bajas_hab') and peso_bajas_hab(p.get('liga')):
+        # ligas antes del once (alineacion.BAJAS_HAB, prueba del 4 nov 2026): solo los de baja que están en el once habitual,
+        # por sus minutos; los que faltan hace meses ya están en los resultados del equipo
+        mov = peso_bajas_hab(p.get('liga')) * p['bajas_hab']['neto'] + peso_rotacion(p.get('liga')) * rot
     else:
         mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
     if abs(mov) < 0.001:
@@ -639,6 +643,8 @@ def ajustar_bajas(p):
     p['bajas_ajuste'] = {'neto': round(neto, 3), 'rotacion': round(rot, 3), 'local': round(dr['1'], 4), 'visita': round(dr['2'], 4)}
     if WO:
         p['bajas_ajuste'].update({'once': True, 'rot_total': A['neto_total'], 'nota': A.get('neto_nota')})
+    elif p.get('bajas_hab') and peso_bajas_hab(p.get('liga')):
+        p['bajas_ajuste'].update({'habitual': p['bajas_hab']['neto'], 'n': p['bajas_hab']['n']})
     quien = [(p['local_es'], dr['1']), (p['visita_es'], dr['2'])]
     eq, dv = min(quien, key=lambda x: x[1])
     if dv <= -0.005:
@@ -773,6 +779,10 @@ def analizar_liga(liga):
         alineacion.aplicar(partidos, liga, bajas)
     except Exception as e:
         print(f'  alineaciones {liga}: {e!r}')
+    try:                                  # antes del once: las bajas que están en el once habitual (alineacion.BAJAS_HAB)
+        alineacion.bajas_habituales(partidos, liga, bajas)
+    except Exception as e:
+        print(f'  bajas del once habitual {liga}: {e!r}')
     aplicar_bajas(partidos, bajas, equipos)
     # 8 ligas de Europa con momios: sin PICK en "Gana" con momio de 2.00 o más ni en "Menos de" al empezar la temporada
     # (ver picks.py); la calculadora aplica lo mismo con el momio de tu casa ('reglas' de cada partido)
