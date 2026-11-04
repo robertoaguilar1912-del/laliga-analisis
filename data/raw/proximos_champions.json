@@ -5,7 +5,7 @@
   "estadio": "OPAP Arena",
   "local_espn": "AEK Athens",
   "visita_espn": "Real Madrid",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Şükrü Saracoğlu Stadium",
   "local_espn": "Fenerbahce",
   "visita_espn": "Liverpool",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -167,7 +167,7 @@
    "ou_linea": 3.5,
    "ou": [
     110,
-    -135
+    -140
    ],
    "spread": [
     [
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    330,
-    370
+    -140,
+    320,
+    350
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -145
+    130,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -155
     ],
     [
      "+0.5",
-     120
+     110
     ]
    ]
   }
@@ -348,7 +348,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     100
    ],
    "spread": [
@@ -379,10 +379,10 @@
     290,
     -115
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    140,
-    -170
+    -175,
+    140
    ],
    "spread": [
     [
@@ -414,7 +414,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -115,
     -105
    ],
    "spread": [
@@ -441,9 +441,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    425,
-    390,
-    -185
+    400,
+    370,
+    -170
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -452,12 +452,12 @@
    ],
    "spread": [
     [
-     "+1.5",
-     -175
+     "+0.5",
+     130
     ],
     [
-     "-1.5",
-     125
+     "-0.5",
+     -180
     ]
    ]
   }
@@ -474,23 +474,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1400,
+    1300,
     500,
-    -450
+    -425
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    120
+    -135,
+    110
    ],
    "spread": [
     [
      "+1.5",
-     105
+     100
     ],
     [
      "-1.5",
-     -145
+     -140
     ]
    ]
   }
@@ -507,13 +507,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
+    -200,
     400,
-    475
+    450
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
+    -130,
     105
    ],
    "spread": [
@@ -523,7 +523,7 @@
     ],
     [
      "+1.5",
-     -150
+     -155
     ]
    ]
   }
