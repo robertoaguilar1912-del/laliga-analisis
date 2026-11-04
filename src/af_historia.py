@@ -11,7 +11,9 @@ prueba) y tener los minutos de cada jugador para el ajuste por alineaciones.
                        'g': [goles local, visita], 'ht': [medio tiempo],
                        'x': {'h': {...}, 'a': {...}} (xg, sog remates a puerta, sh remates, sib remates en el área,
                              co córners, pos posesión, yc/rc tarjetas, fo faltas; {} si API-Football no tiene estadísticas),
-                       'j': {'h': [[id jugador, minutos, titular 1/0], ...], 'a': [...]} (solo las 2 últimas temporadas)}}}
+                       'j': {'h': [[id jugador, minutos, titular 1/0, nota de API-Football, posición G/D/M/F], ...],
+                             'a': [...]} (la corrida diaria: las 2 últimas temporadas; con --jugadores, 5 temporadas.
+                             Las filas bajadas antes del 4 nov 2026 tienen solo los 3 primeros datos)}}}
 - Se reanuda solo: en cada corrida pide únicamente los partidos terminados que faltan, del más nuevo al más viejo. Si en una
   temporada vieja los primeros 40 partidos no traen xG, se marca 'sin_xg' y no se gasta más en ella.
 - Cada corrida tiene un tope de consultas y deja una reserva de la cuota del día para la página (RESERVA).
@@ -170,7 +172,8 @@ def detalle(ids, d, con_jugadores):
             if not s:
                 continue
             x[s] = {STATS[e['type']]: _num(e.get('value')) for e in t.get('statistics') or [] if e.get('type') in STATS}
-        m['x'] = x
+        if x or not m.get('x'):             # al volver a pedir un partido viejo no se borra lo que ya estaba
+            m['x'] = x
         if con_jugadores:
             jj = {}
             for t in f.get('players') or []:
@@ -185,9 +188,11 @@ def detalle(ids, d, con_jugadores):
                     if pl.get('id') is None:
                         continue
                     d['jugadores'][str(pl['id'])] = pl.get('name')
-                    filas.append([pl['id'], int(mins), 0 if g.get('substitute') else 1])
+                    filas.append([pl['id'], int(mins), 0 if g.get('substitute') else 1, _num(g.get('rating')),
+                                  (g.get('position') or '')[:1]])
                 jj[s] = filas
-            m['j'] = jj
+            if jj or not m.get('j'):
+                m['j'] = jj
     return True
 
 
@@ -259,6 +264,55 @@ def bajar(max_consultas=3000, ligas=None, atras=ATRAS, guardar_resumen=True):
         _guardar(DIR / 'resumen.json', {'fecha': ahora.isoformat(timespec='minutes'), 'consultas': CONSULTAS[0], 'ligas': resumen})
 
 
+def jugadores(max_consultas=3000, ligas=None, atras=ATRAS):
+    """Minutos, nota y posición de cada jugador en las temporadas viejas (para el modelo por jugadores, nov 2026): vuelve a pedir
+    los partidos terminados que no tienen jugadores o que los tienen sin nota. Si en una temporada los primeros 40 no traen
+    jugadores, se marca 'sin_jugadores' y no se gasta más en ella."""
+    if not os.environ.get('API_FOOTBALL_KEY', '').strip():
+        print('  API-Football: falta la clave (secreto API_FOOTBALL_KEY)')
+        return
+    queda = cupo()
+    tope = max_consultas if queda is None else min(max_consultas, queda - RESERVA)
+    print(f'  API-Football: quedan {queda} consultas hoy; esta corrida usa hasta {tope}')
+    resumen = []
+    for liga in ligas or [x for x in ORDEN if x not in EXTRA]:
+        if not _id(liga) or liga in EXTRA:
+            continue
+        actual = _actual(liga)
+        for temporada in range(actual, actual - atras - 1, -1):
+            if CONSULTAS[0] >= tope:
+                break
+            p = DIR / liga / f'{temporada}.json'
+            d = _leer(p, None) or {'liga': liga, 'temporada': temporada, 'equipos': {}, 'jugadores': {}, 'partidos': {}, 'sin_xg': False}
+            if not d['partidos'] and not lista(liga, temporada, d):
+                resumen.append(f'{liga} {temporada}: no se pudo bajar la lista')
+                continue
+            if d.get('sin_jugadores'):
+                continue
+            pend = sorted((i for i, m in d['partidos'].items() if m.get('est') in TERMINADO and m.get('f') and
+                           ('j' not in m or any(len(r) < 5 for s in m['j'].values() for r in s))),
+                          key=lambda i: d['partidos'][i]['f'], reverse=True)
+            hechos = 0
+            for k in range(0, len(pend), 20):
+                if CONSULTAS[0] >= tope:
+                    break
+                if detalle(pend[k:k + 20], d, True):
+                    hechos += len(pend[k:k + 20])
+                if k // 20 % 10 == 9:
+                    _guardar(p, d)
+                if k == 20 and not any(d['partidos'][i].get('j') for i in pend[:40]):
+                    d['sin_jugadores'] = True
+                    break
+            _guardar(p, d)
+            ps = [m for m in d['partidos'].values() if m.get('est') in TERMINADO]
+            con = sum(1 for m in ps if m.get('j'))
+            resumen.append(f'{liga} {temporada}: {len(ps)} jugados, {con} con jugadores, {hechos} pedidos ahora'
+                           + (' (sin jugadores en API-Football)' if d.get('sin_jugadores') else '')
+                           + (f', faltan {len(pend) - hechos}' if len(pend) > hechos and not d.get('sin_jugadores') else ''))
+    print('\n'.join('  ' + r for r in resumen))
+    print(f'  API-Football: {CONSULTAS[0]} consultas en esta corrida')
+
+
 # ligas con lesiones en API-Football (revisión del 1 nov 2026: no hay en Portugal, Segunda, Liga MX, Argentina ni Colombia)
 CON_LESIONES = ['premier', 'laliga', 'seriea', 'bundesliga', 'ligue1', 'championship', 'mls', 'brasil', 'suecia']
 
@@ -292,9 +346,12 @@ if __name__ == '__main__':
     ap.add_argument('--atras', type=int, default=ATRAS)
     ap.add_argument('--lesiones', action='store_true', help='solo las lesiones de cada partido (2 temporadas)')
     ap.add_argument('--extras', action='store_true', help='solo las ligas sin página de los equipos de copa (EXTRA)')
+    ap.add_argument('--jugadores', action='store_true', help='minutos, nota y posición de los jugadores en 5 temporadas')
     a = ap.parse_args()
     ligas = [x for x in a.ligas.split(',') if x] or (list(EXTRA) if a.extras else None)
-    if a.lesiones:
+    if a.jugadores:
+        jugadores(a.max, ligas, a.atras)
+    elif a.lesiones:
         lesiones(ligas)
     else:
         bajar(a.max, ligas, a.atras)

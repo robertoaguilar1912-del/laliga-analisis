@@ -17,6 +17,9 @@ on:
       extras:
         description: 'si = solo las ligas sin página de los equipos de copa'
         default: 'no'
+      jugadores:
+        description: 'si = minutos, nota y posición de los jugadores en 5 temporadas (modelo por jugadores)'
+        default: 'no'
 
 permissions:
   contents: write
@@ -38,7 +41,7 @@ jobs:
       - name: Bajar xG, estadísticas y minutos (la clave no se imprime)
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: cd src && python af_historia.py --max "${{ github.event.inputs.max || '3000' }}" --ligas "${{ github.event.inputs.ligas || '' }}" ${{ github.event.inputs.lesiones == 'si' && '--lesiones' || '' }} ${{ github.event.inputs.extras == 'si' && '--extras' || '' }}
+        run: cd src && python af_historia.py --max "${{ github.event.inputs.max || '3000' }}" --ligas "${{ github.event.inputs.ligas || '' }}" ${{ github.event.inputs.lesiones == 'si' && '--lesiones' || '' }} ${{ github.event.inputs.extras == 'si' && '--extras' || '' }} ${{ github.event.inputs.jugadores == 'si' && '--jugadores' || '' }}
       - name: Guardar
         if: always()
         run: |

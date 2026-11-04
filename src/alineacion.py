@@ -83,7 +83,7 @@ def _cargar():
                 continue
             for s, eq in (('h', m['h']), ('a', m['a'])):
                 if j.get(s):
-                    h.setdefault(eq, {})[str(i)] = (_t(m['f']), {pid: mins for pid, mins, _ in j[s]})
+                    h.setdefault(eq, {})[str(i)] = (_t(m['f']), {r[0]: r[1] for r in j[s]})
     _HIST = {eq: sorted(v.values(), key=lambda x: x[0]) for eq, v in h.items()}
     _NOMBRES, _FIX = nombres, fix
 
