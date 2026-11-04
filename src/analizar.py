@@ -26,7 +26,7 @@ from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
 import xg
 import alineacion
-from alineacion import peso_rotacion
+from alineacion import peso_rotacion, peso_once
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -579,7 +579,13 @@ def ajustar_bajas(p):
         return
     neto = (B['local']['peso'] - B['visita']['peso']) if B else 0.0
     rot = A['neto'] if A else 0.0              # once confirmado: titulares habituales que el técnico dejó afuera (alineacion.py)
-    mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
+    WO = peso_once(p.get('liga')) if A and 'neto_total' in A else None
+    if WO:
+        # ligas con el once confirmado (alineacion.ONCE, prueba del 4 nov 2026): todos los titulares habituales que no salen
+        # (de baja o dejados afuera) y, en América, la nota de los que entran; reemplaza a las bajas de FotMob
+        mov = WO['rot'] * A['neto_total'] - WO['nota'] * A.get('neto_nota', 0.0)
+    else:
+        mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
     if abs(mov) < 0.001:
         return
     M0 = np.array(d['goles'], dtype=float)
@@ -631,10 +637,12 @@ def ajustar_bajas(p):
             x['p'] = float(x['p'] + M1.ravel()[dc == x['m']].sum() - M0.ravel()[dc == x['m']].sum())
     d['goles'] = [[round(float(x), 5) for x in fila] for fila in M1]
     p['bajas_ajuste'] = {'neto': round(neto, 3), 'rotacion': round(rot, 3), 'local': round(dr['1'], 4), 'visita': round(dr['2'], 4)}
+    if WO:
+        p['bajas_ajuste'].update({'once': True, 'rot_total': A['neto_total'], 'nota': A.get('neto_nota')})
     quien = [(p['local_es'], dr['1']), (p['visita_es'], dr['2'])]
     eq, dv = min(quien, key=lambda x: x[1])
     if dv <= -0.005:
-        por = ' y '.join(x for x, v in (('las bajas (FotMob)', abs(neto) >= 0.005), ('los titulares que quedaron afuera del once', abs(rot) >= 0.005)) if v)
+        por = 'el once confirmado' if WO else ' y '.join(x for x, v in (('las bajas (FotMob)', abs(neto) >= 0.005), ('los titulares que quedaron afuera del once', abs(rot) >= 0.005)) if v)
         p['texto'] = (p.get('texto') or '') + (f" Con {por or 'las bajas'} el modelo le quita {abs(dv) * 100:.1f} puntos a {eq}"
                                                f" ({'local' if eq == p['local_es'] else 'visita'} {p['pH']:.0%} / empate {p['pD']:.0%} / visita {p['pA']:.0%}).")
 
