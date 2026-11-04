@@ -1,7 +1,7 @@
 {
 "401884739": {
 "fotmob": 5881218,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -42,20 +42,20 @@
 "importante": true
 },
 {
-"nombre": "Yussuf Poulsen",
-"tipo": "Lesión",
-"regreso": "unas semanas",
-"duda": false,
-"valor": 849909.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Mario Vušković",
 "tipo": "Sanción",
 "regreso": "hasta el 6 de noviembre",
 "duda": false,
 "valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Yussuf Poulsen",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 849909.0,
 "titular": false,
 "importante": false
 }
@@ -155,8 +155,8 @@
 },
 "401884745": {
 "fotmob": 5881215,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -165,6 +165,15 @@
 "regreso": "finales de mayo de 2027",
 "duda": false,
 "valor": 24212890.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Marcel Sabitzer",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 2388134.0,
 "titular": false,
 "importante": false
 },
@@ -228,8 +237,8 @@
 },
 "401884740": {
 "fotmob": 5881220,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -238,17 +247,8 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 2722185.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Phillipp Mwene",
-"tipo": "Sanción",
-"regreso": "hasta el 7 de noviembre",
-"duda": false,
-"valor": 971659.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Otto Ruoppi",
@@ -276,10 +276,19 @@
 "valor": 1346596.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Phillipp Mwene",
+"tipo": "Sanción",
+"regreso": "hasta el 7 de noviembre",
+"duda": false,
+"valor": 971659.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 102981546.0,
-"perdida": 0.03586898957605472,
+"valor_xi": 100180014.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -330,15 +339,15 @@
 "importante": false
 }
 ],
-"valor_xi": 583042683.0,
-"perdida": 0.38395185211508776,
+"valor_xi": 643628753.0,
+"perdida": 0.34780969146665824,
 "perdida_duda": 0.0
 }
 },
 "401884744": {
 "fotmob": 5881222,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -455,8 +464,8 @@
 },
 "401884737": {
 "fotmob": 5881221,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -503,9 +512,18 @@
 "valor": 368352.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Sven Michel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 343160.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 21400643.0,
+"valor_xi": 24134430.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -528,7 +546,7 @@
 },
 "401884743": {
 "fotmob": 5881223,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -682,7 +700,7 @@
 },
 "401884738": {
 "fotmob": 5881216,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -766,20 +784,20 @@
 "importante": true
 },
 {
+"nombre": "Eliesse Ben Seghir",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 27308348.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Christian Kofane",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 47368368.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Eliesse Ben Seghir",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 27308348.0,
 "titular": false,
 "importante": true
 },
@@ -821,13 +839,13 @@
 }
 ],
 "valor_xi": 313231874.0,
-"perdida": 0.20044102536001812,
-"perdida_duda": 0.23840714243531932
+"perdida": 0.28762355774814924,
+"perdida_duda": 0.15122461004718823
 }
 },
 "401884741": {
 "fotmob": 5881217,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -839,6 +857,15 @@
 "valor": 14467905.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Patrick Osterhage",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 6248399.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Florent Muslija",
@@ -909,7 +936,7 @@
 },
 "401884742": {
 "fotmob": 5881219,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -929,6 +956,15 @@
 "duda": false,
 "valor": 26236572.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Adam Hložek",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 12811239.0,
+"titular": true,
 "importante": true
 },
 {
@@ -970,15 +1006,15 @@
 {
 "nombre": "Vladimír Coufal",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "una semana",
+"duda": false,
 "valor": 1937847.0,
 "titular": false,
 "importante": false
 }
 ],
 "valor_xi": 163746921.0,
-"perdida": 0.3261954525544941,
+"perdida": 0.4044334977144395,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -998,6 +1034,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 14641181.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Junior Dina Ebimbe",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2773284.0,
 "titular": false,
 "importante": true
 },
@@ -1058,7 +1103,7 @@
 ],
 "valor_xi": 36444374.0,
 "perdida": 0.12466448182098011,
-"perdida_duda": 0.470510866780151
+"perdida_duda": 0.5466072211859092
 }
 }
 }

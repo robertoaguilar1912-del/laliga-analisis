@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
+    -170,
     310,
-    360
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -180,
     125
    ],
    "spread": [
     [
      "-0.5",
-     -170
+     -185
     ],
     [
      "+0.5",
-     115
+     125
     ]
    ]
   }
@@ -55,23 +55,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    175,
     220,
-    150
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -150
+    105,
+    -145
    ],
    "spread": [
     [
      "+0.5",
-     -215
+     -210
     ],
     [
      "-0.5",
-     135
+     140
     ]
    ]
   }
@@ -89,12 +89,12 @@
    "casa": "DraftKings",
    "ml": [
     -200,
-    360,
+    370,
     425
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    105,
     -145
    ],
    "spread": [
@@ -121,23 +121,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    240,
-    230
+    100,
+    250,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -125
+    -120
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
-     -145
+     -135
     ]
    ]
   }
@@ -148,16 +148,10 @@
   "estadio": "Nuevo Estadio de Los Cármenes",
   "local_espn": "Granada",
   "visita_espn": "Tenerife",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_POSTPONED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
-  }
+  "momios": null
  },
  {
   "id": "401883122",
@@ -165,32 +159,10 @@
   "estadio": "Estadi de la FAF d'Encamp",
   "local_espn": "FC Andorra",
   "visita_espn": "Mallorca",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_POSTPONED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    195,
-    235,
-    125
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -120,
-    -125
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -175
-    ],
-    [
-     "-0.5",
-     110
-    ]
-   ]
-  }
+  "momios": null
  },
  {
   "id": "401883119",
@@ -205,13 +177,13 @@
    "casa": "DraftKings",
    "ml": [
     100,
-    255,
-    230
+    245,
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    100
+    -140,
+    -105
    ],
    "spread": [
     [

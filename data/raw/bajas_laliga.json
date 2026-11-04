@@ -1,7 +1,7 @@
 {
 "401882809": {
 "fotmob": 5868128,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -74,8 +74,8 @@
 },
 "401882812": {
 "fotmob": 5868125,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -154,18 +154,18 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1032040.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 66987659.0,
-"perdida": 0.12733852962379236,
+"valor_xi": 67451101.0,
+"perdida": 0.1111630483244447,
 "perdida_duda": 0.0
 }
 },
 "401882813": {
 "fotmob": 5868124,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -265,8 +265,8 @@
 },
 "401882811": {
 "fotmob": 5868126,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -313,15 +313,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Maroan Sannadi",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 2378651.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Oihan Sancet",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -336,6 +327,15 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 4345161.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Maroan Sannadi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 2378651.0,
 "titular": false,
 "importante": false
 },
@@ -358,15 +358,15 @@
 "importante": false
 }
 ],
-"valor_xi": 150894023.0,
-"perdida": 0.015763719150095164,
-"perdida_duda": 0.16659847421524443
+"valor_xi": 150043888.0,
+"perdida": 0.0,
+"perdida_duda": 0.16754240599257197
 }
 },
 "401882808": {
 "fotmob": 5868129,
-"visto": "2026-11-04T11:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-04T23:44+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -397,15 +397,6 @@
 "importante": true
 },
 {
-"nombre": "Luis Rioja",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1038496.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Sergi Canós",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -426,7 +417,7 @@
 ],
 "valor_xi": 70568914.0,
 "perdida": 0.22547699968855975,
-"perdida_duda": 0.08157997160052655
+"perdida_duda": 0.0668639168798885
 },
 "visita": {
 "faltan": [
@@ -437,24 +428,6 @@
 "duda": false,
 "valor": 99728385.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Arda Güler",
-"tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
-"valor": 97531874.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Aurélien Tchouaméni",
-"tipo": "Lesión",
-"regreso": "unos días",
-"duda": false,
-"valor": 59724229.0,
-"titular": true,
 "importante": true
 },
 {
@@ -486,13 +459,13 @@
 }
 ],
 "valor_xi": 782574643.0,
-"perdida": 0.3283833565253915,
+"perdida": 0.12743625913777532,
 "perdida_duda": 0.0
 }
 },
 "401882814": {
 "fotmob": 5868123,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -513,11 +486,20 @@
 "valor": 1294438.0,
 "titular": true,
 "importante": true
+},
+{
+"nombre": "Gonzalo Villar",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1287876.0,
+"titular": true,
+"importante": true
 }
 ],
 "valor_xi": 22615113.0,
 "perdida": 0.15157585106915009,
-"perdida_duda": 0.0
+"perdida_duda": 0.05694758191126438
 },
 "visita": {
 "faltan": [
@@ -565,7 +547,7 @@
 },
 "401882810": {
 "fotmob": 5868127,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -575,6 +557,24 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 706883.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Arsen Zakharyan",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 10433744.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Luken Beitia",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 923691.0,
 "titular": false,
 "importante": false
 }
@@ -638,7 +638,7 @@
 },
 "401882815": {
 "fotmob": 5868122,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -729,7 +729,7 @@
 },
 "401882807": {
 "fotmob": 5868130,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -820,7 +820,7 @@
 },
 "401882816": {
 "fotmob": 5868121,
-"visto": "2026-11-04T11:56+00:00",
+"visto": "2026-11-04T23:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -836,16 +836,16 @@
 {
 "nombre": "Cristian Romero",
 "tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
+"regreso": "finales de noviembre",
+"duda": false,
 "valor": 40445981.0,
 "titular": false,
 "importante": true
 }
 ],
 "valor_xi": 438279411.0,
-"perdida": 0.16455128210437428,
-"perdida_duda": 0.0922835524208551
+"perdida": 0.25683483452522937,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -870,8 +870,8 @@
 {
 "nombre": "Rodri",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de noviembre",
+"duda": false,
 "valor": 53364886.0,
 "titular": true,
 "importante": true
@@ -914,8 +914,8 @@
 }
 ],
 "valor_xi": 834571235.0,
-"perdida": 0.13285666741197952,
-"perdida_duda": 0.06394287720688097
+"perdida": 0.19679954461886048,
+"perdida_duda": 0.0
 }
 }
 }

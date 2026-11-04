@@ -154,7 +154,7 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Flamengo",
   "visita_espn": "Grêmio",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    320,
-    450
+    -170,
+    310,
+    425
    ],
    "ou_linea": 2.5,
    "ou": [
     -145,
-    110
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -195
+     -185
     ],
     [
      "+0.5",
-     140
+     130
     ]
    ]
   }
@@ -342,23 +342,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    155,
     205,
-    180
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
-    145,
-    -195
+    140,
+    -190
    ],
    "spread": [
     [
      "-0.5",
-     155
+     145
     ],
     [
      "+0.5",
-     -220
+     -205
+    ]
+   ]
+  },
+  "alineaciones": {
+   "São Paulo": [
+    [
+     "199013",
+     "Rafael",
+     "G"
+    ],
+    [
+     "201531",
+     "Robert Arboleda",
+     "CD"
+    ],
+    [
+     "196855",
+     "Rafael Tolói",
+     "CD-L"
+    ],
+    [
+     "357362",
+     "Newton",
+     "CD-R"
+    ],
+    [
+     "402686",
+     "Djhordney Ferreira",
+     "CM-L"
+    ],
+    [
+     "301516",
+     "Damián Bobadilla",
+     "CM-R"
+    ],
+    [
+     "252800",
+     "Iago",
+     "LM"
+    ],
+    [
+     "376489",
+     "Pedro Lima",
+     "RM"
+    ],
+    [
+     "190483",
+     "Luciano",
+     "F"
+    ],
+    [
+     "130711",
+     "Lucas Moura",
+     "CF-L"
+    ],
+    [
+     "236596",
+     "Artur",
+     "CF-R"
+    ]
+   ],
+   "Corinthians": [
+    [
+     "257051",
+     "Hugo Souza",
+     "G"
+    ],
+    [
+     "168981",
+     "Gustavo Henrique",
+     "D"
+    ],
+    [
+     "195756",
+     "Fabrizio Angileri",
+     "D"
+    ],
+    [
+     "359849",
+     "Pedro Milans",
+     "D"
+    ],
+    [
+     "194090",
+     "André Ramalho",
+     "D"
+    ],
+    [
+     "338898",
+     "Breno Bidon",
+     "M"
+    ],
+    [
+     "270562",
+     "Rodrigo Garro",
+     "M"
+    ],
+    [
+     "347456",
+     "Kaio",
+     "M"
+    ],
+    [
+     "409662",
+     "André",
+     "M"
+    ],
+    [
+     "287774",
+     "Matheus Bidu",
+     "M"
+    ],
+    [
+     "266666",
+     "Yuri Alberto",
+     "F"
     ]
    ]
   }
