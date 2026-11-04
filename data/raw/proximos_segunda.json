@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
+    -155,
     310,
-    370
+    360
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -175,
     125
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -170
     ],
     [
      "+0.5",
-     120
+     115
     ]
    ]
   }
@@ -324,6 +324,61 @@
   "estadio": "Estadio Municipal de Butarque",
   "local_espn": "Leganés",
   "visita_espn": "Burgos",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883114",
+  "utc": "2026-11-14T13:00Z",
+  "estadio": "Estadio José Zorrilla",
+  "local_espn": "Real Valladolid",
+  "visita_espn": "Castellón",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883134",
+  "utc": "2026-11-14T15:15Z",
+  "estadio": "Instalaciones de Zubieta",
+  "local_espn": "Real Sociedad II",
+  "visita_espn": "Sporting Gijón",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883118",
+  "utc": "2026-11-14T17:30Z",
+  "estadio": "Power Horse Stadium",
+  "local_espn": "Almería",
+  "visita_espn": "FC Andorra",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883135",
+  "utc": "2026-11-14T17:30Z",
+  "estadio": "Estadi Mallorca Son Moix",
+  "local_espn": "Mallorca",
+  "visita_espn": "Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883115",
+  "utc": "2026-11-14T20:00Z",
+  "estadio": "Estadio Carlos Tartiere",
+  "local_espn": "Real Oviedo",
+  "visita_espn": "Girona",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

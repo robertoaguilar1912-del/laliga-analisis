@@ -12,22 +12,22 @@
    "casa": "DraftKings",
    "ml": [
     -140,
-    280,
-    330
+    285,
+    340
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    100
+    -145,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -150
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
@@ -44,14 +44,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    265,
-    165
+    135,
+    270,
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
-    125
+    -180,
+    130
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "+0.5",
-     -180
+     -175
     ]
    ]
   }
@@ -292,6 +292,39 @@
     [
      "-0.5",
      100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876988",
+  "utc": "2026-11-14T23:00Z",
+  "estadio": "Estadio Corregidora",
+  "local_espn": "Querétaro",
+  "visita_espn": "Monterrey",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    220,
+    270,
+    110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     105
     ]
    ]
   }

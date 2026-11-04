@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    225,
+    155,
+    230,
     165
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -115
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -215
+     -210
     ]
    ]
   }
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    240,
+    -130,
+    250,
     330
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -145
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -140
     ],
     [
      "+0.5",
@@ -215,8 +215,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    115
+    -175,
+    120
    ],
    "spread": [
     [
@@ -225,7 +225,7 @@
     ],
     [
      "-0.5",
-     -180
+     -175
     ]
    ]
   }
@@ -328,5 +328,115 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401860432",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Estádio Raimundo Sampaio (Independência)",
+  "local_espn": "América Mineiro",
+  "visita_espn": "Avaí",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860440",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Estádio Antônio Accioly",
+  "local_espn": "Atlético Goianiense",
+  "visita_espn": "Cuiabá",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860439",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Estádio Rei Pelé",
+  "local_espn": "CRB",
+  "visita_espn": "Ceará",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860438",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Heriberto Hülse",
+  "local_espn": "Criciúma",
+  "visita_espn": "Novorizontino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860437",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Arena Castelão",
+  "local_espn": "Fortaleza",
+  "visita_espn": "Vila Nova",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860441",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Alfredo Jaconi",
+  "local_espn": "Juventude",
+  "visita_espn": "Botafogo-SP",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860435",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Estadio VGD",
+  "local_espn": "Londrina",
+  "visita_espn": "Náutico",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860434",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Moisés Lucarelli",
+  "local_espn": "Ponte Preta",
+  "visita_espn": "Operário PR",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860436",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Estádio Primeiro de Maio",
+  "local_espn": "São Bernardo",
+  "visita_espn": "Athletic",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401860433",
+  "utc": "2026-11-14T19:30Z",
+  "estadio": "Ilha do Retiro",
+  "local_espn": "Sport",
+  "visita_espn": "Goiás",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
  }
 ]

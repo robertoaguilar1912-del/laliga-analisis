@@ -1,7 +1,7 @@
 {
 "401915551": {
 "fotmob": 6112306,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -12,6 +12,24 @@
 "duda": false,
 "valor": 42481670.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Abdelhamid Aït Boudlal",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 21561524.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Valentin Rongier",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5633308.0,
+"titular": true,
 "importante": true
 },
 {
@@ -26,7 +44,7 @@
 ],
 "valor_xi": 115269964.0,
 "perdida": 0.3685406720522616,
-"perdida_duda": 0.0
+"perdida_duda": 0.23592296775593682
 },
 "visita": {
 "faltan": [
@@ -56,7 +74,7 @@
 },
 "401915534": {
 "fotmob": 6112255,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -147,7 +165,7 @@
 },
 "401915538": {
 "fotmob": 6112311,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -265,7 +283,7 @@
 },
 "401915526": {
 "fotmob": 6112325,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -374,7 +392,7 @@
 },
 "401915536": {
 "fotmob": 6112380,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -420,7 +438,7 @@
 },
 "401915527": {
 "fotmob": 6112375,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -475,7 +493,7 @@
 },
 "401915535": {
 "fotmob": 6112368,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -548,28 +566,10 @@
 },
 "401915537": {
 "fotmob": 6112270,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Arsen Zakharyan",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 10433744.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Luken Beitia",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 923691.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Álvaro Odriozola",
 "tipo": "Lesión",
@@ -639,7 +639,7 @@
 },
 "401915528": {
 "fotmob": 6112304,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -757,7 +757,7 @@
 },
 "401915529": {
 "fotmob": 6112262,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -884,7 +884,7 @@
 },
 "401915533": {
 "fotmob": 6112242,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -984,7 +984,7 @@
 },
 "401915525": {
 "fotmob": 6112248,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1075,10 +1075,19 @@
 },
 "401915531": {
 "fotmob": 6112347,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Miguel Román",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 16247709.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Jones El-Abdellaoui",
 "tipo": "Lesión",
@@ -1095,15 +1104,6 @@
 "duda": false,
 "valor": 2296541.0,
 "titular": true,
-"importante": true
-},
-{
-"nombre": "Miguel Román",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 16247709.0,
-"titular": false,
 "importante": true
 },
 {
@@ -1135,8 +1135,8 @@
 }
 ],
 "valor_xi": 76886025.0,
-"perdida": 0.16934519634745065,
-"perdida_duda": 0.21132200552701222
+"perdida": 0.3806672018744629,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -1193,7 +1193,7 @@
 },
 "401915522": {
 "fotmob": 6112301,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1257,7 +1257,7 @@
 },
 "401915532": {
 "fotmob": 6112365,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1375,7 +1375,7 @@
 },
 "401915524": {
 "fotmob": 6112316,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1466,7 +1466,7 @@
 },
 "401915523": {
 "fotmob": 6112331,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1548,7 +1548,7 @@
 },
 "401915530": {
 "fotmob": 6112361,
-"visto": "2026-11-03T19:37+00:00",
+"visto": "2026-11-04T02:49+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
