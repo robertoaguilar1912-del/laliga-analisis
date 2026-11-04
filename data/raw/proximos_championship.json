@@ -5,7 +5,7 @@
   "estadio": "Cardiff City Stadium",
   "local_espn": "Cardiff City",
   "visita_espn": "West Ham United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -149,169 +149,20 @@
   }
  },
  {
-  "id": "401880173",
-  "utc": "2026-11-04T19:45Z",
-  "estadio": "STōK Cae Ras",
-  "local_espn": "Wrexham",
-  "visita_espn": "Middlesbrough",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    330,
-    280,
-    -125
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -120,
-    -105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     100
-    ],
-    [
-     "-0.5",
-     -135
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Wrexham": [
-    [
-     "281705",
-     "Anthony Patterson",
-     "G"
-    ],
-    [
-     "295012",
-     "Max Cleworth",
-     "D"
-    ],
-    [
-     "232291",
-     "Joe Worrall",
-     "D"
-    ],
-    [
-     "310598",
-     "Callum Doyle",
-     "D"
-    ],
-    [
-     "223590",
-     "Benjamin Whiteman",
-     "M"
-    ],
-    [
-     "269288",
-     "Lewis O'Brien",
-     "M"
-    ],
-    [
-     "301285",
-     "George Thomason",
-     "M"
-    ],
-    [
-     "294427",
-     "Issa Kaboré",
-     "M"
-    ],
-    [
-     "234449",
-     "George Dobson",
-     "M"
-    ],
-    [
-     "333218",
-     "Jacques Ekomie",
-     "M"
-    ],
-    [
-     "189605",
-     "Kieffer Moore",
-     "F"
-    ]
-   ],
-   "Middlesbrough": [
-    [
-     "325556",
-     "Radek Vítek",
-     "G"
-    ],
-    [
-     "273628",
-     "Ashley Phillips",
-     "D"
-    ],
-    [
-     "136380",
-     "Luke Ayling",
-     "D"
-    ],
-    [
-     "312130",
-     "Adilson Malanda",
-     "D"
-    ],
-    [
-     "232311",
-     "Callum Brittain",
-     "M"
-    ],
-    [
-     "314791",
-     "Tommy Conway",
-     "M"
-    ],
-    [
-     "293826",
-     "Aidan Morris",
-     "M"
-    ],
-    [
-     "295771",
-     "Sebastian Berhalter",
-     "M"
-    ],
-    [
-     "327170",
-     "Amario Cozier-Duberry",
-     "M"
-    ],
-    [
-     "272281",
-     "Neto Borges",
-     "M"
-    ],
-    [
-     "306812",
-     "Kyle Joseph",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401880176",
   "utc": "2026-11-04T20:00Z",
   "estadio": "Ashton Gate",
   "local_espn": "Bristol City",
   "visita_espn": "Wolverhampton Wanderers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    260,
+    270,
     255,
-    105
+    100
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -321,7 +172,7 @@
    "spread": [
     [
      "+0.5",
-     -130
+     -125
     ],
     [
      "-0.5",
@@ -514,7 +365,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    120,
     -150
    ],
    "spread": [
@@ -670,11 +521,11 @@
    "spread": [
     [
      "+0.5",
-     120
+     115
     ],
     [
      "-0.5",
-     -165
+     -160
     ]
    ]
   }
@@ -707,7 +558,7 @@
     ],
     [
      "+0.5",
-     110
+     115
     ]
    ]
   }
