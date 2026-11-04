@@ -27,6 +27,7 @@ import apifootball
 import xg
 import alineacion
 from alineacion import peso_rotacion, peso_once, peso_bajas_hab
+from ancla import anclar, ANCLA_COPAS
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -173,11 +174,23 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         neu = {'neutral': True} if g.get('neutral') and getattr(modelo, 'acepta_neutral', False) else {}   # finales en cancha neutral
         lam, mu = modelo.rates(h, a, **neu)
         M = modelo.score_matrix(h, a, **neu)                # probabilidad exacta de cada marcador
+        mom = g.get('momios') or {}
+        anclado = False
+        if LIGAS[liga].get('region') and mom.get('ml'):
+            # copas internacionales: ANCLA_COPAS del modelo y el resto del mercado (ver ancla.py, prueba del 4 nov 2026)
+            imp = np.array([1 / am_to_dec(x) for x in mom['ml']])
+            linea = p_over = None
+            if mom.get('ou'):
+                d_ou = [am_to_dec(x) for x in mom['ou']]
+                linea, p_over = float(mom['ou_linea']), (1 / d_ou[0]) / (1 / d_ou[0] + 1 / d_ou[1])
+            M = anclar(M, imp / imp.sum(), linea, p_over)
+            gi_ = np.arange(M.shape[0])
+            lam, mu = float((gi_[:, None] * M).sum()), float((gi_[None, :] * M).sum())
+            anclado = True
         gi = np.arange(M.shape[0])
         dif = (gi[:, None] - gi[None, :]).ravel(); tot_ = (gi[:, None] + gi[None, :]).ravel(); pM = M.ravel()
         pH, pD, pA = float(pM[dif > 0].sum()), float(pM[dif == 0].sum()), float(pM[dif < 0].sum())
         L, V = nombre(h), nombre(a)
-        mom = g.get('momios') or {}
         con_momio, mkt = [], None
         if mom.get('ml'):
             dec = [am_to_dec(x) for x in mom['ml']]
@@ -247,6 +260,9 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     else 'Ningún mercado con momio supera +5% de valor esperado.')
         else:
             txt += '. Todavía no hay momios publicados para este partido.'
+        if anclado:
+            txt += (f" En las copas la probabilidad es {ANCLA_COPAS:.0%} lo que calcula el modelo y {1 - ANCLA_COPAS:.0%} lo que dice el"
+                    " mercado: en las copas lo que el modelo se separaba de la casa no se cumplía (prueba del 4 nov 2026).")
         previo = tuple(LIGAS[liga].get('previo_descendido', PREVIO_DESCENDIDO))
         bajaron = [nombre(t) for t in (h, a) if LIGAS[liga].get('descienden_de') and isinstance(nuevos, dict) and nuevos.get(t) == previo]
         nv = [t for t in (h, a) if t in nuevos]
@@ -590,6 +606,8 @@ def ajustar_bajas(p):
         mov = peso_bajas_hab(p.get('liga')) * p['bajas_hab']['neto'] + peso_rotacion(p.get('liga')) * rot
     else:
         mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
+    if (LIGAS.get(p.get('liga')) or {}).get('region') and p.get('mercado'):
+        mov *= ANCLA_COPAS          # copas: la probabilidad ya está anclada al mercado, que también sabe de las bajas (ancla.py)
     if abs(mov) < 0.001:
         return
     M0 = np.array(d['goles'], dtype=float)
@@ -826,7 +844,8 @@ def analizar_liga(liga):
             'n_corners': cmodel.n if cmodel else 0, 'n_remates': rmodel.n if rmodel else 0, 'fuente_fd': FUENTE_REGION.get(L.get('region')) or ('por temporada' if L.get('fd') else 'resultados y cuotas'),
             'tiempos': TIEMPOS_INFO,
             'n_espn_extra': n_espn, 'aviso': L.get('aviso'), 'cuidado': L.get('cuidado') or {},
-            'fuerza_ligas': modelo.tabla_ligas(list(equipos)) if L.get('region') else None}
+            'fuerza_ligas': modelo.tabla_ligas(list(equipos)) if L.get('region') else None,
+            'ancla_mercado': ANCLA_COPAS if L.get('region') else None}
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
            'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],

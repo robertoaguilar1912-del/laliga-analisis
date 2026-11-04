@@ -610,6 +610,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       : `En la prueba con temporadas pasadas de ${I.nombre} salió ${spct(PRINCIPAL.roi)}, ${PRINCIPAL.roi_ic95 && PRINCIPAL.roi_ic95[0] < 0 ? 'pero el rango probable incluye perder: puede ser suerte' : 'aunque lo pasado no garantiza lo que viene'} (pestaña "El modelo"). Compara siempre con el momio de tu casa.`);
   if (M.some(m => m.bajas)) $('#p-warning').textContent += M.some(m => m.bajas_hab) ? ' Las bajas (FotMob) ya están en la probabilidad del modelo: cuentan las de los titulares habituales; las de jugadores que faltan hace meses ya no restan, porque el equipo ya juega sin ellos.' : ' Las bajas (FotMob) ya están en la probabilidad del modelo, con lo que el mercado suele moverse por ellas.';
   if (M.some(m => m.alineacion)) $('#p-warning').textContent += ' Con el once confirmado cuenta el once completo: los titulares habituales que no salen (de baja o dejados afuera) y, en América, la nota de los que entran.';
+  if (I.ancla_mercado) $('#p-warning').textContent += ` En las copas la probabilidad es ${Math.round(I.ancla_mercado * 100)}% lo que calcula el modelo y ${Math.round((1 - I.ancla_mercado) * 100)}% lo que dice el mercado (DraftKings sin margen): en las copas lo que el modelo se separaba de la casa no se cumplía, así que hay muchos menos PICK.`;
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
   // ---------------- navegación
