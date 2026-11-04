@@ -344,7 +344,7 @@ if __name__ == '__main__':
     ap.add_argument('--max', type=int, default=3000)
     ap.add_argument('--ligas', default='')
     ap.add_argument('--atras', type=int, default=ATRAS)
-    ap.add_argument('--lesiones', action='store_true', help='solo las lesiones de cada partido (2 temporadas)')
+    ap.add_argument('--lesiones', action='store_true', help='solo las lesiones de cada partido (temporada actual y --atras anteriores)')
     ap.add_argument('--extras', action='store_true', help='solo las ligas sin página de los equipos de copa (EXTRA)')
     ap.add_argument('--jugadores', action='store_true', help='minutos, nota y posición de los jugadores en 5 temporadas')
     a = ap.parse_args()
@@ -352,6 +352,6 @@ if __name__ == '__main__':
     if a.jugadores:
         jugadores(a.max, ligas, a.atras)
     elif a.lesiones:
-        lesiones(ligas)
+        lesiones(ligas, a.atras)
     else:
         bajar(a.max, ligas, a.atras)

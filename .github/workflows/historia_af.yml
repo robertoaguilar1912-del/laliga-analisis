@@ -12,7 +12,7 @@ on:
         description: 'Ligas separadas por coma (vacío = todas)'
         default: ''
       lesiones:
-        description: 'si = solo las lesiones de cada partido (para la prueba de alineaciones)'
+        description: 'si = solo las lesiones de cada partido, 5 temporadas (para las pruebas de bajas)'
         default: 'no'
       extras:
         description: 'si = solo las ligas sin página de los equipos de copa'
