@@ -1,7 +1,7 @@
 {
 "401842876": {
 "fotmob": 5107654,
-"visto": "2026-11-04T05:57+00:00",
+"visto": "2026-11-04T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -47,7 +47,7 @@
 },
 "401842878": {
 "fotmob": 5107658,
-"visto": "2026-11-04T05:57+00:00",
+"visto": "2026-11-04T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -138,7 +138,7 @@
 },
 "401842881": {
 "fotmob": 5107656,
-"visto": "2026-11-04T05:57+00:00",
+"visto": "2026-11-04T06:03+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -174,25 +174,43 @@
 },
 "401842875": {
 "fotmob": 5107655,
-"visto": "2026-11-04T05:57+00:00",
-"xi": "standard",
+"visto": "2026-11-04T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Adam Bergmark Wiberg",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "August Erlingmark",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 612915.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Sam Larsson",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 511068.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Ramon-Pascal Lundqvist",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 360983.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adam Bergmark Wiberg",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 340453.0,
 "titular": false,
 "importante": false
 },
@@ -201,25 +219,7 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Ramon-Pascal Lundqvist",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Sam Larsson",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
+"valor": 296642.0,
 "titular": false,
 "importante": false
 },
@@ -228,23 +228,59 @@
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
-"valor": 0.0,
+"valor": 379881.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 7276754.0,
+"perdida": 0.08422917691047409,
+"perdida_duda": 0.07023296376378808
 },
 "visita": {
 "faltan": [
 {
+"nombre": "Kenan Busuladžić",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 1657840.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Warren Kamanzi",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1254361.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Andrej Djuric",
 "tipo": "Sanción",
-"regreso": "",
+"regreso": "hasta el 8 de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 733153.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Oscar Sjöstrand",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 1078303.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pontus Jansson",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 409594.0,
 "titular": false,
 "importante": false
 },
@@ -253,7 +289,7 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 380445.0,
 "titular": false,
 "importante": false
 },
@@ -265,97 +301,61 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Kenan Busuladžić",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Warren Kamanzi",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Oscar Sjöstrand",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Pontus Jansson",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 13539357.0,
+"perdida": 0.2692412941028145,
 "perdida_duda": 0.0
 }
 },
 "401842880": {
 "fotmob": 5107653,
-"visto": "2026-11-04T05:57+00:00",
-"xi": "standard",
+"visto": "2026-11-04T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Eskil Smidesang Edh",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Kevin Filling",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 9566829.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
-"nombre": "Adrián Helm",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
+"nombre": "Linus Carlstrand",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 2163652.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
-"nombre": "Sotirios Papagiannopoulos",
+"nombre": "Eskil Smidesang Edh",
 "tipo": "Lesión",
-"regreso": "el resto de la temporada",
+"regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 1387907.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Abdihakin Ali",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 260013.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Ibrahim Cissé",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 434790.0,
 "titular": false,
 "importante": false
 },
@@ -364,62 +364,98 @@
 "tipo": "Lesión",
 "regreso": "principios de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 401155.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adrián Helm",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 363225.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Sotirios Papagiannopoulos",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 279213.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 8521638.0,
+"perdida": 1.5699330340012096,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Filip Helander",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Filip Öhman",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 1608021.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ben Engdahl",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
-"valor": 0.0,
+"valor": 333291.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Filip Helander",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 331708.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 7154357.0,
+"perdida": 0.22476107915777757,
 "perdida_duda": 0.0
 }
 },
 "401842879": {
 "fotmob": 5107657,
-"visto": "2026-11-04T05:57+00:00",
-"xi": "standard",
+"visto": "2026-11-04T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 4595212.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Jeppe Kjær",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 1011848.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Timo Stavitski",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 260043.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Villum Dalsgaard",
 "tipo": "Lesión",
@@ -428,26 +464,17 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Timo Stavitski",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 8028443.0,
+"perdida": 0.12603290575769174,
 "perdida_duda": 0.0
 }
 },
 "401842874": {
 "fotmob": 5107659,
-"visto": "2026-11-04T05:57+00:00",
-"xi": "standard",
+"visto": "2026-11-04T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -455,12 +482,12 @@
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 222767.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 5037840.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -471,32 +498,23 @@
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
-"valor": 0.0,
+"valor": 968962.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Jesper Uneken",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 15606449.0,
+"perdida": 0.06208728199477024,
 "perdida_duda": 0.0
 }
 },
 "401842877": {
 "fotmob": 5107660,
-"visto": "2026-11-04T05:57+00:00",
-"xi": "standard",
+"visto": "2026-11-04T06:03+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 4253945.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -505,15 +523,15 @@
 {
 "nombre": "Daniel Stensson",
 "tipo": "Sanción",
-"regreso": "",
+"regreso": "hasta el 8 de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
+"valor": 382732.0,
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 34349727.0,
+"perdida": 0.011142213735788933,
 "perdida_duda": 0.0
 }
 }

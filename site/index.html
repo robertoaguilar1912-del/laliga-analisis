@@ -608,7 +608,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     : PRINCIPAL.roi < 0
       ? `En la prueba con temporadas pasadas de ${I.nombre}, seguirlos perdió dinero (${spct(PRINCIPAL.roi)}; pestaña "El modelo"). Úsalos como información y compara siempre con el momio de tu casa.`
       : `En la prueba con temporadas pasadas de ${I.nombre} salió ${spct(PRINCIPAL.roi)}, ${PRINCIPAL.roi_ic95 && PRINCIPAL.roi_ic95[0] < 0 ? 'pero el rango probable incluye perder: puede ser suerte' : 'aunque lo pasado no garantiza lo que viene'} (pestaña "El modelo"). Compara siempre con el momio de tu casa.`);
-  if (M.some(m => m.bajas)) $('#p-warning').textContent += ' Las bajas (FotMob) ya están en la probabilidad del modelo, con lo que el mercado suele moverse por ellas.';
+  if (M.some(m => m.bajas)) $('#p-warning').textContent += M.some(m => m.bajas_hab) ? ' Las bajas (FotMob) ya están en la probabilidad del modelo: cuentan las de los titulares habituales; las de jugadores que faltan hace meses ya no restan, porque el equipo ya juega sin ellos.' : ' Las bajas (FotMob) ya están en la probabilidad del modelo, con lo que el mercado suele moverse por ellas.';
   if (M.some(m => m.alineacion)) $('#p-warning').textContent += ' Con el once confirmado cuenta el once completo: los titulares habituales que no salen (de baja o dejados afuera) y, en América, la nota de los que entran.';
   $('#t-eyebrow').textContent = `Después de ${D.tabla[0].pj} jornadas`;
 
@@ -1187,7 +1187,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         .map(([n, x, af, r]) => `${esc(n)} deja afuera a ${lista(af.map(nombre => ({ nombre })))} (${pct(r)} de los minutos de su once habitual)`) : [];
       if (!partes.length && !once.length) return '';
       const aj = m.bajas_ajuste, mov = aj ? aj[l] * 100 : 0;
-      return `<br>${partes.length ? `Bajas (FotMob): ${partes.join('; ')}. ` : ''}${once.length ? `Once confirmado: ${once.join('; ')}. ` : ''}${Math.abs(mov) >= 0.05 ? `<b>El modelo ya lo cuenta: le ${mov < 0 ? 'quita' : 'suma'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>` : 'El modelo ya lo cuenta; se compensa entre los dos equipos'}${aj && aj.once ? '. Con el once confirmado cuenta a todos los titulares habituales que no salen, de baja o no (3 afuera ≈ 3-5 puntos menos)' + (aj.nota != null ? ', y la nota de los que entran' : '') + '.' : ', lo que el mercado suele moverse por las bajas (30% más del once de baja que el rival ≈ 1 punto).'}`;
+      // antes del once (alineacion.BAJAS_HAB): los de baja que no están en el once habitual no restan
+      const H = m.bajas_hab && !(aj && aj.once);
+      const noC = H ? [[eq, l, imp], [eqO, otro, impO]].map(([n, s, xs]) => [n, xs.filter(f => !(m.bajas_hab[s].cuenta || []).some(c => c.split(' ').pop() === f.nombre.split(' ').pop()))]).filter(([, xs]) => xs.length) : [];
+      const txtNoC = noC.length ? ` No restan ${noC.map(([n, xs]) => `${lista(xs)} (${esc(n)})`).join('; ')}: no están en su once habitual de los últimos ${m.bajas_hab.n} partidos; el equipo ya juega sin ellos.` : '';
+      const cuenta = Math.abs(mov) >= 0.05 ? `<b>El modelo ya lo cuenta: le ${mov < 0 ? 'quita' : 'suma'} ${Math.abs(mov).toFixed(1)} puntos a ${esc(eq)}</b>`
+        : (H && !m.bajas_hab.local.cuenta.length && !m.bajas_hab.visita.cuenta.length) ? 'El modelo no mueve la probabilidad por estas bajas' : 'El modelo ya lo cuenta; se compensa entre los dos equipos';
+      const como = aj && aj.once ? '. Con el once confirmado cuenta a todos los titulares habituales que no salen, de baja o no (3 afuera ≈ 3-5 puntos menos)' + (aj.nota != null ? ', y la nota de los que entran' : '') + '.'
+        : H ? `${Math.abs(mov) >= 0.05 ? ', contando solo a los titulares habituales de baja (cada uno ≈ 1.5 puntos)' : ''}.${txtNoC}`
+        : ', lo que el mercado suele moverse por las bajas (30% más del once de baja que el rival ≈ 1 punto).';
+      return `<br>${partes.length ? `Bajas (FotMob): ${partes.join('; ')}. ` : ''}${once.length ? `Once confirmado: ${once.join('; ')}. ` : ''}${cuenta}${como}`;
     };
     const calc = () => {
       const o = elegido();
