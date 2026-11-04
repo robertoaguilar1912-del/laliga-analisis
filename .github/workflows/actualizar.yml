@@ -18,6 +18,7 @@ permissions:
   pages: write
   id-token: write
   actions: write
+  deployments: read
 
 concurrency:
   group: actualizar
@@ -90,6 +91,21 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # Las corridas van de una en una (concurrency), así que una publicación que sigue "en curso" al empezar esta quedó
+      # trabada en GitHub Pages y bloquea todas las siguientes (pasó el 4 nov 2026: 18:36-19:30 UTC sin publicar, con los
+      # onces de la Champions ya bajados). Se cancela antes de publicar.
+      - name: Cancelar publicación trabada
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for sha in $(gh api "repos/${{ github.repository }}/deployments?environment=github-pages&per_page=6" --jq '.[].sha' 2>/dev/null); do
+            st=$(gh api "repos/${{ github.repository }}/pages/deployments/$sha" --jq .status 2>/dev/null || true)
+            case "$st" in
+              deployment_queued|deployment_in_progress|syncing_files|finished_file_sync|updating_pages)
+                echo "Publicación $sha trabada ($st): se cancela"
+                gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" || true ;;
+            esac
+          done
       - id: deploy
         uses: actions/deploy-pages@v4
 
