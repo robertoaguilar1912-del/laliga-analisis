@@ -5,7 +5,7 @@
   "estadio": "OPAP Arena",
   "local_espn": "AEK Athens",
   "visita_espn": "Real Madrid",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Şükrü Saracoğlu Stadium",
   "local_espn": "Fenerbahce",
   "visita_espn": "Liverpool",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -309,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
-    320,
-    350
+    -155,
+    330,
+    380
    ],
    "ou_linea": 3.5,
    "ou": [
     130,
-    -165
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -170
     ],
     [
      "+0.5",
-     110
+     120
     ]
    ]
   }
@@ -349,7 +349,7 @@
    "ou_linea": 2.5,
    "ou": [
     -120,
-    100
+    -105
    ],
    "spread": [
     [
@@ -375,23 +375,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    285,
+    270,
     290,
-    -115
+    -110
    ],
    "ou_linea": 2.5,
    "ou": [
     -170,
-    140
+    135
    ],
    "spread": [
     [
      "+0.5",
-     -110
+     -115
     ],
     [
      "-0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -414,7 +414,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
+    -120,
     -105
    ],
    "spread": [
@@ -441,23 +441,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    400,
-    370,
-    -170
+    425,
+    380,
+    -190
    ],
    "ou_linea": 3.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
-     "+0.5",
-     130
+     "+1.5",
+     -175
     ],
     [
-     "-0.5",
-     -180
+     "-1.5",
+     125
     ]
    ]
   }
@@ -474,23 +474,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1300,
+    1200,
     500,
-    -425
+    -400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -140,
     110
    ],
    "spread": [
     [
      "+1.5",
-     100
+     -105
     ],
     [
      "-1.5",
-     -140
+     -135
     ]
    ]
   }
@@ -513,13 +513,13 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    105
+    -120,
+    -105
    ],
    "spread": [
     [
      "-1.5",
-     110
+     115
     ],
     [
      "+1.5",
