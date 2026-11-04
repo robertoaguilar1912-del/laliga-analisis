@@ -12,18 +12,18 @@
    "casa": "DraftKings",
    "ml": [
     190,
-    220,
-    125
+    225,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -130
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -175
     ],
     [
      "-0.5",
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    230,
-    300
+    -115,
+    225,
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -140
+    -145
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -120
     ],
     [
      "+0.5",
-     -115
+     -120
     ]
    ]
   }
@@ -74,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    220,
+    160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -210
+    ]
+   ]
+  }
  },
  {
   "id": "401877916",
@@ -122,22 +144,22 @@
    "casa": "DraftKings",
    "ml": [
     -140,
-    255,
-    310
+    245,
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -120
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -150
     ],
     [
      "+0.5",
-     -105
+     100
     ]
    ]
   }
@@ -151,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -750,
+    600,
+    1100
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -115,
+    -130
+   ],
+   "spread": [
+    [
+     "-2.5",
+     105
+    ],
+    [
+     "+2.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "401877908",
@@ -294,7 +338,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    215,
+    255,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401878070",

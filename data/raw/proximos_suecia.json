@@ -107,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-allsvenskan",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    550,
+    400,
+    -275
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -180
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -140
+    ],
+    [
+     "-1.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401842875",
@@ -187,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    245,
-    155
+    140,
+    240,
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -199,11 +221,11 @@
    "spread": [
     [
      "-0.5",
-     135
+     125
     ],
     [
      "+0.5",
-     -210
+     -195
     ]
    ]
   }
@@ -217,6 +239,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-allsvenskan",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    185,
+    245,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -175
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  }
 ]
