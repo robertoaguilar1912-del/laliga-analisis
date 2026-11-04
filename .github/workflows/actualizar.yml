@@ -128,4 +128,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           sleep 180
+          # si ya hay una corrida esperando (otra rápida o la completa) no se lanza otra: GitHub cancelaría la que espera
+          # (pasó el 4 nov 2026 con una completa lanzada a mano) y la que espera ya baja las alineaciones
+          n=0
+          for st in pending queued waiting requested; do
+            n=$((n + $(gh api "repos/${{ github.repository }}/actions/workflows/actualizar.yml/runs?status=$st&per_page=5" --jq '.total_count' 2>/dev/null || echo 0)))
+          done
+          if [ "$n" -gt 0 ]; then echo "Ya hay $n corrida(s) esperando: no se lanza otra"; exit 0; fi
           gh workflow run actualizar.yml --ref main -f modo=rapido
