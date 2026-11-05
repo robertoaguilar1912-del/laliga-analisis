@@ -5,7 +5,7 @@
   "estadio": "San Siro",
   "local_espn": "AC Milan",
   "visita_espn": "Ferencvaros",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Vasil Levski National Stadium",
   "local_espn": "Levski Sofia",
   "visita_espn": "Jagiellonia Bialystok",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "Reale Arena",
   "local_espn": "Real Sociedad",
   "visita_espn": "Lyon",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1048,7 +1048,7 @@
   "estadio": "Generali Arena",
   "local_espn": "Sparta Prague",
   "visita_espn": "AFC Bournemouth",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1209,7 +1209,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -130,
     105
    ],
    "spread": [
@@ -1236,9 +1236,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
-    500,
-    700
+    -285,
+    475,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1248,11 +1248,11 @@
    "spread": [
     [
      "-1.5",
-     -130
+     -120
     ],
     [
      "+1.5",
-     -105
+     -115
     ]
    ]
   }
@@ -1269,23 +1269,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -650,
-    800,
-    1400
+    -575,
+    700,
+    1300
    ],
    "ou_linea": 3.5,
    "ou": [
     -160,
-    130
+    125
    ],
    "spread": [
     [
      "-2.5",
-     -110
+     100
     ],
     [
      "+2.5",
-     -125
+     -140
     ]
    ]
   }
@@ -1335,23 +1335,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
-    295,
-    120
+    180,
+    290,
+    130
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
+    110,
     -140
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -165
     ],
     [
      "-0.5",
-     110
+     120
     ]
    ]
   }
@@ -1446,11 +1446,11 @@
    "spread": [
     [
      "-1.5",
-     135
+     140
     ],
     [
      "+1.5",
-     -190
+     -200
     ]
    ]
   }

@@ -5,7 +5,7 @@
   "estadio": "Cepheus Park Randers",
   "local_espn": "AGF",
   "visita_espn": "Braga",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "New Balance Arena",
   "local_espn": "Atalanta",
   "visita_espn": "Kairat Almaty",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -585,7 +585,7 @@
   "estadio": "Tammelan Stadion",
   "local_espn": "KuPS Kuopio",
   "visita_espn": "KAA Gent",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -734,7 +734,7 @@
   "estadio": "Europa Point Stadium",
   "local_espn": "Lincoln Red Imps",
   "visita_espn": "Hajduk Split",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1032,7 +1032,7 @@
   "estadio": "Rajko Mitic Stadium",
   "local_espn": "Red Star Belgrade",
   "visita_espn": "Inter D'Escaldes",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1336,23 +1336,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -235,
-    425,
-    550
+    -200,
+    390,
+    475
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -125
+    105,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     105
+     125
     ],
     [
      "+1.5",
-     -145
+     -170
     ]
    ]
   }
@@ -1402,23 +1402,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -800,
-    800,
-    2000
+    -700,
+    750,
+    1900
    ],
    "ou_linea": 3.5,
    "ou": [
     115,
-    -145
+    -150
    ],
    "spread": [
     [
      "-2.5",
-     105
+     110
     ],
     [
      "+2.5",
-     -145
+     -155
     ]
    ]
   }
@@ -1502,8 +1502,8 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    330,
-    -190
+    320,
+    -180
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1512,12 +1512,12 @@
    ],
    "spread": [
     [
-     "+1.5",
-     -205
+     "+0.5",
+     140
     ],
     [
-     "-1.5",
-     145
+     "-0.5",
+     -200
     ]
    ]
   }
