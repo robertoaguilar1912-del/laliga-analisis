@@ -5,15 +5,31 @@
   "estadio": "Allianz Parque",
   "local_espn": "Palmeiras",
   "visita_espn": "Remo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -425,
+    500,
+    1000
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    135,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -145
+    ],
+    [
+     "+1.5",
+     105
+    ]
+   ]
   },
   "alineaciones": {
    "Palmeiras": [
@@ -150,7 +166,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
+    -180,
     135
    ],
    "spread": [
