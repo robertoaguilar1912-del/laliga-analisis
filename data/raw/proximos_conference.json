@@ -436,7 +436,7 @@
   "estadio": "Stockhorn Arena",
   "local_espn": "FC Thun",
   "visita_espn": "Heart of Midlothian",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -734,7 +734,7 @@
   "estadio": "Europa Point Stadium",
   "local_espn": "Lincoln Red Imps",
   "visita_espn": "Hajduk Split",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1336,23 +1336,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    390,
+    -210,
+    400,
     475
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -130
+    100,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     125
+     115
     ],
     [
      "+1.5",
-     -170
+     -160
     ]
    ]
   }
@@ -1501,9 +1501,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    320,
-    -180
+    475,
+    310,
+    -175
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1513,11 +1513,11 @@
    "spread": [
     [
      "+0.5",
-     140
+     135
     ],
     [
      "-0.5",
-     -200
+     -190
     ]
    ]
   }
@@ -1541,7 +1541,7 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -165
+    -170
    ],
    "spread": [
     [
@@ -1606,8 +1606,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    100
+    -120,
+    -105
    ],
    "spread": [
     [
