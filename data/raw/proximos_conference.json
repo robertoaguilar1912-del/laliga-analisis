@@ -303,7 +303,7 @@
   "estadio": "MCH Arena",
   "local_espn": "FC Midtjylland",
   "visita_espn": "Ajax Amsterdam",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -585,7 +585,7 @@
   "estadio": "Tammelan Stadion",
   "local_espn": "KuPS Kuopio",
   "visita_espn": "KAA Gent",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1032,7 +1032,7 @@
   "estadio": "Rajko Mitic Stadium",
   "local_espn": "Red Star Belgrade",
   "visita_espn": "Inter D'Escaldes",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1336,23 +1336,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    400,
-    475
+    -230,
+    425,
+    500
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -125
+    -105,
+    -120
    ],
    "spread": [
     [
      "-1.5",
-     115
+     105
     ],
     [
      "+1.5",
-     -160
+     -145
+    ]
+   ]
+  },
+  "alineaciones": {
+   "AS Monaco": [
+    [
+     "134169",
+     "Lukas Hradecky",
+     "SUB"
+    ],
+    [
+     "155532",
+     "Eric Dier",
+     "SUB"
+    ],
+    [
+     "222628",
+     "Denis Zakaria",
+     "SUB"
+    ],
+    [
+     "411027",
+     "Ilane Touré",
+     "SUB"
+    ],
+    [
+     "240660",
+     "Jordan Teze",
+     "SUB"
+    ],
+    [
+     "365789",
+     "Paris Brunner",
+     "SUB"
+    ],
+    [
+     "350525",
+     "Christian Mawissa",
+     "SUB"
+    ],
+    [
+     "159348",
+     "Takumi Minamino",
+     "SUB"
+    ],
+    [
+     "345645",
+     "Edan Diop",
+     "SUB"
+    ],
+    [
+     "397994",
+     "Mathys Detourbet",
+     "SUB"
+    ],
+    [
+     "282643",
+     "Folarin Balogun",
+     "SUB"
+    ]
+   ],
+   "FC Nordsjælland": [
+    [
+     "145645",
+     "Andreas Hansen",
+     "G"
+    ],
+    [
+     "372633",
+     "Noah Markmann",
+     "D"
+    ],
+    [
+     "241138",
+     "Victor Nelsson",
+     "D"
+    ],
+    [
+     "238412",
+     "Tobias Salquist",
+     "D"
+    ],
+    [
+     "400779",
+     "Markus Walker",
+     "M"
+    ],
+    [
+     "372632",
+     "Juho Lähteenmäki",
+     "M"
+    ],
+    [
+     "406537",
+     "Malte Heyde",
+     "M"
+    ],
+    [
+     "238401",
+     "Mark Brink Christensen",
+     "M"
+    ],
+    [
+     "335421",
+     "Mamadou Sadio",
+     "F"
+    ],
+    [
+     "401465",
+     "Villum Berthelsen",
+     "F"
+    ],
+    [
+     "269735",
+     "Ola Solbakken",
+     "F"
     ]
    ]
   }
@@ -1388,6 +1504,122 @@
      -125
     ]
    ]
+  },
+  "alineaciones": {
+   "CSU Craiova": [
+    [
+     "239895",
+     "Laurentiu Popescu",
+     "SUB"
+    ],
+    [
+     "239724",
+     "Alexandru Cicaldau",
+     "SUB"
+    ],
+    [
+     "364416",
+     "João Lameira",
+     "SUB"
+    ],
+    [
+     "364179",
+     "Oleksandr Romanchuk",
+     "SUB"
+    ],
+    [
+     "239721",
+     "Tudor Baluta",
+     "SUB"
+    ],
+    [
+     "310002",
+     "Carlos Mora",
+     "SUB"
+    ],
+    [
+     "301369",
+     "Assad Al-Hamlawi",
+     "SUB"
+    ],
+    [
+     "239807",
+     "Vladimir Screciu",
+     "SUB"
+    ],
+    [
+     "239813",
+     "Nicusor Bancu",
+     "SUB"
+    ],
+    [
+     "289724",
+     "Stefan Baiaram",
+     "SUB"
+    ],
+    [
+     "275362",
+     "Nikola Stevanović",
+     "SUB"
+    ]
+   ],
+   "Egnatia": [
+    [
+     "241783",
+     "Mario Dajsinani",
+     "G"
+    ],
+    [
+     "363993",
+     "Andrey Yago",
+     "D"
+    ],
+    [
+     "283819",
+     "Guillem Jaime",
+     "D"
+    ],
+    [
+     "406976",
+     "Numan Ajetovikj",
+     "D"
+    ],
+    [
+     "275672",
+     "Enea Bitri",
+     "D"
+    ],
+    [
+     "271044",
+     "Albano Aleksi",
+     "M"
+    ],
+    [
+     "304768",
+     "Alessandro Albanese",
+     "M"
+    ],
+    [
+     "231325",
+     "Fernando Medeiros",
+     "M"
+    ],
+    [
+     "298407",
+     "Altin Kryeziu",
+     "M"
+    ],
+    [
+     "239360",
+     "Karim Loukili",
+     "F"
+    ],
+    [
+     "3099337",
+     "Daniel Claude Junior Adjessa",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -1409,7 +1641,7 @@
    "ou_linea": 3.5,
    "ou": [
     115,
-    -145
+    -150
    ],
    "spread": [
     [
@@ -1700,23 +1932,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -400,
-    600,
-    900
+    -370,
+    550,
+    850
    ],
    "ou_linea": 3.5,
    "ou": [
-    -150,
-    115
+    -125,
+    100
    ],
    "spread": [
     [
      "-1.5",
-     -165
+     -155
     ],
     [
      "+1.5",
-     120
+     110
     ]
    ]
   },
@@ -1855,8 +2087,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
@@ -1865,7 +2097,7 @@
     ],
     [
      "-0.5",
-     -190
+     -185
     ]
    ]
   },
@@ -2005,7 +2237,7 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -170
+    -165
    ],
    "spread": [
     [
@@ -2166,6 +2398,122 @@
      -180
     ]
    ]
+  },
+  "alineaciones": {
+   "Riga FC": [
+    [
+     "236466",
+     "Kenan Piric",
+     "SUB"
+    ],
+    [
+     "362691",
+     "Raki Aouani",
+     "SUB"
+    ],
+    [
+     "405965",
+     "Karl Wassom",
+     "SUB"
+    ],
+    [
+     "342563",
+     "Baba Musah",
+     "SUB"
+    ],
+    [
+     "322489",
+     "Meissa Diop",
+     "SUB"
+    ],
+    [
+     "307172",
+     "Salah-Eddine Oulad",
+     "SUB"
+    ],
+    [
+     "305058",
+     "Maksims Tonisevs",
+     "SUB"
+    ],
+    [
+     "405885",
+     "Iago Siqueira",
+     "SUB"
+    ],
+    [
+     "332082",
+     "Ahmed Ankrah",
+     "SUB"
+    ],
+    [
+     "320258",
+     "Reginaldo Ramires",
+     "SUB"
+    ],
+    [
+     "258259",
+     "Raivis Andris Jurkovskis",
+     "SUB"
+    ]
+   ],
+   "Jablonec": [
+    [
+     "276091",
+     "Klemen Mihelak",
+     "G"
+    ],
+    [
+     "338238",
+     "Martin Cedidla",
+     "D"
+    ],
+    [
+     "276602",
+     "Jiri Sláma",
+     "D"
+    ],
+    [
+     "26853",
+     "Dusan Pavlovic",
+     "D"
+    ],
+    [
+     "277226",
+     "Richard Sedlacek",
+     "M"
+    ],
+    [
+     "221129",
+     "Vakhtang Chanturishvili",
+     "M"
+    ],
+    [
+     "340709",
+     "Dominik Holly",
+     "M"
+    ],
+    [
+     "308366",
+     "Matej Polidar",
+     "M"
+    ],
+    [
+     "280810",
+     "Sebastian Nebyla",
+     "M"
+    ],
+    [
+     "257078",
+     "Antonin Rusek",
+     "F"
+    ],
+    [
+     "297099",
+     "Saidou Alioum Moubarak",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -2191,12 +2539,12 @@
    ],
    "spread": [
     [
-     "-0.5",
-     -185
+     "-1.5",
+     130
     ],
     [
-     "+0.5",
-     130
+     "+1.5",
+     -180
     ]
    ]
   },
