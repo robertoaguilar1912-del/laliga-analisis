@@ -41,6 +41,27 @@ def cadena(ahora=None):
     return out
 
 
+def despertar(ahora=None):
+    """Segundos hasta que se abre la próxima ventana de alineaciones (75 minutos antes de un partido de fútbol, 60 en la
+    NBA; la misma de cadena()) que todavía no empezó, y qué partido es. None si no hay partidos por delante."""
+    ahora = ahora or datetime.now(timezone.utc)
+    mejor = None
+    for p in sorted((RAIZ / 'data' / 'raw').glob('proximos_*.json')):
+        liga = p.stem.replace('proximos_', '')
+        if liga == 'nfl':
+            continue
+        antes = 60 if liga == 'nba' else 75
+        try:
+            prox = json.load(open(p))
+        except (OSError, ValueError):
+            continue
+        for e in prox:
+            seg = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() - antes * 60
+            if seg > 120 and (mejor is None or seg < mejor[0]):
+                mejor = (seg, f"{liga}: {e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')} ({e['utc']})")
+    return mejor
+
+
 def pendientes():
     """{liga: {'alineaciones': [...], 'resultados': [...]}} solo con las ligas que tienen algo pendiente."""
     out = {}
@@ -94,6 +115,13 @@ if __name__ == '__main__':
         if os.environ.get('GITHUB_OUTPUT'):
             with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                 f.write(f"cadena={'si' if c else 'no'}\n")
+        sys.exit(0)
+    if '--despertar' in sys.argv:
+        d = despertar()
+        print(f'Próxima ventana de alineaciones en {d[0] / 60:.0f} min: {d[1]}' if d else 'No hay partidos por delante')
+        if os.environ.get('GITHUB_OUTPUT'):
+            with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                f.write(f"espera={int(d[0]) if d else ''}\n")
         sys.exit(0)
     t = pendientes()
     for liga, tareas in t.items():

@@ -1,0 +1,50 @@
+name: Despertador de alineaciones
+# GitHub atrasa (y a veces se salta) las corridas programadas de cada 15 minutos: el 5 nov 2026 no hubo ninguna entre las
+# 14:58 y las 17:26 UTC, y los onces de la Europa League de las 17:45 no salieron en la página. Después de cada corrida de
+# "Actualizar página", este workflow duerme hasta que se abre la próxima ventana de alineaciones (75 minutos antes del
+# próximo partido de fútbol, 60 en la NBA; revisar.py --despertar) y lanza una corrida rápida; desde ahí sigue la cadena de
+# actualizar.yml hasta que salen los onces. Solo hay uno esperando a la vez: cada corrida nueva cancela al anterior y
+# vuelve a calcular. (El repositorio es público: el tiempo que espera no cuesta.)
+on:
+  workflow_run:
+    workflows: ['Actualizar página']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: despertador
+  cancel-in-progress: true
+
+jobs:
+  esperar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: ¿Cuándo es la próxima ventana de alineaciones?
+        id: c
+        run: python src/revisar.py --despertar
+      - name: Dormir y lanzar una corrida rápida
+        if: steps.c.outputs.espera != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          s=${{ steps.c.outputs.espera }}
+          if [ "$s" -gt 19800 ]; then
+            sleep 19800                           # más de 5 horas y media: se vuelve a llamar a sí mismo para seguir
+            gh workflow run despertador.yml --ref main
+            exit 0
+          fi
+          sleep "$s"
+          n=0
+          for st in pending queued waiting requested in_progress; do
+            n=$((n + $(gh api "repos/${{ github.repository }}/actions/workflows/actualizar.yml/runs?status=$st&per_page=5" --jq '.total_count' 2>/dev/null || echo 0)))
+          done
+          if [ "$n" -gt 0 ]; then echo "Ya hay una corrida de Actualizar página en marcha o esperando"; exit 0; fi
+          gh workflow run actualizar.yml --ref main -f modo=rapido
