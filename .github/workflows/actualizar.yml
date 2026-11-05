@@ -136,3 +136,15 @@ jobs:
           done
           if [ "$n" -gt 0 ]; then echo "Ya hay $n corrida(s) esperando: no se lanza otra"; exit 0; fi
           gh workflow run actualizar.yml --ref main -f modo=rapido
+
+  # El despertador (despertador.yml) se vuelve a armar después de cada corrida. Las corridas que lanza la cadena con
+  # github.token no disparan "workflow_run", así que se lo llama directo (5 nov 2026).
+  despertar:
+    needs: [actualizar, publicar, cadena]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Armar el despertador
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run despertador.yml --repo ${{ github.repository }} --ref main || true

@@ -31,13 +31,19 @@ def cadena(ahora=None):
         if liga == 'nfl':
             continue
         xi = _xi_af(liga)
+        try:                               # partidos con id de API-Football: hay que esperar su once (el que ajusta la
+            af = json.load(open(RAIZ / 'data' / 'raw' / f'af_{liga}.json')).get('partidos') or {}   # probabilidad), aunque
+        except (OSError, ValueError):      # ESPN ya tenga el suyo (5 nov 2026: en la Europa League ESPN lo dio antes y la
+            af = {}                        # cadena se cortó sin el de API-Football)
         for e in json.load(open(p)):
             faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
+            eid = str(e['id'])
             if liga == 'nba':
                 if -10 <= faltan <= 60 and not e.get('revisado'):
                     out.append(f"{liga}: {e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min")
-            elif -20 <= faltan <= 75 and not e.get('alineaciones') and str(e['id']) not in xi:
-                out.append(f"{liga}: {e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min")
+            elif -20 <= faltan <= 75 and eid not in xi and (eid in af or not e.get('alineaciones')):
+                que = 'once de API-Football' if e.get('alineaciones') else 'alineación'
+                out.append(f"{liga}: {e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min ({que})")
     return out
 
 
