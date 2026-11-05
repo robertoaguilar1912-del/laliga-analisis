@@ -1,6 +1,26 @@
 {
  "Atlanta Hawks": [
   {
+   "id": "3146557",
+   "nombre": "Jock Landale",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Hip",
+   "regreso": "2026-11-06",
+   "nota": "Landale is out for Wednesday's game against the Wizards with a left hip strain, Kevin Chouinard of the Hawks' official site reports."
+  },
+  {
+   "id": "4701230",
+   "nombre": "Jalen Johnson",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Ankle",
+   "regreso": "2026-11-06",
+   "nota": "Johnson (ankle) is listed as out for Wednesday's game in Washington."
+  },
+  {
    "id": "4873201",
    "nombre": "Asa Newell",
    "pos": "F",
@@ -9,26 +29,6 @@
    "tipo": "Toe",
    "regreso": "2026-11-06",
    "nota": "Newell won't return to Wednesday's game against the Wizards due to a left great toe hyperextension, Brad Rowland of the Locked On Podcast Network reports. He'll finish with two points (1-1 FG), three rebounds and three assists across 10 minutes."
-  },
-  {
-   "id": "4701230",
-   "nombre": "Jalen Johnson",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-04",
-   "tipo": "Ankle",
-   "regreso": "2026-11-06",
-   "nota": "Johnson (ankle) is listed as out for Wednesday's game in Washington."
-  },
-  {
-   "id": "3146557",
-   "nombre": "Jock Landale",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-03",
-   "tipo": "Hip",
-   "regreso": "2026-11-06",
-   "nota": "Landale is out for Wednesday's game against the Wizards with a left hip strain, Kevin Chouinard of the Hawks' official site reports."
   },
   {
    "id": "4712863",
@@ -53,6 +53,16 @@
  ],
  "Boston Celtics": [
   {
+   "id": "4065648",
+   "nombre": "Jayson Tatum",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Rest",
+   "regreso": "2026-11-06",
+   "nota": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports."
+  },
+  {
    "id": "4066354",
    "nombre": "Payton Pritchard",
    "pos": "G",
@@ -71,16 +81,6 @@
    "tipo": "Illness",
    "regreso": "2026-11-08",
    "nota": "Carter (illness) practiced with the G League's Maine Celtics on Wednesday."
-  },
-  {
-   "id": "4065648",
-   "nombre": "Jayson Tatum",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-04",
-   "tipo": "Rest",
-   "regreso": "2026-11-06",
-   "nota": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports."
   }
  ],
  "Brooklyn Nets": [
@@ -111,7 +111,7 @@
    "estado": "Out",
    "fecha": "2026-10-29",
    "tipo": "Leg",
-   "regreso": "2026-11-07",
+   "regreso": "2026-11-11",
    "nota": "The Nets exercised Demin's third-year team option for the 2027-28 season, Sharif Phillips-Keaton of USA Today reports Thursday."
   },
   {
@@ -130,7 +130,7 @@
    "id": "5061575",
    "nombre": "Kon Knueppel",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-05",
    "tipo": "Leg",
    "regreso": "2026-11-06",
@@ -148,6 +148,16 @@
   }
  ],
  "Chicago Bulls": [
+  {
+   "id": "4278067",
+   "nombre": "Nic Claxton",
+   "pos": "C",
+   "estado": "Out",
+   "fecha": "2026-11-05",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-08",
+   "nota": "The Bulls assigned Claxton (hamstring) to the G League's Windy City Bulls on Thursday."
+  },
   {
    "id": "4066650",
    "nombre": "Zach Collins",
@@ -167,19 +177,19 @@
    "tipo": "Hand",
    "regreso": "2026-11-08",
    "nota": "Smith (hand) won't return to Wednesday's game against the Knicks."
-  },
-  {
-   "id": "4278067",
-   "nombre": "Nic Claxton",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-04",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-08",
-   "nota": "Claxton (hamstring) is listed as out for Wednesday's game against New York."
   }
  ],
  "Cleveland Cavaliers": [
+  {
+   "id": "4576087",
+   "nombre": "Peyton Watson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-06",
+   "nota": "Watson (hamstring) is out for Wednesday's game in Oklahoma City."
+  },
   {
    "id": "4066328",
    "nombre": "Jarrett Allen",
@@ -209,19 +219,19 @@
    "tipo": "Ankle",
    "regreso": "2026-11-06",
    "nota": "According to Cavaliers head coach Kenny Atkinson, Tyson (ankle) has been \"on the court lately progressing well,\" Chris Fedor of The Cleveland Plain Dealer reports."
-  },
-  {
-   "id": "4576087",
-   "nombre": "Peyton Watson",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-03",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-06",
-   "nota": "Watson (hamstring) is out for Wednesday's game in Oklahoma City."
   }
  ],
  "Dallas Mavericks": [
+  {
+   "id": "4432582",
+   "nombre": "Max Christie",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Hip",
+   "regreso": "2026-11-06",
+   "nota": "Christie (hip) is out for Wednesday's game against the Spurs."
+  },
   {
    "id": "4593125",
    "nombre": "Santi Aldama",
@@ -231,16 +241,6 @@
    "tipo": "Knee",
    "regreso": "2026-11-06",
    "nota": "Aldama (knee) is out for Wednesday's game against the Spurs, Grant Afseth of DallasHoopsJournal.com reports."
-  },
-  {
-   "id": "4432582",
-   "nombre": "Max Christie",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-03",
-   "tipo": "Hip",
-   "regreso": "2026-11-06",
-   "nota": "Christie (hip) is out for Wednesday's game against the Spurs."
   },
   {
    "id": "5148538",
@@ -278,7 +278,7 @@
    "id": "3978",
    "nombre": "DeMar DeRozan",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-05",
    "tipo": "Back",
    "regreso": "2026-11-07",
@@ -371,6 +371,16 @@
  ],
  "Houston Rockets": [
   {
+   "id": "3102529",
+   "nombre": "Clint Capela",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
+   "tipo": "Ankle",
+   "regreso": "2026-11-07",
+   "nota": "Capela (ankle) is out for Wednesday's game against the Timberwolves."
+  },
+  {
    "id": "2991235",
    "nombre": "Steven Adams",
    "pos": "C",
@@ -379,16 +389,6 @@
    "tipo": "Calf",
    "regreso": "2026-11-09",
    "nota": "Head coach Ime Udoka said Wednesday that Adams (calf) is still without a timetable to return and will be evaluated on a \"weekly basis,\" Varun Shankar of the Houston Chronicle reports."
-  },
-  {
-   "id": "3102529",
-   "nombre": "Clint Capela",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-04",
-   "tipo": "Ankle",
-   "regreso": "2026-11-07",
-   "nota": "Capela (ankle) is out for Wednesday's game against the Timberwolves."
   }
  ],
  "Indiana Pacers": [
@@ -396,7 +396,7 @@
    "id": "3133603",
    "nombre": "Kelly Oubre Jr.",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-05",
    "tipo": "Calf",
    "regreso": "2026-11-07",
@@ -471,7 +471,7 @@
    "estado": "Out",
    "fecha": "2026-10-15",
    "tipo": "Knee",
-   "regreso": "2026-11-08",
+   "regreso": "2026-11-29",
    "nota": "Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports."
   },
   {
@@ -524,7 +524,7 @@
    "id": "4697268",
    "nombre": "Kam Jones",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-05",
    "tipo": "Ankle",
    "regreso": "2026-11-06",
@@ -536,8 +536,8 @@
    "id": "4432847",
    "nombre": "Terrence Shannon Jr.",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Hip",
    "regreso": "2026-11-06",
    "nota": "Shannon (hip) is out for Wednesday against the Rockets."
@@ -568,8 +568,8 @@
    "id": "4397688",
    "nombre": "Trey Murphy III",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Knee",
    "regreso": "2026-11-06",
    "nota": "Murphy (knees) is listed as out for Wednesday's game against Utah."
@@ -590,8 +590,8 @@
    "id": "3062679",
    "nombre": "Josh Hart",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Ankle",
    "regreso": "2026-11-07",
    "nota": "Hart is out for Wednesday's game against the Bulls due to right ankle soreness."
@@ -602,8 +602,8 @@
    "id": "4432823",
    "nombre": "Jaylin Williams",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Back",
    "regreso": "2026-11-06",
    "nota": "Williams (back) is listed as out for Wednesday's game versus Cleveland, Clemente Almanza of USA Today reports."
@@ -665,10 +665,10 @@
    "nombre": "Jonathan Isaac",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-11-02",
+   "fecha": "2026-11-05",
    "tipo": "Knee",
    "regreso": "2026-11-10",
-   "nota": "Orlando recalled Isaac (knee) from the G League's Osceola Magic on Sunday."
+   "nota": "Orlando recalled Isaac (knee) from the G League's Osceola Magic on Wednesday."
   },
   {
    "id": "4432165",
@@ -748,7 +748,7 @@
    "id": "4278402",
    "nombre": "Jordan Goodwin",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-05",
    "tipo": "Calf",
    "regreso": "2026-11-05",
@@ -758,8 +758,8 @@
    "id": "5105977",
    "nombre": "Rasheer Fleming",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Ankle",
    "regreso": "2026-11-05",
    "nota": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle."
@@ -812,8 +812,8 @@
    "id": "4279318",
    "nombre": "Daeqwon Plowden",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-04",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-05",
    "tipo": "Illness",
    "regreso": "2026-11-06",
    "nota": "Plowden (illness) is out for Wednesday's game against the Lakers."
