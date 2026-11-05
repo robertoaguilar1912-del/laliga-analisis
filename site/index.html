@@ -1794,6 +1794,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           return sub.length < lista.length ? `<p class="note">Solo los que el modelo daba en 30% o más (la regla de PICK desde el 10 oct 2026; los de antes se guardaron con la regla vieja): ${num(sub.length)} picks${fin.length ? `, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ', ninguno liquidado todavía'}.</p>` : ''; })()}
         ${revs.length ? (() => { const fin = revs.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
           return `<p class="note">Aparte, no cuentan arriba: ${num(revs.length)} PICK marcados REVISAR porque al equipo le faltaban jugadores importantes (fútbol, del 13 al 24 oct 2026; NBA: ⏰ con una estrella en duda)${fin.length ? `; si los hubieras seguido: <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b> en ${num(fin.length)} liquidados` : ', ninguno liquidado todavía'}.</p>`; })() : ''}
+        ${(() => { // PICK que la página quitó antes del partido: aparte (desde el 4 nov 2026), con su resultado y por qué se quitaron
+          const ret = todosR.filter(x => x.bet.retirado && !x.bet.revisar && !x.bet.reemplazado && enFiltro(x)); if (!ret.length) return '';
+          const fin = ret.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0), gan = fin.filter(x => x.e.pl > 0).length;
+          const MOT = { probabilidad: 'bajó la probabilidad del modelo', momio: 'bajó el momio', regla: 'por una regla de PICK', 'línea': 'la casa cambió la línea' };
+          const cuenta = ret.reduce((o, x) => { const k = MOT[x.bet.motivo] ? x.bet.motivo : 'sd'; o[k] = (o[k] || 0) + 1; return o; }, {});
+          const por = [...Object.keys(MOT), 'sd'].filter(k => cuenta[k]).map(k => `${k === 'sd' ? 'sin el motivo anotado' : MOT[k]}: ${num(cuenta[k])}`).join('; ');
+          return `<p class="note">Aparte, no cuentan arriba: ${num(ret.length)} PICK que la página quitó antes del partido (${por})${fin.length ? `. Si los hubieras seguido con el momio al que salieron: ${num(gan)} de ${num(fin.length)} ganados, ganancia <b>${sM(pl)} u</b>, ROI <b>${spct(pl / fin.length, 1)}</b>` : ''}. Si estos ganan más que los de arriba, alguna razón para quitarlos está fallando.</p>`;
+        })()}
         ${(() => { // PICK temprano (total NBA): resultado y cuántos puntos se movió la línea a favor hasta el cierre
           const sub = lista.filter(x => x.bet.temprano != null); if (!sub.length) return '';
           const fin = sub.filter(x => x.e.fin), pl = fin.reduce((a, x) => a + x.e.pl, 0);
