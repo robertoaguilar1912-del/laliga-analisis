@@ -5,7 +5,7 @@
   "estadio": "AFAS Stadion",
   "local_espn": "AZ Alkmaar",
   "visita_espn": "Juventus",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "BayArena",
   "local_espn": "Bayer Leverkusen",
   "visita_espn": "Marseille",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -298,161 +298,12 @@
   }
  },
  {
-  "id": "401915525",
-  "utc": "2026-11-05T20:00Z",
-  "estadio": "Estádio da Luz",
-  "local_espn": "Benfica",
-  "visita_espn": "Lech Poznan",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -450,
-    650,
-    1000
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    -155,
-    125
-   ],
-   "spread": [
-    [
-     "-2.5",
-     110
-    ],
-    [
-     "+2.5",
-     -150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Benfica": [
-    [
-     "286109",
-     "Anatoliy Trubin",
-     "G"
-    ],
-    [
-     "332081",
-     "Alessandro Circati",
-     "CD-L"
-    ],
-    [
-     "329691",
-     "Tomás Araújo",
-     "CD-R"
-    ],
-    [
-     "291730",
-     "Souffian El Karouani",
-     "LB"
-    ],
-    [
-     "403874",
-     "Daniel Banjaqui",
-     "RB"
-    ],
-    [
-     "361355",
-     "Claudio Echeverri",
-     "AM"
-    ],
-    [
-     "308603",
-     "Georgiy Sudakov",
-     "LM"
-    ],
-    [
-     "358451",
-     "Manu Silva",
-     "RM"
-    ],
-    [
-     "285629",
-     "Jhon Durán",
-     "F"
-    ],
-    [
-     "313415",
-     "Andreas Schjelderup",
-     "AM-L"
-    ],
-    [
-     "192421",
-     "Rafa Silva",
-     "AM-R"
-    ]
-   ],
-   "Lech Poznan": [
-    [
-     "222728",
-     "Mateusz Lis",
-     "G"
-    ],
-    [
-     "358299",
-     "Michal Gurgul",
-     "D"
-    ],
-    [
-     "380023",
-     "Terry Yegbe",
-     "D"
-    ],
-    [
-     "305503",
-     "Joel Pereira",
-     "D"
-    ],
-    [
-     "325947",
-     "Mateusz Skrzypczak",
-     "D"
-    ],
-    [
-     "301364",
-     "Patrick Walemark",
-     "M"
-    ],
-    [
-     "313256",
-     "Antoni Kozubal",
-     "M"
-    ],
-    [
-     "308472",
-     "Pablo Rodriguez",
-     "M"
-    ],
-    [
-     "239148",
-     "Radoslaw Murawski",
-     "M"
-    ],
-    [
-     "326624",
-     "Daniel Håkans",
-     "M"
-    ],
-    [
-     "329971",
-     "Yannick Agnero",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915531",
   "utc": "2026-11-05T20:00Z",
   "estadio": "Balaidos",
   "local_espn": "Celta Vigo",
   "visita_espn": "Union St.-Gilloise",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -601,7 +452,7 @@
   "estadio": "Celtic Park",
   "local_espn": "Celtic",
   "visita_espn": "Besiktas",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -750,7 +601,7 @@
   "estadio": "Giulesti Stadium",
   "local_espn": "Hapoel Be'er",
   "visita_espn": "OFI Crete",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -894,161 +745,12 @@
   }
  },
  {
-  "id": "401915524",
-  "utc": "2026-11-05T20:00Z",
-  "estadio": "Merkur Arena",
-  "local_espn": "SK Sturm Graz",
-  "visita_espn": "NK Celje",
-  "estado": "STATUS_HALFTIME",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -185,
-    350,
-    475
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -170,
-    135
-   ],
-   "spread": [
-    [
-     "-1.5",
-     130
-    ],
-    [
-     "+1.5",
-     -180
-    ]
-   ]
-  },
-  "alineaciones": {
-   "SK Sturm Graz": [
-    [
-     "305677",
-     "Ammar Helac",
-     "G"
-    ],
-    [
-     "283951",
-     "Paul-Friedrich Koller",
-     "D"
-    ],
-    [
-     "354014",
-     "Joshua Quarshie",
-     "D"
-    ],
-    [
-     "374533",
-     "Arjan Malic",
-     "D"
-    ],
-    [
-     "362910",
-     "Luís Balbo",
-     "M"
-    ],
-    [
-     "214012",
-     "Jon Gorenc Stankovic",
-     "M"
-    ],
-    [
-     "411273",
-     "Luca Weinhandl",
-     "M"
-    ],
-    [
-     "274948",
-     "Jürgen Heil",
-     "M"
-    ],
-    [
-     "329483",
-     "Oumar Diakité",
-     "F"
-    ],
-    [
-     "364541",
-     "Simon Seidl",
-     "F"
-    ],
-    [
-     "370757",
-     "Valmir Matoshi",
-     "F"
-    ]
-   ],
-   "NK Celje": [
-    [
-     "316540",
-     "Zan-Luk Leban",
-     "G"
-    ],
-    [
-     "307206",
-     "Lukasz Bejger",
-     "D"
-    ],
-    [
-     "324201",
-     "Artemijus Tutyskinas",
-     "D"
-    ],
-    [
-     "289749",
-     "Pijus Sirvys",
-     "D"
-    ],
-    [
-     "363569",
-     "Milot Avdyli",
-     "D"
-    ],
-    [
-     "306199",
-     "Svit Seslar",
-     "M"
-    ],
-    [
-     "398462",
-     "Papa Daniel",
-     "M"
-    ],
-    [
-     "326760",
-     "Mark Zabukovnik",
-     "M"
-    ],
-    [
-     "312664",
-     "Veton Tusha",
-     "F"
-    ],
-    [
-     "330626",
-     "Armandas Kucys",
-     "F"
-    ],
-    [
-     "189386",
-     "Benjamin Verbic",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915523",
   "utc": "2026-11-05T20:00Z",
   "estadio": "Stadium of Light",
   "local_espn": "Sunderland",
   "visita_espn": "Dinamo Zagreb",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1197,7 +899,7 @@
   "estadio": "Estádio Dr. Magalhaes Pessoa",
   "local_espn": "Torreense",
   "visita_espn": "Ararat-Armenia",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {

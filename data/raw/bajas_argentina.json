@@ -447,8 +447,8 @@
 },
 "401841667": {
 "fotmob": 1000019631,
-"visto": "2026-11-05T21:49+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-05T21:54+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -459,6 +459,15 @@
 "valor": 1255235.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Pedro Silva Torrejón",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 747599.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Agustín Colazo",
@@ -488,24 +497,14 @@
 "importante": false
 }
 ],
-"valor_xi": 11635806.0,
-"perdida": 0.10787692747713394,
+"valor_xi": 17382753.0,
+"perdida": 0.07221151908446263,
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [
-{
-"nombre": "Nicolás Fernández",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 2030468.0,
-"titular": false,
-"importante": true
-}
-],
+"faltan": [],
 "valor_xi": 13325069.0,
-"perdida": 0.1523795486537443,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
