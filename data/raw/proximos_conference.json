@@ -303,7 +303,7 @@
   "estadio": "MCH Arena",
   "local_espn": "FC Midtjylland",
   "visita_espn": "Ajax Amsterdam",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -734,7 +734,7 @@
   "estadio": "Europa Point Stadium",
   "local_espn": "Lincoln Red Imps",
   "visita_espn": "Hajduk Split",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -883,7 +883,7 @@
   "estadio": "Olympia",
   "local_espn": "Mjällby AIF",
   "visita_espn": "Borac Banja Luka",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1181,7 +1181,7 @@
   "estadio": "Papara Park",
   "local_espn": "Trabzonspor",
   "visita_espn": "SC Freiburg",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1336,23 +1336,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    390,
-    475
+    -235,
+    425,
+    550
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
-    -130
+    100,
+    -125
    ],
    "spread": [
     [
      "-1.5",
-     120
+     105
     ],
     [
      "+1.5",
-     -165
+     -145
     ]
    ]
   }
@@ -1408,17 +1408,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    115,
+    -145
    ],
    "spread": [
     [
      "-2.5",
-     -105
+     105
     ],
     [
      "+2.5",
-     -130
+     -145
     ]
    ]
   }
@@ -1502,8 +1502,8 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    310,
-    -175
+    330,
+    -190
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1512,12 +1512,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     140
+     "+1.5",
+     -205
     ],
     [
-     "-0.5",
-     -195
+     "-1.5",
+     145
     ]
    ]
   }
@@ -1606,8 +1606,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    -105
+    -130,
+    100
    ],
    "spread": [
     [

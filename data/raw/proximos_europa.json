@@ -154,7 +154,7 @@
   "estadio": "Lotto Park",
   "local_espn": "Anderlecht",
   "visita_espn": "RB Salzburg",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "Selhurst Park",
   "local_espn": "Crystal Palace",
   "visita_espn": "TSG Hoffenheim",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Arasen Stadion",
   "local_espn": "Lillestrom",
   "visita_espn": "Viktoria Plzen",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "Goffertstadion",
   "local_espn": "NEC Nijmegen",
   "visita_espn": "Omonia Nicosia",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1236,9 +1236,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -330,
+    -310,
     500,
-    750
+    700
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1248,11 +1248,11 @@
    "spread": [
     [
      "-1.5",
-     -140
+     -130
     ],
     [
      "+1.5",
-     100
+     -105
     ]
    ]
   }
@@ -1269,23 +1269,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -900,
-    900,
-    1800
+    -650,
+    800,
+    1400
    ],
-   "ou_linea": 4.5,
+   "ou_linea": 3.5,
    "ou": [
-    130,
-    -160
+    -160,
+    130
    ],
    "spread": [
     [
      "-2.5",
-     -130
+     -110
     ],
     [
      "+2.5",
-     -110
+     -125
     ]
    ]
   }
@@ -1434,23 +1434,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    390,
-    600
+    -190,
+    350,
+    475
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -150,
+    120
    ],
    "spread": [
     [
      "-1.5",
-     110
+     135
     ],
     [
      "+1.5",
-     -155
+     -190
     ]
    ]
   }
