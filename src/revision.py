@@ -226,6 +226,15 @@ def resumen(desde, hasta, mias=None):
             vp = [f['v_pin'] for f in x if f['v_pin'] is not None]
             out.append(f"- **{nom}:** {len(x)}, {_fmt(pl, False)} u ({_fmt(pl / len(x))})"
                        + (f"; contra Pinnacle {_fmt(sum(vp) / len(vp))} ({sum(v > 0 for v in vp)} de {len(vp)} le ganaron)" if vp else '') + '.')
+            if est == 'retirado':          # por qué se quitaron (registro.motivo_retiro, desde el 4 nov 2026)
+                MOT = {'probabilidad': 'bajó la probabilidad del modelo', 'momio': 'bajó el momio', 'regla': 'regla de PICK',
+                       'línea': 'la casa cambió la línea', None: 'sin el motivo anotado'}
+                for mot, nm in MOT.items():
+                    y = [f for f in x if (f.get('motivo') if f.get('motivo') in MOT else None) == mot]
+                    if y:
+                        ply = sum(f['pl'] for f in y)
+                        out.append(f"  - {nm}: {len(y)}, {_fmt(ply, False)} u ({_fmt(ply / len(y))}), por grupo: "
+                                   + ', '.join(f"{g} {sum(1 for f in y if f['grupo'] == g)}" for g in sorted({f['grupo'] for f in y})))
     if mias is not None:
         modelo = {(str(r['id']), r['k']) for r in cargar_picks() if not (r.get('revisar') or r.get('reemplazado') or r.get('retirado'))}
         x = [f for f in cuenta if f['pl'] is not None]

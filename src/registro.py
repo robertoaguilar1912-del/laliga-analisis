@@ -201,7 +201,21 @@ def _fam(k):
     return f if f in ('resultado', 'total') else k.split(':')[0]
 
 
-def marcar_retirados(picks, t, vistos):
+def motivo_retiro(r, fila):
+    """Por qué la página dejó de marcar el PICK r, con fila = cómo está hoy ese mercado (o None si ya no está):
+    'línea' (la casa ya no da esa línea o ese momio), 'regla' (una regla de PICK, ver picks.py), 'probabilidad' (bajó lo que
+    da el modelo: bajas, lesiones, once confirmado, datos nuevos) o 'momio' (la casa bajó el momio). Se compara el valor
+    esperado de cuando salió con el de ahora: lo que bajó por la probabilidad, (p1 − p0)·m0, y por el momio, p1·(m1 − m0)."""
+    if not fila:
+        return {'motivo': 'línea'}
+    out = {'p_fin': round(float(fila['p']), 4), 'momio_fin': fila['momio']}
+    if fila.get('regla'):
+        return {**out, 'motivo': 'regla'}
+    p0, m0, p1, m1 = float(r['p']), float(r['momio']), float(fila['p']), float(fila['momio'])
+    return {**out, 'motivo': 'probabilidad' if (p1 - p0) * m0 <= p1 * (m1 - m0) else 'momio'}
+
+
+def marcar_retirados(picks, t, vistos, filas_hoy=None):
     """Un PICK que la página dejó de marcar antes del partido (cambió el momio, entró una regla, una baja...) no cuenta:
     lleva 'retirado'. vistos: {id de partido: claves que hoy son PICK o REVISAR} de los partidos que se analizaron en esta
     corrida. Para los anteriores (desde el 18 oct 2026, cuando se empezó a anotar 'ultimo'): retirado si la última vez
@@ -214,8 +228,11 @@ def marcar_retirados(picks, t, vistos):
         if r['id'] in vistos:
             if clave in vistos[r['id']]:
                 r.pop('retirado', None)
+                for k in ('motivo', 'p_fin', 'momio_fin'):
+                    r.pop(k, None)
             elif not r.get('retirado'):
                 r['retirado'] = t.isoformat(timespec='minutes')
+                r.update(motivo_retiro(r, (filas_hoy or {}).get((r['id'], clave))))
         elif not r.get('retirado') and r['utc'] >= '2026-10-18T12:00':
             inicio = datetime.fromisoformat(r['utc'].replace('Z', '+00:00'))
             ult = r.get('ultimo')
@@ -269,6 +286,7 @@ def actualizar():
     cierres = _leer(REG / 'cierres.json', {})
     ya = {(r['id'], EQUIVALENTE.get(r['k'], r['k'])) for r in picks}
     vistos = {}
+    filas_hoy = {}                       # (id de partido, clave): cómo está hoy cada mercado con momio (para el motivo de un retiro)
     t = ahora()
     nuevos = 0
     ligas = []
@@ -285,6 +303,7 @@ def actualizar():
             c = cierres.setdefault(m['id'], {})
             for r in m['con_momio']:
                 c[r['k']] = r['momio']
+                filas_hoy[(m['id'], EQUIVALENTE.get(r['k'], r['k']))] = r
             dk = m.get('dk') or {}           # NBA y NFL: la última línea vista (al cierre: la de cierre), para el valor de cierre
             for clave_l, campo in (('_total', 'total'), ('_spread', 'spread')):
                 if dk.get(campo) is not None:
@@ -320,7 +339,7 @@ def actualizar():
                               **({'revisar': r.get('revisar') or 'bajas'} if r['veredicto'] == 'REVISAR' else {})})
                 ya.add((m['id'], clave))
                 nuevos += 1
-    retirados = marcar_retirados(picks, t, vistos)
+    retirados = marcar_retirados(picks, t, vistos, filas_hoy)
     reemplazados = marcar_reemplazados(picks)
     picks.sort(key=lambda r: (r['utc'], r['id'], r['k']))
     res = resultados()
