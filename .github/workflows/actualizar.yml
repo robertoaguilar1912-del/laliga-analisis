@@ -135,7 +135,9 @@ jobs:
             n=$((n + $(gh api "repos/${{ github.repository }}/actions/workflows/actualizar.yml/runs?status=$st&per_page=5" --jq '.total_count' 2>/dev/null || echo 0)))
           done
           if [ "$n" -gt 0 ]; then echo "Ya hay $n corrida(s) esperando: no se lanza otra"; exit 0; fi
-          gh workflow run actualizar.yml --ref main -f modo=rapido
+          # GitHub a veces responde con error 500 (5 nov 2026, 23:23 UTC: la cadena se cortó y no salió el once de Cruzeiro)
+          for i in 1 2 3 4 5; do gh workflow run actualizar.yml --ref main -f modo=rapido && exit 0; sleep 20; done
+          exit 1
 
   # El despertador (despertador.yml) se vuelve a armar después de cada corrida. Las corridas que lanza la cadena con
   # github.token no disparan "workflow_run", así que se lo llama directo (5 nov 2026).

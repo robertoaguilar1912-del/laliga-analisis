@@ -1,10 +1,12 @@
 name: Despertador de alineaciones
-# GitHub atrasa (y a veces se salta) las corridas programadas de cada 15 minutos: el 5 nov 2026 no hubo ninguna entre las
-# 14:58 y las 17:26 UTC, y los onces de la Europa League de las 17:45 no salieron en la página. Después de cada corrida de
-# "Actualizar página", este workflow duerme hasta que se abre la próxima ventana de alineaciones (75 minutos antes del
-# próximo partido de fútbol, 60 en la NBA; revisar.py --despertar) y lanza una corrida rápida; desde ahí sigue la cadena de
-# actualizar.yml hasta que salen los onces. Solo hay uno esperando a la vez: cada corrida nueva cancela al anterior y
-# vuelve a calcular. (El repositorio es público: el tiempo que espera no cuesta.)
+# GitHub atrasa (y a veces se salta) las corridas programadas de cada 15 minutos, y a veces falla al lanzar la siguiente
+# corrida de la cadena (error 500). Este workflow vigila: cada 10 minutos mira los datos más recientes (revisar.py --vigilar)
+#   - si hay alineaciones pendientes en una ventana abierta (75 minutos antes de un partido de fútbol hasta 20 después,
+#     60 antes en la NBA) y no hay ninguna corrida de "Actualizar página" en marcha o esperando, lanza una rápida;
+#   - si no, espera hasta la próxima ventana.
+# Problemas que tapa: 5 nov 2026, sin corridas entre las 14:58 y las 17:26 UTC (Europa League), y la cadena cortada a las
+# 23:23 UTC por un error 500 de GitHub (Cruzeiro vs Bahia). Solo hay uno vigilando a la vez: cada corrida de
+# actualizar.yml lo vuelve a llamar y el nuevo cancela al anterior. (El repositorio es público: el tiempo que espera no cuesta.)
 on:
   workflow_run:
     workflows: ['Actualizar página']
@@ -20,31 +22,41 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  esperar:
+  vigilar:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: ¿Cuándo es la próxima ventana de alineaciones?
-        id: c
-        run: python src/revisar.py --despertar
-      - name: Dormir y lanzar una corrida rápida
-        if: steps.c.outputs.espera != ''
+      - name: Vigilar las ventanas de alineaciones
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          s=${{ steps.c.outputs.espera }}
-          if [ "$s" -gt 19800 ]; then
-            sleep 19800                           # más de 5 horas y media: se vuelve a llamar a sí mismo para seguir
-            gh workflow run despertador.yml --ref main
-            exit 0
-          fi
-          sleep "$s"
-          n=0
-          for st in pending queued waiting requested in_progress; do
-            n=$((n + $(gh api "repos/${{ github.repository }}/actions/workflows/actualizar.yml/runs?status=$st&per_page=5" --jq '.total_count' 2>/dev/null || echo 0)))
+          activas() {
+            n=0
+            for st in pending queued waiting requested in_progress; do
+              n=$((n + $(gh api "repos/${{ github.repository }}/actions/workflows/actualizar.yml/runs?status=$st&per_page=5" --jq '.total_count' 2>/dev/null || echo 0)))
+            done
+            echo $n
+          }
+          lanzar() {
+            for i in 1 2 3 4 5; do gh workflow run actualizar.yml --ref main -f modo=rapido && return 0; sleep 20; done
+            return 1
+          }
+          fin=$(( $(date +%s) + 19800 ))
+          while [ "$(date +%s)" -lt "$fin" ]; do
+            git pull -q --ff-only origin main || true
+            v=$(python src/revisar.py --vigilar)
+            echo "$(date -u +%H:%M) $v"
+            if [ "$v" = "ahora" ]; then
+              if [ "$(activas)" -eq 0 ]; then echo "Alineaciones pendientes y ninguna corrida en marcha: se lanza una"; lanzar || true; fi
+              sleep 600
+            elif [ "$v" = "nada" ]; then
+              sleep 1800
+            else
+              s=$v; [ "$s" -gt 600 ] && s=600
+              sleep "$s"
+            fi
           done
-          if [ "$n" -gt 0 ]; then echo "Ya hay una corrida de Actualizar página en marcha o esperando"; exit 0; fi
-          gh workflow run actualizar.yml --ref main -f modo=rapido
+          gh workflow run despertador.yml --ref main || true     # 5 horas y media: se vuelve a llamar para seguir vigilando

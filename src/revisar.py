@@ -122,6 +122,11 @@ if __name__ == '__main__':
             with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                 f.write(f"cadena={'si' if c else 'no'}\n")
         sys.exit(0)
+    if '--vigilar' in sys.argv:          # para el despertador: 'ahora' si hay alineaciones pendientes en una ventana abierta,
+        c = cadena()                      # si no, los segundos hasta la próxima ventana, o 'nada'
+        d = despertar()
+        print('ahora' if c else (str(int(d[0])) if d else 'nada'))
+        sys.exit(0)
     if '--despertar' in sys.argv:
         d = despertar()
         print(f'Próxima ventana de alineaciones en {d[0] / 60:.0f} min: {d[1]}' if d else 'No hay partidos por delante')
