@@ -1,8 +1,8 @@
 {
 "401841302": {
 "fotmob": 5103702,
-"visto": "2026-11-06T22:13+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-06T22:18+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -30,7 +30,7 @@
 "duda": false,
 "valor": 1124811.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Fabiano Souza",
@@ -39,16 +39,7 @@
 "duda": false,
 "valor": 1084432.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Emanuel Brítez",
-"tipo": "Sanción",
-"regreso": "hasta el 7 de noviembre",
-"duda": false,
-"valor": 424653.0,
-"titular": true,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Riccieli",
@@ -56,6 +47,15 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 894548.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Emanuel Brítez",
+"tipo": "Sanción",
+"regreso": "hasta el 7 de noviembre",
+"duda": false,
+"valor": 424653.0,
 "titular": false,
 "importante": false
 },
@@ -69,15 +69,6 @@
 "importante": false
 },
 {
-"nombre": "Mateusinho",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Dudu",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -87,8 +78,8 @@
 "importante": false
 }
 ],
-"valor_xi": 11730928.0,
-"perdida": 0.5155024393637059,
+"valor_xi": 14351679.0,
+"perdida": 0.2378415793720024,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -126,7 +117,7 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 2248394.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -139,8 +130,8 @@
 "importante": false
 }
 ],
-"valor_xi": 41671204.0,
-"perdida": 0.8950307987261419,
+"valor_xi": 47948003.0,
+"perdida": 0.77786369955804,
 "perdida_duda": 0.0
 }
 }
