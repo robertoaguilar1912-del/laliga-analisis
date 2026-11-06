@@ -175,6 +175,8 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         lam, mu = modelo.rates(h, a, **neu)
         M = modelo.score_matrix(h, a, **neu)                # probabilidad exacta de cada marcador
         mom = g.get('momios') or {}
+        if not mom.get('ml'):              # DraftKings no publicó: momios de otra casa de API-Football (apifootball.RESPALDO)
+            mom = apifootball.momios_respaldo(liga, g['id']) or mom
         anclado = False
         if LIGAS[liga].get('region') and mom.get('ml'):
             # copas internacionales: ANCLA_COPAS del modelo y el resto del mercado (ver ancla.py, prueba del 4 nov 2026)

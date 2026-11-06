@@ -268,3 +268,48 @@ def enriquecer(filas, otras):
         cs = otras['consenso'].get(k)
         if cs and cs['n'] >= 3:
             r['p_consenso'], r['n_consenso'] = cs['p'], cs['n']
+
+
+# Respaldo cuando DraftKings (vía ESPN) no publica momios de un partido (6 nov 2026: Hamburgo vs Gladbach sin momios a una
+# hora del inicio, con 9 casas en API-Football): se usan los de la primera de estas casas que tenga el 1X2. Pinnacle no,
+# porque es la referencia del precio justo (VALOR) y no la casa contra la que se apuesta.
+RESPALDO = ('bet365', 'williamhill', 'betano', 'marathonbet', 'betvictor', '1xbet', 'betfair', 'sbo')
+NOMBRE_CASA = {'bet365': 'Bet365', 'williamhill': 'William Hill', 'betano': 'Betano', 'marathonbet': 'Marathonbet',
+               'betvictor': 'BetVictor', '1xbet': '1xBet', 'betfair': 'Betfair', 'sbo': 'SBO'}
+
+
+def _americano(d):
+    d = float(d)
+    return int(round((d - 1) * 100)) if d >= 2 else int(round(-100 / (d - 1)))
+
+
+def momios_respaldo(liga, espn_id):
+    """Momios en el formato de ESPN ({'casa', 'ml', 'ou_linea', 'ou', 'spread'}) con la primera casa de RESPALDO que tenga
+    el 1X2 del partido en API-Football, o None. Goles: la línea de 2.5 (si no está, la más pareja); hándicap: la línea de
+    medio gol (±0.5, ±1.5…) más pareja, como la que suele dar DraftKings."""
+    foto = _leer(RAW / f'af_{liga}.json', None)
+    x = ((foto or {}).get('partidos') or {}).get(str(espn_id)) or {}
+    casas = x.get('casas') or {}
+    for c in RESPALDO:
+        m = casas.get(c) or {}
+        if not all(m.get(k) for k in ('1', 'X', '2')):
+            continue
+        out = {'casa': f"{NOMBRE_CASA[c]} (API-Football; DraftKings no publicó)", 'ml': [_americano(m[k]) for k in ('1', 'X', '2')],
+               'ou_linea': None, 'ou': None, 'spread': []}
+        ous = [(float(k[2:]), m[k], m.get('U:' + k[2:])) for k in m if k.startswith('O:') and m.get('U:' + k[2:])]
+        ous = [o for o in ous if abs(o[0]) % 1 == 0.5]          # solo medio gol (sin líneas de cuarto ni enteras)
+        if ous:
+            ln = next((o for o in ous if o[0] == 2.5), None) or min(ous, key=lambda o: abs(o[1] - o[2]))
+            out['ou_linea'], out['ou'] = ln[0], [_americano(ln[1]), _americano(ln[2])]
+        hs = []
+        for k, v in m.items():
+            if k.startswith('H1:') and abs(float(k[3:])) % 1 == 0.5:
+                L = float(k[3:])
+                otro = m.get(f'H2:{-L:+g}')
+                if otro:
+                    hs.append((abs(v - otro), f'{L:+g}', v, f'{-L:+g}', otro))
+        if hs:
+            _, l1, d1, l2, d2 = min(hs)
+            out['spread'] = [[l1, _americano(d1)], [l2, _americano(d2)]]
+        return out
+    return None
