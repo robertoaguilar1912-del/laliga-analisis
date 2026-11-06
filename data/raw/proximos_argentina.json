@@ -5,7 +5,7 @@
   "estadio": "Estadio Libertadores de América",
   "local_espn": "Independiente",
   "visita_espn": "Deportivo Riestra",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Pedro Bidegain",
   "local_espn": "San Lorenzo",
   "visita_espn": "Platense",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -303,7 +303,7 @@
   "estadio": "15 de Abril",
   "local_espn": "Unión (Santa Fe)",
   "visita_espn": "Vélez Sarsfield",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -464,7 +464,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
+    115,
     -155
    ],
    "spread": [
@@ -497,8 +497,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
-    -170
+    120,
+    -160
    ],
    "spread": [
     [
@@ -524,23 +524,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
-    205,
-    130
+    255,
+    165,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    120,
-    -160
+    130,
+    -175
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -195
     ],
     [
      "-0.5",
-     120
+     140
     ]
    ]
   }
