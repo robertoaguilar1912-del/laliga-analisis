@@ -129,7 +129,7 @@
 },
 "401841670": {
 "fotmob": 1000019632,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T16:19+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -139,6 +139,15 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 2115119.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Marcelo Miño",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 565587.0,
 "titular": false,
 "importante": true
 },
@@ -171,7 +180,7 @@
 }
 ],
 "valor_xi": 8251539.0,
-"perdida": 0.2563302433642985,
+"perdida": 0.3248734569393661,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -200,6 +209,15 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1703475.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Mateo Martínez",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
 "titular": true,
 "importante": true
 },
@@ -442,69 +460,6 @@
 ],
 "valor_xi": 16219452.0,
 "perdida": 0.5920200633165658,
-"perdida_duda": 0.0
-}
-},
-"401841667": {
-"fotmob": 1000019631,
-"visto": "2026-11-06T00:09+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Jeremías Merlo",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 1255235.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Pedro Silva Torrejón",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 747599.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Agustín Colazo",
-"tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
-"valor": 544891.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Bautista Barros Schelotto",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 322673.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Gonzalo Errecalde",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 315830.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 17382753.0,
-"perdida": 0.07221151908446263,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [],
-"valor_xi": 13325069.0,
-"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
