@@ -5,32 +5,10 @@
   "estadio": "Nou Estadi Castalia",
   "local_espn": "Castellón",
   "visita_espn": "Eibar",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_POSTPONED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -165,
-    320,
-    400
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -175,
-    130
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -180
-    ],
-    [
-     "+0.5",
-     130
-    ]
-   ]
-  }
+  "momios": null
  },
  {
   "id": "401883306",
@@ -56,18 +34,18 @@
    "casa": "DraftKings",
    "ml": [
     175,
-    220,
+    225,
     155
    ],
    "ou_linea": 2.5,
    "ou": [
     100,
-    -140
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -210
+     -200
     ],
     [
      "-0.5",
@@ -88,23 +66,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
+    -195,
     370,
     425
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
+    110,
     -145
    ],
    "spread": [
     [
      "-1.5",
-     120
+     125
     ],
     [
      "+1.5",
-     -180
+     -175
     ]
    ]
   }
@@ -123,12 +101,12 @@
    "ml": [
     100,
     250,
-    250
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -125
+    -120
    ],
    "spread": [
     [
@@ -137,7 +115,7 @@
     ],
     [
      "+0.5",
-     -140
+     -130
     ]
    ]
   }
@@ -192,7 +170,7 @@
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -206,7 +184,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    245,
+    210
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     110
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "401883138",
@@ -260,12 +260,12 @@
    "ou_linea": 2.5,
    "ou": [
     -105,
-    -135
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -160
     ],
     [
      "+0.5",
