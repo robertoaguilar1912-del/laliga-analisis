@@ -1,7 +1,7 @@
 {
 "401880167": {
 "fotmob": 5836927,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -24,20 +24,20 @@
 "importante": true
 },
 {
-"nombre": "David Ozoh",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 5215529.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Eiran Cashin",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 4974342.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "David Ozoh",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5215529.0,
 "titular": false,
 "importante": true
 },
@@ -94,14 +94,50 @@
 "valor": 1225518.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Ryan Hedges",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 319438.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Joe Ward",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 317648.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 28047073.0,
-"perdida": 0.9798494837589647,
-"perdida_duda": 0.07303457298378337
+"perdida": 0.7938932165934035,
+"perdida_duda": 0.25899084014934465
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Gavin Bazunu",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 9155712.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jayden Nelson",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 1219188.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Ethan Erhahon",
 "tipo": "Lesión",
@@ -109,6 +145,15 @@
 "duda": false,
 "valor": 867036.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Atsuki Ito",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1631934.0,
+"titular": true,
 "importante": true
 },
 {
@@ -130,9 +175,18 @@
 "importante": false
 },
 {
-"nombre": "John McAtee",
+"nombre": "Eoin Toal",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
+"duda": false,
+"valor": 361351.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "John McAtee",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
 "duda": false,
 "valor": 335268.0,
 "titular": false,
@@ -140,13 +194,13 @@
 }
 ],
 "valor_xi": 13483371.0,
-"perdida": 0.06430409724689767,
-"perdida_duda": 0.038694477812707226
+"perdida": 0.8337630107485732,
+"perdida_duda": 0.15972756367825228
 }
 },
 "401880170": {
 "fotmob": 5836924,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -210,7 +264,7 @@
 },
 "401880166": {
 "fotmob": 5836928,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -346,7 +400,7 @@
 },
 "401880161": {
 "fotmob": 5836933,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -446,7 +500,7 @@
 },
 "401880172": {
 "fotmob": 5836922,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -528,7 +582,7 @@
 },
 "401880171": {
 "fotmob": 5836923,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -576,15 +630,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Konstantinos Mavropanos",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 15472559.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Keiber Lamadrid",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -595,13 +640,13 @@
 }
 ],
 "valor_xi": 194707313.0,
-"perdida": 0.07946573121267407,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401880169": {
 "fotmob": 5836925,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -624,20 +669,11 @@
 "importante": true
 },
 {
-"nombre": "Alex Robertson",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 1587133.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "William Fish",
+"nombre": "Perry Ng",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 1029772.0,
+"valor": 877655.0,
 "titular": true,
 "importante": true
 },
@@ -652,8 +688,8 @@
 }
 ],
 "valor_xi": 15864136.0,
-"perdida": 0.3393237425599478,
-"perdida_duda": 0.06491194982191277
+"perdida": 0.23927839499106665,
+"perdida_duda": 0.055323214576577004
 },
 "visita": {
 "faltan": [
@@ -719,7 +755,7 @@
 },
 "401880168": {
 "fotmob": 5836926,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -774,7 +810,7 @@
 },
 "401880165": {
 "fotmob": 5836929,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -838,7 +874,7 @@
 },
 "401880164": {
 "fotmob": 5836930,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -911,7 +947,7 @@
 },
 "401880163": {
 "fotmob": 5836931,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -975,7 +1011,7 @@
 },
 "401880162": {
 "fotmob": 5836932,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

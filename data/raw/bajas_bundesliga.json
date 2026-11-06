@@ -1,7 +1,7 @@
 {
 "401884739": {
 "fotmob": 5881218,
-"visto": "2026-11-06T17:30+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -137,10 +137,19 @@
 },
 "401884745": {
 "fotmob": 5881215,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Serhou Guirassy",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 29675505.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Giannis Konstantelias",
 "tipo": "Lesión",
@@ -178,7 +187,7 @@
 "importante": false
 }
 ],
-"valor_xi": 388374714.0,
+"valor_xi": 377488694.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -219,7 +228,7 @@
 },
 "401884740": {
 "fotmob": 5881220,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -269,7 +278,7 @@
 "importante": false
 }
 ],
-"valor_xi": 100180014.0,
+"valor_xi": 91721806.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -328,7 +337,7 @@
 },
 "401884744": {
 "fotmob": 5881222,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -360,8 +369,8 @@
 "importante": false
 }
 ],
-"valor_xi": 294352512.0,
-"perdida": 0.1137880454031933,
+"valor_xi": 267725676.0,
+"perdida": 0.12510491149156722,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -428,7 +437,7 @@
 },
 "401884737": {
 "fotmob": 5881221,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -487,7 +496,7 @@
 "importante": false
 }
 ],
-"valor_xi": 24134430.0,
+"valor_xi": 19663929.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -510,16 +519,25 @@
 "valor": 657076.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Robin Koch",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 10430248.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 195859430.0,
+"valor_xi": 209591752.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401884743": {
 "fotmob": 5881223,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -567,10 +585,19 @@
 "valor": 1261961.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Atakan Karazor",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 3692955.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 201777414.0,
-"perdida": 0.3015213684917183,
+"valor_xi": 192503119.0,
+"perdida": 0.3160478766060928,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -664,7 +691,7 @@
 },
 "401884738": {
 "fotmob": 5881216,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -678,20 +705,20 @@
 "importante": true
 },
 {
-"nombre": "Ragnar Ache",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 9680720.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Rav van den Berg",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 7807939.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Ragnar Ache",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 9680720.0,
 "titular": false,
 "importante": true
 },
@@ -724,8 +751,8 @@
 }
 ],
 "valor_xi": 110709032.0,
-"perdida": 0.24765166404851233,
-"perdida_duda": 0.0
+"perdida": 0.16020875333821002,
+"perdida_duda": 0.0874429107103023
 },
 "visita": {
 "faltan": [
@@ -800,19 +827,10 @@
 },
 "401884741": {
 "fotmob": 5881217,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Philipp Treu",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 14467905.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Patrick Osterhage",
 "tipo": "Lesión",
@@ -834,7 +852,7 @@
 ],
 "valor_xi": 113231486.0,
 "perdida": 0.0,
-"perdida_duda": 0.12777280870446228
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -891,7 +909,7 @@
 },
 "401884742": {
 "fotmob": 5881219,
-"visto": "2026-11-06T00:09+00:00",
+"visto": "2026-11-06T17:54+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -919,6 +937,15 @@
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 13520437.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Adam Hložek",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 12811239.0,
 "titular": false,
 "importante": false
 },
@@ -968,8 +995,8 @@
 "importante": false
 }
 ],
-"valor_xi": 163746921.0,
-"perdida": 0.3261954525544941,
+"valor_xi": 167783298.0,
+"perdida": 0.3183481409454712,
 "perdida_duda": 0.0
 },
 "visita": {

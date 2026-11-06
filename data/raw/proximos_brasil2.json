@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    240,
-    130
+    180,
+    235,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -110
+    -105,
+    -125
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -190
     ],
     [
      "-0.5",
-     120
+     135
     ]
    ]
   }
@@ -176,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    350,
-    -210
+    800,
+    500,
+    -380
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -185
+    105,
+    -155
    ],
    "spread": [
     [
      "+1.5",
-     -175
+     100
     ],
     [
      "-1.5",
-     115
+     -150
     ]
    ]
   }
@@ -297,6 +297,17 @@
   }
  },
  {
+  "id": "401860435",
+  "utc": "2026-11-11T22:00Z",
+  "estadio": "Estadio VGD",
+  "local_espn": "Londrina",
+  "visita_espn": "Náutico",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": null
+ },
+ {
   "id": "401860432",
   "utc": "2026-11-14T19:30Z",
   "estadio": "Estádio Raimundo Sampaio (Independência)",
@@ -357,17 +368,6 @@
   "estadio": "Alfredo Jaconi",
   "local_espn": "Juventude",
   "visita_espn": "Botafogo-SP",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401860435",
-  "utc": "2026-11-14T19:30Z",
-  "estadio": "Estadio VGD",
-  "local_espn": "Londrina",
-  "visita_espn": "Náutico",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
