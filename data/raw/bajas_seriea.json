@@ -1,7 +1,7 @@
 {
 "401874815": {
 "fotmob": 5749749,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -92,7 +92,7 @@
 },
 "401874791": {
 "fotmob": 5749741,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -174,7 +174,7 @@
 },
 "401874811": {
 "fotmob": 5749748,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -292,7 +292,7 @@
 },
 "401874974": {
 "fotmob": 5749747,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -342,8 +342,8 @@
 {
 "nombre": "Jay Enem",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 7456381.0,
 "titular": false,
 "importante": false
@@ -351,8 +351,8 @@
 {
 "nombre": "Lorenzo De Silvestri",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 283875.0,
 "titular": false,
 "importante": false
@@ -365,7 +365,7 @@
 },
 "401874803": {
 "fotmob": 5749740,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -474,7 +474,7 @@
 },
 "401874810": {
 "fotmob": 5749746,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -619,7 +619,7 @@
 },
 "401875018": {
 "fotmob": 5749743,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -710,7 +710,7 @@
 },
 "401874800": {
 "fotmob": 5749745,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -855,7 +855,7 @@
 },
 "401874808": {
 "fotmob": 5749744,
-"visto": "2026-11-05T19:24+00:00",
+"visto": "2026-11-06T00:09+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -937,8 +937,8 @@
 },
 "401875003": {
 "fotmob": 5749742,
-"visto": "2026-11-05T19:24+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-06T00:09+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -1012,15 +1012,6 @@
 "importante": true
 },
 {
-"nombre": "Weston McKennie",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 31534855.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Manuel Locatelli",
 "tipo": "Lesión",
 "regreso": "finales de marzo de 2027",
@@ -1055,11 +1046,20 @@
 "valor": 11631902.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Weston McKennie",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 31534855.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 311247451.0,
-"perdida": 0.4857678207941372,
-"perdida_duda": 0.10131763295950655
+"valor_xi": 314057319.0,
+"perdida": 0.4814216604835756,
+"perdida_duda": 0.0
 }
 }
 }

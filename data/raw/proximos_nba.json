@@ -27,10 +27,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -114,
-    -104
+    -121,
+    102
    ],
    "ml_abre": [
     -118,
@@ -38,15 +38,15 @@
    ],
    "spread": [
     -1.5,
-    -104,
+    -108,
     1.5,
-    -116
+    -112
    ],
    "spread_abre": -1.5,
    "total": [
-    221.5,
-    -113,
-    -107
+    222.5,
+    -114,
+    -106
    ],
    "total_abre": 224.5
   }
@@ -79,26 +79,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -269,
-    221
+    -161,
+    136
    ],
    "ml_abre": [
     -164,
     138
    ],
    "spread": [
-    -6.5,
-    -118,
-    6.5,
-    -103
+    -3.5,
+    -108,
+    3.5,
+    -112
    ],
    "spread_abre": -4.5,
    "total": [
-    233.5,
-    -113,
-    -107
+    235.5,
+    -114,
+    -106
    ],
    "total_abre": 238.5
   }
@@ -188,7 +188,30 @@
     "4-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    -124
+   ],
+   "ml_abre": [
+    -125,
+    105
+   ],
+   "spread": [
+    1.5,
+    -110,
+    -1.5,
+    -110
+   ],
+   "spread_abre": 2.5,
+   "total": [
+    229.5,
+    -110,
+    -110
+   ],
+   "total_abre": 233.5
+  }
  },
  {
   "id": "401909290",
@@ -217,7 +240,30 @@
     "0-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -252,
+    208
+   ],
+   "ml_abre": [
+    -252,
+    208
+   ],
+   "spread": [
+    -7.5,
+    -110,
+    7.5,
+    -110
+   ],
+   "spread_abre": -7.5,
+   "total": [
+    223.5,
+    -115,
+    -106
+   ],
+   "total_abre": 223.5
+  }
  },
  {
   "id": "401909291",
@@ -275,7 +321,30 @@
     "2-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    197,
+    -239
+   ],
+   "ml_abre": [
+    187,
+    -226
+   ],
+   "spread": [
+    7.5,
+    -110,
+    -7.5,
+    -110
+   ],
+   "spread_abre": 7.5,
+   "total": [
+    231.5,
+    -110,
+    -110
+   ],
+   "total_abre": 231.5
+  }
  },
  {
   "id": "401909293",
@@ -304,7 +373,30 @@
     "3-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    139,
+    -165
+   ],
+   "ml_abre": [
+    157,
+    -188
+   ],
+   "spread": [
+    4.5,
+    -110,
+    -4.5,
+    -110
+   ],
+   "spread_abre": 5.5,
+   "total": [
+    229.5,
+    -105,
+    -115
+   ],
+   "total_abre": 229.5
+  }
  },
  {
   "id": "401909294",
@@ -333,7 +425,30 @@
     "5-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -128,
+    108
+   ],
+   "ml_abre": [
+    -162,
+    136
+   ],
+   "spread": [
+    -2.5,
+    -106,
+    2.5,
+    -114
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    233.5,
+    -114,
+    -106
+   ],
+   "total_abre": 238.5
+  }
  },
  {
   "id": "401909295",
@@ -362,7 +477,30 @@
     "2-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    610,
+    -900
+   ],
+   "ml_abre": [
+    640,
+    -970
+   ],
+   "spread": [
+    15.5,
+    -110,
+    -15.5,
+    -110
+   ],
+   "spread_abre": 15.5,
+   "total": [
+    228.5,
+    -110,
+    -110
+   ],
+   "total_abre": 228.5
+  }
  },
  {
   "id": "401909938",
@@ -2245,6 +2383,238 @@
     "6-2",
     "4-0",
     "2-2"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909994",
+  "utc": "2026-11-17T00:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "BOS",
+  "visita": "ORL",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Boston Celtics",
+  "visita_espn": "Orlando Magic",
+  "revisado": false,
+  "estadio": "TD Garden",
+  "records": {
+   "home": [
+    "6-2",
+    "5-0",
+    "1-2"
+   ],
+   "away": [
+    "2-5",
+    "0-4",
+    "2-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909995",
+  "utc": "2026-11-17T00:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "CLE",
+  "visita": "CHI",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Cleveland Cavaliers",
+  "visita_espn": "Chicago Bulls",
+  "revisado": false,
+  "estadio": "Rocket Arena",
+  "records": {
+   "home": [
+    "4-4",
+    "3-1",
+    "1-3"
+   ],
+   "away": [
+    "1-7",
+    "0-2",
+    "1-5"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909996",
+  "utc": "2026-11-17T00:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "WSH",
+  "visita": "MEM",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Washington Wizards",
+  "visita_espn": "Memphis Grizzlies",
+  "revisado": false,
+  "estadio": "Capital One Arena",
+  "records": {
+   "home": [
+    "4-4",
+    "2-2",
+    "2-2"
+   ],
+   "away": [
+    "6-2",
+    "2-2",
+    "4-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909997",
+  "utc": "2026-11-17T00:30Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "BKN",
+  "visita": "PHI",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Brooklyn Nets",
+  "visita_espn": "Philadelphia 76ers",
+  "revisado": false,
+  "estadio": "Barclays Center",
+  "records": {
+   "home": [
+    "2-6",
+    "1-3",
+    "1-3"
+   ],
+   "away": [
+    "8-1",
+    "4-1",
+    "4-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909998",
+  "utc": "2026-11-17T00:30Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIA",
+  "visita": "HOU",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Miami Heat",
+  "visita_espn": "Houston Rockets",
+  "revisado": false,
+  "estadio": "Kaseya Center",
+  "records": {
+   "home": [
+    "3-5",
+    "1-3",
+    "2-2"
+   ],
+   "away": [
+    "7-2",
+    "4-1",
+    "3-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909999",
+  "utc": "2026-11-17T01:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIN",
+  "visita": "POR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Minnesota Timberwolves",
+  "visita_espn": "Portland Trail Blazers",
+  "revisado": false,
+  "estadio": "Target Center",
+  "records": {
+   "home": [
+    "6-3",
+    "3-1",
+    "3-2"
+   ],
+   "away": [
+    "6-1",
+    "1-1",
+    "5-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910000",
+  "utc": "2026-11-17T01:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "NO",
+  "visita": "GS",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "New Orleans Pelicans",
+  "visita_espn": "Golden State Warriors",
+  "revisado": false,
+  "estadio": "Smoothie King Center",
+  "records": {
+   "home": [
+    "4-4",
+    "3-2",
+    "1-2"
+   ],
+   "away": [
+    "5-3",
+    "3-1",
+    "2-2"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910001",
+  "utc": "2026-11-17T02:00Z",
+  "fecha": "2026-11-16",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DEN",
+  "visita": "PHX",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Denver Nuggets",
+  "visita_espn": "Phoenix Suns",
+  "revisado": false,
+  "estadio": "Ball Arena",
+  "records": {
+   "home": [
+    "4-3",
+    "2-2",
+    "2-1"
+   ],
+   "away": [
+    "1-5",
+    "1-2",
+    "0-3"
    ]
   },
   "momios": null

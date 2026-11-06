@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    310,
+    -165,
+    320,
     400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    125
+    -175,
+    130
    ],
    "spread": [
     [
      "-0.5",
-     -185
+     -180
     ],
     [
      "+0.5",
-     125
+     130
     ]
    ]
   }
@@ -61,8 +61,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -145
+    100,
+    -140
    ],
    "spread": [
     [
@@ -128,16 +128,16 @@
    "ou_linea": 2.5,
    "ou": [
     -115,
-    -120
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   }
@@ -220,23 +220,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    215,
-    205
+    140,
+    205,
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    110,
     -150
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -180
+     -185
     ]
    ]
   }
@@ -259,8 +259,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -130
+    -105,
+    -135
    ],
    "spread": [
     [
@@ -379,6 +379,17 @@
   "estadio": "Estadio Municipal Nuevo Pepico Amat",
   "local_espn": "Eldense",
   "visita_espn": "CD Sabadell",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883305",
+  "utc": "2026-11-16T19:30Z",
+  "estadio": "Carlos Belmonte",
+  "local_espn": "Albacete",
+  "visita_espn": "RC Celta Fortuna",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
