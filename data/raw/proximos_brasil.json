@@ -5,7 +5,7 @@
   "estadio": "Allianz Parque",
   "local_espn": "Palmeiras",
   "visita_espn": "Remo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -164,10 +164,10 @@
     300,
     310
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -185,
-    135
+    135,
+    -180
    ],
    "spread": [
     [
@@ -177,6 +177,122 @@
     [
      "+0.5",
      100
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Cruzeiro": [
+    [
+     "337996",
+     "Otávio Costa",
+     "G"
+    ],
+    [
+     "238734",
+     "Gabriel Rojas",
+     "D"
+    ],
+    [
+     "236111",
+     "Fabrício Bruno",
+     "D"
+    ],
+    [
+     "363020",
+     "Jonathan Jesus",
+     "D"
+    ],
+    [
+     "108342",
+     "Fagner",
+     "D"
+    ],
+    [
+     "210135",
+     "Gerson",
+     "M"
+    ],
+    [
+     "402423",
+     "Zé Lucas",
+     "M"
+    ],
+    [
+     "371534",
+     "Keny Arroyo",
+     "M"
+    ],
+    [
+     "227737",
+     "Bruno Rodrigues",
+     "M"
+    ],
+    [
+     "77577",
+     "Lucas Romero",
+     "M"
+    ],
+    [
+     "280978",
+     "Kaio Jorge",
+     "F"
+    ]
+   ],
+   "Bahia": [
+    [
+     "224106",
+     "Ronaldo",
+     "G"
+    ],
+    [
+     "252973",
+     "Kanu",
+     "CD-L"
+    ],
+    [
+     "219090",
+     "David Duarte",
+     "CD-R"
+    ],
+    [
+     "304757",
+     "Luciano Juba",
+     "LB"
+    ],
+    [
+     "334243",
+     "Marcos Victor",
+     "RB"
+    ],
+    [
+     "285757",
+     "Nicolás Acevedo",
+     "CM"
+    ],
+    [
+     "266664",
+     "Rodrigo Nestor",
+     "LM"
+    ],
+    [
+     "253796",
+     "Erick",
+     "RM"
+    ],
+    [
+     "318291",
+     "Alejo Veliz",
+     "F"
+    ],
+    [
+     "199017",
+     "Éverton Ribeiro",
+     "LF"
+    ],
+    [
+     "124439",
+     "Cristian Olivera",
+     "RF"
     ]
    ]
   }

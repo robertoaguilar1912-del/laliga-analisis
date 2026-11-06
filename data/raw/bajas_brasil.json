@@ -1,7 +1,7 @@
 {
 "401841300": {
 "fotmob": 5103697,
-"visto": "2026-11-05T23:20+00:00",
+"visto": "2026-11-06T00:04+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,8 +74,8 @@
 },
 "401841303": {
 "fotmob": 5103699,
-"visto": "2026-11-05T23:20+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-06T00:04+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -84,34 +84,7 @@
 "regreso": "hasta el 6 de noviembre",
 "duda": false,
 "valor": 16096404.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "João Marcelo",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 2193591.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "William",
-"tipo": "Sanción",
-"regreso": "hasta el 6 de noviembre",
-"duda": false,
-"valor": 1354091.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Lucas Villalba",
-"tipo": "Sanción",
-"regreso": "hasta el 6 de noviembre",
-"duda": false,
-"valor": 907238.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -133,6 +106,33 @@
 "importante": false
 },
 {
+"nombre": "João Marcelo",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 2193591.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "William",
+"tipo": "Sanción",
+"regreso": "hasta el 6 de noviembre",
+"duda": false,
+"valor": 1354091.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Lucas Villalba",
+"tipo": "Sanción",
+"regreso": "hasta el 6 de noviembre",
+"duda": false,
+"valor": 907238.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Felipe Morais",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -142,12 +142,21 @@
 "importante": false
 }
 ],
-"valor_xi": 130832627.0,
-"perdida": 0.1570810314769572,
+"valor_xi": 122373429.0,
+"perdida": 0.13153512271033935,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Marco Moreno",
+"tipo": "Lesión",
+"regreso": "unos días",
+"duda": false,
+"valor": 953283.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Léo Vieira",
 "tipo": "Lesión",
@@ -158,7 +167,7 @@
 "importante": false
 }
 ],
-"valor_xi": 88791306.0,
+"valor_xi": 63035603.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
