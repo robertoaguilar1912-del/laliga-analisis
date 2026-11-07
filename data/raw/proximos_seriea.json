@@ -5,7 +5,7 @@
   "estadio": "Unipol Domus",
   "local_espn": "Cagliari",
   "visita_espn": "Frosinone",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Stadio Olimpico Grande Torino",
   "local_espn": "Torino",
   "visita_espn": "Lecce",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-italian-serie-a",
   "neutral": false,
   "momios": {
@@ -342,9 +342,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -330,
-    450,
-    700
+    -310,
+    425,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -354,11 +354,11 @@
    "spread": [
     [
      "-1.5",
-     -125
+     -120
     ],
     [
      "+1.5",
-     -110
+     -115
     ]
    ]
   }
