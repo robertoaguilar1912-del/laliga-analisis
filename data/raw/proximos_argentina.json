@@ -5,7 +5,7 @@
   "estadio": "Estadio Víctor Antonio Legrotaglie",
   "local_espn": "Gimnasia (Mendoza)",
   "visita_espn": "Independiente Rivadavia",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Mario Alberto Kempes",
   "local_espn": "Talleres (Córdoba)",
   "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
@@ -310,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    205,
-    300
+    210,
+    310
    ],
    "ou_linea": 1.5,
    "ou": [
-    -180,
-    135
+    -185,
+    140
    ],
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
-     -140
+     -130
     ]
    ]
   }
