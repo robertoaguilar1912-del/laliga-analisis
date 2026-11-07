@@ -83,7 +83,7 @@
 },
 "401883121": {
 "fotmob": 5868527,
-"visto": "2026-11-07T16:35+00:00",
+"visto": "2026-11-07T16:40+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -165,7 +165,7 @@
 },
 "401883143": {
 "fotmob": 5868529,
-"visto": "2026-11-07T16:35+00:00",
+"visto": "2026-11-07T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -238,8 +238,8 @@
 },
 "401883141": {
 "fotmob": 5868532,
-"visto": "2026-11-07T16:35+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T16:40+00:00",
+"xi": "simple",
 "local": {
 "faltan": [
 {
@@ -248,7 +248,7 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 3950623.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -258,7 +258,7 @@
 "duda": false,
 "valor": 515007.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Rubén Pulido",
@@ -266,22 +266,13 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 388174.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Miguel Atienza",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 925328.0,
 "titular": false,
-"importante": true
+"importante": false
 }
 ],
-"valor_xi": 13733604.0,
-"perdida": 0.35342536452922335,
-"perdida_duda": 0.06737692451304116
+"valor_xi": 14318355.0,
+"perdida": 0.27591318974840334,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -291,8 +282,8 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 361420.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Javi Moreno",
@@ -340,8 +331,8 @@
 "importante": false
 }
 ],
-"valor_xi": 5442295.0,
-"perdida": 0.0664094834991488,
+"valor_xi": 6162189.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
