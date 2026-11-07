@@ -1,7 +1,7 @@
 {
 "401841672": {
 "fotmob": 1000019628,
-"visto": "2026-11-07T17:35+00:00",
+"visto": "2026-11-07T17:39+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401841669": {
 "fotmob": 1000019626,
-"visto": "2026-11-07T17:35+00:00",
+"visto": "2026-11-07T17:39+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,34 +192,16 @@
 },
 "401841666": {
 "fotmob": 1000019619,
-"visto": "2026-11-07T17:35+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T17:39+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Tomás O'Connor",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 655611.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Imanol González",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 548446.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Germán Guiffrey",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 448120.0,
 "titular": false,
 "importante": true
 },
@@ -233,21 +215,12 @@
 "importante": false
 }
 ],
-"valor_xi": 13008540.0,
-"perdida": 0.12700710456361744,
+"valor_xi": 13311260.0,
+"perdida": 0.04120165934704904,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Sheyko Studer",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 7103861.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Maximiliano Salas",
 "tipo": "Lesión",
@@ -256,6 +229,15 @@
 "valor": 2498380.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Leonard Costa",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 929169.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Luciano Gómez",
@@ -267,8 +249,8 @@
 "importante": false
 }
 ],
-"valor_xi": 16219452.0,
-"perdida": 0.5920200633165658,
+"valor_xi": 15885814.0,
+"perdida": 0.1572711351146375,
 "perdida_duda": 0.0
 }
 },
@@ -383,7 +365,7 @@
 },
 "401841663": {
 "fotmob": 1000019630,
-"visto": "2026-11-07T17:35+00:00",
+"visto": "2026-11-07T17:39+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -501,8 +483,8 @@
 },
 "401841661": {
 "fotmob": 1000019624,
-"visto": "2026-11-07T17:35+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T17:39+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -515,6 +497,15 @@
 "importante": true
 },
 {
+"nombre": "Valentín Fascendini",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1332208.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Matías Gómez",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -524,8 +515,8 @@
 "importante": false
 }
 ],
-"valor_xi": 19332840.0,
-"perdida": 0.08853619023381976,
+"valor_xi": 22805779.0,
+"perdida": 0.07505360812274818,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -546,7 +537,7 @@
 "duda": false,
 "valor": 1171624.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Gabriel Neves",
@@ -556,10 +547,19 @@
 "valor": 944198.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Guido Carrillo",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 543814.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 16735180.0,
-"perdida": 0.6081396794058982,
+"valor_xi": 15893584.0,
+"perdida": 0.7140586415247813,
 "perdida_duda": 0.0
 }
 }
