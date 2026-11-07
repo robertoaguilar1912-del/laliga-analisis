@@ -1,19 +1,10 @@
 {
 "401880170": {
 "fotmob": 5836924,
-"visto": "2026-11-07T11:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T11:35+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Lorent Tolaj",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5480382.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Noah Eile",
 "tipo": "Lesión",
@@ -24,9 +15,9 @@
 "importante": true
 }
 ],
-"valor_xi": 37113406.0,
+"valor_xi": 37971491.0,
 "perdida": 0.0,
-"perdida_duda": 0.25264598458034276
+"perdida_duda": 0.1026077959382738
 },
 "visita": {
 "faltan": [
@@ -67,15 +58,15 @@
 "importante": false
 }
 ],
-"valor_xi": 45504636.0,
-"perdida": 0.6117871374688065,
+"valor_xi": 43072945.0,
+"perdida": 0.6463256923806812,
 "perdida_duda": 0.0
 }
 },
 "401880166": {
 "fotmob": 5836928,
-"visto": "2026-11-07T11:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T11:35+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -84,7 +75,7 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 4969038.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -94,15 +85,6 @@
 "duda": true,
 "valor": 1571095.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Iyad Mohamed",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 538153.0,
-"titular": true,
 "importante": true
 },
 {
@@ -158,11 +140,20 @@
 "valor": 292268.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Iyad Mohamed",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 538153.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 26194509.0,
-"perdida": 0.18969769580334567,
-"perdida_duda": 0.08052252477799832
+"valor_xi": 23100865.0,
+"perdida": 0.21510181545149934,
+"perdida_duda": 0.06801022385958275
 },
 "visita": {
 "faltan": [
@@ -194,15 +185,6 @@
 "importante": false
 },
 {
-"nombre": "Sam Gallagher",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 532137.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Aaron Cresswell",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -212,15 +194,15 @@
 "importante": false
 }
 ],
-"valor_xi": 66168538.0,
+"valor_xi": 63133952.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401880161": {
 "fotmob": 5836933,
-"visto": "2026-11-07T11:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T11:35+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -278,9 +260,9 @@
 "importante": false
 }
 ],
-"valor_xi": 64293730.0,
-"perdida": 0.0903927956894086,
-"perdida_duda": 0.09444375058034431
+"valor_xi": 63124964.0,
+"perdida": 0.0920664287428346,
+"perdida_duda": 0.09619238753150021
 },
 "visita": {
 "faltan": [
@@ -291,7 +273,7 @@
 "duda": false,
 "valor": 13942639.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Boubacar Traoré",
@@ -321,8 +303,8 @@
 "importante": false
 }
 ],
-"valor_xi": 135716591.0,
-"perdida": 0.10273348967334436,
+"valor_xi": 175103891.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
