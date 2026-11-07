@@ -16,7 +16,7 @@
   "estadio": "Estadio Municipal Nuevo El Arcángel",
   "local_espn": "Córdoba",
   "visita_espn": "Ceuta",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -165,7 +165,7 @@
   "estadio": "Estadio Municipal de Butarque",
   "local_espn": "Leganés",
   "visita_espn": "Albacete",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -376,8 +376,8 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    240,
-    250
+    245,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -409,13 +409,13 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    205,
+    210,
     210
    ],
    "ou_linea": 2.5,
    "ou": [
     110,
-    -150
+    -145
    ],
    "spread": [
     [
@@ -424,7 +424,7 @@
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
