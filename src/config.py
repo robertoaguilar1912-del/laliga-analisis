@@ -136,6 +136,12 @@ LIGAS = {
                         'Ojo con el final de temporada: de septiembre a noviembre los PICK perdieron en la prueba (−10% en 2021-23 y '
                         '−30% en 2024-26), mientras que de junio a agosto ganaron. Esta temporada ya está en esa parte: tómalo con '
                         'mucho cuidado hasta que vuelva la liga en abril.'},
+    # A-League (Australia y Nueva Zelanda, 12 equipos, octubre-mayo; sin descenso; los 6 primeros van a las finales).
+    # Sin archivo de football-data (no hay momios históricos para probar los PICK): resultados de ESPN; API-Football 188
+    # (estadísticas, xG, jugadores, alineaciones, lesiones y momios), FotMob 113 (revisado el 7 nov 2026 con diag_liga.py)
+    'australia': {'nombre': 'A-League', 'fotmob': 113, 'pais': 'Australia', 'espn': 'aus.1', 'solo_espn': True, 'calendario': 'europa',
+                  'api_football': 188, 'copas': {}, 'zonas': 'australia12', 'nuevo': 'es nuevo en la liga', 'oculta': True,
+                  'espn_atras': 6},           # años calendario de resultados de ESPN (para la prueba)
     # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
     'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'api_football': 13, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
@@ -174,6 +180,7 @@ ZONAS = {
     'brasil2': [[1, 4, 'cl', 'Ascenso'], [-4, -1, 'des', 'Descenso']],
     'argentina': [[1, 8, 'cl', 'Playoffs']],
     'colombia': [[1, 8, 'cl', 'Cuadrangulares']],
+    'australia12': [[1, 2, 'cl', 'Finales: directo a semifinal'], [3, 6, 'eu', 'Finales: eliminatoria']],
     'suecia16': [[1, 1, 'cl', 'Champions (previa)'], [2, 3, 'eu', 'Conference (previa)'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
     # por grupo (de 4)
     'libertadores': [[1, 2, 'cl', 'Octavos'], [3, 3, 'eu', 'Pasa a la Sudamericana'], [4, 4, 'des', 'Eliminado']],

@@ -51,7 +51,7 @@ def descargar_football_data(liga):
     if L.get('region'):
         return          # las copas entre ligas las baja europa.descargar() (una vez por región, con sus ligas)
     if L.get('solo_espn'):
-        return descargar_resultados_espn(liga)
+        return descargar_resultados_espn(liga, L.get('espn_atras', 3))
     if L.get('fd_extra'):
         code = L['fd_extra']
         txt = _get(f'https://www.football-data.co.uk/new/{code}.csv', as_json=False)

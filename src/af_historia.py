@@ -42,7 +42,7 @@ EXTRA = {'ned': (88, 'europa'), 'bel': (144, 'europa'), 'sco': (179, 'europa'), 
          'bol': (344, 'anual'), 'ven': (299, 'anual')}
 ATRAS_EXTRA = 1
 # primero América (donde football-data no trae remates), después Europa y las copas
-ORDEN = ['ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia',
+ORDEN = ['ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia', 'australia',
          'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'ligue1', 'portugal',
          'champions', 'europa', 'conference', 'libertadores', 'sudamericana'] + list(EXTRA)
 

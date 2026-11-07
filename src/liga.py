@@ -77,6 +77,9 @@ def cargar_solo_espn(liga):
         raise FileNotFoundError(p)
     df = pd.read_csv(p, dtype={'Season': str})
     df['Date'] = pd.to_datetime(df.Date)
+    if LIGAS[liga].get('calendario') == 'europa':     # ESPN se pide por año calendario; la temporada va de julio a junio
+        ini = np.where(df.Date.dt.month >= 7, df.Date.dt.year, df.Date.dt.year - 1)
+        df['Season'] = [f'{a % 100:02d}{(a + 1) % 100:02d}' for a in ini]
     return df.sort_values(['Date', 'HomeTeam']).reset_index(drop=True)
 
 
