@@ -1,8 +1,8 @@
 {
 "761934": {
 "fotmob": 5071489,
-"visto": "2026-11-07T20:15+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T20:20+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -29,7 +29,7 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 1331722.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -60,8 +60,8 @@
 "importante": true
 }
 ],
-"valor_xi": 12955124.0,
-"perdida": 0.6403470163620202,
+"valor_xi": 11047725.0,
+"perdida": 0.7509034665508058,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -112,14 +112,14 @@
 "importante": false
 }
 ],
-"valor_xi": 26722852.0,
-"perdida": 0.08248367352406846,
+"valor_xi": 18921994.0,
+"perdida": 0.11648872735082783,
 "perdida_duda": 0.0
 }
 },
 "761935": {
 "fotmob": 5071485,
-"visto": "2026-11-07T20:15+00:00",
+"visto": "2026-11-07T20:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -174,8 +174,8 @@
 },
 "761936": {
 "fotmob": 5071487,
-"visto": "2026-11-07T20:15+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T20:20+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -202,16 +202,7 @@
 "regreso": "finales de diciembre",
 "duda": false,
 "valor": 964386.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Kye Rowles",
-"tipo": "Sanción",
-"regreso": "hasta el 7 de noviembre",
-"duda": false,
-"valor": 659014.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -222,6 +213,15 @@
 "valor": 5130872.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Kye Rowles",
+"tipo": "Sanción",
+"regreso": "hasta el 7 de noviembre",
+"duda": false,
+"valor": 659014.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Hosei Kijima",
@@ -251,9 +251,9 @@
 "importante": false
 }
 ],
-"valor_xi": 9508017.0,
-"perdida": 0.9593052894204964,
-"perdida_duda": 0.5396363931616867
+"valor_xi": 8080213.0,
+"perdida": 1.0472591502228963,
+"perdida_duda": 0.6349921716172581
 },
 "visita": {
 "faltan": [
@@ -264,15 +264,6 @@
 "duda": false,
 "valor": 3835161.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Andrés Perea",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1689201.0,
-"titular": true,
 "importante": true
 },
 {
@@ -328,28 +319,28 @@
 "valor": 1762890.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Andrés Perea",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1689201.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 47789574.0,
-"perdida": 0.08025099784316972,
-"perdida_duda": 0.03534664276354504
+"valor_xi": 42067926.0,
+"perdida": 0.09116591580958852,
+"perdida_duda": 0.0
 }
 },
 "761937": {
 "fotmob": 5071486,
-"visto": "2026-11-07T20:15+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T20:20+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Miles Robinson",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 1997535.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Tyrell Malacia",
 "tipo": "Lesión",
@@ -357,16 +348,7 @@
 "duda": false,
 "valor": 1714200.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Nick Hagglund",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 161880.0,
-"titular": true,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Julián Malatini",
@@ -376,10 +358,19 @@
 "valor": 1175487.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Nick Hagglund",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 161880.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 26684036.0,
-"perdida": 0.14516600862028517,
+"valor_xi": 41337098.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -390,18 +381,18 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 329235.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 23924079.0,
+"valor_xi": 24962434.0,
 "perdida": 0.0,
-"perdida_duda": 0.013761658285779778
+"perdida_duda": 0.0
 }
 },
 "761938": {
 "fotmob": 5071488,
-"visto": "2026-11-07T20:15+00:00",
+"visto": "2026-11-07T20:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -510,8 +501,8 @@
 },
 "761940": {
 "fotmob": 5071491,
-"visto": "2026-11-07T20:15+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T20:20+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -520,15 +511,6 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 1613180.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Griffin Dorsey",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 962065.0,
 "titular": false,
 "importante": false
 },
@@ -551,8 +533,8 @@
 "importante": false
 }
 ],
-"valor_xi": 35195190.0,
-"perdida": 0.045835240554178,
+"valor_xi": 33107626.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -572,18 +554,18 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 10128790.0,
-"titular": true,
+"titular": false,
 "importante": true
 }
 ],
-"valor_xi": 27662293.0,
-"perdida": 0.14167209493442934,
-"perdida_duda": 0.36615872733326915
+"valor_xi": 20555367.0,
+"perdida": 0.1906545867072089,
+"perdida_duda": 0.4927564659876907
 }
 },
 "761941": {
 "fotmob": 5071492,
-"visto": "2026-11-07T20:15+00:00",
+"visto": "2026-11-07T20:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -602,24 +584,6 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 1028379.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Alejandro Bedoya",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 50000.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Geiner Martínez",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 464629.0,
 "titular": false,
 "importante": false
 }
@@ -674,15 +638,6 @@
 "valor": 607157.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Kobe Franklin",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 397345.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 24842083.0,
@@ -692,7 +647,7 @@
 },
 "761939": {
 "fotmob": 5071490,
-"visto": "2026-11-07T20:15+00:00",
+"visto": "2026-11-07T20:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
