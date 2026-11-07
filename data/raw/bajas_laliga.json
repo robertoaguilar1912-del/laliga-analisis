@@ -1,7 +1,7 @@
 {
 "401882812": {
 "fotmob": 5868125,
-"visto": "2026-11-07T14:15+00:00",
+"visto": "2026-11-07T14:20+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,8 +74,8 @@
 },
 "401882813": {
 "fotmob": 5868124,
-"visto": "2026-11-07T14:15+00:00",
-"xi": "predicted",
+"visto": "2026-11-07T14:20+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -85,7 +85,16 @@
 "duda": false,
 "valor": 4590797.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Jofre Carreras",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2456725.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Kike García",
@@ -104,20 +113,11 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Jofre Carreras",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2456725.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 77995235.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 72905193.0,
+"perdida": 0.0629694101488765,
+"perdida_duda": 0.033697530983835405
 },
 "visita": {
 "faltan": [
@@ -131,15 +131,6 @@
 "importante": true
 },
 {
-"nombre": "Marc Casadó",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 16841351.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Zakaria Eddahchouri",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -149,9 +140,9 @@
 "importante": false
 }
 ],
-"valor_xi": 72532941.0,
-"perdida": 0.13524547419082317,
-"perdida_duda": 0.23218899947818192
+"valor_xi": 77337868.0,
+"perdida": 0.12684280357974181,
+"perdida_duda": 0.0
 }
 },
 "401882811": {

@@ -154,7 +154,7 @@
   "estadio": "Fratton Park",
   "local_espn": "Portsmouth",
   "visita_espn": "Stoke City",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -762,7 +762,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
+    105,
     -135
    ],
    "spread": [
@@ -1073,6 +1073,122 @@
      -190
     ]
    ]
+  },
+  "alineaciones": {
+   "Preston North End": [
+    [
+     "143638",
+     "Lee Nicholls",
+     "G"
+    ],
+    [
+     "179624",
+     "Liam Lindsay",
+     "D"
+    ],
+    [
+     "308243",
+     "Odeluga Offiah",
+     "D"
+    ],
+    [
+     "10176",
+     "Andrew Hughes",
+     "D"
+    ],
+    [
+     "307126",
+     "Andy Moran",
+     "M"
+    ],
+    [
+     "223046",
+     "Jordan Thompson",
+     "M"
+    ],
+    [
+     "221307",
+     "Andrija Vukcevic",
+     "M"
+    ],
+    [
+     "328022",
+     "Stanley Mills",
+     "M"
+    ],
+    [
+     "306013",
+     "Alfie Devine",
+     "F"
+    ],
+    [
+     "240158",
+     "Callum Lang",
+     "F"
+    ],
+    [
+     "313009",
+     "Thierry Small",
+     "F"
+    ]
+   ],
+   "Southampton": [
+    [
+     "305926",
+     "Daniel Peretz",
+     "G"
+    ],
+    [
+     "274893",
+     "Keven Schlotterbeck",
+     "CD-L"
+    ],
+    [
+     "152475",
+     "Jack Stephens",
+     "CD-R"
+    ],
+    [
+     "300103",
+     "Welington",
+     "LB"
+    ],
+    [
+     "204286",
+     "James Bree",
+     "RB"
+    ],
+    [
+     "251631",
+     "Finn Azaz",
+     "AM"
+    ],
+    [
+     "163111",
+     "James Ward-Prowse",
+     "LM"
+    ],
+    [
+     "255916",
+     "Flynn Downes",
+     "RM"
+    ],
+    [
+     "296615",
+     "Lewis Dobbin",
+     "F"
+    ],
+    [
+     "343995",
+     "Léo Scienza",
+     "AM-L"
+    ],
+    [
+     "333631",
+     "Kuryu Matsuki",
+     "AM-R"
+    ]
+   ]
   }
  },
  {
@@ -1242,8 +1358,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    140
+    -175,
+    135
    ],
    "spread": [
     [
