@@ -5,7 +5,7 @@
   "estadio": "La Independencia",
   "local_espn": "Boyacá Chicó FC",
   "visita_espn": "Internacional de Bogotá",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
@@ -160,23 +160,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
-    215,
+    195,
+    225,
     130
    ],
    "ou_linea": 2.5,
    "ou": [
     115,
-    -155
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -175
     ],
     [
      "-0.5",
-     120
+     125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Fortaleza CEIF": [
+    [
+     "285031",
+     "Williams Barlasina",
+     "G"
+    ],
+    [
+     "66822",
+     "David Ramírez",
+     "CD-L"
+    ],
+    [
+     "285359",
+     "Yesid Díaz",
+     "CD-R"
+    ],
+    [
+     "378918",
+     "Santiago Cuero",
+     "LB"
+    ],
+    [
+     "417801",
+     "Joan Cajares",
+     "RB"
+    ],
+    [
+     "233181",
+     "Mariano Vazquez",
+     "AM"
+    ],
+    [
+     "413584",
+     "Santiago Vivas",
+     "LM"
+    ],
+    [
+     "170515",
+     "Leonardo Pico",
+     "RM"
+    ],
+    [
+     "292931",
+     "Franco Pulicastro",
+     "F"
+    ],
+    [
+     "200363",
+     "Sebastián Navarro",
+     "AM-L"
+    ],
+    [
+     "399340",
+     "Edwin Cabezas",
+     "AM-R"
+    ]
+   ],
+   "Independiente Medellín": [
+    [
+     "165698",
+     "Eder Chaux",
+     "G"
+    ],
+    [
+     "323854",
+     "Alfonso Simarra",
+     "CD-L"
+    ],
+    [
+     "383101",
+     "Luis Escorcia",
+     "CD-R"
+    ],
+    [
+     "149496",
+     "Frank Fabra",
+     "LB"
+    ],
+    [
+     "254236",
+     "Esneyder Mena",
+     "RB"
+    ],
+    [
+     "121716",
+     "Daniel Cataño",
+     "AM"
+    ],
+    [
+     "155160",
+     "Didier Moreno",
+     "LM"
+    ],
+    [
+     "403399",
+     "Halam Loboa",
+     "RM"
+    ],
+    [
+     "270236",
+     "Jeison Medina",
+     "F"
+    ],
+    [
+     "365166",
+     "John Montaño",
+     "AM-L"
+    ],
+    [
+     "197533",
+     "Yony González",
+     "AM-R"
     ]
    ]
   }
