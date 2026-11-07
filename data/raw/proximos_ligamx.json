@@ -5,7 +5,7 @@
   "estadio": "Estadio Libertad Financiera",
   "local_espn": "Atlético de San Luis",
   "visita_espn": "FC Juárez",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Victoria",
   "local_espn": "Necaxa",
   "visita_espn": "Tijuana",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -375,14 +375,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    220,
-    265,
-    105
+    225,
+    270,
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    115
+    -155,
+    120
    ],
    "spread": [
     [
@@ -391,7 +391,7 @@
     ],
     [
      "-0.5",
-     -105
+     100
     ]
    ]
   }
@@ -408,23 +408,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
+    -160,
     340,
-    360
+    370
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    105,
     -140
    ],
    "spread": [
     [
      "-0.5",
-     -180
+     -175
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
