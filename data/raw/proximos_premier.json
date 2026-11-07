@@ -5,7 +5,7 @@
   "estadio": "Emirates Stadium",
   "local_espn": "Arsenal",
   "visita_espn": "Hull City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-2.5",
-     110
+     120
     ],
     [
      "+2.5",
-     -155
+     -170
     ]
    ]
   },
@@ -154,15 +154,15 @@
   "estadio": "Craven Cottage",
   "local_espn": "Fulham",
   "visita_espn": "Newcastle United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    275,
-    245
+    -105,
+    280,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,11 @@
    "spread": [
     [
      "-0.5",
-     -105
+     -115
     ],
     [
      "+0.5",
-     -130
+     -120
     ]
    ]
   },
@@ -309,9 +309,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
+    370,
     300,
-    -135
+    -140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -441,9 +441,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
+    280,
     270,
-    265,
-    100
+    -105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -453,11 +453,11 @@
    "spread": [
     [
      "+0.5",
-     -130
+     -125
     ],
     [
      "-0.5",
-     -110
+     -115
     ]
    ]
   }
