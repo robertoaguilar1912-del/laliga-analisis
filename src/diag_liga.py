@@ -45,11 +45,12 @@ if fd:
 
 # momios de partidos ya jugados en el resumen de ESPN (para probar los PICK de una liga sin football-data)
 if espn:
-    for rango in ('20230301-20230310', '20250301-20250310', '20261001-20261031'):
+    for rango in ('2023', '20250301', '20250302', '20261031', '20261101'):
         try:
             ev = requests.get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/scoreboard', params={'dates': rango},
                               headers=UA, timeout=30).json().get('events') or []
-            ev = [e for e in ev if (e.get('competitions') or [{}])[0].get('status', {}).get('type', {}).get('completed')][:2]
+            print('ESPN', rango, len(ev), 'partidos')
+            ev = [e for e in ev if (e.get('status') or {}).get('type', {}).get('completed')][-2:]
             for e in ev:
                 s = requests.get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/summary', params={'event': e['id']},
                                  headers=UA, timeout=30).json()
