@@ -149,155 +149,6 @@
   }
  },
  {
-  "id": "401841661",
-  "utc": "2026-11-07T18:00Z",
-  "estadio": "Mario Alberto Kempes",
-  "local_espn": "Talleres (Córdoba)",
-  "visita_espn": "Estudiantes de La Plata",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    185,
-    220,
-    150
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -160
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -195
-    ],
-    [
-     "-0.5",
-     135
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Talleres (Córdoba)": [
-    [
-     "200935",
-     "Ezequiel Unsain",
-     "G"
-    ],
-    [
-     "318179",
-     "Román Riquelme",
-     "CD-L"
-    ],
-    [
-     "358648",
-     "Santiago Fernández",
-     "CD-R"
-    ],
-    [
-     "192847",
-     "Gabriel Báez",
-     "LB"
-    ],
-    [
-     "276302",
-     "Augusto Schott",
-     "RB"
-    ],
-    [
-     "399687",
-     "Alexandro Maidana",
-     "AM"
-    ],
-    [
-     "309398",
-     "Alejandro Galarza",
-     "LM"
-    ],
-    [
-     "307620",
-     "Mateo Caceres",
-     "RM"
-    ],
-    [
-     "307473",
-     "Agustín Álvarez Martínez",
-     "F"
-    ],
-    [
-     "292245",
-     "Valentin Depietri",
-     "AM-L"
-    ],
-    [
-     "288678",
-     "Rick",
-     "AM-R"
-    ]
-   ],
-   "Estudiantes de La Plata": [
-    [
-     "108622",
-     "Fernando Muslera",
-     "G"
-    ],
-    [
-     "129426",
-     "Marcos Rojo",
-     "CD-L"
-    ],
-    [
-     "154748",
-     "Leandro González Pírez",
-     "CD-R"
-    ],
-    [
-     "301955",
-     "Gastón Benedetti",
-     "LB"
-    ],
-    [
-     "318082",
-     "Eros Mancuso",
-     "RB"
-    ],
-    [
-     "195638",
-     "Joaquín Correa",
-     "AM"
-    ],
-    [
-     "234873",
-     "Alexis Castro",
-     "LM"
-    ],
-    [
-     "240401",
-     "Ezequiel Piovi",
-     "RM"
-    ],
-    [
-     "276024",
-     "Adolfo Gaich",
-     "F"
-    ],
-    [
-     "383022",
-     "Joaquín Tobio Burgos",
-     "AM-L"
-    ],
-    [
-     "302051",
-     "Tiago Palacios",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841672",
   "utc": "2026-11-07T20:30Z",
   "estadio": "Diego Armando Maradona",
@@ -464,7 +315,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
+    -130,
     100
    ],
    "spread": [
@@ -497,17 +348,133 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    125
+    -175,
+    130
    ],
    "spread": [
     [
      "-2.5",
-     130
+     125
     ],
     [
      "+2.5",
-     -185
+     -175
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Rosario Central": [
+    [
+     "195621",
+     "Jeremias Ledesma",
+     "SUB"
+    ],
+    [
+     "307599",
+     "Agustín Sández",
+     "SUB"
+    ],
+    [
+     "289076",
+     "Vicente Pizarro",
+     "SUB"
+    ],
+    [
+     "285885",
+     "Gastón Ávila",
+     "SUB"
+    ],
+    [
+     "400123",
+     "Ignacio Ovando",
+     "SUB"
+    ],
+    [
+     "335238",
+     "Julián Fernández",
+     "SUB"
+    ],
+    [
+     "255295",
+     "Jáminton Campaz",
+     "SUB"
+    ],
+    [
+     "241544",
+     "Enzo Copetti",
+     "SUB"
+    ],
+    [
+     "262567",
+     "Emanuel Coronel",
+     "SUB"
+    ],
+    [
+     "363477",
+     "Alan Rodríguez",
+     "SUB"
+    ],
+    [
+     "300115",
+     "Franco Ibarra",
+     "SUB"
+    ]
+   ],
+   "Estudiantes de Río Cuarto": [
+    [
+     "318303",
+     "Francisco Gualtieri",
+     "G"
+    ],
+    [
+     "361259",
+     "Agustin Quiroga",
+     "D"
+    ],
+    [
+     "200271",
+     "Sergio Ojeda",
+     "D"
+    ],
+    [
+     "403440",
+     "Lautaro Cepeha",
+     "D"
+    ],
+    [
+     "421206",
+     "Benjamin Moyano",
+     "M"
+    ],
+    [
+     "379699",
+     "Tomás González",
+     "M"
+    ],
+    [
+     "287690",
+     "Alejandro Cabrera",
+     "M"
+    ],
+    [
+     "341980",
+     "Gonzalo Gonzalez",
+     "M"
+    ],
+    [
+     "309477",
+     "Fernando Rodríguez",
+     "M"
+    ],
+    [
+     "3100397",
+     "Juan Camilo Chala Castillo",
+     "F"
+    ],
+    [
+     "287691",
+     "Ibrahim Hesar",
+     "F"
     ]
    ]
   }
