@@ -1,0 +1,30 @@
+name: Momios históricos de ESPN
+# Solo a mano: momios de partidos ya jugados del resumen de ESPN (ESPN BET desde fines de 2023, DraftKings desde fines de 2025),
+# para probar los PICK de ligas sin archivo de football-data (A-League).
+on:
+  workflow_dispatch:
+    inputs:
+      liga: {description: 'Liga (clave de config.LIGAS)', default: 'australia'}
+      desde: {description: 'Año desde', default: '2023'}
+permissions:
+  contents: write
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: cd src && python espn_momios_hist.py "${{ github.event.inputs.liga }}" "${{ github.event.inputs.desde }}"
+      - name: Guardar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/espn_momios_*.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Momios históricos de ESPN $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash && git push -q && exit 0; sleep 15; done
+          exit 1
