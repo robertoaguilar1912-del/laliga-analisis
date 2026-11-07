@@ -1,63 +1,5 @@
 [
  {
-  "id": "401909287",
-  "utc": "2026-11-07T00:00Z",
-  "fecha": "2026-11-06",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "ATL",
-  "visita": "WSH",
-  "neutral": false,
-  "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Atlanta Hawks",
-  "visita_espn": "Washington Wizards",
-  "revisado": false,
-  "estadio": "State Farm Arena",
-  "records": {
-   "home": [
-    "5-4",
-    "1-2",
-    "4-2"
-   ],
-   "away": [
-    "4-4",
-    "2-2",
-    "2-2"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909288",
-  "utc": "2026-11-07T00:00Z",
-  "fecha": "2026-11-06",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHA",
-  "visita": "BOS",
-  "neutral": false,
-  "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Charlotte Hornets",
-  "visita_espn": "Boston Celtics",
-  "revisado": false,
-  "estadio": "Spectrum Center",
-  "records": {
-   "home": [
-    "3-6",
-    "2-3",
-    "1-3"
-   ],
-   "away": [
-    "6-2",
-    "5-0",
-    "1-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909289",
   "utc": "2026-11-07T00:30Z",
   "fecha": "2026-11-06",
@@ -67,7 +9,7 @@
   "visita": "PHI",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Philadelphia 76ers",
   "revisado": false,
@@ -125,7 +67,7 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "Oklahoma City Thunder",
   "revisado": false,
@@ -154,7 +96,7 @@
   "visita": "TOR",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Toronto Raptors",
   "revisado": false,
@@ -183,7 +125,7 @@
   "visita": "MIN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Minnesota Timberwolves",
   "revisado": false,
@@ -375,8 +317,8 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "5-4",
-    "1-2",
+    "6-4",
+    "2-2",
     "4-2"
    ],
    "away": [
@@ -438,9 +380,9 @@
     "2-2"
    ],
    "away": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ]
   },
   "momios": null
@@ -472,7 +414,30 @@
     "2-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -241,
+    199
+   ],
+   "ml_abre": [
+    -230,
+    191
+   ],
+   "spread": [
+    -6.5,
+    -114,
+    6.5,
+    -106
+   ],
+   "spread_abre": -6.5,
+   "total": [
+    220.5,
+    -114,
+    -106
+   ],
+   "total_abre": 220.5
+  }
  },
  {
   "id": "401909943",
@@ -501,7 +466,30 @@
     "3-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    199,
+    -241
+   ],
+   "ml_abre": [
+    199,
+    -241
+   ],
+   "spread": [
+    6.5,
+    -106,
+    -6.5,
+    -114
+   ],
+   "spread_abre": 6.5,
+   "total": [
+    222.5,
+    -114,
+    -106
+   ],
+   "total_abre": 222.5
+  }
  },
  {
   "id": "401909944",
@@ -670,9 +658,9 @@
     "0-4"
    ],
    "away": [
-    "6-2",
+    "7-2",
     "5-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -752,8 +740,8 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "5-4",
-    "1-2",
+    "6-4",
+    "2-2",
     "4-2"
    ],
    "away": [
@@ -781,8 +769,8 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "3-6",
-    "2-3",
+    "3-7",
+    "2-4",
     "1-3"
    ],
    "away": [
@@ -815,9 +803,9 @@
     "4-1"
    ],
    "away": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ]
   },
   "momios": null
@@ -1018,9 +1006,9 @@
     "4-0"
    ],
    "away": [
-    "6-2",
+    "7-2",
     "5-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -1163,9 +1151,9 @@
     "3-2"
    ],
    "away": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ]
   },
   "momios": null
@@ -1221,9 +1209,9 @@
     "2-3"
    ],
    "away": [
-    "6-2",
+    "7-2",
     "5-0",
-    "1-2"
+    "2-2"
    ]
   },
   "momios": null
@@ -1477,9 +1465,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ],
    "away": [
     "6-2",
@@ -1540,8 +1528,8 @@
     "0-3"
    ],
    "away": [
-    "3-6",
-    "2-3",
+    "3-7",
+    "2-4",
     "1-3"
    ]
   },
@@ -1656,8 +1644,8 @@
     "1-5"
    ],
    "away": [
-    "5-4",
-    "1-2",
+    "6-4",
+    "2-2",
     "4-2"
    ]
   },
@@ -2033,8 +2021,8 @@
     "0-4"
    ],
    "away": [
-    "3-6",
-    "2-3",
+    "3-7",
+    "2-4",
     "1-3"
    ]
   },
@@ -2086,9 +2074,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "6-2",
+    "7-2",
     "5-0",
-    "1-2"
+    "2-2"
    ],
    "away": [
     "4-4",
@@ -2144,9 +2132,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ],
    "away": [
     "7-2",
@@ -2178,8 +2166,8 @@
     "0-4"
    ],
    "away": [
-    "5-4",
-    "1-2",
+    "6-4",
+    "2-2",
     "4-2"
    ]
   },
@@ -2231,9 +2219,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "6-2",
+    "7-2",
     "5-0",
-    "1-2"
+    "2-2"
    ],
    "away": [
     "2-6",
@@ -2289,9 +2277,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-4",
+    "4-5",
     "2-2",
-    "2-2"
+    "2-3"
    ],
    "away": [
     "6-2",
@@ -2555,8 +2543,8 @@
     "3-1"
    ],
    "away": [
-    "3-6",
-    "2-3",
+    "3-7",
+    "2-4",
     "1-3"
    ]
   },
