@@ -1,7 +1,7 @@
 {
 "401882813": {
 "fotmob": 5868124,
-"visto": "2026-11-07T16:45+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401882811": {
 "fotmob": 5868126,
-"visto": "2026-11-07T16:45+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -174,7 +174,7 @@
 },
 "401882808": {
 "fotmob": 5868129,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -274,7 +274,7 @@
 },
 "401882814": {
 "fotmob": 5868123,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -297,15 +297,6 @@
 "importante": false
 },
 {
-"nombre": "Gonzalo Villar",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1287876.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Yago Santiago",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -315,8 +306,8 @@
 "importante": false
 }
 ],
-"valor_xi": 39051961.0,
-"perdida": 0.05463149468985693,
+"valor_xi": 36232449.0,
+"perdida": 0.05888277107628027,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -349,17 +340,26 @@
 "importante": false
 }
 ],
-"valor_xi": 146668966.0,
-"perdida": 0.21701335918601894,
+"valor_xi": 183082798.0,
+"perdida": 0.17385098626251058,
 "perdida_duda": 0.0
 }
 },
 "401882810": {
 "fotmob": 5868127,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Mamadou Sarr",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 25563275.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Álvaro Odriozola",
 "tipo": "Lesión",
@@ -388,9 +388,9 @@
 "importante": false
 }
 ],
-"valor_xi": 187511625.0,
+"valor_xi": 171707083.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.14887723064982705
 },
 "visita": {
 "faltan": [
@@ -440,14 +440,14 @@
 "importante": false
 }
 ],
-"valor_xi": 58486016.0,
-"perdida": 0.08515170532388461,
-"perdida_duda": 0.038957397953042316
+"valor_xi": 58581518.0,
+"perdida": 0.08501288751172341,
+"perdida_duda": 0.03889388800064894
 }
 },
 "401882815": {
 "fotmob": 5868122,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -497,8 +497,8 @@
 "importante": false
 }
 ],
-"valor_xi": 78883083.0,
-"perdida": 0.3419167453178776,
+"valor_xi": 85095470.0,
+"perdida": 0.3169551446158062,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -522,14 +522,14 @@
 "importante": true
 }
 ],
-"valor_xi": 52744372.0,
-"perdida": 0.2314637474496805,
+"valor_xi": 46870829.0,
+"perdida": 0.2604692569017715,
 "perdida_duda": 0.0
 }
 },
 "401882807": {
 "fotmob": 5868130,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -540,7 +540,7 @@
 "duda": false,
 "valor": 14881043.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Juan Foyth",
@@ -570,8 +570,8 @@
 "importante": false
 }
 ],
-"valor_xi": 212627426.0,
-"perdida": 0.0699864701367358,
+"valor_xi": 242768078.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -604,14 +604,14 @@
 "importante": false
 }
 ],
-"valor_xi": 42450419.0,
-"perdida": 0.2619200060192574,
+"valor_xi": 58992730.0,
+"perdida": 0.18847430861395972,
 "perdida_duda": 0.0
 }
 },
 "401882816": {
 "fotmob": 5868121,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -625,8 +625,8 @@
 "importante": true
 }
 ],
-"valor_xi": 430626163.0,
-"perdida": 0.09392364996643272,
+"valor_xi": 449504725.0,
+"perdida": 0.08997898965355704,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -677,8 +677,8 @@
 "importante": false
 }
 ],
-"valor_xi": 763531837.0,
-"perdida": 0.21510987628928432,
+"valor_xi": 850934148.0,
+"perdida": 0.1930152167309661,
 "perdida_duda": 0.0
 }
 }

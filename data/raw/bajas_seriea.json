@@ -1,7 +1,7 @@
 {
 "401874974": {
 "fotmob": 5749747,
-"visto": "2026-11-07T16:30+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401874803": {
 "fotmob": 5749740,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -88,6 +88,15 @@
 "importante": true
 },
 {
+"nombre": "Gianluca Mancini",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 15890036.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Devyne Rensch",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -102,6 +111,15 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 3804044.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pierluigi Gollini",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 404120.0,
 "titular": false,
 "importante": false
 },
@@ -165,7 +183,7 @@
 },
 "401874810": {
 "fotmob": 5749746,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -186,6 +204,15 @@
 "valor": 25373864.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Benoît Badiashile",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 16775464.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "David Neres",
@@ -242,8 +269,8 @@
 "importante": false
 }
 ],
-"valor_xi": 161302863.0,
-"perdida": 0.35957004681311827,
+"valor_xi": 201942334.0,
+"perdida": 0.2872091099036223,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -276,14 +303,14 @@
 "importante": false
 }
 ],
-"valor_xi": 135950807.0,
-"perdida": 0.09477858413889372,
-"perdida_duda": 0.10129331560348884
+"valor_xi": 147413709.0,
+"perdida": 0.08740859372855207,
+"perdida_duda": 0.09341673914466124
 }
 },
 "401875018": {
 "fotmob": 5749743,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -294,7 +321,7 @@
 "duda": true,
 "valor": 7302493.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Elias Havel",
@@ -306,17 +333,17 @@
 "importante": false
 }
 ],
-"valor_xi": 87739046.0,
+"valor_xi": 104823223.0,
 "perdida": 0.0,
-"perdida_duda": 0.08322968316751472
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
 "nombre": "Strahinja Pavlović",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "1-2 semanas",
+"duda": false,
 "valor": 42008094.0,
 "titular": false,
 "importante": true
@@ -376,14 +403,14 @@
 "importante": false
 }
 ],
-"valor_xi": 268874299.0,
-"perdida": 0.0,
-"perdida_duda": 0.15623692616303203
+"valor_xi": 254258653.0,
+"perdida": 0.16521795228735048,
+"perdida_duda": 0.0
 }
 },
 "401874800": {
 "fotmob": 5749745,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -424,9 +451,9 @@
 "importante": false
 }
 ],
-"valor_xi": 49198090.0,
+"valor_xi": 56182716.0,
 "perdida": 0.0,
-"perdida_duda": 0.3261704062088589
+"perdida_duda": 0.28562095502823326
 },
 "visita": {
 "faltan": [
@@ -501,7 +528,7 @@
 },
 "401874808": {
 "fotmob": 5749744,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -524,9 +551,9 @@
 "importante": false
 }
 ],
-"valor_xi": 380947498.0,
+"valor_xi": 437558903.0,
 "perdida": 0.0,
-"perdida_duda": 0.1854986064247625
+"perdida_duda": 0.16149878225652284
 },
 "visita": {
 "faltan": [
@@ -558,15 +585,6 @@
 "importante": true
 },
 {
-"nombre": "Jayden Addai",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 24758025.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Trevoh Chalobah",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -574,16 +592,25 @@
 "valor": 38649153.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Jayden Addai",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 24758025.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 305477575.0,
-"perdida": 0.4456369506010384,
-"perdida_duda": 0.12652042625387477
+"valor_xi": 329180948.0,
+"perdida": 0.3383369258660741,
+"perdida_duda": 0.1174100543631705
 }
 },
 "401875003": {
 "fotmob": 5749742,
-"visto": "2026-11-07T04:04+00:00",
+"visto": "2026-11-07T16:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -624,9 +651,9 @@
 "importante": false
 }
 ],
-"valor_xi": 205417469.0,
+"valor_xi": 207497594.0,
 "perdida": 0.0,
-"perdida_duda": 0.1268698427980339
+"perdida_duda": 0.12559799609049924
 },
 "visita": {
 "faltan": [
@@ -676,6 +703,15 @@
 "importante": false
 },
 {
+"nombre": "Andrea Cambiaso",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 17213778.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Kamil Grabara",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -685,9 +721,9 @@
 "importante": false
 }
 ],
-"valor_xi": 314057319.0,
-"perdida": 0.3724208223276592,
-"perdida_duda": 0.10900083815591637
+"valor_xi": 311247451.0,
+"perdida": 0.3757829489822874,
+"perdida_duda": 0.1099848718118498
 }
 }
 }

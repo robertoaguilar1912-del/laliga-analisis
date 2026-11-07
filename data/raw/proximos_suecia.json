@@ -5,29 +5,145 @@
   "estadio": "Stora Valla",
   "local_espn": "Degerfors IF",
   "visita_espn": "GAIS",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    210,
+    200,
     250,
-    120
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -115,
     -120
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -160
     ],
     [
      "-0.5",
-     110
+     115
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Degerfors IF": [
+    [
+     "194803",
+     "Matvei Igonen",
+     "G"
+    ],
+    [
+     "324395",
+     "Nasiru Moro",
+     "CD"
+    ],
+    [
+     "325409",
+     "Kazper Karlsson",
+     "CD-L"
+    ],
+    [
+     "390697",
+     "Nikolai Skuseth",
+     "CD-R"
+    ],
+    [
+     "419952",
+     "Samba Diatara",
+     "LB"
+    ],
+    [
+     "235489",
+     "Daniel Sundgren",
+     "RB"
+    ],
+    [
+     "264482",
+     "Bilal Hussein",
+     "CM"
+    ],
+    [
+     "301374",
+     "Nahom Netabay",
+     "CM-L"
+    ],
+    [
+     "309271",
+     "Noel Milleskog",
+     "CM-R"
+    ],
+    [
+     "334867",
+     "Dijan Vukojevic",
+     "CF-L"
+    ],
+    [
+     "253666",
+     "Ludvig Fritzson",
+     "CF-R"
+    ]
+   ],
+   "GAIS": [
+    [
+     "312877",
+     "Mergim Krasniqi",
+     "G"
+    ],
+    [
+     "378826",
+     "Filip Beckman",
+     "CD-L"
+    ],
+    [
+     "333728",
+     "Oskar Ågren",
+     "CD-R"
+    ],
+    [
+     "379958",
+     "Robin Wendin Thomasson",
+     "LB"
+    ],
+    [
+     "378806",
+     "August Wängberg",
+     "RB"
+    ],
+    [
+     "356377",
+     "Robin Frej",
+     "CM"
+    ],
+    [
+     "400217",
+     "Matteo de Brienne",
+     "LM"
+    ],
+    [
+     "312852",
+     "William Milovanovic",
+     "RM"
+    ],
+    [
+     "296277",
+     "Samuel Salter",
+     "F"
+    ],
+    [
+     "400221",
+     "Rasmus Niklasson Petrovic",
+     "LF"
+    ],
+    [
+     "418295",
+     "Max Andersson",
+     "RF"
     ]
    ]
   }
@@ -38,7 +154,7 @@
   "estadio": "Gamla Ullevi",
   "local_espn": "Örgryte IS",
   "visita_espn": "Västerås SK",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
@@ -50,8 +166,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    110
+    -140,
+    105
    ],
    "spread": [
     [
