@@ -1,0 +1,24 @@
+name: Revisar fuentes de una liga nueva
+# Solo a mano: antes de agregar una liga, ver sus ids en API-Football y FotMob, si ESPN la tiene y el archivo de football-data.
+on:
+  workflow_dispatch:
+    inputs:
+      pais: {description: 'País en inglés (API-Football)', default: 'Australia'}
+      fotmob: {description: 'Id de FotMob a probar', default: '113'}
+      espn: {description: 'Slug de ESPN', default: 'aus.1'}
+      fd: {description: 'Código de football-data (new/)', default: 'AUS'}
+permissions:
+  contents: read
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Revisar (la clave no se imprime)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: cd src && python diag_liga.py "${{ github.event.inputs.pais }}" "${{ github.event.inputs.fotmob }}" "${{ github.event.inputs.espn }}" "${{ github.event.inputs.fd }}"
