@@ -140,8 +140,19 @@ LIGAS = {
     # Sin archivo de football-data (no hay momios históricos para probar los PICK): resultados de ESPN; API-Football 188
     # (estadísticas, xG, jugadores, alineaciones, lesiones y momios), FotMob 113 (revisado el 7 nov 2026 con diag_liga.py)
     'australia': {'nombre': 'A-League', 'fotmob': 113, 'pais': 'Australia', 'espn': 'aus.1', 'solo_espn': True, 'calendario': 'europa',
-                  'api_football': 188, 'copas': {}, 'zonas': 'australia12', 'nuevo': 'es nuevo en la liga', 'oculta': True,
-                  'espn_atras': 6},           # años calendario de resultados de ESPN (para la prueba)
+                  'api_football': 188, 'copas': {}, 'zonas': 'australia12', 'nuevo': 'es nuevo en la liga',
+                  'espn_atras': 6,            # años calendario de resultados de ESPN (para la prueba)
+                  # Prueba del 7 nov 2026 (scratchpad aus/): contra los momios que guardó ESPN de cada partido (ESPN BET, Bet365 y
+                  # DraftKings; data/raw/espn_momios_australia.json, workflow espn_momios.yml), oct 2023 – nov 2026, 504 partidos.
+                  # Log loss del 1X2: modelo 1.0777, casa 1.0639 (+138 ± 116). PICK (EV +5%, p 30%): 693, ROI +4.1% (rango −5% a
+                  # +15%); 2023-24 +35%, 2024-25 −17%, 2025-26 +9%, 2026-27 −39% (32). Sin EV de +20% o más: −3.8% (los quitados
+                  # ganaban, al revés que en Suecia): no se pone tope. Con lo que esperaba el mercado de cada partido jugado
+                  # (PESO_MERCADO): log loss 1.0761 y ROI +3.0%, casi igual: no se usa (habría que guardar los momios cada día)
+                  'aviso': 'Liga nueva en la página (7 nov 2026). No hay archivo de football-data: los resultados vienen de ESPN, y la '
+                           'prueba se hizo con los momios que ESPN guardó de cada partido (ESPN BET, Bet365 y DraftKings; octubre 2023 a '
+                           'noviembre 2026, 504 partidos). El modelo fue algo menos preciso que esos momios y los PICK quedaron parejos: '
+                           '693 apuestas, ROI +4.1% (rango probable −5% a +15%), con temporadas muy distintas: +35% en 2023-24, −17% en '
+                           '2024-25 y +9% en 2025-26. No hay ventaja demostrada: apuesta poco aquí hasta que haya más resultados.'},
     # final_neutral: la final es a un partido en cancha neutral y ESPN no la marca así
     'libertadores': {'nombre': 'Copa Libertadores', 'fotmob': 45, 'api_football': 13, 'pais': 'Sudamérica', 'espn': 'conmebol.libertadores', 'solo_espn': True,
                      'region': 'sudamerica', 'fase_tabla': 'group-stage', 'final_neutral': True, 'calendario': 'anual',
