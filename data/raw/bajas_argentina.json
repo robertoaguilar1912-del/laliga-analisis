@@ -65,22 +65,22 @@
 },
 "401841671": {
 "fotmob": 1000019627,
-"visto": "2026-11-07T00:21+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T00:26+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
-"nombre": "Manuel Arteaga",
+"nombre": "Santiago Esquivel",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
+"regreso": "principios de diciembre",
 "duda": false,
-"valor": 445593.0,
+"valor": 861275.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 6338851.0,
-"perdida": 0.0,
+"valor_xi": 6287780.0,
+"perdida": 0.1369760074302854,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -100,7 +100,7 @@
 "regreso": "hasta el 7 de noviembre",
 "duda": false,
 "valor": 719304.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -122,8 +122,8 @@
 "importante": false
 }
 ],
-"valor_xi": 6891306.0,
-"perdida": 0.30286842581072443,
+"valor_xi": 6221956.0,
+"perdida": 0.33545062035154216,
 "perdida_duda": 0.0
 }
 },
@@ -620,16 +620,43 @@
 },
 "401841673": {
 "fotmob": 1000019629,
-"visto": "2026-11-07T00:21+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T00:26+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
+{
+"nombre": "Santiago González",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 1686955.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Nicolás Dubersarsky",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 1562205.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Bruno Leyes",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 1551863.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Valentín Moreno",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 1472102.0,
 "titular": false,
 "importante": true
 },
@@ -643,6 +670,15 @@
 "importante": false
 },
 {
+"nombre": "Joaquín Laso",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 418417.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Ramón Arias",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -652,8 +688,8 @@
 "importante": false
 }
 ],
-"valor_xi": 14307769.0,
-"perdida": 0.10918578570844972,
+"valor_xi": 15405518.0,
+"perdida": 0.40719987474617864,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -677,8 +713,8 @@
 "importante": false
 }
 ],
-"valor_xi": 8985428.0,
-"perdida": 0.09584407108932373,
+"valor_xi": 8363989.0,
+"perdida": 0.10296522389017967,
 "perdida_duda": 0.0
 }
 }
