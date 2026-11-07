@@ -1,154 +1,5 @@
 [
  {
-  "id": "401841666",
-  "utc": "2026-11-07T18:00Z",
-  "estadio": "Estadio Víctor Antonio Legrotaglie",
-  "local_espn": "Gimnasia (Mendoza)",
-  "visita_espn": "Independiente Rivadavia",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-clausura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    265,
-    185,
-    130
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -160
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -170
-    ],
-    [
-     "-0.5",
-     120
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Gimnasia (Mendoza)": [
-    [
-     "122884",
-     "César Rigamonti",
-     "G"
-    ],
-    [
-     "117843",
-     "Ezequiel Muñoz",
-     "CD-L"
-    ],
-    [
-     "379599",
-     "Lautaro Carrera",
-     "CD-R"
-    ],
-    [
-     "319190",
-     "Matías Recalde",
-     "LB"
-    ],
-    [
-     "339037",
-     "Luciano Paredes",
-     "RB"
-    ],
-    [
-     "307334",
-     "Esteban Fernández",
-     "AM"
-    ],
-    [
-     "276290",
-     "Germán Guiffrey",
-     "LM"
-    ],
-    [
-     "234996",
-     "Fermín Antonini",
-     "RM"
-    ],
-    [
-     "371423",
-     "Agustín Módica",
-     "F"
-    ],
-    [
-     "318398",
-     "Facundo Lencioni",
-     "AM-L"
-    ],
-    [
-     "312136",
-     "Ignacio Charparin",
-     "AM-R"
-    ]
-   ],
-   "Independiente Rivadavia": [
-    [
-     "414351",
-     "Nicolás Bolcato",
-     "G"
-    ],
-    [
-     "336665",
-     "Alejo Osella",
-     "CD-L"
-    ],
-    [
-     "252053",
-     "Ivan Villalba",
-     "CD-R"
-    ],
-    [
-     "236006",
-     "Juan Manuel Elordi",
-     "LB"
-    ],
-    [
-     "276021",
-     "Alex Vigo",
-     "RB"
-    ],
-    [
-     "309496",
-     "Fabrizio Sartori Prieto",
-     "AM"
-    ],
-    [
-     "217153",
-     "José Florentín",
-     "LM"
-    ],
-    [
-     "302053",
-     "Tomás Bottari",
-     "RM"
-    ],
-    [
-     "257754",
-     "Alex Arce",
-     "F"
-    ],
-    [
-     "290595",
-     "Leonel Bucca",
-     "AM-L"
-    ],
-    [
-     "315719",
-     "Gonzalo Rios",
-     "AM-R"
-    ]
-   ]
-  }
- },
- {
   "id": "401841672",
   "utc": "2026-11-07T20:30Z",
   "estadio": "Diego Armando Maradona",
@@ -328,6 +179,122 @@
      -185
     ]
    ]
+  },
+  "alineaciones": {
+   "Boca Juniors": [
+    [
+     "166323",
+     "Álvaro Montero",
+     "G"
+    ],
+    [
+     "341457",
+     "Lautaro Di Lollo",
+     "D"
+    ],
+    [
+     "338991",
+     "Leandro Lozano",
+     "D"
+    ],
+    [
+     "290542",
+     "Lautaro Blanco",
+     "D"
+    ],
+    [
+     "400357",
+     "Facundo Herrera",
+     "D"
+    ],
+    [
+     "233734",
+     "Santiago Ascacibar",
+     "M"
+    ],
+    [
+     "382978",
+     "Milton Delgado",
+     "M"
+    ],
+    [
+     "153115",
+     "Leandro Paredes",
+     "M"
+    ],
+    [
+     "286516",
+     "Alan Velasco",
+     "F"
+    ],
+    [
+     "260812",
+     "Miguel Merentiel",
+     "F"
+    ],
+    [
+     "141790",
+     "Sebastián Villa",
+     "F"
+    ]
+   ],
+   "Defensa y Justicia": [
+    [
+     "273253",
+     "Matias Borgogno",
+     "G"
+    ],
+    [
+     "402600",
+     "Demian Domínguez",
+     "D"
+    ],
+    [
+     "228387",
+     "Héctor Martínez",
+     "D"
+    ],
+    [
+     "120682",
+     "Damián Fernández",
+     "D"
+    ],
+    [
+     "418765",
+     "Valentín Loza",
+     "D"
+    ],
+    [
+     "192087",
+     "César Pérez",
+     "M"
+    ],
+    [
+     "366938",
+     "Jeremías Lucco",
+     "M"
+    ],
+    [
+     "271473",
+     "Santiago Sosa",
+     "M"
+    ],
+    [
+     "371519",
+     "Maximiliano Porcel",
+     "M"
+    ],
+    [
+     "284845",
+     "Juan Gutiérrez",
+     "M"
+    ],
+    [
+     "40376",
+     "Leandro Miguel Fernandez",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -343,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     -700,
-    650,
-    1700
+    700,
+    1800
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
-    130
+    -180,
+    135
    ],
    "spread": [
     [
      "-2.5",
-     125
+     120
     ],
     [
      "+2.5",
-     -175
+     -170
     ]
    ]
   },
