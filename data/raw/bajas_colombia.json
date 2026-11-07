@@ -1,7 +1,7 @@
 {
 "401877771": {
 "fotmob": 1000014225,
-"visto": "2026-11-07T22:35+00:00",
+"visto": "2026-11-07T22:39+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -165,8 +165,8 @@
 },
 "401878041": {
 "fotmob": 1000014217,
-"visto": "2026-11-07T22:35+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-07T22:39+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -197,38 +197,48 @@
 "importante": true
 },
 {
-"nombre": "Marlos Moreno",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 366531.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Edwin Cardona",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 249876.0,
-"titular": true,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 8396993.0,
+"perdida": 0.40673750710522205,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Santiago Aguilar",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 270099.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Walmer Pacheco",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 264799.0,
+"titular": false,
 "importante": true
 }
 ],
-"valor_xi": 4491568.0,
-"perdida": 0.8420006109225108,
-"perdida_duda": 0.05563224245964884
-},
-"visita": {
-"faltan": [],
-"valor_xi": 2582003.0,
-"perdida": 0.0,
+"valor_xi": 2012345.0,
+"perdida": 0.26580829827887364,
 "perdida_duda": 0.0
 }
 },
 "401877908": {
 "fotmob": 1000014226,
-"visto": "2026-11-07T22:35+00:00",
+"visto": "2026-11-07T22:39+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
