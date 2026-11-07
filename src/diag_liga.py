@@ -42,3 +42,22 @@ if fd:
         print('football-data', fd, ':', len(df), 'filas;', list(df.columns)[:30]); print(df.tail(3).to_string()[:1200])
     except Exception as e:
         print('football-data', fd, 'error', repr(e)[:200])
+
+# momios de partidos ya jugados en el resumen de ESPN (para probar los PICK de una liga sin football-data)
+if espn:
+    for rango in ('20230301-20230310', '20250301-20250310', '20261001-20261031'):
+        try:
+            ev = requests.get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/scoreboard', params={'dates': rango},
+                              headers=UA, timeout=30).json().get('events') or []
+            ev = [e for e in ev if (e.get('competitions') or [{}])[0].get('status', {}).get('type', {}).get('completed')][:2]
+            for e in ev:
+                s = requests.get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/summary', params={'event': e['id']},
+                                 headers=UA, timeout=30).json()
+                pc, od = s.get('pickcenter') or [], s.get('odds') or []
+                print('ESPN resumen', rango, e.get('name'), '| pickcenter', len(pc), str(pc[:1])[:500], '| odds', len(od), str(od[:1])[:300])
+            sc = (requests.get(f'https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/scoreboard', params={'dates': rango},
+                               headers=UA, timeout=30).json().get('events') or [])[:1]
+            if sc:
+                print('ESPN scoreboard', rango, 'odds en el partido jugado:', str((sc[0].get('competitions') or [{}])[0].get('odds'))[:400])
+        except Exception as x:
+            print('ESPN resumen', rango, 'error', repr(x)[:200])
