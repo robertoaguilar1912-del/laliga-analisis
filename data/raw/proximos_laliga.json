@@ -5,15 +5,31 @@
   "estadio": "RCDE Stadium",
   "local_espn": "Espanyol",
   "visita_espn": "Deportivo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    150,
+    225,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
   },
   "alineaciones": {
    "Espanyol": [
@@ -243,23 +259,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    320,
-    350
+    -135,
+    310,
+    330
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    140
+    140,
+    -175
    ],
    "spread": [
     [
      "-0.5",
-     -155
+     -150
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }

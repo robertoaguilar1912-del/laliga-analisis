@@ -16,15 +16,31 @@
   "estadio": "Nuevo Mirandilla",
   "local_espn": "Cádiz",
   "visita_espn": "Real Oviedo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    200,
+    230,
+    140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -175
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
   },
   "alineaciones": {
    "Cádiz": [
