@@ -154,7 +154,7 @@
   "estadio": "SeatGeek Stadium",
   "local_espn": "Chicago Fire FC",
   "visita_espn": "Columbus Crew",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Nu Stadium",
   "local_espn": "Inter Miami CF",
   "visita_espn": "Charlotte FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "Subaru Park",
   "local_espn": "Philadelphia Union",
   "visita_espn": "Toronto FC",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1401,23 +1401,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    265,
-    235
+    100,
+    270,
+    225
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -155
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   }
