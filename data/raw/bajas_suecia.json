@@ -1,8 +1,8 @@
 {
 "401842875": {
 "fotmob": 5107655,
-"visto": "2026-11-08T12:12+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T12:17+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -17,11 +17,11 @@
 {
 "nombre": "Sam Larsson",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de noviembre",
+"duda": false,
 "valor": 511068.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Ramon-Pascal Lundqvist",
@@ -42,15 +42,6 @@
 "importante": false
 },
 {
-"nombre": "Alexander Jallow",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 296642.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Arbnor Muçolli",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -60,9 +51,9 @@
 "importante": false
 }
 ],
-"valor_xi": 7276754.0,
-"perdida": 0.08422917691047409,
-"perdida_duda": 0.07023296376378808
+"valor_xi": 7294213.0,
+"perdida": 0.08402757089764173,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -85,20 +76,20 @@
 "importante": true
 },
 {
-"nombre": "Andrej Djuric",
-"tipo": "Sanción",
-"regreso": "hasta el 29 de noviembre",
-"duda": false,
-"valor": 733153.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Oscar Sjöstrand",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1078303.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Andrej Djuric",
+"tipo": "Sanción",
+"regreso": "hasta el 29 de noviembre",
+"duda": false,
+"valor": 733153.0,
 "titular": false,
 "importante": false
 },
@@ -130,8 +121,8 @@
 "importante": false
 }
 ],
-"valor_xi": 13539357.0,
-"perdida": 0.2692412941028145,
+"valor_xi": 15726348.0,
+"perdida": 0.18517973785140707,
 "perdida_duda": 0.0
 }
 },
@@ -346,11 +337,11 @@
 },
 "401842877": {
 "fotmob": 5107660,
-"visto": "2026-11-08T12:12+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T12:17+00:00",
+"xi": "standard",
 "local": {
 "faltan": [],
-"valor_xi": 4253945.0,
+"valor_xi": 6250943.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -362,12 +353,12 @@
 "regreso": "hasta el 8 de noviembre",
 "duda": false,
 "valor": 382732.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 34349727.0,
-"perdida": 0.011142213735788933,
+"valor_xi": 34956136.0,
+"perdida": 0.0,
 "perdida_duda": 0.0
 }
 }
