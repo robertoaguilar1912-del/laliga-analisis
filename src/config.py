@@ -106,7 +106,12 @@ LIGAS = {
                'calendario': 'torneos', 'api_football': 262, 'copas': dict(COPAS_CONCACAF), 'zonas': 'ligamx', 'nuevo': 'ascendió'},
     'mls': {'nombre': 'MLS', 'fotmob': 130, 'pais': 'Estados Unidos', 'espn': 'usa.1', 'fd_extra': 'USA',
             'calendario': 'anual', 'api_football': 253, 'copas': {**COPAS_CONCACAF, 'usa.open': 'US Open Cup'}, 'zonas': 'mls',
-            'nuevo': 'es nuevo en la liga'},
+            'nuevo': 'es nuevo en la liga',
+            # Sin PICK en "Menos de" (7 nov 2026, claude/mls-revision-nov-2026.md): el modelo da "más de 2.5" unos 3 puntos por
+            # debajo de lo real en todas las temporadas 2022-26; en vivo (sep-nov 2026) sus 48 "Menos de" ganaron 35% (decía 58%),
+            # −15.7 u; en las líneas de DraftKings de oct-nov los "menos de" del modelo perdieron −18% y apostar todos los
+            # "menos de", −6.6%
+            'sin_menos': True},
     # solo_espn: sin archivo de football-data; los resultados de temporadas pasadas salen de ESPN
     # segunda: liga de la que se toman los enfrentamientos de segunda división (historial)
     # torneos: la tabla es del semestre (Apertura/Clausura) aunque la temporada sea el año completo

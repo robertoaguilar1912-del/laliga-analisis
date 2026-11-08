@@ -822,6 +822,12 @@ def analizar_liga(liga):
             dias = int((fecha - inicio_copa_uefa(fecha)).days)
             reglas_europa(p['con_momio'], dias, GANA_MAX_COPAS)
             p['reglas'] = {'gana_max': GANA_MAX_COPAS, 'sin_menos': dias < SIN_MENOS_DIAS}
+    if L.get('sin_menos'):  # ligas sin PICK en "Menos de" (MLS, 7 nov 2026; ver config.py)
+        for p in partidos:
+            for r in p['con_momio']:
+                if r['veredicto'] == 'PICK' and r['k'].startswith('U'):
+                    r['veredicto'], r['regla'] = 'MAYBE', 'menos_liga'
+            p['reglas'] = {**(p.get('reglas') or {}), 'sin_menos': True, 'menos_liga': True}
     if L.get('ev_max'):     # ligas donde los PICK "lejos del mercado" perdían en la prueba (ver config.py): sin PICK
         for p in partidos:
             for r in p['con_momio']:
