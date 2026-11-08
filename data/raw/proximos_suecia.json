@@ -149,155 +149,6 @@
   }
  },
  {
-  "id": "401842875",
-  "utc": "2026-11-08T13:00Z",
-  "estadio": "Gamla Ullevi",
-  "local_espn": "IFK Göteborg",
-  "visita_espn": "Malmö FF",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-allsvenskan",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    160,
-    250,
-    155
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -140,
-    105
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -200
-    ],
-    [
-     "-0.5",
-     140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "IFK Göteborg": [
-    [
-     "341335",
-     "Viktor Andersson",
-     "G"
-    ],
-    [
-     "191495",
-     "Hjörtur Hermannsson",
-     "CD-L"
-    ],
-    [
-     "220974",
-     "Jonas Bager",
-     "CD-R"
-    ],
-    [
-     "383948",
-     "Noah Tolf",
-     "LB"
-    ],
-    [
-     "349811",
-     "Felix Eriksson",
-     "RB"
-    ],
-    [
-     "307947",
-     "David Kruse",
-     "CM-L"
-    ],
-    [
-     "421469",
-     "Oliver Månsson",
-     "CM-R"
-    ],
-    [
-     "219163",
-     "Tobias Heintz",
-     "LM"
-    ],
-    [
-     "257624",
-     "Kevin Ackermann",
-     "RM"
-    ],
-    [
-     "336483",
-     "Alexander Simmelhack",
-     "CF-L"
-    ],
-    [
-     "289519",
-     "Nino Zugelj",
-     "CF-R"
-    ]
-   ],
-   "Malmö FF": [
-    [
-     "178176",
-     "Robin Olsen",
-     "G"
-    ],
-    [
-     "404787",
-     "Malte Palsson",
-     "CD-L"
-    ],
-    [
-     "188454",
-     "Stian Gregersen",
-     "CD-R"
-    ],
-    [
-     "301219",
-     "Busanello",
-     "LB"
-    ],
-    [
-     "193186",
-     "Jens Stryger Larsen",
-     "RB"
-    ],
-    [
-     "364698",
-     "Adrian Skogmar",
-     "CM"
-    ],
-    [
-     "413450",
-     "Theodor Lundbergh",
-     "LM"
-    ],
-    [
-     "315679",
-     "Otto Rosengren",
-     "RM"
-    ],
-    [
-     "395376",
-     "Diego García",
-     "F"
-    ],
-    [
-     "218450",
-     "Sead Haksabanovic",
-     "LF"
-    ],
-    [
-     "411015",
-     "Anton Höög",
-     "RF"
-    ]
-   ]
-  }
- },
- {
   "id": "401842880",
   "utc": "2026-11-08T15:30Z",
   "estadio": "Friends Arena",
@@ -361,6 +212,122 @@
      -145
     ]
    ]
+  },
+  "alineaciones": {
+   "IF Brommapojkarna": [
+    [
+     "390019",
+     "Leo Cavallius",
+     "G"
+    ],
+    [
+     "418563",
+     "Andreas Troelsen",
+     "D"
+    ],
+    [
+     "399427",
+     "Oskar Cotton",
+     "D"
+    ],
+    [
+     "418302",
+     "Jordan Simpson",
+     "D"
+    ],
+    [
+     "313932",
+     "Oliver Zandén",
+     "D"
+    ],
+    [
+     "356378",
+     "Wilmer Odefalk",
+     "M"
+    ],
+    [
+     "357143",
+     "Anton Kurochkin",
+     "M"
+    ],
+    [
+     "269195",
+     "Simon Strand",
+     "M"
+    ],
+    [
+     "298069",
+     "Mads Hansen",
+     "M"
+    ],
+    [
+     "336115",
+     "Rasmus Örqvist",
+     "F"
+    ],
+    [
+     "138055",
+     "Oliver Berg",
+     "F"
+    ]
+   ],
+   "Mjällby AIF": [
+    [
+     "284209",
+     "Sebastian Hansen",
+     "G"
+    ],
+    [
+     "306289",
+     "Axel Norén",
+     "CD"
+    ],
+    [
+     "356281",
+     "Abdullah Iqbal",
+     "CD-L"
+    ],
+    [
+     "346501",
+     "Ludvig Tidstrand",
+     "CD-R"
+    ],
+    [
+     "306519",
+     "Ian Hoffman",
+     "LB"
+    ],
+    [
+     "357140",
+     "Villiam Granath",
+     "RB"
+    ],
+    [
+     "192793",
+     "Jesper Gustavsson",
+     "CM"
+    ],
+    [
+     "315621",
+     "Mads Enggård",
+     "CM-L"
+    ],
+    [
+     "303651",
+     "Viktor Gustafson",
+     "CM-R"
+    ],
+    [
+     "282562",
+     "Ali Youssef",
+     "CF-L"
+    ],
+    [
+     "403153",
+     "Olle Lindberg",
+     "CF-R"
+    ]
+   ]
   }
  },
  {
@@ -381,7 +348,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -155,
     115
    ],
    "spread": [
