@@ -33,6 +33,7 @@ a un rival completo: ~3 puntos menos de probabilidad de ganar en América, ~0.5 
 """
 import json
 from datetime import datetime, timezone
+import numpy as np
 
 from config import RAW, DATOS, LIGAS
 
@@ -103,6 +104,7 @@ N_PREVIOS = 5
 VENTANA = (-20, 80)          # minutos antes de empezar en que se piden las alineaciones
 TERMINADO = {'FT', 'AET', 'PEN'}
 _HIST, _NOMBRES, _FIX, _NOTAS, _POS, _POS_MEDIA = None, None, None, None, None, None
+_ATAQUE, _POS_ATAQUE, _LIGA_XI = None, None, {}
 
 
 def _leer(p, d):
@@ -122,10 +124,11 @@ def ruta(liga):
 
 def _cargar():
     """Minutos de cada equipo en sus partidos (las temporadas con minutos), nombres de jugadores y local/visita de cada partido."""
-    global _HIST, _NOMBRES, _FIX, _NOTAS, _POS, _POS_MEDIA
+    global _HIST, _NOMBRES, _FIX, _NOTAS, _POS, _POS_MEDIA, _ATAQUE, _POS_ATAQUE
     if _HIST is not None:
         return
     h, nombres, fix, notas, pos, pm = {}, {}, {}, {}, {}, {}
+    ataque, pa = {}, {}
     for p in sorted(DATOS.glob('af/*/20*.json')):
         d = _leer(p, {})
         nombres.update(d.get('jugadores') or {})
@@ -147,10 +150,16 @@ def _cargar():
                             x = pm.setdefault(r[4] or '?', [0.0, 0.0])
                             x[0] += r[1] * float(r[3])
                             x[1] += r[1]
+                        if len(r) >= 10 and r[1] >= 10:          # remates a puerta y pases clave (desde el 8 nov 2026)
+                            ataque.setdefault(r[0], {})[str(i)] = (t, r[1], r[6], r[7])
+                            y = pa.setdefault(r[4] or '?', [0.0, 0.0, 0.0])
+                            y[0] += r[1]; y[1] += r[6]; y[2] += r[7]
     _HIST = {eq: sorted(v.values(), key=lambda x: x[0]) for eq, v in h.items()}
     _NOMBRES, _FIX = nombres, fix
     _NOTAS = {pid: sorted(v.values()) for pid, v in notas.items()}
     _POS, _POS_MEDIA = pos, {k: v[0] / v[1] for k, v in pm.items() if v[1]}
+    _ATAQUE = {pid: sorted(v.values()) for pid, v in ataque.items()}
+    _POS_ATAQUE = {k: (v[1] / v[0] * 90, v[2] / v[0] * 90) for k, v in pa.items() if v[0]}
 
 
 def nota(pid, antes):
@@ -332,3 +341,79 @@ def bajas_habituales(partidos, liga, bajas):
             lados[lado] = {'peso': round(tot, 3), 'cuenta': quienes}
         if len(lados) == 2:
             p['bajas_hab'] = {**lados, 'neto': round(lados['local']['peso'] - lados['visita']['peso'], 3), 'n': W['n']}
+
+
+# Goles según el ataque de los onces (prueba del 8 nov 2026, scratchpad ataque/ de esa sesión). Con lo que hizo cada
+# jugador el último año en API-Football (remates a puerta y pases clave por 90 minutos, frenados hacia la media de su
+# posición con 450 minutos), la suma del once de cada equipo; local + visita, menos la media de la liga en sus últimos 300
+# partidos. Los goles esperados del partido (los dos equipos) se multiplican por exp(ATAQUE_SO·Δremates + ATAQUE_KP·Δpases).
+# Afinado con 9 ligas hasta jun 2025 (log loss de más/menos 2.5 y 3.5: −12 ± 5) y probado desde jul 2025: −10.5 ± 6.9;
+# MLS 2025-26 −32 ± 13 (mejor en Bundesliga, Ligue 1, Championship, LaLiga y MLS; Premier +17 ± 23, Suecia +7, Brasil y
+# Serie A ≈ 0). Cambio típico: ±2-4% de goles. Lo que cambia el once de hoy contra el habitual casi no importó: antes del
+# once se usa el habitual (15 partidos) y con el once confirmado, ese. Solo ligas (en las copas manda el mercado, ancla.py).
+ATAQUE_SO, ATAQUE_KP, ATAQUE_DIAS, ATAQUE_FRENO = 0.020, 0.009, 365, 450.0
+
+
+def amenaza(pids, antes):
+    """(suma de remates a puerta por 90, suma de pases clave por 90) de esos jugadores, con su último año antes de 'antes'."""
+    _cargar()
+    so = kp = 0.0
+    for p in pids:
+        mso, mkp = _POS_ATAQUE.get(_POS.get(p, '?'), (0.3, 0.6))
+        h = [(m, a, b) for t, m, a, b in _ATAQUE.get(p, []) if t < antes and (antes - t).days <= ATAQUE_DIAS]
+        mins = sum(m for m, _, _ in h)
+        so += (sum(a for _, a, _ in h) + mso / 90 * ATAQUE_FRENO) / (mins + ATAQUE_FRENO) * 90
+        kp += (sum(b for _, _, b in h) + mkp / 90 * ATAQUE_FRENO) / (mins + ATAQUE_FRENO) * 90
+    return so, kp
+
+
+def _media_liga(liga, antes):
+    """Media de (remates a puerta, pases clave) por 90 de los dos onces, en los últimos 300 partidos de la liga."""
+    clave = (liga, antes.date())
+    if clave in _LIGA_XI:
+        return _LIGA_XI[clave]
+    filas = []
+    for p in sorted((DATOS / 'af' / liga).glob('20*.json'), reverse=True):
+        d = _leer(p, {})
+        for i, m in sorted((d.get('partidos') or {}).items(), key=lambda kv: kv[1].get('f') or '', reverse=True):
+            j = m.get('j') or {}
+            if m.get('est') not in TERMINADO or not m.get('f') or _t(m['f']) >= antes or not j.get('h') or not j.get('a'):
+                continue
+            t = _t(m['f'])
+            xs = [[r[0] for r in j[s] if r[2]] for s in ('h', 'a')]
+            if all(10 <= len(x) <= 11 for x in xs):
+                a, b = amenaza(xs[0], t), amenaza(xs[1], t)
+                filas.append((a[0] + b[0], a[1] + b[1]))
+            if len(filas) >= 300:
+                break
+        if len(filas) >= 300:
+            break
+    _LIGA_XI[clave] = (float(np.mean([f[0] for f in filas])), float(np.mean([f[1] for f in filas]))) if len(filas) >= 50 else None
+    return _LIGA_XI[clave]
+
+
+def factor_goles(liga, espn_id, utc):
+    """Factor de los goles esperados del partido por el ataque de los dos onces (ATAQUE_SO, ATAQUE_KP), o None."""
+    if (LIGAS.get(liga) or {}).get('region') or not (LIGAS.get(liga) or {}).get('api_football'):
+        return None
+    _cargar()
+    x = ((_leer(RAW / f'af_{liga}.json', {}) or {}).get('partidos') or {}).get(str(espn_id)) or {}
+    if str(x.get('af')) not in _FIX:
+        return None
+    h, a = _FIX[str(x['af'])]
+    t0 = _t(utc)
+    g = (_leer(ruta(liga), {}) or {}).get(str(espn_id)) or {}
+    onces = []
+    for k, eq in enumerate((h, a)):
+        xi = (g.get('xi') or [None, None])[k] if g.get('xi') else None
+        if not xi or len(set(xi)) < 10:
+            top = habitual(eq, t0, 15)
+            if not top:
+                return None
+            xi = [p for p, _ in top]
+        onces.append(xi)
+    media = _media_liga(liga, t0)
+    if not media:
+        return None
+    a1, a2 = amenaza(onces[0], t0), amenaza(onces[1], t0)
+    return float(np.exp(ATAQUE_SO * (a1[0] + a2[0] - media[0]) + ATAQUE_KP * (a1[1] + a2[1] - media[1])))

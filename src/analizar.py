@@ -174,6 +174,17 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         neu = {'neutral': True} if g.get('neutral') and getattr(modelo, 'acepta_neutral', False) else {}   # finales en cancha neutral
         lam, mu = modelo.rates(h, a, **neu)
         M = modelo.score_matrix(h, a, **neu)                # probabilidad exacta de cada marcador
+        fg = None
+        if not LIGAS[liga].get('region'):
+            try:                            # goles según el ataque de los dos onces (alineacion.factor_goles, 8 nov 2026)
+                fg = alineacion.factor_goles(liga, g['id'], g['utc'])
+            except Exception as e:
+                print(f'  ataque de los onces {liga}: {e!r}')
+        if fg and abs(fg - 1) > 1e-3:
+            gi_ = np.arange(M.shape[0])
+            M = M * fg ** (gi_[:, None] + gi_[None, :])     # con Poisson es lo mismo que multiplicar λ y μ por fg
+            M = M / M.sum()
+            lam, mu = float((gi_[:, None] * M).sum()), float((gi_[None, :] * M).sum())
         mom = g.get('momios') or {}
         if not mom.get('ml'):              # DraftKings no publicó: momios de otra casa de API-Football (apifootball.RESPALDO)
             mom = apifootball.momios_respaldo(liga, g['id']) or mom
@@ -262,6 +273,9 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     else 'Ningún mercado con momio supera +5% de valor esperado.')
         else:
             txt += '. Todavía no hay momios publicados para este partido.'
+        if fg and abs(fg - 1) >= 0.02:
+            txt += (f" Por el ataque de los dos onces (remates a puerta y pases clave de cada jugador el último año) el modelo espera "
+                    f"{abs(fg - 1) * 100:.0f}% {'más' if fg > 1 else 'menos'} goles que con la fuerza de los equipos sola.")
         if anclado:
             txt += (f" En las copas la probabilidad es {ANCLA_COPAS:.0%} lo que calcula el modelo y {1 - ANCLA_COPAS:.0%} lo que dice el"
                     " mercado: en las copas lo que el modelo se separaba de la casa no se cumplía (prueba del 4 nov 2026).")
