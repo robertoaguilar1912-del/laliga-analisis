@@ -1,8 +1,8 @@
 {
 "401841668": {
 "fotmob": 1000019620,
-"visto": "2026-11-08T21:53+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T21:58+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -21,11 +21,11 @@
 "duda": false,
 "valor": 440040.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 4627607.0,
-"perdida": 0.11670135342089334,
+"valor_xi": 4145879.0,
+"perdida": 0.23640053170871606,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -33,20 +33,29 @@
 {
 "nombre": "Agustín Cardozo",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "principios de diciembre",
+"duda": false,
 "valor": 1762773.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
 "nombre": "José Canale",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "principios de diciembre",
+"duda": false,
 "valor": 1242332.0,
-"titular": true,
+"titular": false,
 "importante": true
+},
+{
+"nombre": "Matías Sepúlveda",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 897452.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Luciano Romero",
@@ -67,9 +76,9 @@
 "importante": false
 }
 ],
-"valor_xi": 15235542.0,
-"perdida": 0.0,
-"perdida_duda": 0.19724306493329874
+"valor_xi": 15329373.0,
+"perdida": 0.19603574131831744,
+"perdida_duda": 0.0
 }
 }
 }
