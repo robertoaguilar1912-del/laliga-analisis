@@ -1,19 +1,10 @@
 {
 "401842880": {
 "fotmob": 5107653,
-"visto": "2026-11-08T14:51+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T14:56+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Kevin Filling",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 9566829.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Linus Carlstrand",
 "tipo": "Sanción",
@@ -29,25 +20,7 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 1638367.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Eskil Smidesang Edh",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 1387907.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Abdihakin Ali",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 260013.0,
-"titular": true,
 "importante": true
 },
 {
@@ -85,10 +58,19 @@
 "valor": 279213.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Abdihakin Ali",
+"tipo": "Sanción",
+"regreso": "hasta el 8 de noviembre",
+"duda": false,
+"valor": 260013.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 8521638.0,
-"perdida": 1.762192667653801,
+"valor_xi": 11999199.0,
+"perdida": 0.3168560668091262,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -110,25 +92,16 @@
 "valor": 333291.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Filip Helander",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 331708.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 7154357.0,
-"perdida": 0.22476107915777757,
+"valor_xi": 7618041.0,
+"perdida": 0.2110806439608293,
 "perdida_duda": 0.0
 }
 },
 "401842879": {
 "fotmob": 5107657,
-"visto": "2026-11-08T14:51+00:00",
+"visto": "2026-11-08T14:56+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -173,7 +146,7 @@
 },
 "401842874": {
 "fotmob": 5107659,
-"visto": "2026-11-08T14:51+00:00",
+"visto": "2026-11-08T14:56+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -195,33 +168,6 @@
 ],
 "valor_xi": 15606449.0,
 "perdida": 0.06208728199477024,
-"perdida_duda": 0.0
-}
-},
-"401842877": {
-"fotmob": 5107660,
-"visto": "2026-11-08T14:51+00:00",
-"xi": "standard",
-"local": {
-"faltan": [],
-"valor_xi": 6250943.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Daniel Stensson",
-"tipo": "Sanción",
-"regreso": "hasta el 8 de noviembre",
-"duda": false,
-"valor": 382732.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 34956136.0,
-"perdida": 0.0,
 "perdida_duda": 0.0
 }
 }
