@@ -1,7 +1,7 @@
 {
 "401885065": {
 "fotmob": 5881719,
-"visto": "2026-11-08T11:04+00:00",
+"visto": "2026-11-08T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -28,32 +28,79 @@
 },
 "401885059": {
 "fotmob": 5881722,
-"visto": "2026-11-08T11:04+00:00",
+"visto": "2026-11-08T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Moritz-Broni Kwarteng",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 549690.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Lubambo Musonda",
+"tipo": "Lesión",
+"regreso": "finales de enero de 2027",
+"duda": false,
+"valor": 111836.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 7874271.0,
-"perdida": 0.0,
+"perdida": 0.06980836702216624,
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Mathias Pereira Lage",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1584589.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Rony Jansson",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 309148.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gísli Thórdarson",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 769414.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 14645543.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.10819598836314911
 }
 },
 "401885062": {
 "fotmob": 5881717,
-"visto": "2026-11-08T11:04+00:00",
+"visto": "2026-11-08T11:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
 "nombre": "Oliver Olsen",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
+"regreso": "ya entrena",
+"duda": true,
 "valor": 841429.0,
 "titular": false,
 "importante": true
@@ -61,8 +108,8 @@
 {
 "nombre": "Jean Manuel Mbom",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
-"duda": false,
+"regreso": "ya entrena",
+"duda": true,
 "valor": 828286.0,
 "titular": false,
 "importante": true
@@ -70,7 +117,7 @@
 {
 "nombre": "Philipp Strompf",
 "tipo": "Lesión",
-"regreso": "sin fecha de regreso",
+"regreso": "finales de noviembre",
 "duda": false,
 "valor": 532149.0,
 "titular": false,
@@ -79,7 +126,7 @@
 {
 "nombre": "Babis Drakas",
 "tipo": "Lesión",
-"regreso": "principios de noviembre",
+"regreso": "finales de noviembre",
 "duda": false,
 "valor": 289790.0,
 "titular": false,
@@ -87,8 +134,8 @@
 }
 ],
 "valor_xi": 9268338.0,
-"perdida": 0.18015257967501833,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.18015257967501833
 },
 "visita": {
 "faltan": [
@@ -98,6 +145,15 @@
 "regreso": "principios de noviembre",
 "duda": false,
 "valor": 550076.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Marcel Franke",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 117850.0,
 "titular": false,
 "importante": false
 }
