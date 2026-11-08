@@ -67,6 +67,12 @@ LIGAS = {
     'bundesliga': {'nombre': 'Bundesliga', 'fotmob': 54, 'pais': 'Alemania', 'espn': 'ger.1', 'fd': 'D1', 'fd2': 'D2', 'fd2_nombre': '2. Bundesliga',
                    'calendario': 'europa', 'api_football': 78,
                    'copas': {**COPAS_UEFA, 'ger.dfb_pokal': 'Copa de Alemania'}, 'zonas': 'europa18'},
+    # 2. Bundesliga (18 equipos, agosto-mayo). Fuentes revisadas el 8 nov 2026 (diag_liga.py): football-data D2 (con
+    # Pinnacle y más/menos), ESPN ger.2 con DraftKings, FotMob 146, API-Football 79 (sin lesiones)
+    'bundesliga2': {'nombre': '2. Bundesliga', 'fotmob': 146, 'pais': 'Alemania', 'espn': 'ger.2', 'fd': 'D2', 'fd2': 'D1',
+                    'fd2_nombre': 'Bundesliga', 'calendario': 'europa', 'api_football': 79, 'descienden_de': 'D1',
+                    'nuevo': 'es nuevo en la 2. Bundesliga', 'copas': {'ger.dfb_pokal': 'Copa de Alemania'},
+                    'zonas': 'bundesliga2', 'oculta': True},
     'ligue1': {'nombre': 'Ligue 1', 'fotmob': 53, 'pais': 'Francia', 'espn': 'fra.1', 'fd': 'F1', 'fd2': 'F2', 'fd2_nombre': 'Ligue 2',
                'calendario': 'europa', 'api_football': 61,
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
@@ -77,6 +83,11 @@ LIGAS = {
                           'al empate de más cuando Porto, Benfica o Sporting juegan contra equipos chicos; ahora casi no marca PICK de '
                           'empate (10 en seis años, y perdieron). Usa la página para ver estadísticas y momios justos.',
                  'cuidado': {'X': 'Empate: en esta liga los PICK de empate perdieron mucho en la prueba'}},
+    # Eliteserien (Noruega, 16 equipos, marzo-diciembre). Fuentes revisadas el 8 nov 2026 (diag_liga.py): football-data NOR
+    # (cierre 1X2 de Pinnacle y Bet365, sin goles), ESPN nor.1 con DraftKings, FotMob 59, API-Football 103 (con lesiones)
+    'noruega': {'nombre': 'Eliteserien', 'fotmob': 59, 'pais': 'Noruega', 'espn': 'nor.1', 'fd_extra': 'NOR', 'calendario': 'anual',
+                'api_football': 103, 'copas': dict(COPAS_UEFA), 'zonas': 'noruega16', 'nuevo': 'subió esta temporada',
+                'oculta': True},
     # region: copa entre equipos de ligas distintas ('europa' o 'sudamerica'). Se usa el modelo de toda la región
     # (src/europa.py), que mide cuánto vale cada liga con los partidos de las copas. Sus resultados (y los de las ligas de la
     # región) los baja europa.py, no football-data. fase_tabla: la fase de la copa que va en la tabla (las eliminatorias no).
@@ -198,6 +209,10 @@ ZONAS = {
     'colombia': [[1, 8, 'cl', 'Cuadrangulares']],
     'australia12': [[1, 2, 'cl', 'Finales: directo a semifinal'], [3, 6, 'eu', 'Finales: eliminatoria']],
     'suecia16': [[1, 1, 'cl', 'Champions (previa)'], [2, 3, 'eu', 'Conference (previa)'], [-3, -3, 'pro', 'Promoción'], [-2, -1, 'des', 'Descenso']],
+    'noruega16': [[1, 1, 'cl', 'Champions (previa)'], [2, 3, 'eu', 'Europa / Conference (previa)'], [-3, -3, 'pro', 'Promoción'],
+                  [-2, -1, 'des', 'Descenso']],
+    'bundesliga2': [[1, 2, 'cl', 'Ascenso directo'], [3, 3, 'eu', 'Playoff de ascenso'], [-3, -3, 'pro', 'Playoff de descenso'],
+                    [-2, -1, 'des', 'Descenso']],
     # por grupo (de 4)
     'libertadores': [[1, 2, 'cl', 'Octavos'], [3, 3, 'eu', 'Pasa a la Sudamericana'], [4, 4, 'des', 'Eliminado']],
     'sudamericana': [[1, 1, 'cl', 'Octavos'], [2, 2, 'eu', 'Playoff de octavos'], [3, 4, 'des', 'Eliminado']],

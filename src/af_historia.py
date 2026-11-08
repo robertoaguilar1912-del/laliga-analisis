@@ -43,8 +43,8 @@ EXTRA = {'ned': (88, 'europa'), 'bel': (144, 'europa'), 'sco': (179, 'europa'), 
          'bol': (344, 'anual'), 'ven': (299, 'anual')}
 ATRAS_EXTRA = 1
 # primero América (donde football-data no trae remates), después Europa y las copas
-ORDEN = ['ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia', 'australia',
-         'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'ligue1', 'portugal',
+ORDEN = ['ligamx', 'mls', 'brasil', 'brasil2', 'argentina', 'colombia', 'suecia', 'noruega', 'australia',
+         'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'bundesliga2', 'ligue1', 'portugal',
          'champions', 'europa', 'conference', 'libertadores', 'sudamericana'] + list(EXTRA)
 
 
@@ -317,7 +317,7 @@ def jugadores(max_consultas=3000, ligas=None, atras=ATRAS):
 
 
 # ligas con lesiones en API-Football (revisión del 1 nov 2026: no hay en Portugal, Segunda, Liga MX, Argentina ni Colombia)
-CON_LESIONES = ['premier', 'laliga', 'seriea', 'bundesliga', 'ligue1', 'championship', 'mls', 'brasil', 'suecia']
+CON_LESIONES = ['premier', 'laliga', 'seriea', 'bundesliga', 'ligue1', 'championship', 'mls', 'brasil', 'suecia', 'noruega']
 
 
 def lesiones(ligas=None, atras=CON_JUGADORES):

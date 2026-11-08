@@ -22,7 +22,7 @@ from config import DATOS, ZONA, LIGAS
 REG = DATOS / 'registro'
 EQ = {'H1:-0.5': '1', 'H2:-0.5': '2', 'H1:+0.5': '1X', 'H2:+0.5': 'X2'}
 EQR = {v: k for k, v in EQ.items()}
-EU8 = {'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'ligue1', 'portugal'}
+EU8 = {'laliga', 'segunda', 'premier', 'championship', 'seriea', 'bundesliga', 'bundesliga2', 'ligue1', 'portugal'}
 
 
 def _leer(p, d):
