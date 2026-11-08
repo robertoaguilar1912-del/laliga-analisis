@@ -74,8 +74,8 @@
 },
 "401841664": {
 "fotmob": 1000019623,
-"visto": "2026-11-08T00:25+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T00:29+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -84,26 +84,17 @@
 "regreso": "hasta el 8 de noviembre",
 "duda": false,
 "valor": 815582.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
 "nombre": "Jeremías Lázaro",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 783166.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Lucas Sanseviero",
-"tipo": "Lesión",
-"regreso": "unas semanas",
+"regreso": "1-2 semanas",
 "duda": false,
-"valor": 536030.0,
+"valor": 783166.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Luca Rafaelli",
@@ -115,9 +106,9 @@
 "importante": false
 }
 ],
-"valor_xi": 15109365.0,
-"perdida": 0.053978575539077915,
-"perdida_duda": 0.051833151161547825
+"valor_xi": 6957349.0,
+"perdida": 0.22979269833955435,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -127,7 +118,7 @@
 "regreso": "una semana",
 "duda": false,
 "valor": 1564756.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -137,7 +128,7 @@
 "duda": false,
 "valor": 1246251.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Lautaro Giannetti",
@@ -176,8 +167,8 @@
 "importante": false
 }
 ],
-"valor_xi": 25413341.0,
-"perdida": 0.061572226965356504,
+"valor_xi": 16911068.0,
+"perdida": 0.16622291389284224,
 "perdida_duda": 0.0
 }
 }
