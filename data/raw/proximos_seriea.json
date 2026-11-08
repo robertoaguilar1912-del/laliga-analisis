@@ -1,154 +1,5 @@
 [
  {
-  "id": "401874810",
-  "utc": "2026-11-08T11:30Z",
-  "estadio": "Stadio Diego Armando Maradona",
-  "local_espn": "Napoli",
-  "visita_espn": "Lazio",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "2026-27-italian-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    105,
-    260,
-    215
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -170,
-    130
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Napoli": [
-    [
-     "219531",
-     "Vanja Milinkovic-Savic",
-     "G"
-    ],
-    [
-     "205576",
-     "Amir Rrahmani",
-     "D"
-    ],
-    [
-     "297360",
-     "Rafa Marín",
-     "D"
-    ],
-    [
-     "261594",
-     "Sam Beukema",
-     "D"
-    ],
-    [
-     "255850",
-     "Scott McTominay",
-     "M"
-    ],
-    [
-     "274217",
-     "Billy Gilmour",
-     "M"
-    ],
-    [
-     "234881",
-     "Mathías Olivera",
-     "M"
-    ],
-    [
-     "332411",
-     "Antonio Vergara",
-     "M"
-    ],
-    [
-     "134947",
-     "Kevin De Bruyne",
-     "M"
-    ],
-    [
-     "255344",
-     "Noa Lang",
-     "F"
-    ],
-    [
-     "309273",
-     "Rasmus Højlund",
-     "F"
-    ]
-   ],
-   "Lazio": [
-    [
-     "265140",
-     "Christos Mandas",
-     "G"
-    ],
-    [
-     "333311",
-     "Oliver Provstgaard",
-     "D"
-    ],
-    [
-     "330041",
-     "Romano Floriani",
-     "D"
-    ],
-    [
-     "288901",
-     "Nuno Tavares",
-     "D"
-    ],
-    [
-     "305552",
-     "Josip Sutalo",
-     "D"
-    ],
-    [
-     "250850",
-     "Davide Frattesi",
-     "M"
-    ],
-    [
-     "282228",
-     "Kenneth Taylor",
-     "M"
-    ],
-    [
-     "345323",
-     "Reda Belahyane",
-     "M"
-    ],
-    [
-     "323113",
-     "Tijjani Noslin",
-     "F"
-    ],
-    [
-     "291550",
-     "Gustav Isaksen",
-     "F"
-    ],
-    [
-     "239086",
-     "Andrea Pinamonti",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401875018",
   "utc": "2026-11-08T14:00Z",
   "estadio": "Stadio Luigi Ferraris",
@@ -315,7 +166,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -155
    ],
    "spread": [
@@ -326,6 +177,122 @@
     [
      "-0.5",
      -120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Monza": [
+    [
+     "301377",
+     "Noel Törnqvist",
+     "G"
+    ],
+    [
+     "390673",
+     "Eddy Kouadio",
+     "D"
+    ],
+    [
+     "367635",
+     "Lorenzo Lucchesi",
+     "D"
+    ],
+    [
+     "363886",
+     "Saba Goglichidze",
+     "D"
+    ],
+    [
+     "234951",
+     "Idrissa Touré",
+     "M"
+    ],
+    [
+     "416515",
+     "Mathis Mout",
+     "M"
+    ],
+    [
+     "259871",
+     "Ricardo Mangas",
+     "M"
+    ],
+    [
+     "353013",
+     "Leonardo Colombo",
+     "M"
+    ],
+    [
+     "362776",
+     "Ebenezer Akinsanmiro",
+     "M"
+    ],
+    [
+     "355359",
+     "Jay Robinson",
+     "F"
+    ],
+    [
+     "384482",
+     "Gustavo Varela",
+     "F"
+    ]
+   ],
+   "Atalanta": [
+    [
+     "284804",
+     "Marco Carnesecchi",
+     "G"
+    ],
+    [
+     "309812",
+     "Giorgio Scalvini",
+     "D"
+    ],
+    [
+     "170553",
+     "Sead Kolasinac",
+     "D"
+    ],
+    [
+     "182627",
+     "Davide Zappacosta",
+     "D"
+    ],
+    [
+     "303988",
+     "Lorenzo Bernasconi",
+     "D"
+    ],
+    [
+     "237435",
+     "Eljif Elmas",
+     "M"
+    ],
+    [
+     "278210",
+     "Éderson",
+     "M"
+    ],
+    [
+     "296319",
+     "Charles De Ketelaere",
+     "M"
+    ],
+    [
+     "288488",
+     "Nicola Zalewski",
+     "M"
+    ],
+    [
+     "189668",
+     "Mario Pasalic",
+     "M"
+    ],
+    [
+     "258158",
+     "Nikola Krstovic",
+     "F"
     ]
    ]
   }
