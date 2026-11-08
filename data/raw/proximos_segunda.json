@@ -65,10 +65,26 @@
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    105,
+    255,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
   }
  },
  {
