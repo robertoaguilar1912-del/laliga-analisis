@@ -14,34 +14,6 @@
   "momios": null
  },
  {
-  "id": "401873045",
-  "utc": "2026-11-08T18:00Z",
-  "estadio": "Arrowhead Stadium",
-  "local_espn": "Kansas City Chiefs",
-  "visita_espn": "New York Jets",
-  "local_abbr": "KC",
-  "visita_abbr": "NYJ",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 9,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873042",
-  "utc": "2026-11-08T18:00Z",
-  "estadio": "Hard Rock Stadium",
-  "local_espn": "Miami Dolphins",
-  "visita_espn": "Detroit Lions",
-  "local_abbr": "MIA",
-  "visita_abbr": "DET",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 9,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873039",
   "utc": "2026-11-08T18:00Z",
   "estadio": "Caesars Superdome",
@@ -49,48 +21,6 @@
   "visita_espn": "Cleveland Browns",
   "local_abbr": "NO",
   "visita_abbr": "CLE",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 9,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873044",
-  "utc": "2026-11-08T18:00Z",
-  "estadio": "Lincoln Financial Field",
-  "local_espn": "Philadelphia Eagles",
-  "visita_espn": "New York Giants",
-  "local_abbr": "PHI",
-  "visita_abbr": "NYG",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 9,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873043",
-  "utc": "2026-11-08T18:00Z",
-  "estadio": "Northwest Stadium",
-  "local_espn": "Washington Commanders",
-  "visita_espn": "Los Angeles Rams",
-  "local_abbr": "WSH",
-  "visita_abbr": "LAR",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 9,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873041",
-  "utc": "2026-11-08T18:00Z",
-  "estadio": "Bank of America Stadium",
-  "local_espn": "Carolina Panthers",
-  "visita_espn": "Denver Broncos",
-  "local_abbr": "CAR",
-  "visita_abbr": "DEN",
   "neutral": false,
   "estado": "STATUS_IN_PROGRESS",
   "semana": 9,
@@ -106,33 +36,10 @@
   "local_abbr": "LAC",
   "visita_abbr": "HOU",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 9,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    185,
-    -225
-   ],
-   "ml_abre": [
-    -130,
-    110
-   ],
-   "spread": [
-    5.5,
-    -112,
-    -5.5,
-    -108
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    40.5,
-    -110,
-    -110
-   ],
-   "total_abre": 43.5
-  }
+  "momios": null
  },
  {
   "id": "401873049",
@@ -186,8 +93,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -440,
-    340
+    -410,
+    320
    ],
    "ml_abre": [
     -425,
@@ -195,9 +102,9 @@
    ],
    "spread": [
     -8.5,
-    -112,
+    -108,
     8.5,
-    null
+    -112
    ],
    "spread_abre": -8.5,
    "total": [
@@ -239,8 +146,8 @@
    "spread_abre": -13.5,
    "total": [
     39.5,
-    -112,
-    -108
+    -118,
+    -102
    ],
    "total_abre": 45.5
   }
