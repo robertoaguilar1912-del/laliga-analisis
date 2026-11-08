@@ -299,7 +299,8 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     'margen': [{'m': int(v), 'p': float(pM[dclip == v].sum())} for v in range(-4, 5)],
                     'remates': [dist_r['ml'], dist_r['mv']] if dist_r else None,
                     'dist': {'goles': [[round(float(x), 5) for x in fila] for fila in Mt], 'corners': dist_c, 'remates': dist_r},
-                    'texto': txt, 'alineaciones': ali, 'descendidos': bajaron})
+                    'texto': txt, 'alineaciones': ali, 'descendidos': bajaron,
+                    'ataque': round(fg, 4) if fg else None})   # factor de goles de los onces, para revisarlo después con los resultados
     return out
 
 
