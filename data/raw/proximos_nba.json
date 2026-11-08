@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909945",
-  "utc": "2026-11-08T20:30Z",
-  "fecha": "2026-11-08",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "PHI",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "Philadelphia 76ers",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "1-7",
-    "0-2",
-    "1-5"
-   ],
-   "away": [
-    "8-2",
-    "4-1",
-    "4-1"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909946",
   "utc": "2026-11-08T23:00Z",
   "fecha": "2026-11-08",
@@ -58,8 +29,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -264,
-    217
+    -277,
+    226
    ],
    "ml_abre": [
     -132,
@@ -74,8 +45,8 @@
    "spread_abre": -2.5,
    "total": [
     216.5,
-    -115,
-    -105
+    -107,
+    -113
    ],
    "total_abre": 223.5
   }
@@ -145,7 +116,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Brooklyn Nets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -318,24 +289,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    346,
-    -446
+    394,
+    -518
    ],
    "ml_abre": [
     245,
     -303
    ],
    "spread": [
-    9.5,
-    -103,
-    -9.5,
-    -117
+    11.5,
+    -115,
+    -11.5,
+    -105
    ],
    "spread_abre": 8.5,
    "total": [
-    237.5,
-    -107,
-    -113
+    236.5,
+    -106,
+    -115
    ],
    "total_abre": 238.5
   }
@@ -512,30 +483,7 @@
     "2-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -166,
-    139
-   ],
-   "ml_abre": [
-    -166,
-    139
-   ],
-   "spread": [
-    -4.5,
-    -110,
-    4.5,
-    -110
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    222.5,
-    -110,
-    -110
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909958",
@@ -567,22 +515,22 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    202,
-    -245
+    230,
+    -281
    ],
    "ml_abre": [
     200,
     -243
    ],
    "spread": [
-    7.5,
+    8.5,
     -110,
-    -7.5,
+    -8.5,
     -110
    ],
    "spread_abre": 7.5,
    "total": [
-    225.5,
+    226.5,
     -110,
     -110
    ],
@@ -664,9 +612,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "4-1",
-    "4-1"
+    "5-1"
    ],
    "away": [
     "7-2",
@@ -896,8 +844,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-7",
-    "0-2",
+    "1-8",
+    "0-3",
     "1-5"
    ],
    "away": [
@@ -1099,9 +1047,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "4-1",
-    "4-1"
+    "5-1"
    ],
    "away": [
     "5-4",
@@ -1302,8 +1250,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-7",
-    "0-2",
+    "1-8",
+    "0-3",
     "1-5"
    ],
    "away": [
@@ -1597,8 +1545,8 @@
     "4-2"
    ],
    "away": [
-    "1-7",
-    "0-2",
+    "1-8",
+    "0-3",
     "1-5"
    ]
   },
@@ -1621,9 +1569,9 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "4-1",
-    "4-1"
+    "5-1"
    ],
    "away": [
     "3-7",
@@ -1916,8 +1864,8 @@
     "1-3"
    ],
    "away": [
-    "1-7",
-    "0-2",
+    "1-8",
+    "0-3",
     "1-5"
    ]
   },
@@ -1974,9 +1922,9 @@
     "1-4"
    ],
    "away": [
-    "8-2",
+    "9-2",
     "4-1",
-    "4-1"
+    "5-1"
    ]
   },
   "momios": null
@@ -2351,9 +2299,9 @@
     "2-3"
    ],
    "away": [
-    "8-2",
+    "9-2",
     "4-1",
-    "4-1"
+    "5-1"
    ]
   },
   "momios": null
@@ -2380,8 +2328,8 @@
     "1-4"
    ],
    "away": [
-    "1-7",
-    "0-2",
+    "1-8",
+    "0-3",
     "1-5"
    ]
   },
