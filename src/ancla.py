@@ -34,6 +34,8 @@ def anclar(M, m3, linea=None, p_over=None, k=ANCLA_COPAS):
     """M: matriz de marcadores del modelo; m3: 1X2 del mercado sin margen; linea/p_over: línea de goles de la casa y su
     probabilidad de 'más de' sin margen (o None). Devuelve la matriz inclinada."""
     M = np.asarray(M, dtype=float)
+    if M.ndim != 2 or M.size < 4 or not np.isfinite(M).all() or M.sum() <= 0:
+        return M
     M = M / M.sum()
     m3 = np.asarray(m3, dtype=float)
     if m3 is None or len(m3) != 3 or not np.all(m3 > 0):
