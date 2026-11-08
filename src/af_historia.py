@@ -11,9 +11,10 @@ prueba) y tener los minutos de cada jugador para el ajuste por alineaciones.
                        'g': [goles local, visita], 'ht': [medio tiempo],
                        'x': {'h': {...}, 'a': {...}} (xg, sog remates a puerta, sh remates, sib remates en el área,
                              co córners, pos posesión, yc/rc tarjetas, fo faltas; {} si API-Football no tiene estadísticas),
-                       'j': {'h': [[id jugador, minutos, titular 1/0, nota de API-Football, posición G/D/M/F], ...],
+                       'j': {'h': [[id jugador, minutos, titular 1/0, nota de API-Football, posición G/D/M/F, remates,
+                                    remates a puerta, pases clave, goles, asistencias], ...],
                              'a': [...]} (la corrida diaria: las 2 últimas temporadas; con --jugadores, 5 temporadas.
-                             Las filas bajadas antes del 4 nov 2026 tienen solo los 3 primeros datos)}}}
+                             Las filas bajadas antes del 4 nov 2026 tienen solo los 3 primeros datos; antes del 8 nov, 5)}}}
 - Se reanuda solo: en cada corrida pide únicamente los partidos terminados que faltan, del más nuevo al más viejo. Si en una
   temporada vieja los primeros 40 partidos no traen xG, se marca 'sin_xg' y no se gasta más en ella.
 - Cada corrida tiene un tope de consultas y deja una reserva de la cuota del día para la página (RESERVA).
@@ -188,8 +189,10 @@ def detalle(ids, d, con_jugadores):
                     if pl.get('id') is None:
                         continue
                     d['jugadores'][str(pl['id'])] = pl.get('name')
+                    sh, ps, gl = st.get('shots') or {}, st.get('passes') or {}, st.get('goals') or {}
                     filas.append([pl['id'], int(mins), 0 if g.get('substitute') else 1, _num(g.get('rating')),
-                                  (g.get('position') or '')[:1]])
+                                  (g.get('position') or '')[:1], sh.get('total') or 0, sh.get('on') or 0, ps.get('key') or 0,
+                                  gl.get('total') or 0, gl.get('assists') or 0])
                 jj[s] = filas
             if jj or not m.get('j'):
                 m['j'] = jj
@@ -290,7 +293,7 @@ def jugadores(max_consultas=3000, ligas=None, atras=ATRAS):
             if d.get('sin_jugadores'):
                 continue
             pend = sorted((i for i, m in d['partidos'].items() if m.get('est') in TERMINADO and m.get('f') and
-                           ('j' not in m or any(len(r) < 5 for s in m['j'].values() for r in s))),
+                           ('j' not in m or any(len(r) < 10 for s in m['j'].values() for r in s))),
                           key=lambda i: d['partidos'][i]['f'], reverse=True)
             hechos = 0
             for k in range(0, len(pend), 20):
