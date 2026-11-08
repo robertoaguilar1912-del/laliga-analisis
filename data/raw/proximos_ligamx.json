@@ -5,7 +5,7 @@
   "estadio": "Estadio Universitario",
   "local_espn": "Tigres UANL",
   "visita_espn": "Cruz Azul",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -309,23 +309,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
-    270,
-    125
+    185,
+    265,
+    130
    ],
    "ou_linea": 2.5,
    "ou": [
     -165,
-    125
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -170
     ],
     [
      "-0.5",
      120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Pumas UNAM": [
+    [
+     "73247",
+     "Keylor Navas",
+     "G"
+    ],
+    [
+     "286879",
+     "Pablo Bennevendo",
+     "D"
+    ],
+    [
+     "236597",
+     "Nathan Silva",
+     "D"
+    ],
+    [
+     "344568",
+     "Rodrigo López",
+     "D"
+    ],
+    [
+     "177553",
+     "Rubén Duarte",
+     "D"
+    ],
+    [
+     "219508",
+     "Adalberto Carrasquilla",
+     "M"
+    ],
+    [
+     "242715",
+     "Uriel Antuna",
+     "M"
+    ],
+    [
+     "265969",
+     "César Huerta",
+     "M"
+    ],
+    [
+     "297150",
+     "Pedro Vite",
+     "M"
+    ],
+    [
+     "255942",
+     "Robert Morales",
+     "F"
+    ],
+    [
+     "239983",
+     "Juninho",
+     "F"
+    ]
+   ],
+   "América": [
+    [
+     "200101",
+     "Ángel Malagón",
+     "G"
+    ],
+    [
+     "195312",
+     "Kevin Álvarez",
+     "D"
+    ],
+    [
+     "82782",
+     "Santiago Ramos",
+     "D"
+    ],
+    [
+     "132676",
+     "Cristian Borja",
+     "D"
+    ],
+    [
+     "290414",
+     "Israel Reyes",
+     "D"
+    ],
+    [
+     "336456",
+     "Óscar Perea",
+     "M"
+    ],
+    [
+     "129421",
+     "Érick Sánchez",
+     "M"
+    ],
+    [
+     "228351",
+     "Alan Cervantes",
+     "M"
+    ],
+    [
+     "3731",
+     "Carlos Álvarez",
+     "M"
+    ],
+    [
+     "212824",
+     "Alejandro Zendejas",
+     "M"
+    ],
+    [
+     "93184",
+     "Henry Martín",
+     "F"
     ]
    ]
   }
