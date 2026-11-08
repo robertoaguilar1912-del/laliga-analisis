@@ -9,10 +9,10 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Detroit Pistons",
   "visita_espn": "Los Angeles Lakers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Little Caesars Arena",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "3-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -277,
-    226
-   ],
-   "ml_abre": [
-    -132,
-    111
-   ],
-   "spread": [
-    -8.5,
-    -103,
-    8.5,
-    -118
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    216.5,
-    -107,
-    -113
-   ],
-   "total_abre": 223.5
-  }
+  "momios": null
  },
  {
   "id": "401909947",
@@ -81,18 +58,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -620,
-    457
+    -700,
+    504
    ],
    "ml_abre": [
     -486,
     373
    ],
    "spread": [
-    -11.5,
-    -115,
-    11.5,
-    -105
+    -12.5,
+    -108,
+    12.5,
+    -112
    ],
    "spread_abre": -10.5,
    "total": [
@@ -168,7 +145,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Boston Celtics",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -194,9 +171,9 @@
    ],
    "spread": [
     13.5,
-    -116,
+    -112,
     -13.5,
-    -104
+    -108
    ],
    "spread_abre": 12.5,
    "total": [
@@ -483,7 +460,30 @@
     "2-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -291,
+    237
+   ],
+   "ml_abre": [
+    -166,
+    139
+   ],
+   "spread": [
+    -8.5,
+    -105,
+    8.5,
+    -115
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    217.5,
+    -110,
+    -110
+   ],
+   "total_abre": 222.5
+  }
  },
  {
   "id": "401909958",
