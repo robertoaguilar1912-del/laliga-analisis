@@ -1,7 +1,7 @@
 {
 "401879244": {
 "fotmob": 5795506,
-"visto": "2026-11-08T15:27+00:00",
+"visto": "2026-11-08T15:32+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -110,7 +110,7 @@
 },
 "401879243": {
 "fotmob": 5795507,
-"visto": "2026-11-08T15:27+00:00",
+"visto": "2026-11-08T15:32+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -210,7 +210,7 @@
 },
 "401878759": {
 "fotmob": 5795510,
-"visto": "2026-11-08T15:27+00:00",
+"visto": "2026-11-08T15:32+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -274,7 +274,7 @@
 },
 "401879239": {
 "fotmob": 5795514,
-"visto": "2026-11-08T15:27+00:00",
+"visto": "2026-11-08T15:32+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -383,8 +383,8 @@
 },
 "401879240": {
 "fotmob": 5795512,
-"visto": "2026-11-08T15:27+00:00",
-"xi": "predicted",
+"visto": "2026-11-08T15:32+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -402,15 +402,6 @@
 "regreso": "finales de noviembre",
 "duda": false,
 "valor": 69741250.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Patrick Dorgu",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 48737212.0,
 "titular": false,
 "importante": true
 },
@@ -451,9 +442,9 @@
 "importante": false
 }
 ],
-"valor_xi": 529802250.0,
-"perdida": 0.2749303631685218,
-"perdida_duda": 0.09199132695265073
+"valor_xi": 506047455.0,
+"perdida": 0.2878360982963544,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -473,7 +464,7 @@
 "duda": false,
 "valor": 36811941.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Matty Cash",
@@ -483,10 +474,19 @@
 "valor": 23668560.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Aaron Wan-Bissaka",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 17694746.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 380649722.0,
-"perdida": 0.12882036992529317,
+"valor_xi": 353649847.0,
+"perdida": 0.242746829182143,
 "perdida_duda": 0.0
 }
 }
