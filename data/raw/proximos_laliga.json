@@ -5,7 +5,7 @@
   "estadio": "Estadio Martínez Valero",
   "local_espn": "Elche",
   "visita_espn": "Real Betis",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-27-laliga",
   "neutral": false,
   "momios": {
@@ -160,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    295,
-    330
+    -120,
+    290,
+    310
    ],
    "ou_linea": 2.5,
    "ou": [
     -165,
-    135
+    130
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -130
     ],
     [
      "+0.5",
-     100
+     -105
     ]
    ]
   }
