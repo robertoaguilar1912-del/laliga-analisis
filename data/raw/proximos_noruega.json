@@ -5,10 +5,32 @@
   "estadio": "Romssa Arena",
   "local_espn": "Tromso",
   "visita_espn": "Bodo/Glimt",
-  "estado": "STATUS_SUSPENDED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-eliteserien",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    500,
+    380,
+    -220
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -165
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -165
+    ],
+    [
+     "-1.5",
+     115
+    ]
+   ]
+  },
   "alineaciones": {
    "Tromso": [
     [
@@ -204,23 +226,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
+    230,
     320,
-    -110
+    -105
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
+    -130,
     -105
    ],
    "spread": [
     [
      "+0.5",
-     -115
+     -120
     ],
     [
      "-0.5",
-     -120
+     -115
     ]
    ]
   }
