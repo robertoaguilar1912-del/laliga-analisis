@@ -38,7 +38,7 @@
 },
 "401883122": {
 "fotmob": 5868525,
-"visto": "2026-11-08T14:16+00:00",
+"visto": "2026-11-08T14:21+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -120,8 +120,8 @@
 },
 "401883119": {
 "fotmob": 5868530,
-"visto": "2026-11-08T14:16+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-08T14:21+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -139,8 +139,8 @@
 "regreso": "hasta el 8 de noviembre",
 "duda": false,
 "valor": 244346.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Javier Boñar",
@@ -161,8 +161,8 @@
 "importante": false
 }
 ],
-"valor_xi": 38982625.0,
-"perdida": 0.1689880042711336,
+"valor_xi": 26671385.0,
+"perdida": 0.23782979399082574,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -177,15 +177,6 @@
 "importante": true
 },
 {
-"nombre": "Daijiro Chirino",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1352888.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Rodrigo Ely",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
@@ -193,11 +184,20 @@
 "valor": 416613.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Daijiro Chirino",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1352888.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 42783876.0,
-"perdida": 0.05229112481533931,
-"perdida_duda": 0.031621445424907274
+"valor_xi": 46569301.0,
+"perdida": 0.04804059652946047,
+"perdida_duda": 0.0
 }
 },
 "401883140": {
