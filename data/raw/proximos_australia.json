@@ -5,15 +5,31 @@
   "estadio": "Hindmarsh Stadium",
   "local_espn": "Adelaide United FC",
   "visita_espn": "Melbourne Victory",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    220,
+    265,
+    110
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    135,
+    -185
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
   },
   "alineaciones": {
    "Adelaide United FC": [
