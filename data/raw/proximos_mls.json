@@ -5,15 +5,31 @@
   "estadio": "Q2 Stadium",
   "local_espn": "Austin FC",
   "visita_espn": "Portland Timbers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    300,
+    330,
+    -145
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -135,
+    105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     110
+    ],
+    [
+     "-0.5",
+     -155
+    ]
+   ]
   },
   "alineaciones": {
    "Austin FC": [
@@ -138,15 +154,31 @@
   "estadio": "Toyota Stadium",
   "local_espn": "FC Dallas",
   "visita_espn": "Colorado Rapids",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -120,
+    265,
+    280
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
   },
   "alineaciones": {
    "FC Dallas": [
@@ -271,15 +303,31 @@
   "estadio": "Shell Energy Stadium",
   "local_espn": "Houston Dynamo FC",
   "visita_espn": "St. Louis CITY SC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    125,
+    230,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -170
+    ]
+   ]
   },
   "alineaciones": {
    "Houston Dynamo FC": [
@@ -404,15 +452,31 @@
   "estadio": "Allianz Field",
   "local_espn": "Minnesota United FC",
   "visita_espn": "San Jose Earthquakes",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -165,
+    330,
+    340
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
   },
   "alineaciones": {
    "Minnesota United FC": [
@@ -537,15 +601,31 @@
   "estadio": "America First Field",
   "local_espn": "Real Salt Lake",
   "visita_espn": "LA Galaxy",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -140,
+    310,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -120,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
   },
   "alineaciones": {
    "Real Salt Lake": [
@@ -670,15 +750,31 @@
   "estadio": "Snapdragon Stadium",
   "local_espn": "San Diego FC",
   "visita_espn": "Sporting Kansas City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -145,
+    330,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -145,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -155
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
   },
   "alineaciones": {
    "San Diego FC": [
@@ -803,15 +899,31 @@
   "estadio": "Lumen Field",
   "local_espn": "Seattle Sounders FC",
   "visita_espn": "LAFC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    110,
+    275,
+    195
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
   },
   "alineaciones": {
    "Seattle Sounders FC": [
