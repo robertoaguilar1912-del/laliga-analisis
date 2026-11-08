@@ -547,8 +547,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const REGLA_TXT = {
     gana: 'Aquí, "Gana" con momio alto no es PICK (desde 2.00 en las ligas de Europa y desde 2.60 en las copas UEFA): en la prueba con temporadas pasadas eran los PICK que más perdían (el modelo sobrevalora al que no es favorito).',
     menos: 'En las primeras 13 semanas de la temporada, "Menos de" no es PICK: en la prueba con temporadas pasadas perdían mucho más que el resto (el modelo tarda en ver cuántos goles trae la temporada).',
+    menos_liga: 'En la MLS, "Menos de" no es PICK: el modelo da menos goles de los que hay (todas las temporadas desde 2022) y sus "Menos de" perdieron 18% en octubre y noviembre de 2026, peor que apostar "menos de" en todos los partidos (−6.6%).',
     lejos: 'En esta liga, con EV de +20% o más al momio de la casa ("lejos del mercado") no es PICK: en la prueba con temporadas pasadas esos PICK perdieron en todos los periodos (cuando el modelo se aleja tanto de la casa, casi siempre es el modelo el que no sabe algo).' };
-  const reglaDe = (m, k, dec, ev) => !m.reglas ? null : (GANA_K.has(k) && dec >= m.reglas.gana_max - 1e-9) ? 'gana' : (/^U(:|$)/.test(k) && m.reglas.sin_menos) ? 'menos'
+  const reglaDe = (m, k, dec, ev) => !m.reglas ? null : (m.reglas.gana_max && GANA_K.has(k) && dec >= m.reglas.gana_max - 1e-9) ? 'gana' : (/^U(:|$)/.test(k) && m.reglas.sin_menos) ? (m.reglas.menos_liga ? 'menos_liga' : 'menos')
     : (m.reglas.ev_max && ev != null && ev >= m.reglas.ev_max) ? 'lejos' : null;
   const minus = t => t.charAt(0).toLowerCase() + t.slice(1);
   const notaRegla = rg => rg ? `<br><b>No es PICK:</b> ${esc(minus(REGLA_TXT[rg]))}` : '';
