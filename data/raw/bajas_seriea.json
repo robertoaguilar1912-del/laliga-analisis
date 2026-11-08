@@ -1,8 +1,8 @@
 {
 "401875003": {
 "fotmob": 5749742,
-"visto": "2026-11-08T19:02+00:00",
-"xi": "predicted",
+"visto": "2026-11-08T19:07+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -33,9 +33,9 @@
 "importante": false
 }
 ],
-"valor_xi": 207497594.0,
+"valor_xi": 234000350.0,
 "perdida": 0.0,
-"perdida_duda": 0.12559799609049924
+"perdida_duda": 0.11137283341670215
 },
 "visita": {
 "faltan": [
@@ -58,22 +58,13 @@
 "importante": true
 },
 {
-"nombre": "Francisco Conceição",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 34232511.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Manuel Locatelli",
 "tipo": "Lesión",
 "regreso": "finales de marzo de 2027",
 "duda": false,
 "valor": 23378696.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Nicolás González",
@@ -82,7 +73,16 @@
 "duda": false,
 "valor": 22712118.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Francisco Conceição",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 34232511.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Andrea Cambiaso",
@@ -103,9 +103,9 @@
 "importante": false
 }
 ],
-"valor_xi": 311247451.0,
-"perdida": 0.3757829489822874,
-"perdida_duda": 0.1099848718118498
+"valor_xi": 275415451.0,
+"perdida": 0.5920230633683656,
+"perdida_duda": 0.12429408326840748
 }
 }
 }
