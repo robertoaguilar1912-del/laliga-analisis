@@ -1,160 +1,11 @@
 [
  {
-  "id": "401876907",
-  "utc": "2026-11-07T23:00Z",
-  "estadio": "Estadio Jalisco",
-  "local_espn": "Atlas",
-  "visita_espn": "Pachuca",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "torneo-apertura",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    155,
-    260,
-    160
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -165,
-    125
-   ],
-   "spread": [
-    [
-     "-0.5",
-     140
-    ],
-    [
-     "+0.5",
-     -195
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Atlas": [
-    [
-     "185147",
-     "Camilo Vargas",
-     "G"
-    ],
-    [
-     "290593",
-     "Kevin Zenón",
-     "SUB"
-    ],
-    [
-     "225440",
-     "Manuel Capasso",
-     "SUB"
-    ],
-    [
-     "386935",
-     "Sergio Hernandez",
-     "SUB"
-    ],
-    [
-     "312549",
-     "Luís Esteves",
-     "SUB"
-    ],
-    [
-     "309574",
-     "Florián Monzón",
-     "SUB"
-    ],
-    [
-     "233688",
-     "Milton Valenzuela",
-     "SUB"
-    ],
-    [
-     "178839",
-     "Aldo Rocha",
-     "SUB"
-    ],
-    [
-     "263224",
-     "Juanjo Purata",
-     "SUB"
-    ],
-    [
-     "364455",
-     "Elías Montiel",
-     "SUB"
-    ],
-    [
-     "234447",
-     "Adonis Frias",
-     "SUB"
-    ]
-   ],
-   "Pachuca": [
-    [
-     "259439",
-     "Carlos Moreno",
-     "G"
-    ],
-    [
-     "268843",
-     "Sergio Barreto",
-     "D"
-    ],
-    [
-     "364454",
-     "Jorge Berlanga",
-     "D"
-    ],
-    [
-     "194921",
-     "Eduardo Bauermann",
-     "D"
-    ],
-    [
-     "228355",
-     "Francisco Venegas",
-     "D"
-    ],
-    [
-     "233978",
-     "Christian Rivera",
-     "M"
-    ],
-    [
-     "326072",
-     "Alan Bautista",
-     "M"
-    ],
-    [
-     "229552",
-     "Oussama Idrissi",
-     "M"
-    ],
-    [
-     "176489",
-     "Rodolfo Pizarro",
-     "M"
-    ],
-    [
-     "160562",
-     "Javier Vallejo",
-     "M"
-    ],
-    [
-     "127570",
-     "Salomón Rondón",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401876906",
   "utc": "2026-11-08T01:00Z",
   "estadio": "Estadio Universitario",
   "local_espn": "Tigres UANL",
   "visita_espn": "Cruz Azul",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -303,7 +154,7 @@
   "estadio": "Estadio Nemesio Díez Riega",
   "local_espn": "Toluca",
   "visita_espn": "Monterrey",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
@@ -458,23 +309,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    205,
+    225,
     265,
-    120
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    115
+    -160,
+    120
    ],
    "spread": [
     [
      "+0.5",
-     -155
+     -140
     ],
     [
      "-0.5",
-     110
+     100
     ]
    ]
   }
