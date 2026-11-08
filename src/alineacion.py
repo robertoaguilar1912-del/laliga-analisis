@@ -352,6 +352,12 @@ def bajas_habituales(partidos, liga, bajas):
 # Serie A ≈ 0). Cambio típico: ±2-4% de goles. Lo que cambia el once de hoy contra el habitual casi no importó: antes del
 # once se usa el habitual (15 partidos) y con el once confirmado, ese. Solo ligas (en las copas manda el mercado, ancla.py).
 ATAQUE_SO, ATAQUE_KP, ATAQUE_DIAS, ATAQUE_FRENO = 0.020, 0.009, 365, 450.0
+# Liga por liga (8 nov 2026, ataque/por_liga.py), log loss de más/menos en diezmilésimas. Las 9 ligas usadas para afinar,
+# en su prueba (desde jul 2025; ene 2025 en las de año calendario): Ligue 1 −34, MLS −30, Bundesliga −26, Championship −16,
+# LaLiga −8, Brasil −1, Serie A −0.1, Premier +16.5 y Allsvenskan +23. Las otras 7, con todo 2023-26 (no se usaron para
+# afinar): Segunda −11, A-League −10, Argentina −10, Brasil B −5.5, Liga MX −4, Colombia −2, Portugal −1.5. Solo se aplica
+# donde mejora (pedido de Roberto): sin Premier ni Allsvenskan.
+ATAQUE_SIN = {'premier', 'suecia'}
 
 
 def amenaza(pids, antes):
@@ -394,7 +400,7 @@ def _media_liga(liga, antes):
 
 def factor_goles(liga, espn_id, utc):
     """Factor de los goles esperados del partido por el ataque de los dos onces (ATAQUE_SO, ATAQUE_KP), o None."""
-    if (LIGAS.get(liga) or {}).get('region') or not (LIGAS.get(liga) or {}).get('api_football'):
+    if liga in ATAQUE_SIN or (LIGAS.get(liga) or {}).get('region') or not (LIGAS.get(liga) or {}).get('api_football'):
         return None
     _cargar()
     x = ((_leer(RAW / f'af_{liga}.json', {}) or {}).get('partidos') or {}).get(str(espn_id)) or {}
