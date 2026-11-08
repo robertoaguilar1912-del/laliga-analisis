@@ -5,15 +5,31 @@
   "estadio": "Estadio Nemesio Camacho El Campín",
   "local_espn": "Independiente Santa Fe",
   "visita_espn": "Deportivo Pasto",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -1200,
+    750,
+    1800
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "-2.5",
+     -135
+    ],
+    [
+     "+2.5",
+     -110
+    ]
+   ]
   },
   "alineaciones": {
    "Independiente Santa Fe": [
@@ -287,9 +303,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    205,
-    205
+    125,
+    210,
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -299,11 +315,11 @@
    "spread": [
     [
      "-0.5",
-     130
+     120
     ],
     [
      "+0.5",
-     -180
+     -170
     ]
    ]
   }
