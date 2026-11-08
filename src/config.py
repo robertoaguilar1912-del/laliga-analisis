@@ -72,7 +72,18 @@ LIGAS = {
     'bundesliga2': {'nombre': '2. Bundesliga', 'fotmob': 146, 'pais': 'Alemania', 'espn': 'ger.2', 'fd': 'D2', 'fd2': 'D1',
                     'fd2_nombre': 'Bundesliga', 'calendario': 'europa', 'api_football': 79, 'descienden_de': 'D1',
                     'nuevo': 'es nuevo en la 2. Bundesliga', 'copas': {'ger.dfb_pokal': 'Copa de Alemania'},
-                    'zonas': 'bundesliga2', 'oculta': True},
+                    'zonas': 'bundesliga2',
+                    # Prueba del 8 nov 2026 (prueba.py, apertura de Bet365 con las reglas de Europa, 2020-26, 1,923 partidos): log
+                    # loss del 1X2 1.0408 contra 1.0349 del cierre; PICK −6.5% (353, rango −18% a +6%). Los "Menos de" perdieron en los
+                    # dos periodos (2020-23 −17.7% en 43, 2023-26 −16.8% en 72; CLV −9% y −6%): el modelo da menos goles de los que
+                    # hay (más de 2.5: 55-58% contra 59% real). Con el factor de ataque de los onces siguen perdiendo (−16%, 111).
+                    # Sin ellos, como en la MLS: 238 PICK −1.3%
+                    'sin_menos': True,
+                    'aviso': 'Liga nueva en la página (8 nov 2026). En la prueba 2020-2026 (1,923 partidos, contra la apertura de Bet365) '
+                             'el modelo fue casi tan preciso como el cierre, pero los PICK no ganaron: −6.5% (353 apuestas). Casi todo '
+                             'lo perdían los "Menos de" (−17% en los dos periodos, porque el modelo da menos goles de los que hay en esta '
+                             'liga): aquí no son PICK. Sin ellos: −1.3% en 238 apuestas, parejo. No hay ventaja demostrada: apuesta '
+                             'poco aquí hasta que haya más resultados.'},
     'ligue1': {'nombre': 'Ligue 1', 'fotmob': 53, 'pais': 'Francia', 'espn': 'fra.1', 'fd': 'F1', 'fd2': 'F2', 'fd2_nombre': 'Ligue 2',
                'calendario': 'europa', 'api_football': 61,
                'copas': {**COPAS_UEFA, 'fra.coupe_de_france': 'Copa de Francia'}, 'zonas': 'europa18'},
@@ -87,7 +98,17 @@ LIGAS = {
     # (cierre 1X2 de Pinnacle y Bet365, sin goles), ESPN nor.1 con DraftKings, FotMob 59, API-Football 103 (con lesiones)
     'noruega': {'nombre': 'Eliteserien', 'fotmob': 59, 'pais': 'Noruega', 'espn': 'nor.1', 'fd_extra': 'NOR', 'calendario': 'anual',
                 'api_football': 103, 'copas': dict(COPAS_UEFA), 'zonas': 'noruega16', 'nuevo': 'subió esta temporada',
-                'oculta': True},
+                # sin_pick: sin PICK en ningún mercado. Prueba del 8 nov 2026 (prueba.py y scratchpad nor/): contra el cierre de
+                # football-data (1X2, 2021-26, 1,406 partidos) log loss 0.9845 contra 0.9679 del cierre y PICK −14.3% (438, rango −27%
+                # a −2%), en los dos periodos (2021-23 −12%, 2024-26 −18%); sin la ventaja de local propia, con la corrección de Europa,
+                # con tope de EV o acercando el modelo al mercado (25-75 a 75-25) siguen perdiendo. Contra los momios que guardó ESPN
+                # (ESPN BET 2024-25 y DraftKings 2026, data/raw/espn_momios_noruega.json): 543 PICK −14.9% (rango −24% a −5%):
+                # resultado −13%, más/menos −6%, hándicap −23%. El factor de ataque de los onces tampoco mejora aquí (+3.4 ± 15.0)
+                'sin_pick': True,
+                'aviso': 'Liga nueva en la página (8 nov 2026), sin PICK. En la prueba con temporadas pasadas el modelo perdió en todos '
+                         'los mercados: −14% contra el cierre de 2021-2026 (438 apuestas al resultado) y −15% contra los momios que '
+                         'guardó ESPN de 2024-2026 (543 apuestas: resultado −13%, más/menos −6%, hándicap −23%). Aquí la casa sabe más '
+                         'que el modelo: la página muestra probabilidades, momios justos y estadísticas, pero no marca PICK.'},
     # region: copa entre equipos de ligas distintas ('europa' o 'sudamerica'). Se usa el modelo de toda la región
     # (src/europa.py), que mide cuánto vale cada liga con los partidos de las copas. Sus resultados (y los de las ligas de la
     # región) los baja europa.py, no football-data. fase_tabla: la fase de la copa que va en la tabla (las eliminatorias no).
@@ -191,6 +212,9 @@ LIGAS = {
 }
 # Todo lo que aparece en el selector de la página: las ligas de fútbol, la NFL y la NBA (cada una con su propia página)
 SECCIONES = {**{k: v['nombre'] for k, v in LIGAS.items() if not v.get('oculta')}, 'nfl': 'NFL', 'nba': 'NBA'}
+
+# Equipos que football-data escribe de dos maneras en un archivo único (se deja el nombre de ahora)
+ALIAS_FD = {'NOR': {'Ham-Kam': 'HamKam'}}
 
 # Zonas de la tabla: [desde, hasta, tipo, etiqueta]; posiciones negativas cuentan desde el final.
 # Son aproximadas: los cupos exactos cambian según copas y coeficientes.

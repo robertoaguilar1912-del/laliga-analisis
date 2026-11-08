@@ -356,8 +356,9 @@ ATAQUE_SO, ATAQUE_KP, ATAQUE_DIAS, ATAQUE_FRENO = 0.020, 0.009, 365, 450.0
 # en su prueba (desde jul 2025; ene 2025 en las de año calendario): Ligue 1 −34, MLS −30, Bundesliga −26, Championship −16,
 # LaLiga −8, Brasil −1, Serie A −0.1, Premier +16.5 y Allsvenskan +23. Las otras 7, con todo 2023-26 (no se usaron para
 # afinar): Segunda −11, A-League −10, Argentina −10, Brasil B −5.5, Liga MX −4, Colombia −2, Portugal −1.5. Solo se aplica
-# donde mejora (pedido de Roberto): sin Premier ni Allsvenskan. 2. Bundesliga y Eliteserien: fuera hasta tener su prueba.
-ATAQUE_SIN = {'premier', 'suecia', 'bundesliga2', 'noruega'}
+# donde mejora (pedido de Roberto): sin Premier ni Allsvenskan. Ligas agregadas el 8 nov, con todo 2023-26: 2. Bundesliga
+# −5.2 ± 10.9 (se aplica) y Eliteserien +3.4 ± 15.0 (no se aplica).
+ATAQUE_SIN = {'premier', 'suecia', 'noruega'}
 
 
 def amenaza(pids, antes):

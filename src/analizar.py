@@ -848,6 +848,12 @@ def analizar_liga(liga):
                 if r['veredicto'] == 'PICK' and r['ev'] >= L['ev_max']:
                     r['veredicto'], r['regla'] = 'MAYBE', 'lejos'
             p['reglas'] = {**(p.get('reglas') or {}), 'ev_max': L['ev_max']}
+    if L.get('sin_pick'):   # ligas donde los PICK perdieron en todos los mercados en la prueba (Eliteserien; ver config.py)
+        for p in partidos:
+            for r in p['con_momio']:
+                if r['veredicto'] == 'PICK':
+                    r['veredicto'], r['regla'] = 'MAYBE', 'liga'
+            p['reglas'] = {**(p.get('reglas') or {}), 'sin_pick': True}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'

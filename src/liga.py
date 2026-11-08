@@ -14,7 +14,7 @@ from collections import Counter
 import numpy as np
 import pandas as pd
 
-from config import RAW, ESPN_DIR, DATOS, LIGAS, ESPN_A_FD, NOMBRE, ahora, temporada_actual, temporadas, inicio_temporada
+from config import RAW, ESPN_DIR, DATOS, LIGAS, ESPN_A_FD, NOMBRE, ALIAS_FD, ahora, temporada_actual, temporadas, inicio_temporada
 from datos import cargar
 
 STATS = {'HS': 'totalShots', 'HST': 'shotsOnTarget', 'HC': 'wonCorners', 'HY': 'yellowCards', 'HR': 'redCards', 'HF': 'foulsCommitted'}
@@ -91,6 +91,8 @@ def cargar_extra(code, n_temporadas=4):
     anual = all('/' not in x for x in df.Season.astype(str).tail(200))
     df['Season'] = df.Season.astype(str).map(lambda x: codigo_extra(x, anual))
     df = df.dropna(subset=['HomeTeam', 'FTHG'])
+    if code in ALIAS_FD:
+        df[['HomeTeam', 'AwayTeam']] = df[['HomeTeam', 'AwayTeam']].replace(ALIAS_FD[code])
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, format='mixed')
     df['FTHG'] = df.FTHG.astype(int)
     df['FTAG'] = df.FTAG.astype(int)

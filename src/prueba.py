@@ -17,7 +17,7 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, PICK_P_MIN, temporada_actual
+from config import RAW, DATOS, LIGAS, PICK_P_MIN, ALIAS_FD, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
@@ -42,6 +42,8 @@ def cargar_historia(liga):
         anual = all('/' not in x for x in df.Season.astype(str).tail(200))
         df['Season'] = df.Season.astype(str).map(lambda x: codigo_extra(x, anual))
         df = df.dropna(subset=['HomeTeam', 'FTHG'])
+        if L['fd_extra'] in ALIAS_FD:
+            df[['HomeTeam', 'AwayTeam']] = df[['HomeTeam', 'AwayTeam']].replace(ALIAS_FD[L['fd_extra']])
         df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, format='mixed')
         df['HST'] = np.nan; df['AST'] = np.nan
     else:
@@ -143,7 +145,7 @@ def preparar(df, solo_cierre):
     return df
 
 
-def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, ev_max=None):
+def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, ev_max=None, sin_menos=False):
     """reglas: las de la página en las 8 ligas de Europa (picks.py): sin "Gana" con momio de GANA_MAX o más ni "Menos de"
     en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias'). ev_max: sin PICK con EV de ev_max o más (las ligas
     con 'ev_max' en config.py)."""
@@ -163,6 +165,8 @@ def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, 
             m &= odds < gana_max
         if reglas and outcome == 'U':
             m &= df.dias >= SIN_MENOS_DIAS
+        if sin_menos and outcome == 'U':     # ligas sin PICK en "Menos de" ('sin_menos' en config.py)
+            m &= False
         sub = df[m]
         won = (sub.res == outcome) if outcome in 'HDA' else (sub.over if outcome == 'O' else ~sub.over)
         out.append(pd.DataFrame({'Date': sub.Date, 'Season': sub.Season, 'sel': outcome, 'odds': odds[m], 'p': p[m], 'ev': ev[m],
@@ -215,6 +219,9 @@ def evaluar(liga, df):
     ev_max = LIGAS[liga].get('ev_max')
     if ev_max:
         ref += f'; sin PICK con EV de +{ev_max:.0%} o más (regla de esta liga)'
+    sm = bool(LIGAS[liga].get('sin_menos')) and 'ou' in mercados
+    if sm:
+        ref += '; sin PICK en "Menos de" (regla de esta liga)'
     r = df.res.map({'H': 0, 'D': 1, 'A': 2}).values
     i = np.arange(len(df))
     ll = {'1x2': {'modelo': float(-np.mean(np.log(np.c_[df.pH, df.pD, df.pA][i, r]))),
@@ -223,8 +230,8 @@ def evaluar(liga, df):
     out = {'partidos': int(len(df)), 'desde': str(df.Date.min().date()), 'hasta': str(df.Date.max().date()), 'logloss': ll,
            'estrategias': {}, 'principal': principal, 'referencia': ref, 'mercados': mtxt}
     for thr in (0.0, 0.03, 0.05, 0.10):
-        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas, ev_max=ev_max))
-    b = apuestas(df, book, 0.05, mercados, con_clv, reglas, ev_max=ev_max)
+        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm))
+    b = apuestas(df, book, 0.05, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm)
     b['mes'] = b.Date.dt.to_period('M').astype(str)
     mensual = b.groupby('mes').agg(n=('profit', 'size'), ganancia=('profit', 'sum')).reset_index()
     out['mensual'] = mensual.to_dict('records')
