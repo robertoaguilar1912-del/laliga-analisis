@@ -5,15 +5,31 @@
   "estadio": "Alfredo Terrera",
   "local_espn": "Central Córdoba (Santiago del Estero)",
   "visita_espn": "Lanús",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "torneo-clausura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    425,
+    275,
+    -150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    110,
+    -145
+   ],
+   "spread": [
+    [
+     "+0.5",
+     120
+    ],
+    [
+     "-0.5",
+     -165
+    ]
+   ]
   },
   "alineaciones": {
    "Central Córdoba (Santiago del Estero)": [
