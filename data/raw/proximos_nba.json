@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909947",
-  "utc": "2026-11-09T00:00Z",
-  "fecha": "2026-11-08",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIN",
-  "visita": "UTAH",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Minnesota Timberwolves",
-  "visita_espn": "Utah Jazz",
-  "revisado": false,
-  "estadio": "Target Center",
-  "records": {
-   "home": [
-    "7-3",
-    "3-1",
-    "4-2"
-   ],
-   "away": [
-    "1-8",
-    "1-4",
-    "0-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909948",
   "utc": "2026-11-09T00:30Z",
   "fecha": "2026-11-08",
@@ -96,10 +67,10 @@
   "visita": "NO",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -113,30 +84,7 @@
     "1-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    103,
-    -121
-   ],
-   "ml_abre": [
-    101,
-    -120
-   ],
-   "spread": [
-    1.5,
-    -110,
-    -1.5,
-    -110
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    226.5,
-    -108,
-    -112
-   ],
-   "total_abre": 225.5
-  }
+  "momios": null
  },
  {
   "id": "401909951",
@@ -148,10 +96,10 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Miami Heat",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -165,30 +113,7 @@
     "2-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    432,
-    -580
-   ],
-   "ml_abre": [
-    245,
-    -303
-   ],
-   "spread": [
-    11.5,
-    -106,
-    -11.5,
-    -114
-   ],
-   "spread_abre": 8.5,
-   "total": [
-    235.5,
-    -112,
-    -108
-   ],
-   "total_abre": 238.5
-  }
+  "momios": null
  },
  {
   "id": "401909952",
@@ -246,7 +171,30 @@
     "1-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    248,
+    -306
+   ],
+   "ml_abre": [
+    250,
+    -309
+   ],
+   "spread": [
+    8.5,
+    -110,
+    -8.5,
+    -110
+   ],
+   "spread_abre": 9.5,
+   "total": [
+    216.5,
+    -112,
+    -108
+   ],
+   "total_abre": 217.5
+  }
  },
  {
   "id": "401909954",
@@ -275,7 +223,30 @@
     "2-4"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -448,
+    348
+   ],
+   "ml_abre": [
+    -448,
+    348
+   ],
+   "spread": [
+    -10.5,
+    -115,
+    10.5,
+    -105
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    217.5,
+    -110,
+    -110
+   ],
+   "total_abre": 218.5
+  }
  },
  {
   "id": "401909955",
@@ -304,7 +275,30 @@
     "4-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -139,
+    117
+   ],
+   "ml_abre": [
+    -139,
+    117
+   ],
+   "spread": [
+    -2.5,
+    -115,
+    2.5,
+    -105
+   ],
+   "spread_abre": -2.5,
+   "total": [
+    228.5,
+    -110,
+    -110
+   ],
+   "total_abre": 228.5
+  }
  },
  {
   "id": "401909956",
@@ -365,8 +359,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -291,
-    237
+    -327,
+    263
    ],
    "ml_abre": [
     -166,
@@ -374,9 +368,9 @@
    ],
    "spread": [
     -8.5,
-    -110,
+    -115,
     8.5,
-    -110
+    -105
    ],
    "spread_abre": -4.5,
    "total": [
@@ -417,8 +411,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    229,
-    -281
+    258,
+    -319
    ],
    "ml_abre": [
     200,
@@ -595,9 +589,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "3-6",
@@ -885,9 +879,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "2-7",
@@ -1030,8 +1024,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "7-3",
-    "3-1",
+    "8-3",
+    "4-1",
     "4-2"
    ],
    "away": [
@@ -1238,9 +1232,9 @@
     "3-2"
    ],
    "away": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -1465,8 +1459,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "7-3",
-    "3-1",
+    "8-3",
+    "4-1",
     "4-2"
    ],
    "away": [
@@ -1581,9 +1575,9 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "8-2",
@@ -1900,8 +1894,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "7-3",
-    "3-1",
+    "8-3",
+    "4-1",
     "4-2"
    ],
    "away": [
@@ -2016,8 +2010,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "7-3",
-    "3-1",
+    "8-3",
+    "4-1",
     "4-2"
    ],
    "away": [
@@ -2079,9 +2073,9 @@
     "0-4"
    ],
    "away": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -2103,9 +2097,9 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "5-1",
-    "3-1"
+    "4-1"
    ],
    "away": [
     "3-7",
@@ -2427,9 +2421,9 @@
     "4-1"
    ],
    "away": [
-    "1-8",
+    "1-9",
     "1-4",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -2538,8 +2532,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "7-3",
-    "3-1",
+    "8-3",
+    "4-1",
     "4-2"
    ],
    "away": [
