@@ -14,7 +14,7 @@ import unicodedata
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, ahora, inicio_torneo
+from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, PIN_MIN, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
@@ -24,6 +24,7 @@ from config import COPAS_UEFA, COPAS_CONMEBOL
 from corners import CornerModel, RematesModel
 from tiempos import por_tiempo, lam_mercado, INFO as TIEMPOS_INFO
 import apifootball
+import oddsapi
 import xg
 import alineacion
 from alineacion import peso_rotacion, peso_once, peso_bajas_hab
@@ -244,6 +245,16 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         tiempos = {'lam': round(float(lam + mu), 3), 'lam_m': lam_m, 'linea_m': mom.get('ou_linea') if lam_m else None}
         # Pinnacle y otras casas (API-Football, desde el 1 nov 2026): precio justo para la calculadora y el aviso de VALOR
         otras = apifootball.para_partido(liga, g['id'])
+        try:                # Pinnacle más fresco de The Odds API (10-80 min antes del partido), si lo hay (oddsapi.descargar_futbol)
+            fresco = oddsapi.pinnacle_futbol(liga, g)
+        except Exception as e:
+            fresco = None
+            print(f'  Pinnacle fresco {liga}: {e!r}')
+        if fresco and (not otras or fresco['t'] > (otras.get('update') or otras['t'] or '')):
+            pin_f, _, _ = apifootball.justos(fresco['casas'])
+            otras = otras or {'t': fresco['t'], 'pinnacle': {}, 'consenso': {}, 'mejor': {}}
+            otras['pinnacle'] = {k: {'p': round(v['p'], 4), 'momio': v['momio']} for k, v in pin_f.items()}
+            otras['update'] = fresco['t']
         apifootball.enriquecer(con_momio + sin, otras)
         otras_c = None if not otras else {
             't': otras.get('update') or otras['t'],
@@ -855,6 +866,20 @@ def analizar_liga(liga):
                 if r['veredicto'] == 'PICK':
                     r['veredicto'], r['regla'] = 'MAYBE', 'liga'
             p['reglas'] = {**(p.get('reglas') or {}), 'sin_pick': True}
+    # precio contra Pinnacle (9 nov 2026; ver PIN_MIN en config.py): si el momio está más de 2% por debajo del precio justo
+    # de Pinnacle (sin Pinnacle, del promedio de 3 o más casas sin margen), no es PICK. Sin ninguno de los dos, no cambia nada
+    for p in partidos:
+        hay = False
+        for r in p['con_momio']:
+            pp = r.get('p_pinnacle') or r.get('p_consenso')        # sin Pinnacle, el promedio de las casas sin margen
+            if not pp:
+                continue
+            hay = True
+            r['v_pin'] = round(float(r['momio']) * pp - 1, 4)
+            if r['veredicto'] == 'PICK' and r['v_pin'] < PIN_MIN:
+                r['veredicto'], r['regla'] = 'MAYBE', 'pinnacle'
+        if hay:
+            p['reglas'] = {**(p.get('reglas') or {}), 'pin_min': PIN_MIN}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'

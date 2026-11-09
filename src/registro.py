@@ -105,6 +105,8 @@ def pinnacle_cierre(picks, t):
             continue
         liga = r.get('liga', 'laliga')
         c = ((oa if liga in ('nba', 'nfl') else af).get(liga) or {}).get(str(r['id']))
+        if liga not in ('nba', 'nfl'):          # fútbol: el Pinnacle de The Odds API (más cerca del inicio) si lo hay
+            c = (oa.get(liga) or {}).get(str(r['id'])) or c
         pin = ((c or {}).get('casas') or {}).get('pinnacle')
         if not pin:
             continue

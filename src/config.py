@@ -14,6 +14,16 @@ ZONA = 'America/Tegucigalpa'
 # pasó de −12.2% a −7.6%), NBA −21%, América −13%. En las copas europeas y la NFL daba casi igual.
 # (Quitar los momios menores a 1.70 se probó y empeoraba: en Europa y en las copas eran de los mejores PICK.)
 PICK_P_MIN = 0.30
+# Fútbol (9 nov 2026, pedido de Roberto): además, PICK solo si el momio no está más de 2% por debajo del precio justo de
+# Pinnacle (momio × probabilidad sin margen de Pinnacle − 1 ≥ PIN_MIN). Prueba sin mirar al futuro, 15 ligas con football-data
+# 2020-26 (Bet365 de apertura contra Pinnacle de apertura en Europa; cierre contra cierre en América y las nórdicas):
+#   todos los PICK               7,079   ROI −6.3%   (Europa −1.9%, América y nórdicas −10.8%)
+#   valor ≥ −5%                  3,156   −3.9%       (América −12.4%: no arregla)
+#   valor ≥ −3%                  1,301   +3.6%       (Europa 1ª mitad −1.2%)
+#   valor ≥ −2% (el elegido)       759   +5.0%       (Europa +3.1%, América +12.9%; las dos mitades positivas en los dos grupos)
+#   valor ≥ 0                      299   +9.1%
+# En vivo (1-8 nov, Pinnacle de API-Football): 132 PICK −8.9%; con valor ≥ −2%, 24 PICK +20.6%. Quedan ~1 de cada 5 PICK.
+PIN_MIN = -0.02
 DIAS_PROXIMOS = 10          # cuántos días hacia adelante mostrar partidos
 N_SIMS = 10_000
 TEMPORADAS_HISTORIA = 3     # temporadas anteriores que usa el modelo
@@ -143,7 +153,13 @@ LIGAS = {
             # debajo de lo real en todas las temporadas 2022-26; en vivo (sep-nov 2026) sus 48 "Menos de" ganaron 35% (decía 58%),
             # −15.7 u; en las líneas de DraftKings de oct-nov los "menos de" del modelo perdieron −18% y apostar todos los
             # "menos de", −6.6%
-            'sin_menos': True},
+            'sin_menos': True,
+            # Sin PICK (9 nov 2026, revisión de PICK por liga): en vivo (1 oct–8 nov) 97 PICK −29.5%, la peor liga; prueba 2021-26
+            # 745 PICK −15%; con la regla de Pinnacle (PIN_MIN) quedan 72, −6.5%, y en 2025-26 (60) −18%. Ninguna versión gana.
+            'sin_pick': True,
+            'aviso': 'Sin PICK desde el 9 nov 2026: en todas las pruebas los PICK de la MLS perdieron (−15% en 2021-2026, −29% en '
+                     'vivo en octubre y noviembre; con la regla de Pinnacle, −18% en 2025-2026). La página sigue mostrando '
+                     'probabilidades, momios justos y estadísticas.'},
     # solo_espn: sin archivo de football-data; los resultados de temporadas pasadas salen de ESPN
     # segunda: liga de la que se toman los enfrentamientos de segunda división (historial)
     # torneos: la tabla es del semestre (Apertura/Clausura) aunque la temporada sea el año completo

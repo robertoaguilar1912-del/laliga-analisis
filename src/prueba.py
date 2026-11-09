@@ -17,7 +17,7 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, PICK_P_MIN, ALIAS_FD, temporada_actual
+from config import RAW, DATOS, LIGAS, PICK_P_MIN, PIN_MIN, ALIAS_FD, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
@@ -125,6 +125,20 @@ def devig(df, cols):
     return p / p.sum(1, keepdims=True)
 
 
+def _ref(df, pin, prom):
+    """Precio justo de referencia (PIN_MIN): Pinnacle sin margen; si no hay (football-data dejó de traerlo a mediados de
+    2025), el promedio del mercado sin margen. Prueba 2020-25 con los dos: PICK con valor ≥ −2% contra Pinnacle 759, +5.0%;
+    contra el promedio 499, +11.9%. En 2025-26 sin Pinnacle, contra el promedio: 159 de 1,055 PICK, +4.0% (todos: −4.6%)."""
+    out = np.full((len(df), len(pin)), np.nan)
+    if all(c in df for c in prom):
+        out = devig(df, prom)
+    if all(c in df for c in pin):
+        p = devig(df, pin)
+        ok = df[pin].notna().all(1).values
+        out[ok] = p[ok]
+    return out.T
+
+
 def preparar(df, solo_cierre):
     df = df.copy()
     df['res'] = np.where(df.FTHG > df.FTAG, 'H', np.where(df.FTHG == df.FTAG, 'D', 'A'))
@@ -145,7 +159,7 @@ def preparar(df, solo_cierre):
     return df
 
 
-def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, ev_max=None, sin_menos=False):
+def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, ev_max=None, sin_menos=False, pin_min=None):
     """reglas: las de la página en las 8 ligas de Europa (picks.py): sin "Gana" con momio de GANA_MAX o más ni "Menos de"
     en los primeros SIN_MENOS_DIAS días de la temporada (columna 'dias'). ev_max: sin PICK con EV de ev_max o más (las ligas
     con 'ev_max' en config.py)."""
@@ -167,6 +181,9 @@ def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, 
             m &= df.dias >= SIN_MENOS_DIAS
         if sin_menos and outcome == 'U':     # ligas sin PICK en "Menos de" ('sin_menos' en config.py)
             m &= False
+        if pin_min is not None and f'f{outcome}' in df:   # precio contra el justo de Pinnacle del mismo momento (PIN_MIN)
+            f = df[f'f{outcome}']
+            m &= ~(f.notna() & (odds * f - 1 < pin_min))
         sub = df[m]
         won = (sub.res == outcome) if outcome in 'HDA' else (sub.over if outcome == 'O' else ~sub.over)
         out.append(pd.DataFrame({'Date': sub.Date, 'Season': sub.Season, 'sel': outcome, 'odds': odds[m], 'p': p[m], 'ev': ev[m],
@@ -206,11 +223,15 @@ def evaluar(liga, df):
             df[f'BK{k}'] = np.where(b365, df[c], df[f'AvgC{k}'])
         book, mercados, con_clv = 'BK', ('1x2',), False
         df = df[df[['BKH', 'BKD', 'BKA']].notna().all(1)]
+        df['fH'], df['fD'], df['fA'] = _ref(df, ['PSCH', 'PSCD', 'PSCA'], ['AvgCH', 'AvgCD', 'AvgCA'])   # al cierre, como la apuesta
         ref = 'la cuota de cierre (Bet365 desde 2025; antes, el promedio del mercado), porque para esta liga no hay cuotas de apertura'
         mtxt = 'solo resultado 1X2'
     else:
         book, mercados, con_clv = 'B365', ('1x2', 'ou'), True
         df = df[df[['B365H', 'B365D', 'B365A']].notna().all(1)]
+        df['fH'], df['fD'], df['fA'] = _ref(df, ['PSH', 'PSD', 'PSA'], ['AvgH', 'AvgD', 'AvgA'])         # de apertura, como la apuesta
+        if 'P>2.5' in df or 'Avg>2.5' in df:
+            df['fO'], df['fU'] = _ref(df, ['P>2.5', 'P<2.5'], ['Avg>2.5', 'Avg<2.5'])
         ref = ('la cuota de apertura de Bet365, con las reglas de la página: sin "Gana" con momio de 2.00 o más ni "Menos de" '
                'en las primeras 13 semanas de cada temporada')
         mtxt = '1X2 y más/menos 2.5 goles'
@@ -222,6 +243,7 @@ def evaluar(liga, df):
     sm = bool(LIGAS[liga].get('sin_menos')) and 'ou' in mercados
     if sm:
         ref += '; sin PICK en "Menos de" (regla de esta liga)'
+    ref += f'; sin PICK si el momio está más de {-PIN_MIN:.0%} por debajo del precio justo de Pinnacle del mismo momento (o del promedio del mercado, sin Pinnacle)'
     r = df.res.map({'H': 0, 'D': 1, 'A': 2}).values
     i = np.arange(len(df))
     ll = {'1x2': {'modelo': float(-np.mean(np.log(np.c_[df.pH, df.pD, df.pA][i, r]))),
@@ -230,8 +252,8 @@ def evaluar(liga, df):
     out = {'partidos': int(len(df)), 'desde': str(df.Date.min().date()), 'hasta': str(df.Date.max().date()), 'logloss': ll,
            'estrategias': {}, 'principal': principal, 'referencia': ref, 'mercados': mtxt}
     for thr in (0.0, 0.03, 0.05, 0.10):
-        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm))
-    b = apuestas(df, book, 0.05, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm)
+        out['estrategias'][f"modelo|{book}|{'+'.join(mercados)}|{thr}"] = resumen(apuestas(df, book, thr, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm, pin_min=PIN_MIN))
+    b = apuestas(df, book, 0.05, mercados, con_clv, reglas, ev_max=ev_max, sin_menos=sm, pin_min=PIN_MIN)
     b['mes'] = b.Date.dt.to_period('M').astype(str)
     mensual = b.groupby('mes').agg(n=('profit', 'size'), ganancia=('profit', 'sum')).reset_index()
     out['mensual'] = mensual.to_dict('records')
