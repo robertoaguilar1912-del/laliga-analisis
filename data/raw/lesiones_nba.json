@@ -159,16 +159,6 @@
    "nota": "Merrill (elbow) is listed as out for Monday's game against the Hornets."
   },
   {
-   "id": "4066328",
-   "nombre": "Jarrett Allen",
-   "pos": "C",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-08",
-   "tipo": "Knee",
-   "regreso": "2026-11-09",
-   "nota": "Allen (knee) is questionable for Monday's game against Charlotte."
-  },
-  {
    "id": "4683747",
    "nombre": "Jaylon Tyson",
    "pos": "G",
@@ -184,11 +174,11 @@
    "id": "4873153",
    "nombre": "Morez Johnson Jr.",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-09",
    "tipo": "Leg",
-   "regreso": "2026-11-09",
-   "nota": "Johnson (leg) is questionable for Monday's game against Indiana."
+   "regreso": "2026-11-12",
+   "nota": "Johnson (leg) has been ruled out for Monday's game against the Pacers."
   },
   {
    "id": "5279129",
@@ -557,6 +547,18 @@
    "nota": "Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports."
   }
  ],
+ "Miami Heat": [
+  {
+   "id": "3032977",
+   "nombre": "Giannis Antetokounmpo",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-09",
+   "tipo": "Wrist",
+   "regreso": "2026-11-10",
+   "nota": "Antetokounmpo is probable for Tuesday's game against the Jazz due to a right wrist sprain."
+  }
+ ],
  "Milwaukee Bucks": [
   {
    "id": "4395725",
@@ -709,23 +711,13 @@
  ],
  "Orlando Magic": [
   {
-   "id": "4066320",
-   "nombre": "Desmond Bane",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-08",
-   "tipo": "Illness",
-   "regreso": "2026-11-10",
-   "nota": "Bane (illness) has been ruled out for Saturday's game against the Warriors."
-  },
-  {
    "id": "4065654",
    "nombre": "Jonathan Isaac",
    "pos": "F",
    "estado": "Out",
    "fecha": "2026-11-05",
    "tipo": "Knee",
-   "regreso": "2026-11-10",
+   "regreso": "2026-11-11",
    "nota": "Orlando recalled Isaac (knee) from the G League's Osceola Magic on Wednesday."
   },
   {
@@ -735,7 +727,7 @@
    "estado": "Out",
    "fecha": "2026-10-26",
    "tipo": "Knee",
-   "regreso": "2026-11-10",
+   "regreso": "2026-11-16",
    "nota": "Suggs has been diagnosed with a mild bone bruise in his right knee and will be re-evaluated in two weeks, Shams Charania of ESPN reports."
   },
   {
@@ -931,6 +923,26 @@
  ],
  "Toronto Raptors": [
   {
+   "id": "4395724",
+   "nombre": "Immanuel Quickley",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-09",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-11",
+   "nota": "Quickley (hamstring) has been ruled out for Monday's game against Memphis, Esfandiar Baraheni of The Athletic reports."
+  },
+  {
+   "id": "5093267",
+   "nombre": "Collin Murray-Boyles",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-09",
+   "tipo": "Illness",
+   "regreso": "2026-11-11",
+   "nota": "Murray-Boyles (illness) is out for Monday's game against the Grizzlies, Esfandiar Baraheni of The Athletic reports."
+  },
+  {
    "id": "4433134",
    "nombre": "Scottie Barnes",
    "pos": "F",
@@ -938,17 +950,7 @@
    "fecha": "2026-11-09",
    "tipo": "Groin",
    "regreso": "2026-11-11",
-   "nota": "Barnes (adductor) was a limited participant in Sunday's practice and will be listed as questionable for Monday's game against the Grizzlies, Michael Grange of Sportsnet.ca reports."
-  },
-  {
-   "id": "5093267",
-   "nombre": "Collin Murray-Boyles",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-09",
-   "tipo": "Illness",
-   "regreso": "2026-11-11",
-   "nota": "Murray-Boyles (illness) is questionable for Monday's game versus Memphis, per Josh Lewenberg of TSN.ca."
+   "nota": "Barnes (groin) is out for Monday's game against the Grizzlies, Esfandiar Baraheni of The Athletic reports."
   },
   {
    "id": "4432586",
@@ -959,16 +961,6 @@
    "tipo": "Foot",
    "regreso": "2026-11-15",
    "nota": "Bittle (foot) is listed as out for Monday's game against Memphis."
-  },
-  {
-   "id": "4395724",
-   "nombre": "Immanuel Quickley",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-08",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-11",
-   "nota": "Quickley (hamstring) was a limited participant in Sunday's practice and will be listed as questionable for Monday's game against the Grizzlies, Michael Grange of Sportsnet.ca reports."
   },
   {
    "id": "6450",
@@ -1028,11 +1020,11 @@
    "id": "5104155",
    "nombre": "Bilal Coulibaly",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-09",
    "tipo": "Hand",
-   "regreso": "2026-11-09",
-   "nota": "Coulibaly (hand) is listed as questionable for Monday's game against Detroit."
+   "regreso": "2026-11-11",
+   "nota": "Coulibaly (hand) is out for Monday's game against the Pistons."
   },
   {
    "id": "4997537",
@@ -1043,16 +1035,6 @@
    "tipo": "Hip",
    "regreso": "2026-11-16",
    "nota": "Vukcevic (hip) has been ruled out for Monday's game against Detroit."
-  },
-  {
-   "id": "6583",
-   "nombre": "Anthony Davis",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-08",
-   "tipo": "Ankle",
-   "regreso": "2026-11-09",
-   "nota": "Davis (ankle) is listed as questionable for Monday's game in Detroit."
   },
   {
    "id": "4432187",
