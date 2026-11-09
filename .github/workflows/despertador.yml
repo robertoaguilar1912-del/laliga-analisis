@@ -3,7 +3,10 @@ name: Despertador de alineaciones
 # corrida de la cadena (error 500). Este workflow vigila: cada 10 minutos mira los datos más recientes (revisar.py --vigilar)
 #   - si hay alineaciones pendientes en una ventana abierta (75 minutos antes de un partido de fútbol hasta 20 después,
 #     60 antes en la NBA) y no hay ninguna corrida de "Actualizar página" en marcha o esperando, lanza una rápida;
-#   - si no, espera hasta la próxima ventana.
+#   - si hay partidos que ya terminaron (fútbol ~110 minutos después del inicio, NBA 150, NFL 200) hace menos de 3 horas y
+#     todavía no tienen resultado, también lanza una rápida (cada 20 minutos como mucho), para liquidar los PICK y las
+#     apuestas (8 nov 2026: GitHub lanzó solo 3 de las 96 corridas de cada 15 minutos y la noche se quedó sin resultados);
+#   - si no, espera hasta la próxima ventana o el próximo final.
 # Problemas que tapa: 5 nov 2026, sin corridas entre las 14:58 y las 17:26 UTC (Europa League), y la cadena cortada a las
 # 23:23 UTC por un error 500 de GitHub (Cruzeiro vs Bahia). Solo hay uno vigilando a la vez: cada corrida de
 # actualizar.yml lo vuelve a llamar y el nuevo cancela al anterior. (El repositorio es público: el tiempo que espera no cuesta.)
@@ -52,6 +55,9 @@ jobs:
             if [ "$v" = "ahora" ]; then
               if [ "$(activas)" -eq 0 ]; then echo "Alineaciones pendientes y ninguna corrida en marcha: se lanza una"; lanzar || true; fi
               sleep 600
+            elif [ "$v" = "resultados" ]; then
+              if [ "$(activas)" -eq 0 ]; then echo "Partidos terminados sin resultado y ninguna corrida en marcha: se lanza una"; lanzar || true; fi
+              sleep 1200
             elif [ "$v" = "nada" ]; then
               sleep 1800
             else

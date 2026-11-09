@@ -68,6 +68,44 @@ def despertar(ahora=None):
     return mejor
 
 
+DURA = {'nfl': 200, 'nba': 150}       # minutos desde el inicio hasta que suele haber resultado (fútbol: 110)
+
+
+def _proximos():
+    for p in sorted((RAIZ / 'data' / 'raw').glob('proximos_*.json')):
+        try:
+            yield p.stem.replace('proximos_', ''), json.load(open(p))
+        except (OSError, ValueError):
+            continue
+
+
+def resultados_listos(ahora=None, hasta=180):
+    """Partidos que ya deberían haber terminado hace menos de `hasta` minutos y todavía no tienen resultado guardado
+    (data/espn), para liquidar los PICK y las apuestas sin esperar las corridas programadas: el 8 nov 2026 GitHub lanzó solo
+    3 de las 96 de cada 15 minutos, y después del último partido la página se quedaba sin resultados hasta la mañana."""
+    ahora = ahora or datetime.now(timezone.utc)
+    out = []
+    for liga, prox in _proximos():
+        dura = DURA.get(liga, 110)
+        for e in prox:
+            desde = (ahora - datetime.fromisoformat(e['utc'].replace('Z', '+00:00'))).total_seconds() / 60 - dura
+            if 0 <= desde <= hasta and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
+                out.append(f"{liga}: {e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}")
+    return out
+
+
+def proximo_final(ahora=None):
+    """Segundos hasta que debería terminar el próximo partido sin resultado, y cuál es (None si no hay)."""
+    ahora = ahora or datetime.now(timezone.utc)
+    mejor = None
+    for liga, prox in _proximos():
+        for e in prox:
+            seg = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() + DURA.get(liga, 110) * 60
+            if seg > 60 and (mejor is None or seg < mejor[0]) and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
+                mejor = (seg, f"{liga}: final de {e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}")
+    return mejor
+
+
 def pendientes():
     """{liga: {'alineaciones': [...], 'resultados': [...]}} solo con las ligas que tienen algo pendiente."""
     out = {}
@@ -123,9 +161,10 @@ if __name__ == '__main__':
                 f.write(f"cadena={'si' if c else 'no'}\n")
         sys.exit(0)
     if '--vigilar' in sys.argv:          # para el despertador: 'ahora' si hay alineaciones pendientes en una ventana abierta,
-        c = cadena()                      # si no, los segundos hasta la próxima ventana, o 'nada'
-        d = despertar()
-        print('ahora' if c else (str(int(d[0])) if d else 'nada'))
+        c = cadena()                      # 'resultados' si hay partidos recién terminados sin resultado; si no, los segundos
+        r = resultados_listos()           # hasta la próxima ventana o el próximo final, o 'nada'
+        d = min([x for x in (despertar(), proximo_final()) if x], default=None)
+        print('ahora' if c else 'resultados' if r else (str(int(d[0])) if d else 'nada'))
         sys.exit(0)
     if '--despertar' in sys.argv:
         d = despertar()
