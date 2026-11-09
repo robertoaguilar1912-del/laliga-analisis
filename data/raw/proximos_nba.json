@@ -38,7 +38,7 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Utah Jazz",
   "revisado": false,
@@ -67,10 +67,10 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Brooklyn Nets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -84,30 +84,7 @@
     "1-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -305,
-    248
-   ],
-   "ml_abre": [
-    -327,
-    263
-   ],
-   "spread": [
-    -7.5,
-    -107,
-    7.5,
-    -113
-   ],
-   "spread_abre": -8.5,
-   "total": [
-    223.5,
-    -108,
-    -112
-   ],
-   "total_abre": 219.5
-  }
+  "momios": null
  },
  {
   "id": "401909949",
@@ -119,10 +96,10 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Boston Celtics",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -136,30 +113,7 @@
     "2-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    580,
-    -840
-   ],
-   "ml_abre": [
-    454,
-    -620
-   ],
-   "spread": [
-    13.5,
-    -108,
-    -13.5,
-    -112
-   ],
-   "spread_abre": 12.5,
-   "total": [
-    221.5,
-    -107,
-    -113
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909950",
@@ -243,8 +197,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    394,
-    -518
+    432,
+    -580
    ],
    "ml_abre": [
     245,
@@ -252,15 +206,15 @@
    ],
    "spread": [
     11.5,
-    -115,
+    -112,
     -11.5,
-    -105
+    -108
    ],
    "spread_abre": 8.5,
    "total": [
     236.5,
-    -106,
-    -115
+    -110,
+    -110
    ],
    "total_abre": 238.5
   }
@@ -449,9 +403,9 @@
    ],
    "spread": [
     -8.5,
-    -105,
+    -110,
     8.5,
-    -115
+    -110
    ],
    "spread_abre": -4.5,
    "total": [
