@@ -69,6 +69,7 @@ def despertar(ahora=None):
 
 
 DURA = {'nfl': 200, 'nba': 150}       # minutos desde el inicio hasta que suele haber resultado (fútbol: 110)
+SIN_JUEGO = {'STATUS_POSTPONED', 'STATUS_CANCELED', 'STATUS_ABANDONED', 'STATUS_SUSPENDED'}   # aplazados: no hay resultado que esperar
 
 
 def _proximos():
@@ -89,7 +90,7 @@ def resultados_listos(ahora=None, hasta=180):
         dura = DURA.get(liga, 110)
         for e in prox:
             desde = (ahora - datetime.fromisoformat(e['utc'].replace('Z', '+00:00'))).total_seconds() / 60 - dura
-            if 0 <= desde <= hasta and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
+            if 0 <= desde <= hasta and e.get('estado') not in SIN_JUEGO and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 out.append(f"{liga}: {e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}")
     return out
 
@@ -101,7 +102,8 @@ def proximo_final(ahora=None):
     for liga, prox in _proximos():
         for e in prox:
             seg = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() + DURA.get(liga, 110) * 60
-            if seg > 60 and (mejor is None or seg < mejor[0]) and not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
+            if seg > 60 and (mejor is None or seg < mejor[0]) and e.get('estado') not in SIN_JUEGO and \
+                    not (RAIZ / 'data' / 'espn' / liga / f"{e['id']}.json").exists():
                 mejor = (seg, f"{liga}: final de {e.get('local_espn') or e.get('local')} vs {e.get('visita_espn') or e.get('visita')}")
     return mejor
 
