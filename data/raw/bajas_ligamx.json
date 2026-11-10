@@ -1,56 +1,56 @@
 {
 "401876988": {
 "fotmob": 1000014556,
-"visto": "2026-11-09T21:24+00:00",
-"xi": "standard",
+"visto": "2026-11-10T18:36+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
-"nombre": "Santiago Homenchenko",
+"nombre": "Jean Unjanque",
 "tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
-"valor": 0.0,
+"regreso": "en duda",
+"duda": true,
+"valor": 725501.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Erik Dueñas",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Jean Unjanque",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
+"valor": 481239.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 12506264.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.05801100952290788
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Carlos Salcedo",
+"tipo": "Sanción",
+"regreso": "hasta el 15 de noviembre",
+"duda": false,
+"valor": 905201.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Uroš Djurdjevic",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 1172486.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 35334565.0,
+"perdida": 0.025618003221491478,
 "perdida_duda": 0.0
 }
 }

@@ -11,23 +11,89 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
+    -170,
     320,
-    400
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    115
+    -175,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     -195
+     -185
     ],
     [
      "+0.5",
-     130
+     125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401860434",
+  "utc": "2026-11-12T22:00Z",
+  "estadio": "Moisés Lucarelli",
+  "local_espn": "Ponte Preta",
+  "visita_espn": "Operário PR",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    380,
+    295,
+    -160
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     115
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401860436",
+  "utc": "2026-11-12T23:00Z",
+  "estadio": "Estádio Primeiro de Maio",
+  "local_espn": "São Bernardo",
+  "visita_espn": "Athletic",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-b",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    245,
+    280
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -120
+    ],
+    [
+     "+0.5",
+     -125
     ]
    ]
   }
@@ -77,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    310,
-    600
+    -275,
+    340,
+    750
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -140
+    -110,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     125
+     105
     ],
     [
      "+1.5",
-     -190
+     -160
     ]
    ]
   }
@@ -110,23 +176,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -240,
-    340,
+    -250,
+    350,
     600
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
+    -160,
     110
    ],
    "spread": [
     [
      "-1.5",
-     115
+     110
     ],
     [
      "+1.5",
-     -175
+     -165
     ]
    ]
   }
@@ -143,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
+    170,
     200,
-    185
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -154,12 +220,12 @@
    ],
    "spread": [
     [
-     "-0.5",
-     135
+     "+0.5",
+     -225
     ],
     [
-     "+0.5",
-     -215
+     "-0.5",
+     145
     ]
    ]
   }
@@ -176,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    200,
-    215
+    155,
+    205,
+    175
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,11 +254,11 @@
    "spread": [
     [
      "-0.5",
-     120
+     140
     ],
     [
      "+0.5",
-     -180
+     -215
     ]
    ]
   }
@@ -209,89 +275,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -230,
-    300,
-    650
+    -280,
+    340,
+    750
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -140
-   ],
-   "spread": [
-    [
-     "-1.5",
-     135
-    ],
-    [
-     "+1.5",
-     -215
-    ]
-   ]
-  }
- },
- {
-  "id": "401860434",
-  "utc": "2026-11-14T19:30Z",
-  "estadio": "Moisés Lucarelli",
-  "local_espn": "Ponte Preta",
-  "visita_espn": "Operário PR",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    360,
-    285,
-    -150
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -130,
-    -110
-   ],
-   "spread": [
-    [
-     "+0.5",
-     105
-    ],
-    [
-     "-0.5",
-     -165
-    ]
-   ]
-  }
- },
- {
-  "id": "401860436",
-  "utc": "2026-11-14T19:30Z",
-  "estadio": "Estádio Primeiro de Maio",
-  "local_espn": "São Bernardo",
-  "visita_espn": "Athletic",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-b",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
     -110,
-    240,
-    275
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -115,
     -130
    ],
    "spread": [
     [
-     "-0.5",
-     -120
+     "-1.5",
+     110
     ],
     [
-     "+0.5",
-     -130
+     "+1.5",
+     -170
     ]
    ]
   }
@@ -308,9 +308,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    265,
-    110
+    250,
+    270,
+    -110
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -320,11 +320,11 @@
    "spread": [
     [
      "+0.5",
-     -155
+     -125
     ],
     [
      "-0.5",
-     100
+     -120
     ]
    ]
   }

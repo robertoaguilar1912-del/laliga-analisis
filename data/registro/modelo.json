@@ -6776,7 +6776,7 @@
   "ev": 0.0622,
   "casa": "Draft Kings",
   "visto": "2026-11-10T05:40+00:00",
-  "ultimo": "2026-11-10T05:40+00:00"
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401909963",
@@ -6812,12 +6812,8 @@
   "ev": 0.3248,
   "casa": "DraftKings",
   "visto": "2026-11-10T03:09+00:00",
-  "ultimo": "2026-11-10T04:45+00:00",
-  "revisar": "bajas",
-  "retirado": "2026-11-10T05:40+00:00",
-  "p_fin": 0.2992,
-  "momio_fin": "4.31",
-  "motivo": "probabilidad"
+  "ultimo": "2026-11-10T18:38+00:00",
+  "revisar": "bajas"
  },
  {
   "id": "401860435",
@@ -6868,11 +6864,7 @@
   "ev": 0.0615,
   "casa": "Betano (API-Football; DraftKings no publicó)",
   "visto": "2026-11-09T06:06+00:00",
-  "ultimo": "2026-11-09T06:16+00:00",
-  "retirado": "2026-11-09T07:51+00:00",
-  "p_fin": 0.4333,
-  "momio_fin": "2.45",
-  "motivo": "regla"
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401877838",
@@ -6910,7 +6902,8 @@
   "retirado": "2026-11-09T21:26+00:00",
   "p_fin": 0.3249,
   "momio_fin": "3.70",
-  "motivo": "regla"
+  "motivo": "regla",
+  "reemplazado": "Hándicap Deportes Tolima +0.5"
  },
  {
   "id": "401877893",
@@ -6928,7 +6921,7 @@
   "ultimo": "2026-11-08T23:45+00:00",
   "retirado": "2026-11-09T06:06+00:00",
   "motivo": "línea",
-  "reemplazado": "Gana Deportes Tolima"
+  "reemplazado": "Hándicap Deportes Tolima +0.5"
  },
  {
   "id": "401877893",
@@ -6979,7 +6972,7 @@
   "ev": 0.2988,
   "casa": "Bet365 (API-Football; DraftKings no publicó)",
   "visto": "2026-11-08T23:45+00:00",
-  "ultimo": "2026-11-09T21:30+00:00"
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401878024",
@@ -7016,6 +7009,21 @@
   "ultimo": "2026-11-08T23:45+00:00",
   "retirado": "2026-11-09T06:06+00:00",
   "motivo": "línea"
+ },
+ {
+  "id": "401877890",
+  "liga": "colombia",
+  "utc": "2026-11-13T00:00Z",
+  "local": "Llaneros FC",
+  "visita": "Boyacá Chicó FC",
+  "k": "H2:+0.5",
+  "mercado": "Hándicap Boyacá Chicó FC +0.5",
+  "p": 0.4556,
+  "momio": "2.35",
+  "ev": 0.0706,
+  "casa": "Bet365 (API-Football; DraftKings no publicó)",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401860432",
@@ -7068,7 +7076,12 @@
   "ev": 0.0801,
   "casa": "DraftKings",
   "visto": "2026-11-08T23:45+00:00",
-  "ultimo": "2026-11-10T05:40+00:00"
+  "ultimo": "2026-11-10T05:40+00:00",
+  "retirado": "2026-11-10T18:38+00:00",
+  "p_fin": 0.4829,
+  "momio_fin": "3.50",
+  "motivo": "probabilidad",
+  "reemplazado": "Hándicap Sport +0.5"
  },
  {
   "id": "401860433",
@@ -7083,12 +7096,7 @@
   "ev": 0.1628,
   "casa": "DraftKings",
   "visto": "2026-11-09T06:06+00:00",
-  "ultimo": "2026-11-09T06:16+00:00",
-  "retirado": "2026-11-09T07:51+00:00",
-  "p_fin": 0.74,
-  "momio_fin": "1.57",
-  "motivo": "regla",
-  "reemplazado": "Gana Sport"
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401860433",
@@ -7179,11 +7187,7 @@
   "ev": 0.088,
   "casa": "DraftKings",
   "visto": "2026-11-08T17:10+00:00",
-  "ultimo": "2026-11-09T06:16+00:00",
-  "retirado": "2026-11-09T07:51+00:00",
-  "p_fin": 0.4896,
-  "momio_fin": "2.10",
-  "motivo": "momio"
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401860438",
@@ -7286,6 +7290,21 @@
   "utc": "2026-11-14T19:30Z",
   "local": "Juventude",
   "visita": "Botafogo-SP",
+  "k": "H2:+1.5",
+  "mercado": "Hándicap Botafogo-SP +1.5",
+  "p": 0.6846,
+  "momio": "1.59",
+  "ev": 0.0873,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401860441",
+  "liga": "brasil2",
+  "utc": "2026-11-14T19:30Z",
+  "local": "Juventude",
+  "visita": "Botafogo-SP",
   "k": "U:2.5",
   "mercado": "Menos de 2.5 goles",
   "p": 0.6426,
@@ -7298,6 +7317,36 @@
   "p_fin": 0.6211,
   "momio_fin": "1.67",
   "motivo": "probabilidad"
+ },
+ {
+  "id": "401877893",
+  "liga": "colombia",
+  "utc": "2026-11-14T20:30Z",
+  "local": "Deportivo Cali",
+  "visita": "Deportes Tolima",
+  "k": "H2:+0.5",
+  "mercado": "Hándicap Deportes Tolima +0.5",
+  "p": 0.6359,
+  "momio": "1.70",
+  "ev": 0.0807,
+  "casa": "Bet365 (API-Football; DraftKings no publicó)",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401878029",
+  "liga": "colombia",
+  "utc": "2026-11-14T20:30Z",
+  "local": "Atlético Nacional",
+  "visita": "Once Caldas",
+  "k": "1",
+  "mercado": "Gana Atlético Nacional",
+  "p": 0.6029,
+  "momio": "2.20",
+  "ev": 0.3263,
+  "casa": "Bet365 (API-Football; DraftKings no publicó)",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
  },
  {
   "id": "401841311",
@@ -7374,5 +7423,80 @@
   "p_fin": 0.5303,
   "momio_fin": "1.91",
   "motivo": "momio"
+ },
+ {
+  "id": "401873060",
+  "liga": "nfl",
+  "utc": "2026-11-15T18:00Z",
+  "local": "Green Bay Packers",
+  "visita": "Minnesota Vikings",
+  "k": "ML2",
+  "mercado": "Gana Minnesota Vikings",
+  "p": 0.3637,
+  "momio": "2.90",
+  "ev": 0.0545,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401841317",
+  "liga": "brasil",
+  "utc": "2026-11-19T22:30Z",
+  "local": "Vitória",
+  "visita": "Red Bull Bragantino",
+  "k": "1",
+  "mercado": "Gana Vitória",
+  "p": 0.3951,
+  "momio": "2.70",
+  "ev": 0.0668,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401892138",
+  "liga": "australia",
+  "utc": "2026-11-20T08:40Z",
+  "local": "Western Sydney Wanderers FC",
+  "visita": "Adelaide United FC",
+  "k": "H2:+0.5",
+  "mercado": "Hándicap Adelaide United FC +0.5",
+  "p": 0.5692,
+  "momio": "2.10",
+  "ev": 0.1952,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401882805",
+  "liga": "laliga",
+  "utc": "2026-11-20T20:00Z",
+  "local": "Athletic Club",
+  "visita": "Espanyol",
+  "k": "U:2.5",
+  "mercado": "Menos de 2.5 goles",
+  "p": 0.5264,
+  "momio": "2.00",
+  "ev": 0.0528,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
+ },
+ {
+  "id": "401892137",
+  "liga": "australia",
+  "utc": "2026-11-21T04:00Z",
+  "local": "Auckland FC",
+  "visita": "Melbourne Victory",
+  "k": "1",
+  "mercado": "Gana Auckland FC",
+  "p": 0.4474,
+  "momio": "2.50",
+  "ev": 0.1185,
+  "casa": "DraftKings",
+  "visto": "2026-11-10T18:38+00:00",
+  "ultimo": "2026-11-10T18:38+00:00"
  }
 ]

@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "eastern-conference-playoffs---wild-card",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    275,
+    140
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
  },
  {
   "id": "401933555",
@@ -19,6 +41,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---wild-card",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    260,
+    230
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  }
  }
 ]

@@ -1,16 +1,5 @@
 [
  {
-  "id": "401883122",
-  "utc": "2026-11-08T13:00Z",
-  "estadio": "Estadi de la FAF d'Encamp",
-  "local_espn": "FC Andorra",
-  "visita_espn": "Mallorca",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": null
- },
- {
   "id": "401883136",
   "utc": "2026-11-13T19:30Z",
   "estadio": "Estadio Municipal de Butarque",
@@ -85,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    200,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -215
+    ]
+   ]
+  }
  },
  {
   "id": "401883118",
@@ -100,13 +111,13 @@
    "casa": "DraftKings",
    "ml": [
     -145,
-    290,
-    330
+    300,
+    320
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    115
+    -190,
+    130
    ],
    "spread": [
     [
@@ -132,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    300,
-    330
+    -140,
+    295,
+    310
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    110
+    -170,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -155
     ],
     [
      "+0.5",
-     105
+     100
     ]
    ]
   }
@@ -165,8 +176,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    220,
+    135,
+    225,
     190
    ],
    "ou_linea": 2.5,
@@ -177,11 +188,11 @@
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -272,7 +283,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    210,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
+  }
  },
  {
   "id": "401883305",
@@ -280,6 +313,17 @@
   "estadio": "Carlos Belmonte",
   "local_espn": "Albacete",
   "visita_espn": "RC Celta Fortuna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883112",
+  "utc": "2026-11-20T19:30Z",
+  "estadio": "Estadi de la FAF d'Encamp",
+  "local_espn": "FC Andorra",
+  "visita_espn": "Leganés",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

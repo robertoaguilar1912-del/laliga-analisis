@@ -1,112 +1,156 @@
 [
  {
-  "id": "401877770",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Águilas Doradas",
-  "visita_espn": "Independiente Medellín",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401877917",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Atlético Bucaramanga",
-  "visita_espn": "Fortaleza CEIF",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401878029",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Atlético Nacional",
-  "visita_espn": "Once Caldas",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401878043",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Cúcuta Deportivo",
-  "visita_espn": "Jaguares de Córdoba",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401877893",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Deportivo Cali",
-  "visita_espn": "Deportes Tolima",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
   "id": "401878034",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
+  "utc": "2026-11-12T22:00Z",
+  "estadio": "Departamental Libertad",
   "local_espn": "Deportivo Pasto",
   "visita_espn": "Atlético Junior",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401877919",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Deportivo Pereira",
-  "visita_espn": "América de Cali",
-  "estado": "STATUS_POSTPONED",
-  "tipo": "clausura",
-  "neutral": false,
-  "momios": null
- },
- {
-  "id": "401877838",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
-  "local_espn": "Internacional de Bogotá",
-  "visita_espn": "Independiente Santa Fe",
-  "estado": "STATUS_POSTPONED",
+  "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
   "momios": null
  },
  {
   "id": "401877890",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
+  "utc": "2026-11-13T00:00Z",
+  "estadio": "Estadio Bello Horizonte - Rey Pele",
   "local_espn": "Llaneros FC",
   "visita_espn": "Boyacá Chicó FC",
-  "estado": "STATUS_POSTPONED",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877838",
+  "utc": "2026-11-14T01:30Z",
+  "estadio": "Metropolitano de Techo",
+  "local_espn": "Internacional de Bogotá",
+  "visita_espn": "Independiente Santa Fe",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877770",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Estadio Cincuentenario",
+  "local_espn": "Águilas Doradas",
+  "visita_espn": "Independiente Medellín",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    200,
+    170
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -215
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401877917",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Estadio Alfonso López",
+  "local_espn": "Atlético Bucaramanga",
+  "visita_espn": "Fortaleza CEIF",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878029",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Atanasio Girardot",
+  "local_espn": "Atlético Nacional",
+  "visita_espn": "Once Caldas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401878043",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "General Santander",
+  "local_espn": "Cúcuta Deportivo",
+  "visita_espn": "Jaguares de Córdoba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877893",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Deportivo Cali",
+  "local_espn": "Deportivo Cali",
+  "visita_espn": "Deportes Tolima",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877919",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Estadio Santiago de Las Atalayas",
+  "local_espn": "Deportivo Pereira",
+  "visita_espn": "América de Cali",
+  "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
   "momios": null
  },
  {
   "id": "401878024",
-  "utc": "2026-11-12T20:00Z",
-  "estadio": "",
+  "utc": "2026-11-14T20:30Z",
+  "estadio": "Estadio Nemesio Camacho El Campín",
   "local_espn": "Millonarios",
   "visita_espn": "Alianza FC",
-  "estado": "STATUS_POSTPONED",
+  "estado": "STATUS_SCHEDULED",
   "tipo": "clausura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -525,
+    450,
+    1200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -140
+    ],
+    [
+     "+1.5",
+     -110
+    ]
+   ]
+  }
  }
 ]
