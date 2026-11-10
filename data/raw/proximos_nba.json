@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909955",
-  "utc": "2026-11-10T00:30Z",
-  "fecha": "2026-11-09",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "TOR",
-  "visita": "MEM",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Toronto Raptors",
-  "visita_espn": "Memphis Grizzlies",
-  "revisado": false,
-  "estadio": "Scotiabank Arena",
-  "records": {
-   "home": [
-    "5-4",
-    "2-1",
-    "3-3"
-   ],
-   "away": [
-    "6-3",
-    "2-3",
-    "4-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909956",
   "utc": "2026-11-10T01:00Z",
   "fecha": "2026-11-09",
@@ -67,7 +38,7 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Denver Nuggets",
   "revisado": false,
@@ -153,10 +124,10 @@
     300
    ],
    "spread": [
-    -11.5,
-    -107,
-    11.5,
-    -113
+    -10.5,
+    -116,
+    10.5,
+    -105
    ],
    "spread_abre": -9.5,
    "total": [
@@ -330,24 +301,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    380,
-    -497
+    331,
+    -423
    ],
    "ml_abre": [
     285,
     -357
    ],
    "spread": [
-    10.5,
+    9.5,
     -115,
-    -10.5,
+    -9.5,
     -106
    ],
    "spread_abre": 10.5,
    "total": [
-    228.5,
-    -112,
-    -108
+    227.5,
+    -113,
+    -107
    ],
    "total_abre": 227.5
   }
@@ -531,8 +502,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ],
    "away": [
@@ -589,9 +560,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ],
    "away": [
     "5-3",
@@ -768,8 +739,8 @@
     "5-1"
    ],
    "away": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ]
   },
@@ -1000,9 +971,9 @@
     "1-3"
    ],
    "away": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ]
   },
   "momios": null
@@ -1227,9 +1198,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ],
    "away": [
     "2-8",
@@ -1430,8 +1401,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ],
    "away": [
@@ -1609,9 +1580,9 @@
     "2-5"
    ],
    "away": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ]
   },
   "momios": null
@@ -1778,8 +1749,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ],
    "away": [
@@ -1928,9 +1899,9 @@
     "1-4"
    ],
    "away": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ]
   },
   "momios": null
@@ -2068,8 +2039,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ],
    "away": [
@@ -2271,9 +2242,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "6-3",
+    "7-3",
     "2-3",
-    "4-0"
+    "5-0"
    ],
    "away": [
     "7-3",
@@ -2479,8 +2450,8 @@
     "4-1"
    ],
    "away": [
-    "5-4",
-    "2-1",
+    "5-5",
+    "2-2",
     "3-3"
    ]
   },
