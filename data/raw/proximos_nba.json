@@ -96,10 +96,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Toronto Raptors",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
@@ -113,30 +113,7 @@
     "4-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    101,
-    -119
-   ],
-   "ml_abre": [
-    -139,
-    117
-   ],
-   "spread": [
-    1.5,
-    -109,
-    -1.5,
-    -111
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    225.5,
-    -112,
-    -108
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909956",
@@ -148,10 +125,10 @@
   "visita": "IND",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Indiana Pacers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -165,30 +142,7 @@
     "3-2"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -191,
-    160
-   ],
-   "ml_abre": [
-    -169,
-    142
-   ],
-   "spread": [
-    -4.5,
-    -116,
-    4.5,
-    -105
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    226.5,
-    -115,
-    -106
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909957",
@@ -200,10 +154,10 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Denver Nuggets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -217,30 +171,7 @@
     "2-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -173,
-    146
-   ],
-   "ml_abre": [
-    -166,
-    139
-   ],
-   "spread": [
-    -4.5,
-    -111,
-    4.5,
-    -108
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    223.5,
-    -115,
-    -105
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909958",
@@ -270,10 +201,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    296,
-    -372
+    312,
+    -396
    ],
    "ml_abre": [
     200,
@@ -281,15 +212,15 @@
    ],
    "spread": [
     8.5,
-    -110,
+    -103,
     -8.5,
-    -110
+    -117
    ],
    "spread_abre": 7.5,
    "total": [
-    226.5,
-    -106,
-    -114
+    225.5,
+    -107,
+    -113
    ],
    "total_abre": 225.5
   }
@@ -307,7 +238,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Golden State Warriors",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Chase Center",
   "records": {
    "home": [
@@ -322,7 +253,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -569,
     426
@@ -333,15 +264,15 @@
    ],
    "spread": [
     -11.5,
-    -114,
+    -107,
     11.5,
-    -106
+    -113
    ],
    "spread_abre": -9.5,
    "total": [
-    229.5,
-    -106,
-    -114
+    228.5,
+    -113,
+    -107
    ],
    "total_abre": 231.5
   }
@@ -374,10 +305,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -1120,
-    710
+    -990,
+    650
    ],
    "ml_abre": [
     -1260,
@@ -385,15 +316,15 @@
    ],
    "spread": [
     -15.5,
-    -110,
+    -114,
     15.5,
-    -110
+    -106
    ],
    "spread_abre": -15.5,
    "total": [
-    219.5,
-    -114,
-    -106
+    220.5,
+    -105,
+    -115
    ],
    "total_abre": 219.5
   }
@@ -426,26 +357,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -109,
-    -109
+    -101,
+    -117
    ],
    "ml_abre": [
     -109,
     -109
    ],
    "spread": [
-    -1.5,
-    -101,
     1.5,
-    -120
+    -115,
+    -1.5,
+    -105
    ],
    "spread_abre": 1.5,
    "total": [
-    215.5,
-    -114,
-    -106
+    216.5,
+    -115,
+    -105
    ],
    "total_abre": 214.5
   }
@@ -506,7 +437,30 @@
     "3-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    380,
+    -497
+   ],
+   "ml_abre": [
+    285,
+    -357
+   ],
+   "spread": [
+    10.5,
+    -110,
+    -10.5,
+    -110
+   ],
+   "spread_abre": 10.5,
+   "total": [
+    228.5,
+    -112,
+    -108
+   ],
+   "total_abre": 227.5
+  }
  },
  {
   "id": "401909964",
@@ -535,7 +489,30 @@
     "2-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    181,
+    -218
+   ],
+   "ml_abre": [
+    157,
+    -188
+   ],
+   "spread": [
+    5.5,
+    -110,
+    -5.5,
+    -110
+   ],
+   "spread_abre": 5.5,
+   "total": [
+    222.5,
+    -106,
+    -114
+   ],
+   "total_abre": 221.5
+  }
  },
  {
   "id": "401909965",
@@ -565,7 +542,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     103,
     -122
@@ -583,8 +560,8 @@
    "spread_abre": 1.5,
    "total": [
     226.5,
-    -106,
-    -114
+    -113,
+    -107
    ],
    "total_abre": 226.5
   }
