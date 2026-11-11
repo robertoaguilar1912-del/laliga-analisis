@@ -9,10 +9,10 @@
   "visita": "MIL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New York Knicks",
   "visita_espn": "Milwaukee Bucks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "0-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -1180,
-    740
-   ],
-   "ml_abre": [
-    -1260,
-    770
-   ],
-   "spread": [
-    -16.5,
-    -104,
-    16.5,
-    -116
-   ],
-   "spread_abre": -15.5,
-   "total": [
-    221.5,
-    -110,
-    -110
-   ],
-   "total_abre": 219.5
-  }
+  "momios": null
  },
  {
   "id": "401909961",
@@ -64,7 +41,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Boston Celtics",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
@@ -96,9 +73,9 @@
    ],
    "spread_abre": 1.5,
    "total": [
-    217.5,
-    -105,
-    -115
+    216.5,
+    -113,
+    -107
    ],
    "total_abre": 214.5
   }
@@ -116,7 +93,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Phoenix Suns",
   "visita_espn": "LA Clippers",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
@@ -148,9 +125,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    224.5,
-    -108,
-    -112
+    223.5,
+    -112,
+    -108
    ],
    "total_abre": 225.5
   }
@@ -168,7 +145,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Utah Jazz",
   "visita_espn": "Miami Heat",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -185,8 +162,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    319,
-    -406
+    282,
+    -352
    ],
    "ml_abre": [
     285,
@@ -194,15 +171,15 @@
    ],
    "spread": [
     8.5,
-    -107,
+    -105,
     -8.5,
-    -113
+    -116
    ],
    "spread_abre": 10.5,
    "total": [
     227.5,
-    -108,
-    -112
+    -110,
+    -110
    ],
    "total_abre": 227.5
   }
@@ -252,9 +229,9 @@
    ],
    "spread_abre": 5.5,
    "total": [
-    221.5,
-    -115,
-    -105
+    222.5,
+    -105,
+    -115
    ],
    "total_abre": 221.5
   }
@@ -466,9 +443,9 @@
    ],
    "spread_abre": 14.5,
    "total": [
-    239.5,
-    -108,
-    -112
+    238.5,
+    -115,
+    -106
    ],
    "total_abre": 237.5
   }
@@ -500,7 +477,30 @@
     "2-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    131,
+    -156
+   ],
+   "ml_abre": [
+    131,
+    -156
+   ],
+   "spread": [
+    4.5,
+    -114,
+    -4.5,
+    -106
+   ],
+   "spread_abre": 4.5,
+   "total": [
+    228.5,
+    -106,
+    -114
+   ],
+   "total_abre": 228.5
+  }
  },
  {
   "id": "401909971",
@@ -561,22 +561,22 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -166,
-    140
+    -174,
+    146
    ],
    "ml_abre": [
     -164,
     138
    ],
    "spread": [
-    -4.5,
-    -110,
-    4.5,
-    -110
+    -5.5,
+    -109,
+    5.5,
+    -111
    ],
    "spread_abre": -4.5,
    "total": [
-    230.5,
+    229.5,
     -110,
     -110
    ],
@@ -650,16 +650,16 @@
     158
    ],
    "spread": [
-    -5.5,
+    -4.5,
     -110,
-    5.5,
+    4.5,
     -110
    ],
    "spread_abre": -5.5,
    "total": [
-    222.5,
-    -110,
-    -110
+    223.5,
+    -107,
+    -113
    ],
    "total_abre": 222.5
   }
@@ -691,30 +691,7 @@
     "3-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    111,
-    -132
-   ],
-   "ml_abre": [
-    111,
-    -132
-   ],
-   "spread": [
-    2.5,
-    -111,
-    -2.5,
-    -109
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    225.5,
-    -107,
-    -113
-   ],
-   "total_abre": 224.5
-  }
+  "momios": null
  },
  {
   "id": "401909976",
