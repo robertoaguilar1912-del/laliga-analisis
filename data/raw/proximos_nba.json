@@ -27,7 +27,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -1180,
     740
@@ -37,16 +37,16 @@
     770
    ],
    "spread": [
-    -15.5,
-    -116,
-    15.5,
-    -104
+    -16.5,
+    -104,
+    16.5,
+    -116
    ],
    "spread_abre": -15.5,
    "total": [
     221.5,
-    -107,
-    -113
+    -110,
+    -110
    ],
    "total_abre": 219.5
   }
@@ -79,7 +79,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     105,
     -124
@@ -90,15 +90,15 @@
    ],
    "spread": [
     1.5,
-    -104,
+    -106,
     -1.5,
-    -116
+    -114
    ],
    "spread_abre": 1.5,
    "total": [
     217.5,
-    -107,
-    -113
+    -105,
+    -115
    ],
    "total_abre": 214.5
   }
@@ -131,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -173,
     145
@@ -183,7 +183,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     319,
     -406
@@ -193,10 +193,10 @@
     -357
    ],
    "spread": [
-    9.5,
-    -115,
-    -9.5,
-    -105
+    8.5,
+    -107,
+    -8.5,
+    -113
    ],
    "spread_abre": 10.5,
    "total": [
@@ -235,10 +235,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    190,
-    -229
+    180,
+    -217
    ],
    "ml_abre": [
     157,
@@ -252,9 +252,9 @@
    ],
    "spread_abre": 5.5,
    "total": [
-    222.5,
-    -108,
-    -112
+    221.5,
+    -115,
+    -105
    ],
    "total_abre": 221.5
   }
@@ -287,7 +287,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     106,
     -125
@@ -339,7 +339,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -160,
     135
@@ -449,10 +449,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    492,
-    -680
+    630,
+    -940
    ],
    "ml_abre": [
     451,
@@ -466,9 +466,9 @@
    ],
    "spread_abre": 14.5,
    "total": [
-    238.5,
-    -110,
-    -110
+    239.5,
+    -108,
+    -112
    ],
    "total_abre": 237.5
   }
@@ -559,7 +559,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -166,
     140
@@ -640,7 +640,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -189,
     158
@@ -692,7 +692,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     111,
     -132
@@ -2597,6 +2597,180 @@
     "1-9",
     "0-5",
     "1-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910023",
+  "utc": "2026-11-21T18:00Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "PHI",
+  "visita": "MIL",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Philadelphia 76ers",
+  "visita_espn": "Milwaukee Bucks",
+  "revisado": false,
+  "estadio": "Xfinity Mobile Arena",
+  "records": {
+   "home": [
+    "9-2",
+    "4-1",
+    "5-1"
+   ],
+   "away": [
+    "1-9",
+    "1-5",
+    "0-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910024",
+  "utc": "2026-11-22T00:30Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "NY",
+  "visita": "POR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "New York Knicks",
+  "visita_espn": "Portland Trail Blazers",
+  "revisado": false,
+  "estadio": "Madison Square Garden",
+  "records": {
+   "home": [
+    "5-4",
+    "3-2",
+    "2-2"
+   ],
+   "away": [
+    "6-3",
+    "1-2",
+    "5-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910025",
+  "utc": "2026-11-22T01:00Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DAL",
+  "visita": "LAC",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Dallas Mavericks",
+  "visita_espn": "LA Clippers",
+  "revisado": false,
+  "estadio": "American Airlines Center",
+  "records": {
+   "home": [
+    "7-4",
+    "5-2",
+    "2-2"
+   ],
+   "away": [
+    "2-7",
+    "2-3",
+    "0-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910026",
+  "utc": "2026-11-22T01:00Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIN",
+  "visita": "MEM",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Minnesota Timberwolves",
+  "visita_espn": "Memphis Grizzlies",
+  "revisado": false,
+  "estadio": "Target Center",
+  "records": {
+   "home": [
+    "8-3",
+    "4-1",
+    "4-2"
+   ],
+   "away": [
+    "7-3",
+    "2-3",
+    "5-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910027",
+  "utc": "2026-11-22T01:00Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SA",
+  "visita": "NO",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "San Antonio Spurs",
+  "visita_espn": "New Orleans Pelicans",
+  "revisado": false,
+  "estadio": "Frost Bank Center",
+  "records": {
+   "home": [
+    "9-2",
+    "4-2",
+    "5-0"
+   ],
+   "away": [
+    "4-7",
+    "3-3",
+    "1-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910028",
+  "utc": "2026-11-22T03:00Z",
+  "fecha": "2026-11-21",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SAC",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Sacramento Kings",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Golden 1 Center",
+  "records": {
+   "home": [
+    "1-9",
+    "0-5",
+    "1-4"
+   ],
+   "away": [
+    "8-2",
+    "5-0",
+    "3-2"
    ]
   },
   "momios": null
