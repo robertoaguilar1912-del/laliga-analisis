@@ -114,11 +114,16 @@ LIGAS = {
                 # con tope de EV o acercando el modelo al mercado (25-75 a 75-25) siguen perdiendo. Contra los momios que guardó ESPN
                 # (ESPN BET 2024-25 y DraftKings 2026, data/raw/espn_momios_noruega.json): 543 PICK −14.9% (rango −24% a −5%):
                 # resultado −13%, más/menos −6%, hándicap −23%. El factor de ataque de los onces tampoco mejora aquí (+3.4 ± 15.0)
-                'sin_pick': True,
-                'aviso': 'Liga nueva en la página (8 nov 2026), sin PICK. En la prueba con temporadas pasadas el modelo perdió en todos '
-                         'los mercados: −14% contra el cierre de 2021-2026 (438 apuestas al resultado) y −15% contra los momios que '
-                         'guardó ESPN de 2024-2026 (543 apuestas: resultado −13%, más/menos −6%, hándicap −23%). Aquí la casa sabe más '
-                         'que el modelo: la página muestra probabilidades, momios justos y estadísticas, pero no marca PICK.'},
+                # ancla (11 nov 2026, en lugar de 'sin_pick'; claude/mls-noruega-ancla-nov-2026.md): la probabilidad es 25% modelo y
+                # 75% DraftKings sin margen (ancla.anclar, como las copas). Log loss contra el modelo solo, en diezmilésimas: cierre de
+                # Pinnacle 2021-26 mejora en las 6 temporadas (−85 a −245, total −146); momios de ESPN 2024-26 (615 partidos):
+                # resultado −206 ± 43, hándicap −176 ± 40, más/menos −45 ± 36. PICK: de 543 a −14.9% pasan a 10 (+2.6%); con el
+                # cierre y la regla de Pinnacle, 7 (+23%). Pocos PICK, pero las probabilidades y la calculadora quedan bien
+                'ancla': 0.25,
+                'aviso': 'Desde el 11 nov 2026 la probabilidad de esta liga es 25% el modelo y 75% el mercado (DraftKings sin margen), '
+                         'como en las copas. Antes, el modelo solo perdía en todos los mercados (−14% contra el cierre de 2021-2026 y '
+                         '−15% contra los momios de ESPN de 2024-2026); así corregido acierta más en todas las temporadas, pero marca '
+                         'muy pocos PICK: el valor aquí sale de encontrar una casa que pague más que el precio justo.'},
     # region: copa entre equipos de ligas distintas ('europa' o 'sudamerica'). Se usa el modelo de toda la región
     # (src/europa.py), que mide cuánto vale cada liga con los partidos de las copas. Sus resultados (y los de las ligas de la
     # región) los baja europa.py, no football-data. fase_tabla: la fase de la copa que va en la tabla (las eliminatorias no).
@@ -156,10 +161,15 @@ LIGAS = {
             'sin_menos': True,
             # Sin PICK (9 nov 2026, revisión de PICK por liga): en vivo (1 oct–8 nov) 97 PICK −29.5%, la peor liga; prueba 2021-26
             # 745 PICK −15%; con la regla de Pinnacle (PIN_MIN) quedan 72, −6.5%, y en 2025-26 (60) −18%. Ninguna versión gana.
-            'sin_pick': True,
-            'aviso': 'Sin PICK desde el 9 nov 2026: en todas las pruebas los PICK de la MLS perdieron (−15% en 2021-2026, −29% en '
-                     'vivo en octubre y noviembre; con la regla de Pinnacle, −18% en 2025-2026). La página sigue mostrando '
-                     'probabilidades, momios justos y estadísticas.'},
+            # ancla (11 nov 2026, en lugar de 'sin_pick'; claude/mls-noruega-ancla-nov-2026.md): 25% modelo y 75% DraftKings sin
+            # margen (ancla.anclar). Log loss contra el modelo solo, en diezmilésimas: cierre de Pinnacle 2021-26 mejora en las 6
+            # temporadas (−97 a −169, total −135); en vivo (lo publicado antes de 105 partidos, 7 oct–9 nov): resultado −171 ± 91,
+            # línea de goles −162 ± 103. PICK: en vivo de 74 (−16.2 u) a ninguno; con el cierre y la regla de Pinnacle, 17 (+17%)
+            'ancla': 0.25,
+            'aviso': 'Desde el 11 nov 2026 la probabilidad de la MLS es 25% el modelo y 75% el mercado (DraftKings sin margen), como en '
+                     'las copas. El modelo solo perdía en todas las pruebas (−15% en 2021-2026, −29% en vivo en octubre y noviembre); '
+                     'así corregido acierta más en todas las temporadas y en vivo, pero marca muy pocos PICK: el valor aquí sale de '
+                     'encontrar una casa que pague más que el precio justo.'},
     # solo_espn: sin archivo de football-data; los resultados de temporadas pasadas salen de ESPN
     # segunda: liga de la que se toman los enfrentamientos de segunda división (historial)
     # torneos: la tabla es del semestre (Apertura/Clausura) aunque la temporada sea el año completo

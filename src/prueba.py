@@ -236,6 +236,16 @@ def evaluar(liga, df):
                'en las primeras 13 semanas de cada temporada')
         mtxt = '1X2 y más/menos 2.5 goles'
     df['dias'] = (df.Date - df.groupby('Season').Date.transform('min')).dt.days
+    k_ancla = LIGAS[liga].get('ancla')
+    if k_ancla is not None:     # ligas ancladas al mercado (MLS y Eliteserien, 11 nov 2026; ver ancla.py): como en la página
+        P, Mf = df[['pH', 'pD', 'pA']].values, df[['fH', 'fD', 'fA']].values
+        ok = np.isfinite(Mf).all(1)
+        z = k_ancla * np.log(P[ok]) + (1 - k_ancla) * np.log(Mf[ok])
+        Q = np.exp(z - z.max(1, keepdims=True)); Q /= Q.sum(1, keepdims=True)
+        P = P.copy(); P[ok] = Q
+        df['pH'], df['pD'], df['pA'] = P.T
+        ref += (f'; la probabilidad es {k_ancla:.0%} el modelo y {1 - k_ancla:.0%} el precio justo del mercado (aquí Pinnacle al '
+                'cierre, o el promedio; en la página, DraftKings sin margen), como en la página desde el 11 nov 2026')
     reglas = not solo_cierre
     ev_max = LIGAS[liga].get('ev_max')
     if ev_max:

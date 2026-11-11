@@ -30,6 +30,13 @@ import alineacion
 from alineacion import peso_rotacion, peso_once, peso_bajas_hab
 from ancla import anclar, ANCLA_COPAS
 
+
+def peso_ancla(liga):
+    """Peso del modelo frente al mercado (ancla.anclar): ANCLA_COPAS en las copas, 'ancla' de config.py en las ligas que lo
+    tienen (MLS y Eliteserien, 11 nov 2026); None = el modelo tal cual."""
+    L = LIGAS.get(liga) or {}
+    return ANCLA_COPAS if L.get('region') else L.get('ancla')
+
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
 
@@ -190,14 +197,16 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         if not mom.get('ml'):              # DraftKings no publicó: momios de otra casa de API-Football (apifootball.RESPALDO)
             mom = apifootball.momios_respaldo(liga, g['id']) or mom
         anclado = False
-        if LIGAS[liga].get('region') and mom.get('ml'):
-            # copas internacionales: ANCLA_COPAS del modelo y el resto del mercado (ver ancla.py, prueba del 4 nov 2026)
+        kA = peso_ancla(liga)
+        if kA is not None and mom.get('ml'):
+            # copas internacionales (ANCLA_COPAS, prueba del 4 nov 2026) y ligas con 'ancla' en config.py (MLS y Eliteserien,
+            # 11 nov 2026): kA del modelo y el resto del mercado (ver ancla.py)
             imp = np.array([1 / am_to_dec(x) for x in mom['ml']])
             linea = p_over = None
             if mom.get('ou'):
                 d_ou = [am_to_dec(x) for x in mom['ou']]
                 linea, p_over = float(mom['ou_linea']), (1 / d_ou[0]) / (1 / d_ou[0] + 1 / d_ou[1])
-            M = anclar(M, imp / imp.sum(), linea, p_over)
+            M = anclar(M, imp / imp.sum(), linea, p_over, k=kA)
             gi_ = np.arange(M.shape[0])
             lam, mu = float((gi_[:, None] * M).sum()), float((gi_[None, :] * M).sum())
             anclado = True
@@ -287,9 +296,12 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
         if fg and abs(fg - 1) >= 0.02:
             txt += (f" Por el ataque de los dos onces (remates a puerta y pases clave de cada jugador el último año) el modelo espera "
                     f"{abs(fg - 1) * 100:.0f}% {'más' if fg > 1 else 'menos'} goles que con la fuerza de los equipos sola.")
-        if anclado:
-            txt += (f" En las copas la probabilidad es {ANCLA_COPAS:.0%} lo que calcula el modelo y {1 - ANCLA_COPAS:.0%} lo que dice el"
+        if anclado and LIGAS[liga].get('region'):
+            txt += (f" En las copas la probabilidad es {kA:.0%} lo que calcula el modelo y {1 - kA:.0%} lo que dice el"
                     " mercado: en las copas lo que el modelo se separaba de la casa no se cumplía (prueba del 4 nov 2026).")
+        elif anclado:
+            txt += (f" En esta liga la probabilidad es {kA:.0%} lo que calcula el modelo y {1 - kA:.0%} lo que dice el mercado: aquí"
+                    " lo que el modelo se separaba de la casa no se cumplía (prueba del 11 nov 2026).")
         previo = tuple(LIGAS[liga].get('previo_descendido', PREVIO_DESCENDIDO))
         bajaron = [nombre(t) for t in (h, a) if LIGAS[liga].get('descienden_de') and isinstance(nuevos, dict) and nuevos.get(t) == previo]
         nv = [t for t in (h, a) if t in nuevos]
@@ -634,8 +646,9 @@ def ajustar_bajas(p):
         mov = peso_bajas_hab(p.get('liga')) * p['bajas_hab']['neto'] + peso_rotacion(p.get('liga')) * rot
     else:
         mov = BAJAS_LOGIT * neto + peso_rotacion(p.get('liga')) * rot      # la rotación pesa distinto por región (alineacion.py)
-    if (LIGAS.get(p.get('liga')) or {}).get('region') and p.get('mercado'):
-        mov *= ANCLA_COPAS          # copas: la probabilidad ya está anclada al mercado, que también sabe de las bajas (ancla.py)
+    kA = peso_ancla(p.get('liga'))
+    if kA is not None and p.get('mercado'):
+        mov *= kA                   # copas y ligas ancladas: la probabilidad ya está anclada al mercado, que también sabe de las bajas
     if abs(mov) < 0.001:
         return
     M0 = np.array(d['goles'], dtype=float)
@@ -866,6 +879,10 @@ def analizar_liga(liga):
                 if r['veredicto'] == 'PICK':
                     r['veredicto'], r['regla'] = 'MAYBE', 'liga'
             p['reglas'] = {**(p.get('reglas') or {}), 'sin_pick': True}
+    if peso_ancla(liga) is not None:    # copas y ligas ancladas: sin momios del mercado la probabilidad es la del modelo solo, que
+        for p in partidos:              # es la que perdía; la calculadora no marca PICK hasta que haya momios (plantilla: 'ancla')
+            if not p.get('mercado'):
+                p['reglas'] = {**(p.get('reglas') or {}), 'sin_ancla': True}
     # precio contra Pinnacle (9 nov 2026; ver PIN_MIN en config.py): si el momio está más de 2% por debajo del precio justo
     # de Pinnacle (sin Pinnacle, del promedio de 3 o más casas sin margen), no es PICK. Sin ninguno de los dos, no cambia nada
     for p in partidos:
@@ -899,7 +916,9 @@ def analizar_liga(liga):
             'tiempos': TIEMPOS_INFO,
             'n_espn_extra': n_espn, 'aviso': L.get('aviso'), 'cuidado': L.get('cuidado') or {},
             'fuerza_ligas': modelo.tabla_ligas(list(equipos)) if L.get('region') else None,
-            'ancla_mercado': ANCLA_COPAS if L.get('region') else None}
+            'ancla_mercado': peso_ancla(liga),
+            'ancla_motivo': None if L.get('region') or peso_ancla(liga) is None else
+            ' En esta liga el modelo solo perdía en todas las pruebas: corregido así acierta más en todas las temporadas, pero marca muy pocos PICK.'}
     out = {'actualizado': ahora().isoformat(timespec='minutes'), 'datos_hasta': str(df.Date.max().date()), 'info': info,
            'tramos': TRAMOS, 'liga': resumen_liga, 'tabla': tabla, 'equipos': equipos, 'partidos': partidos,
            'backtest': backtest, 'experimentos': json.load(open(ex)) if ex.exists() else [],
