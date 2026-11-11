@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909960",
-  "utc": "2026-11-11T00:30Z",
-  "fecha": "2026-11-10",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NY",
-  "visita": "MIL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New York Knicks",
-  "visita_espn": "Milwaukee Bucks",
-  "revisado": false,
-  "estadio": "Madison Square Garden",
-  "records": {
-   "home": [
-    "5-4",
-    "3-2",
-    "2-2"
-   ],
-   "away": [
-    "1-9",
-    "1-5",
-    "0-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909961",
   "utc": "2026-11-11T01:00Z",
   "fecha": "2026-11-10",
@@ -67,7 +38,7 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Phoenix Suns",
   "visita_espn": "LA Clippers",
   "revisado": false,
@@ -84,30 +55,7 @@
     "0-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -179,
-    150
-   ],
-   "ml_abre": [
-    -168,
-    141
-   ],
-   "spread": [
-    -3.5,
-    -112,
-    3.5,
-    -108
-   ],
-   "spread_abre": -4.5,
-   "total": [
-    224.5,
-    -107,
-    -113
-   ],
-   "total_abre": 225.5
-  }
+  "momios": null
  },
  {
   "id": "401909963",
@@ -119,7 +67,7 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Miami Heat",
   "revisado": false,
@@ -136,30 +84,7 @@
     "3-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    276,
-    -344
-   ],
-   "ml_abre": [
-    285,
-    -357
-   ],
-   "spread": [
-    8.5,
-    -116,
-    -8.5,
-    -105
-   ],
-   "spread_abre": 10.5,
-   "total": [
-    227.5,
-    -113,
-    -107
-   ],
-   "total_abre": 227.5
-  }
+  "momios": null
  },
  {
   "id": "401909964",
@@ -174,7 +99,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Orlando Magic",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -200,15 +125,15 @@
    ],
    "spread": [
     5.5,
-    -108,
+    -114,
     -5.5,
-    -112
+    -106
    ],
    "spread_abre": 5.5,
    "total": [
     222.5,
-    -105,
-    -115
+    -107,
+    -113
    ],
    "total_abre": 221.5
   }
@@ -226,7 +151,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Portland Trail Blazers",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Moda Center",
   "records": {
    "home": [
@@ -334,8 +259,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ],
    "away": [
@@ -344,7 +269,30 @@
     "1-4"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -177,
+    148
+   ],
+   "ml_abre": [
+    -177,
+    148
+   ],
+   "spread": [
+    -4.5,
+    -115,
+    4.5,
+    -105
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    221.5,
+    -110,
+    -110
+   ],
+   "total_abre": 221.5
+  }
  },
  {
   "id": "401909968",
@@ -496,9 +444,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "10-2",
@@ -538,18 +486,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -174,
-    146
+    -184,
+    154
    ],
    "ml_abre": [
     -164,
     138
    ],
    "spread": [
-    -5.5,
-    -109,
-    5.5,
-    -111
+    -4.5,
+    -110,
+    4.5,
+    -110
    ],
    "spread_abre": -4.5,
    "total": [
@@ -619,8 +567,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -197,
-    165
+    -204,
+    170
    ],
    "ml_abre": [
     -189,
@@ -634,9 +582,9 @@
    ],
    "spread_abre": -5.5,
    "total": [
-    223.5,
-    -107,
-    -113
+    222.5,
+    -110,
+    -110
    ],
    "total_abre": 222.5
   }
@@ -808,8 +756,8 @@
     "3-3"
    ],
    "away": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ]
   },
@@ -837,9 +785,9 @@
     "2-3"
    ],
    "away": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -1359,8 +1307,8 @@
     "3-3"
    ],
    "away": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ]
   },
@@ -1412,9 +1360,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "7-5",
@@ -1707,8 +1655,8 @@
     "3-3"
    ],
    "away": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ]
   },
@@ -1910,9 +1858,9 @@
     "3-3"
    ],
    "away": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -2224,9 +2172,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "6-3",
@@ -2258,8 +2206,8 @@
     "4-2"
    ],
    "away": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ]
   },
@@ -2577,9 +2525,9 @@
     "5-1"
    ],
    "away": [
-    "1-9",
+    "1-10",
     "1-5",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -2601,8 +2549,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "5-4",
-    "3-2",
+    "6-4",
+    "4-2",
     "2-2"
    ],
    "away": [
