@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909962",
-  "utc": "2026-11-11T02:00Z",
-  "fecha": "2026-11-10",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "PHX",
-  "visita": "LAC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Phoenix Suns",
-  "visita_espn": "LA Clippers",
-  "revisado": false,
-  "estadio": "Mortgage Matchup Center",
-  "records": {
-   "home": [
-    "3-6",
-    "3-3",
-    "0-3"
-   ],
-   "away": [
-    "2-7",
-    "2-3",
-    "0-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909963",
   "utc": "2026-11-11T02:00Z",
   "fecha": "2026-11-10",
@@ -38,7 +9,7 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Miami Heat",
   "revisado": false,
@@ -96,10 +67,10 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Portland Trail Blazers",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Moda Center",
   "records": {
    "home": [
@@ -113,30 +84,7 @@
     "3-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    106,
-    -125
-   ],
-   "ml_abre": [
-    103,
-    -122
-   ],
-   "spread": [
-    1.5,
-    -109,
-    -1.5,
-    -111
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    226.5,
-    -106,
-    -115
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909966",
@@ -166,26 +114,26 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -160,
-    135
+    -166,
+    139
    ],
    "ml_abre": [
     -161,
     135
    ],
    "spread": [
-    -4.5,
-    -105,
-    4.5,
-    -115
+    -3.5,
+    -118,
+    3.5,
+    -103
    ],
    "spread_abre": -4.5,
    "total": [
-    226.5,
-    -114,
-    -106
+    225.5,
+    -110,
+    -110
    ],
    "total_abre": 228.5
   }
@@ -218,7 +166,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -166,
     140
@@ -235,9 +183,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    220.5,
-    null,
-    -115
+    221.5,
+    -110,
+    -110
    ],
    "total_abre": 221.5
   }
@@ -269,7 +217,30 @@
     "4-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    185,
+    -223
+   ],
+   "ml_abre": [
+    182,
+    -220
+   ],
+   "spread": [
+    6.5,
+    -108,
+    -6.5,
+    -112
+   ],
+   "spread_abre": 6.5,
+   "total": [
+    215.5,
+    -114,
+    -106
+   ],
+   "total_abre": 215.5
+  }
  },
  {
   "id": "401909969",
@@ -299,7 +270,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     750,
     -1200
@@ -316,9 +287,9 @@
    ],
    "spread_abre": 14.5,
    "total": [
-    239.5,
-    -108,
-    -112
+    240.5,
+    -109,
+    -111
    ],
    "total_abre": 237.5
   }
@@ -351,10 +322,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    132,
-    -156
+    133,
+    -158
    ],
    "ml_abre": [
     131,
@@ -402,7 +373,30 @@
     "5-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    473,
+    -650
+   ],
+   "ml_abre": [
+    473,
+    -650
+   ],
+   "spread": [
+    10.5,
+    -105,
+    -10.5,
+    -115
+   ],
+   "spread_abre": 10.5,
+   "total": [
+    233.5,
+    -105,
+    -115
+   ],
+   "total_abre": 233.5
+  }
  },
  {
   "id": "401909972",
@@ -432,10 +426,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -184,
-    154
+    -191,
+    160
    ],
    "ml_abre": [
     -164,
@@ -449,9 +443,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    229.5,
-    -110,
-    -110
+    228.5,
+    -107,
+    -113
    ],
    "total_abre": 230.5
   }
@@ -513,7 +507,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -204,
     170
@@ -670,8 +664,8 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "3-6",
-    "3-3",
+    "4-6",
+    "4-3",
     "0-3"
    ],
    "away": [
@@ -931,9 +925,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "2-7",
+    "2-8",
     "2-3",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "8-2",
@@ -1134,8 +1128,8 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "3-6",
-    "3-3",
+    "4-6",
+    "4-3",
     "0-3"
    ],
    "away": [
@@ -1163,9 +1157,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "2-7",
+    "2-8",
     "2-3",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "4-7",
@@ -1574,8 +1568,8 @@
     "2-2"
    ],
    "away": [
-    "3-6",
-    "3-3",
+    "4-6",
+    "4-3",
     "0-3"
    ]
   },
@@ -1685,9 +1679,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "2-7",
+    "2-8",
     "2-3",
-    "0-4"
+    "0-5"
    ],
    "away": [
     "1-9",
@@ -2067,8 +2061,8 @@
     "1-4"
    ],
    "away": [
-    "3-6",
-    "3-3",
+    "4-6",
+    "4-3",
     "0-3"
    ]
   },
@@ -2183,9 +2177,9 @@
     "5-0"
    ],
    "away": [
-    "2-7",
+    "2-8",
     "2-3",
-    "0-4"
+    "0-5"
    ]
   },
   "momios": null
@@ -2386,8 +2380,8 @@
     "0-5"
    ],
    "away": [
-    "3-6",
-    "3-3",
+    "4-6",
+    "4-3",
     "0-3"
    ]
   },
