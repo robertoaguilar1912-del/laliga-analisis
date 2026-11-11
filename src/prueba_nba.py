@@ -20,7 +20,7 @@ import pandas as pd
 
 from config import DATOS, PICK_P_MIN
 from nba import (cargar_juegos, cargar_box, con_pretemporada, ModeloNBA, ModeloJugadores, nombre_temporada, prob_linea, am_to_dec,
-                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB, MEZCLA, PM_PESO)
+                 HL_EQUIPOS, RIDGE_EQUIPOS, HL_JUGADORES, RIDGE_JUGADORES, CALIB, MEZCLA, PM_PESO, SIGMA_ML)
 from picks import calibrar, centro_mercado
 
 warnings.filterwarnings('ignore')
@@ -99,8 +99,10 @@ def apuestas(d, sigma):
             sel += [('Total', 'más', o, pu, u, am_to_dec(r.o_odds), r.total - r.tot),
                     ('Total', 'menos', u, pu, o, am_to_dec(r.u_odds), r.tot - r.total)]
         if not np.isnan(r.ml_l) and not np.isnan(r.ml_v):
-            if not np.isnan(r.sp) and not np.isnan(r.sp_ol) and not np.isnan(r.sp_ov):      # como nba.py desde el 1 nov 2026
-                kml, pml = mod.dist_margen(cm + MEZCLA['Moneyline'] * (r.pm - cm))
+            if not np.isnan(r.sp) and not np.isnan(r.sp_ol) and not np.isnan(r.sp_ov):      # como nba.py (curva SIGMA_ML desde el 11 nov 2026)
+                dml = ModeloNBA(sigma_m=SIGMA_ML, sigma_t=st).dist_margen
+                cml = centro_mercado(dml, -r.sp, qh, -r.sp - 20, -r.sp + 20)
+                kml, pml = dml(cml + MEZCLA['Moneyline'] * (r.pm - cml))
                 h, e, a = prob_linea(kml, pml, 0)
             else:
                 h, e, a = prob_linea(km, pm, 0)
@@ -160,7 +162,7 @@ def main(elegir_parametros=False):
            'sigma_actual': {'m': round(err[ult][0], 2), 't': round(err[ult][1], 2), 'temporada': nombre_temporada(ult)},
            'principal': 'modelo|cierre|todo|0.05', 'referencia': 'la línea y el momio de cierre de la casa que muestra ESPN (' + ', '.join(casas.index[:3]) + ')',
            'mercados': 'spread, total y moneyline', 'estrategias': {},
-           'calib': CALIB, 'nota_calib': f"modelo de jugadores con el +/- de cada juego (peso {PM_PESO:g}); spread y total: curva de la casa movida hacia el modelo lo que se cumplió (k {MEZCLA['Spread']:g} y {MEZCLA['Total']:g}); moneyline ajustado ({CALIB['Moneyline']:g}); elegidos con 2023-24"}
+           'calib': CALIB, 'nota_calib': f"modelo de jugadores con el +/- de cada juego (peso {PM_PESO:g}); spread y total: curva de la casa movida hacia el modelo lo que se cumplió (k {MEZCLA['Spread']:g} y {MEZCLA['Total']:g}); ganador con la misma curva pero más angosta (σ {SIGMA_ML:g}); elegidos con 2023-24"}
     for thr in (0.0, 0.03, 0.05, 0.10):
         out['estrategias'][f'modelo|cierre|todo|{thr}'] = resumen(b[b.ev >= thr])
     for mk in ('Spread', 'Total', 'Moneyline'):

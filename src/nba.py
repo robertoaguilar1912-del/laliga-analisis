@@ -507,6 +507,16 @@ CALIB = {'Moneyline': 0.92, 'Spread': 0.068, 'Total': 0.028}
 # línea). (real − línea) contra (modelo − línea), 2022-26: k = 0.106 en spread y ≈ 0 en total. La calibración de arriba
 # (logit) solo valía en la línea de la casa: con otra línea (p. ej. +12.5 cuando la casa da +4.5) seguía diciendo ~50%.
 MEZCLA = {'Spread': 0.19, 'Total': 0.0, 'Moneyline': 0.19}
+# Ganador: la curva que pasa de margen a probabilidad de ganar es más angosta que la del spread (11 nov 2026, pedido de Roberto:
+# "corregir, no quitar"). Con el σ del modelo (13-14.5 puntos), la curva centrada en la línea de la casa daba a los no
+# favoritos ~2 puntos más que el moneyline de la casa (casa 11.8% -> curva 13.9%, real 6.7%; casa 23.2% -> 25.0%, real 20.5%),
+# y casi todos los PICK de ganador eran no favoritos que no tenían valor. σ por log loss del ganador con la curva en la línea:
+# 2023-24 mejor 11.5 (0.5828; con 14: 0.5862); 2024-25 y 2025-26 entre 12 y 12.5 (cierre sin margen 0.5851 y 0.5756).
+# PICK de ganador EV ≥ 5% al cierre, k 0.19 (scratchpad nba/ml_sigma_bt.py):
+#   σ del modelo: 392 PICK −5.8% (2023-24 −21%, 2024-25 −5%, 2025-26 +2%, 2026-27 +25% en 15)
+#   σ 11.5:       226 PICK +6.5% (−9.4%, +11.7%, +8.0%, +16.5% en 24)
+# En vivo (20 oct – 10 nov, lo último que publicó la página): 16 PICK −3.8 u -> 10 PICK −1.0 u (noviembre: −4.3 -> +0.5).
+SIGMA_ML = 11.5
 # Ganador (desde el 1 nov 2026): antes salía solo del modelo (CALIB 0.92); ahora, de la misma curva que el spread (centro de la
 # línea de la casa + k·(modelo − ese centro)). k elegido con 2023-24 (log loss del ganador: modelo solo 0.6002, k 0.19 0.5850,
 # el cierre sin margen 0.5846) y probado en 2024-27: 0.5924 -> 0.5797 (cierre 0.5798). PICK de ganador con EV de +5% al cierre:
@@ -1019,8 +1029,10 @@ def analizar():
         if sp[0] is not None:          # centro de la casa: su probabilidad sin margen en su línea
             qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
             cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
-        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline'])
-            kml, pml = modelo.dist_margen(cm + MEZCLA['Moneyline'] * (m - cm))
+        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline']), con la curva SIGMA_ML
+            dml = ModeloNBA(sigma_m=SIGMA_ML, sigma_t=modelo.sigma_t).dist_margen
+            cml = centro_mercado(dml, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+            kml, pml = dml(cml + MEZCLA['Moneyline'] * (m - cml))
             pH, _, pA = prob_linea(kml, pml, 0)
             pH, pA = pH / (pH + pA), pA / (pH + pA)
         else:
