@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909961",
-  "utc": "2026-11-11T01:00Z",
-  "fecha": "2026-11-10",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "PHI",
-  "visita": "BOS",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Philadelphia 76ers",
-  "visita_espn": "Boston Celtics",
-  "revisado": false,
-  "estadio": "Xfinity Mobile Arena",
-  "records": {
-   "home": [
-    "9-2",
-    "4-1",
-    "5-1"
-   ],
-   "away": [
-    "8-2",
-    "5-0",
-    "3-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909962",
   "utc": "2026-11-11T02:00Z",
   "fecha": "2026-11-10",
@@ -38,7 +9,7 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Phoenix Suns",
   "visita_espn": "LA Clippers",
   "revisado": false,
@@ -67,7 +38,7 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Utah Jazz",
   "visita_espn": "Miami Heat",
   "revisado": false,
@@ -96,7 +67,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -113,30 +84,7 @@
     "2-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    180,
-    -217
-   ],
-   "ml_abre": [
-    157,
-    -188
-   ],
-   "spread": [
-    5.5,
-    -114,
-    -5.5,
-    -106
-   ],
-   "spread_abre": 5.5,
-   "total": [
-    222.5,
-    -107,
-    -113
-   ],
-   "total_abre": 221.5
-  }
+  "momios": null
  },
  {
   "id": "401909965",
@@ -272,24 +220,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -177,
-    148
+    -166,
+    140
    ],
    "ml_abre": [
     -177,
     148
    ],
    "spread": [
-    -4.5,
+    -3.5,
     -115,
-    4.5,
-    -105
+    3.5,
+    -106
    ],
    "spread_abre": -4.5,
    "total": [
-    221.5,
-    -110,
-    -110
+    220.5,
+    null,
+    -115
    ],
    "total_abre": 221.5
   }
@@ -316,9 +264,9 @@
     "3-3"
    ],
    "away": [
-    "8-2",
+    "9-2",
     "5-0",
-    "3-2"
+    "4-2"
    ]
   },
   "momios": null
@@ -353,8 +301,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    630,
-    -940
+    750,
+    -1200
    ],
    "ml_abre": [
     451,
@@ -368,9 +316,9 @@
    ],
    "spread_abre": 14.5,
    "total": [
-    238.5,
-    -115,
-    -106
+    239.5,
+    -108,
+    -112
    ],
    "total_abre": 237.5
   }
@@ -405,7 +353,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    131,
+    132,
     -156
    ],
    "ml_abre": [
@@ -420,9 +368,9 @@
    ],
    "spread_abre": 4.5,
    "total": [
-    228.5,
-    -106,
-    -114
+    227.5,
+    -111,
+    -109
    ],
    "total_abre": 228.5
   }
@@ -582,9 +530,9 @@
    ],
    "spread_abre": -5.5,
    "total": [
-    222.5,
-    -110,
-    -110
+    221.5,
+    -115,
+    -105
    ],
    "total_abre": 222.5
   }
@@ -635,8 +583,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "9-2",
-    "4-1",
+    "9-3",
+    "4-2",
     "5-1"
    ],
    "away": [
@@ -1157,8 +1105,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "9-2",
-    "4-1",
+    "9-3",
+    "4-2",
     "5-1"
    ],
    "away": [
@@ -1273,9 +1221,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "5-0",
-    "3-2"
+    "4-2"
    ],
    "away": [
     "7-4",
@@ -1418,9 +1366,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "8-2",
+    "9-2",
     "5-0",
-    "3-2"
+    "4-2"
    ],
    "away": [
     "2-7",
@@ -1510,8 +1458,8 @@
     "1-5"
    ],
    "away": [
-    "9-2",
-    "4-1",
+    "9-3",
+    "4-2",
     "5-1"
    ]
   },
@@ -1887,8 +1835,8 @@
     "2-3"
    ],
    "away": [
-    "9-2",
-    "4-1",
+    "9-3",
+    "4-2",
     "5-1"
    ]
   },
@@ -2032,9 +1980,9 @@
     "2-2"
    ],
    "away": [
-    "8-2",
+    "9-2",
     "5-0",
-    "3-2"
+    "4-2"
    ]
   },
   "momios": null
@@ -2520,8 +2468,8 @@
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
-    "9-2",
-    "4-1",
+    "9-3",
+    "4-2",
     "5-1"
    ],
    "away": [
@@ -2670,9 +2618,9 @@
     "1-4"
    ],
    "away": [
-    "8-2",
+    "9-2",
     "5-0",
-    "3-2"
+    "4-2"
    ]
   },
   "momios": null
