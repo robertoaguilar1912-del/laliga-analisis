@@ -121,9 +121,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
-    240,
-    140
+    175,
+    235,
+    135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -133,7 +133,7 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
@@ -308,5 +308,38 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401841322",
+  "utc": "2026-11-21T19:30Z",
+  "estadio": "Allianz Parque",
+  "local_espn": "Palmeiras",
+  "visita_espn": "Flamengo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841327",
+  "utc": "2026-11-21T20:30Z",
+  "estadio": "Arena Fonte Nova",
+  "local_espn": "Bahia",
+  "visita_espn": "Coritiba",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841325",
+  "utc": "2026-11-22T00:00Z",
+  "estadio": "Arena Condá",
+  "local_espn": "Chapecoense",
+  "visita_espn": "Cruzeiro",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
  }
 ]

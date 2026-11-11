@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    245,
-    200
+    120,
+    250,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     105
+     110
     ],
     [
      "+0.5",
-     -160
+     -165
     ]
    ]
   }
@@ -61,6 +61,138 @@
     [
      "-0.5",
      -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401885051",
+  "utc": "2026-11-21T12:00Z",
+  "estadio": "Max-Morlock-Stadion",
+  "local_espn": "1. FC Nürnberg",
+  "visita_espn": "TSV Eintracht Braunschweig",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    330,
+    330
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -150
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401885054",
+  "utc": "2026-11-21T12:00Z",
+  "estadio": "HDI Arena",
+  "local_espn": "Hannover 96",
+  "visita_espn": "SpVgg Greuther Fürth",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -150,
+    310,
+    320
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     105
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401885056",
+  "utc": "2026-11-21T12:00Z",
+  "estadio": "Volkswagen Arena",
+  "local_espn": "VfL Wolfsburg",
+  "visita_espn": "Holstein Kiel",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -165,
+    340,
+    340
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -185
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401885055",
+  "utc": "2026-11-21T19:30Z",
+  "estadio": "Millerntor-Stadion",
+  "local_espn": "St. Pauli",
+  "visita_espn": "VfL Bochum",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    250,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -110
+    ],
+    [
+     "+0.5",
+     -140
     ]
    ]
   }

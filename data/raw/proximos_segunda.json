@@ -12,8 +12,8 @@
    "casa": "DraftKings",
    "ml": [
     120,
-    210,
-    230
+    215,
+    235
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     105
+     110
     ],
     [
      "+0.5",
-     -165
+     -160
     ]
    ]
   }
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
-    200,
-    180
+    150,
+    205,
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -89,11 +89,11 @@
    "spread": [
     [
      "-0.5",
-     140
+     135
     ],
     [
      "+0.5",
-     -215
+     -210
     ]
    ]
   }
@@ -116,13 +116,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -190,
-    130
+    -185,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -165
     ],
     [
      "+0.5",
@@ -259,8 +259,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    -105
+    -145,
+    100
    ],
    "spread": [
     [
@@ -286,14 +286,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    210,
-    195
+    140,
+    205,
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -155
+    120,
+    -175
    ],
    "spread": [
     [
@@ -324,6 +324,50 @@
   "estadio": "Estadi de la FAF d'Encamp",
   "local_espn": "FC Andorra",
   "visita_espn": "Leganés",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882299",
+  "utc": "2026-11-21T13:00Z",
+  "estadio": "Estadi Municipal de la Nova Creu Alta",
+  "local_espn": "CD Sabadell",
+  "visita_espn": "Granada",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883108",
+  "utc": "2026-11-21T15:15Z",
+  "estadio": "Instalaciones de Zubieta",
+  "local_espn": "Real Sociedad II",
+  "visita_espn": "Cádiz",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882301",
+  "utc": "2026-11-21T17:30Z",
+  "estadio": "Nou Estadi Castalia",
+  "local_espn": "Castellón",
+  "visita_espn": "Eldense",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883107",
+  "utc": "2026-11-21T20:00Z",
+  "estadio": "Estadio Heliodoro Rodríguez López",
+  "local_espn": "Tenerife",
+  "visita_espn": "Mallorca",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
