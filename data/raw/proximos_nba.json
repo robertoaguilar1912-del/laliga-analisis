@@ -38,7 +38,7 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Boston Celtics",
   "revisado": false,
@@ -55,30 +55,7 @@
     "3-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    105,
-    -124
-   ],
-   "ml_abre": [
-    -109,
-    -109
-   ],
-   "spread": [
-    1.5,
-    -106,
-    -1.5,
-    -114
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    216.5,
-    -113,
-    -107
-   ],
-   "total_abre": 214.5
-  }
+  "momios": null
  },
  {
   "id": "401909962",
@@ -93,7 +70,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Phoenix Suns",
   "visita_espn": "LA Clippers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
@@ -110,8 +87,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -173,
-    145
+    -179,
+    150
    ],
    "ml_abre": [
     -168,
@@ -125,9 +102,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    223.5,
-    -112,
-    -108
+    224.5,
+    -107,
+    -113
    ],
    "total_abre": 225.5
   }
@@ -145,7 +122,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Utah Jazz",
   "visita_espn": "Miami Heat",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -162,8 +139,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    282,
-    -352
+    276,
+    -344
    ],
    "ml_abre": [
     285,
@@ -171,15 +148,15 @@
    ],
    "spread": [
     8.5,
-    -105,
+    -116,
     -8.5,
-    -116
+    -105
    ],
    "spread_abre": 10.5,
    "total": [
     227.5,
-    -110,
-    -110
+    -113,
+    -107
    ],
    "total_abre": 227.5
   }
@@ -197,7 +174,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Orlando Magic",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -282,8 +259,8 @@
    "spread_abre": 1.5,
    "total": [
     226.5,
-    -110,
-    -110
+    -106,
+    -115
    ],
    "total_abre": 226.5
   }
@@ -642,18 +619,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -189,
-    158
+    -197,
+    165
    ],
    "ml_abre": [
     -189,
     158
    ],
    "spread": [
-    -4.5,
-    -110,
-    4.5,
-    -110
+    -5.5,
+    -105,
+    5.5,
+    -115
    ],
    "spread_abre": -5.5,
    "total": [
