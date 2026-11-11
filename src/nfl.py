@@ -160,6 +160,12 @@ CALIB = {'Moneyline': 1.214, 'Spread': 0.241, 'Total': 0.0}
 # (modelo con bajas − línea), 2013-26: k = 0.183 en spread y negativo en total (queda en 0). La calibración logit solo valía
 # en la línea de la casa.
 MEZCLA = {'Spread': 0.18, 'Total': 0.0, 'Moneyline': 0.25}      # con las bajas (antes, sin ellas: 1.246, 0.027, 0)
+# Ganador: curva más angosta que la del spread (11 nov 2026, igual que en la NBA). Con SIGMA_M (13.37) la curva centrada en la
+# línea de la casa daba de más a los no favoritos (casa 28.5% -> curva 29.3%, real 24.0%; casa 85% -> curva 83.1%, real 86.1%).
+# σ por log loss del ganador con la curva en la línea: 2013-17 mejor 12.0 (0.6111; con 13.37: 0.6124); 2018-21 12.0-12.5;
+# 2022-26 11-12 (0.6079; con 13.37: 0.6094; el moneyline de la casa 0.6087). PICK de ganador EV ≥ 5% al cierre, 2018-26
+# (scratchpad nba/nfl_ml_bt.py): 372 PICK +7.5% (2018-21 +16.8%, 2022-26 −6.9%) -> 159 PICK +11.0% (+15.2%, +5.3%).
+SIGMA_ML = 12.0
 # Ganador (desde el 1 nov 2026): antes salía solo del modelo (CALIB 1.214) aunque el spread ya usaba la línea movida hacia el
 # modelo; así, el 1 nov el modelo daba 51% a los Vikings en Detroit (línea Lions −3, mercado 40%) y lo marcaba PICK con EV +23%.
 # Ahora sale de la misma curva que el spread: centro de la línea de la casa + k·(modelo − ese centro). k elegido con 2013-17
@@ -598,8 +604,11 @@ def analizar():
         if sp[0] is not None:          # centro de la casa: su probabilidad sin margen en su línea
             qh = 0.5 if None in sp else (1 / am_to_dec(sp[1])) / (1 / am_to_dec(sp[1]) + 1 / am_to_dec(sp[3]))
             cm = centro_mercado(modelo.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
-        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline'])
-            kml, pml = modelo.dist_margen(cm + MEZCLA['Moneyline'] * (m - cm))
+        if cm is not None:             # ganador: la línea de la casa movida hacia el modelo (MEZCLA['Moneyline']), curva SIGMA_ML
+            mml = ModeloNFL(sigma_m=SIGMA_ML, sigma_t=modelo.sigma_t)
+            mml.clave = modelo.clave
+            cml = centro_mercado(mml.dist_margen, -sp[0], qh, -sp[0] - 20, -sp[0] + 20)
+            kml, pml = mml.dist_margen(cml + MEZCLA['Moneyline'] * (m - cml))
             pH, pT, pA = prob_linea(kml, pml, 0)
         else:
             kml = pml = None

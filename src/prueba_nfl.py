@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from config import DATOS, PICK_P_MIN
-from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB, BAJAS, FALTAS, MEZCLA
+from nfl import cargar_juegos, ModeloNFL, pesos_clave, prob_linea, am_to_dec, VENTANA_DIAS, CALIB, BAJAS, FALTAS, MEZCLA, SIGMA_ML
 from picks import calibrar, centro_mercado
 
 warnings.filterwarnings('ignore')
@@ -84,7 +84,9 @@ def apuestas(d, sm, st, clave, umbral=0.0):
                     ('Total', 'menos', u, pu, o, am_to_dec(r.under_odds), r.total_line - r.total)]
         if not np.isnan(r.home_moneyline) and not np.isnan(r.away_moneyline):
             if not np.isnan(r.spread_line) and not np.isnan(r.home_spread_odds) and not np.isnan(r.away_spread_odds):
-                kml, pml = mod.dist_margen(cm + MEZCLA['Moneyline'] * (r.pm - cm))      # como en nfl.py desde el 1 nov 2026
+                mml = ModeloNFL(sigma_m=SIGMA_ML, sigma_t=st); mml.clave = clave              # como en nfl.py (curva SIGMA_ML, 11 nov 2026)
+                cml = centro_mercado(mml.dist_margen, r.spread_line, qh, r.spread_line - 20, r.spread_line + 20)
+                kml, pml = mml.dist_margen(cml + MEZCLA['Moneyline'] * (r.pm - cml))
                 h, e, a = prob_linea(kml, pml, 0)
             else:
                 h, e, a = calibrar(*prob_linea(km, pm, 0), CALIB['Moneyline'])
