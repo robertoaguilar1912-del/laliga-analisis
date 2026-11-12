@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909966",
-  "utc": "2026-11-12T00:00Z",
-  "fecha": "2026-11-11",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "IND",
-  "visita": "WSH",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Indiana Pacers",
-  "visita_espn": "Washington Wizards",
-  "revisado": false,
-  "estadio": "Gainbridge Fieldhouse",
-  "records": {
-   "home": [
-    "3-8",
-    "0-4",
-    "3-3"
-   ],
-   "away": [
-    "4-7",
-    "2-2",
-    "2-5"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909967",
   "utc": "2026-11-12T00:00Z",
   "fecha": "2026-11-11",
@@ -96,7 +67,7 @@
   "visita": "SA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Chicago Bulls",
   "visita_espn": "San Antonio Spurs",
   "revisado": false,
@@ -125,7 +96,7 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "Denver Nuggets",
   "revisado": false,
@@ -154,7 +125,7 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Los Angeles Lakers",
   "revisado": false,
@@ -212,7 +183,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -229,30 +200,7 @@
     "3-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    150,
-    -179
-   ],
-   "ml_abre": [
-    140,
-    -167
-   ],
-   "spread": [
-    4.5,
-    -115,
-    -4.5,
-    -105
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    215.5,
-    -110,
-    -110
-   ],
-   "total_abre": 218.5
-  }
+  "momios": null
  },
  {
   "id": "401909974",
@@ -282,7 +230,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -249,
     205
@@ -334,7 +282,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -147,
     124
@@ -404,9 +352,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "7-3",
@@ -444,7 +392,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -196,
     164
@@ -496,7 +444,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -250,
     206
@@ -537,8 +485,8 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "3-8",
-    "0-4",
+    "4-8",
+    "1-4",
     "3-3"
    ],
    "away": [
@@ -948,8 +896,8 @@
     "5-1"
    ],
    "away": [
-    "3-8",
-    "0-4",
+    "4-8",
+    "1-4",
     "3-3"
    ]
   },
@@ -1117,9 +1065,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "8-3",
@@ -1262,9 +1210,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "7-3",
@@ -1610,8 +1558,8 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "3-8",
-    "0-4",
+    "4-8",
+    "1-4",
     "3-3"
    ],
    "away": [
@@ -1731,9 +1679,9 @@
     "3-3"
    ],
    "away": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -2108,8 +2056,8 @@
     "1-4"
    ],
    "away": [
-    "3-8",
-    "0-4",
+    "4-8",
+    "1-4",
     "3-3"
    ]
   },
@@ -2166,9 +2114,9 @@
     "1-5"
    ],
    "away": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -2538,9 +2486,9 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-7",
+    "4-8",
     "2-2",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "3-7",
@@ -2630,8 +2578,8 @@
     "2-2"
    ],
    "away": [
-    "3-8",
-    "0-4",
+    "4-8",
+    "1-4",
     "3-3"
    ]
   },
