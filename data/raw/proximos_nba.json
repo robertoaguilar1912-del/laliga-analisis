@@ -1,63 +1,5 @@
 [
  {
-  "id": "401909969",
-  "utc": "2026-11-12T01:00Z",
-  "fecha": "2026-11-11",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "SA",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "San Antonio Spurs",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "1-8",
-    "0-3",
-    "1-5"
-   ],
-   "away": [
-    "9-2",
-    "4-2",
-    "5-0"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909970",
-  "utc": "2026-11-12T01:00Z",
-  "fecha": "2026-11-11",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MEM",
-  "visita": "DEN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Memphis Grizzlies",
-  "visita_espn": "Denver Nuggets",
-  "revisado": false,
-  "estadio": "FedExForum",
-  "records": {
-   "home": [
-    "7-3",
-    "2-3",
-    "5-0"
-   ],
-   "away": [
-    "5-4",
-    "2-2",
-    "2-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909971",
   "utc": "2026-11-12T01:00Z",
   "fecha": "2026-11-11",
@@ -125,7 +67,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -154,7 +96,7 @@
   "visita": "GS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Golden State Warriors",
   "revisado": false,
@@ -171,30 +113,7 @@
     "2-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -249,
-    205
-   ],
-   "ml_abre": [
-    -189,
-    158
-   ],
-   "spread": [
-    -6.5,
-    -110,
-    6.5,
-    -110
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    219.5,
-    -112,
-    -108
-   ],
-   "total_abre": 222.5
-  }
+  "momios": null
  },
  {
   "id": "401909975",
@@ -206,10 +125,10 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Portland Trail Blazers",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Moda Center",
   "records": {
    "home": [
@@ -223,30 +142,7 @@
     "3-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -147,
-    124
-   ],
-   "ml_abre": [
-    111,
-    -132
-   ],
-   "spread": [
-    -2.5,
-    -115,
-    2.5,
-    -106
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    224.5,
-    -108,
-    -112
-   ],
-   "total_abre": 224.5
-  }
+  "momios": null
  },
  {
   "id": "401909976",
@@ -411,8 +307,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -250,
-    206
+    -245,
+    202
    ],
    "ml_abre": [
     -250,
@@ -455,8 +351,8 @@
     "3-3"
    ],
    "away": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ]
   },
@@ -537,8 +433,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ],
    "away": [
@@ -624,9 +520,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "4-2",
-    "5-0"
+    "6-0"
    ],
    "away": [
     "8-3",
@@ -716,9 +612,9 @@
     "1-4"
    ],
    "away": [
-    "5-4",
+    "6-4",
     "2-2",
-    "2-2"
+    "3-2"
    ]
   },
   "momios": null
@@ -832,8 +728,8 @@
     "4-2"
    ],
    "away": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ]
   },
@@ -948,9 +844,9 @@
     "0-5"
    ],
    "away": [
-    "9-2",
+    "10-2",
     "4-2",
-    "5-0"
+    "6-0"
    ]
   },
   "momios": null
@@ -1006,8 +902,8 @@
     "3-3"
    ],
    "away": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ]
   },
@@ -1151,8 +1047,8 @@
     "2-4"
    ],
    "away": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ]
   },
@@ -1320,9 +1216,9 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "5-4",
+    "6-4",
     "2-2",
-    "2-2"
+    "3-2"
    ],
    "away": [
     "4-6",
@@ -1354,8 +1250,8 @@
     "3-3"
    ],
    "away": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ]
   },
@@ -1407,9 +1303,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "4-2",
-    "5-0"
+    "6-0"
    ],
    "away": [
     "7-3",
@@ -1615,8 +1511,8 @@
     "1-5"
    ],
    "away": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ]
   },
@@ -1726,9 +1622,9 @@
   "estadio": "Ball Arena",
   "records": {
    "home": [
-    "5-4",
+    "6-4",
     "2-2",
-    "2-2"
+    "3-2"
    ],
    "away": [
     "10-2",
@@ -1905,8 +1801,8 @@
     "4-2"
    ],
    "away": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ]
   },
@@ -1929,9 +1825,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "4-2",
-    "5-0"
+    "6-0"
    ],
    "away": [
     "2-8",
@@ -2074,8 +1970,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ],
    "away": [
@@ -2248,8 +2144,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ],
    "away": [
@@ -2335,9 +2231,9 @@
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "4-2",
-    "5-0"
+    "6-0"
    ],
    "away": [
     "4-7",
@@ -2480,8 +2376,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "1-8",
-    "0-3",
+    "1-9",
+    "0-4",
     "1-5"
    ],
    "away": [
@@ -2538,8 +2434,8 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "6-4",
-    "4-2",
+    "6-5",
+    "4-3",
     "2-2"
    ],
    "away": [
