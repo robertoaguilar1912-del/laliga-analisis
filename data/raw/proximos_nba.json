@@ -1,63 +1,5 @@
 [
  {
-  "id": "401909967",
-  "utc": "2026-11-12T00:00Z",
-  "fecha": "2026-11-11",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "NY",
-  "visita": "CLE",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "New York Knicks",
-  "visita_espn": "Cleveland Cavaliers",
-  "revisado": false,
-  "estadio": "Madison Square Garden",
-  "records": {
-   "home": [
-    "6-4",
-    "4-2",
-    "2-2"
-   ],
-   "away": [
-    "5-6",
-    "4-2",
-    "1-4"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909968",
-  "utc": "2026-11-12T00:00Z",
-  "fecha": "2026-11-11",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "TOR",
-  "visita": "BOS",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Toronto Raptors",
-  "visita_espn": "Boston Celtics",
-  "revisado": false,
-  "estadio": "Scotiabank Arena",
-  "records": {
-   "home": [
-    "5-5",
-    "2-2",
-    "3-3"
-   ],
-   "away": [
-    "9-2",
-    "5-0",
-    "4-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909969",
   "utc": "2026-11-12T01:00Z",
   "fecha": "2026-11-11",
@@ -183,7 +125,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Utah Jazz",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -215,7 +157,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Houston Rockets",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -230,7 +172,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -249,
     205
@@ -282,7 +224,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -147,
     124
@@ -328,8 +270,8 @@
     "5-1"
    ],
    "away": [
-    "5-5",
-    "2-2",
+    "5-6",
+    "2-3",
     "3-3"
    ]
   },
@@ -362,7 +304,30 @@
     "4-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    293,
+    -369
+   ],
+   "ml_abre": [
+    293,
+    -369
+   ],
+   "spread": [
+    9.5,
+    -114,
+    -9.5,
+    -106
+   ],
+   "spread_abre": 9.5,
+   "total": [
+    220.5,
+    -110,
+    -110
+   ],
+   "total_abre": 220.5
+  }
  },
  {
   "id": "401909978",
@@ -392,7 +357,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -196,
     164
@@ -444,7 +409,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -250,
     206
@@ -548,9 +513,9 @@
     "4-3"
    ],
    "away": [
-    "5-6",
+    "6-6",
     "4-2",
-    "1-4"
+    "2-4"
    ]
   },
   "momios": null
@@ -775,9 +740,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "5-6",
+    "6-6",
     "4-2",
-    "1-4"
+    "2-4"
    ],
    "away": [
     "7-4",
@@ -1007,9 +972,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "5-0",
-    "4-2"
+    "5-2"
    ],
    "away": [
     "7-4",
@@ -1036,8 +1001,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-5",
-    "2-2",
+    "5-6",
+    "2-3",
     "3-3"
    ],
    "away": [
@@ -1152,9 +1117,9 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "9-2",
+    "10-2",
     "5-0",
-    "4-2"
+    "5-2"
    ],
    "away": [
     "3-7",
@@ -1181,9 +1146,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "5-6",
+    "6-6",
     "4-2",
-    "1-4"
+    "2-4"
    ],
    "away": [
     "1-8",
@@ -1384,8 +1349,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-5",
-    "2-2",
+    "5-6",
+    "2-3",
     "3-3"
    ],
    "away": [
@@ -1529,9 +1494,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "5-6",
+    "6-6",
     "4-2",
-    "1-4"
+    "2-4"
    ],
    "away": [
     "7-3",
@@ -1674,8 +1639,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-5",
-    "2-2",
+    "5-6",
+    "2-3",
     "3-3"
    ],
    "away": [
@@ -1766,9 +1731,9 @@
     "2-2"
    ],
    "away": [
-    "9-2",
+    "10-2",
     "5-0",
-    "4-2"
+    "5-2"
    ]
   },
   "momios": null
@@ -2051,9 +2016,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "5-6",
+    "6-6",
     "4-2",
-    "1-4"
+    "2-4"
    ],
    "away": [
     "4-8",
@@ -2085,8 +2050,8 @@
     "4-1"
    ],
    "away": [
-    "5-5",
-    "2-2",
+    "5-6",
+    "2-3",
     "3-3"
    ]
   },
@@ -2404,9 +2369,9 @@
     "1-4"
    ],
    "away": [
-    "9-2",
+    "10-2",
     "5-0",
-    "4-2"
+    "5-2"
    ]
   },
   "momios": null
@@ -2607,9 +2572,9 @@
     "2-2"
    ],
    "away": [
-    "9-2",
+    "10-2",
     "5-0",
-    "4-2"
+    "5-2"
    ]
   },
   "momios": null
