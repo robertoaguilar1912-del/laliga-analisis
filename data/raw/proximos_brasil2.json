@@ -5,7 +5,7 @@
   "estadio": "Estádio Italo Mário Limongi",
   "local_espn": "Ponte Preta",
   "visita_espn": "Operário PR",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
@@ -154,15 +154,31 @@
   "estadio": "Estádio Primeiro de Maio",
   "local_espn": "São Bernardo",
   "visita_espn": "Athletic",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    130,
+    235,
+    210
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
   },
   "alineaciones": {
    "São Bernardo": [
