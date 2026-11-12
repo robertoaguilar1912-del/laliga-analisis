@@ -9,11 +9,27 @@
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -1400,
+    850,
+    1400
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "-2.5",
+     -160
+    ],
+    [
+     "+2.5",
+     105
+    ]
+   ]
   }
  },
  {
@@ -212,6 +228,56 @@
      -140
     ]
    ]
+  }
+ },
+ {
+  "id": "401884733",
+  "utc": "2026-11-22T14:30Z",
+  "estadio": "WWK Arena",
+  "local_espn": "FC Augsburg",
+  "visita_espn": "Mainz",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    260,
+    130
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -185
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884730",
+  "utc": "2026-11-22T16:30Z",
+  "estadio": "Weserstadion",
+  "local_espn": "Werder Bremen",
+  "visita_espn": "Hamburg SV",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   }
  }
 ]

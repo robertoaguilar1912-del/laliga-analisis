@@ -149,8 +149,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    115
+    -150,
+    110
    ],
    "spread": [
     [
@@ -226,6 +226,72 @@
     [
      "-0.5",
      -195
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879234",
+  "utc": "2026-11-22T14:00Z",
+  "estadio": "The MKM Stadium",
+  "local_espn": "Hull City",
+  "visita_espn": "Brighton & Hove Albion",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    475,
+    330,
+    -200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    115
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -200
+    ],
+    [
+     "-1.5",
+     130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878755",
+  "utc": "2026-11-22T16:30Z",
+  "estadio": "Anfield",
+  "local_espn": "Liverpool",
+  "visita_espn": "Manchester United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -145,
+    310,
+    320
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -160
+    ],
+    [
+     "+0.5",
+     105
     ]
    ]
   }

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    275,
-    140
+    140,
+    280,
+    145
    ],
    "ou_linea": 3.5,
    "ou": [
     -145,
-    105
+    110
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -195
+     -190
     ]
    ]
   }
@@ -45,13 +45,13 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    260,
-    230
+    265,
+    235
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -180
+    130,
+    -175
    ],
    "spread": [
     [
@@ -75,11 +75,27 @@
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    200,
+    250,
+    105
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -170
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -150
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
   }
  },
  {
@@ -92,11 +108,27 @@
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    280,
+    230
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
   }
  },
  {
@@ -109,11 +141,66 @@
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -170,
+    340,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -180
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401933731",
+  "utc": "2026-11-22T21:00Z",
+  "estadio": "GEODIS Park",
+  "local_espn": "Nashville SC",
+  "visita_espn": "TBD Away",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "eastern-conference-playoffs---round-one",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401933730",
+  "utc": "2026-11-22T23:30Z",
+  "estadio": "SeatGeek Stadium",
+  "local_espn": "Chicago Fire FC",
+  "visita_espn": "Charlotte FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "eastern-conference-playoffs---round-one",
+  "neutral": false,
+  "momios": {
    "casa": "Bet 365",
    "ml": null,
    "ou_linea": null,
    "ou": null,
    "spread": []
   }
+ },
+ {
+  "id": "401933729",
+  "utc": "2026-11-23T01:30Z",
+  "estadio": "BC Place",
+  "local_espn": "Vancouver Whitecaps",
+  "visita_espn": "TBD Away",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "western-conference-playoffs---round-one",
+  "neutral": false,
+  "momios": null
  }
 ]

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
-    265,
-    -105
+    240,
+    270,
+    100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
-    125
+    -180,
+    130
    ],
    "spread": [
     [
      "+0.5",
-     -135
+     -130
     ],
     [
      "-0.5",
-     -115
+     -110
     ]
    ]
   }
@@ -104,6 +104,28 @@
   "estadio": "Estadio Universitario",
   "local_espn": "Tigres UANL",
   "visita_espn": "América",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877047",
+  "utc": "2026-11-22T23:07Z",
+  "estadio": "Estadio Akron",
+  "local_espn": "Guadalajara",
+  "visita_espn": "Cruz Azul",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "torneo-apertura",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401877046",
+  "utc": "2026-11-23T01:00Z",
+  "estadio": "Estadio Corregidora",
+  "local_espn": "Querétaro",
+  "visita_espn": "Necaxa",
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    215,
-    235
+    130,
+    210,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -160
+    120,
+    -165
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -165
+     -170
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
+    185,
     260,
-    130
+    125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -150,
     105
    ],
    "spread": [
     [
      "+0.5",
-     -175
+     -165
     ],
     [
      "-0.5",
-     120
+     115
     ]
    ]
   }
@@ -68,7 +68,7 @@
  {
   "id": "401883134",
   "utc": "2026-11-14T15:15Z",
-  "estadio": "Estadio Zubieta XXI",
+  "estadio": "Instalaciones de Zubieta",
   "local_espn": "Real Sociedad II",
   "visita_espn": "Sporting Gijón",
   "estado": "STATUS_SCHEDULED",
@@ -84,7 +84,7 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -125
+    -130
    ],
    "spread": [
     [
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -165,
+    -160,
     320,
-    380
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
+    -180,
     130
    ],
    "spread": [
     [
      "-0.5",
-     -180
+     -175
     ],
     [
      "+0.5",
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    300,
-    265
+    -110,
+    290,
+    250
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -180
+    -180,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     -130
+     -120
     ],
     [
      "+0.5",
-     -110
+     -120
     ]
    ]
   }
@@ -178,21 +178,21 @@
    "ml": [
     135,
     225,
-    190
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -135
+    -105,
+    -130
    ],
    "spread": [
     [
      "-0.5",
-     120
+     125
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
@@ -221,18 +221,18 @@
    "casa": "DraftKings",
    "ml": [
     -130,
-    255,
-    330
+    260,
+    340
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    -115
+    -125,
+    -110
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -135
     ],
     [
      "+0.5",
@@ -253,19 +253,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    290,
+    -160,
+    300,
     400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -135,
     100
    ],
    "spread": [
     [
      "-0.5",
-     -185
+     -175
     ],
     [
      "+0.5",
@@ -288,12 +288,12 @@
    "ml": [
     140,
     205,
-    200
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
     130,
-    -190
+    -180
    ],
    "spread": [
     [
@@ -302,7 +302,7 @@
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
@@ -343,7 +343,7 @@
  {
   "id": "401883108",
   "utc": "2026-11-21T15:15Z",
-  "estadio": "Estadio Zubieta XXI",
+  "estadio": "Instalaciones de Zubieta",
   "local_espn": "Real Sociedad II",
   "visita_espn": "Cádiz",
   "estado": "STATUS_SCHEDULED",
@@ -368,6 +368,61 @@
   "estadio": "Estadio Heliodoro Rodríguez López",
   "local_espn": "Tenerife",
   "visita_espn": "Mallorca",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882300",
+  "utc": "2026-11-22T13:00Z",
+  "estadio": "Estadio Municipal Nuevo El Arcángel",
+  "local_espn": "Córdoba",
+  "visita_espn": "Real Oviedo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882298",
+  "utc": "2026-11-22T15:15Z",
+  "estadio": "Estadio El Molinón-Enrique Castro \"Quini\"",
+  "local_espn": "Sporting Gijón",
+  "visita_espn": "Las Palmas",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883109",
+  "utc": "2026-11-22T17:30Z",
+  "estadio": "Estadi Montilivi",
+  "local_espn": "Girona",
+  "visita_espn": "Eibar",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883304",
+  "utc": "2026-11-22T17:30Z",
+  "estadio": "Balaidos",
+  "local_espn": "RC Celta Fortuna",
+  "visita_espn": "Real Valladolid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883111",
+  "utc": "2026-11-22T20:00Z",
+  "estadio": "Estadio Municipal de El Plantío",
+  "local_espn": "Burgos",
+  "visita_espn": "Albacete",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

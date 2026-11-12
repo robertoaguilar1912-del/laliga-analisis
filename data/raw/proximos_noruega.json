@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    215,
+    350,
+    -115
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -120
+    ],
+    [
+     "-0.5",
+     -130
+    ]
+   ]
+  }
  },
  {
   "id": "401843483",
@@ -19,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    250,
+    295,
+    -120
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -115
+    ],
+    [
+     "-0.5",
+     -130
+    ]
+   ]
+  }
  },
  {
   "id": "401843489",
@@ -30,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    245,
+    165
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
  },
  {
   "id": "401843485",
@@ -41,6 +107,160 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -195,
+    380,
+    380
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -120,
+    -120
+   ],
+   "spread": [
+    [
+     "-1.5",
+     115
+    ],
+    [
+     "+1.5",
+     -180
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401843490",
+  "utc": "2026-11-22T16:00Z",
+  "estadio": "Color Line Stadium",
+  "local_espn": "Aalesund",
+  "visita_espn": "Rosenborg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    320,
+    340,
+    -160
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    -110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     115
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401843488",
+  "utc": "2026-11-22T16:00Z",
+  "estadio": "KFUM Arena",
+  "local_espn": "KFUM Oslo",
+  "visita_espn": "SK Brann",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    215,
+    290,
+    -105
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -135
+    ],
+    [
+     "-0.5",
+     -115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401843487",
+  "utc": "2026-11-22T16:00Z",
+  "estadio": "Nordmore Stadion",
+  "local_espn": "Kristiansund BK",
+  "visita_espn": "Sandefjord",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    160,
+    265,
+    140
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -190
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401843484",
+  "utc": "2026-11-22T18:15Z",
+  "estadio": "Sarpsborg Stadion",
+  "local_espn": "Sarpsborg FK",
+  "visita_espn": "Lillestrom",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    115,
+    290,
+    175
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -110,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
+  }
  }
 ]

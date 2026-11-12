@@ -58,8 +58,8 @@
    "id": "5279130",
    "nombre": "Nolan Traore",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Calf",
    "regreso": "2026-11-14",
    "nota": "Traore (calf) has been ruled out for Wednesday's game against the Pelicans, Ian Begley of SportsNet New York reports."
@@ -68,8 +68,8 @@
    "id": "5101761",
    "nombre": "Mikel Brown Jr.",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Illness",
    "regreso": "2026-11-14",
    "nota": "Brown has been ruled out for Wednesday's game against the Pelicans due to an illness, Sharif Phillips-Keaton of USA Today reports."
@@ -129,20 +129,10 @@
  ],
  "Chicago Bulls": [
   {
-   "id": "5095151",
-   "nombre": "Caleb Wilson",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-12",
-   "tipo": "Hand",
-   "regreso": "2026-11-13",
-   "nota": "Wilson won't return to Wednesday's game against the Spurs due to a right hand injury. He'll finish with 15 points (5-7 FG, 2-2 3Pt, 3-3 FT), five rebounds and one steal in 15 minutes."
-  },
-  {
    "id": "4848625",
    "nombre": "Dailyn Swain",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-12",
    "tipo": "Back",
    "regreso": "2026-11-13",
@@ -152,8 +142,8 @@
    "id": "2595516",
    "nombre": "Norman Powell",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Shoulder",
    "regreso": "2026-11-13",
    "nota": "Powell (shoulder) won't play in Wednesday's game against the Spurs,Joel Lorenzi of The Athletic reports."
@@ -162,11 +152,21 @@
    "id": "5105555",
    "nombre": "Tobe Awaka",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Back",
    "regreso": "2026-11-13",
    "nota": "Awaka (back) has been ruled out for Wednesday's game against the Spurs."
+  },
+  {
+   "id": "5095151",
+   "nombre": "Caleb Wilson",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Hand",
+   "regreso": "2026-11-13",
+   "nota": "Wilson won't return to Wednesday's game against the Spurs due to a right hand injury. He'll finish with 15 points (5-7 FG, 2-2 3Pt, 3-3 FT), five rebounds and one steal in 15 minutes."
   }
  ],
  "Cleveland Cavaliers": [
@@ -272,18 +272,18 @@
    "id": "3975",
    "nombre": "Stephen Curry",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-12",
    "tipo": "Abdomen",
-   "regreso": "2026-11-13",
-   "nota": "Curry won't return to Wednesday's game against the Rockets due to right abdominal soreness, Anthony Slater of ESPN.com reports. He'll finish with three points (1-3 FG, 1-2 3Pt) across six minutes."
+   "regreso": "2026-12-01",
+   "nota": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports."
   },
   {
    "id": "3134903",
    "nombre": "Gary Payton II",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-10",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Knee",
    "regreso": "2026-11-13",
    "nota": "Payton (knee) is out for Wednesday's game against Houston."
@@ -447,6 +447,16 @@
  ],
  "Los Angeles Lakers": [
   {
+   "id": "4397014",
+   "nombre": "Quentin Grimes",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Finger",
+   "regreso": "2026-11-15",
+   "nota": "Grimes (finger) has been ruled out for Wednesday's game against the Bucks."
+  },
+  {
    "id": "4277811",
    "nombre": "Collin Sexton",
    "pos": "G",
@@ -475,19 +485,19 @@
    "tipo": "Ankle",
    "regreso": "2026-11-15",
    "nota": "Doncic finished Wednesday's 123-112 win over the Bucks with 32 points (10-25 FG, 5-12 3Pt, 7-10 FT), five rebounds, five assists and three steals across 32 minutes. He exited to the locker room late in the fourth quarter due to an apparent right ankle injury and did not return, Thuc Nhi Nguyen of the Los Angeles Times reports."
-  },
-  {
-   "id": "4397014",
-   "nombre": "Quentin Grimes",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
-   "tipo": "Finger",
-   "regreso": "2026-11-15",
-   "nota": "Grimes (finger) has been ruled out for Wednesday's game against the Bucks."
   }
  ],
  "Memphis Grizzlies": [
+  {
+   "id": "4593016",
+   "nombre": "Quinten Post",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Head",
+   "regreso": "2026-11-13",
+   "nota": "Post (concussion) has been ruled out for Wednesday's game against the Nuggets."
+  },
   {
    "id": "4431785",
    "nombre": "Scotty Pippen Jr.",
@@ -497,16 +507,6 @@
    "tipo": "Back",
    "regreso": "2026-11-21",
    "nota": "Pippen (back) remains out for Wednesday's game against Denver, Michael Wallace of the Grizzlies' official site reports."
-  },
-  {
-   "id": "4593016",
-   "nombre": "Quinten Post",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-10",
-   "tipo": "Head",
-   "regreso": "2026-11-13",
-   "nota": "Post (concussion) has been ruled out for Wednesday's game against the Nuggets."
   },
   {
    "id": "5105462",
@@ -519,7 +519,39 @@
    "nota": "Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports."
   }
  ],
+ "Miami Heat": [
+  {
+   "id": "4601025",
+   "nombre": "Pelle Larsson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Illness",
+   "regreso": "2026-11-13",
+   "nota": "Larsson closed Tuesday's 115-109 victory over the Jazz with 14 points (4-7 FG, 2-3 3Pt, 4-4 FT), seven rebounds, two assists and one steal across 31 minutes."
+  },
+  {
+   "id": "6475",
+   "nombre": "Klay Thompson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Ankle",
+   "regreso": "2026-11-13",
+   "nota": "Thompson (ankle) didn't practice Thursday, per Ira Winderman of the South Florida Sun Sentinel."
+  }
+ ],
  "Milwaukee Bucks": [
+  {
+   "id": "3133628",
+   "nombre": "Myles Turner",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Rest",
+   "regreso": "2026-11-13",
+   "nota": "Turner has been ruled out for Wednesday's game against the Lakers due to rest."
+  },
   {
    "id": "4591725",
    "nombre": "Ryan Rollins",
@@ -529,16 +561,6 @@
    "tipo": "Head",
    "regreso": "2026-11-13",
    "nota": "Rollins (head) exited to the locker room in the fourth quarter of Wednesday's 123-112 loss to the Lakers and did not return, finishing with eight points (3-10 FG, 2-6 3Pt), seven rebounds, four assists and one steal across 24 minutes."
-  },
-  {
-   "id": "3133628",
-   "nombre": "Myles Turner",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-11",
-   "tipo": "Rest",
-   "regreso": "2026-11-13",
-   "nota": "Turner has been ruled out for Wednesday's game against the Lakers due to rest."
   }
  ],
  "Minnesota Timberwolves": [
@@ -565,21 +587,11 @@
  ],
  "New Orleans Pelicans": [
   {
-   "id": "4397688",
-   "nombre": "Trey Murphy III",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-11",
-   "tipo": "Knee",
-   "regreso": "2026-11-13",
-   "nota": "Murphy (knee) is listed as out for Wednesday's game against the Nets."
-  },
-  {
    "id": "4683634",
    "nombre": "Bennedict Mathurin",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Thumb",
    "regreso": "2026-11-13",
    "nota": "Mathurin has been ruled out for Wednesday's game against the Nets due to a right thumb sprain."
@@ -588,11 +600,21 @@
    "id": "4431675",
    "nombre": "Trendon Watford",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-10",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Ankle",
    "regreso": "2026-11-13",
    "nota": "Watford (ankle) is out for Wednesday's game against the Nets."
+  },
+  {
+   "id": "4397688",
+   "nombre": "Trey Murphy III",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Knee",
+   "regreso": "2026-11-13",
+   "nota": "Murphy (knee) is listed as out for Wednesday's game against the Nets."
   },
   {
    "id": "5061589",
@@ -607,6 +629,16 @@
  ],
  "Oklahoma City Thunder": [
   {
+   "id": "4900671",
+   "nombre": "Ajay Mitchell",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Ankle",
+   "regreso": "2026-11-13",
+   "nota": "Mitchell has been ruled out for Wednesday's game against the Trail Blazers due to a left ankle sprain."
+  },
+  {
    "id": "4432823",
    "nombre": "Jaylin Williams",
    "pos": "F",
@@ -615,16 +647,6 @@
    "tipo": "Back",
    "regreso": "2026-11-15",
    "nota": "Williams (back) has been ruled out for Wednesday's game against Portland and remains out indefinitely."
-  },
-  {
-   "id": "4900671",
-   "nombre": "Ajay Mitchell",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
-   "tipo": "Ankle",
-   "regreso": "2026-11-13",
-   "nota": "Mitchell has been ruled out for Wednesday's game against the Trail Blazers due to a left ankle sprain."
   },
   {
    "id": "5061603",
@@ -672,7 +694,7 @@
    "id": "4702382",
    "nombre": "Tristan da Silva",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-12",
    "tipo": "Calf",
    "regreso": "2026-11-13",
@@ -682,7 +704,7 @@
    "id": "4278572",
    "nombre": "Jamal Cain",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-12",
    "tipo": "Shoulder",
    "regreso": "2026-11-13",
@@ -741,44 +763,44 @@
  ],
  "Philadelphia 76ers": [
   {
-   "id": "5105637",
-   "nombre": "Adem Bona",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-11",
-   "tipo": "Back",
-   "regreso": "2026-11-18",
-   "nota": "Bona (back) is out for Thursday's game against the Raptors, Kyle Neubeck of AllPHLY.com reports."
-  },
-  {
-   "id": "3059318",
-   "nombre": "Joel Embiid",
-   "pos": "C",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-11",
-   "tipo": "Foot",
-   "regreso": "2026-11-12",
-   "nota": "Embiid (foot) is listed as questionable for Thursday's game against Toronto, Adam Aaronson of PhillyVoice.com reports."
-  },
-  {
    "id": "1966",
    "nombre": "LeBron James",
    "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-11",
+   "estado": "Out",
+   "fecha": "2026-11-12",
    "tipo": "Back",
-   "regreso": "2026-11-12",
-   "nota": "James (back) is questionable for Thursday's game against the Raptors, Kyle Neubeck of AllPHLY.com reports."
+   "regreso": "2026-11-15",
+   "nota": "James (back) is out for Thursday's game against Toronto."
   },
   {
    "id": "4870562",
    "nombre": "Dominick Barlow",
    "pos": "F",
    "estado": "Out",
-   "fecha": "2026-11-04",
+   "fecha": "2026-11-12",
    "tipo": "Back",
    "regreso": "2026-11-18",
-   "nota": "Head coach Nick Nurse said Wednesday that Barlow (back) likely needs another 10-12 days before he's cleared to return to the court, Derek Bodner of AllPHLY.com reports."
+   "nota": "Barlow (back) participated in Thursday's shootaround but doesn't have a timeline to return to game action, Ky Carlin of USA Today reports."
+  },
+  {
+   "id": "5105637",
+   "nombre": "Adem Bona",
+   "pos": "C",
+   "estado": "Out",
+   "fecha": "2026-11-12",
+   "tipo": "Back",
+   "regreso": "2026-11-18",
+   "nota": "Bona (back) will be re-evaluated in approximately one week after seeing a specialist, Ky Carlin of USA Today reports."
+  },
+  {
+   "id": "3059318",
+   "nombre": "Joel Embiid",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
+   "tipo": "Foot",
+   "regreso": "2026-11-12",
+   "nota": "Embiid (foot) remains questionable for Thursday's game against the Raptors, but he participated in the team's morning shootaround, Ky Carlin of USA Today reports."
   },
   {
    "id": "4871141",
@@ -808,8 +830,8 @@
    "id": "4706557",
    "nombre": "Chris Youngblood",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Foot",
    "regreso": "2026-11-13",
    "nota": "Youngblood has been ruled out for Wednesday's game against the Thunder."
@@ -882,8 +904,8 @@
    "id": "4395630",
    "nombre": "Devin Vassell",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-11",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-12",
    "tipo": "Groin",
    "regreso": "2026-11-13",
    "nota": "Vassell (adductor) won't play in Wednesday's game against the Bulls, Jeff Garcia of KENS 5 San Antonio reports."
@@ -914,11 +936,21 @@
    "id": "4431684",
    "nombre": "Trayce Jackson-Davis",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-12",
    "tipo": "Illness",
-   "regreso": "2026-11-12",
-   "nota": "Jackson-Davis (illness) has been ruled out for Wednesday's game against the Celtics, Blake Murphy of Sportsnet.ca reports."
+   "regreso": "2026-11-15",
+   "nota": "Jackson-Davis is out for Thursday's game against the 76ers due to an illness."
+  },
+  {
+   "id": "4433134",
+   "nombre": "Scottie Barnes",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-12",
+   "tipo": "Groin",
+   "regreso": "2026-11-15",
+   "nota": "Barnes (groin) is out for Thursday's game against Philadelphia."
   },
   {
    "id": "6450",
@@ -929,16 +961,6 @@
    "tipo": "Knee",
    "regreso": "2026-11-23",
    "nota": "Head coach Darko Rajakovic said Wednesday that Leonard (knee) is doing individual on-court work and is progressing well, Michael Grange of Sportsnet.ca reports."
-  },
-  {
-   "id": "4433134",
-   "nombre": "Scottie Barnes",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-10",
-   "tipo": "Groin",
-   "regreso": "2026-11-12",
-   "nota": "Barnes (groin) is out for Wednesday's game against Boston."
   },
   {
    "id": "4432586",
@@ -952,6 +974,16 @@
   }
  ],
  "Utah Jazz": [
+  {
+   "id": "4433268",
+   "nombre": "Trey Alexander",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-12",
+   "tipo": "Ankle",
+   "regreso": "2026-11-16",
+   "nota": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise."
+  },
   {
    "id": "4066336",
    "nombre": "Lauri Markkanen",
