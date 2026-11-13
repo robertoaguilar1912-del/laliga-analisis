@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
+    145,
     210,
-    225
+    200
    ],
    "ou_linea": 2.5,
    "ou": [
     120,
-    -165
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     115
+     135
     ],
     [
      "+0.5",
-     -170
+     -190
     ]
    ]
   }
@@ -44,19 +44,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    260,
+    190,
+    265,
     125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    105
+    -145,
+    110
    ],
    "spread": [
     [
      "+0.5",
-     -165
+     -160
     ],
     [
      "-0.5",
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    205,
+    155,
+    210,
     190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -130
+    -105,
+    -125
    ],
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -205
+     -200
     ]
    ]
   }
@@ -112,12 +112,12 @@
    "ml": [
     -160,
     320,
-    370
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    130
+    -175,
+    135
    ],
    "spread": [
     [
@@ -126,7 +126,7 @@
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -144,13 +144,13 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    290,
-    250
+    295,
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    125
+    -175,
+    130
    ],
    "spread": [
     [
@@ -206,7 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    265,
+    320
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -140
+    ],
+    [
+     "+0.5",
+     -105
+    ]
+   ]
+  }
  },
  {
   "id": "401883116",
@@ -220,9 +242,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    260,
-    340
+    -125,
+    250,
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -236,7 +258,7 @@
     ],
     [
      "+0.5",
-     -105
+     -110
     ]
    ]
   }
@@ -423,6 +445,17 @@
   "estadio": "Estadio Municipal de El Plantío",
   "local_espn": "Burgos",
   "visita_espn": "Albacete",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401883110",
+  "utc": "2026-11-23T19:30Z",
+  "estadio": "Estadio Alfonso Murube",
+  "local_espn": "Ceuta",
+  "visita_espn": "Almería",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
