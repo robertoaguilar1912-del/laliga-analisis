@@ -11,13 +11,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -360,
-    400,
+    -350,
+    425,
     700
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
+    130,
     -175
    ],
    "spread": [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
-    370,
-    600
+    -295,
+    380,
+    650
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     130
    ],
    "spread": [
     [
      "-1.5",
-     -110
+     -105
     ],
     [
      "+1.5",
-     -140
+     -135
     ]
    ]
   }
@@ -77,14 +77,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    700,
-    400,
-    -370
+    750,
+    425,
+    -360
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -185
+    135,
+    -180
    ],
    "spread": [
     [
@@ -292,6 +292,39 @@
     [
      "-0.5",
      -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875009",
+  "utc": "2026-11-23T19:45Z",
+  "estadio": "U-Power Stadium",
+  "local_espn": "Monza",
+  "visita_espn": "Fiorentina",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    225,
+    255,
+    -110
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -135
+    ],
+    [
+     "-0.5",
+     -110
     ]
    ]
   }

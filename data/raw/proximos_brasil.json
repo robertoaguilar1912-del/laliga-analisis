@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    360,
-    -215
+    550,
+    380,
+    -240
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -180,
     125
    ],
    "spread": [
     [
      "+1.5",
-     -170
+     -155
     ],
     [
      "-1.5",
-     115
+     105
     ]
    ]
   }
@@ -379,6 +379,39 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Vasco da Gama",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841323",
+  "utc": "2026-11-23T22:30Z",
+  "estadio": "Estadio Beira-Rio",
+  "local_espn": "Internacional",
+  "visita_espn": "Vitória",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841326",
+  "utc": "2026-11-23T23:00Z",
+  "estadio": "Joao Havelange Stadium",
+  "local_espn": "Botafogo",
+  "visita_espn": "São Paulo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841320",
+  "utc": "2026-11-24T00:00Z",
+  "estadio": "Estádio Cícero Pompeu de Toledo",
+  "local_espn": "Santos",
+  "visita_espn": "Grêmio",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
