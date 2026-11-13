@@ -1,42 +1,5 @@
 [
  {
-  "id": "401873052",
-  "utc": "2026-11-13T01:15Z",
-  "estadio": "MetLife Stadium",
-  "local_espn": "New York Giants",
-  "visita_espn": "Washington Commanders",
-  "local_abbr": "NYG",
-  "visita_abbr": "WSH",
-  "neutral": false,
-  "estado": "STATUS_SCHEDULED",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -122,
-    102
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    -1.5,
-    -110,
-    1.5,
-    -110
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    40.5,
-    -115,
-    -105
-   ],
-   "total_abre": 47.5
-  }
- },
- {
   "id": "401873053",
   "utc": "2026-11-15T14:30Z",
   "estadio": "FC Bayern Munich Stadium",
@@ -51,8 +14,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    130
+    -148,
+    124
    ],
    "ml_abre": [
     -125,
@@ -66,9 +29,9 @@
    ],
    "spread_abre": -1.5,
    "total": [
-    51.5,
-    100,
-    -120
+    50.5,
+    -102,
+    -118
    ],
    "total_abre": 48.5
   }
@@ -177,9 +140,9 @@
    ],
    "spread_abre": -4.5,
    "total": [
-    41.5,
-    -115,
-    -105
+    42.5,
+    -105,
+    -115
    ],
    "total_abre": 45.5
   }
@@ -273,8 +236,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    110
+    -135,
+    114
    ],
    "ml_abre": [
     -125,
@@ -384,8 +347,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    380,
-    -500
+    370,
+    -485
    ],
    "ml_abre": [
     400,
@@ -899,30 +862,7 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    210,
-    -258
-   ],
-   "ml_abre": [
-    105,
-    -125
-   ],
-   "spread": [
-    6.0,
-    -110,
-    -6.0,
-    -110
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    44.5,
-    -110,
-    -110
-   ],
-   "total_abre": 46.5
-  }
+  "momios": null
  },
  {
   "id": "401873077",
@@ -973,29 +913,6 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    170,
-    -205
-   ],
-   "ml_abre": [
-    105,
-    -125
-   ],
-   "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
-   ],
-   "spread_abre": 1.5,
-   "total": [
-    51.5,
-    -110,
-    -110
-   ],
-   "total_abre": 52.5
-  }
+  "momios": null
  }
 ]
