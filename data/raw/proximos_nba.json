@@ -67,7 +67,7 @@
   "visita": "OKC",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "LA Clippers",
   "visita_espn": "Oklahoma City Thunder",
   "revisado": false,
@@ -113,7 +113,30 @@
     "3-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    417,
+    -556
+   ],
+   "ml_abre": [
+    417,
+    -556
+   ],
+   "spread": [
+    10.5,
+    -105,
+    -10.5,
+    -115
+   ],
+   "spread_abre": 10.5,
+   "total": [
+    234.5,
+    -110,
+    -110
+   ],
+   "total_abre": 234.5
+  }
  },
  {
   "id": "401909981",
@@ -172,7 +195,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     152,
     -181
