@@ -7,7 +7,8 @@ Media de cada estadística = minutos esperados × producción por minuto × ajus
 negativa da la probabilidad de pasar la línea. El modelo solo es peor que el mercado, pero mezclado con el precio de la casa
 (q = sigmoide(a·logit(modelo) + b·logit(casa sin margen) + c), ajustada en 2022-23) le ganó a la línea de APERTURA en todas
 las temporadas en rebotes y asistencias: 2023-24 a hoy, rebotes 1,740 apuestas +15.5% ± 2.3%, asistencias 441 +21.8%,
-R+A 1,128 +7.7%; puntos −5%. Contra el cierre la ventaja casi desaparece: hay que apostar temprano. PICK solo en CON_PICK.
+R+A 1,128 +7.7%; puntos −5%. Contra el cierre la ventaja casi desaparece: hay que apostar temprano. PICK solo en CON_PICK
+(14 nov: también P+R y PRA, que ganaron en 2025-26 y 2026-27; puntos con MEZCLA_FIJA).
 """
 import json
 import sys
@@ -32,7 +33,10 @@ TIPOS = {'Total Points': 'pts', 'Total Rebounds': 'reb', 'Total Assists': 'ast',
          'Total Assists and Rebounds': 'ra', 'Total Rebounds and Assists': 'ra'}
 NOMBRES = {'pts': 'Puntos', 'reb': 'Rebotes', 'ast': 'Asistencias', 'tres': 'Triples', 'pra': 'Pts + Reb + Ast',
            'pr': 'Pts + Reb', 'pa': 'Pts + Ast', 'ra': 'Reb + Ast'}
-CON_PICK = ('reb', 'ast', 'ra')          # los que ganaron fuera de la temporada de afinar
+CON_PICK = ('reb', 'ast', 'ra', 'pr', 'pra')   # los que ganaron fuera de la temporada de afinar (P+R y PRA desde el 14 nov:
+                                              # 2025-26 y 2026-27, con la mezcla ajustada en 2024-25)
+MEZCLA_FIJA = ('pts',)   # puntos: peso de la casa fijo en 1 (solo modelo + constante). Con el peso libre (0.53 en 2022-23) la
+                         # mezcla quedaba peor que la casa fuera de esa temporada (+24 ± 4 diezmilésimas); fijo, −3 ± 2
 EV_PICK = 0.05
 MOMIOS_NORMALES = (1.5, 2.6)             # línea principal "normal": los dos lados entre 1.50 y 2.60
 CASA_PRUEBA = {2023: '40', 2024: '40', 2025: '58', 2026: '58', 2027: '100'}   # DraftKings, ESPN BET
@@ -174,10 +178,15 @@ def _ll(p, y):
     return -(y * np.log(p) + (1 - y) * np.log(1 - p))
 
 
-def _ajustar_mezcla(z):
+def _ajustar_mezcla(z, fija=False):
+    """(a, b, c) de la mezcla; con fija=True, b (el peso de la casa) queda en 1."""
     X = np.c_[lg(z.p), lg(z.p_casa), np.ones(len(z))]
     y = z.sale.to_numpy()
     f = lambda w: -np.mean(y * np.log(np.clip(sg(X @ w), 1e-6, 1)) + (1 - y) * np.log(np.clip(1 - sg(X @ w), 1e-6, 1)))
+    if fija:
+        w = minimize(lambda v: f(np.array([v[0], 1.0, v[1]])), np.array([0.0, 0.0]), method='Nelder-Mead',
+                     options={'xatol': 1e-4, 'fatol': 1e-7}).x
+        return np.array([w[0], 1.0, w[1]])
     return minimize(f, np.array([0.0, 1.0, 0.0]), method='Nelder-Mead', options={'xatol': 1e-4, 'fatol': 1e-7}).x
 
 
@@ -202,14 +211,13 @@ def prueba():
     m = m[m.y.notna() & (m.y != m.linea_abre)].drop(columns=[f'mu_{s}' for s in STATS] + STATS)
     m['sale'] = (m.y > m.linea_abre).astype(float)
     m['p_casa'], m['mo'], m['mou'] = m.p_o_abre, m.momio_abre_o, m.momio_abre_u
-    r, W = {}, {}
+    r, W, afina = {}, {}, {}
     for s in STATS:
-        base = m[(m.stat == s) & (m.temporada == AFINAR)]
-        if len(base) < 2000:
-            base = m[(m.stat == s) & (m.temporada == 2025)]
+        afina[s] = AFINAR if ((m.stat == s) & (m.temporada == AFINAR)).sum() >= 2000 else 2025   # combinados: desde 2024-25
+        base = m[(m.stat == s) & (m.temporada == afina[s])]
         r[s] = _r(base.y, base.mu)
         base = base.assign(p=p_mas(base.mu, r[s], base.linea_abre))
-        W[s] = _ajustar_mezcla(base).tolist()
+        W[s] = _ajustar_mezcla(base, s in MEZCLA_FIJA).tolist()
     m['p'] = [p_mas(a, r[s], l) for a, s, l in zip(m.mu, m.stat, m.linea_abre)]
     m['q'] = [mezclar(p, pc, W[s]) for p, pc, s in zip(m.p, m.p_casa, m.stat)]
     eo, eu = m.q * m.mo - 1, (1 - m.q) * m.mou - 1
@@ -221,17 +229,21 @@ def prueba():
     res = {}
     for (s, t), z in b.groupby(['stat', 'temporada']):
         res.setdefault(s, {})[str(t)] = {'n': int(len(z)), 'roi': round(float(z.u.mean()), 4)}
-    fuera = b[b.temporada != AFINAR]
-    resumen = {s: {'n': int(len(z)), 'roi': round(float(z.u.mean()), 4), 'ee': round(float(z.u.std() / np.sqrt(len(z))), 4)}
-               for s, z in fuera.groupby('stat')}
+    # fuera de muestra: después de la temporada en que se ajustó cada mercado (2022-23; combinados, 2024-25)
+    fuera = b[b.temporada > b.stat.map(afina)]
+    resumen = {s: {'n': int(len(z)), 'roi': round(float(z.u.mean()), 4), 'ee': round(float(z.u.std() / np.sqrt(len(z))), 4),
+                   'desde': int(afina[s]) + 1} for s, z in fuera.groupby('stat')}
+    mf = m[m.temporada > m.stat.map(afina)]
     ll = {s: {'modelo': round(float((_ll(z.p, z.sale) - _ll(z.p_casa, z.sale)).mean() * 1e4), 1),
-              'mezcla': round(float((_ll(z.q, z.sale) - _ll(z.p_casa, z.sale)).mean() * 1e4), 1)} for s, z in m[m.temporada != AFINAR].groupby('stat')}
+              'mezcla': round(float((_ll(z.q, z.sale) - _ll(z.p_casa, z.sale)).mean() * 1e4), 1),
+              'ee': round(float((_ll(z.q, z.sale) - _ll(z.p_casa, z.sale)).std() / np.sqrt(len(z)) * 1e4), 1)} for s, z in mf.groupby('stat')}
     out = {'fecha': ahora().date().isoformat(), 'r': r, 'mezcla': W, 'por_temporada': res, 'prueba': resumen, 'log_loss': ll,
            'con_pick': list(CON_PICK), 'ev_pick': EV_PICK, 'parametros': {'H': H, 'N0': N0, 'ALPHA': ALPHA, 'BETA': BETA, 'MIN_REG': MIN_REG},
            'casas': {str(k): v for k, v in CASA_PRUEBA.items()}}
     P_PARAMS.parent.mkdir(parents=True, exist_ok=True)
     json.dump(out, open(P_PARAMS, 'w'), ensure_ascii=False, indent=1)
-    print('  props NBA, apuestas fuera de 2022-23 (EV +5%, apertura):', {s: f"{v['n']} {v['roi']:+.1%}" for s, v in resumen.items()})
+    print('  props NBA, apuestas fuera de muestra (EV +5%, apertura):', {s: f"{v['n']} {v['roi']:+.1%} (desde {v['desde']})" for s, v in resumen.items()})
+    print('  log loss de la mezcla contra la casa (diezmilésimas):', {s: f"{v['mezcla']:+.0f} ± {v['ee']:.0f}" for s, v in ll.items()})
     return out
 
 
