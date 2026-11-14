@@ -77,19 +77,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    200,
-    250,
+    205,
+    255,
     105
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -185
+    135,
+    -180
    ],
    "spread": [
     [
      "+0.5",
-     -150
+     -145
     ],
     [
      "-0.5",
@@ -110,19 +110,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -120,
-    280,
-    230
+    -115,
+    285,
+    235
    ],
    "ou_linea": 3.5,
    "ou": [
-    105,
+    110,
     -145
    ],
    "spread": [
     [
      "-0.5",
-     -125
+     -120
     ],
     [
      "+0.5",
@@ -143,19 +143,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    340,
-    300
+    -165,
+    350,
+    310
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -115,
     -115
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -170
     ],
     [
      "+0.5",
@@ -185,11 +185,27 @@
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -180,
+    330,
+    340
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -190
+    ],
+    [
+     "+0.5",
+     125
+    ]
+   ]
   }
  },
  {
@@ -212,6 +228,61 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    250,
+    150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -200
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401933738",
+  "utc": "2026-11-25T03:00Z",
+  "estadio": "PayPal Park",
+  "local_espn": "San Jose Earthquakes",
+  "visita_espn": "Houston Dynamo FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "western-conference-playoffs---round-one",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    240,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -155
+    ]
+   ]
+  }
  }
 ]

@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
+    100,
     250,
-    265
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     -110
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
@@ -45,22 +45,22 @@
    "casa": "DraftKings",
    "ml": [
     550,
-    380,
-    -240
+    370,
+    -225
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
-    125
+    -155,
+    115
    ],
    "spread": [
     [
      "+1.5",
-     -155
+     -160
     ],
     [
      "-1.5",
-     105
+     115
     ]
    ]
   }
@@ -412,6 +412,17 @@
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "Santos",
   "visita_espn": "Grêmio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841335",
+  "utc": "2026-11-24T21:00Z",
+  "estadio": "Arena Condá",
+  "local_espn": "Chapecoense",
+  "visita_espn": "Palmeiras",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
