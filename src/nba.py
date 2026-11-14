@@ -259,6 +259,12 @@ def descargar():
         descargar_cuartos()
     except Exception as ex:          # es para estudiar mercados nuevos: si falla, la página sigue igual
         print('  NBA cuartos: no se pudo', ex)
+    try:                             # props de jugadores (props_nba.py): fichas y props de los juegos ya jugados, y los próximos
+        import nba_props, props_nba
+        nba_props.main([temporada_nba()])
+        props_nba.descargar_proximos()
+    except Exception as ex:
+        print('  NBA props: no se pudo', ex)
 
 
 def _momios_prox(comp):
@@ -934,6 +940,15 @@ def texto_juego(L, V, m, t, sp_dk, tot_dk, dsc, fuera):
     return s.strip()
 
 
+def _props_info():
+    """Resumen de la prueba de props (data/modelo/nba/props.json) para la página."""
+    p = DATOS / 'modelo' / 'nba' / 'props.json'
+    if not p.exists():
+        return None
+    d = json.load(open(p))
+    return {k: d.get(k) for k in ('fecha', 'prueba', 'por_temporada', 'con_pick', 'ev_pick')}
+
+
 def analizar():
     ref = pd.Timestamp(ahora().date())
     hasta = ref + pd.Timedelta(days=1)
@@ -1122,6 +1137,11 @@ def analizar():
             'lesiones': les, 'alerta': alerta, 'fuera': fuera,
             'h2h': [{'fecha': r.fecha, 'local': EQUIPOS[r.local], 'visita': EQUIPOS[r.visita], 'gl': int(r.pl), 'gv': int(r.pv)} for r in h2h.itertuples()],
         })
+    try:                             # props de jugadores (desde el 14 nov 2026; si falla, la página sigue sin ellos)
+        import props_nba
+        props_nba.para_juegos(partidos)
+    except Exception as ex:
+        print('  NBA props: no se pudo', ex)
     if backtest:
         backtest['curva'] = [{'d': c['d'], 'u': round(c['u'], 2)} for c in backtest['curva']]
     hechos = g[g.temporada == temporada]
@@ -1133,7 +1153,8 @@ def analizar():
                     'sigma_m': modelo.sigma_m, 'sigma_t': modelo.sigma_t, 'dias': DIAS_NBA, 'jugadores': bool(mj), 'calib': CALIB,
                     'temprano': {'dif': TEMPRANO_DIF, 'mov': TEMPRANO_MOV, 'p': TEMPRANO_P}},
            'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest,
-           'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else []}
+           'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else [],
+           'props': _props_info()}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     from analizar import limpiar
     json.dump(limpiar(out), open(DATOS / 'ligas' / 'nba.json', 'w'), ensure_ascii=False, separators=(',', ':'))

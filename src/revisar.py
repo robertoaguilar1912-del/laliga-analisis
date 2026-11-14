@@ -146,7 +146,20 @@ def pendientes():
                 faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
                 if 5 <= faltan <= 40 and str(e['id']) not in cierres:
                     t.setdefault('cierres', []).append(f"{e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min (momios de cierre)")
-        if t['alineaciones'] or t['resultados'] or t.get('cierres'):
+        # NBA: props de jugadores (props_nba.py) de los juegos de las próximas 14 horas, cada hora (DraftKings los publica el
+        # mismo día y la ventaja está en tomarlos temprano)
+        if liga == 'nba':
+            try:
+                pp = json.load(open(RAIZ / 'data' / 'raw' / 'nba_props_prox.json'))
+            except (OSError, ValueError):
+                pp = {}
+            for e in json.load(open(p)):
+                faltan = (datetime.fromisoformat(e['utc'].replace('Z', '+00:00')) - ahora).total_seconds() / 60
+                vez = (pp.get(str(e['id'])) or {}).get('t')
+                hace = (ahora - datetime.fromisoformat(vez)).total_seconds() / 60 if vez else None
+                if 0 <= faltan <= 14 * 60 and (hace is None or hace >= 55):
+                    t.setdefault('props', []).append(f"{e.get('local_espn')} vs {e.get('visita_espn')} en {faltan:.0f} min (props)")
+        if t['alineaciones'] or t['resultados'] or t.get('cierres') or t.get('props'):
             out[liga] = t
     return out
 

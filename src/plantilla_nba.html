@@ -25,6 +25,15 @@
 .pr.lejos { opacity: .65; }
 .tempr { font-family: var(--font-data); font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 4px; margin-left: 6px; background: color-mix(in srgb, var(--pos, #2e7d32) 18%, var(--surface)); color: var(--ink); white-space: nowrap; }
 .tag.tempr-tag { border-color: color-mix(in srgb, var(--pos, #2e7d32) 60%, var(--surface)); background: color-mix(in srgb, var(--pos, #2e7d32) 14%, var(--surface)); color: var(--ink); }
+.pjug { border-top: 1px solid var(--line); padding: 8px 0 4px; }
+.pjug:first-child { border-top: 0; }
+.pjug h4 { margin: 0 0 4px; font-size: 14px; }
+.pjug h4 small { font-family: var(--font-data); font-weight: 400; color: var(--ink-3); font-size: 11.5px; }
+.prow { display: grid; grid-template-columns: minmax(96px, 1.1fr) auto minmax(0, 2.4fr); gap: 4px 10px; align-items: baseline; font-size: 13px; padding: 3px 0; }
+.prow .mline { grid-column: 3; }
+@media (max-width: 560px) { .prow { grid-template-columns: minmax(0, 1fr) auto; } .prow .mline { grid-column: 1 / -1; } }
+.pfil { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 10px; }
+.pill.PRUEBA { opacity: .75; }
 .temprano { background: color-mix(in srgb, var(--pos, #2e7d32) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--pos, #2e7d32) 45%, var(--surface)); border-radius: 10px; padding: 9px 12px; font-size: 13px; }
 </style>
 
@@ -195,6 +204,109 @@
     return (/^H/.test(tipo) ? g.dist_mc : g.dist_tc) ? r : ajustar(r, tipo);
   }
 
+  // ---------------- props de jugadores (props_nba.py, desde el 14 nov 2026)
+  // q: probabilidad de "más" de la mezcla modelo + casa en la línea de la casa; d: P(estadística ≥ k) desde k0 (para otras líneas)
+  const PN = { pts: 'Puntos', reb: 'Rebotes', ast: 'Asistencias', tres: 'Triples', pra: 'Pts + Reb + Ast', pr: 'Pts + Reb', pa: 'Pts + Ast', ra: 'Reb + Ast' };
+  const PROPS = D.props || null, CON_PICK = new Set((PROPS && PROPS.con_pick) || ['reb', 'ast', 'ra']);
+  const nPropPick = g => (g.props || []).filter(x => x.v === 'PICK').length;
+  const pAlMenos = (x, k) => k <= x.k0 ? 1 : k - x.k0 >= x.d.length ? 0 : x.d[k - x.k0];
+  function propCalc(x, lado, L) {     // {gana, push, pierde} con la línea L de tu casa
+    const piso = Math.floor(L + 1e-9), entera = Math.abs(L - Math.round(L)) < 1e-9;
+    const mas = pAlMenos(x, entera ? Math.round(L) + 1 : piso + 1), push = entera ? pAlMenos(x, Math.round(L)) - mas : 0;
+    const menos = Math.max(0, 1 - mas - push);
+    return lado === 'o' ? { gana: mas, push, pierde: menos } : { gana: menos, push, pierde: mas };
+  }
+  function propsHTML(g) {
+    const P = g.props || [];
+    if (!P.length) return `<div class="card"><h3>Props de jugadores</h3><p class="empty">Todavía no hay props para este juego. DraftKings los publica el mismo día del juego; la página los busca cada hora desde 14 horas antes.</p>${propsNota()}</div>`;
+    const picks = P.filter(x => x.v === 'PICK');
+    const fila = x => {
+      const ev = x.lado === 'o' ? x.ev_o : x.ev_u, lado = x.lado === 'o' ? 'más' : 'menos';
+      return `<div class="prow"><span><b>${esc(PN[x.s])}</b> ${x.l}</span>${x.v === 'SKIP' ? '<span></span>' : `<span class="pill ${x.v === 'PICK' ? 'PICK' : 'PRUEBA'}" title="${x.v === 'PRUEBA' ? 'Valor según la mezcla, pero en este mercado no ganó en la prueba: no es PICK' : ''}">${x.v === 'PICK' ? 'PICK ' + lado : 'en prueba'}</span>`}
+        <span class="mline">más ${x.o.toFixed(2)} / menos ${x.u.toFixed(2)} · casa ${pct(x.pc, 0)} más · modelo ${pct(x.pm, 0)} (espera ${x.mu}) · mezcla ${pct(x.q, 1)} · justo ${(1 / x.q).toFixed(2)} / ${(1 / (1 - x.q)).toFixed(2)}${ev >= 0 ? ` · EV ${lado} ${spct(ev, 1)}` : ''}${x.abre != null && x.abre !== x.l ? ` · abrió en ${x.abre}` : ''}</span></div>`;
+    };
+    const porJug = {};
+    P.forEach(x => { (porJug[x.j] = porJug[x.j] || []).push(x); });
+    const eqs = [[g.visita_fd, g.visita_es, 'var(--away)'], [g.local_fd, g.local_es, 'var(--home)']];
+    const STO = ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'];
+    const jugHTML = xs => `<div class="pjug"><h4>${esc(xs[0].n)} <small>~${xs[0].min} min</small></h4>${xs.sort((a, b) => STO.indexOf(a.s) - STO.indexOf(b.s)).map(fila).join('')}</div>`;
+    return `<div class="card"><h3>PICK de props</h3>
+        ${picks.length ? picks.map(x => `<div class="mrow pick"><span class="mname">${esc(x.n)} · ${esc(PN[x.s])} ${x.lado === 'o' ? 'más' : 'menos'} de ${x.l}</span><span class="pill PICK">PICK</span><span class="mline">${esc(g.props_casa || 'DraftKings')} ${(x.lado === 'o' ? x.o : x.u).toFixed(2)} · mezcla ${pct(x.lado === 'o' ? x.q : 1 - x.q, 1)} · justo ${(1 / (x.lado === 'o' ? x.q : 1 - x.q)).toFixed(2)} · EV ${spct(x.lado === 'o' ? x.ev_o : x.ev_u, 1)} · modelo espera ${x.mu}</span></div>`).join('')
+          : '<p class="empty">Ningún prop de rebotes o asistencias con valor por ahora.</p>'}
+        <p class="note">Momios de ${esc(g.props_casa || 'DraftKings')} vistos ${g.props_t ? fdt(g.props_t).toLowerCase() : ''}. <b>Apuesta temprano:</b> en la prueba la ventaja era contra la línea de apertura; contra la de cierre casi desaparece.</p>
+      </div>
+      <div class="card"><h3>Compara con tu casa</h3>
+        <div class="calc" id="pcalc">
+          <div class="calc-row">
+            <label class="sm">Jugador<select id="p-jug">${Object.values(porJug).sort((a, b) => a[0].n.localeCompare(b[0].n)).map(xs => `<option value="${esc(xs[0].j)}">${esc(xs[0].n)} (${esc(xs[0].eq)})</option>`).join('')}</select></label>
+            <label class="sm">Mercado<select id="p-st"></select></label>
+            <label class="sm">Lado<select id="p-lado"><option value="o">Más de</option><option value="u">Menos de</option></select></label>
+          </div>
+          <div class="calc-row">
+            <label class="sm">Línea de tu casa<input id="p-lin" inputmode="decimal" autocomplete="off"></label>
+            <label class="sm">Momio (decimal)<input id="p-mom" inputmode="decimal" autocomplete="off" placeholder="Ej. 1.83"></label>
+          </div>
+          <div class="calc-out" id="p-out" aria-live="polite"></div>
+          <div class="calc-row">
+            <input id="p-monto" placeholder="Monto" inputmode="decimal" autocomplete="off" aria-label="Monto apostado">
+            <button class="btn" id="p-save" disabled>Guardar en mi registro</button>
+          </div>
+          <div class="calc-msg" id="p-msg" aria-live="polite"></div>
+        </div>
+        <p class="note">Si tu casa tiene otra línea, la probabilidad sale de la misma curva (ajustada al precio de ${esc(g.props_casa || 'DraftKings')}); funciona mejor cerca de su línea. Con línea entera, el empate exacto devuelve la apuesta. Las apuestas de props se marcan a mano en el registro (Ganada / Perdida).</p>
+      </div>
+      ${eqs.map(([eq, nom, col]) => { const xs = Object.values(porJug).filter(v => v[0].eq === eq); return xs.length ? `<div class="card"><h3 style="color:${col}">${esc(nom)}</h3>${xs.map(jugHTML).join('')}</div>` : ''; }).join('')}
+      <div class="card">${propsNota()}</div>`;
+  }
+  function propsNota() {
+    const pr = PROPS && PROPS.prueba;
+    const t = s => pr && pr[s] ? `${num(pr[s].n)} apuestas, ${spct(pr[s].roi, 1)}` : '—';
+    return `<p class="note"><b>Cómo funciona.</b> El modelo espera minutos × producción por minuto de cada jugador (con más peso a los últimos juegos, los compañeros que faltan y el ritmo del juego) y saca la probabilidad de pasar la línea. Solo, es peor que la casa; lo que funcionó fue mezclarlo con el precio de la casa ("mezcla"). En la prueba con temporadas pasadas (2023-24 a hoy, contra la línea de <b>apertura</b> de DraftKings y ESPN BET, EV de +5% o más): rebotes ${t('reb')}, asistencias ${t('ast')}, rebotes + asistencias ${t('ra')}; puntos ${t('pts')}, triples ${t('tres')}. Por eso solo hay PICK en rebotes, asistencias y R+A (y solo con momios de 1.50 a 2.60); los demás salen "en prueba". La mayoría de los PICK son "menos": las casas suelen inflar el "más" en los props. Contra la línea de cierre la ventaja casi desaparece: <b>sirve si apuestas temprano</b>, antes de que la casa la mueva. Si el jugador no juega, la apuesta se anula.</p>`;
+  }
+  function propsCalc(g, el) {
+    const P = g.props || [], box = $('#pcalc', el); if (!box || !P.length) return;
+    const jug = $('#p-jug', box), st = $('#p-st', box), lado = $('#p-lado', box), lin = $('#p-lin', box), mom = $('#p-mom', box);
+    const out = $('#p-out', box), monto = $('#p-monto', box), save = $('#p-save', box), msg = $('#p-msg', box);
+    const actual = () => P.find(x => x.j === jug.value && x.s === st.value);
+    const llenarSt = () => {
+      const xs = P.filter(x => x.j === jug.value);
+      st.innerHTML = xs.sort((a, b) => ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'].indexOf(a.s) - ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'].indexOf(b.s)).map(x => `<option value="${x.s}">${esc(PN[x.s])}</option>`).join('');
+      const x = actual(); if (x) { lin.value = x.l; lado.value = x.lado; }
+    };
+    function calc() {
+      const x = actual(); if (!x) return null;
+      const L = parseFloat(String(lin.value).replace(',', '.')), dec = parseOdds(mom.value);
+      save.disabled = !(dec && isFinite(L));
+      if (!isFinite(L)) { out.textContent = 'Escribe la línea de tu casa.'; return null; }
+      const c = propCalc(x, lado.value, L), p = c.gana / Math.max(c.gana + c.pierde, 1e-9);
+      const lejos = Math.abs(L - x.l) > 2.01;
+      if (!dec) { out.innerHTML = `Mezcla: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${CON_PICK.has(x.s) ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
+      const ev = c.gana * (dec - 1) - c.pierde;
+      const v = ev >= 0.05 && CON_PICK.has(x.s) && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+      out.innerHTML = `<span class="pill ${v}">${v}</span> Mezcla <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
+        + (!CON_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} la mezcla no ganó en la prueba.` : '')
+        + (lejos && ev >= 0.05 ? `<br><b>No es PICK:</b> tu línea está a más de 2 de la de ${esc(g.props_casa || 'DraftKings')} (${x.l}); revisa si el jugador tiene alguna novedad.` : '')
+        + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
+      return { x, L, dec, p, c };
+    }
+    jug.addEventListener('change', () => { llenarSt(); calc(); msg.textContent = ''; });
+    st.addEventListener('change', () => { const x = actual(); if (x) { lin.value = x.l; lado.value = x.lado; } calc(); msg.textContent = ''; });
+    [lado, lin, mom].forEach(i => i.addEventListener('input', () => { calc(); msg.textContent = ''; }));
+    lado.addEventListener('change', () => { calc(); msg.textContent = ''; });
+    llenarSt(); calc();
+    save.addEventListener('click', () => {
+      const r = calc(); if (!r) return;
+      const amt = parseFloat(String(monto.value).replace(',', '.'));
+      if (!(amt > 0)) { msg.textContent = 'Escribe cuánto apostaste (solo el número).'; monto.focus(); return; }
+      const nombre = `${r.x.n}: ${PN[r.x.s]} ${lado.value === 'o' ? 'más' : 'menos'} de ${r.L}`;
+      mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: g.id, liga: 'nba', utc: g.utc, local: g.local_es, visita: g.visita_es,
+                  mercado: nombre, k: `PJ:${r.x.j}:${r.x.s}:${lado.value}:${r.L}`, p: r.p, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null });
+      guardarMias();
+      msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)}. Márcala a mano cuando termine el juego. <a class="linkbtn" href="./?liga=nba#registro">Ver mi registro →</a>` : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
+      mom.value = ''; monto.value = ''; calc();
+    });
+  }
+
   // ---------------- lista de juegos
   const principal = B ? B.estrategias[B.principal] : null;
   $('#j-eyebrow').textContent = `NBA ${I.temporada} · ${G.length} juegos en los próximos ${I.dias} días`;
@@ -221,6 +333,7 @@
       ...fuera.slice(0, 3).map(x => `<span class="tag">Sin ${esc(x)}</span>`),
       ...cans.map(x => `<span class="tag">${esc(x[0])}: 2.ª noche seguida</span>`),
       g.nota ? `<span class="tag">${esc(g.nota)}</span>` : '',
+      nPropPick(g) ? `<span class="tag">Props: ${nPropPick(g)} PICK</span>` : '',
       nMias ? `<span class="tag">Guardaste ${nMias} apuesta${nMias > 1 ? 's' : ''}</span>` : ''];
     return `<button class="gcard" data-i="${i}" aria-label="Ver ${esc(g.visita_es)} en ${esc(g.local_es)}">
       <span class="mmeta">${fhora(g.utc)} · ${esc(g.estadio)}</span>
@@ -307,7 +420,7 @@
           <div class="mid"><b>${g.pts_visita.toFixed(0)} – ${g.pts_local.toFixed(0)}</b><span>puntos esperados</span></div>
           <div class="side r"><span class="tn" style="color:var(--home)">${esc(g.local_es)}</span><span class="sub">${rec(th.record)} · ${esc(th.conferencia)}</span></div>
         </div>
-        <div class="subtabs" role="tablist">${['Resumen', 'Calculadora', 'Bajas', 'Equipos', 'Historial'].map((n, k) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}</div>
+        <div class="subtabs" role="tablist">${[[0, 'Resumen'], [1, 'Calculadora'], [5, 'Jugadores' + (nPropPick(g) ? ' · ' + nPropPick(g) + ' PICK' : '')], [2, 'Bajas'], [3, 'Equipos'], [4, 'Historial']].map(([k, n]) => `<button role="tab" data-p="${k}" aria-selected="${k === 0}">${n}</button>`).join('')}</div>
       </div>
 
       <div class="pane" data-pane="0">
@@ -377,6 +490,8 @@
         </div>
       </div>
 
+      <div class="pane" data-pane="5" hidden>${propsHTML(g)}</div>
+
       <div class="pane" data-pane="4" hidden>
         <div class="card"><h3>Últimos enfrentamientos</h3>
           ${g.h2h.length ? g.h2h.map(x => `<div class="h2h-row"><span class="d">${fdate(x.fecha, { day: 'numeric', month: 'short', year: 'numeric' })}</span><span>${esc(x.local)}</span><span class="s">${x.gl}-${x.gv}</span><span class="a">${esc(x.visita)}</span></div>`).join('') : '<p class="empty">No se enfrentaron en los datos disponibles.</p>'}
@@ -389,6 +504,7 @@
       $$('.pane[data-pane]', el).forEach(p => { p.hidden = p.dataset.pane !== b.dataset.p; });
     }));
     $('#to-calc', el).addEventListener('click', () => $('.subtabs button[data-p="1"]', el).click());
+    propsCalc(g, el);
     // calculadora
     const tipo = $('#c-tipo', el), lin = $('#c-linea', el), mom = $('#c-momio', el), out = $('.calc-out', el);
     const monto = $('#calc-monto', el), save = $('#calc-save', el), msg = $('.calc-msg', el);
