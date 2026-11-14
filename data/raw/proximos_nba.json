@@ -27,7 +27,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     483,
     -670
@@ -79,7 +79,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     164,
     -196
@@ -92,13 +92,13 @@
     4.5,
     -106,
     -4.5,
-    -114
+    -115
    ],
    "spread_abre": -3.5,
    "total": [
-    229.5,
-    -110,
-    -110
+    227.5,
+    -115,
+    -106
    ],
    "total_abre": 231.5
   }
@@ -131,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     146,
     -173
@@ -148,9 +148,9 @@
    ],
    "spread_abre": 5.5,
    "total": [
-    229.5,
-    -105,
-    -115
+    228.5,
+    -115,
+    -105
    ],
    "total_abre": 226.5
   }
@@ -183,10 +183,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -148,
-    125
+    -143,
+    121
    ],
    "ml_abre": [
     -195,
@@ -235,10 +235,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -970,
-    640
+    -1020,
+    660
    ],
    "ml_abre": [
     -840,
@@ -246,15 +246,15 @@
    ],
    "spread": [
     -15.5,
-    -108,
+    -112,
     15.5,
-    -112
+    -108
    ],
    "spread_abre": -14.5,
    "total": [
-    234.5,
-    -111,
-    -109
+    235.5,
+    -105,
+    -115
    ],
    "total_abre": 236.5
   }
@@ -1130,37 +1130,8 @@
   "momios": null
  },
  {
-  "id": "401910015",
-  "utc": "2026-11-19T02:00Z",
-  "fecha": "2026-11-18",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "DEN",
-  "visita": "BOS",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_SCHEDULED",
-  "local_espn": "Denver Nuggets",
-  "visita_espn": "Boston Celtics",
-  "revisado": false,
-  "estadio": "Ball Arena",
-  "records": {
-   "home": [
-    "6-4",
-    "2-2",
-    "3-2"
-   ],
-   "away": [
-    "10-2",
-    "5-0",
-    "5-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910016",
-  "utc": "2026-11-19T02:30Z",
+  "utc": "2026-11-19T01:00Z",
   "fecha": "2026-11-18",
   "temporada": 2027,
   "tipo": 2,
@@ -1183,6 +1154,35 @@
     "8-5",
     "6-1",
     "2-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910015",
+  "utc": "2026-11-19T02:30Z",
+  "fecha": "2026-11-18",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DEN",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Denver Nuggets",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Ball Arena",
+  "records": {
+   "home": [
+    "6-4",
+    "2-2",
+    "3-2"
+   ],
+   "away": [
+    "10-2",
+    "5-0",
+    "5-2"
    ]
   },
   "momios": null
