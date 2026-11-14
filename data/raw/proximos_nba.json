@@ -29,35 +29,6 @@
   "momios": null
  },
  {
-  "id": "401909297",
-  "utc": "2026-11-14T00:00Z",
-  "fecha": "2026-11-13",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "ORL",
-  "visita": "MIL",
-  "neutral": false,
-  "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Orlando Magic",
-  "visita_espn": "Milwaukee Bucks",
-  "revisado": false,
-  "estadio": "Kia Center",
-  "records": {
-   "home": [
-    "4-7",
-    "0-4",
-    "4-3"
-   ],
-   "away": [
-    "1-11",
-    "1-6",
-    "0-5"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909298",
   "utc": "2026-11-14T01:00Z",
   "fecha": "2026-11-13",
@@ -96,7 +67,7 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Chicago Bulls",
   "visita_espn": "Atlanta Hawks",
   "revisado": false,
@@ -125,7 +96,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -154,7 +125,7 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Utah Jazz",
   "revisado": false,
@@ -186,7 +157,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
@@ -218,9 +189,9 @@
    ],
    "spread_abre": -11.5,
    "total": [
-    216.5,
-    -112,
-    -108
+    217.5,
+    -110,
+    -110
    ],
    "total_abre": 234.5
   }
@@ -307,24 +278,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    231,
-    -283
+    206,
+    -249
    ],
    "ml_abre": [
     226,
     -276
    ],
    "spread": [
-    7.5,
-    -112,
-    -7.5,
-    -107
+    6.5,
+    -107,
+    -6.5,
+    -113
    ],
    "spread_abre": 7.5,
    "total": [
     222.5,
-    -105,
-    -115
+    -111,
+    -109
    ],
    "total_abre": 221.5
   }
@@ -694,9 +665,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-11",
+    "1-12",
     "1-6",
-    "0-5"
+    "0-6"
    ],
    "away": [
     "7-5",
@@ -757,8 +728,8 @@
     "5-2"
    ],
    "away": [
-    "4-7",
-    "0-4",
+    "5-7",
+    "1-4",
     "4-3"
    ]
   },
@@ -1192,9 +1163,9 @@
     "4-3"
    ],
    "away": [
-    "1-11",
+    "1-12",
     "1-6",
-    "0-5"
+    "0-6"
    ]
   },
   "momios": null
@@ -1216,8 +1187,8 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "4-7",
-    "0-4",
+    "5-7",
+    "1-4",
     "4-3"
    ],
    "away": [
@@ -1506,9 +1477,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-11",
+    "1-12",
     "1-6",
-    "0-5"
+    "0-6"
    ],
    "away": [
     "8-3",
@@ -1627,8 +1598,8 @@
     "2-5"
    ],
    "away": [
-    "4-7",
-    "0-4",
+    "5-7",
+    "1-4",
     "4-3"
    ]
   },
@@ -1859,9 +1830,9 @@
     "5-1"
    ],
    "away": [
-    "1-11",
+    "1-12",
     "1-6",
-    "0-5"
+    "0-6"
    ]
   },
   "momios": null
@@ -2091,8 +2062,8 @@
     "2-6"
    ],
    "away": [
-    "4-7",
-    "0-4",
+    "5-7",
+    "1-4",
     "4-3"
    ]
   },
@@ -2323,9 +2294,9 @@
     "3-4"
    ],
    "away": [
-    "1-11",
+    "1-12",
     "1-6",
-    "0-5"
+    "0-6"
    ]
   },
   "momios": null
@@ -2521,8 +2492,8 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "4-7",
-    "0-4",
+    "5-7",
+    "1-4",
     "4-3"
    ],
    "away": [
