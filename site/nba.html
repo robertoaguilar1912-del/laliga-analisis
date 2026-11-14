@@ -566,8 +566,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   // q: probabilidad de "más" de la mezcla modelo + casa en la línea de la casa; d: P(estadística ≥ k) desde k0 (para otras líneas)
   const PN = { pts: 'Puntos', reb: 'Rebotes', ast: 'Asistencias', tres: 'Triples', pra: 'Pts + Reb + Ast', pr: 'Pts + Reb', pa: 'Pts + Ast', ra: 'Reb + Ast' };
   const PROPS = D.props || null, CON_PICK = new Set((PROPS && PROPS.con_pick) || ['reb', 'ast', 'ra', 'pr', 'pra']);
+  const CALC_PICK = new Set((PROPS && PROPS.calc_pick) || ['reb', 'ast', 'ra', 'pr', 'pra', 'tres', 'pts']);
   const nPropPick = g => (g.props || []).filter(x => x.v === 'PICK').length;
-  const pAlMenos = (x, k) => k <= x.k0 ? 1 : k - x.k0 >= x.d.length ? 0 : x.d[k - x.k0];
+  const pAlMenos = (x, k) => { const d = x.dc || x.d; return k <= x.k0 ? 1 : k - x.k0 >= d.length ? 0 : d[k - x.k0]; };
   function propCalc(x, lado, L) {     // {gana, push, pierde} con la línea L de tu casa
     const piso = Math.floor(L + 1e-9), entera = Math.abs(L - Math.round(L)) < 1e-9;
     const mas = pAlMenos(x, entera ? Math.round(L) + 1 : piso + 1), push = entera ? pAlMenos(x, Math.round(L)) - mas : 0;
@@ -611,10 +612,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           </div>
           <div class="calc-msg" id="p-msg" aria-live="polite"></div>
         </div>
-        <p class="note">Si tu casa tiene otra línea, la probabilidad sale de la misma curva (ajustada al precio de ${esc(g.props_casa || 'DraftKings')}); funciona mejor cerca de su línea. Con línea entera, el empate exacto devuelve la apuesta. Las apuestas de props se marcan a mano en el registro (Ganada / Perdida).</p>
+        <p class="note">${calcNota()} Si tu casa tiene otra línea, la probabilidad sale de la misma curva (ajustada al precio de ${esc(g.props_casa || 'DraftKings')}); funciona mejor cerca de su línea. Con línea entera, el empate exacto devuelve la apuesta. Las apuestas de props se marcan a mano en el registro (Ganada / Perdida).</p>
       </div>
       ${eqs.map(([eq, nom, col]) => { const xs = Object.values(porJug).filter(v => v[0].eq === eq); return xs.length ? `<div class="card"><h3 style="color:${col}">${esc(nom)}</h3>${xs.map(jugHTML).join('')}</div>` : ''; }).join('')}
       <div class="card">${propsNota()}</div>`;
+  }
+  function calcNota() {
+    const oc = PROPS && PROPS.otras_casas;
+    const t = s => oc && oc[s] ? `${PN[s].toLowerCase()} ${num(oc[s].n)} apuestas ${spct(oc[s].roi, 1)}` : '';
+    return oc ? `<b>Tu casa contra ${esc('DraftKings')}.</b> En la prueba (2022-23 y 2023-24) se apostó en otras casas (MGM, Caesars, SugarHouse…) cuando pagaban +5% sobre el precio justo de DraftKings con la misma línea: ${['reb', 'ast', 'tres', 'pts'].map(t).filter(Boolean).join('; ')} (puntos: solo el "menos"; el "más" no ganó). En puntos y triples la calculadora usa el precio justo de DraftKings; en los demás, la mezcla. Ojo: no sabemos a qué hora abrió cada casa; si la otra casa abrió antes que DraftKings, parte de esa ventaja es de noticias que llegaron después.` : '';
   }
   function propsNota() {
     const pr = PROPS && PROPS.prueba;
@@ -630,7 +636,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const llenarSt = () => {
       const xs = P.filter(x => x.j === jug.value);
       st.innerHTML = xs.sort((a, b) => ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(a.s) - ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(b.s)).map(x => `<option value="${x.s}">${esc(PN[x.s])}</option>`).join('');
-      const x = actual(); if (x) { lin.value = x.l; lado.value = x.lado; }
+      const x = actual(); if (x) { lin.value = x.l; lado.value = x.lados === 'u' ? 'u' : x.lado; }
     };
     function calc() {
       const x = actual(); if (!x) return null;
@@ -639,17 +645,20 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       if (!isFinite(L)) { out.textContent = 'Escribe la línea de tu casa.'; return null; }
       const c = propCalc(x, lado.value, L), p = c.gana / Math.max(c.gana + c.pierde, 1e-9);
       const lejos = Math.abs(L - x.l) > 2.01;
-      if (!dec) { out.innerHTML = `Mezcla: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${CON_PICK.has(x.s) ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
+      const fuente = x.qc != null ? `precio justo de ${esc(g.props_casa || 'DraftKings')}` : 'mezcla';
+      const ladoOK = (x.lados || 'ou').includes(lado.value), puede = CALC_PICK.has(x.s) && ladoOK;
+      if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
       const ev = c.gana * (dec - 1) - c.pierde;
-      const v = ev >= 0.05 && CON_PICK.has(x.s) && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
-      out.innerHTML = `<span class="pill ${v}">${v}</span> Mezcla <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
-        + (!CON_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} la mezcla no ganó en la prueba.` : '')
+      const v = ev >= 0.05 && puede && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+      out.innerHTML = `<span class="pill ${v}">${v}</span> ${fuente[0].toUpperCase() + fuente.slice(1)} <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
+        + (!CALC_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} no hay prueba que lo respalde.` : '')
+        + (CALC_PICK.has(x.s) && !ladoOK && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} solo el "menos" ganó al comparar casas; el "más" no.` : '')
         + (lejos && ev >= 0.05 ? `<br><b>No es PICK:</b> tu línea está a más de 2 de la de ${esc(g.props_casa || 'DraftKings')} (${x.l}); revisa si el jugador tiene alguna novedad.` : '')
         + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
       return { x, L, dec, p, c };
     }
     jug.addEventListener('change', () => { llenarSt(); calc(); msg.textContent = ''; });
-    st.addEventListener('change', () => { const x = actual(); if (x) { lin.value = x.l; lado.value = x.lado; } calc(); msg.textContent = ''; });
+    st.addEventListener('change', () => { const x = actual(); if (x) { lin.value = x.l; lado.value = x.lados === 'u' ? 'u' : x.lado; } calc(); msg.textContent = ''; });
     [lado, lin, mom].forEach(i => i.addEventListener('input', () => { calc(); msg.textContent = ''; }));
     lado.addEventListener('change', () => { calc(); msg.textContent = ''; });
     llenarSt(); calc();
