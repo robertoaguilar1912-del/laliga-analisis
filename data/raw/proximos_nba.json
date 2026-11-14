@@ -67,7 +67,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -125,7 +125,7 @@
   "visita": "GS",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Golden State Warriors",
   "revisado": false,
@@ -142,30 +142,7 @@
     "2-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -700,
-    501
-   ],
-   "ml_abre": [
-    -520,
-    390
-   ],
-   "spread": [
-    -12.5,
-    -112,
-    12.5,
-    -108
-   ],
-   "spread_abre": -11.5,
-   "total": [
-    217.5,
-    -110,
-    -110
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909303",
@@ -177,10 +154,10 @@
   "visita": "POR",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -194,30 +171,7 @@
     "5-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    361,
-    -468
-   ],
-   "ml_abre": [
-    426,
-    -569
-   ],
-   "spread": [
-    10.5,
-    -115,
-    -10.5,
-    -105
-   ],
-   "spread_abre": 10.5,
-   "total": [
-    229.5,
-    -112,
-    -108
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401909304",
@@ -232,7 +186,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "LA Clippers",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -247,10 +201,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    206,
-    -249
+    196,
+    -237
    ],
    "ml_abre": [
     226,
@@ -258,15 +212,15 @@
    ],
    "spread": [
     6.5,
-    -107,
+    -113,
     -6.5,
-    -113
+    -107
    ],
    "spread_abre": 7.5,
    "total": [
-    222.5,
-    -111,
-    -109
+    221.5,
+    -105,
+    -115
    ],
    "total_abre": 221.5
   }
