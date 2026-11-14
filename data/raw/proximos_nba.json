@@ -27,10 +27,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    453,
-    -620
+    470,
+    -650
    ],
    "ml_abre": [
     417,
@@ -79,7 +79,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     284,
     -355
@@ -90,9 +90,9 @@
    ],
    "spread": [
     8.5,
-    -105,
+    -115,
     -8.5,
-    -115
+    -105
    ],
    "spread_abre": -3.5,
    "total": [
@@ -116,7 +116,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Miami Heat",
   "visita_espn": "Detroit Pistons",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -131,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     146,
     -173
@@ -149,8 +149,8 @@
    "spread_abre": 5.5,
    "total": [
     228.5,
-    -113,
-    -107
+    -108,
+    -112
    ],
    "total_abre": 226.5
   }
@@ -168,7 +168,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "Brooklyn Nets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "FedExForum",
   "records": {
    "home": [
@@ -182,7 +182,30 @@
     "2-5"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -171,
+    144
+   ],
+   "ml_abre": [
+    -195,
+    163
+   ],
+   "spread": [
+    -3.5,
+    -115,
+    3.5,
+    -106
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    224.5,
+    -115,
+    null
+   ],
+   "total_abre": 225.5
+  }
  },
  {
   "id": "401909984",
@@ -197,7 +220,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Chicago Bulls",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Target Center",
   "records": {
    "home": [
@@ -212,7 +235,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -1080,
     690
