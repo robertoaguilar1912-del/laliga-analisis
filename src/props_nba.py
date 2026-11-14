@@ -38,6 +38,12 @@ CON_PICK = ('reb', 'ast', 'ra', 'pr', 'pra')   # los que ganaron fuera de la tem
 MEZCLA_FIJA = ('pts',)   # puntos: peso de la casa fijo en 1 (solo modelo + constante). Con el peso libre (0.53 en 2022-23) la
                          # mezcla quedaba peor que la casa fuera de esa temporada (+24 ± 4 diezmilésimas); fijo, −3 ± 2
 EV_PICK = 0.05
+# Calculadora (el momio de TU casa contra DraftKings). Lo que se probó: otras casas con la misma línea que DraftKings en la
+# apertura (MGM, Caesars, SugarHouse, PointsBet, ESPN BET; 2022-23 y 2023-24), apostando donde pagaban EV +5% (otras_casas()).
+# Puntos: solo "menos" y con el precio justo de DraftKings (la mezcla, con su corrección hacia el menos, apostaba de más: −2.7%);
+# triples: precio justo de DraftKings, los dos lados. El resto, con la mezcla. (14 nov 2026)
+CALC = {'pts': ('casa', 'u'), 'tres': ('casa', 'ou')}      # stat: (referencia, lados); los demás ('mezcla', 'ou')
+CALC_PICK = ('reb', 'ast', 'ra', 'pr', 'pra', 'tres', 'pts')
 MOMIOS_NORMALES = (1.5, 2.6)             # línea principal "normal": los dos lados entre 1.50 y 2.60
 CASA_PRUEBA = {2023: '40', 2024: '40', 2025: '58', 2026: '58', 2027: '100'}   # DraftKings, ESPN BET
 AFINAR = 2023
@@ -201,8 +207,8 @@ def prueba():
     Dispersión y mezcla con 2022-23 (los combinados, que 2022-23 no tiene, con 2024-25). Guarda P_PARAMS."""
     J = fichas(apertura=True)
     X = medias(J, historia(J), titular=False)
-    L = lineas()
-    L = L[L.apply(lambda z: CASA_PRUEBA.get(z.temporada) == z.casa, axis=1) & L.stat.isin(STATS)]
+    L_todas = lineas()
+    L = L_todas[L_todas.apply(lambda z: CASA_PRUEBA.get(z.temporada) == z.casa, axis=1) & L_todas.stat.isin(STATS)]
     L = L.dropna(subset=['linea_abre', 'p_o_abre'])
     m = L.merge(X[['id', 'jugador'] + [f'mu_{s}' for s in STATS]], on=['id', 'jugador']).merge(J[['id', 'jugador'] + STATS], on=['id', 'jugador'])
     i = m.stat.map(STATS.index).to_numpy()
@@ -237,13 +243,40 @@ def prueba():
     ll = {s: {'modelo': round(float((_ll(z.p, z.sale) - _ll(z.p_casa, z.sale)).mean() * 1e4), 1),
               'mezcla': round(float((_ll(z.q, z.sale) - _ll(z.p_casa, z.sale)).mean() * 1e4), 1),
               'ee': round(float((_ll(z.q, z.sale) - _ll(z.p_casa, z.sale)).std() / np.sqrt(len(z)) * 1e4), 1)} for s, z in mf.groupby('stat')}
+    otras = otras_casas(m, L_todas)
+    print('  props NBA, comparando con otras casas (EV +5%):', {s: f"{v['n']} {v['roi']:+.1%}" for s, v in otras.items()})
     out = {'fecha': ahora().date().isoformat(), 'r': r, 'mezcla': W, 'por_temporada': res, 'prueba': resumen, 'log_loss': ll,
+           'otras_casas': otras, 'calc': {s: list(CALC.get(s, ('mezcla', 'ou'))) for s in STATS}, 'calc_pick': list(CALC_PICK),
            'con_pick': list(CON_PICK), 'ev_pick': EV_PICK, 'parametros': {'H': H, 'N0': N0, 'ALPHA': ALPHA, 'BETA': BETA, 'MIN_REG': MIN_REG},
            'casas': {str(k): v for k, v in CASA_PRUEBA.items()}}
     P_PARAMS.parent.mkdir(parents=True, exist_ok=True)
     json.dump(out, open(P_PARAMS, 'w'), ensure_ascii=False, indent=1)
     print('  props NBA, apuestas fuera de muestra (EV +5%, apertura):', {s: f"{v['n']} {v['roi']:+.1%} (desde {v['desde']})" for s, v in resumen.items()})
     print('  log loss de la mezcla contra la casa (diezmilésimas):', {s: f"{v['mezcla']:+.0f} ± {v['ee']:.0f}" for s, v in ll.items()})
+    return out
+
+
+def otras_casas(m, L_todas):
+    """Apostar en OTRA casa usando la de referencia (DraftKings 2022-23 y 2023-24) como precio justo: misma línea en la
+    apertura, momios normales, EV ≥ EV_PICK con la referencia de CALC y solo los lados de CALC. Como la calculadora."""
+    ref = m[m.temporada.isin([2023, 2024])][['id', 'jugador', 'stat', 'temporada', 'linea_abre', 'y', 'q', 'p_casa']]
+    o = L_todas[L_todas.temporada.isin([2023, 2024]) & (L_todas.casa != '40')].dropna(subset=['linea_abre', 'momio_abre_o', 'momio_abre_u'])
+    x = ref.merge(o[['id', 'jugador', 'stat', 'casa', 'linea_abre', 'momio_abre_o', 'momio_abre_u']], on=['id', 'jugador', 'stat', 'linea_abre'])
+    x = x[x.momio_abre_o.between(*MOMIOS_NORMALES) & x.momio_abre_u.between(*MOMIOS_NORMALES)]
+    out = {}
+    for s, z in x.groupby('stat'):
+        fuente, lados = CALC.get(s, ('mezcla', 'ou'))
+        p = z.p_casa if fuente == 'casa' else z.q
+        eo = np.where('o' in lados, p * z.momio_abre_o - 1, -1)
+        eu = np.where('u' in lados, (1 - p) * z.momio_abre_u - 1, -1)
+        k = np.maximum(eo, eu) >= EV_PICK
+        b = z[k]
+        lado_o = (eo >= eu)[k]
+        u = np.where(lado_o, np.where(b.y > b.linea_abre, b.momio_abre_o - 1, -1), np.where(b.y < b.linea_abre, b.momio_abre_u - 1, -1))
+        if len(b):
+            out[s] = {'n': int(len(b)), 'roi': round(float(u.mean()), 4), 'ee': round(float(u.std() / np.sqrt(len(b))), 4),
+                      'por_temporada': {str(t): {'n': int((b.temporada == t).sum()), 'roi': round(float(u[(b.temporada == t).to_numpy()].mean()), 4)}
+                                        for t in sorted(b.temporada.unique())}}
     return out
 
 
@@ -376,7 +409,13 @@ def para_juegos(partidos):
             ev = max(ev_o, ev_u)
             normal = lo_ <= x['o'] <= hi_ and lo_ <= x['u'] <= hi_
             ver = ('PICK' if s in CON_PICK and normal else 'PRUEBA') if ev >= EV_PICK else 'SKIP'
-            out.append({'j': x['j'], 'n': str(fila.nombre), 'eq': str(fila.equipo), 's': s, 'l': x['linea'], 'abre': x.get('abre'),
+            fuente, lados = CALC.get(s, ('mezcla', 'ou'))
+            extra = {'lados': lados}
+            if fuente == 'casa':      # la calculadora usa el precio justo de la casa, con su propia curva
+                m2 = mu_para(x['p_o'], r, x['linea'])
+                extra['qc'] = round(x['p_o'], 4)
+                extra['dc'] = [round(float(v), 4) for v in nbinom.sf(np.arange(k0, k0 + 18) - 1, r, r / (r + m2))]
+            out.append({**extra, 'j': x['j'], 'n': str(fila.nombre), 'eq': str(fila.equipo), 's': s, 'l': x['linea'], 'abre': x.get('abre'),
                         'o': x['o'], 'u': x['u'], 'pc': round(x['p_o'], 4), 'pm': round(pm, 4), 'q': round(q, 4),
                         'mu': round(mu, 1), 'min': round(float(fila.m_esp), 1), 'ev_o': round(ev_o, 4), 'ev_u': round(ev_u, 4),
                         'lado': lado, 'v': ver, 'k0': k0, 'd': dist})

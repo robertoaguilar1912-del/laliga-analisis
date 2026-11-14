@@ -946,7 +946,7 @@ def _props_info():
     if not p.exists():
         return None
     d = json.load(open(p))
-    return {k: d.get(k) for k in ('fecha', 'prueba', 'por_temporada', 'con_pick', 'ev_pick')}
+    return {k: d.get(k) for k in ('fecha', 'prueba', 'por_temporada', 'con_pick', 'ev_pick', 'otras_casas', 'calc_pick')}
 
 
 def analizar():
