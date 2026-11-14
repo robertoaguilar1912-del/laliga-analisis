@@ -409,6 +409,22 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 .hist-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
 .hist-tip { font: 12px var(--font-data); color: var(--ink-2); min-height: 1.5em; margin-top: 4px; }
 .prow.click { cursor: pointer; border-radius: 6px; }
+.pfil { align-items: center; }
+.pfil .hist-n { flex-wrap: wrap; }
+.pfil .hist-n button { white-space: nowrap; }
+#v-props { min-width: 0; }
+.pp > div { min-width: 0; }
+.pfil select { font: 13px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; }
+.pp { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; align-items: center; padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 6px; }
+.pp.pick { border-color: var(--good); }
+.pp .who { font-weight: 700; }
+.pp .who small { font: 400 11.5px var(--font-data); color: var(--ink-3); margin-left: 4px; }
+.pp .mk { font-size: 13.5px; }
+.pp .od { font: 12.5px var(--font-data); color: var(--ink-2); text-align: right; white-space: nowrap; }
+.pp .od b { color: var(--ink); font-size: 14px; }
+.pp .act { grid-column: 1 / -1; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.pp .act input { width: 96px; font: 14px var(--font-data); padding: 5px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--ink); }
+.pp .act .res { font: 12.5px var(--font-data); color: var(--ink-2); }
 .prow.click:hover { background: var(--surface-2); }
 .temprano { background: color-mix(in srgb, var(--pos, #2e7d32) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--pos, #2e7d32) 45%, var(--surface)); border-radius: 10px; padding: 9px 12px; font-size: 13px; }
 </style>
@@ -421,6 +437,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   <nav class="ligas" id="ligas" aria-label="Ligas"></nav>
   <nav class="tabs" role="tablist" aria-label="Secciones">
     <button role="tab" data-view="juegos" aria-selected="true">Juegos</button>
+    <button role="tab" data-view="props" aria-selected="false">Props</button>
     <button role="tab" data-view="posiciones" aria-selected="false">Posiciones</button>
     <button role="tab" data-view="equipos" aria-selected="false">Equipos</button>
     <button role="tab" data-view="modelo" aria-selected="false">El modelo</button>
@@ -438,6 +455,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div class="mlist" id="glist"></div>
     </div>
     <div id="game-detail" class="view" style="padding:0" hidden></div>
+  </section>
+
+  <section class="view" id="v-props" hidden>
+    <div class="intro">
+      <p class="eyebrow" id="pp-eyebrow"></p>
+      <h2>Props de jugadores</h2>
+      <p>Todos los props de los próximos juegos en una lista, del más cerca de PICK al más lejos. Busca el jugador en tu casa: si tiene la <b>misma línea</b> y su momio es igual o mayor que "necesitas", es PICK. Escríbelo en "tu momio" para confirmarlo, o toca "Ver" para abrir su gráfica y la calculadora (también si tu casa tiene otra línea).</p>
+    </div>
+    <div class="pfil" id="pp-fil"></div>
+    <div id="pp-list"></div>
   </section>
 
   <section class="view" id="v-posiciones" hidden>
@@ -519,10 +546,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   const guardarMias = () => { try { localStorage.setItem(LS_KEY, JSON.stringify(mias)); lsOK = true; } catch (e) { lsOK = false; } };
 
   // ---------------- navegación
-  const views = ['juegos', 'posiciones', 'equipos', 'modelo'];
+  const views = ['juegos', 'props', 'posiciones', 'equipos', 'modelo'];
   function showView(v) {
     if (v === 'registro') { location.href = `./?liga=nba&r=modelo#registro`; return; }
     views.forEach(x => { $('#v-' + x).hidden = x !== v; });
+    if (v === 'props') renderProps();
     $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
   }
   $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'juegos') showList(); if (b.dataset.view !== 'registro') history.replaceState(null, '', '#' + b.dataset.view); }));
@@ -752,6 +780,62 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)}. Márcala a mano cuando termine el juego. <a class="linkbtn" href="./?liga=nba#registro">Ver mi registro →</a>` : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       mom.value = ''; monto.value = ''; calc();
+    });
+  }
+
+  // ---------------- pestaña Props: todos los props de los próximos juegos en una lista
+  // Por cada prop, el lado con más valor según la regla de la calculadora (CALC: puntos solo "menos" y con el precio justo de
+  // la casa; triples con el precio justo; lo demás con la mezcla) y el momio mínimo para PICK en tu casa (EV +5%, misma línea).
+  const ppFiltro = { s: 'todos', g: 'todos' };
+  function propsTodos() {
+    const out = [];
+    G.forEach((g, gi) => (g.props || []).forEach(x => {
+      if (!CALC_PICK.has(x.s)) return;
+      const q = x.qc != null ? x.qc : x.q;
+      const cands = [...(x.lados || 'ou')].map(l => { const p = l === 'o' ? q : 1 - q, dk = l === 'o' ? x.o : x.u; return { l, p, dk, ev: p * dk - 1 }; })
+        .filter(c => c.p >= 0.30 && c.p <= 0.70);
+      if (!cands.length) return;
+      const c = cands.sort((a, b) => b.ev - a.ev)[0];
+      out.push({ g, gi, x, ...c, nec: 1.05 / c.p, pickDK: c.ev >= 0.05 && c.dk >= 1.5 && c.dk <= 2.6 });
+    }));
+    return out.sort((a, b) => b.ev - a.ev);
+  }
+  function renderProps() {
+    const todos = propsTodos(), box = $('#pp-list'), fil = $('#pp-fil');
+    const juegos = [...new Map(todos.map(r => [r.gi, r.g])).entries()];
+    $('#pp-eyebrow').textContent = todos.length ? `${num(todos.length)} props de ${juegos.length} juego${juegos.length > 1 ? 's' : ''}` : '';
+    if (!todos.length) { fil.innerHTML = ''; box.innerHTML = '<p class="empty">Todavía no hay props. DraftKings los publica el mismo día del juego; la página los busca cada hora desde 14 horas antes.</p>'; return; }
+    const stats = ['todos', ...['reb', 'ast', 'ra', 'pr', 'pra', 'tres', 'pts'].filter(s => todos.some(r => r.x.s === s))];
+    fil.innerHTML = `<span class="hist-n" role="group" aria-label="Mercado">${stats.map(s => `<button type="button" data-s="${s}" aria-pressed="${ppFiltro.s === s}">${s === 'todos' ? 'Todos' : s === 'pts' ? 'Puntos (menos)' : PN[s]}</button>`).join('')}</span>
+      <select id="pp-g" aria-label="Juego"><option value="todos">Todos los juegos</option>${juegos.map(([gi, g]) => `<option value="${gi}" ${String(ppFiltro.g) === String(gi) ? 'selected' : ''}>${esc(g.visita_fd)} @ ${esc(g.local_fd)} · ${esc(fhora(g.utc))}</option>`).join('')}</select>`;
+    fil.querySelectorAll('button[data-s]').forEach(b => b.addEventListener('click', () => { ppFiltro.s = b.dataset.s; renderProps(); }));
+    $('#pp-g').addEventListener('change', e => { ppFiltro.g = e.target.value; renderProps(); });
+    const filas = todos.filter(r => (ppFiltro.s === 'todos' || r.x.s === ppFiltro.s) && (ppFiltro.g === 'todos' || String(r.gi) === String(ppFiltro.g)));
+    const casa = G.find(g => g.props_casa) ? G.find(g => g.props_casa).props_casa : 'DraftKings';
+    box.innerHTML = (filas.length ? filas.map((r, k) => {
+      const x = r.x, g = r.g, rival = x.eq === g.local_fd ? 'vs ' + g.visita_fd : '@' + g.local_fd;
+      return `<div class="pp${r.pickDK ? ' pick' : ''}" data-k="${k}">
+        <div><div class="who">${esc(x.n)}<small>${esc(x.eq)} ${esc(rival)} · ${esc(fhora(g.utc))}</small></div>
+          <div class="mk">${esc(PN[x.s])} <b>${r.l === 'o' ? 'más' : 'menos'} de ${x.l}</b>${r.pickDK ? ' <span class="pill PICK">PICK</span>' : ''}</div></div>
+        <div class="od">${esc(casa)} ${r.dk.toFixed(2)}<br>necesitas <b>${r.nec.toFixed(2)}</b></div>
+        <div class="act"><input inputmode="decimal" autocomplete="off" placeholder="Tu momio" aria-label="Tu momio para ${esc(x.n)}"><span class="res" aria-live="polite">${r.pickDK ? `En ${esc(casa)} ya es PICK (EV ${spct(r.ev, 1)}).` : `En ${esc(casa)}: EV ${spct(r.ev, 1)}.`}</span><button class="linkbtn" type="button">Ver gráfica y calculadora →</button></div>
+      </div>`;
+    }).join('') : '<p class="empty">Ninguno con este filtro.</p>')
+      + `<p class="note">"Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
+    box.querySelectorAll('.pp').forEach(el => {
+      const r = filas[+el.dataset.k], inp = $('input', el), res = $('.res', el);
+      inp.addEventListener('input', () => {
+        const dec = parseOdds(inp.value);
+        if (!dec) { res.textContent = ''; return; }
+        const ev = r.p * dec - 1, v = ev >= 0.05 && dec >= 1.5 && dec <= 2.6 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
+        res.innerHTML = `<span class="pill ${v}">${v}</span> EV ${spct(ev, 1)}${v !== 'PICK' && ev >= 0.05 ? ' (solo cuentan momios de 1.50 a 2.60)' : ''}`;
+      });
+      $('button', el).addEventListener('click', () => {
+        showView('juegos'); showGame(r.gi); history.replaceState(null, '', '#j' + (r.gi + 1));
+        const tab = $('#game-detail .subtabs button[data-p="5"]'); if (tab) tab.click();
+        const fila = $(`#game-detail .prow.click[data-j="${CSS.escape(r.x.j)}"][data-s="${r.x.s}"]`);
+        if (fila) { fila.click(); const ld = $('#game-detail #p-lado'); if (ld) { ld.value = r.l; ld.dispatchEvent(new Event('change')); } }
+      });
     });
   }
 
