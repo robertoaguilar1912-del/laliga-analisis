@@ -67,10 +67,10 @@
   "visita": "CLE",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Miami Heat",
   "visita_espn": "Cleveland Cavaliers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -84,30 +84,7 @@
     "2-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -142,
-    120
-   ],
-   "ml_abre": [
-    -125,
-    105
-   ],
-   "spread": [
-    -2.5,
-    -108,
-    2.5,
-    -112
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    234.5,
-    -114,
-    -106
-   ],
-   "total_abre": 237.5
-  }
+  "momios": null
  },
  {
   "id": "401909299",
@@ -119,10 +96,10 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Chicago Bulls",
   "visita_espn": "Atlanta Hawks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "United Center",
   "records": {
    "home": [
@@ -136,30 +113,7 @@
     "4-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    211,
-    -257
-   ],
-   "ml_abre": [
-    216,
-    -263
-   ],
-   "spread": [
-    6.5,
-    -108,
-    -6.5,
-    -112
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    246.5,
-    -112,
-    -108
-   ],
-   "total_abre": 246.5
-  }
+  "momios": null
  },
  {
   "id": "401909300",
@@ -171,10 +125,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -188,30 +142,7 @@
     "5-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    136,
-    -162
-   ],
-   "ml_abre": [
-    119,
-    -141
-   ],
-   "spread": [
-    3.5,
-    -108,
-    -3.5,
-    -112
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    235.5,
-    -110,
-    -110
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909301",
@@ -223,10 +154,10 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Houston Rockets",
   "visita_espn": "Utah Jazz",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -240,30 +171,7 @@
     "0-5"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -1180,
-    740
-   ],
-   "ml_abre": [
-    -1580,
-    900
-   ],
-   "spread": [
-    -15.5,
-    -108,
-    15.5,
-    -112
-   ],
-   "spread_abre": -17.5,
-   "total": [
-    221.5,
-    -107,
-    -113
-   ],
-   "total_abre": 217.5
-  }
+  "momios": null
  },
  {
   "id": "401909302",
@@ -293,10 +201,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -650,
-    473
+    -700,
+    501
    ],
    "ml_abre": [
     -520,
@@ -304,15 +212,15 @@
    ],
    "spread": [
     -12.5,
-    -103,
+    -112,
     12.5,
-    -118
+    -108
    ],
    "spread_abre": -11.5,
    "total": [
     216.5,
-    -108,
-    -112
+    -112,
+    -108
    ],
    "total_abre": 234.5
   }
@@ -330,7 +238,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -345,7 +253,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     361,
     -468
@@ -382,7 +290,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "LA Clippers",
   "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -397,7 +305,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     231,
     -283
@@ -415,8 +323,8 @@
    "spread_abre": 7.5,
    "total": [
     222.5,
-    -108,
-    -112
+    -105,
+    -115
    ],
    "total_abre": 221.5
   }
