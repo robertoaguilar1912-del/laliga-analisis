@@ -1,7 +1,7 @@
 {
 "401841311": {
 "fotmob": 5103708,
-"visto": "2026-11-14T23:07+00:00",
+"visto": "2026-11-14T23:23+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -110,26 +110,17 @@
 },
 "401841175": {
 "fotmob": 5103573,
-"visto": "2026-11-14T23:07+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-14T23:23+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Robert",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 1166964.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Doma",
 "tipo": "Sanción",
 "regreso": "hasta el 15 de noviembre",
 "duda": false,
 "valor": 1097018.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -151,8 +142,8 @@
 "importante": false
 }
 ],
-"valor_xi": 5443494.0,
-"perdida": 0.556445547657442,
+"valor_xi": 5273487.0,
+"perdida": 0.3530953996852557,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -172,16 +163,7 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 8858676.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Thiago Mendes",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 964796.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -191,11 +173,20 @@
 "duda": false,
 "valor": 6912317.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Thiago Mendes",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 964796.0,
+"titular": false,
 "importante": false
 }
 ],
-"valor_xi": 90808364.0,
-"perdida": 0.20836548712627395,
+"valor_xi": 69663488.0,
+"perdida": 0.3569854268566053,
 "perdida_duda": 0.0
 }
 },
