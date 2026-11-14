@@ -1,7 +1,7 @@
 {
 "401877770": {
 "fotmob": 1000014229,
-"visto": "2026-11-14T19:56+00:00",
+"visto": "2026-11-14T20:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401877917": {
 "fotmob": 1000014233,
-"visto": "2026-11-14T19:56+00:00",
+"visto": "2026-11-14T20:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -129,7 +129,7 @@
 },
 "401878029": {
 "fotmob": 1000014227,
-"visto": "2026-11-14T19:56+00:00",
+"visto": "2026-11-14T20:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -220,7 +220,7 @@
 },
 "401878043": {
 "fotmob": 1000014231,
-"visto": "2026-11-14T19:56+00:00",
+"visto": "2026-11-14T20:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -293,7 +293,7 @@
 },
 "401877893": {
 "fotmob": 1000014234,
-"visto": "2026-11-14T19:56+00:00",
+"visto": "2026-11-14T20:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -393,8 +393,8 @@
 },
 "401877919": {
 "fotmob": 1000014236,
-"visto": "2026-11-14T19:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-14T20:01+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -405,19 +405,10 @@
 "valor": 270099.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Walmer Pacheco",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 264799.0,
-"titular": false,
-"importante": true
 }
 ],
-"valor_xi": 2012345.0,
-"perdida": 0.26580829827887364,
+"valor_xi": 2277144.0,
+"perdida": 0.11861305213899516,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -438,25 +429,7 @@
 "duda": false,
 "valor": 566135.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Rafael Carrascal",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 489014.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Jhon Murillo",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 318269.0,
-"titular": true,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Yhorman Hurtado",
@@ -477,15 +450,15 @@
 "importante": false
 }
 ],
-"valor_xi": 9220851.0,
-"perdida": 0.21136227014187736,
-"perdida_duda": 0.03451622849127483
+"valor_xi": 9365857.0,
+"perdida": 0.0954307758489159,
+"perdida_duda": 0.0
 }
 },
 "401878024": {
 "fotmob": 1000014230,
-"visto": "2026-11-14T19:56+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-14T20:01+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -498,24 +471,6 @@
 "importante": true
 },
 {
-"nombre": "Sergio Mosquera",
-"tipo": "Sanción",
-"regreso": "hasta el 14 de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Jhomier Guerrero",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 872675.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Santiago Giordana",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -523,11 +478,20 @@
 "valor": 293229.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Sergio Mosquera",
+"tipo": "Sanción",
+"regreso": "hasta el 14 de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 5102456.0,
-"perdida": 0.1122383024958961,
-"perdida_duda": 0.1710303822316155
+"valor_xi": 5655645.0,
+"perdida": 0.10126006848025292,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -538,7 +502,7 @@
 "duda": false,
 "valor": 263275.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Johan Wallens",
@@ -550,8 +514,8 @@
 "importante": false
 }
 ],
-"valor_xi": 2935678.0,
-"perdida": 0.0,
+"valor_xi": 2359112.0,
+"perdida": 0.11159919495132066,
 "perdida_duda": 0.0
 }
 }
