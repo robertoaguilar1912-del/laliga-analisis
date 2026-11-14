@@ -565,7 +565,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   // ---------------- props de jugadores (props_nba.py, desde el 14 nov 2026)
   // q: probabilidad de "más" de la mezcla modelo + casa en la línea de la casa; d: P(estadística ≥ k) desde k0 (para otras líneas)
   const PN = { pts: 'Puntos', reb: 'Rebotes', ast: 'Asistencias', tres: 'Triples', pra: 'Pts + Reb + Ast', pr: 'Pts + Reb', pa: 'Pts + Ast', ra: 'Reb + Ast' };
-  const PROPS = D.props || null, CON_PICK = new Set((PROPS && PROPS.con_pick) || ['reb', 'ast', 'ra']);
+  const PROPS = D.props || null, CON_PICK = new Set((PROPS && PROPS.con_pick) || ['reb', 'ast', 'ra', 'pr', 'pra']);
   const nPropPick = g => (g.props || []).filter(x => x.v === 'PICK').length;
   const pAlMenos = (x, k) => k <= x.k0 ? 1 : k - x.k0 >= x.d.length ? 0 : x.d[k - x.k0];
   function propCalc(x, lado, L) {     // {gana, push, pierde} con la línea L de tu casa
@@ -586,11 +586,11 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const porJug = {};
     P.forEach(x => { (porJug[x.j] = porJug[x.j] || []).push(x); });
     const eqs = [[g.visita_fd, g.visita_es, 'var(--away)'], [g.local_fd, g.local_es, 'var(--home)']];
-    const STO = ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'];
+    const STO = ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'];
     const jugHTML = xs => `<div class="pjug"><h4>${esc(xs[0].n)} <small>~${xs[0].min} min</small></h4>${xs.sort((a, b) => STO.indexOf(a.s) - STO.indexOf(b.s)).map(fila).join('')}</div>`;
     return `<div class="card"><h3>PICK de props</h3>
         ${picks.length ? picks.map(x => `<div class="mrow pick"><span class="mname">${esc(x.n)} · ${esc(PN[x.s])} ${x.lado === 'o' ? 'más' : 'menos'} de ${x.l}</span><span class="pill PICK">PICK</span><span class="mline">${esc(g.props_casa || 'DraftKings')} ${(x.lado === 'o' ? x.o : x.u).toFixed(2)} · mezcla ${pct(x.lado === 'o' ? x.q : 1 - x.q, 1)} · justo ${(1 / (x.lado === 'o' ? x.q : 1 - x.q)).toFixed(2)} · EV ${spct(x.lado === 'o' ? x.ev_o : x.ev_u, 1)} · modelo espera ${x.mu}</span></div>`).join('')
-          : '<p class="empty">Ningún prop de rebotes o asistencias con valor por ahora.</p>'}
+          : `<p class="empty">Ningún prop con PICK por ahora (${[...CON_PICK].map(k => PN[k].toLowerCase()).join(', ')}).</p>`}
         <p class="note">Momios de ${esc(g.props_casa || 'DraftKings')} vistos ${g.props_t ? fdt(g.props_t).toLowerCase() : ''}. <b>Apuesta temprano:</b> en la prueba la ventaja era contra la línea de apertura; contra la de cierre casi desaparece.</p>
       </div>
       <div class="card"><h3>Compara con tu casa</h3>
@@ -618,8 +618,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   }
   function propsNota() {
     const pr = PROPS && PROPS.prueba;
-    const t = s => pr && pr[s] ? `${num(pr[s].n)} apuestas, ${spct(pr[s].roi, 1)}` : '—';
-    return `<p class="note"><b>Cómo funciona.</b> El modelo espera minutos × producción por minuto de cada jugador (con más peso a los últimos juegos, los compañeros que faltan y el ritmo del juego) y saca la probabilidad de pasar la línea. Solo, es peor que la casa; lo que funcionó fue mezclarlo con el precio de la casa ("mezcla"). En la prueba con temporadas pasadas (2023-24 a hoy, contra la línea de <b>apertura</b> de DraftKings y ESPN BET, EV de +5% o más): rebotes ${t('reb')}, asistencias ${t('ast')}, rebotes + asistencias ${t('ra')}; puntos ${t('pts')}, triples ${t('tres')}. Por eso solo hay PICK en rebotes, asistencias y R+A (y solo con momios de 1.50 a 2.60); los demás salen "en prueba". La mayoría de los PICK son "menos": las casas suelen inflar el "más" en los props. Contra la línea de cierre la ventaja casi desaparece: <b>sirve si apuestas temprano</b>, antes de que la casa la mueva. Si el jugador no juega, la apuesta se anula.</p>`;
+    const t = s => pr && pr[s] ? `${num(pr[s].n)} apuestas, ${spct(pr[s].roi, 1)}${pr[s].desde && pr[s].desde > 2024 ? ' (desde 2025-26)' : ''}` : '—';
+    const conPick = [...CON_PICK].map(k => PN[k].toLowerCase()).join(', ');
+    return `<p class="note"><b>Cómo funciona.</b> El modelo espera minutos × producción por minuto de cada jugador (con más peso a los últimos juegos, los compañeros que faltan y el ritmo del juego) y saca la probabilidad de pasar la línea. Solo, es peor que la casa; lo que funcionó fue mezclarlo con el precio de la casa ("mezcla"). En la prueba con temporadas pasadas (contra la línea de <b>apertura</b> de DraftKings y ESPN BET, EV de +5% o más, solo temporadas que la mezcla no vio): rebotes ${t('reb')}, asistencias ${t('ast')}, reb + ast ${t('ra')}, pts + reb ${t('pr')}, pts + reb + ast ${t('pra')}; puntos ${t('pts')}, triples ${t('tres')}, pts + ast ${t('pa')}. Por eso hay PICK en ${conPick} (solo con momios de 1.50 a 2.60); los demás salen "en prueba". Los combinados tienen menos temporadas de prueba. La mayoría de los PICK son "menos": las casas suelen inflar el "más" en los props. Contra la línea de cierre la ventaja casi desaparece: <b>sirve si apuestas temprano</b>, antes de que la casa la mueva. Si el jugador no juega, la apuesta se anula.</p>`;
   }
   function propsCalc(g, el) {
     const P = g.props || [], box = $('#pcalc', el); if (!box || !P.length) return;
@@ -628,7 +629,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const actual = () => P.find(x => x.j === jug.value && x.s === st.value);
     const llenarSt = () => {
       const xs = P.filter(x => x.j === jug.value);
-      st.innerHTML = xs.sort((a, b) => ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'].indexOf(a.s) - ['reb', 'ast', 'ra', 'pts', 'tres', 'pr', 'pa', 'pra'].indexOf(b.s)).map(x => `<option value="${x.s}">${esc(PN[x.s])}</option>`).join('');
+      st.innerHTML = xs.sort((a, b) => ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(a.s) - ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(b.s)).map(x => `<option value="${x.s}">${esc(PN[x.s])}</option>`).join('');
       const x = actual(); if (x) { lin.value = x.l; lado.value = x.lado; }
     };
     function calc() {
