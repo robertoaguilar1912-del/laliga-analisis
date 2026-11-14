@@ -69,10 +69,10 @@
    "nombre": "Mikel Brown Jr.",
    "pos": "G",
    "estado": "Day-To-Day",
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-14",
    "tipo": "Illness",
    "regreso": "2026-11-14",
-   "nota": "Brown (illness) is listed as questionable for Saturday's game against Memphis."
+   "nota": "Brown (illness) has been upgraded to probable for Saturday's game at Memphis."
   },
   {
    "id": "5279130",
@@ -119,24 +119,24 @@
  ],
  "Chicago Bulls": [
   {
-   "id": "4848625",
-   "nombre": "Dailyn Swain",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-14",
-   "tipo": "Back",
-   "regreso": "2026-11-14",
-   "nota": "Swain (back) is out for Friday's game against the Hawks."
-  },
-  {
    "id": "5105555",
    "nombre": "Tobe Awaka",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-14",
    "tipo": "Back",
+   "regreso": "2026-11-16",
+   "nota": "Awaka has been ruled out for Saturday's game against the Timberwolves."
+  },
+  {
+   "id": "4278067",
+   "nombre": "Nic Claxton",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-14",
+   "tipo": "Hamstring",
    "regreso": "2026-11-14",
-   "nota": "Awaka (back) has been ruled out for Friday's game against the Hawks."
+   "nota": "Claxton (hamstring) is listed as questionable for Saturday's game against the Timberwolves."
   },
   {
    "id": "4397189",
@@ -144,9 +144,19 @@
    "pos": "F",
    "estado": "Day-To-Day",
    "fecha": "2026-11-14",
-   "tipo": "Hand",
+   "tipo": "Finger",
    "regreso": "2026-11-14",
-   "nota": "Smith (hand) exited Friday's 125-117 win over the Hawks in overtime and did not return, finishing with 15 points (6-15 FG, 1-6 3Pt, 2-2 FT), 12 rebounds, three assists and three steals across 32 minutes."
+   "nota": "Smith (finger) is listed as questionable for Saturday's game at Minnesota."
+  },
+  {
+   "id": "2595516",
+   "nombre": "Norman Powell",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-14",
+   "tipo": "Back",
+   "regreso": "2026-11-14",
+   "nota": "Powell (back) is listed as questionable for Saturday's game against Minnesota."
   },
   {
    "id": "5095151",
@@ -548,7 +558,7 @@
    "fecha": "2026-11-14",
    "tipo": "Illness",
    "regreso": "2026-11-14",
-   "nota": "Larsson (illness) is out for Friday's game against Cleveland."
+   "nota": "Larsson (illness) is listed as doubtful for Saturday's game against Detroit."
   },
   {
    "id": "6475",
@@ -558,7 +568,17 @@
    "fecha": "2026-11-14",
    "tipo": "Ankle",
    "regreso": "2026-11-14",
-   "nota": "Thompson (ankle) is out for Friday's game against the Cavaliers."
+   "nota": "Thompson (ankle) is listed as probable for Saturday's game against the Pistons."
+  },
+  {
+   "id": "3032977",
+   "nombre": "Giannis Antetokounmpo",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-14",
+   "tipo": "Wrist",
+   "regreso": "2026-11-14",
+   "nota": "Antetokounmpo (wrist) is listed as probable for Saturday's game against Detroit."
   }
  ],
  "Minnesota Timberwolves": [
@@ -585,14 +605,44 @@
  ],
  "New Orleans Pelicans": [
   {
+   "id": "5061589",
+   "nombre": "Yves Missi",
+   "pos": "C",
+   "estado": "Out",
+   "fecha": "2026-11-14",
+   "tipo": "Knee",
+   "regreso": "2026-11-14",
+   "nota": "Missi (knee) has been upgraded to probable for Saturday's game versus the Nuggets."
+  },
+  {
+   "id": "4431675",
+   "nombre": "Trendon Watford",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-14",
+   "tipo": "Ankle",
+   "regreso": "2026-11-16",
+   "nota": "Watford (ankle) has been ruled out for Saturday's game against Denver."
+  },
+  {
    "id": "4576086",
    "nombre": "Bryce McGowens",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-14",
    "tipo": "Elbow",
-   "regreso": "2026-11-14",
-   "nota": "McGowens (elbow) is listed as out for Friday's game against the Grizzlies."
+   "regreso": "2026-11-16",
+   "nota": "McGowens (elbow) has been ruled out for Saturday's game against the Nuggets."
+  },
+  {
+   "id": "4397688",
+   "nombre": "Trey Murphy III",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-14",
+   "tipo": "Knee",
+   "regreso": "2026-11-16",
+   "nota": "Murphy (knees) has been ruled out for Saturday's game against the Nuggets."
   },
   {
    "id": "3907497",
@@ -603,36 +653,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-20",
    "nota": "Murray (ankle) is out for Friday's game against Memphis."
-  },
-  {
-   "id": "5061589",
-   "nombre": "Yves Missi",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-13",
-   "tipo": "Knee",
-   "regreso": "2026-11-14",
-   "nota": "Missi (knee) is out for Friday's game against the Grizzlies."
-  },
-  {
-   "id": "4397688",
-   "nombre": "Trey Murphy III",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-13",
-   "tipo": "Knee",
-   "regreso": "2026-11-14",
-   "nota": "Murphy (knee) is out for Friday's game against Memphis."
-  },
-  {
-   "id": "4431675",
-   "nombre": "Trendon Watford",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-12",
-   "tipo": "Ankle",
-   "regreso": "2026-11-14",
-   "nota": "Watford (ankle) is listed as out for Friday's game against the Grizzlies."
   }
  ],
  "Oklahoma City Thunder": [
@@ -699,6 +719,16 @@
  ],
  "Orlando Magic": [
   {
+   "id": "5214637",
+   "nombre": "Noah Penda",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-14",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-22",
+   "nota": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports."
+  },
+  {
    "id": "4065654",
    "nombre": "Jonathan Isaac",
    "pos": "F",
@@ -717,16 +747,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-22",
    "nota": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports."
-  },
-  {
-   "id": "5214637",
-   "nombre": "Noah Penda",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-10-17",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-18",
-   "nota": "Penda was diagnosed with a partially torn right hamstring Saturday, Jason Beede of the Orlando Sentinel reports."
   },
   {
    "id": "5107251",
@@ -901,6 +921,16 @@
  ],
  "Toronto Raptors": [
   {
+   "id": "4433134",
+   "nombre": "Scottie Barnes",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-14",
+   "tipo": "Groin",
+   "regreso": "2026-11-15",
+   "nota": "Barnes (groin) is listed as questionable for Sunday's game against the Knicks, Michael Grange of Sportsnet.ca reports."
+  },
+  {
    "id": "4411057",
    "nombre": "Kevin McCullar Jr.",
    "pos": "G",
@@ -919,16 +949,6 @@
    "tipo": "Illness",
    "regreso": "2026-11-15",
    "nota": "Jackson-Davis is out for Thursday's game against the 76ers due to an illness."
-  },
-  {
-   "id": "4433134",
-   "nombre": "Scottie Barnes",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-12",
-   "tipo": "Groin",
-   "regreso": "2026-11-15",
-   "nota": "Barnes (groin) is out for Thursday's game against Philadelphia."
   },
   {
    "id": "6450",
