@@ -422,6 +422,21 @@ def para_juegos(partidos):
         orden = {'PICK': 0, 'PRUEBA': 1, 'SKIP': 2}
         p['props'] = sorted(out, key=lambda z: (orden[z['v']], -max(z['ev_o'], z['ev_u'])))
         p['props_casa'], p['props_t'] = prox[p['id']]['casa'], prox[p['id']]['t']
+        p['props_hist'] = _historial({z['j'] for z in out}, J)
+
+
+def _historial(jugadores, J, n=20):
+    """Últimos n juegos que jugó cada jugador, para las gráficas de la pestaña Jugadores:
+    [fecha (Honduras), rival ('@BOS' si fue de visita), minutos, puntos, rebotes, asistencias, triples]."""
+    P = J[J.jugo & J.jugador.isin(jugadores)].sort_values('utc')
+    out = {}
+    for j, g in P.groupby('jugador'):
+        g = g.tail(n)
+        fecha = (g.utc - pd.Timedelta(hours=6)).dt.strftime('%Y-%m-%d')
+        rival = np.where(g.es_local, g.visita, '@' + g.local)
+        out[j] = [[f, r, int(round(mi)), *[None if pd.isna(v) else int(v) for v in (pt, rb, a, t)]]
+                  for f, r, mi, pt, rb, a, t in zip(fecha, rival, g['min'], g.pts, g.reb, g.ast, g.tres)]
+    return out
 
 
 if __name__ == '__main__':
