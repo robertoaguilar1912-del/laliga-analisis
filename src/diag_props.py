@@ -1,27 +1,23 @@
-"""Props de la NBA en ESPN (python diag_props.py): para los juegos de hoy y mañana, si ESPN ya tiene props de DraftKings,
-cuántos y de qué tipo, con un ejemplo. Sirve para saber desde qué hora salen. No usa claves."""
-from datetime import datetime, timedelta, timezone
+"""¿Se puede leer stats.nba.com (estadísticas oficiales, gratis) desde GitHub? (python diag_props.py)
+Prueba unas consultas de ejemplo (rastreo de rebotes y asistencias, estadísticas avanzadas) y el CDN de nba.com. No usa claves."""
 import requests
 
-UA = {'User-Agent': 'Mozilla/5.0 (laliga-analisis)'}
-CORE = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{0}/competitions/{0}'
-hoy = datetime.now(timezone.utc)
-print('hora UTC', hoy.isoformat(timespec='minutes'))
-for d in (hoy - timedelta(hours=6), hoy + timedelta(hours=18), hoy + timedelta(hours=42)):
-    sb = requests.get('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard',
-                      params={'dates': d.strftime('%Y%m%d')}, headers=UA, timeout=30).json()
-    for e in sb.get('events') or []:
-        eid, st = e['id'], ((e.get('status') or {}).get('type') or {}).get('state')
-        od = requests.get(CORE.format(eid) + '/odds', headers=UA, timeout=30)
-        casas = [(str((i.get('provider') or {}).get('id')), (i.get('provider') or {}).get('name')) for i in (od.json().get('items') or [])] if od.ok else []
-        txt = []
-        for pid, _ in casas:
-            r = requests.get(CORE.format(eid) + f'/odds/{pid}/propBets', params={'limit': 1000}, headers=UA, timeout=30)
-            j = r.json() if r.ok else {}
-            it = j.get('items') or []
-            tipos = {}
-            for x in it:
-                n = (x.get('type') or {}).get('name'); tipos[n] = tipos.get(n, 0) + 1
-            ej = next(((x.get('lastUpdated'), (x.get('odds') or {}).get('total'), (x.get('odds') or {}).get('decimal')) for x in it if (x.get('type') or {}).get('name') == 'Total Rebounds'), None)
-            txt.append(f"casa {pid}: {r.status_code} {j.get('count')} props; rebotes {tipos.get('Total Rebounds')}, asistencias {tipos.get('Total Assists')}, PRA {tipos.get('Total Points, Rebounds, and Assists')}; ejemplo {ej}")
-        print(f"{e.get('date')} {e.get('shortName')} ({st}) id {eid}: casas {casas}\n   " + '\n   '.join(txt))
+H = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36',
+     'Referer': 'https://www.nba.com/', 'Origin': 'https://www.nba.com', 'Accept': 'application/json, text/plain, */*',
+     'x-nba-stats-origin': 'stats', 'x-nba-stats-token': 'true', 'Accept-Language': 'en-US,en;q=0.9'}
+P = {'Season': '2025-26', 'SeasonType': 'Regular Season', 'PerMode': 'PerGame', 'LeagueID': '00'}
+pruebas = [
+    ('rastreo de rebotes', 'https://stats.nba.com/stats/leaguedashptstats', {**P, 'PlayerOrTeam': 'Player', 'PtMeasureType': 'Rebounding'}),
+    ('rastreo de pases (asistencias potenciales)', 'https://stats.nba.com/stats/leaguedashptstats', {**P, 'PlayerOrTeam': 'Player', 'PtMeasureType': 'Passing'}),
+    ('avanzadas por jugador', 'https://stats.nba.com/stats/leaguedashplayerstats', {**P, 'MeasureType': 'Advanced', 'LastNGames': 0, 'Month': 0, 'OpponentTeamID': 0, 'PaceAdjust': 'N', 'Period': 0, 'PlusMinus': 'N', 'Rank': 'N'}),
+    ('calendario (CDN)', 'https://cdn.nba.com/static/json/staticData/scheduleLeagueV2.json', {}),
+]
+for nombre, url, params in pruebas:
+    try:
+        r = requests.get(url, params=params, headers=H, timeout=25)
+        j = r.json() if r.ok else {}
+        rs = (j.get('resultSets') or [{}])
+        rs = rs[0] if isinstance(rs, list) and rs else rs
+        print(f"{nombre}: {r.status_code}; columnas {(rs.get('headers') or [])[:30]}; filas {len(rs.get('rowSet') or [])}" if 'resultSets' in j else f"{nombre}: {r.status_code}; claves {list(j)[:6]}")
+    except Exception as e:
+        print(f'{nombre}: error {repr(e)[:160]}')
