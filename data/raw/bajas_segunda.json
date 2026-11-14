@@ -1,8 +1,8 @@
 {
 "401883114": {
 "fotmob": 5868546,
-"visto": "2026-11-14T12:03+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-14T12:42+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -24,20 +24,20 @@
 "importante": true
 },
 {
-"nombre": "Iván Alejo",
-"tipo": "Sanción",
-"regreso": "hasta el 14 de noviembre",
-"duda": false,
-"valor": 367935.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Álex Balboa",
 "tipo": "Internationalduty",
 "regreso": "hasta el 14 de noviembre",
 "duda": false,
 "valor": 381595.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Iván Alejo",
+"tipo": "Sanción",
+"regreso": "hasta el 14 de noviembre",
+"duda": false,
+"valor": 367935.0,
 "titular": false,
 "importante": false
 },
@@ -51,8 +51,8 @@
 "importante": false
 }
 ],
-"valor_xi": 9723043.0,
-"perdida": 0.25092216500533837,
+"valor_xi": 9635032.0,
+"perdida": 0.21502699731562905,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -63,7 +63,7 @@
 "regreso": "hasta el 14 de noviembre",
 "duda": false,
 "valor": 6773847.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -94,15 +94,6 @@
 "importante": true
 },
 {
-"nombre": "Ousmane Nana Camara",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2001338.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Fran Castillo",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -112,14 +103,14 @@
 "importante": false
 }
 ],
-"valor_xi": 13099973.0,
-"perdida": 0.7977976748501695,
-"perdida_duda": 0.15277420800790964
+"valor_xi": 8439823.0,
+"perdida": 1.238311277381054,
+"perdida_duda": 0.0
 }
 },
 "401883134": {
 "fotmob": 5868544,
-"visto": "2026-11-14T05:25+00:00",
+"visto": "2026-11-14T12:42+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [],
@@ -129,6 +120,24 @@
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Alejo Sarco",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 2046078.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Manu Rodríguez",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1455789.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Juan Otero",
 "tipo": "Sanción",
@@ -176,7 +185,7 @@
 }
 ],
 "valor_xi": 8536952.0,
-"perdida": 0.10771092539819832,
+"perdida": 0.517912013561749,
 "perdida_duda": 0.2997552287982877
 }
 },
