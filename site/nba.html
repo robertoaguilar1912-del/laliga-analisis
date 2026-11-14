@@ -392,6 +392,24 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
 @media (max-width: 560px) { .prow { grid-template-columns: minmax(0, 1fr) auto; } .prow .mline { grid-column: 1 / -1; } }
 .pfil { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 10px; }
 .pill.PRUEBA { opacity: .75; }
+.hist { --mas: var(--pos); --menos: #eb6834; margin: 10px 0 4px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hist { --menos: #d95926; } }
+:root[data-theme="dark"] .hist { --menos: #d95926; }
+.hist-top { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; justify-content: space-between; }
+.hist-sum { font-size: 13px; color: var(--ink-2); }
+.hist-sum b { color: var(--ink); }
+.hist-n { display: inline-flex; gap: 4px; }
+.hist-n button { font: 600 12px var(--font-data); color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+.hist-n button[aria-pressed="true"] { color: var(--ink); border-color: var(--ink-2); background: var(--surface-2); }
+.hist svg { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; }
+.hist .bar { cursor: pointer; }
+.hist .bar:focus { outline: none; }
+.hist .bar:focus-visible rect.hit, .hist .bar.sel rect.hit { fill: color-mix(in srgb, var(--ink) 6%, transparent); }
+.hist-key { display: flex; gap: 14px; font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+.hist-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.hist-tip { font: 12px var(--font-data); color: var(--ink-2); min-height: 1.5em; margin-top: 4px; }
+.prow.click { cursor: pointer; border-radius: 6px; }
+.prow.click:hover { background: var(--surface-2); }
 .temprano { background: color-mix(in srgb, var(--pos, #2e7d32) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--pos, #2e7d32) 45%, var(--surface)); border-radius: 10px; padding: 9px 12px; font-size: 13px; }
 </style>
 
@@ -581,7 +599,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const picks = P.filter(x => x.v === 'PICK');
     const fila = x => {
       const ev = x.lado === 'o' ? x.ev_o : x.ev_u, lado = x.lado === 'o' ? 'más' : 'menos';
-      return `<div class="prow"><span><b>${esc(PN[x.s])}</b> ${x.l}</span>${x.v === 'SKIP' ? '<span></span>' : `<span class="pill ${x.v === 'PICK' ? 'PICK' : 'PRUEBA'}" title="${x.v === 'PRUEBA' ? 'Valor según la mezcla, pero en este mercado no ganó en la prueba: no es PICK' : ''}">${x.v === 'PICK' ? 'PICK ' + lado : 'en prueba'}</span>`}
+      return `<div class="prow click" data-j="${esc(x.j)}" data-s="${x.s}" title="Ver su historial y compararlo con tu casa"><span><b>${esc(PN[x.s])}</b> ${x.l}</span>${x.v === 'SKIP' ? '<span></span>' : `<span class="pill ${x.v === 'PICK' ? 'PICK' : 'PRUEBA'}" title="${x.v === 'PRUEBA' ? 'Valor según la mezcla, pero en este mercado no ganó en la prueba: no es PICK' : ''}">${x.v === 'PICK' ? 'PICK ' + lado : 'en prueba'}</span>`}
         <span class="mline">más ${x.o.toFixed(2)} / menos ${x.u.toFixed(2)} · casa ${pct(x.pc, 0)} más · modelo ${pct(x.pm, 0)} (espera ${x.mu}) · mezcla ${pct(x.q, 1)} · justo ${(1 / x.q).toFixed(2)} / ${(1 / (1 - x.q)).toFixed(2)}${ev >= 0 ? ` · EV ${lado} ${spct(ev, 1)}` : ''}${x.abre != null && x.abre !== x.l ? ` · abrió en ${x.abre}` : ''}</span></div>`;
     };
     const porJug = {};
@@ -594,7 +612,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
           : `<p class="empty">Ningún prop con PICK por ahora (${[...CON_PICK].map(k => PN[k].toLowerCase()).join(', ')}).</p>`}
         <p class="note">Momios de ${esc(g.props_casa || 'DraftKings')} vistos ${g.props_t ? fdt(g.props_t).toLowerCase() : ''}. <b>Apuesta temprano:</b> en la prueba la ventaja era contra la línea de apertura; contra la de cierre casi desaparece.</p>
       </div>
-      <div class="card"><h3>Compara con tu casa</h3>
+      <div class="card"><h3>Historial y tu casa</h3>
         <div class="calc" id="pcalc">
           <div class="calc-row">
             <label class="sm">Jugador<select id="p-jug">${Object.values(porJug).sort((a, b) => a[0].n.localeCompare(b[0].n)).map(xs => `<option value="${esc(xs[0].j)}">${esc(xs[0].n)} (${esc(xs[0].eq)})</option>`).join('')}</select></label>
@@ -605,6 +623,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
             <label class="sm">Línea de tu casa<input id="p-lin" inputmode="decimal" autocomplete="off"></label>
             <label class="sm">Momio (decimal)<input id="p-mom" inputmode="decimal" autocomplete="off" placeholder="Ej. 1.83"></label>
           </div>
+          <div class="hist" id="p-hist"></div>
           <div class="calc-out" id="p-out" aria-live="polite"></div>
           <div class="calc-row">
             <input id="p-monto" placeholder="Monto" inputmode="decimal" autocomplete="off" aria-label="Monto apostado">
@@ -628,11 +647,64 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const conPick = [...CON_PICK].map(k => PN[k].toLowerCase()).join(', ');
     return `<p class="note"><b>Cómo funciona.</b> El modelo espera minutos × producción por minuto de cada jugador (con más peso a los últimos juegos, los compañeros que faltan y el ritmo del juego) y saca la probabilidad de pasar la línea. Solo, es peor que la casa; lo que funcionó fue mezclarlo con el precio de la casa ("mezcla"). En la prueba con temporadas pasadas (contra la línea de <b>apertura</b> de DraftKings y ESPN BET, EV de +5% o más, solo temporadas que la mezcla no vio): rebotes ${t('reb')}, asistencias ${t('ast')}, reb + ast ${t('ra')}, pts + reb ${t('pr')}, pts + reb + ast ${t('pra')}; puntos ${t('pts')}, triples ${t('tres')}, pts + ast ${t('pa')}. Por eso hay PICK en ${conPick} (solo con momios de 1.50 a 2.60); los demás salen "en prueba". Los combinados tienen menos temporadas de prueba. La mayoría de los PICK son "menos": las casas suelen inflar el "más" en los props. Contra la línea de cierre la ventaja casi desaparece: <b>sirve si apuestas temprano</b>, antes de que la casa la mueva. Si el jugador no juega, la apuesta se anula.</p>`;
   }
+  // historial: [fecha, rival, min, pts, reb, ast, tres]
+  const HCOL = { pts: [3], reb: [4], ast: [5], tres: [6], pr: [3, 4], pa: [3, 5], ra: [4, 5], pra: [3, 4, 5] };
+  const valorH = (fila, s) => { let v = 0; for (const i of HCOL[s]) { if (fila[i] == null) return null; v += fila[i]; } return v; };
+  function histHTML(g, j, s, L, n) {
+    const H = ((g.props_hist || {})[j] || []).filter(f => valorH(f, s) != null).slice(-n);
+    if (!H.length) return '<p class="empty">Sin juegos para mostrar.</p>';
+    const vals = H.map(f => valorH(f, s));
+    const mas = vals.filter(v => v > L).length, menos = vals.filter(v => v < L).length, emp = vals.length - mas - menos;
+    const prom = vals.reduce((a, b) => a + b, 0) / vals.length, ord = [...vals].sort((a, b) => a - b);
+    const med = ord.length % 2 ? ord[(ord.length - 1) / 2] : (ord[ord.length / 2 - 1] + ord[ord.length / 2]) / 2;
+    // geometría
+    const W = 360, padL = 30, padR = 8, top = 16, base = 150, lab = n <= 10 ? 34 : 18, Hh = base + lab;
+    const ymax = Math.max(1, ...vals, L) * 1.12, y = v => base - (v / ymax) * (base - top);
+    const slot = (W - padL - padR) / H.length, bw = Math.max(4, Math.min(24, slot - 4));
+    const yl = y(L), fecha = f => f[0].slice(5).replace('-', '/');
+    const barras = H.map((f, i) => {
+      const v = vals[i], x = padL + i * slot + (slot - bw) / 2, yt = y(v), h = base - yt, r = Math.min(4, h, bw / 2);
+      const col = v > L ? 'var(--mas)' : v < L ? 'var(--menos)' : 'var(--market)';
+      const forma = h <= 0 ? `<rect x="${x}" y="${base - 2}" width="${bw}" height="2" rx="1" fill="${col}"/>`     // 0: una rayita para que se vea el juego
+        : `<path d="M${x},${base} V${yt + r} Q${x},${yt} ${x + r},${yt} H${x + bw - r} Q${x + bw},${yt} ${x + bw},${yt + r} V${base} Z" fill="${col}"/>`;
+      const txt = `${fecha(f)} ${f[1]}: ${v} ${PN[s].toLowerCase()} (${v > L ? 'más' : v < L ? 'menos' : 'empate'}) · ${f[2]} min`;
+      return `<g class="bar" tabindex="0" data-t="${esc(txt)}" aria-label="${esc(txt)}"><rect class="hit" x="${padL + i * slot}" y="${top - 12}" width="${slot}" height="${base - top + 12 + lab}" fill="transparent"/>${forma}`
+        + (n <= 10 ? `<text x="${x + bw / 2}" y="${Math.min(yt, base) - 4}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)" font-family="var(--font-data)">${v}</text>` : '')
+        + (n <= 10 || i % 4 === 0 || i === H.length - 1 ? `<text x="${padL + i * slot + slot / 2}" y="${base + 13}" text-anchor="middle" font-size="9.5" fill="var(--ink-3)" font-family="var(--font-data)">${fecha(f)}</text>` : '')
+        + (n <= 10 ? `<text x="${padL + i * slot + slot / 2}" y="${base + 26}" text-anchor="middle" font-size="9.5" fill="var(--ink-3)" font-family="var(--font-data)">${esc(f[1])}</text>` : '')
+        + '</g>';
+    }).join('');
+    const sum = `Últimos ${vals.length}: pasó la línea <b>${mas} de ${vals.length}</b>${emp ? ` (${emp} empate${emp > 1 ? 's' : ''})` : ''} · promedio <b>${prom.toFixed(1)}</b> · mediana <b>${med}</b>`;
+    return `<div class="hist-top"><span class="hist-sum">${sum}</span><span class="hist-n" role="group" aria-label="Juegos">${[5, 10, 20].map(k => `<button type="button" data-n="${k}" aria-pressed="${k === n}">${k}</button>`).join('')}</span></div>
+      <svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="${esc(PN[s])} de sus últimos ${vals.length} juegos contra la línea ${L}: ${mas} más, ${menos} menos">
+        <line x1="${padL}" x2="${W - padR}" y1="${base}" y2="${base}" stroke="var(--line)" stroke-width="1"/>
+        <text x="${padL - 6}" y="${base + 4}" text-anchor="end" font-size="10" fill="var(--ink-3)" font-family="var(--font-data)">0</text>
+        ${barras}
+        <line x1="${padL}" x2="${W - padR}" y1="${yl}" y2="${yl}" stroke="var(--ink-2)" stroke-width="1.5"/>
+        <text x="${padL - 6}" y="${yl + 4}" text-anchor="end" font-size="10.5" font-weight="700" fill="var(--ink)" font-family="var(--font-data)">${L}</text>
+      </svg>
+      <div class="hist-key"><span><i style="background:var(--mas)"></i>Más de ${L}</span><span><i style="background:var(--menos)"></i>Menos</span>${emp ? '<span><i style="background:var(--market)"></i>Empate</span>' : ''}</div>
+      <div class="hist-tip" aria-live="polite">Toca una barra para ver el juego.</div>
+      <p class="note" style="margin-top:4px">Sirve para conocer al jugador; sola no predice: la casa ya toma en cuenta las rachas (en la prueba, el "más" salió igual de seguido con 9 de 10 que con 2 de 10).</p>`;
+  }
   function propsCalc(g, el) {
     const P = g.props || [], box = $('#pcalc', el); if (!box || !P.length) return;
     const jug = $('#p-jug', box), st = $('#p-st', box), lado = $('#p-lado', box), lin = $('#p-lin', box), mom = $('#p-mom', box);
     const out = $('#p-out', box), monto = $('#p-monto', box), save = $('#p-save', box), msg = $('#p-msg', box);
     const actual = () => P.find(x => x.j === jug.value && x.s === st.value);
+    const hist = $('#p-hist', box);
+    let nHist = 10;
+    function dibujar() {
+      const x = actual(); if (!x || !hist) return;
+      const L = parseFloat(String(lin.value).replace(',', '.'));
+      hist.innerHTML = histHTML(g, x.j, x.s, isFinite(L) ? L : x.l, nHist);
+      hist.querySelectorAll('.hist-n button').forEach(b => b.addEventListener('click', () => { nHist = +b.dataset.n; dibujar(); }));
+      const tip = $('.hist-tip', hist);
+      hist.querySelectorAll('.bar').forEach(b => {
+        const ver = () => { hist.querySelectorAll('.bar.sel').forEach(o => o.classList.remove('sel')); b.classList.add('sel'); tip.textContent = b.dataset.t; };
+        b.addEventListener('pointerenter', ver); b.addEventListener('click', ver); b.addEventListener('focus', ver);
+      });
+    }
     const llenarSt = () => {
       const xs = P.filter(x => x.j === jug.value);
       st.innerHTML = xs.sort((a, b) => ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(a.s) - ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'].indexOf(b.s)).map(x => `<option value="${x.s}">${esc(PN[x.s])}</option>`).join('');
@@ -657,11 +729,19 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
       return { x, L, dec, p, c };
     }
-    jug.addEventListener('change', () => { llenarSt(); calc(); msg.textContent = ''; });
-    st.addEventListener('change', () => { const x = actual(); if (x) { lin.value = x.l; lado.value = x.lados === 'u' ? 'u' : x.lado; } calc(); msg.textContent = ''; });
+    jug.addEventListener('change', () => { llenarSt(); calc(); dibujar(); msg.textContent = ''; });
+    st.addEventListener('change', () => { const x = actual(); if (x) { lin.value = x.l; lado.value = x.lados === 'u' ? 'u' : x.lado; } calc(); dibujar(); msg.textContent = ''; });
     [lado, lin, mom].forEach(i => i.addEventListener('input', () => { calc(); msg.textContent = ''; }));
+    lin.addEventListener('input', dibujar);
     lado.addEventListener('change', () => { calc(); msg.textContent = ''; });
-    llenarSt(); calc();
+    llenarSt(); calc(); dibujar();
+    // tocar un prop de la lista lo abre aquí, con su gráfica
+    el.querySelectorAll('.prow.click').forEach(r => r.addEventListener('click', () => {
+      jug.value = r.dataset.j; llenarSt(); st.value = r.dataset.s;
+      const x = actual(); if (x) { lin.value = x.l; lado.value = x.lados === 'u' ? 'u' : x.lado; }
+      calc(); dibujar(); msg.textContent = '';
+      box.closest('.card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
     save.addEventListener('click', () => {
       const r = calc(); if (!r) return;
       const amt = parseFloat(String(monto.value).replace(',', '.'));

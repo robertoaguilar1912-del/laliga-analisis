@@ -5,7 +5,7 @@
   "estadio": "Estadio Carlos Tartiere",
   "local_espn": "Real Oviedo",
   "visita_espn": "Girona",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -150
+    120,
+    -160
    ],
    "spread": [
     [
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
+    -125,
     275,
-    350
+    330
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -172,11 +172,11 @@
    "spread": [
     [
      "-0.5",
-     -145
+     -135
     ],
     [
      "+0.5",
-     105
+     100
     ]
    ]
   }
