@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    145,
     240,
-    140
+    165
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -22,12 +22,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -195
+     "-0.5",
+     130
     ],
     [
-     "-0.5",
-     125
+     "+0.5",
+     -200
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    310,
-    360
+    -170,
+    320,
+    370
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    110
+    -165,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -185
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   }
@@ -110,9 +110,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
+    170,
     290,
-    115
+    120
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+0.5",
-     -160
+     -170
     ],
     [
      "-0.5",
-     105
+     110
     ]
    ]
   }
@@ -140,7 +140,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    140,
+    270,
+    155
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
+  }
  },
  {
   "id": "401877049",
@@ -151,7 +173,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    150,
+    250,
+    150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -210
+    ]
+   ]
+  }
  },
  {
   "id": "401877048",
@@ -162,7 +206,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    255,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401877047",

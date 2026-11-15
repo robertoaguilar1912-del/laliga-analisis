@@ -532,6 +532,13 @@
  ],
  "Buffalo Bills": [
   {
+   "nombre": "Spencer Brown",
+   "pos": "OT",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
    "nombre": "Jordan Hancock",
    "pos": "CB",
    "estado": "Active",
@@ -579,13 +586,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Spencer Brown",
-   "pos": "OT",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   },
   {
    "nombre": "Sam Franklin Jr.",
@@ -709,6 +709,34 @@
  ],
  "Carolina Panthers": [
   {
+   "nombre": "Haynes King",
+   "pos": "QB",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Coach's Decision"
+  },
+  {
+   "nombre": "Jaelan Phillips",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Will Lee III",
+   "pos": "CB",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Hamstring"
+  },
+  {
+   "nombre": "Ja'Tavion Sanders",
+   "pos": "TE",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Coach's Decision"
+  },
+  {
    "nombre": "Xavier Legette",
    "pos": "WR",
    "estado": "Active",
@@ -723,32 +751,11 @@
    "tipo": "Foot"
   },
   {
-   "nombre": "Ja'Tavion Sanders",
-   "pos": "TE",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Coach's Decision"
-  },
-  {
    "nombre": "Sam Hecht",
    "pos": "C",
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Haynes King",
-   "pos": "QB",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Will Lee III",
-   "pos": "CB",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Hamstring"
   },
   {
    "nombre": "AJ Dillon",
@@ -763,13 +770,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Jaelan Phillips",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   },
   {
    "nombre": "Brady Christensen",
@@ -1948,6 +1948,27 @@
  ],
  "Green Bay Packers": [
   {
+   "nombre": "Lukas Van Ness",
+   "pos": "DE",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Javon Bullard",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Xavier McKinney",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
    "nombre": "Zaire Franklin",
    "pos": "LB",
    "estado": "Out",
@@ -2002,27 +2023,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Xavier McKinney",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
-  },
-  {
-   "nombre": "Javon Bullard",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
-  },
-  {
-   "nombre": "Lukas Van Ness",
-   "pos": "DE",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   },
   {
    "nombre": "Travis Glover",
@@ -2125,6 +2125,27 @@
  ],
  "Houston Texans": [
   {
+   "nombre": "Jake Hummel",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Braden Smith",
+   "pos": "OT",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Wyatt Teller",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Illness"
+  },
+  {
    "nombre": "Will Anderson Jr.",
    "pos": "DE",
    "estado": "Active",
@@ -2137,13 +2158,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Neck"
-  },
-  {
-   "nombre": "Wyatt Teller",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Illness"
   },
   {
    "nombre": "Marvin Harrison Jr.",
@@ -2179,20 +2193,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Groin"
-  },
-  {
-   "nombre": "Jake Hummel",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-14",
-   "tipo": ""
-  },
-  {
-   "nombre": "Braden Smith",
-   "pos": "OT",
-   "estado": "Active",
-   "fecha": "2026-11-14",
-   "tipo": ""
   },
   {
    "nombre": "Dare Ogunbowale",
@@ -3541,11 +3541,18 @@
  ],
  "Minnesota Vikings": [
   {
-   "nombre": "Jordan Addison",
-   "pos": "WR",
+   "nombre": "Kyle Van Noy",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Max Brosmer",
+   "pos": "QB",
    "estado": "Out",
    "fecha": "2026-11-15",
-   "tipo": "Thumb"
+   "tipo": "Coach's Decision"
   },
   {
    "nombre": "Joshua Metellus",
@@ -3553,6 +3560,13 @@
    "estado": "Active",
    "fecha": "2026-11-15",
    "tipo": ""
+  },
+  {
+   "nombre": "Jordan Addison",
+   "pos": "WR",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Thumb"
   },
   {
    "nombre": "T.J. Hockenson",
@@ -3576,25 +3590,11 @@
    "tipo": "Calf"
   },
   {
-   "nombre": "Max Brosmer",
-   "pos": "QB",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Coach's Decision"
-  },
-  {
    "nombre": "Blake Cashman",
    "pos": "LB",
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Concussion"
-  },
-  {
-   "nombre": "Kyle Van Noy",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   },
   {
    "nombre": "Kirk Cousins",
@@ -3718,11 +3718,25 @@
  ],
  "New England Patriots": [
   {
+   "nombre": "Dre'Mont Jones",
+   "pos": "DE",
+   "estado": "Questionable",
+   "fecha": "2026-11-15",
+   "tipo": "Undisclosed"
+  },
+  {
    "nombre": "A.J. Brown",
    "pos": "WR",
    "estado": "Questionable",
    "fecha": "2026-11-15",
    "tipo": "Hamstring"
+  },
+  {
+   "nombre": "Robert Spillane",
+   "pos": "LB",
+   "estado": "Questionable",
+   "fecha": "2026-11-15",
+   "tipo": "Illness"
   },
   {
    "nombre": "Drake Maye",
@@ -3877,23 +3891,16 @@
    "estado": "Active",
    "fecha": "2026-11-11",
    "tipo": ""
-  },
-  {
-   "nombre": "Andy Borregales",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-11-10",
-   "tipo": ""
-  },
-  {
-   "nombre": "Corey Kiner",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-11-09",
-   "tipo": ""
   }
  ],
  "New Orleans Saints": [
+  {
+   "nombre": "Zach Wilson",
+   "pos": "QB",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Coach's Decision"
+  },
   {
    "nombre": "Audric Estime",
    "pos": "RB",
@@ -3914,13 +3921,6 @@
    "estado": "Active",
    "fecha": "2026-11-15",
    "tipo": ""
-  },
-  {
-   "nombre": "Zach Wilson",
-   "pos": "QB",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Coach's Decision"
   },
   {
    "nombre": "Mike Reid",
@@ -4249,6 +4249,34 @@
  ],
  "New York Jets": [
   {
+   "nombre": "Joseph Ossai",
+   "pos": "DE",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Harrison Phillips",
+   "pos": "DT",
+   "estado": "Active",
+   "fecha": "2026-11-15",
+   "tipo": ""
+  },
+  {
+   "nombre": "Jarvis Brownlee Jr.",
+   "pos": "CB",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Illness"
+  },
+  {
+   "nombre": "Tim Patrick",
+   "pos": "WR",
+   "estado": "Out",
+   "fecha": "2026-11-15",
+   "tipo": "Coach's Decision"
+  },
+  {
    "nombre": "Omar Cooper Jr.",
    "pos": "WR",
    "estado": "Active",
@@ -4270,22 +4298,8 @@
    "tipo": ""
   },
   {
-   "nombre": "Joseph Ossai",
-   "pos": "DE",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
-  },
-  {
    "nombre": "Nahshon Wright",
    "pos": "CB",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
-  },
-  {
-   "nombre": "Harrison Phillips",
-   "pos": "DT",
    "estado": "Active",
    "fecha": "2026-11-15",
    "tipo": ""
@@ -4310,20 +4324,6 @@
    "estado": "Out",
    "fecha": "2026-11-15",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Tim Patrick",
-   "pos": "WR",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "Jarvis Brownlee Jr.",
-   "pos": "CB",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Illness"
   },
   {
    "nombre": "VJ Payne",

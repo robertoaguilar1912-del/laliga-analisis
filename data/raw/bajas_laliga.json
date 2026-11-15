@@ -1,7 +1,7 @@
 {
 "401882805": {
 "fotmob": 5868132,
-"visto": "2026-11-15T04:22+00:00",
+"visto": "2026-11-15T17:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -83,7 +83,7 @@
 },
 "401882806": {
 "fotmob": 5868131,
-"visto": "2026-11-15T04:22+00:00",
+"visto": "2026-11-15T17:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -129,7 +129,7 @@
 },
 "401882799": {
 "fotmob": 5868138,
-"visto": "2026-11-15T04:22+00:00",
+"visto": "2026-11-15T17:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -256,7 +256,7 @@
 },
 "401882797": {
 "fotmob": 5868140,
-"visto": "2026-11-15T04:22+00:00",
+"visto": "2026-11-15T17:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -338,7 +338,7 @@
 },
 "401882798": {
 "fotmob": 5868139,
-"visto": "2026-11-15T04:22+00:00",
+"visto": "2026-11-15T17:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -348,6 +348,15 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 59724229.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Bernardo Silva",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 15735556.0,
 "titular": false,
 "importante": false
 },
@@ -395,15 +404,6 @@
 "importante": false
 },
 {
-"nombre": "Miguel Román",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 16247709.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Jones El-Abdellaoui",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
@@ -431,11 +431,329 @@
 "importante": false
 },
 {
+"nombre": "Miguel Román",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 16247709.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Carl Starfelt",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 2096594.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882804": {
+"fotmob": 5868133,
+"visto": "2026-11-15T17:43+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Dani Olmo",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 57508645.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jules Koundé",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 53369708.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Rodri",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 53364886.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Xavi Espart",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 27712323.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Frenkie de Jong",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 24384932.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Roony Bardghji",
+"tipo": "Lesión",
+"regreso": "finales de febrero de 2027",
+"duda": false,
+"valor": 12178746.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Ilias Akhomach",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 14881043.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Juan Foyth",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 7183865.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Gerard Moreno",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1668081.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Alassane Diatta",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1066843.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882800": {
+"fotmob": 5868137,
+"visto": "2026-11-15T17:43+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Álvaro Mantilla",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 1032040.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Ander Barrenetxea",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 19247675.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aihen Muñoz",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 1489941.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Álvaro Odriozola",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 706883.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Mamadou Sarr",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 25563275.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Luka Sučić",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 18868287.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401882801": {
+"fotmob": 5868136,
+"visto": "2026-11-15T17:43+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Aitor Fernández",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Romain Del Castillo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Asier Bonel",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aimar Oroz",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jorge Herrando",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Adam Aznou",
+"tipo": "Sanción",
+"regreso": "",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Rafita",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Julen Lobete",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aarón Ochoa",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Diego Murillo",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Carlos Puga",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Juan Cruz",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
