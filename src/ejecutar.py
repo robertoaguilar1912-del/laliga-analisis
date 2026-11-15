@@ -16,6 +16,7 @@ import analizar
 import nfl
 import nba
 import props_nba
+import nba_props
 import europa
 import registro
 import construir
@@ -70,6 +71,7 @@ def main(modo):
             _paso('NBA', nba.descargar_espn)
             _paso('NBA minutos', nba.descargar_boxscores)
             _paso('NBA props (ESPN)', props_nba.descargar_proximos)
+            _paso('NBA fichas para liquidar props', lambda: nba_props.main([nba.temporada_nba()]))
         cierres = [d for d in ('nfl', 'nba') if tareas.get(d, {}).get('cierres')]
         for d in cierres:        # momios de cierre de varias casas para los juegos por empezar
             _paso(f'momios de cierre {d} (The Odds API)', oddsapi.descargar, d)

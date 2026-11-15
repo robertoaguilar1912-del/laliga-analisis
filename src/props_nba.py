@@ -45,10 +45,16 @@ EV_PICK = 0.05
 CALC = {'pts': ('casa', 'u'), 'tres': ('casa', 'ou')}      # stat: (referencia, lados); los demás ('mezcla', 'ou')
 CALC_PICK = ('reb', 'ast', 'ra', 'pr', 'pra', 'tres', 'pts')
 MOMIOS_NORMALES = (1.5, 2.6)             # línea principal "normal": los dos lados entre 1.50 y 2.60
+# Rol incierto (15 nov 2026): sin PICK si el modelo espera menos de MIN_PICK minutos o si a su equipo le faltan FALTA_MAX
+# minutos de habituales o más. La noche del 14 nov los PICK de suplentes de Cleveland (le faltaban 7 jugadores) perdieron 9
+# de 10; en la prueba, los de menos de 12 minutos perdieron en 4 de 5 temporadas (1,058 apuestas −2.5%; sin ellos el total
+# pasa de +11.5% a +14.9%) y con 60+ minutos de bajas, 165 apuestas −6.9%.
+MIN_PICK, FALTA_MAX = 12.0, 60.0
 CASA_PRUEBA = {2023: '40', 2024: '40', 2025: '58', 2026: '58', 2027: '100'}   # DraftKings, ESPN BET
 AFINAR = 2023
 P_PARAMS = DATOS / 'modelo' / 'nba' / 'props.json'
 P_PROX = RAW / 'nba_props_prox.json'
+P_REG = DATOS / 'registro' / 'props.json'      # PICK de props publicados (la primera vez que salen, antes del juego) y cómo salieron
 CORE = 'https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{0}/competitions/{0}'
 lg = lambda p: np.log(np.clip(p, 1e-4, 1 - 1e-4) / (1 - np.clip(p, 1e-4, 1 - 1e-4)))
 sg = lambda z: 1 / (1 + np.exp(-z))
@@ -210,7 +216,7 @@ def prueba():
     L_todas = lineas()
     L = L_todas[L_todas.apply(lambda z: CASA_PRUEBA.get(z.temporada) == z.casa, axis=1) & L_todas.stat.isin(STATS)]
     L = L.dropna(subset=['linea_abre', 'p_o_abre'])
-    m = L.merge(X[['id', 'jugador'] + [f'mu_{s}' for s in STATS]], on=['id', 'jugador']).merge(J[['id', 'jugador'] + STATS], on=['id', 'jugador'])
+    m = L.merge(X[['id', 'jugador', 'm_esp', 'min_faltan'] + [f'mu_{s}' for s in STATS]], on=['id', 'jugador']).merge(J[['id', 'jugador'] + STATS], on=['id', 'jugador'])
     i = m.stat.map(STATS.index).to_numpy()
     m['mu'] = m[[f'mu_{s}' for s in STATS]].to_numpy()[np.arange(len(m)), i]
     m['y'] = m[STATS].to_numpy()[np.arange(len(m)), i]
@@ -228,7 +234,8 @@ def prueba():
     m['q'] = [mezclar(p, pc, W[s]) for p, pc, s in zip(m.p, m.p_casa, m.stat)]
     eo, eu = m.q * m.mo - 1, (1 - m.q) * m.mou - 1
     normal = m.mo.between(*MOMIOS_NORMALES) & m.mou.between(*MOMIOS_NORMALES)
-    b = m[normal & (np.maximum(eo, eu) >= EV_PICK)].copy()
+    rol = (m.m_esp >= MIN_PICK) & (m.min_faltan.fillna(0) < FALTA_MAX)
+    b = m[normal & rol & (np.maximum(eo, eu) >= EV_PICK)].copy()
     b['lado'] = np.where(eo[b.index] >= eu[b.index], 'o', 'u')
     gana = np.where(b.lado == 'o', b.sale == 1, b.sale == 0)
     b['u'] = np.where(gana, np.where(b.lado == 'o', b.mo, b.mou) - 1, -1.0)
@@ -259,6 +266,7 @@ def prueba():
 def otras_casas(m, L_todas):
     """Apostar en OTRA casa usando la de referencia (DraftKings 2022-23 y 2023-24) como precio justo: misma línea en la
     apertura, momios normales, EV ≥ EV_PICK con la referencia de CALC y solo los lados de CALC. Como la calculadora."""
+    m = m[(m.m_esp >= MIN_PICK) & (m.min_faltan.fillna(0) < FALTA_MAX)] if 'm_esp' in m else m
     ref = m[m.temporada.isin([2023, 2024])][['id', 'jugador', 'stat', 'temporada', 'linea_abre', 'y', 'q', 'p_casa']]
     o = L_todas[L_todas.temporada.isin([2023, 2024]) & (L_todas.casa != '40')].dropna(subset=['linea_abre', 'momio_abre_o', 'momio_abre_u'])
     x = ref.merge(o[['id', 'jugador', 'stat', 'casa', 'linea_abre', 'momio_abre_o', 'momio_abre_u']], on=['id', 'jugador', 'stat', 'linea_abre'])
@@ -408,9 +416,11 @@ def para_juegos(partidos):
             lado = 'o' if ev_o >= ev_u else 'u'
             ev = max(ev_o, ev_u)
             normal = lo_ <= x['o'] <= hi_ and lo_ <= x['u'] <= hi_
-            ver = ('PICK' if s in CON_PICK and normal else 'PRUEBA') if ev >= EV_PICK else 'SKIP'
+            falta = float(fila.min_faltan) if pd.notna(fila.min_faltan) else 0.0
+            rol_ok = float(fila.m_esp) >= MIN_PICK and falta < FALTA_MAX
+            ver = ('PICK' if s in CON_PICK and normal and rol_ok else 'PRUEBA') if ev >= EV_PICK else 'SKIP'
             fuente, lados = CALC.get(s, ('mezcla', 'ou'))
-            extra = {'lados': lados}
+            extra = {'lados': lados, 'falta': round(falta), 'rol': rol_ok}
             if fuente == 'casa':      # la calculadora usa el precio justo de la casa, con su propia curva
                 m2 = mu_para(x['p_o'], r, x['linea'])
                 extra['qc'] = round(x['p_o'], 4)
@@ -437,6 +447,95 @@ def _historial(jugadores, J, n=20):
         out[j] = [[f, r, int(round(mi)), *[None if pd.isna(v) else int(v) for v in (pt, rb, a, t)]]
                   for f, r, mi, pt, rb, a, t in zip(fecha, rival, g['min'], g.pts, g.reb, g.ast, g.tres)]
     return out
+
+
+# ------------------------------------------------------------------ registro: cómo salieron los PICK de props
+def _cierre(props, eid, jug, stat, linea):
+    """Momios de cierre (último antes del juego que guardó ESPN) de esa línea: (más, menos) o None."""
+    z = props[(props.id == eid) & (props.jugador == jug) & (props.tipo.map(TIPOS) == stat)]
+    if z.empty:
+        return None, None
+    z2 = z[z.linea == linea]
+    if len(z2) >= 2:
+        if (z2.lado.fillna('') != '').any():
+            o, u = z2[z2.lado == 'o'].momio, z2[z2.lado == 'u'].momio
+            return (float(o.iloc[0]), float(u.iloc[0])) if len(o) and len(u) else (None, None)
+        return float(z2.momio.iloc[0]), float(z2.momio.iloc[1])     # DraftKings en ESPN: primero "más"
+    return None, float(z.linea.iloc[0])                              # se movió la línea: (None, línea de cierre)
+
+
+def registrar(partidos):
+    """Anota los PICK de props la primera vez que salen (antes del juego) y liquida los de juegos ya jugados con la ficha de
+    ESPN: ganó / perdió / empate / anulada (no jugó). Valor al cierre: el momio que se tomó contra el precio justo de
+    DraftKings al cierre, si la línea no se movió."""
+    reg = json.load(open(P_REG)) if P_REG.exists() else []
+    vistos = {(r['id'], r['j'], r['s'], r['lado']) for r in reg}
+    t = ahora()
+    for p in partidos:
+        ko = pd.Timestamp(p['utc']).to_pydatetime()
+        if ko <= t:
+            continue
+        for x in p.get('props') or []:
+            k = (p['id'], x['j'], x['s'], x['lado'])
+            if x['v'] != 'PICK' or k in vistos:
+                continue
+            vistos.add(k)
+            reg.append({'id': p['id'], 'utc': p['utc'], 'juego': f"{p['visita_fd']} @ {p['local_fd']}", 'j': x['j'], 'n': x['n'],
+                        'eq': x['eq'], 's': x['s'], 'lado': x['lado'], 'l': x['l'], 'momio': x['o'] if x['lado'] == 'o' else x['u'],
+                        'q': x['q'], 'ev': round(max(x['ev_o'], x['ev_u']), 4), 'mu': x['mu'], 'min': x['min'], 'falta': x.get('falta'),
+                        'visto': t.isoformat(timespec='minutes'), 'min_antes': int((ko - t).total_seconds() // 60)})
+    pend = [r for r in reg if 'res' not in r and pd.Timestamp(r['utc']).to_pydatetime() < t - timedelta(hours=3)]
+    if pend:
+        y = nba.temporada_nba()
+        J = pd.concat([pd.read_csv(p, dtype={'id': str, 'jugador': str, 'jugo': str, 'titular': str}) for p in (RAW / f'nba_jug_{y}.csv.gz', RAW / f'nba_jug_{y - 1}.csv.gz') if p.exists()])
+        J['jugo'] = J.jugo.astype(str).str.lower().eq('true')
+        for c, partes in COMBOS.items():
+            J[c] = J[list(partes)].sum(axis=1, min_count=len(partes))
+        props = pd.concat([pd.read_csv(p, dtype={'id': str, 'jugador': str, 'casa': str, 'lado': str}) for p in (RAW / f'nba_props_{y}.csv.gz',) if p.exists()])
+        jugados = set(J.id)
+        for r in pend:
+            if r['id'] not in jugados:
+                continue                                  # todavía no está la ficha
+            f = J[(J.id == r['id']) & (J.jugador == r['j'])]
+            if f.empty or not bool(f.jugo.iloc[0]) or pd.isna(f[r['s']].iloc[0]):
+                r.update(res='anulada', u=0.0)
+            else:
+                v = float(f[r['s']].iloc[0])
+                r['real'] = v
+                r['res'] = 'empate' if v == r['l'] else 'ganó' if (v > r['l']) == (r['lado'] == 'o') else 'perdió'
+                r['u'] = round(r['momio'] - 1, 3) if r['res'] == 'ganó' else -1.0 if r['res'] == 'perdió' else 0.0
+            o, u = _cierre(props, r['id'], r['j'], r['s'], r['l'])
+            if o is not None and u:
+                p_lado = (1 / o) / (1 / o + 1 / u) if r['lado'] == 'o' else (1 / u) / (1 / o + 1 / u)
+                r['cierre'] = round(o if r['lado'] == 'o' else u, 3)
+                r['clv'] = round(r['momio'] * p_lado - 1, 4)
+            elif u:
+                r['linea_cierre'] = u
+                r['mov'] = 'a favor' if (u < r['l']) == (r['lado'] == 'u') else 'en contra'
+    P_REG.parent.mkdir(parents=True, exist_ok=True)
+    json.dump(reg, open(P_REG, 'w'), ensure_ascii=False, indent=0)
+    return resumen_registro(reg)
+
+
+def resumen_registro(reg=None):
+    """Para la página: totales (todos y solo los que cumplen las reglas de hoy), por mercado, y los últimos PICK."""
+    if reg is None:
+        reg = json.load(open(P_REG)) if P_REG.exists() else []
+    if not reg:
+        return None
+
+    def tot(rs):
+        hechos = [r for r in rs if r.get('res') in ('ganó', 'perdió', 'empate')]
+        cl = [r['clv'] for r in hechos if r.get('clv') is not None]
+        return {'n': len(rs), 'hechos': len(hechos), 'ganados': sum(r['res'] == 'ganó' for r in hechos),
+                'perdidos': sum(r['res'] == 'perdió' for r in hechos), 'anulados': sum(r.get('res') == 'anulada' for r in rs),
+                'pendientes': sum('res' not in r for r in rs), 'u': round(sum(r['u'] for r in hechos), 2),
+                'roi': round(sum(r['u'] for r in hechos) / len(hechos), 4) if hechos else None,
+                'clv': round(float(np.mean(cl)), 4) if cl else None, 'n_clv': len(cl),
+                'mov_favor': sum(r.get('mov') == 'a favor' for r in rs), 'mov_contra': sum(r.get('mov') == 'en contra' for r in rs)}
+    validos = [r for r in reg if not r.get('regla_vieja')]
+    return {'todos': tot(reg), 'reglas_hoy': tot(validos), 'por_mercado': {s: tot([r for r in validos if r['s'] == s]) for s in sorted({r['s'] for r in validos})},
+            'filas': sorted(reg, key=lambda r: (r['utc'], r['n']), reverse=True)[:80]}
 
 
 if __name__ == '__main__':

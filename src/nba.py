@@ -1137,9 +1137,11 @@ def analizar():
             'lesiones': les, 'alerta': alerta, 'fuera': fuera,
             'h2h': [{'fecha': r.fecha, 'local': EQUIPOS[r.local], 'visita': EQUIPOS[r.visita], 'gl': int(r.pl), 'gv': int(r.pv)} for r in h2h.itertuples()],
         })
+    props_reg = None
     try:                             # props de jugadores (desde el 14 nov 2026; si falla, la página sigue sin ellos)
         import props_nba
         props_nba.para_juegos(partidos)
+        props_reg = props_nba.registrar(partidos)
     except Exception as ex:
         print('  NBA props: no se pudo', ex)
     if backtest:
@@ -1154,7 +1156,7 @@ def analizar():
                     'temprano': {'dif': TEMPRANO_DIF, 'mov': TEMPRANO_MOV, 'p': TEMPRANO_P}},
            'divisiones': DIVISIONES, 'conferencias': conferencias, 'equipos': equipos, 'partidos': partidos, 'backtest': backtest,
            'experimentos': json.load(open(DATOS / 'modelo' / 'nba' / 'experimentos.json')) if (DATOS / 'modelo' / 'nba' / 'experimentos.json').exists() else [],
-           'props': _props_info()}
+           'props': _props_info(), 'props_registro': props_reg}
     (DATOS / 'ligas').mkdir(exist_ok=True)
     from analizar import limpiar
     json.dump(limpiar(out), open(DATOS / 'ligas' / 'nba.json', 'w'), ensure_ascii=False, separators=(',', ':'))

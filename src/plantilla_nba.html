@@ -105,6 +105,7 @@
       <h2>Props de jugadores</h2>
       <p>Todos los props de los próximos juegos en una lista, del más cerca de PICK al más lejos. Busca el jugador en tu casa: si tiene la <b>misma línea</b> y su momio es igual o mayor que "necesitas", es PICK. Escríbelo en "tu momio" para confirmarlo, o toca "Ver" para abrir su gráfica y la calculadora (también si tu casa tiene otra línea).</p>
     </div>
+    <div id="pp-reg"></div>
     <div class="pfil" id="pp-fil"></div>
     <div id="pp-list"></div>
   </section>
@@ -388,13 +389,14 @@
       const c = propCalc(x, lado.value, L), p = c.gana / Math.max(c.gana + c.pierde, 1e-9);
       const lejos = Math.abs(L - x.l) > 2.01;
       const fuente = x.qc != null ? `precio justo de ${esc(g.props_casa || 'DraftKings')}` : 'mezcla';
-      const ladoOK = (x.lados || 'ou').includes(lado.value), puede = CALC_PICK.has(x.s) && ladoOK;
+      const ladoOK = (x.lados || 'ou').includes(lado.value), puede = CALC_PICK.has(x.s) && ladoOK && x.rol !== false;
       if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
       const ev = c.gana * (dec - 1) - c.pierde;
       const v = ev >= 0.05 && puede && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${fuente[0].toUpperCase() + fuente.slice(1)} <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
         + (!CALC_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} no hay prueba que lo respalde.` : '')
         + (CALC_PICK.has(x.s) && !ladoOK && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} solo el "menos" ganó al comparar casas; el "más" no.` : '')
+        + (x.rol === false && ev >= 0.05 ? `<br><b>No es PICK:</b> rol incierto (el modelo espera ${x.min} minutos${x.falta >= 60 ? ` y a su equipo le faltan ${x.falta} minutos de habituales` : ''}); la casa sabe mejor cuánto va a jugar.` : '')
         + (lejos && ev >= 0.05 ? `<br><b>No es PICK:</b> tu línea está a más de 2 de la de ${esc(g.props_casa || 'DraftKings')} (${x.l}); revisa si el jugador tiene alguna novedad.` : '')
         + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
       return { x, L, dec, p, c };
@@ -432,7 +434,7 @@
   function propsTodos() {
     const out = [];
     G.forEach((g, gi) => (g.props || []).forEach(x => {
-      if (!CALC_PICK.has(x.s)) return;
+      if (!CALC_PICK.has(x.s) || x.rol === false) return;     // rol incierto: pocos minutos esperados o muchas bajas en su equipo
       const q = x.qc != null ? x.qc : x.q;
       const cands = [...(x.lados || 'ou')].map(l => { const p = l === 'o' ? q : 1 - q, dk = l === 'o' ? x.o : x.u; return { l, p, dk, ev: p * dk - 1 }; })
         .filter(c => c.p >= 0.30 && c.p <= 0.70);
@@ -442,8 +444,26 @@
     }));
     return out.sort((a, b) => b.ev - a.ev);
   }
+  // cómo salieron los PICK de props publicados (props_nba.registrar: la primera vez que salen, antes del juego)
+  function propsRegistroHTML() {
+    const R = D.props_registro;
+    if (!R) return '<div class="card"><h3>Cómo salieron los PICK de props</h3><p class="empty">Todavía no hay PICK de props terminados.</p></div>';
+    const lin = (t, nom) => t && t.n ? `<div class="kv"><span>${nom}</span><span class="mono"><b>${t.hechos ? `${t.ganados}-${t.perdidos}` : '—'}</b> · ${t.hechos ? `${t.u >= 0 ? '+' : ''}${t.u.toFixed(2)} u (${spct(t.roi, 1)})` : ''}${t.pendientes ? ` · ${t.pendientes} pendiente${t.pendientes > 1 ? 's' : ''}` : ''}${t.anulados ? ` · ${t.anulados} anulada${t.anulados > 1 ? 's' : ''}` : ''}</span></div>` : '';
+    const h = R.reglas_hoy, a = R.todos;
+    const pm = Object.entries(R.por_mercado || {}).map(([s, t]) => lin(t, PN[s])).join('');
+    const fila = r => {
+      const res = r.res || 'pendiente', cls = res === 'ganó' ? 'PICK' : res === 'perdió' ? 'SKIP' : 'MAYBE';
+      return `<div class="prow"><span><b>${esc(r.n)}</b> <small class="muted">${esc(r.juego)} · ${esc(fdt(r.utc))}</small></span><span class="pill ${cls}">${esc(res)}</span>
+        <span class="mline">${esc(PN[r.s])} ${r.lado === 'o' ? 'más' : 'menos'} de ${r.l} a ${(+r.momio).toFixed(2)}${r.real != null ? ` · hizo ${r.real}` : ''}${r.u != null && res !== 'anulada' ? ` · ${r.u >= 0 ? '+' : ''}${(+r.u).toFixed(2)} u` : ''}${r.clv != null ? ` · contra el cierre ${spct(r.clv, 1)}` : r.mov ? ` · la línea cerró en ${r.linea_cierre} (${r.mov})` : ''}${r.regla_vieja ? ' · <i>no sería PICK con las reglas de hoy</i>' : ''}</span></div>`;
+    };
+    return `<div class="card"><h3>Cómo salieron los PICK de props</h3>
+      ${lin(h, 'Con las reglas de hoy')}${a.n !== h.n ? lin(a, 'Todos los publicados') : ''}${pm ? `<details style="margin-top:6px"><summary class="linkbtn">Por mercado</summary>${pm}</details>` : ''}
+      <p class="note">Cada PICK cuenta la primera vez que salió, con la línea y el momio de ese momento; si el jugador no juega, se anula. ${h.n_clv ? `Contra el precio justo de DraftKings al cierre (misma línea): ${spct(h.clv, 1)} en promedio; lo normal sin ventaja es cerca de −3.5% (la mitad del margen). ` : ''}${(h.mov_favor || h.mov_contra) ? `Cuando la línea se movió: ${h.mov_favor} a favor, ${h.mov_contra} en contra. ` : ''}Desde el 15 nov no hay PICK si el modelo espera menos de 12 minutos del jugador o si a su equipo le faltan 60 minutos o más de habituales (el 14 nov, con 7 bajas en Cleveland, esos PICK perdieron 9 de 10).</p>
+      <details><summary class="linkbtn">Ver los ${R.filas.length} últimos</summary>${R.filas.map(fila).join('')}</details></div>`;
+  }
   function renderProps() {
     const todos = propsTodos(), box = $('#pp-list'), fil = $('#pp-fil');
+    $('#pp-reg').innerHTML = propsRegistroHTML();
     const juegos = [...new Map(todos.map(r => [r.gi, r.g])).entries()];
     $('#pp-eyebrow').textContent = todos.length ? `${num(todos.length)} props de ${juegos.length} juego${juegos.length > 1 ? 's' : ''}` : '';
     if (!todos.length) { fil.innerHTML = ''; box.innerHTML = '<p class="empty">Todavía no hay props. DraftKings los publica el mismo día del juego; la página los busca cada hora desde 14 horas antes.</p>'; return; }
