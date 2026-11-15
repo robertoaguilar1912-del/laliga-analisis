@@ -5,7 +5,7 @@
   "estadio": "Ipurua",
   "local_espn": "Eibar",
   "visita_espn": "Cádiz",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estadio Municipal Nuevo Pepico Amat",
   "local_espn": "Eldense",
   "visita_espn": "CD Sabadell",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -350,7 +350,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    220,
+    255
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401883108",
@@ -361,7 +383,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    255,
+    270
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
  },
  {
   "id": "401882301",
@@ -372,7 +416,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -240,
+    380,
+    500
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -185
+   ],
+   "spread": [
+    [
+     "-1.5",
+     105
+    ],
+    [
+     "+1.5",
+     -160
+    ]
+   ]
+  }
  },
  {
   "id": "401883107",
