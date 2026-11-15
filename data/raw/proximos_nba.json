@@ -38,7 +38,7 @@
   "visita": "CHA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "Charlotte Hornets",
   "revisado": false,
@@ -67,10 +67,10 @@
   "visita": "SA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Utah Jazz",
   "visita_espn": "San Antonio Spurs",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -84,30 +84,7 @@
     "6-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    690,
-    -1080
-   ],
-   "ml_abre": [
-    920,
-    -1640
-   ],
-   "spread": [
-    14.5,
-    -108,
-    -14.5,
-    -112
-   ],
-   "spread_abre": 17.5,
-   "total": [
-    222.5,
-    -107,
-    -113
-   ],
-   "total_abre": 224.5
-  }
+  "momios": null
  },
  {
   "id": "401909989",
@@ -122,7 +99,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Boston Celtics",
   "visita_espn": "Dallas Mavericks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "TD Garden",
   "records": {
    "home": [
@@ -137,7 +114,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -970,
     640
@@ -148,15 +125,15 @@
    ],
    "spread": [
     -14.5,
-    -115,
+    -117,
     14.5,
-    -105
+    -103
    ],
    "spread_abre": -12.5,
    "total": [
     217.5,
-    -112,
-    -108
+    -110,
+    -110
    ],
    "total_abre": 216.5
   }
@@ -174,7 +151,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Toronto Raptors",
   "visita_espn": "New York Knicks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
@@ -189,10 +166,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    154,
-    -184
+    146,
+    -173
    ],
    "ml_abre": [
     133,
@@ -202,13 +179,13 @@
     4.5,
     -115,
     -4.5,
-    -106
+    -105
    ],
    "spread_abre": 3.5,
    "total": [
-    217.5,
-    -115,
-    -105
+    218.5,
+    -110,
+    -110
    ],
    "total_abre": 217.5
   }
@@ -226,7 +203,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Washington Wizards",
   "visita_espn": "Houston Rockets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Capital One Arena",
   "records": {
    "home": [
@@ -241,10 +218,10 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    262,
-    -326
+    276,
+    -345
    ],
    "ml_abre": [
     284,
@@ -293,7 +270,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     261,
     -324
@@ -345,7 +322,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     361,
     -468
