@@ -67,7 +67,7 @@
   "visita": "SA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "San Antonio Spurs",
   "revisado": false,
@@ -96,7 +96,7 @@
   "visita": "DAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Boston Celtics",
   "visita_espn": "Dallas Mavericks",
   "revisado": false,
@@ -113,30 +113,7 @@
     "2-4"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -970,
-    640
-   ],
-   "ml_abre": [
-    -610,
-    450
-   ],
-   "spread": [
-    -14.5,
-    -117,
-    14.5,
-    -103
-   ],
-   "spread_abre": -12.5,
-   "total": [
-    217.5,
-    -110,
-    -110
-   ],
-   "total_abre": 216.5
-  }
+  "momios": null
  },
  {
   "id": "401909990",
@@ -148,7 +125,7 @@
   "visita": "NY",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Toronto Raptors",
   "visita_espn": "New York Knicks",
   "revisado": false,
@@ -165,30 +142,7 @@
     "2-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    146,
-    -173
-   ],
-   "ml_abre": [
-    133,
-    -158
-   ],
-   "spread": [
-    4.5,
-    -115,
-    -4.5,
-    -105
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    218.5,
-    -110,
-    -110
-   ],
-   "total_abre": 217.5
-  }
+  "momios": null
  },
  {
   "id": "401909991",
@@ -218,26 +172,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    276,
-    -345
+    262,
+    -326
    ],
    "ml_abre": [
     284,
     -356
    ],
    "spread": [
-    8.5,
-    -113,
-    -8.5,
-    -107
+    7.5,
+    -103,
+    -7.5,
+    -118
    ],
    "spread_abre": 8.5,
    "total": [
     223.5,
-    -107,
-    -113
+    -112,
+    -108
    ],
    "total_abre": 222.5
   }
@@ -255,7 +209,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Atlanta Hawks",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -270,7 +224,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     261,
     -324
@@ -322,7 +276,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     361,
     -468
@@ -332,10 +286,10 @@
     -430
    ],
    "spread": [
-    10.5,
-    -105,
-    -10.5,
-    -115
+    11.5,
+    -112,
+    -11.5,
+    -108
    ],
    "spread_abre": 10.5,
    "total": [
