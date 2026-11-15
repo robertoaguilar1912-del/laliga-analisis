@@ -1,103 +1,5 @@
 [
  {
-  "id": "401873058",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Mercedes-Benz Stadium",
-  "local_espn": "Atlanta Falcons",
-  "visita_espn": "Kansas City Chiefs",
-  "local_abbr": "ATL",
-  "visita_abbr": "KC",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873056",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Huntington Bank Field",
-  "local_espn": "Cleveland Browns",
-  "visita_espn": "Houston Texans",
-  "local_abbr": "CLE",
-  "visita_abbr": "HOU",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873060",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Lambeau Field",
-  "local_espn": "Green Bay Packers",
-  "visita_espn": "Minnesota Vikings",
-  "local_abbr": "GB",
-  "visita_abbr": "MIN",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873057",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Nissan Stadium",
-  "local_espn": "Tennessee Titans",
-  "visita_espn": "Jacksonville Jaguars",
-  "local_abbr": "TEN",
-  "visita_abbr": "JAX",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873059",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Lucas Oil Stadium",
-  "local_espn": "Indianapolis Colts",
-  "visita_espn": "Miami Dolphins",
-  "local_abbr": "IND",
-  "visita_abbr": "MIA",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873055",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "Caesars Superdome",
-  "local_espn": "New Orleans Saints",
-  "visita_espn": "Carolina Panthers",
-  "local_abbr": "NO",
-  "visita_abbr": "CAR",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873054",
-  "utc": "2026-11-15T18:00Z",
-  "estadio": "MetLife Stadium",
-  "local_espn": "New York Jets",
-  "visita_espn": "Buffalo Bills",
-  "local_abbr": "NYJ",
-  "visita_abbr": "BUF",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873062",
   "utc": "2026-11-15T21:05Z",
   "estadio": "Allegiant Stadium",
@@ -106,33 +8,10 @@
   "local_abbr": "LV",
   "visita_abbr": "SEA",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 10,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    240,
-    -298
-   ],
-   "ml_abre": [
-    270,
-    -340
-   ],
-   "spread": [
-    6.5,
-    -110,
-    -6.5,
-    -110
-   ],
-   "spread_abre": 7.0,
-   "total": [
-    40.5,
-    -108,
-    -112
-   ],
-   "total_abre": 43.5
-  }
+  "momios": null
  },
  {
   "id": "401873061",
@@ -143,33 +22,10 @@
   "local_abbr": "ARI",
   "visita_abbr": "LAR",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 10,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    410,
-    -550
-   ],
-   "ml_abre": [
-    400,
-    -535
-   ],
-   "spread": [
-    10.0,
-    -110,
-    -10.0,
-    -110
-   ],
-   "spread_abre": 10.5,
-   "total": [
-    38.5,
-    -108,
-    -112
-   ],
-   "total_abre": 47.5
-  }
+  "momios": null
  },
  {
   "id": "401873063",
@@ -186,18 +42,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    -218
+    170,
+    -205
    ],
    "ml_abre": [
     -120,
     100
    ],
    "spread": [
-    4.5,
-    -112,
-    -4.5,
-    -108
+    3.5,
+    -105,
+    -3.5,
+    -115
    ],
    "spread_abre": -1.5,
    "total": [
