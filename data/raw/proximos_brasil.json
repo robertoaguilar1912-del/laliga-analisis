@@ -1,138 +1,5 @@
 [
  {
-  "id": "401841175",
-  "utc": "2026-11-14T23:30Z",
-  "estadio": "Arena Condá",
-  "local_espn": "Chapecoense",
-  "visita_espn": "Vasco da Gama",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "2026-brasileiro-serie-a",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
-  },
-  "alineaciones": {
-   "Chapecoense": [
-    [
-     "338662",
-     "Gabriel Werner",
-     "G"
-    ],
-    [
-     "250918",
-     "Victor Caetano",
-     "D"
-    ],
-    [
-     "285446",
-     "Heitor",
-     "D"
-    ],
-    [
-     "236283",
-     "Bruno Pacheco",
-     "D"
-    ],
-    [
-     "338663",
-     "Kauan",
-     "D"
-    ],
-    [
-     "202554",
-     "Yago Felipe",
-     "M"
-    ],
-    [
-     "287368",
-     "Dylan Borrero",
-     "M"
-    ],
-    [
-     "140012",
-     "Giovanni Augusto",
-     "M"
-    ],
-    [
-     "285089",
-     "Camilo",
-     "M"
-    ],
-    [
-     "287768",
-     "Max",
-     "M"
-    ],
-    [
-     "3108270",
-     "Túlio Eduardo Silva De Oliveira",
-     "F"
-    ]
-   ],
-   "Vasco da Gama": [
-    [
-     "205464",
-     "Léo Jardim",
-     "G"
-    ],
-    [
-     "43711",
-     "José Luis Rodríguez",
-     "D"
-    ],
-    [
-     "317383",
-     "Alan Saldivia",
-     "D"
-    ],
-    [
-     "287862",
-     "Lucas Piton",
-     "D"
-    ],
-    [
-     "337099",
-     "Robert",
-     "D"
-    ],
-    [
-     "275941",
-     "Facundo Colidio",
-     "M"
-    ],
-    [
-     "336485",
-     "Alan Lescano",
-     "M"
-    ],
-    [
-     "285203",
-     "Marino Hinestroza",
-     "M"
-    ],
-    [
-     "196873",
-     "Jair",
-     "M"
-    ],
-    [
-     "330924",
-     "Andrés Gómez",
-     "M"
-    ],
-    [
-     "292259",
-     "Bruno Duarte",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401841315",
   "utc": "2026-11-18T22:30Z",
   "estadio": "Couto Pereira",
@@ -204,7 +71,7 @@
     ],
     [
      "-0.5",
-     125
+     120
     ]
    ]
   }
@@ -287,9 +154,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    245,
-    190
+    120,
+    250,
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -303,7 +170,7 @@
     ],
     [
      "+0.5",
-     -175
+     -165
     ]
    ]
   }
@@ -490,6 +357,17 @@
   "estadio": "Arena Condá",
   "local_espn": "Chapecoense",
   "visita_espn": "Palmeiras",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841319",
+  "utc": "2026-11-25T23:00Z",
+  "estadio": "Arena MRV",
+  "local_espn": "Atlético-MG",
+  "visita_espn": "Corinthians",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
