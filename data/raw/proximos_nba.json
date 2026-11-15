@@ -9,10 +9,10 @@
   "visita": "LAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Phoenix Suns",
   "visita_espn": "Los Angeles Lakers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "6-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    136,
-    -161
-   ],
-   "ml_abre": [
-    124,
-    -147
-   ],
-   "spread": [
-    3.5,
-    -112,
-    -3.5,
-    -108
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    227.5,
-    -105,
-    -115
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909987",
@@ -61,10 +38,10 @@
   "visita": "CHA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "LA Clippers",
   "visita_espn": "Charlotte Hornets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -78,30 +55,7 @@
     "1-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -110,
-    -108
-   ],
-   "ml_abre": [
-    -126,
-    107
-   ],
-   "spread": [
-    -1.5,
-    -101,
-    1.5,
-    -119
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    213.5,
-    -105,
-    -115
-   ],
-   "total_abre": 215.5
-  }
+  "momios": null
  },
  {
   "id": "401909988",
@@ -133,8 +87,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    670,
-    -1040
+    690,
+    -1080
    ],
    "ml_abre": [
     920,
@@ -142,15 +96,15 @@
    ],
    "spread": [
     14.5,
-    -113,
+    -108,
     -14.5,
-    -107
+    -112
    ],
    "spread_abre": 17.5,
    "total": [
-    223.5,
-    -114,
-    -106
+    222.5,
+    -107,
+    -113
    ],
    "total_abre": 224.5
   }
@@ -168,7 +122,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Boston Celtics",
   "visita_espn": "Dallas Mavericks",
-  "revisado": false,
+  "revisado": true,
   "estadio": "TD Garden",
   "records": {
    "home": [
@@ -185,8 +139,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -880,
-    599
+    -970,
+    640
    ],
    "ml_abre": [
     -610,
@@ -194,15 +148,15 @@
    ],
    "spread": [
     -14.5,
-    -110,
+    -115,
     14.5,
-    -110
+    -105
    ],
    "spread_abre": -12.5,
    "total": [
-    218.5,
-    -110,
-    -110
+    217.5,
+    -112,
+    -108
    ],
    "total_abre": 216.5
   }
@@ -220,7 +174,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Toronto Raptors",
   "visita_espn": "New York Knicks",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
@@ -237,24 +191,24 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    179,
-    -216
+    154,
+    -184
    ],
    "ml_abre": [
     133,
     -158
    ],
    "spread": [
-    5.5,
-    -113,
-    -5.5,
-    -107
+    4.5,
+    -115,
+    -4.5,
+    -106
    ],
    "spread_abre": 3.5,
    "total": [
     217.5,
-    -108,
-    -112
+    -115,
+    -105
    ],
    "total_abre": 217.5
   }
@@ -298,15 +252,15 @@
    ],
    "spread": [
     8.5,
-    -117,
+    -113,
     -8.5,
-    -103
+    -107
    ],
    "spread_abre": 8.5,
    "total": [
     223.5,
-    -113,
-    -107
+    -107,
+    -113
    ],
    "total_abre": 222.5
   }
