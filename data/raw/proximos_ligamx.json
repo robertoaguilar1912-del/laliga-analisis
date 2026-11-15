@@ -5,15 +5,15 @@
   "estadio": "Estadio Corregidora",
   "local_espn": "Querétaro",
   "visita_espn": "Monterrey",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    265,
-    260,
-    -105
+    250,
+    250,
+    105
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "+0.5",
-     -125
+     -135
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -140,7 +140,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "torneo-apertura",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    180,
+    290,
+    115
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -160
+    ],
+    [
+     "-0.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401877051",
