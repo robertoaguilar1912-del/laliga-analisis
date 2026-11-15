@@ -56,7 +56,7 @@
    "id": "4278104",
    "nombre": "Michael Porter Jr.",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Personal",
    "regreso": "2026-11-16",
@@ -90,8 +90,8 @@
    "id": "4397189",
    "nombre": "Jalen Smith",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Finger",
    "regreso": "2026-11-16",
    "nota": "Smith (finger) has been ruled out for Saturday's game against Minnesota, K.C. Johnson of Chicago Sports Network reports."
@@ -100,8 +100,8 @@
    "id": "4278067",
    "nombre": "Nic Claxton",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Hamstring",
    "regreso": "2026-11-16",
    "nota": "Claxton (hamstring) is out for Saturday's game against the Timberwolves, K.C. Johnson of Chicago Sports Network reports."
@@ -110,8 +110,8 @@
    "id": "5105555",
    "nombre": "Tobe Awaka",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Back",
    "regreso": "2026-11-16",
    "nota": "Awaka has been ruled out for Saturday's game against the Timberwolves."
@@ -129,54 +129,54 @@
  ],
  "Cleveland Cavaliers": [
   {
-   "id": "4576087",
-   "nombre": "Peyton Watson",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-16",
-   "nota": "Watson (hamstring) has been ruled out for Saturday's game against the Mavericks."
-  },
-  {
-   "id": "3992",
-   "nombre": "James Harden",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
-   "tipo": "Calf",
-   "regreso": "2026-11-16",
-   "nota": "Harden (calf) has been ruled out for Saturday's game against Dallas."
-  },
-  {
-   "id": "3908809",
-   "nombre": "Donovan Mitchell",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
-   "tipo": "Knee",
-   "regreso": "2026-11-16",
-   "nota": "Mitchell (knee) has been ruled out for Saturday's game against the Mavericks."
-  },
-  {
    "id": "4066328",
    "nombre": "Jarrett Allen",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Knee",
    "regreso": "2026-11-16",
    "nota": "Allen (knee) has been ruled out for Saturday's game against the Mavericks."
   },
   {
+   "id": "4576087",
+   "nombre": "Peyton Watson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-16",
+   "nota": "Watson (hamstring) has been ruled out for Saturday's game against the Mavericks."
+  },
+  {
    "id": "4432158",
    "nombre": "Evan Mobley",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Toe",
    "regreso": "2026-11-16",
    "nota": "Mobley (toe) has been ruled out for Saturday's meeting with Dallas."
+  },
+  {
+   "id": "3908809",
+   "nombre": "Donovan Mitchell",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Knee",
+   "regreso": "2026-11-16",
+   "nota": "Mitchell (knee) has been ruled out for Saturday's game against the Mavericks."
+  },
+  {
+   "id": "3992",
+   "nombre": "James Harden",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Calf",
+   "regreso": "2026-11-16",
+   "nota": "Harden (calf) has been ruled out for Saturday's game against Dallas."
   },
   {
    "id": "4066757",
@@ -204,7 +204,7 @@
    "id": "4278049",
    "nombre": "Daniel Gafford",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Face",
    "regreso": "2026-11-15",
@@ -214,8 +214,8 @@
    "id": "4432582",
    "nombre": "Max Christie",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Ankle",
    "regreso": "2026-11-15",
    "nota": "Christie (ankle) has been ruled out for Saturday's game against Cleveland."
@@ -271,7 +271,7 @@
    "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Thigh",
-   "regreso": "2026-11-14",
+   "regreso": "2026-11-17",
    "nota": "Robinson (thigh) is questionable to return to Saturday's game against Miami."
   },
   {
@@ -537,30 +537,40 @@
  ],
  "Memphis Grizzlies": [
   {
-   "id": "5105550",
-   "nombre": "GG Jackson",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Foot",
-   "regreso": "2026-11-16",
-   "nota": "According to Grizzlies head coach Tuomas Iisalo, Jackson suffered a \"relatively serious\" foot injury in Saturday's 129-110 win over Brooklyn, Michael Wallace of the Grizzlies' official site reports."
-  },
-  {
    "id": "4600663",
    "nombre": "Zach Edey",
    "pos": "C",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Ankle",
    "regreso": "2026-11-16",
    "nota": "Edey (ankle) is listed as out for Saturday's game against the Nets."
   },
   {
+   "id": "4065733",
+   "nombre": "Ty Jerome",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Hip",
+   "regreso": "2026-11-16",
+   "nota": "Jerome (hip) has been ruled out for Saturday's game against the Nets."
+  },
+  {
+   "id": "5105550",
+   "nombre": "GG Jackson",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Foot",
+   "regreso": "2026-11-16",
+   "nota": "According to Grizzlies head coach Tuomas Iisalo, Jackson suffered a \"relatively serious\" foot injury in Saturday's 129-110 win over Brooklyn, Michael Wallace of the Grizzlies' official site reports."
+  },
+  {
    "id": "2991070",
    "nombre": "Jerami Grant",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Head",
    "regreso": "2026-11-16",
@@ -575,16 +585,6 @@
    "tipo": "Concussion",
    "regreso": "2026-11-16",
    "nota": "Post (concussion) has been ruled out for Saturday's game against the Nets."
-  },
-  {
-   "id": "4065733",
-   "nombre": "Ty Jerome",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
-   "tipo": "Hip",
-   "regreso": "2026-11-16",
-   "nota": "Jerome (hip) has been ruled out for Saturday's game against the Nets."
   },
   {
    "id": "4431785",
@@ -612,8 +612,8 @@
    "id": "4601025",
    "nombre": "Pelle Larsson",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Illness",
    "regreso": "2026-11-16",
    "nota": "Larsson (illness) has been ruled out for Saturday's game against the Pistons."
@@ -636,7 +636,7 @@
    "id": "4432247",
    "nombre": "Jaylen Clark",
    "pos": "G",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-15",
    "tipo": "Hamstring",
    "regreso": "2026-11-16",
@@ -665,11 +665,21 @@
  ],
  "New Orleans Pelicans": [
   {
+   "id": "4576086",
+   "nombre": "Bryce McGowens",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
+   "tipo": "Elbow",
+   "regreso": "2026-11-16",
+   "nota": "McGowens (elbow) has been ruled out for Saturday's game against the Nuggets."
+  },
+  {
    "id": "4683634",
    "nombre": "Bennedict Mathurin",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-15",
    "tipo": "Foot",
    "regreso": "2026-11-16",
    "nota": "Mathurin is out for Saturday's game against the Nuggets due to left plantar fasciitis."
@@ -683,16 +693,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-16",
    "nota": "Watford (ankle) has been ruled out for Saturday's game against Denver."
-  },
-  {
-   "id": "4576086",
-   "nombre": "Bryce McGowens",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-14",
-   "tipo": "Elbow",
-   "regreso": "2026-11-16",
-   "nota": "McGowens (elbow) has been ruled out for Saturday's game against the Nuggets."
   },
   {
    "id": "4397688",

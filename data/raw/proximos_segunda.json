@@ -5,7 +5,7 @@
   "estadio": "Nuevo Estadio de Los Cármenes",
   "local_espn": "Granada",
   "visita_espn": "Las Palmas",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -300,7 +300,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    200,
+    225,
+    130
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401882300",
