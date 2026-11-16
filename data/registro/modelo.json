@@ -8012,7 +8012,7 @@
   "temprano": 9.7,
   "retirado": "2026-11-16T04:40+00:00",
   "motivo": "línea",
-  "reemplazado": "Más de 211.5 puntos"
+  "reemplazado": "Más de 212.5 puntos"
  },
  {
   "id": "401909994",
@@ -8028,6 +8028,25 @@
   "casa": "Draft Kings",
   "visto": "2026-11-16T01:44+00:00",
   "ultimo": "2026-11-16T04:40+00:00",
+  "temprano": 9.7,
+  "retirado": "2026-11-16T15:40+00:00",
+  "motivo": "línea",
+  "reemplazado": "Más de 212.5 puntos"
+ },
+ {
+  "id": "401909994",
+  "liga": "nba",
+  "utc": "2026-11-17T00:00Z",
+  "local": "Boston Celtics",
+  "visita": "Orlando Magic",
+  "k": "O:212.5",
+  "mercado": "Más de 212.5 puntos",
+  "p": 0.56,
+  "momio": "1.91",
+  "ev": 0.0696,
+  "casa": "DraftKings",
+  "visto": "2026-11-16T15:40+00:00",
+  "ultimo": "2026-11-16T15:40+00:00",
   "temprano": 9.7
  },
  {
@@ -8043,7 +8062,11 @@
   "ev": 0.0933,
   "casa": "DraftKings",
   "visto": "2026-11-16T01:39+00:00",
-  "ultimo": "2026-11-16T04:40+00:00"
+  "ultimo": "2026-11-16T04:40+00:00",
+  "retirado": "2026-11-16T15:40+00:00",
+  "p_fin": 0.6507,
+  "momio_fin": "1.60",
+  "motivo": "momio"
  },
  {
   "id": "401841315",
@@ -8362,7 +8385,11 @@
   "ev": 0.0774,
   "casa": "DraftKings",
   "visto": "2026-11-11T07:12+00:00",
-  "ultimo": "2026-11-16T04:40+00:00"
+  "ultimo": "2026-11-16T04:40+00:00",
+  "retirado": "2026-11-16T15:40+00:00",
+  "p_fin": 0.5808,
+  "momio_fin": "1.87",
+  "motivo": "regla"
  },
  {
   "id": "401885048",
@@ -8377,7 +8404,11 @@
   "ev": 0.1121,
   "casa": "DraftKings",
   "visto": "2026-11-12T18:51+00:00",
-  "ultimo": "2026-11-16T04:40+00:00"
+  "ultimo": "2026-11-16T04:40+00:00",
+  "retirado": "2026-11-16T15:40+00:00",
+  "p_fin": 0.4912,
+  "momio_fin": "2.20",
+  "motivo": "regla"
  },
  {
   "id": "401882803",
@@ -8430,7 +8461,9 @@
   "ev": 0.2173,
   "casa": "Bet365 (API-Football; DraftKings no publicó)",
   "visto": "2026-11-15T17:46+00:00",
-  "ultimo": "2026-11-16T04:40+00:00"
+  "ultimo": "2026-11-16T04:40+00:00",
+  "retirado": "2026-11-16T15:40+00:00",
+  "motivo": "línea"
  },
  {
   "id": "401915291",
@@ -8445,6 +8478,21 @@
   "ev": 0.0833,
   "casa": "DraftKings",
   "visto": "2026-11-15T04:25+00:00",
-  "ultimo": "2026-11-16T04:40+00:00"
+  "ultimo": "2026-11-16T15:40+00:00"
+ },
+ {
+  "id": "401915506",
+  "liga": "europa",
+  "utc": "2026-11-26T17:45Z",
+  "local": "Besiktas",
+  "visita": "Hapoel Be'er",
+  "k": "H2:+1.5",
+  "mercado": "Hándicap Hapoel Be'er +1.5",
+  "p": 0.4932,
+  "momio": "2.20",
+  "ev": 0.0851,
+  "casa": "DraftKings",
+  "visto": "2026-11-16T15:40+00:00",
+  "ultimo": "2026-11-16T15:40+00:00"
  }
 ]

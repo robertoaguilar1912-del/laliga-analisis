@@ -1,25 +1,43 @@
 {
 "401892137": {
 "fotmob": 1000017582,
-"visto": "2026-11-15T17:43+00:00",
-"xi": "standard",
+"visto": "2026-11-16T15:36+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Cameron Howieson",
-"tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Jake Brimmer",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 324221.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Callan Elliot",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 134751.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Oliver Middleton",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 182646.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Cameron Howieson",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 127332.0,
 "titular": false,
 "importante": false
 },
@@ -28,16 +46,7 @@
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Callan Elliot",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 0.0,
+"valor": 106707.0,
 "titular": false,
 "importante": false
 },
@@ -46,27 +55,35 @@
 "tipo": "Lesión",
 "regreso": "mediados de febrero de 2027",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Oliver Middleton",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 0.0,
+"valor": 64839.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 2201566.0,
+"perdida": 0.20847523989741848,
+"perdida_duda": 0.08296185533388506
+},
+"visita": {
+"faltan": [],
+"valor_xi": 1867612.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401892138": {
+"fotmob": 1000017581,
+"visto": "2026-11-16T15:36+00:00",
+"xi": "lastStarting11",
+"local": {
+"faltan": [],
+"valor_xi": 3417207.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 4110668.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
