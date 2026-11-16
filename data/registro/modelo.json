@@ -1652,7 +1652,9 @@
   "temprano": -10.5,
   "revisar": "bajas",
   "retirado": "2026-11-03T00:02+00:00",
-  "reemplazado": "Menos de 238.5 puntos"
+  "reemplazado": "Menos de 238.5 puntos",
+  "pin_c": 0.508,
+  "pin_aprox": "O:238.5"
  },
  {
   "id": "401909913",
@@ -1669,7 +1671,9 @@
   "visto": "2026-11-02T23:11+00:00",
   "ultimo": "2026-11-02T23:11+00:00",
   "revisar": "bajas",
-  "retirado": "2026-11-03T00:02+00:00"
+  "retirado": "2026-11-03T00:02+00:00",
+  "pin_c": 0.4866,
+  "pin_aprox": "H1:-8"
  },
  {
   "id": "401909915",
@@ -1783,7 +1787,9 @@
   "ultimo": "2026-11-02T11:48+00:00",
   "temprano": 11.0,
   "retirado": "2026-11-02T11:55+00:00",
-  "reemplazado": "Más de 219.5 puntos"
+  "reemplazado": "Más de 219.5 puntos",
+  "pin_c": 0.4402,
+  "pin_aprox": "O:215.5"
  },
  {
   "id": "401909916",
@@ -1800,7 +1806,9 @@
   "visto": "2026-11-02T11:55+00:00",
   "ultimo": "2026-11-02T22:14+00:00",
   "temprano": 11.1,
-  "retirado": "2026-11-02T23:11+00:00"
+  "retirado": "2026-11-02T23:11+00:00",
+  "pin_c": 0.4183,
+  "pin_aprox": "O:215.5"
  },
  {
   "id": "401909918",
@@ -1854,7 +1862,9 @@
   "temprano": 10.2,
   "revisar": "bajas",
   "retirado": "2026-11-02T11:55+00:00",
-  "reemplazado": "Más de 221.5 puntos"
+  "reemplazado": "Más de 221.5 puntos",
+  "pin_c": 0.4817,
+  "pin_aprox": "O:219.5"
  },
  {
   "id": "401909920",
@@ -1872,7 +1882,9 @@
   "ultimo": "2026-11-02T22:14+00:00",
   "temprano": 10.2,
   "revisar": "bajas",
-  "retirado": "2026-11-02T23:11+00:00"
+  "retirado": "2026-11-02T23:11+00:00",
+  "pin_c": 0.4596,
+  "pin_aprox": "O:219.5"
  },
  {
   "id": "401915310",
@@ -2620,7 +2632,9 @@
   "ev": 0.0728,
   "casa": "DraftKings",
   "visto": "2026-11-04T23:21+00:00",
-  "ultimo": "2026-11-04T23:56+00:00"
+  "ultimo": "2026-11-04T23:56+00:00",
+  "pin_c": 0.484,
+  "pin_aprox": "H1:-11.5"
  },
  {
   "id": "401909925",
@@ -6425,7 +6439,9 @@
   "temprano": -8.3,
   "revisar": "bajas",
   "retirado": "2026-11-08T19:54+00:00",
-  "motivo": "línea"
+  "motivo": "línea",
+  "pin_c": 0.5111,
+  "pin_aprox": "O:238"
  },
  {
   "id": "401878067",
@@ -6591,7 +6607,9 @@
   "ultimo": "2026-11-07T23:27+00:00",
   "revisar": "bajas",
   "retirado": "2026-11-07T23:52+00:00",
-  "motivo": "línea"
+  "motivo": "línea",
+  "pin_c": 0.5677,
+  "pin_aprox": "H1:-12.5"
  },
  {
   "id": "401878031",
@@ -6724,7 +6742,9 @@
   "ev": 0.0699,
   "casa": "DraftKings",
   "visto": "2026-11-09T23:24+00:00",
-  "ultimo": "2026-11-09T23:34+00:00"
+  "ultimo": "2026-11-09T23:34+00:00",
+  "pin_c": 0.4723,
+  "pin_aprox": "H1:+8.5"
  },
  {
   "id": "401909955",
@@ -6873,7 +6893,9 @@
   "casa": "Draft Kings",
   "visto": "2026-11-11T04:30+00:00",
   "ultimo": "2026-11-11T23:55+00:00",
-  "temprano": 10.6
+  "temprano": 10.6,
+  "pin_c": 0.4889,
+  "pin_aprox": "O:215"
  },
  {
   "id": "401909968",
@@ -6892,7 +6914,9 @@
   "temprano": 10.6,
   "retirado": "2026-11-11T23:50+00:00",
   "motivo": "línea",
-  "reemplazado": "Más de 215.5 puntos"
+  "reemplazado": "Más de 215.5 puntos",
+  "pin_c": 0.4668,
+  "pin_aprox": "O:215"
  },
  {
   "id": "401909971",
@@ -6910,7 +6934,9 @@
   "ultimo": "2026-11-11T05:40+00:00",
   "retirado": "2026-11-11T06:40+00:00",
   "motivo": "línea",
-  "reemplazado": "Los Angeles Lakers -11.5"
+  "reemplazado": "Los Angeles Lakers -11.5",
+  "pin_c": 0.6441,
+  "pin_aprox": "H2:-14.5"
  },
  {
   "id": "401909971",
@@ -6929,7 +6955,9 @@
   "retirado": "2026-11-11T07:12+00:00",
   "p_fin": 0.5493,
   "momio_fin": "1.91",
-  "motivo": "probabilidad"
+  "motivo": "probabilidad",
+  "pin_c": 0.6118,
+  "pin_aprox": "H2:-14.5"
  },
  {
   "id": "401909974",
@@ -7880,7 +7908,9 @@
   "ultimo": "2026-11-14T06:10+00:00",
   "temprano": 7.5,
   "retirado": "2026-11-14T11:45+00:00",
-  "motivo": "línea"
+  "motivo": "línea",
+  "pin_c": 0.5357,
+  "pin_aprox": "O:228"
  },
  {
   "id": "401883116",
@@ -7993,7 +8023,9 @@
   "ev": 0.0507,
   "casa": "Draft Kings",
   "visto": "2026-11-15T23:45+00:00",
-  "ultimo": "2026-11-15T23:45+00:00"
+  "ultimo": "2026-11-15T23:45+00:00",
+  "pin_c": 0.4879,
+  "pin_aprox": "H2:-8"
  },
  {
   "id": "401909994",
@@ -8046,7 +8078,7 @@
   "ev": 0.0696,
   "casa": "DraftKings",
   "visto": "2026-11-16T15:40+00:00",
-  "ultimo": "2026-11-16T18:34+00:00",
+  "ultimo": "2026-11-16T18:53+00:00",
   "temprano": 9.7
  },
  {
@@ -8062,7 +8094,11 @@
   "ev": 0.0933,
   "casa": "DraftKings",
   "visto": "2026-11-16T01:39+00:00",
-  "ultimo": "2026-11-16T18:34+00:00"
+  "ultimo": "2026-11-16T18:34+00:00",
+  "retirado": "2026-11-16T18:53+00:00",
+  "p_fin": 0.6474,
+  "momio_fin": "1.62",
+  "motivo": "momio"
  },
  {
   "id": "401841315",
@@ -8474,7 +8510,7 @@
   "ev": 0.0833,
   "casa": "DraftKings",
   "visto": "2026-11-15T04:25+00:00",
-  "ultimo": "2026-11-16T18:34+00:00"
+  "ultimo": "2026-11-16T18:53+00:00"
  },
  {
   "id": "401915506",
@@ -8489,6 +8525,6 @@
   "ev": 0.0851,
   "casa": "DraftKings",
   "visto": "2026-11-16T15:40+00:00",
-  "ultimo": "2026-11-16T18:34+00:00"
+  "ultimo": "2026-11-16T18:53+00:00"
  }
 ]
