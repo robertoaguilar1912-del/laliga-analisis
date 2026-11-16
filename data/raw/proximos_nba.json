@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909989",
-  "utc": "2026-11-15T23:00Z",
-  "fecha": "2026-11-15",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "BOS",
-  "visita": "DAL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Boston Celtics",
-  "visita_espn": "Dallas Mavericks",
-  "revisado": false,
-  "estadio": "TD Garden",
-  "records": {
-   "home": [
-    "10-2",
-    "5-0",
-    "5-2"
-   ],
-   "away": [
-    "7-6",
-    "5-2",
-    "2-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909990",
   "utc": "2026-11-15T23:00Z",
   "fecha": "2026-11-15",
@@ -96,10 +67,10 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Atlanta Hawks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -113,30 +84,7 @@
     "4-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    270,
-    -336
-   ],
-   "ml_abre": [
-    220,
-    -268
-   ],
-   "spread": [
-    8.5,
-    -115,
-    -8.5,
-    -106
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    233.5,
-    -106,
-    -115
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401909993",
@@ -166,26 +114,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    361,
-    -468
+    443,
+    -597
    ],
    "ml_abre": [
     336,
     -430
    ],
    "spread": [
-    11.5,
-    -112,
-    -11.5,
-    -108
+    12.5,
+    -108,
+    -12.5,
+    -112
    ],
    "spread_abre": 10.5,
    "total": [
-    223.5,
-    -110,
-    -110
+    221.5,
+    -115,
+    -105
    ],
    "total_abre": 222.5
   }
@@ -207,8 +155,8 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "10-2",
-    "5-0",
+    "11-2",
+    "6-0",
     "5-2"
    ],
    "away": [
@@ -362,7 +310,30 @@
     "6-1"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -143,
+    121
+   ],
+   "ml_abre": [
+    -143,
+    121
+   ],
+   "spread": [
+    -3.5,
+    -105,
+    3.5,
+    -115
+   ],
+   "spread_abre": -3.5,
+   "total": [
+    228.5,
+    -110,
+    -110
+   ],
+   "total_abre": 228.5
+  }
  },
  {
   "id": "401910000",
@@ -391,7 +362,30 @@
     "2-4"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    111,
+    -131
+   ],
+   "ml_abre": [
+    111,
+    -131
+   ],
+   "spread": [
+    2.5,
+    -110,
+    -2.5,
+    -110
+   ],
+   "spread_abre": 2.5,
+   "total": [
+    226.5,
+    -110,
+    -110
+   ],
+   "total_abre": 226.5
+  }
  },
  {
   "id": "401910001",
@@ -816,9 +810,9 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "7-6",
+    "7-7",
     "5-2",
-    "2-4"
+    "2-5"
    ],
    "away": [
     "8-5",
@@ -850,8 +844,8 @@
     "4-2"
    ],
    "away": [
-    "10-2",
-    "5-0",
+    "11-2",
+    "6-0",
     "5-2"
    ]
   },
@@ -1367,9 +1361,9 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "7-6",
+    "7-7",
     "5-2",
-    "2-4"
+    "2-5"
    ],
    "away": [
     "4-8",
@@ -1459,8 +1453,8 @@
     "1-4"
    ],
    "away": [
-    "10-2",
-    "5-0",
+    "11-2",
+    "6-0",
     "5-2"
    ]
   },
@@ -1604,9 +1598,9 @@
     "0-6"
    ],
    "away": [
-    "7-6",
+    "7-7",
     "5-2",
-    "2-4"
+    "2-5"
    ]
   },
   "momios": null
@@ -1662,8 +1656,8 @@
     "2-4"
    ],
    "away": [
-    "10-2",
-    "5-0",
+    "11-2",
+    "6-0",
     "5-2"
    ]
   },
@@ -2010,8 +2004,8 @@
     "2-6"
    ],
    "away": [
-    "10-2",
-    "5-0",
+    "11-2",
+    "6-0",
     "5-2"
    ]
   },
@@ -2039,9 +2033,9 @@
     "4-2"
    ],
    "away": [
-    "7-6",
+    "7-7",
     "5-2",
-    "2-4"
+    "2-5"
    ]
   },
   "momios": null
