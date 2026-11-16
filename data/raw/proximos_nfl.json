@@ -1,33 +1,5 @@
 [
  {
-  "id": "401873062",
-  "utc": "2026-11-15T21:05Z",
-  "estadio": "Allegiant Stadium",
-  "local_espn": "Las Vegas Raiders",
-  "visita_espn": "Seattle Seahawks",
-  "local_abbr": "LV",
-  "visita_abbr": "SEA",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
-  "id": "401873061",
-  "utc": "2026-11-15T21:05Z",
-  "estadio": "State Farm Stadium",
-  "local_espn": "Arizona Cardinals",
-  "visita_espn": "Los Angeles Rams",
-  "local_abbr": "ARI",
-  "visita_abbr": "LAR",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 10,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873063",
   "utc": "2026-11-15T21:25Z",
   "estadio": "AT&T Stadium",
@@ -36,33 +8,10 @@
   "local_abbr": "DAL",
   "visita_abbr": "SF",
   "neutral": false,
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "semana": 10,
   "tipo": "regular-season",
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    170,
-    -205
-   ],
-   "ml_abre": [
-    -120,
-    100
-   ],
-   "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    55.5,
-    -118,
-    -102
-   ],
-   "total_abre": 52.5
-  }
+  "momios": null
  },
  {
   "id": "401873064",
@@ -77,7 +26,7 @@
   "semana": 10,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -192,
     160
@@ -114,7 +63,7 @@
   "semana": 10,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -225,
     185
@@ -150,7 +99,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -455,
+    350
+   ],
+   "ml_abre": [
+    -238,
+    195
+   ],
+   "spread": [
+    -9.5,
+    -115,
+    9.5,
+    -105
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    44.5,
+    -110,
+    -110
+   ],
+   "total_abre": 45.5
+  }
  },
  {
   "id": "401873070",
@@ -164,7 +136,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -1600,
+    900
+   ],
+   "ml_abre": [
+    -600,
+    440
+   ],
+   "spread": [
+    -16.5,
+    -110,
+    16.5,
+    -110
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    46.5,
+    -115,
+    -105
+   ],
+   "total_abre": 47.5
+  }
  },
  {
   "id": "401873071",
@@ -178,7 +173,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -470,
+    360
+   ],
+   "ml_abre": [
+    -278,
+    225
+   ],
+   "spread": [
+    -9.5,
+    -110,
+    9.5,
+    -110
+   ],
+   "spread_abre": -6.5,
+   "total": [
+    49.5,
+    -110,
+    -110
+   ],
+   "total_abre": 46.5
+  }
  },
  {
   "id": "401873073",
@@ -192,7 +210,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -395,
+    310
+   ],
+   "ml_abre": [
+    -290,
+    235
+   ],
+   "spread": [
+    -7.5,
+    -115,
+    7.5,
+    -105
+   ],
+   "spread_abre": -6.5,
+   "total": [
+    52.5,
+    -110,
+    -110
+   ],
+   "total_abre": 48.5
+  }
  },
  {
   "id": "401873072",
@@ -206,7 +247,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -258,
+    210
+   ],
+   "ml_abre": [
+    -230,
+    190
+   ],
+   "spread": [
+    -6.0,
+    -110,
+    6.0,
+    -110
+   ],
+   "spread_abre": -4.5,
+   "total": [
+    46.5,
+    -110,
+    -110
+   ],
+   "total_abre": 49.5
+  }
  },
  {
   "id": "401873067",
@@ -220,7 +284,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -1050,
+    675
+   ],
+   "ml_abre": [
+    -600,
+    440
+   ],
+   "spread": [
+    -14.5,
+    -110,
+    14.5,
+    -110
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    41.5,
+    -110,
+    -110
+   ],
+   "total_abre": 44.5
+  }
  },
  {
   "id": "401873076",
@@ -234,7 +321,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    164,
+    -198
+   ],
+   "ml_abre": [
+    -250,
+    205
+   ],
+   "spread": [
+    4.5,
+    -110,
+    -4.5,
+    -110
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    38.5,
+    -110,
+    -110
+   ],
+   "total_abre": 42.5
+  }
  },
  {
   "id": "401873068",
@@ -248,7 +358,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -122,
+    102
+   ],
+   "ml_abre": [
+    180,
+    -218
+   ],
+   "spread": [
+    -1.5,
+    -110,
+    1.5,
+    -110
+   ],
+   "spread_abre": 4.5,
+   "total": [
+    44.5,
+    -115,
+    -105
+   ],
+   "total_abre": 46.5
+  }
  },
  {
   "id": "401873074",
@@ -262,7 +395,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -175,
+    145
+   ],
+   "ml_abre": [
+    -440,
+    340
+   ],
+   "spread": [
+    -3.0,
+    -115,
+    3.0,
+    -105
+   ],
+   "spread_abre": -9.5,
+   "total": [
+    40.5,
+    -110,
+    -110
+   ],
+   "total_abre": 41.5
+  }
  },
  {
   "id": "401873075",
@@ -277,26 +433,26 @@
   "semana": 11,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    null,
-    null
+    -470,
+    360
    ],
    "ml_abre": [
     -425,
     330
    ],
    "spread": [
-    -8.5,
-    null,
-    8.5,
+    -9.5,
+    -110,
+    9.5,
     -110
    ],
    "spread_abre": -8.5,
    "total": [
-    null,
-    null,
-    null
+    40.5,
+    -110,
+    -110
    ],
    "total_abre": 41.5
   }
@@ -313,7 +469,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    235,
+    -290
+   ],
+   "ml_abre": [
+    105,
+    -125
+   ],
+   "spread": [
+    6.5,
+    -110,
+    -6.5,
+    -110
+   ],
+   "spread_abre": 1.5,
+   "total": [
+    46.5,
+    -110,
+    -110
+   ],
+   "total_abre": 46.5
+  }
  },
  {
   "id": "401873077",
@@ -327,7 +506,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 11,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -180,
+    150
+   ],
+   "ml_abre": [
+    -205,
+    170
+   ],
+   "spread": [
+    -3.5,
+    -102,
+    3.5,
+    -118
+   ],
+   "spread_abre": -3.5,
+   "total": [
+    46.5,
+    -110,
+    -110
+   ],
+   "total_abre": 46.5
+  }
  },
  {
   "id": "401873078",
@@ -342,7 +544,7 @@
   "semana": 11,
   "tipo": "regular-season",
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     170,
     -205
@@ -374,6 +576,48 @@
   "visita_espn": "Green Bay Packers",
   "local_abbr": "LAR",
   "visita_abbr": "GB",
+  "neutral": false,
+  "estado": "STATUS_SCHEDULED",
+  "semana": 12,
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "401873081",
+  "utc": "2026-11-26T18:00Z",
+  "estadio": "Ford Field",
+  "local_espn": "Detroit Lions",
+  "visita_espn": "Chicago Bears",
+  "local_abbr": "DET",
+  "visita_abbr": "CHI",
+  "neutral": false,
+  "estado": "STATUS_SCHEDULED",
+  "semana": 12,
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "401873080",
+  "utc": "2026-11-26T21:30Z",
+  "estadio": "AT&T Stadium",
+  "local_espn": "Dallas Cowboys",
+  "visita_espn": "Philadelphia Eagles",
+  "local_abbr": "DAL",
+  "visita_abbr": "PHI",
+  "neutral": false,
+  "estado": "STATUS_SCHEDULED",
+  "semana": 12,
+  "tipo": "regular-season",
+  "momios": null
+ },
+ {
+  "id": "401873082",
+  "utc": "2026-11-27T01:20Z",
+  "estadio": "Highmark Stadium",
+  "local_espn": "Buffalo Bills",
+  "visita_espn": "Kansas City Chiefs",
+  "local_abbr": "BUF",
+  "visita_abbr": "KC",
   "neutral": false,
   "estado": "STATUS_SCHEDULED",
   "semana": 12,
