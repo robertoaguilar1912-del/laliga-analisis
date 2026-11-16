@@ -154,7 +154,11 @@ def _eventos_anio(L, y, desde=None):
     j = _get(f"{ESPN}/{L['espn']}/scoreboard", params={'dates': f'{y}0701'})
     cal = (((j or {}).get('leagues') or [{}])[0].get('calendar') or [])
     hoy = ahora().strftime('%Y%m%d')
-    fechas = sorted({c[:10].replace('-', '') for c in cal if isinstance(c, str) and c.startswith(str(y))})
+    fechas = {c[:10].replace('-', '') for c in cal if isinstance(c, str) and c.startswith(str(y))}
+    # el calendario de ESPN trae solo la fase regular: los cuadrangulares de Colombia (desde el 12 nov 2026) y los partidos
+    # movidos no salían y se quedaban sin resultado. Se piden también, día por día, las últimas 3 semanas
+    fechas |= {d for d in ((ahora() - timedelta(days=k)).strftime('%Y%m%d') for k in range(22)) if d.startswith(str(y))}
+    fechas = sorted(fechas)
     out = {}
     for d in fechas:
         if d > hoy or (desde and d < desde):
