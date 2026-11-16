@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909987",
-  "utc": "2026-11-15T21:30Z",
-  "fecha": "2026-11-15",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "LAC",
-  "visita": "CHA",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "LA Clippers",
-  "visita_espn": "Charlotte Hornets",
-  "revisado": false,
-  "estadio": "Intuit Dome",
-  "records": {
-   "home": [
-    "3-8",
-    "3-3",
-    "0-5"
-   ],
-   "away": [
-    "4-8",
-    "3-4",
-    "1-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909988",
   "utc": "2026-11-15T22:00Z",
   "fecha": "2026-11-15",
@@ -67,7 +38,7 @@
   "visita": "DAL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Boston Celtics",
   "visita_espn": "Dallas Mavericks",
   "revisado": false,
@@ -128,7 +99,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Washington Wizards",
   "visita_espn": "Houston Rockets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Capital One Arena",
   "records": {
    "home": [
@@ -143,10 +114,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    262,
-    -326
+    286,
+    -359
    ],
    "ml_abre": [
     284,
@@ -154,15 +125,15 @@
    ],
    "spread": [
     8.5,
-    -118,
+    -110,
     -8.5,
-    -103
+    -110
    ],
    "spread_abre": 8.5,
    "total": [
-    223.5,
-    -112,
-    -108
+    224.5,
+    -110,
+    -110
    ],
    "total_abre": 222.5
   }
@@ -195,10 +166,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    261,
-    -324
+    270,
+    -336
    ],
    "ml_abre": [
     220,
@@ -247,7 +218,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     361,
     -468
@@ -496,8 +467,8 @@
     "4-2"
    ],
    "away": [
-    "5-6",
-    "5-3",
+    "5-7",
+    "5-4",
     "0-3"
    ]
   },
@@ -607,8 +578,8 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "3-8",
-    "3-3",
+    "4-8",
+    "4-3",
     "0-5"
    ],
    "away": [
@@ -636,14 +607,14 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "11-2",
+    "12-2",
     "5-1",
-    "6-1"
+    "7-1"
    ],
    "away": [
-    "4-8",
+    "4-9",
     "3-4",
-    "1-4"
+    "1-5"
    ]
   },
   "momios": null
@@ -955,9 +926,9 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "11-2",
+    "12-2",
     "5-1",
-    "6-1"
+    "7-1"
    ],
    "away": [
     "1-12",
@@ -989,8 +960,8 @@
     "1-4"
    ],
    "away": [
-    "5-6",
-    "5-3",
+    "5-7",
+    "5-4",
     "0-3"
    ]
   },
@@ -1105,8 +1076,8 @@
     "6-0"
    ],
    "away": [
-    "3-8",
-    "3-3",
+    "4-8",
+    "4-3",
     "0-5"
    ]
   },
@@ -1134,9 +1105,9 @@
     "4-3"
    ],
    "away": [
-    "4-8",
+    "4-9",
     "3-4",
-    "1-4"
+    "1-5"
    ]
   },
   "momios": null
@@ -1308,8 +1279,8 @@
     "0-6"
    ],
    "away": [
-    "5-6",
-    "5-3",
+    "5-7",
+    "5-4",
     "0-3"
    ]
   },
@@ -1361,9 +1332,9 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "11-2",
+    "12-2",
     "5-1",
-    "6-1"
+    "7-1"
    ],
    "away": [
     "1-11",
@@ -1453,8 +1424,8 @@
     "2-4"
    ],
    "away": [
-    "3-8",
-    "3-3",
+    "4-8",
+    "4-3",
     "0-5"
    ]
   },
@@ -1767,9 +1738,9 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "4-8",
+    "4-9",
     "3-4",
-    "1-4"
+    "1-5"
    ],
    "away": [
     "9-4",
@@ -1946,8 +1917,8 @@
     "1-4"
    ],
    "away": [
-    "5-6",
-    "5-3",
+    "5-7",
+    "5-4",
     "0-3"
    ]
   },
@@ -1975,8 +1946,8 @@
     "3-2"
    ],
    "away": [
-    "3-8",
-    "3-3",
+    "4-8",
+    "4-3",
     "0-5"
    ]
   },
@@ -1999,9 +1970,9 @@
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
-    "11-2",
+    "12-2",
     "5-1",
-    "6-1"
+    "7-1"
    ],
    "away": [
     "1-12",
@@ -2173,9 +2144,9 @@
   "estadio": "Spectrum Center",
   "records": {
    "home": [
-    "4-8",
+    "4-9",
     "3-4",
-    "1-4"
+    "1-5"
    ],
    "away": [
     "3-9",
@@ -2265,8 +2236,8 @@
     "6-0"
    ],
    "away": [
-    "3-8",
-    "3-3",
+    "4-8",
+    "4-3",
     "0-5"
    ]
   },
@@ -2323,8 +2294,8 @@
     "3-2"
    ],
    "away": [
-    "5-6",
-    "5-3",
+    "5-7",
+    "5-4",
     "0-3"
    ]
   },
