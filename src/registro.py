@@ -96,7 +96,8 @@ def pinnacle_cierre(picks, t):
     """A cada PICK cuyo partido ya empezó le anota el precio justo de Pinnacle en la última foto antes de empezar ('pin_c',
     probabilidad sin margen; 'pin_m', momio de Pinnacle si hay). El valor contra el cierre de Pinnacle es momio × pin_c − 1:
     si sale positivo seguido, el modelo encuentra precios mejores que los de la casa más afilada (desde el 1 nov 2026 en el
-    fútbol con API-Football; la NFL y la NBA con The Odds API)."""
+    fútbol con API-Football; la NFL y la NBA con The Odds API). En la NBA, si Pinnacle tenía otra línea en spread o total, se
+    mueve su probabilidad a la del PICK ('pin_aprox' = la clave de Pinnacle de donde se movió; ver pin_linea.py)."""
     af = _leer(DATOS / 'cierres_af.json', {})
     oa = _leer(DATOS / 'cierres_oddsapi.json', {})
     n = 0
@@ -120,6 +121,12 @@ def pinnacle_cierre(picks, t):
                     r['pin_m'] = m
                 n += 1
                 break
+        if 'pin_c' not in r and liga == 'nba':     # Pinnacle con otra línea: se mueve a la del PICK (pin_linea.py, 16 nov 2026)
+            import pin_linea
+            x = pin_linea.en_linea(pin_linea.centros({k: _justo(pin, k) for k in pin}), r['k'])
+            if x:
+                r['pin_c'], r['pin_aprox'] = x
+                n += 1
     return n
 
 

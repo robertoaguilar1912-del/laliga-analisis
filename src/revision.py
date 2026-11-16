@@ -216,6 +216,10 @@ def resumen(desde, hasta, mias=None):
                'momio con que se registraron; sin pago anticipado).', '']
     out = cab + [
            tabla(cuenta, 'grupo', 'Grupo'), '', tabla(cuenta, 'tipo', 'Mercado'), '']
+    apx = [f for f in cuenta if f.get('pin_aprox')]
+    if apx:                                  # NBA con otra línea en Pinnacle: su precio movido a la del PICK (pin_linea.py)
+        out += [f"Pinnacle movido de línea (spread y total de la NBA cuando Pinnacle tenía otra; aproximado, ver pin_linea.py): "
+                f"{len(apx)} de los {sum(1 for f in cuenta if f.get('pin_c') is not None)} con Pinnacle.", '']
     pend = [f for f in cuenta if f['pl'] is None]
     if pend:
         out += [f'Sin resultado todavía: {len(pend)}.', '']
