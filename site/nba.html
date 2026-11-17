@@ -666,7 +666,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     P.forEach(x => { (porJug[x.j] = porJug[x.j] || []).push(x); });
     const eqs = [[g.visita_fd, g.visita_es, 'var(--away)'], [g.local_fd, g.local_es, 'var(--home)']];
     const STO = ['reb', 'ast', 'ra', 'pr', 'pra', 'pts', 'tres', 'pa'];
-    const jugHTML = xs => `<div class="pjug"><h4>${esc(xs[0].n)} <small>~${xs[0].min} min${xs[0].mr != null ? ` · por rol y tipo de juego ~${xs[0].mr}` : ''}</small></h4>${xs.sort((a, b) => STO.indexOf(a.s) - STO.indexOf(b.s)).map(fila).join('')}</div>`;
+    const jugHTML = xs => `<div class="pjug"><h4>${esc(xs[0].n)} <small>~${xs[0].min} min</small></h4>${xs.sort((a, b) => STO.indexOf(a.s) - STO.indexOf(b.s)).map(fila).join('')}</div>`;
     return `<div class="card"><h3>PICK de props</h3>
         ${picks.length ? picks.map(x => `<div class="mrow pick"><span class="mname">${esc(x.n)} · ${esc(PN[x.s])} ${x.lado === 'o' ? 'más' : 'menos'} de ${x.l}</span><span class="pill PICK">PICK</span><span class="mline">${esc(g.props_casa || 'DraftKings')} ${(x.lado === 'o' ? x.o : x.u).toFixed(2)} · mezcla ${pct(x.lado === 'o' ? x.q : 1 - x.q, 1)} · justo ${(1 / (x.lado === 'o' ? x.q : 1 - x.q)).toFixed(2)} · EV ${spct(x.lado === 'o' ? x.ev_o : x.ev_u, 1)} · modelo espera ${x.mu}${confHTML(x, x.lado)}</span></div>`).join('')
           : `<p class="empty">Ningún prop con PICK por ahora (${[...CON_PICK].map(k => PN[k].toLowerCase()).join(', ')}).</p>`}
@@ -779,15 +779,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const lejos = Math.abs(L - x.l) > 2.01;
       const fuente = x.qc != null ? `precio justo de ${esc(g.props_casa || 'DraftKings')}` : 'mezcla';
       const ladoOK = (x.lados || 'ou').includes(lado.value), puede = CALC_PICK.has(x.s) && ladoOK && x.rol !== false;
-      // la confianza por minutos sale siempre, sea PICK o no (también para lo que Roberto encuentre por su cuenta)
+      // la confianza por minutos sale solo cuando tu momio la hace PICK (pedido de Roberto, 17 nov)
       const minHTML = confDe(x, lado.value) ? `<br>Minutos: ${confTxt(x, lado.value)}${lado.value === 'u' && CON_PICK.has(x.s) ? '' : '. Ojo: la confianza solo se probó en el "menos" de rebotes, asistencias y combinados'}.` : '';
-      if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.` + minHTML; return null; }
+      if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
       const ev = c.gana * (dec - 1) - c.pierde;
       const v = ev >= 0.05 && puede && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${fuente[0].toUpperCase() + fuente.slice(1)} <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
         + (!CALC_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} no hay prueba que lo respalde.` : '')
         + (CALC_PICK.has(x.s) && !ladoOK && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} solo el "menos" ganó al comparar casas; el "más" no.` : '')
-        + minHTML
+        + (v === 'PICK' ? minHTML : '')
         + (x.rol === false && ev >= 0.05 ? `<br><b>No es PICK:</b> rol incierto (el modelo espera ${x.min} minutos${x.falta >= 60 ? ` y a su equipo le faltan ${x.falta} minutos de habituales` : ''}); la casa sabe mejor cuánto va a jugar.` : '')
         + (lejos && ev >= 0.05 ? `<br><b>No es PICK:</b> tu línea está a más de 2 de la de ${esc(g.props_casa || 'DraftKings')} (${x.l}); revisa si el jugador tiene alguna novedad.` : '')
         + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
@@ -871,20 +871,20 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     box.innerHTML = (filas.length ? filas.map((r, k) => {
       const x = r.x, g = r.g, rival = x.eq === g.local_fd ? 'vs ' + g.visita_fd : '@' + g.local_fd;
       return `<div class="pp${r.pickDK ? ' pick' : ''}" data-k="${k}">
-        <div><div class="who">${esc(x.n)}<small>${esc(x.eq)} ${esc(rival)} · ${esc(fhora(g.utc))} · ~${x.min} min${x.mr != null ? ` (rol y juego ~${x.mr})` : ''}</small></div>
-          <div class="mk">${esc(PN[x.s])} <b>${r.l === 'o' ? 'más' : 'menos'} de ${x.l}</b>${r.pickDK ? ' <span class="pill PICK">PICK</span>' : ''}${confDe(x, r.l) === 'alta' ? ' <small><b>confianza alta</b></small>' : confDe(x, r.l) ? ` <small>puede jugar ${r.l === 'o' ? 'menos' : 'más'}</small>` : ''}</div></div>
+        <div><div class="who">${esc(x.n)}<small>${esc(x.eq)} ${esc(rival)} · ${esc(fhora(g.utc))}</small></div>
+          <div class="mk">${esc(PN[x.s])} <b>${r.l === 'o' ? 'más' : 'menos'} de ${x.l}</b>${r.pickDK ? ' <span class="pill PICK">PICK</span>' : ''}</div></div>
         <div class="od">${esc(casa)} ${r.dk.toFixed(2)}<br>necesitas <b>${r.nec.toFixed(2)}</b></div>
-        <div class="act"><input inputmode="decimal" autocomplete="off" placeholder="Tu momio" aria-label="Tu momio para ${esc(x.n)}"><span class="res" aria-live="polite">${r.pickDK ? `En ${esc(casa)} ya es PICK (EV ${spct(r.ev, 1)}).` : `En ${esc(casa)}: EV ${spct(r.ev, 1)}.`}</span><button class="linkbtn" type="button">Ver gráfica y calculadora →</button></div>
+        <div class="act"><input inputmode="decimal" autocomplete="off" placeholder="Tu momio" aria-label="Tu momio para ${esc(x.n)}"><span class="res" aria-live="polite">${r.pickDK ? `En ${esc(casa)} ya es PICK (EV ${spct(r.ev, 1)})${confHTML(x, r.l)}.` : `En ${esc(casa)}: EV ${spct(r.ev, 1)}.`}</span><button class="linkbtn" type="button">Ver gráfica y calculadora →</button></div>
       </div>`;
     }).join('') : '<p class="empty">Ninguno con este filtro.</p>')
-      + `<p class="note">"Confianza alta": el segundo cálculo de minutos (rol reciente y tipo de juego) no espera que juegue más de lo que usa el modelo; "puede jugar más": sí lo espera. En la prueba los dos ganaron, pero los de confianza alta mucho más (+45% contra +15%). "Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
+      + `<p class="note">Cuando es PICK (en ${esc(casa)} o con tu momio) sale su confianza: "alta" si el segundo cálculo de minutos (rol reciente y tipo de juego) no espera que juegue más de lo que usa el modelo; "puede jugar más" si sí lo espera. En la prueba los dos ganaron, pero los de confianza alta mucho más (+45% contra +15%). "Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
     box.querySelectorAll('.pp').forEach(el => {
       const r = filas[+el.dataset.k], inp = $('input', el), res = $('.res', el);
       inp.addEventListener('input', () => {
         const dec = parseOdds(inp.value);
         if (!dec) { res.textContent = ''; return; }
         const ev = r.p * dec - 1, v = ev >= 0.05 && dec >= 1.5 && dec <= 2.6 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
-        res.innerHTML = `<span class="pill ${v}">${v}</span> EV ${spct(ev, 1)}${v !== 'PICK' && ev >= 0.05 ? ' (solo cuentan momios de 1.50 a 2.60)' : ''}`;
+        res.innerHTML = `<span class="pill ${v}">${v}</span> EV ${spct(ev, 1)}${v !== 'PICK' && ev >= 0.05 ? ' (solo cuentan momios de 1.50 a 2.60)' : ''}${v === 'PICK' ? confHTML(r.x, r.l) : ''}`;
       });
       $('button', el).addEventListener('click', () => {
         showView('juegos'); showGame(r.gi); history.replaceState(null, '', '#j' + (r.gi + 1));
