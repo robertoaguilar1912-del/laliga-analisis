@@ -9,7 +9,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Boston Celtics",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -26,30 +26,7 @@
     "4-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -358,
-    286
-   ],
-   "ml_abre": [
-    -426,
-    333
-   ],
-   "spread": [
-    -8.5,
-    -108,
-    8.5,
-    -112
-   ],
-   "spread_abre": -9.5,
-   "total": [
-    212.5,
-    -113,
-    -107
-   ],
-   "total_abre": 211.5
-  }
+  "momios": null
  },
  {
   "id": "401909995",
@@ -61,7 +38,7 @@
   "visita": "CHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Chicago Bulls",
   "revisado": false,
@@ -78,30 +55,7 @@
     "2-5"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -327,
-    263
-   ],
-   "ml_abre": [
-    -400,
-    315
-   ],
-   "spread": [
-    -8.5,
-    -106,
-    8.5,
-    -114
-   ],
-   "spread_abre": -10.5,
-   "total": [
-    241.5,
-    -110,
-    -110
-   ],
-   "total_abre": 241.5
-  }
+  "momios": null
  },
  {
   "id": "401909996",
@@ -113,7 +67,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Washington Wizards",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -130,30 +84,7 @@
     "6-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    143,
-    -170
-   ],
-   "ml_abre": [
-    185,
-    -223
-   ],
-   "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
-   ],
-   "spread_abre": 6.5,
-   "total": [
-    231.5,
-    -110,
-    -110
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401909997",
@@ -165,10 +96,10 @@
   "visita": "PHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Brooklyn Nets",
   "visita_espn": "Philadelphia 76ers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Barclays Center",
   "records": {
    "home": [
@@ -182,30 +113,7 @@
     "5-1"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    180,
-    -217
-   ],
-   "ml_abre": [
-    172,
-    -207
-   ],
-   "spread": [
-    5.5,
-    -115,
-    -5.5,
-    -106
-   ],
-   "spread_abre": 5.5,
-   "total": [
-    226.5,
-    -112,
-    -108
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401909998",
@@ -217,10 +125,10 @@
   "visita": "HOU",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Miami Heat",
   "visita_espn": "Houston Rockets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Kaseya Center",
   "records": {
    "home": [
@@ -234,30 +142,7 @@
     "4-2"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    102,
-    -120
-   ],
-   "ml_abre": [
-    119,
-    -141
-   ],
-   "spread": [
-    1.5,
-    -110,
-    -1.5,
-    -110
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    233.5,
-    -114,
-    -106
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909999",
@@ -272,7 +157,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Target Center",
   "records": {
    "home": [
@@ -287,7 +172,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -130,
     110
@@ -324,7 +209,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -339,10 +224,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    131,
-    -155
+    142,
+    -170
    ],
    "ml_abre": [
     111,
@@ -350,9 +235,9 @@
    ],
    "spread": [
     3.5,
-    -115,
+    -108,
     -3.5,
-    -106
+    -111
    ],
    "spread_abre": 2.5,
    "total": [
@@ -376,7 +261,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Denver Nuggets",
   "visita_espn": "Phoenix Suns",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -391,7 +276,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -426,
     333
@@ -442,7 +327,30 @@
     "3-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    128,
+    -152
+   ],
+   "ml_abre": [
+    128,
+    -152
+   ],
+   "spread": [
+    3.5,
+    -110,
+    -3.5,
+    -110
+   ],
+   "spread_abre": 3.5,
+   "total": [
+    216.5,
+    -110,
+    -110
+   ],
+   "total_abre": 216.5
+  }
  },
  {
   "id": "401910003",
@@ -500,7 +408,30 @@
     "5-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -345,
+    277
+   ],
+   "ml_abre": [
+    -345,
+    277
+   ],
+   "spread": [
+    -7.5,
+    -110,
+    7.5,
+    -110
+   ],
+   "spread_abre": -7.5,
+   "total": [
+    220.5,
+    -110,
+    -110
+   ],
+   "total_abre": 220.5
+  }
  },
  {
   "id": "401910006",
@@ -529,7 +460,30 @@
     "0-6"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -219,
+    182
+   ],
+   "ml_abre": [
+    -199,
+    166
+   ],
+   "spread": [
+    -5.5,
+    -114,
+    5.5,
+    -106
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    223.5,
+    -110,
+    -110
+   ],
+   "total_abre": 223.5
+  }
  },
  {
   "id": "401910005",
@@ -558,7 +512,30 @@
     "1-5"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -381,
+    302
+   ],
+   "ml_abre": [
+    -391,
+    309
+   ],
+   "spread": [
+    -8.5,
+    -110,
+    8.5,
+    -110
+   ],
+   "spread_abre": -10.5,
+   "total": [
+    218.5,
+    -114,
+    -106
+   ],
+   "total_abre": 218.5
+  }
  },
  {
   "id": "401910007",
