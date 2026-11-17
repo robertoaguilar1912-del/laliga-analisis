@@ -1,8 +1,8 @@
 {
 "401875056": {
 "fotmob": 5749753,
-"visto": "2026-11-17T05:14+00:00",
-"xi": "unavailable",
+"visto": "2026-11-17T06:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -12,7 +12,7 @@
 "duda": false,
 "valor": 38026168.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Assane Diao",
@@ -21,7 +21,25 @@
 "duda": false,
 "valor": 37252771.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Trevoh Chalobah",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 38649153.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Moise Kean",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 36095131.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Jayden Addai",
@@ -31,29 +49,11 @@
 "valor": 24758025.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Trevoh Chalobah",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 38649153.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Moise Kean",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 36095131.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 338491239.0,
+"perdida": 0.22239553148375577,
+"perdida_duda": 0.22081600758949038
 },
 "visita": {
 "faltan": [
@@ -112,15 +112,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 93810357.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401874981": {
 "fotmob": 5749755,
-"visto": "2026-11-17T05:14+00:00",
-"xi": "unavailable",
+"visto": "2026-11-17T06:32+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -129,8 +129,8 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 17954909.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Nuno Tavares",
@@ -138,17 +138,8 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 13770908.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Albert Guðmundsson",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 12885225.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Josip Šutalo",
@@ -156,6 +147,15 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 12136422.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Albert Guðmundsson",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 12885225.0,
 "titular": false,
 "importante": false
 },
@@ -178,8 +178,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 159297611.0,
+"perdida": 0.2753477514487019,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -191,7 +191,7 @@
 "duda": false,
 "valor": 6871942.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Joël Monteiro",
@@ -200,7 +200,7 @@
 "duda": false,
 "valor": 3471794.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Santiago Pierotti",
@@ -209,7 +209,7 @@
 "duda": false,
 "valor": 2385289.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Medon Berisha",
@@ -218,17 +218,17 @@
 "duda": true,
 "valor": 5382489.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 42285844.0,
+"perdida": 0.30102331645550223,
+"perdida_duda": 0.12728820075105987
 }
 },
 "401874967": {
 "fotmob": 5749758,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -319,7 +319,7 @@
 },
 "401875067": {
 "fotmob": 5749757,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -401,7 +401,7 @@
 },
 "401875008": {
 "fotmob": 5749754,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -510,7 +510,7 @@
 },
 "401875047": {
 "fotmob": 5749752,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -610,7 +610,7 @@
 },
 "401874960": {
 "fotmob": 5749759,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -682,7 +682,7 @@
 },
 "401874989": {
 "fotmob": 5749750,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -809,7 +809,7 @@
 },
 "401875001": {
 "fotmob": 5749751,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -927,7 +927,7 @@
 },
 "401875009": {
 "fotmob": 5749756,
-"visto": "2026-11-17T05:14+00:00",
+"visto": "2026-11-17T06:32+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
