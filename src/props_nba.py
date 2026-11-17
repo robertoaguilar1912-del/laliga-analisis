@@ -18,7 +18,6 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import nbinom
-from sklearn.ensemble import HistGradientBoostingRegressor
 
 from config import RAW, DATOS, ahora
 from fuentes import _get
@@ -216,6 +215,7 @@ def _mr_entrada(Z):
 def minutos_rol(J, X):
     """Minutos esperados según el rol reciente y el tipo de juego para las filas de X (salida de medias sobre J): un
     HistGradientBoosting entrenado con los minutos reales de los juegos ya jugados de J. Solo para la confianza de los PICK."""
+    from sklearn.ensemble import HistGradientBoostingRegressor     # aquí: si faltara, solo se pierde la confianza
     Z = X.join(rol_reciente(J))
     E = _mr_entrada(Z)
     tr = Z['min'].notna()
