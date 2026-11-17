@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -170
+    120,
+    -175
    ],
    "spread": [
     [
@@ -180,10 +180,10 @@
     205,
     295
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 1.5,
    "ou": [
-    140,
-    -210
+    -210,
+    140
    ],
    "spread": [
     [
@@ -239,6 +239,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura---round-of-16",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -195,
+    295,
+    500
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -215
+    ],
+    [
+     "+0.5",
+     135
+    ]
+   ]
+  }
  }
 ]
