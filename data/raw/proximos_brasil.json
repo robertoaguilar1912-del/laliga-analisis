@@ -11,14 +11,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    230,
-    260,
-    105
+    225,
+    255,
+    110
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    115
+    -150,
+    110
    ],
    "spread": [
     [
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    320,
-    370
+    -170,
+    330,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
-    -185,
-    130
+    -180,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -185
     ],
     [
      "+0.5",
-     120
+     125
     ]
    ]
   }
@@ -116,17 +116,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -155
+    120,
+    -165
    ],
    "spread": [
     [
      "-1.5",
-     -160
+     -155
     ],
     [
      "+1.5",
-     110
+     105
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
-    270,
-    320
+    -120,
+    265,
+    300
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -209,13 +209,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    290,
+    -155,
+    300,
     380
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     100
    ],
    "spread": [
@@ -225,7 +225,7 @@
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   }
@@ -242,23 +242,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
-    230,
-    145
+    160,
+    235,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
     -135,
-    -110
+    -105
    ],
    "spread": [
     [
      "+0.5",
-     -200
+     -215
     ],
     [
      "-0.5",
-     130
+     145
     ]
    ]
   }
@@ -275,13 +275,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    220,
+    135,
+    225,
     200
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
+    105,
     -145
    ],
    "spread": [
@@ -423,6 +423,17 @@
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "São Paulo",
   "visita_espn": "Remo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841337",
+  "utc": "2026-11-27T23:00Z",
+  "estadio": "Estadio do Maracana",
+  "local_espn": "Fluminense",
+  "visita_espn": "Cruzeiro",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
