@@ -1,92 +1,5 @@
 [
  {
-  "id": "401909994",
-  "utc": "2026-11-17T00:00Z",
-  "fecha": "2026-11-16",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "BOS",
-  "visita": "ORL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_HALFTIME",
-  "local_espn": "Boston Celtics",
-  "visita_espn": "Orlando Magic",
-  "revisado": false,
-  "estadio": "TD Garden",
-  "records": {
-   "home": [
-    "11-2",
-    "6-0",
-    "5-2"
-   ],
-   "away": [
-    "5-7",
-    "1-4",
-    "4-3"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909995",
-  "utc": "2026-11-17T00:00Z",
-  "fecha": "2026-11-16",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CLE",
-  "visita": "CHI",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_HALFTIME",
-  "local_espn": "Cleveland Cavaliers",
-  "visita_espn": "Chicago Bulls",
-  "revisado": false,
-  "estadio": "Rocket Arena",
-  "records": {
-   "home": [
-    "7-7",
-    "5-2",
-    "2-5"
-   ],
-   "away": [
-    "3-9",
-    "1-4",
-    "2-5"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401909996",
-  "utc": "2026-11-17T00:00Z",
-  "fecha": "2026-11-16",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "WSH",
-  "visita": "MEM",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Washington Wizards",
-  "visita_espn": "Memphis Grizzlies",
-  "revisado": false,
-  "estadio": "Capital One Arena",
-  "records": {
-   "home": [
-    "4-10",
-    "2-4",
-    "2-6"
-   ],
-   "away": [
-    "9-4",
-    "3-4",
-    "6-0"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909997",
   "utc": "2026-11-17T00:30Z",
   "fecha": "2026-11-16",
@@ -96,7 +9,7 @@
   "visita": "PHI",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Brooklyn Nets",
   "visita_espn": "Philadelphia 76ers",
   "revisado": false,
@@ -116,35 +29,6 @@
   "momios": null
  },
  {
-  "id": "401909998",
-  "utc": "2026-11-17T00:30Z",
-  "fecha": "2026-11-16",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIA",
-  "visita": "HOU",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Miami Heat",
-  "visita_espn": "Houston Rockets",
-  "revisado": false,
-  "estadio": "Kaseya Center",
-  "records": {
-   "home": [
-    "7-6",
-    "3-3",
-    "4-3"
-   ],
-   "away": [
-    "11-3",
-    "7-1",
-    "4-2"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909999",
   "utc": "2026-11-17T01:00Z",
   "fecha": "2026-11-16",
@@ -154,7 +38,7 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Portland Trail Blazers",
   "revisado": false,
@@ -171,30 +55,7 @@
     "6-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -130,
-    110
-   ],
-   "ml_abre": [
-    -143,
-    121
-   ],
-   "spread": [
-    -2.5,
-    -106,
-    2.5,
-    -114
-   ],
-   "spread_abre": -3.5,
-   "total": [
-    227.5,
-    -110,
-    -110
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401910000",
@@ -206,7 +67,7 @@
   "visita": "GS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Golden State Warriors",
   "revisado": false,
@@ -223,30 +84,7 @@
     "2-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    142,
-    -170
-   ],
-   "ml_abre": [
-    111,
-    -131
-   ],
-   "spread": [
-    3.5,
-    -108,
-    -3.5,
-    -111
-   ],
-   "spread_abre": 2.5,
-   "total": [
-    223.5,
-    -110,
-    -110
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401910001",
@@ -258,10 +96,10 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Denver Nuggets",
   "visita_espn": "Phoenix Suns",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -275,30 +113,7 @@
     "0-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -426,
-    333
-   ],
-   "ml_abre": [
-    -370,
-    294
-   ],
-   "spread": [
-    -9.5,
-    -114,
-    9.5,
-    -106
-   ],
-   "spread_abre": -10.5,
-   "total": [
-    229.5,
-    -106,
-    -114
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401910002",
@@ -419,9 +234,9 @@
     277
    ],
    "spread": [
-    -7.5,
+    -8.5,
     -110,
-    7.5,
+    8.5,
     -110
    ],
    "spread_abre": -7.5,
@@ -554,14 +369,14 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "7-7",
-    "5-2",
+    "8-7",
+    "6-2",
     "2-5"
    ],
    "away": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ]
   },
   "momios": null
@@ -588,9 +403,9 @@
     "3-4"
    ],
    "away": [
-    "11-3",
+    "11-4",
     "7-1",
-    "4-2"
+    "4-3"
    ]
   },
   "momios": null
@@ -612,8 +427,8 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "7-6",
-    "3-3",
+    "8-6",
+    "4-3",
     "4-3"
    ],
    "away": [
@@ -641,9 +456,9 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "5-7",
+    "6-7",
     "1-4",
-    "4-3"
+    "5-3"
    ],
    "away": [
     "11-3",
@@ -675,9 +490,9 @@
     "2-6"
    ],
    "away": [
-    "3-9",
+    "3-10",
     "1-4",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -704,8 +519,8 @@
     "3-4"
    ],
    "away": [
-    "4-10",
-    "2-4",
+    "4-11",
+    "2-5",
     "2-6"
    ]
   },
@@ -820,8 +635,8 @@
     "4-2"
    ],
    "away": [
-    "11-2",
-    "6-0",
+    "11-3",
+    "6-1",
     "5-2"
    ]
   },
@@ -902,9 +717,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ],
    "away": [
     "8-5",
@@ -1052,9 +867,9 @@
     "2-6"
    ],
    "away": [
-    "5-7",
+    "6-7",
     "1-4",
-    "4-3"
+    "5-3"
    ]
   },
   "momios": null
@@ -1076,8 +891,8 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "7-7",
-    "5-2",
+    "8-7",
+    "6-2",
     "2-5"
    ],
    "away": [
@@ -1134,13 +949,13 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "3-9",
+    "3-10",
     "1-4",
-    "2-5"
+    "2-6"
    ],
    "away": [
-    "4-10",
-    "2-4",
+    "4-11",
+    "2-5",
     "2-6"
    ]
   },
@@ -1226,9 +1041,9 @@
     "4-2"
    ],
    "away": [
-    "11-3",
+    "11-4",
     "7-1",
-    "4-2"
+    "4-3"
    ]
   },
   "momios": null
@@ -1371,9 +1186,9 @@
     "4-2"
    ],
    "away": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ]
   },
   "momios": null
@@ -1429,8 +1244,8 @@
     "1-4"
    ],
    "away": [
-    "11-2",
-    "6-0",
+    "11-3",
+    "6-1",
     "5-2"
    ]
   },
@@ -1482,8 +1297,8 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "7-6",
-    "3-3",
+    "8-6",
+    "4-3",
     "4-3"
    ],
    "away": [
@@ -1511,14 +1326,14 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-10",
-    "2-4",
+    "4-11",
+    "2-5",
     "2-6"
    ],
    "away": [
-    "5-7",
+    "6-7",
     "1-4",
-    "4-3"
+    "5-3"
    ]
   },
   "momios": null
@@ -1540,9 +1355,9 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "3-9",
+    "3-10",
     "1-4",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "7-4",
@@ -1632,8 +1447,8 @@
     "2-4"
    ],
    "away": [
-    "11-2",
-    "6-0",
+    "11-3",
+    "6-1",
     "5-2"
    ]
   },
@@ -1661,9 +1476,9 @@
     "1-5"
    ],
    "away": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ]
   },
   "momios": null
@@ -1801,13 +1616,13 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "3-9",
+    "3-10",
     "1-4",
-    "2-5"
+    "2-6"
    ],
    "away": [
-    "7-7",
-    "5-2",
+    "8-7",
+    "6-2",
     "2-5"
    ]
   },
@@ -1859,9 +1674,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "11-3",
+    "11-4",
     "7-1",
-    "4-2"
+    "4-3"
    ],
    "away": [
     "4-8",
@@ -1946,9 +1761,9 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "5-7",
+    "6-7",
     "1-4",
-    "4-3"
+    "5-3"
    ],
    "away": [
     "8-4",
@@ -1975,13 +1790,13 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "4-10",
-    "2-4",
+    "4-11",
+    "2-5",
     "2-6"
    ],
    "away": [
-    "11-2",
-    "6-0",
+    "11-3",
+    "6-1",
     "5-2"
    ]
   },
@@ -2038,8 +1853,8 @@
     "5-1"
    ],
    "away": [
-    "7-6",
-    "3-3",
+    "8-6",
+    "4-3",
     "4-3"
    ]
   },
@@ -2067,9 +1882,9 @@
     "1-5"
    ],
    "away": [
-    "3-9",
+    "3-10",
     "1-4",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -2096,8 +1911,8 @@
     "3-3"
    ],
    "away": [
-    "7-7",
-    "5-2",
+    "8-7",
+    "6-2",
     "2-5"
    ]
   },
@@ -2149,9 +1964,9 @@
   "estadio": "FedExForum",
   "records": {
    "home": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ],
    "away": [
     "4-8",
@@ -2207,9 +2022,9 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "11-3",
+    "11-4",
     "7-1",
-    "4-2"
+    "4-3"
    ],
    "away": [
     "5-7",
@@ -2299,8 +2114,8 @@
     "3-3"
    ],
    "away": [
-    "7-6",
-    "3-3",
+    "8-6",
+    "4-3",
     "4-3"
    ]
   },
@@ -2410,8 +2225,8 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "11-2",
-    "6-0",
+    "11-3",
+    "6-1",
     "5-2"
    ],
    "away": [
@@ -2444,9 +2259,9 @@
     "4-2"
    ],
    "away": [
-    "9-4",
+    "10-4",
     "3-4",
-    "6-0"
+    "7-0"
    ]
   },
   "momios": null
