@@ -18,6 +18,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
 from scipy.stats import nbinom
+from sklearn.ensemble import HistGradientBoostingRegressor
 
 from config import RAW, DATOS, ahora
 from fuentes import _get
@@ -50,6 +51,15 @@ MOMIOS_NORMALES = (1.5, 2.6)             # línea principal "normal": los dos la
 # de 10; en la prueba, los de menos de 12 minutos perdieron en 4 de 5 temporadas (1,058 apuestas −2.5%; sin ellos el total
 # pasa de +11.5% a +14.9%) y con 60+ minutos de bajas, 165 apuestas −6.9%.
 MIN_PICK, FALTA_MAX = 12.0, 60.0
+# Minutos según el rol reciente y el tipo de juego (16 nov 2026; claude/props-nba-minutos-nov-2026.md). Un segundo cálculo de
+# minutos (minutos_rol) con lo que la página ya espera más los últimos juegos (vida media 3, el último, si fue titular), la
+# temporada, el margen que espera el mercado (paliza o juego parejo), el total y el descanso. Errores: 4.7 min contra 5.5 de la
+# página. NO cambia los PICK: usado en lugar de los minutos de la página, o en la mezcla, el ROI de los PICK bajó (23% a 16-19%)
+# aunque las probabilidades mejoraran un poco. Sí sirve como CONFIANZA: en los PICK de "menos" donde este cálculo no espera más
+# minutos que la página, la prueba dio +45% (539 apuestas; mejor en las 4 temporadas: +51/+20/+41/+24%) contra +15% de los
+# demás (1,436; +13/+14/+17/+21%), que siguen siendo PICK. Sin el tipo de juego, la señal no se sostenía en 2025-26 y 2026-27.
+MR_COLS = ['m_esp', 'h_min', 'h3_min', 'm1', 'h_tit', 'h3_tit', 't1', 'hs_min', 'n_s', 'min_faltan', 'parte', 'marg', 'abs_marg',
+           'tot_u', 'descanso']
 CASA_PRUEBA = {2023: '40', 2024: '40', 2025: '58', 2026: '58', 2027: '100'}   # DraftKings, ESPN BET
 AFINAR = 2023
 P_PARAMS = DATOS / 'modelo' / 'nba' / 'props.json'
@@ -160,6 +170,65 @@ def medias(J, Hh, titular=False):
     for c, partes in COMBOS.items():
         X['mu_' + c] = sum(X['mu_' + p] for p in partes)
     return X
+
+
+def rol_reciente(J):
+    """Para cada fila de J, con lo de antes del juego: minutos y titularidad recientes (vida media 3 y el último juego), minutos
+    de esta temporada (vida media H) y cuántos juegos lleva, días de descanso de su equipo y el margen y total que espera el
+    mercado (spread y total de J: de cierre, o los de hoy en los juegos que vienen)."""
+    P = J[J.jugo & J['min'].notna()].copy()
+    P['tit'] = P.titular.astype(float)
+    g = P.groupby('jugador', sort=False)
+    gt = P.groupby(['jugador', 'temporada'], sort=False)
+    E = pd.DataFrame({'h3_min': g['min'].transform(lambda x: x.ewm(halflife=3).mean()),
+                      'h3_tit': g['tit'].transform(lambda x: x.ewm(halflife=3).mean()),
+                      'm1': P['min'], 't1': P['tit'],
+                      'hs_min': gt['min'].transform(lambda x: x.ewm(halflife=H).mean()), 'n_s': gt.cumcount() + 1,
+                      'temp_ult': P.temporada, 'jugador': P.jugador, 'utc': P.utc}).sort_values('utc')
+    A = J[['jugador', 'utc', 'temporada']].reset_index().sort_values('utc')
+    M = pd.merge_asof(A, E, on='utc', by='jugador', allow_exact_matches=False, direction='backward').set_index('index').sort_index()
+    otra = M.temp_ult != M.temporada                      # todavía sin juegos esta temporada
+    M.loc[otra, 'hs_min'], M.loc[otra, 'n_s'] = np.nan, 0
+    T = J[['id', 'equipo', 'utc']].drop_duplicates(['id', 'equipo']).sort_values('utc')
+    T['descanso'] = T.groupby('equipo').utc.diff().dt.total_seconds() / 86400
+    d = J[['id', 'equipo']].merge(T[['id', 'equipo', 'descanso']], on=['id', 'equipo'], how='left')
+    M['descanso'] = d.descanso.to_numpy()
+    M['marg'] = np.where(J.es_local, -J.sp, J.sp)       # margen que el mercado espera para su equipo
+    M['tot_u'] = J.tot.to_numpy()
+    return M[['h3_min', 'h3_tit', 'm1', 't1', 'hs_min', 'n_s', 'descanso', 'marg', 'tot_u']]
+
+
+def _mr_entrada(Z):
+    Z = Z.copy()
+    Z['h_tit'] = Z.h_tit.fillna(0)
+    for c, base in (('hs_min', 'h_min'), ('h3_min', 'h_min'), ('m1', 'h_min'), ('h3_tit', 'h_tit'), ('t1', 'h_tit')):
+        Z[c] = Z[c].fillna(Z[base])
+    Z['n_s'] = Z.n_s.fillna(0).clip(upper=20)
+    Z['descanso'] = Z.descanso.fillna(2).clip(upper=4)
+    Z['min_faltan'] = Z.min_faltan.fillna(0)
+    Z['marg'] = Z.marg.fillna(0)
+    Z['abs_marg'] = Z.marg.abs()
+    Z['tot_u'] = Z.tot_u.fillna(225.0)
+    Z['parte'] = Z.m_esp / Z.h_min.clip(lower=1)      # cuánto le subió el reparto de bajas
+    return Z[MR_COLS]
+
+
+def minutos_rol(J, X):
+    """Minutos esperados según el rol reciente y el tipo de juego para las filas de X (salida de medias sobre J): un
+    HistGradientBoosting entrenado con los minutos reales de los juegos ya jugados de J. Solo para la confianza de los PICK."""
+    Z = X.join(rol_reciente(J))
+    E = _mr_entrada(Z)
+    tr = Z['min'].notna()
+    mod = HistGradientBoostingRegressor(max_iter=300, learning_rate=0.05, max_leaf_nodes=31, min_samples_leaf=100, random_state=0)
+    mod.fit(E[tr], Z.loc[tr, 'min'])
+    return pd.Series(np.clip(mod.predict(E), 1, 48), index=X.index)
+
+
+def confianza(lado, m_esp, m_rol):
+    """'alta' si el cálculo por rol y tipo de juego no espera más minutos que la página (en un 'menos'; al revés en un 'más')."""
+    if m_rol is None or m_esp is None or not np.isfinite(m_rol):
+        return None
+    return 'alta' if (m_rol <= m_esp if lado == 'u' else m_rol >= m_esp) else 'normal'
 
 
 def p_mas(mu, r, linea):
@@ -376,6 +445,7 @@ def para_juegos(partidos):
     fuera = {x['id'] for nom, lst in reporte.items() for x in lst if x.get('id') and x.get('estado') == 'Out'}
     ultimo = J.sort_values('utc').drop_duplicates('jugador', keep='last').set_index('jugador')
     filas = []
+    temp = nba.temporada_nba()
     for p in partidos:
         if p['id'] not in prox:
             continue
@@ -388,13 +458,19 @@ def para_juegos(partidos):
             for j in ids:
                 filas.append({'id': p['id'], 'equipo': eq, 'jugador': j, 'nombre': ultimo.nombre.get(j, ''), 'titular': False,
                               'jugo': j not in fuera, 'utc': pd.Timestamp(p['utc']), 'local': p['local_fd'], 'visita': p['visita_fd'],
-                              'es_local': local, 'pts_eq_mercado': tt / 2 - sp / 2 if local else tt / 2 + sp / 2})
+                              'es_local': local, 'pts_eq_mercado': tt / 2 - sp / 2 if local else tt / 2 + sp / 2,
+                              'sp': sp, 'tot': tt, 'temporada': temp})
     if not filas:
         return
     S = pd.DataFrame(filas)
     S = S[S.jugador.isin(ultimo.index)]
     JJ = pd.concat([J, S], ignore_index=True)
     X = medias(JJ, historia(JJ), titular=False)
+    try:
+        X['m_rol'] = minutos_rol(JJ, X)
+    except Exception as e:                            # sin esto no se pierde nada: solo falta la confianza
+        print('  props NBA: sin minutos por rol:', e)
+        X['m_rol'] = np.nan
     X = X[X.id.isin(S.id.unique()) & X.index.isin(range(len(J), len(JJ)))].set_index(['id', 'jugador'])
     lo_, hi_ = MOMIOS_NORMALES
     for p in partidos:
@@ -420,7 +496,9 @@ def para_juegos(partidos):
             rol_ok = float(fila.m_esp) >= MIN_PICK and falta < FALTA_MAX
             ver = ('PICK' if s in CON_PICK and normal and rol_ok else 'PRUEBA') if ev >= EV_PICK else 'SKIP'
             fuente, lados = CALC.get(s, ('mezcla', 'ou'))
-            extra = {'lados': lados, 'falta': round(falta), 'rol': rol_ok}
+            m_rol = float(fila.m_rol) if pd.notna(fila.m_rol) else None
+            extra = {'lados': lados, 'falta': round(falta), 'rol': rol_ok, 'mr': round(m_rol, 1) if m_rol is not None else None,
+                     'conf': confianza(lado, float(fila.m_esp), m_rol)}
             if fuente == 'casa':      # la calculadora usa el precio justo de la casa, con su propia curva
                 m2 = mu_para(x['p_o'], r, x['linea'])
                 extra['qc'] = round(x['p_o'], 4)
@@ -483,6 +561,7 @@ def registrar(partidos):
             reg.append({'id': p['id'], 'utc': p['utc'], 'juego': f"{p['visita_fd']} @ {p['local_fd']}", 'j': x['j'], 'n': x['n'],
                         'eq': x['eq'], 's': x['s'], 'lado': x['lado'], 'l': x['l'], 'momio': x['o'] if x['lado'] == 'o' else x['u'],
                         'q': x['q'], 'ev': round(max(x['ev_o'], x['ev_u']), 4), 'mu': x['mu'], 'min': x['min'], 'falta': x.get('falta'),
+                        'mr': x.get('mr'), 'conf': x.get('conf'),
                         'visto': t.isoformat(timespec='minutes'), 'min_antes': int((ko - t).total_seconds() // 60)})
     pend = [r for r in reg if 'res' not in r and pd.Timestamp(r['utc']).to_pydatetime() < t - timedelta(hours=3)]
     if pend:
@@ -535,6 +614,7 @@ def resumen_registro(reg=None):
                 'mov_favor': sum(r.get('mov') == 'a favor' for r in rs), 'mov_contra': sum(r.get('mov') == 'en contra' for r in rs)}
     validos = [r for r in reg if not r.get('regla_vieja')]
     return {'todos': tot(reg), 'reglas_hoy': tot(validos), 'por_mercado': {s: tot([r for r in validos if r['s'] == s]) for s in sorted({r['s'] for r in validos})},
+            'por_conf': {c: tot([r for r in validos if r.get('conf') == c]) for c in ('alta', 'normal') if any(r.get('conf') == c for r in validos)},
             'filas': sorted(reg, key=lambda r: (r['utc'], r['n']), reverse=True)[:80]}
 
 
