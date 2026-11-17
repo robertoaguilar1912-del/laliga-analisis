@@ -56,8 +56,8 @@
    "id": "4397424",
    "nombre": "Neemias Queta",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-16",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
    "tipo": "Rest",
    "regreso": "2026-11-18",
    "nota": "Queta (rest) won't play in Monday's game against the Magic, Taylor Snow of the Celtics' official site reports."
@@ -92,7 +92,7 @@
    "pos": "F",
    "estado": "Day-To-Day",
    "fecha": "2026-11-17",
-   "tipo": "Undisclosed",
+   "tipo": "Head",
    "regreso": "2026-11-18",
    "nota": "Smith (undisclosed) exited in the fourth quarter of Monday's 126-115 loss to the Cavaliers and did not return."
   },
@@ -129,6 +129,16 @@
  ],
  "Cleveland Cavaliers": [
   {
+   "id": "4683747",
+   "nombre": "Jaylon Tyson",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Ankle",
+   "regreso": "2026-11-18",
+   "nota": "Tyson (ankle) has been ruled out for Monday's game against Chicago."
+  },
+  {
    "id": "4576087",
    "nombre": "Peyton Watson",
    "pos": "G",
@@ -137,16 +147,6 @@
    "tipo": "Head",
    "regreso": "2026-11-18",
    "nota": "Watson left Monday's 126-115 win over Chicago due to a head injury and did not return."
-  },
-  {
-   "id": "4683747",
-   "nombre": "Jaylon Tyson",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Ankle",
-   "regreso": "2026-11-18",
-   "nota": "Tyson (ankle) has been ruled out for Monday's game against Chicago."
   },
   {
    "id": "4432158",
@@ -362,11 +362,31 @@
    "id": "4684740",
    "nombre": "Amen Thompson",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-16",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
    "tipo": "Knee",
    "regreso": "2026-11-18",
    "nota": "Thompson (knee) is out for Monday's game against the Heat."
+  },
+  {
+   "id": "2990992",
+   "nombre": "Marcus Smart",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Suspension",
+   "regreso": "2026-11-18",
+   "nota": "Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports."
+  },
+  {
+   "id": "2991235",
+   "nombre": "Steven Adams",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Calf",
+   "regreso": "2026-11-18",
+   "nota": "Adams (calf) is out for Monday's game against the Heat."
   },
   {
    "id": "3102529",
@@ -379,16 +399,6 @@
    "nota": "Capela (ankle) is out for Monday's game against the Heat."
   },
   {
-   "id": "2991235",
-   "nombre": "Steven Adams",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Calf",
-   "regreso": "2026-11-18",
-   "nota": "Adams (calf) is out for Monday's game against the Heat."
-  },
-  {
    "id": "5105553",
    "nombre": "Julian Phillips",
    "pos": "F",
@@ -397,16 +407,6 @@
    "tipo": "Wrist",
    "regreso": "2026-11-16",
    "nota": "Phillips (illness) is available for Wednesday's game against Dallas."
-  },
-  {
-   "id": "2990992",
-   "nombre": "Marcus Smart",
-   "pos": "G",
-   "estado": "Suspension",
-   "fecha": "2026-11-12",
-   "tipo": "Suspension",
-   "regreso": "2026-11-18",
-   "nota": "Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports."
   }
  ],
  "Indiana Pacers": [
@@ -520,11 +520,21 @@
    "id": "4432810",
    "nombre": "Isaiah Stewart",
    "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-16",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
    "tipo": "Illness",
    "regreso": "2026-11-18",
    "nota": "Stewart is out for Monday's game against the Wizards due to an illness."
+  },
+  {
+   "id": "4065733",
+   "nombre": "Ty Jerome",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Hip",
+   "regreso": "2026-11-18",
+   "nota": "Jerome (hip) has been ruled out for Monday's game against the Wizards."
   },
   {
    "id": "4431785",
@@ -547,16 +557,6 @@
    "nota": "Jackson will undergo surgery to repair the broken fifth metatarsal in his left foot and is set to miss significant time."
   },
   {
-   "id": "4065733",
-   "nombre": "Ty Jerome",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Hip",
-   "regreso": "2026-11-18",
-   "nota": "Jerome (hip) has been ruled out for Monday's game against the Wizards."
-  },
-  {
    "id": "5105462",
    "nombre": "Richie Saunders",
    "pos": "G",
@@ -569,6 +569,16 @@
  ],
  "Miami Heat": [
   {
+   "id": "4997528",
+   "nombre": "Nikola Jovic",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Illness",
+   "regreso": "2026-11-18",
+   "nota": "Jovic (illness) is out for Monday's game against Houston."
+  },
+  {
    "id": "4066261",
    "nombre": "Bam Adebayo",
    "pos": "C",
@@ -576,17 +586,7 @@
    "fecha": "2026-11-17",
    "tipo": "Hip",
    "regreso": "2026-11-18",
-   "nota": "Adebayo (hip) has been ruled out for the remainder of Monday's game against the Rockets, Eric Nehm of The Athletic reports. He'll end with four points (1-3 FG, 0-1 3Pt, 2-4 FT), one rebound, two assists and two steals in 16 minutes."
-  },
-  {
-   "id": "4997528",
-   "nombre": "Nikola Jovic",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Illness",
-   "regreso": "2026-11-18",
-   "nota": "Jovic (illness) is out for Monday's game against Houston."
+   "nota": "Coach Erik Spoelstra stated after Monday's 128-110 win over Houston that the team held Adebayo (hip) out of the second half in an effort to be proactive, and the injury isn't expected to be a long-term issue, Anthony Chiang of the Miami Herald reports."
   },
   {
    "id": "4601025",
@@ -665,6 +665,16 @@
  ],
  "New Orleans Pelicans": [
   {
+   "id": "4683634",
+   "nombre": "Bennedict Mathurin",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Foot",
+   "regreso": "2026-11-18",
+   "nota": "Mathurin (foot) has been ruled out for Monday's game against the Warriors."
+  },
+  {
    "id": "4576086",
    "nombre": "Bryce McGowens",
    "pos": "G",
@@ -673,16 +683,6 @@
    "tipo": "Elbow",
    "regreso": "2026-11-18",
    "nota": "McGowens (elbow) has been ruled out for Monday's game against the Warriors."
-  },
-  {
-   "id": "4683634",
-   "nombre": "Bennedict Mathurin",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-15",
-   "tipo": "Foot",
-   "regreso": "2026-11-18",
-   "nota": "Mathurin (foot) has been ruled out for Monday's game against the Warriors."
   },
   {
    "id": "4397688",
@@ -811,6 +811,16 @@
  ],
  "Philadelphia 76ers": [
   {
+   "id": "1966",
+   "nombre": "LeBron James",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-17",
+   "tipo": "Back",
+   "regreso": "2026-11-18",
+   "nota": "James (back) has been ruled out for Monday's game against the Nets."
+  },
+  {
    "id": "4870562",
    "nombre": "Dominick Barlow",
    "pos": "F",
@@ -821,23 +831,13 @@
    "nota": "Barlow (back) will be re-evaluated later in the week and is thought to be nearing his 2026-27 season debut, Tony Jones of The Athletic reports."
   },
   {
-   "id": "1966",
-   "nombre": "LeBron James",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Back",
-   "regreso": "2026-11-18",
-   "nota": "James (back) has been ruled out for Monday's game against the Nets."
-  },
-  {
    "id": "5105637",
    "nombre": "Adem Bona",
    "pos": "C",
    "estado": "Out",
    "fecha": "2026-11-12",
    "tipo": "Back",
-   "regreso": "2026-11-18",
+   "regreso": "2026-11-21",
    "nota": "Bona (back) will be re-evaluated in approximately one week after seeing a specialist, Ky Carlin of USA Today reports."
   },
   {
