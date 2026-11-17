@@ -421,13 +421,15 @@
       const lejos = Math.abs(L - x.l) > 2.01;
       const fuente = x.qc != null ? `precio justo de ${esc(g.props_casa || 'DraftKings')}` : 'mezcla';
       const ladoOK = (x.lados || 'ou').includes(lado.value), puede = CALC_PICK.has(x.s) && ladoOK && x.rol !== false;
-      if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.`; return null; }
+      // la confianza por minutos sale siempre, sea PICK o no (también para lo que Roberto encuentre por su cuenta)
+      const minHTML = confDe(x, lado.value) ? `<br>Minutos: ${confTxt(x, lado.value)}${lado.value === 'u' && CON_PICK.has(x.s) ? '' : '. Ojo: la confianza solo se probó en el "menos" de rebotes, asistencias y combinados'}.` : '';
+      if (!dec) { out.innerHTML = `${fuente[0].toUpperCase() + fuente.slice(1)}: <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · momio justo <span class="mono">${(1 / p).toFixed(2)}</span>${puede ? ` · para PICK necesitas ${(1.05 / p).toFixed(2)} o más` : ''}. Escribe el momio de tu casa en decimal.` + minHTML; return null; }
       const ev = c.gana * (dec - 1) - c.pierde;
       const v = ev >= 0.05 && puede && dec >= 1.5 && dec <= 2.6 && !lejos ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
       out.innerHTML = `<span class="pill ${v}">${v}</span> ${fuente[0].toUpperCase() + fuente.slice(1)} <span class="mono">${pct(p, 1)}</span>${c.push > 0.001 ? ` (empate ${pct(c.push, 1)})` : ''} · tu momio implica <span class="mono">${pct(1 / dec, 1)}</span> · justo <span class="mono">${(1 / p).toFixed(2)}</span> · EV <span class="mono">${spct(ev, 1)}</span>`
         + (!CALC_PICK.has(x.s) && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} no hay prueba que lo respalde.` : '')
         + (CALC_PICK.has(x.s) && !ladoOK && ev >= 0.05 ? `<br><b>No es PICK:</b> en ${esc(PN[x.s].toLowerCase())} solo el "menos" ganó al comparar casas; el "más" no.` : '')
-        + (v === 'PICK' && confDe(x, lado.value) ? `<br>Minutos: ${confTxt(x, lado.value)}.` : '')
+        + minHTML
         + (x.rol === false && ev >= 0.05 ? `<br><b>No es PICK:</b> rol incierto (el modelo espera ${x.min} minutos${x.falta >= 60 ? ` y a su equipo le faltan ${x.falta} minutos de habituales` : ''}); la casa sabe mejor cuánto va a jugar.` : '')
         + (lejos && ev >= 0.05 ? `<br><b>No es PICK:</b> tu línea está a más de 2 de la de ${esc(g.props_casa || 'DraftKings')} (${x.l}); revisa si el jugador tiene alguna novedad.` : '')
         + (CON_PICK.has(x.s) && ev >= 0.05 && (dec < 1.5 || dec > 2.6) ? '<br><b>No es PICK:</b> en la prueba solo contaron momios de 1.50 a 2.60.' : '');
