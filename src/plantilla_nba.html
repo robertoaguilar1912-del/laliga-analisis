@@ -196,7 +196,7 @@
     if (v === 'props') renderProps();
     $$('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === v)));
   }
-  $$('.tabs button').forEach(b => b.addEventListener('click', () => { showView(b.dataset.view); if (b.dataset.view === 'juegos') showList(); if (b.dataset.view !== 'registro') history.replaceState(null, '', '#' + b.dataset.view); }));
+  $$('.tabs button').forEach(b => b.addEventListener('click', () => { desdeProps = false; showView(b.dataset.view); if (b.dataset.view === 'juegos') showList(); if (b.dataset.view !== 'registro') history.replaceState(null, '', '#' + b.dataset.view); }));
 
   // ---------------- probabilidades desde la distribución del modelo
   // dist_m: diferencia local - visita de -50 a 50; dist_t: total desde t0 (121 valores)
@@ -466,6 +466,8 @@
   // Por cada prop, el lado con más valor según la regla de la calculadora (CALC: puntos solo "menos" y con el precio justo de
   // la casa; triples con el precio justo; lo demás con la mezcla) y el momio mínimo para PICK en tu casa (EV +5%, misma línea).
   const ppFiltro = { s: 'todos', g: 'todos' };
+  const ppMomios = {};          // "Tu momio" escrito en cada fila de Props: se conserva al volver de la gráfica
+  let desdeProps = false;       // la ficha del juego se abrió desde Props: "atrás" vuelve a Props donde estabas
   function propsTodos() {
     const out = [];
     G.forEach((g, gi) => (g.props || []).forEach(x => {
@@ -521,15 +523,21 @@
     }).join('') : '<p class="empty">Ninguno con este filtro.</p>')
       + `<p class="note">Cuando es PICK (en ${esc(casa)} o con tu momio) sale su confianza: "alta" si el segundo cálculo de minutos (rol reciente y tipo de juego) no espera que juegue más de lo que usa el modelo; "puede jugar más" si sí lo espera. En la prueba los dos ganaron, pero los de confianza alta mucho más (+45% contra +15%). "Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
     box.querySelectorAll('.pp').forEach(el => {
-      const r = filas[+el.dataset.k], inp = $('input', el), res = $('.res', el);
+      const r = filas[+el.dataset.k], inp = $('input', el), res = $('.res', el), kk = `${r.gi}:${r.x.j}:${r.x.s}:${r.l}`;
       inp.addEventListener('input', () => {
+        ppMomios[kk] = inp.value;
         const dec = parseOdds(inp.value);
         if (!dec) { res.textContent = ''; return; }
         const ev = r.p * dec - 1, v = ev >= 0.05 && dec >= 1.5 && dec <= 2.6 ? 'PICK' : ev >= 0 ? 'MAYBE' : 'SKIP';
         res.innerHTML = `<span class="pill ${v}">${v}</span> EV ${spct(ev, 1)}${v !== 'PICK' && ev >= 0.05 ? ' (solo cuentan momios de 1.50 a 2.60)' : ''}${v === 'PICK' ? confHTML(r.x, r.l) : ''}`;
       });
+      if (ppMomios[kk]) { inp.value = ppMomios[kk]; inp.dispatchEvent(new Event('input')); }
       $('button', el).addEventListener('click', () => {
-        showView('juegos'); showGame(r.gi); history.replaceState(null, '', '#j' + (r.gi + 1));
+        // guardar dónde estabas en Props y abrir la ficha como un paso nuevo del historial: el botón "atrás" vuelve aquí
+        history.replaceState({ vista: 'props', y: window.scrollY }, '', '#props');
+        history.pushState({ vista: 'juego', i: r.gi, desdeProps: true }, '', '#j' + (r.gi + 1));
+        desdeProps = true;
+        showView('juegos'); showGame(r.gi);
         const tab = $('#game-detail .subtabs button[data-p="5"]'); if (tab) tab.click();
         const fila = $(`#game-detail .prow.click[data-j="${CSS.escape(r.x.j)}"][data-s="${r.x.s}"]`);
         if (fila) { fila.click(); const ld = $('#game-detail #p-lado'); if (ld) { ld.value = r.l; ld.dispatchEvent(new Event('change')); } }
@@ -585,7 +593,7 @@
   let dia = null;
   $('#glist').innerHTML = G.map((g, i) => { const d = fdia(g.utc), h = d !== dia ? `<h3 class="dayh">${esc(d)}</h3>` : ''; dia = d; return h + card(g, i); }).join('')
     || `<p class="empty">No hay juegos de la NBA en los próximos ${I.dias} días${I.empezo ? '' : ' (la temporada regular empieza a finales de octubre)'}. La página se actualiza sola cuando aparezcan.</p>`;
-  $$('.gcard').forEach(b => b.addEventListener('click', () => { showGame(+b.dataset.i); history.replaceState(null, '', '#j' + (+b.dataset.i + 1)); }));
+  $$('.gcard').forEach(b => b.addEventListener('click', () => { desdeProps = false; showGame(+b.dataset.i); history.replaceState(null, '', '#j' + (+b.dataset.i + 1)); }));
   function showList() { $('#game-detail').hidden = true; $('#list-wrap').hidden = false; }
 
   // ---------------- ficha del juego
@@ -642,7 +650,7 @@
     const alerta = g.alerta && g.alerta.length;
     const cans = [[g.local_es, g.descanso[0]], [g.visita_es, g.descanso[1]]].filter(x => x[1] === 1).map(x => x[0]);
     el.innerHTML = `
-      <button class="back" id="back">← Todos los juegos</button>
+      <button class="back" id="back">${desdeProps ? '← Volver a Props' : '← Todos los juegos'}</button>
       <div class="dhead">
         <span class="eyebrow">${fdt(g.utc)} · ${esc(g.estadio)}${g.neutral ? ' · cancha neutral' : ''}${g.nota ? ' · ' + esc(g.nota) : ''}</span>
         <div class="vs">
@@ -728,7 +736,10 @@
           <p class="note">El historial pesa poco: los planteles cambian mucho de un año a otro.</p>
         </div>
       </div>`;
-    $('#back', el).addEventListener('click', () => { showList(); history.replaceState(null, '', '#juegos'); window.scrollTo(0, 0); });
+    $('#back', el).addEventListener('click', () => {
+      if (desdeProps && history.state && history.state.desdeProps) { history.back(); return; }   // vuelve a Props donde estabas
+      desdeProps = false; showList(); history.replaceState(null, '', '#juegos'); window.scrollTo(0, 0);
+    });
     $$('.subtabs button', el).forEach(b => b.addEventListener('click', () => {
       $$('.subtabs button', el).forEach(x => x.setAttribute('aria-selected', String(x === b)));
       $$('.pane[data-pane]', el).forEach(p => { p.hidden = p.dataset.pane !== b.dataset.p; });
@@ -819,7 +830,7 @@
         ${prox ? `<button class="back" id="go-next">Próximo: ${esc(prox.visita_es)} en ${esc(prox.local_es)} · ver ficha →</button>` : ''}</div>
       <div class="grid2"><div class="card"><h3>Cómo viene</h3>${equipoHTML(t)}</div>
         <div class="card"><h3>Rotación disponible</h3>${rotacionHTML(t)}<h3 style="margin-top:16px">Bajas</h3>${lesionesHTML(t.lesiones)}<p class="note">Reporte de lesiones vía ESPN.</p></div></div>`;
-    const gn = $('#go-next'); if (gn) gn.addEventListener('click', () => { const i = G.indexOf(prox); showGame(i); history.replaceState(null, '', '#j' + (i + 1)); });
+    const gn = $('#go-next'); if (gn) gn.addEventListener('click', () => { const i = G.indexOf(prox); showGame(i); history.replaceState(history.state, '', '#j' + (i + 1)); });
     $('#team-profile').scrollIntoView({ block: 'start', behavior: 'smooth' });
   }
   renderTeams();
@@ -905,8 +916,24 @@
 
   $('#foot-data').textContent = `Datos: ESPN (resultados y minutos de cada jugador desde 2021-22, momios de cierre de cada juego, juegos próximos con momios de DraftKings, plantillas y reporte de lesiones), y momios de Pinnacle y otras casas (The Odds API, para comparar con tu momio). Se actualiza sola todos los días, antes de cada juego y después de cada juego. Diferencia de puntos por el valor de cada jugador; total por el ataque y la defensa de cada equipo; ventaja de local estimada en ${I.hfa} puntos.`;
 
+  // ---------------- atrás y adelante (navegador o gesto del celular)
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('popstate', e => {
+    const st = e.state || {}, hh = (location.hash || '').slice(1);
+    if (hh === 'props') {
+      desdeProps = false; showView('props');
+      const y = st.y || 0;
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+    } else if (/^j\d+$/.test(hh) && G[+hh.slice(1) - 1]) {
+      desdeProps = !!st.desdeProps; showGame(+hh.slice(1) - 1); window.scrollTo(0, 0);
+    } else if (views.includes(hh)) {
+      desdeProps = false; showView(hh); if (hh === 'juegos') showList();
+    }
+  });
+
   // ---------------- enlace directo
   const h = (location.hash || '').slice(1);
+  if (/^j\d+$/.test(h) && history.state && history.state.desdeProps) desdeProps = true;   // recargó la ficha que abrió desde Props
   if (/^j\d+$/.test(h) && G[+h.slice(1) - 1]) showGame(+h.slice(1) - 1);
   else if (views.includes(h)) showView(h);
 })();
