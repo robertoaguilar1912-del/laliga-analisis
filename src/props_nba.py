@@ -212,16 +212,41 @@ def _mr_entrada(Z):
     return Z[MR_COLS]
 
 
-def minutos_rol(J, X):
+def minutos_rol(J, X, R=None):
     """Minutos esperados según el rol reciente y el tipo de juego para las filas de X (salida de medias sobre J): un
     HistGradientBoosting entrenado con los minutos reales de los juegos ya jugados de J. Solo para la confianza de los PICK."""
     from sklearn.ensemble import HistGradientBoostingRegressor     # aquí: si faltara, solo se pierde la confianza
-    Z = X.join(rol_reciente(J))
+    R = rol_reciente(J) if R is None else R
+    Z = X.drop(columns=[c for c in R.columns if c in X.columns]).join(R)
     E = _mr_entrada(Z)
     tr = Z['min'].notna()
     mod = HistGradientBoostingRegressor(max_iter=300, learning_rate=0.05, max_leaf_nodes=31, min_samples_leaf=100, random_state=0)
     mod.fit(E[tr], Z.loc[tr, 'min'])
     return pd.Series(np.clip(mod.predict(E), 1, 48), index=X.index)
+
+
+# Titular nuevo (17 nov 2026): titular en sus últimos 3+ juegos seguidos sin serlo de costumbre (titularidad de vida media H
+# < 0.6), y en esa racha jugó 5+ minutos más de lo que espera la página: todavía le cuenta minutos de suplente (juegan 8.5 min
+# más de lo esperado). En la prueba sus PICK de "menos" ganaron +15.0% (308; 2023-24 +12%, 2024-25 +18%, 2025-26 +12%, 2026-27
+# +22%) contra ~+25% del resto. Siguen siendo PICK (positivos las 4 temporadas); la página lo avisa. Caso Sidy Cissoko, 16 y 17 nov: 3 y 4 juegos
+# de titular (26 a 33 min), la página esperaba 19 y perdió las dos noches. (Con titularidad de vida media 3 ≥ 0.8 no salía:
+# hacen falta ~7 juegos seguidos.)
+RACHA_NUEVO = 3
+
+
+def titular_nuevo(racha, h_tit, m_racha, m_esp):
+    return bool(racha >= RACHA_NUEVO and pd.notna(h_tit) and h_tit < 0.6 and m_racha is not None and m_racha >= m_esp + 5)
+
+
+def racha_titular(J, jugadores):
+    """{jugador: (juegos seguidos de titular hasta el último, minutos medios en los últimos 5 de esa racha)}."""
+    P = J[J.jugo & J['min'].notna() & J.jugador.isin(set(jugadores))].sort_values('utc')
+    out = {}
+    for j, z in P.groupby('jugador'):
+        t = z.titular.astype(bool).to_numpy()[::-1][:15]
+        n = int(np.argmin(t)) if not t.all() else len(t)
+        out[j] = (n, round(float(z['min'].to_numpy()[::-1][:min(n, 5)].mean()), 1) if n else None)
+    return out
 
 
 def confianza(lado, m_esp, m_rol):
@@ -466,11 +491,13 @@ def para_juegos(partidos):
     S = S[S.jugador.isin(ultimo.index)]
     JJ = pd.concat([J, S], ignore_index=True)
     X = medias(JJ, historia(JJ), titular=False)
+    R = rol_reciente(JJ)
     try:
-        X['m_rol'] = minutos_rol(JJ, X)
+        X['m_rol'] = minutos_rol(JJ, X, R)
     except Exception as e:                            # sin esto no se pierde nada: solo falta la confianza
         print('  props NBA: sin minutos por rol:', e)
         X['m_rol'] = np.nan
+    racha = racha_titular(J, S.jugador.unique())
     X = X[X.id.isin(S.id.unique()) & X.index.isin(range(len(J), len(JJ)))].set_index(['id', 'jugador'])
     lo_, hi_ = MOMIOS_NORMALES
     for p in partidos:
@@ -499,6 +526,9 @@ def para_juegos(partidos):
             m_rol = float(fila.m_rol) if pd.notna(fila.m_rol) else None
             extra = {'lados': lados, 'falta': round(falta), 'rol': rol_ok, 'mr': round(m_rol, 1) if m_rol is not None else None,
                      'conf': confianza(lado, float(fila.m_esp), m_rol)}
+            ts, mt = racha.get(x['j'], (0, None))
+            if titular_nuevo(ts, fila.h_tit, mt, float(fila.m_esp)):   # titular nuevo: el aviso sale con el PICK de "menos"
+                extra.update({'nt': True, 'ts': ts, 'mt': mt})
             if fuente == 'casa':      # la calculadora usa el precio justo de la casa, con su propia curva
                 m2 = mu_para(x['p_o'], r, x['linea'])
                 extra['qc'] = round(x['p_o'], 4)
@@ -561,7 +591,7 @@ def registrar(partidos):
             reg.append({'id': p['id'], 'utc': p['utc'], 'juego': f"{p['visita_fd']} @ {p['local_fd']}", 'j': x['j'], 'n': x['n'],
                         'eq': x['eq'], 's': x['s'], 'lado': x['lado'], 'l': x['l'], 'momio': x['o'] if x['lado'] == 'o' else x['u'],
                         'q': x['q'], 'ev': round(max(x['ev_o'], x['ev_u']), 4), 'mu': x['mu'], 'min': x['min'], 'falta': x.get('falta'),
-                        'mr': x.get('mr'), 'conf': x.get('conf'),
+                        'mr': x.get('mr'), 'conf': x.get('conf'), 'nt': x.get('nt', False),
                         'visto': t.isoformat(timespec='minutes'), 'min_antes': int((ko - t).total_seconds() // 60)})
     pend = [r for r in reg if 'res' not in r and pd.Timestamp(r['utc']).to_pydatetime() < t - timedelta(hours=3)]
     if pend:
