@@ -5,15 +5,31 @@
   "estadio": "Couto Pereira",
   "local_espn": "Coritiba",
   "visita_espn": "Santos",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    250,
+    250,
+    105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
   },
   "alineaciones": {
    "Coritiba": [
