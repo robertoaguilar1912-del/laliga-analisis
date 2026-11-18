@@ -229,8 +229,9 @@ def minutos_rol(J, X, R=None):
 # media H < 0.6) y con 8+ minutos más de los que espera la página, que todavía le cuenta minutos de suplente. La casa ya lo
 # sabe y sube la línea. En la prueba, eligiendo y pagando al cierre como en vivo (DraftKings 2023-24 y 2026-27), esos "menos"
 # ganaron +11.9% (307) contra +7.4% del resto; a la apertura +18% contra +24%. Pero todo depende de sus minutos: cuando volvió
-# a jugar tanto como en su último juego (57% de las veces), −11.4%; cuando jugó menos, +43%. Siguen siendo PICK; la página lo
-# avisa para que Roberto mire si vuelve a ser titular (las alineaciones salen ~30 min antes). Mo Bamba, 17 nov: titular el
+# a jugar tanto como en su último juego (57% de las veces), −11.4%; cuando jugó menos, +43%. Saber la alineación NO ayuda: 300
+# de los 307 volvieron a ser titulares y esos "menos" ganaron +11.2%; y meter la alineación en el modelo (titular=True) bajó
+# los PICK al cierre de +8.6% a +2.8% (scratch tarde2.py). Siguen siendo PICK; la página lo avisa. Mo Bamba, 17 nov: titular el
 # 15 nov con 36 min, la página esperaba 18; sus 3 "menos" perdieron. (La primera versión pedía 3 juegos seguidos de titular:
 # no detectaba a Mo Bamba.)
 ROL_NUEVO_MIN = 8
