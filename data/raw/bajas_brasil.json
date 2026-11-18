@@ -1,7 +1,7 @@
 {
 "401841315": {
 "fotmob": 5103711,
-"visto": "2026-11-18T23:43+00:00",
+"visto": "2026-11-18T23:48+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -92,7 +92,7 @@
 },
 "401841310": {
 "fotmob": 5103713,
-"visto": "2026-11-18T23:43+00:00",
+"visto": "2026-11-18T23:48+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -138,7 +138,7 @@
 },
 "401841314": {
 "fotmob": 5103709,
-"visto": "2026-11-18T23:43+00:00",
+"visto": "2026-11-18T23:48+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -283,7 +283,7 @@
 },
 "401841313": {
 "fotmob": 5103704,
-"visto": "2026-11-18T23:43+00:00",
+"visto": "2026-11-18T23:48+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -365,8 +365,8 @@
 },
 "401841316": {
 "fotmob": 5103707,
-"visto": "2026-11-18T23:43+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-18T23:48+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -375,7 +375,7 @@
 "regreso": "hasta el 26 de noviembre",
 "duda": false,
 "valor": 22557003.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -384,25 +384,7 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 12762334.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "André Ramalho",
-"tipo": "Sanción",
-"regreso": "hasta el 19 de noviembre",
-"duda": false,
-"valor": 336127.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "André",
-"tipo": "Internationalduty",
-"regreso": "hasta el 19 de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -424,15 +406,6 @@
 "importante": false
 },
 {
-"nombre": "Alex Santana",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 857982.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Zakaria Labyad",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
@@ -440,10 +413,28 @@
 "valor": 502438.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "André Ramalho",
+"tipo": "Sanción",
+"regreso": "hasta el 19 de noviembre",
+"duda": false,
+"valor": 336127.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "André",
+"tipo": "Internationalduty",
+"regreso": "hasta el 19 de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 83419976.0,
-"perdida": 0.42742117307729743,
+"valor_xi": 67596983.0,
+"perdida": 0.5224987186188472,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -463,7 +454,7 @@
 "regreso": "hasta el 19 de noviembre",
 "duda": false,
 "valor": 4569274.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -476,15 +467,15 @@
 "importante": true
 }
 ],
-"valor_xi": 31789749.0,
-"perdida": 1.447802749244733,
+"valor_xi": 40700295.0,
+"perdida": 1.1308342113982222,
 "perdida_duda": 0.0
 }
 },
 "401841312": {
 "fotmob": 5103710,
-"visto": "2026-11-18T23:43+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-18T23:48+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -502,7 +493,7 @@
 "regreso": "hasta el 19 de noviembre",
 "duda": false,
 "valor": 2355928.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -511,12 +502,12 @@
 "regreso": "hasta el 19 de noviembre",
 "duda": false,
 "valor": 484344.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 26500808.0,
-"perdida": 0.4427401232445441,
+"valor_xi": 29032041.0,
+"perdida": 0.3874556046541819,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -531,7 +522,7 @@
 "importante": false
 }
 ],
-"valor_xi": 63035603.0,
+"valor_xi": 88323377.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
