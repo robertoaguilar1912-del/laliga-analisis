@@ -1,7 +1,7 @@
 {
 "401883112": {
 "fotmob": 5868547,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401882299": {
 "fotmob": 5868555,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -120,7 +120,7 @@
 },
 "401883108": {
 "fotmob": 5868554,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -193,7 +193,7 @@
 },
 "401882301": {
 "fotmob": 5868549,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -239,7 +239,7 @@
 },
 "401883107": {
 "fotmob": 5868557,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -294,8 +294,8 @@
 },
 "401882300": {
 "fotmob": 5868552,
-"visto": "2026-11-18T05:59+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T19:23+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -326,7 +326,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 6446610.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -339,7 +339,7 @@
 "duda": false,
 "valor": 1503968.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Dani Calvo",
@@ -351,15 +351,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 15745491.0,
+"perdida": 0.09551737700653476,
 "perdida_duda": 0.0
 }
 },
 "401882298": {
 "fotmob": 5868556,
-"visto": "2026-11-18T05:59+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T19:23+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -369,7 +369,7 @@
 "duda": false,
 "valor": 2046078.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Manu Rodríguez",
@@ -378,7 +378,7 @@
 "duda": false,
 "valor": 1455789.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Juan Otero",
@@ -387,7 +387,7 @@
 "duda": false,
 "valor": 919523.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Alex Corredera",
@@ -395,17 +395,8 @@
 "regreso": "hasta el 22 de noviembre",
 "duda": false,
 "valor": 650827.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Antonio Casas",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 558846.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "César Gelabert",
@@ -413,6 +404,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 2558996.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Antonio Casas",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 558846.0,
 "titular": false,
 "importante": false
 },
@@ -435,9 +435,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 7373812.0,
+"perdida": 0.6878690424979644,
+"perdida_duda": 0.3470384110687932
 },
 "visita": {
 "faltan": [
@@ -448,7 +448,7 @@
 "duda": false,
 "valor": 1415943.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Nicholas Opoku",
@@ -457,7 +457,7 @@
 "duda": false,
 "valor": 910117.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Viti",
@@ -478,14 +478,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 12607686.0,
+"perdida": 0.1844953943174029,
 "perdida_duda": 0.0
 }
 },
 "401883109": {
 "fotmob": 5868553,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -506,6 +506,15 @@
 "valor": 1241760.0,
 "titular": true,
 "importante": true
+},
+{
+"nombre": "Mauro Furtado",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Jastin García",
@@ -558,8 +567,8 @@
 },
 "401883304": {
 "fotmob": 5868550,
-"visto": "2026-11-18T05:59+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T19:23+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -569,7 +578,7 @@
 "duda": false,
 "valor": 883953.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Pablo Gavian",
@@ -590,8 +599,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 8255398.0,
+"perdida": 0.10707575818876328,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -603,7 +612,7 @@
 "duda": false,
 "valor": 1065554.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Guille Bueno",
@@ -612,7 +621,7 @@
 "duda": false,
 "valor": 1006238.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Thiago Ojeda",
@@ -620,8 +629,8 @@
 "regreso": "hasta el 22 de noviembre",
 "duda": false,
 "valor": 557006.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Trilli",
@@ -629,19 +638,19 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 279924.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 9635032.0,
+"perdida": 0.27283749550598274,
+"perdida_duda": 0.02905273173975966
 }
 },
 "401883111": {
 "fotmob": 5868548,
-"visto": "2026-11-18T05:59+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T19:23+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -651,7 +660,7 @@
 "duda": false,
 "valor": 1933978.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jon Karrikaburu",
@@ -660,12 +669,12 @@
 "duda": true,
 "valor": 1489950.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 6948204.0,
+"perdida": 0.27834214424331816,
+"perdida_duda": 0.2144367091121677
 },
 "visita": {
 "faltan": [
@@ -724,14 +733,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 6892477.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401883110": {
 "fotmob": 5868551,
-"visto": "2026-11-18T05:59+00:00",
+"visto": "2026-11-18T19:23+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
