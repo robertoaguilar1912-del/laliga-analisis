@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    240,
+    150,
+    245,
     165
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    -105
+    -135,
+    100
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -205
+     -200
     ]
    ]
   }
@@ -170,6 +170,17 @@
   "estadio": "Campbelltown Sports Stadium",
   "local_espn": "Macarthur FC",
   "visita_espn": "Melbourne City FC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401892132",
+  "utc": "2026-11-28T08:40Z",
+  "estadio": "Central Coast Stadium",
+  "local_espn": "Central Coast Mariners FC",
+  "visita_espn": "Auckland FC",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,

@@ -12,18 +12,18 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    255,
-    235
+    260,
+    240
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    -110
+    -120,
+    -105
    ],
    "spread": [
     [
      "-0.5",
-     100
+     105
     ],
     [
      "+0.5",
@@ -216,16 +216,16 @@
    "ou_linea": 2.5,
    "ou": [
     -170,
-    125
+    130
    ],
    "spread": [
     [
      "-1.5",
-     -110
+     -115
     ],
     [
      "+1.5",
-     -130
+     -125
     ]
    ]
   }
@@ -276,12 +276,12 @@
    "casa": "DraftKings",
    "ml": [
     -215,
-    360,
+    370,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -165
    ],
    "spread": [
@@ -291,7 +291,7 @@
     ],
     [
      "+1.5",
-     -165
+     -160
     ]
    ]
   }
@@ -324,6 +324,171 @@
     ],
     [
      "-0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876394",
+  "utc": "2026-11-28T16:15Z",
+  "estadio": "Stade Raymond Kopa",
+  "local_espn": "Angers",
+  "visita_espn": "Lens",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    320,
+    300,
+    -140
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    120
+   ],
+   "spread": [
+    [
+     "+0.5",
+     100
+    ],
+    [
+     "-0.5",
+     -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876391",
+  "utc": "2026-11-28T19:45Z",
+  "estadio": "Stade Océane",
+  "local_espn": "Le Havre AC",
+  "visita_espn": "Strasbourg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    190,
+    255,
+    125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -170
+    ],
+    [
+     "-0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876390",
+  "utc": "2026-11-28T19:45Z",
+  "estadio": "Stade Marie-Marvingt",
+  "local_espn": "Le Mans",
+  "visita_espn": "Lille",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    300,
+    250,
+    -115
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -125
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -120
+    ],
+    [
+     "-0.5",
+     -130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876388",
+  "utc": "2026-11-28T19:45Z",
+  "estadio": "Allianz Riviera",
+  "local_espn": "Nice",
+  "visita_espn": "Troyes",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    300,
+    360
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876387",
+  "utc": "2026-11-28T19:45Z",
+  "estadio": "Parc des Princes",
+  "local_espn": "Paris Saint-Germain",
+  "visita_espn": "Lorient",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -475,
+    550,
+    1000
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    110,
+    -155
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -170
+    ],
+    [
+     "+1.5",
      110
     ]
    ]

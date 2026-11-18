@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -145,
     260,
-    340
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,11 +188,11 @@
    "spread": [
     [
      "-0.5",
-     -150
+     -155
     ],
     [
      "+0.5",
-     100
+     105
     ]
    ]
   }
@@ -358,6 +358,105 @@
     [
      "-0.5",
      -110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875081",
+  "utc": "2026-11-28T14:00Z",
+  "estadio": "Stadio Benito Stirpe",
+  "local_espn": "Frosinone",
+  "visita_espn": "Parma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -225,
+    360,
+    425
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    105,
+    -145
+   ],
+   "spread": [
+    [
+     "-1.5",
+     110
+    ],
+    [
+     "+1.5",
+     -170
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874826",
+  "utc": "2026-11-28T17:00Z",
+  "estadio": "Stadio Olimpico Grande Torino",
+  "local_espn": "Torino",
+  "visita_espn": "Lazio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    235,
+    230,
+    100
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -140
+    ],
+    [
+     "-0.5",
+     -110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874977",
+  "utc": "2026-11-28T19:45Z",
+  "estadio": "San Siro",
+  "local_espn": "Internazionale",
+  "visita_espn": "Genoa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -425,
+    450,
+    800
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -185
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -145
+    ],
+    [
+     "+1.5",
+     -105
     ]
    ]
   }

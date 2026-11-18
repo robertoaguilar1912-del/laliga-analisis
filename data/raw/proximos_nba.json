@@ -9,10 +9,10 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "Utah Jazz",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "0-6"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -229,
-    190
-   ],
-   "ml_abre": [
-    -199,
-    166
-   ],
-   "spread": [
-    -6.5,
-    -101,
-    6.5,
-    -119
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    227.5,
-    -106,
-    -114
-   ],
-   "total_abre": 223.5
-  }
+  "momios": null
  },
  {
   "id": "401910005",
@@ -89,10 +66,10 @@
     309
    ],
    "spread": [
-    -6.5,
-    -119,
-    6.5,
-    -101
+    -7.5,
+    -102,
+    7.5,
+    -119
    ],
    "spread_abre": -10.5,
    "total": [
@@ -390,7 +367,30 @@
     "2-6"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -276,
+    226
+   ],
+   "ml_abre": [
+    -276,
+    226
+   ],
+   "spread": [
+    -7.5,
+    -114,
+    7.5,
+    -106
+   ],
+   "spread_abre": -7.5,
+   "total": [
+    227.5,
+    -110,
+    -110
+   ],
+   "total_abre": 227.5
+  }
  },
  {
   "id": "401910013",
@@ -1139,8 +1139,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "10-4",
-    "6-2",
+    "11-4",
+    "7-2",
     "4-2"
    ],
    "away": [
@@ -1463,9 +1463,9 @@
     "6-1"
    ],
    "away": [
-    "9-4",
+    "9-5",
     "3-2",
-    "6-2"
+    "6-3"
    ]
   },
   "momios": null
@@ -1545,8 +1545,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "10-4",
-    "6-2",
+    "11-4",
+    "7-2",
     "4-2"
    ],
    "away": [
@@ -1898,8 +1898,8 @@
     "4-5"
    ],
    "away": [
-    "10-4",
-    "6-2",
+    "11-4",
+    "7-2",
     "4-2"
    ]
   },
@@ -2038,9 +2038,9 @@
   "estadio": "Moda Center",
   "records": {
    "home": [
-    "9-4",
+    "9-5",
     "3-2",
-    "6-2"
+    "6-3"
    ],
    "away": [
     "12-3",
@@ -2212,8 +2212,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "10-4",
-    "6-2",
+    "11-4",
+    "7-2",
     "4-2"
    ],
    "away": [
@@ -2357,9 +2357,9 @@
   "estadio": "Moda Center",
   "records": {
    "home": [
-    "9-4",
+    "9-5",
     "3-2",
-    "6-2"
+    "6-3"
    ],
    "away": [
     "8-6",

@@ -646,11 +646,15 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   // (últimos juegos, si fue titular) y el tipo de juego (paliza o parejo, total, descanso). "Alta": no espera más minutos que la
   // página (en un "menos"). En la prueba: +45% contra +15% de los demás, que también ganaron.
   const confDe = (x, lado) => x.mr == null || x.min == null ? null : (lado === 'o' ? x.mr >= x.min : x.mr <= x.min) ? 'alta' : 'normal';
+  // titular nuevo (props_nba.titular_nuevo, 17 nov): en un "menos", aviso claro. En la prueba ganaron +15% contra +25% del resto
+  const ntTxt = (x, lado) => x.nt && lado === 'u'
+    ? `. <b>Ojo: titular nuevo.</b> Fue titular sus últimos ${x.ts} juegos${x.mt ? ` (${x.mt} min de promedio)` : ''}, pero el modelo todavía le cuenta minutos de suplente (${x.min}). En la prueba estos "menos" ganaron menos que los demás (+15% contra +25%): mejor elige otro o apuesta menos`
+    : '';
   const confTxt = (x, lado) => {
     const c = confDe(x, lado);
     if (!c) return '';
-    return c === 'alta' ? `<b>confianza alta</b> (por rol y tipo de juego, ${x.mr} min)`
-      : `<b>puede jugar ${lado === 'o' ? 'menos' : 'más'}</b>: por rol y tipo de juego ${x.mr} min, no ${x.min} (confianza normal)`;
+    return (c === 'alta' ? `<b>confianza alta</b> (por rol y tipo de juego, ${x.mr} min)`
+      : `<b>puede jugar ${lado === 'o' ? 'menos' : 'más'}</b>: por rol y tipo de juego ${x.mr} min, no ${x.min} (confianza normal)`) + ntTxt(x, lado);
   };
   const confHTML = (x, lado) => confDe(x, lado) ? ' · ' + confTxt(x, lado) : '';
   function propsHTML(g) {
@@ -869,8 +873,20 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     fil.querySelectorAll('button[data-s]').forEach(b => b.addEventListener('click', () => { ppFiltro.s = b.dataset.s; renderProps(); }));
     $('#pp-g').addEventListener('change', e => { ppFiltro.g = e.target.value; renderProps(); });
     const filas = todos.filter(r => (ppFiltro.s === 'todos' || r.x.s === ppFiltro.s) && (ppFiltro.g === 'todos' || String(r.gi) === String(ppFiltro.g)));
+    // equipos que no salen en la lista porque les faltan muchos minutos de habituales (regla de rol incierto)
+    const fuera = [];
+    G.forEach((g, gi) => {
+      if (!(g.props || []).length || (ppFiltro.g !== 'todos' && String(gi) !== String(ppFiltro.g))) return;
+      [[g.local_fd, g.local_es, 'local'], [g.visita_fd, g.visita_es, 'visita']].forEach(([eq, nom, lado]) => {
+        const xs = g.props.filter(x => x.eq === eq);
+        if (!xs.length || !xs.every(x => x.rol === false && x.falta >= 60)) return;
+        const bajas = ((g.lesiones || {})[lado] || []).filter(z => /out/i.test(z.estado) && (z.min || 0) >= 12).map(z => z.nombre).slice(0, 3);
+        fuera.push(`<b>${esc(nom)}</b> (${esc(g.visita_fd)} @ ${esc(g.local_fd)}): le faltan ${Math.max(...xs.map(x => x.falta))} minutos de habituales${bajas.length ? ` (${bajas.map(esc).join(', ')}…)` : ''}`);
+      });
+    });
     const casa = G.find(g => g.props_casa) ? G.find(g => g.props_casa).props_casa : 'DraftKings';
-    box.innerHTML = (filas.length ? filas.map((r, k) => {
+    box.innerHTML = (fuera.length ? `<p class="note"><b>No salen en la lista:</b> ${fuera.join('; ')}. Con tantas bajas el modelo no sabe repartir bien los minutos, y en la prueba esos props perdieron; por eso no hay PICK. Los ves en la ficha del juego, pestaña Jugadores.</p>` : '')
+      + (filas.length ? filas.map((r, k) => {
       const x = r.x, g = r.g, rival = x.eq === g.local_fd ? 'vs ' + g.visita_fd : '@' + g.local_fd;
       return `<div class="pp${r.pickDK ? ' pick' : ''}" data-k="${k}">
         <div><div class="who">${esc(x.n)}<small>${esc(x.eq)} ${esc(rival)} · ${esc(fhora(g.utc))}</small></div>

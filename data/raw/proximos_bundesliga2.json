@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    260,
-    185
+    125,
+    250,
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -27,7 +27,7 @@
     ],
     [
      "+0.5",
-     -170
+     -165
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    330,
-    330
+    -150,
+    310,
+    320
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -145
+    105,
+    -155
    ],
    "spread": [
     [
      "-0.5",
-     -175
+     -165
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }
@@ -313,6 +313,50 @@
   "estadio": "Vonovia Ruhrstadion",
   "local_espn": "VfL Bochum",
   "visita_espn": "SV Darmstadt 98",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885044",
+  "utc": "2026-11-28T12:00Z",
+  "estadio": "Rudolf Harbig Stadium",
+  "local_espn": "Dynamo Dresden",
+  "visita_espn": "St. Pauli",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885046",
+  "utc": "2026-11-28T12:00Z",
+  "estadio": "Olympic Stadium Berlin",
+  "local_espn": "Hertha Berlin",
+  "visita_espn": "Karlsruher SC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885043",
+  "utc": "2026-11-28T12:00Z",
+  "estadio": "Holstein-Stadion",
+  "local_espn": "Holstein Kiel",
+  "visita_espn": "Kaiserslautern",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885039",
+  "utc": "2026-11-28T19:30Z",
+  "estadio": "Stadion an der Bremer Brücke'",
+  "local_espn": "VfL Osnabruck",
+  "visita_espn": "Hannover 96",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-german-2-bundesliga",
   "neutral": false,

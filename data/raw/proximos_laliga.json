@@ -12,12 +12,12 @@
    "casa": "DraftKings",
    "ml": [
     -205,
-    330,
+    340,
     550
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -125,
     100
    ],
    "spread": [
@@ -27,7 +27,7 @@
     ],
     [
      "+1.5",
-     -180
+     -175
     ]
    ]
   }
@@ -348,7 +348,7 @@
    "ou_linea": 3.5,
    "ou": [
     120,
-    -160
+    -165
    ],
    "spread": [
     [
@@ -358,6 +358,138 @@
     [
      "+0.5",
      -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882796",
+  "utc": "2026-11-28T13:00Z",
+  "estadio": "Estadio La Cartuja",
+  "local_espn": "Real Betis",
+  "visita_espn": "Rayo Vallecano",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -205,
+    350,
+    475
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     115
+    ],
+    [
+     "+1.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882790",
+  "utc": "2026-11-28T15:15Z",
+  "estadio": "La Rosaleda",
+  "local_espn": "Málaga",
+  "visita_espn": "Athletic Club",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    340,
+    275,
+    -135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     100
+    ],
+    [
+     "-0.5",
+     -150
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882793",
+  "utc": "2026-11-28T17:30Z",
+  "estadio": "Estadio Martínez Valero",
+  "local_espn": "Elche",
+  "visita_espn": "Atlético Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    425,
+    320,
+    -180
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    135,
+    -180
+   ],
+   "spread": [
+    [
+     "+0.5",
+     130
+    ],
+    [
+     "-0.5",
+     -200
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882789",
+  "utc": "2026-11-28T20:00Z",
+  "estadio": "Santiago Bernabéu",
+  "local_espn": "Real Madrid",
+  "visita_espn": "Alavés",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -700,
+    700,
+    1200
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "-2.5",
+     105
+    ],
+    [
+     "+2.5",
+     -160
     ]
    ]
   }

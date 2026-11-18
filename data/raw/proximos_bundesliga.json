@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -425,
+    -390,
     500,
-    700
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
-    -110
+    -115,
+    -115
    ],
    "spread": [
     [
      "-1.5",
-     -155
+     -145
     ],
     [
      "+1.5",
-     105
+     100
     ]
    ]
   }
@@ -309,6 +309,155 @@
     [
      "+0.5",
      100
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884721",
+  "utc": "2026-11-28T14:30Z",
+  "estadio": "RheinEnergieStadion",
+  "local_espn": "FC Cologne",
+  "visita_espn": "SV Elversberg",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    265,
+    225
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    120,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -115
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884722",
+  "utc": "2026-11-28T14:30Z",
+  "estadio": "Volksparkstadion",
+  "local_espn": "Hamburg SV",
+  "visita_espn": "Bayern Munich",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401884723",
+  "utc": "2026-11-28T14:30Z",
+  "estadio": "MEWA ARENA",
+  "local_espn": "Mainz",
+  "visita_espn": "1. FC Union Berlin",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -220,
+    330,
+    425
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "-1.5",
+     115
+    ],
+    [
+     "+1.5",
+     -180
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884719",
+  "utc": "2026-11-28T14:30Z",
+  "estadio": "Home Deluxe Arena",
+  "local_espn": "SC Paderborn 07",
+  "visita_espn": "Schalke 04",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    220,
+    175
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401884726",
+  "utc": "2026-11-28T17:30Z",
+  "estadio": "MHPArena",
+  "local_espn": "VfB Stuttgart",
+  "visita_espn": "Eintracht Frankfurt",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-bundesliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    340,
+    285
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
     ]
    ]
   }

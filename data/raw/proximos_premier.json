@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -250,
+    -245,
     400,
-    600
+    550
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -56,11 +56,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -120
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   }
@@ -358,6 +358,105 @@
     [
      "-0.5",
      125
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879227",
+  "utc": "2026-11-28T15:00Z",
+  "estadio": "Elland Road",
+  "local_espn": "Leeds United",
+  "visita_espn": "Coventry City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -180,
+    310,
+    425
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -145,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -200
+    ],
+    [
+     "+0.5",
+     130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401879226",
+  "utc": "2026-11-28T15:00Z",
+  "estadio": "Old Trafford",
+  "local_espn": "Manchester United",
+  "visita_espn": "Brentford",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    270,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -185,
+    135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -110
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401878752",
+  "utc": "2026-11-28T17:30Z",
+  "estadio": "Portman Road",
+  "local_espn": "Ipswich Town",
+  "visita_espn": "Aston Villa",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-english-premier-league",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    230,
+    275,
+    100
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -135
+    ],
+    [
+     "-0.5",
+     -110
     ]
    ]
   }
