@@ -1,0 +1,19 @@
+name: Revisar alineaciones de la NBA
+# Solo a mano (o al cambiar el script): ¿de dónde se lee la alineación inicial antes del juego? Sale en el registro de la corrida.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/diag_alineacion.py']
+permissions:
+  contents: read
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: cd src && python diag_alineacion.py
