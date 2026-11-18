@@ -1,34 +1,5 @@
 [
  {
-  "id": "401910002",
-  "utc": "2026-11-18T00:30Z",
-  "fecha": "2026-11-17",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "TOR",
-  "visita": "NY",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Toronto Raptors",
-  "visita_espn": "New York Knicks",
-  "revisado": false,
-  "estadio": "Scotiabank Arena",
-  "records": {
-   "home": [
-    "5-8",
-    "2-4",
-    "3-4"
-   ],
-   "away": [
-    "7-6",
-    "4-3",
-    "3-3"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910003",
   "utc": "2026-11-18T01:00Z",
   "fecha": "2026-11-17",
@@ -38,7 +9,7 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Portland Trail Blazers",
   "revisado": false,
@@ -132,8 +103,8 @@
    "spread_abre": -5.5,
    "total": [
     227.5,
-    -107,
-    -113
+    -106,
+    -114
    ],
    "total_abre": 223.5
   }
@@ -179,13 +150,13 @@
     -7.5,
     -102,
     7.5,
-    -119
+    -118
    ],
    "spread_abre": -10.5,
    "total": [
-    222.5,
-    -105,
-    -115
+    220.5,
+    -115,
+    -105
    ],
    "total_abre": 218.5
   }
@@ -220,8 +191,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -196,
-    164
+    -205,
+    171
    ],
    "ml_abre": [
     -196,
@@ -235,9 +206,9 @@
    ],
    "spread_abre": -5.5,
    "total": [
-    236.5,
-    -110,
-    -110
+    234.5,
+    -111,
+    -109
    ],
    "total_abre": 236.5
   }
@@ -280,16 +251,16 @@
     -264
    ],
    "spread": [
-    7.5,
-    -111,
-    -7.5,
-    -109
+    6.5,
+    -105,
+    -6.5,
+    -115
    ],
    "spread_abre": 7.5,
    "total": [
-    224.5,
-    -110,
-    -110
+    225.5,
+    -108,
+    -112
    ],
    "total_abre": 224.5
   }
@@ -324,8 +295,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -770,
-    539
+    -800,
+    558
    ],
    "ml_abre": [
     -770,
@@ -340,8 +311,8 @@
    "spread_abre": -12.5,
    "total": [
     236.5,
-    -106,
-    -114
+    -110,
+    -110
    ],
    "total_abre": 236.5
   }
@@ -385,15 +356,15 @@
    ],
    "spread": [
     1.5,
-    -114,
+    -110,
     -1.5,
-    -106
+    -110
    ],
    "spread_abre": 1.5,
    "total": [
-    223.5,
-    -106,
-    -114
+    222.5,
+    -105,
+    -115
    ],
    "total_abre": 223.5
   }
@@ -437,15 +408,15 @@
    ],
    "spread": [
     -2.5,
-    -114,
+    -110,
     2.5,
-    -106
+    -110
    ],
    "spread_abre": -2.5,
    "total": [
     237.5,
-    -106,
-    -114
+    -110,
+    -110
    ],
    "total_abre": 237.5
   }
@@ -467,8 +438,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-8",
-    "2-4",
+    "5-9",
+    "2-5",
     "3-4"
    ],
    "away": [
@@ -538,8 +509,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -270,
-    221
+    -283,
+    231
    ],
    "ml_abre": [
     -270,
@@ -547,15 +518,15 @@
    ],
    "spread": [
     -7.5,
-    -110,
+    -104,
     7.5,
-    -110
+    -116
    ],
    "spread_abre": -7.5,
    "total": [
-    226.5,
-    -106,
-    -114
+    228.5,
+    -108,
+    -112
    ],
    "total_abre": 226.5
   }
@@ -590,18 +561,18 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -208,
-    173
+    -230,
+    191
    ],
    "ml_abre": [
     -208,
     173
    ],
    "spread": [
-    -6.5,
-    -106,
-    6.5,
-    -114
+    -5.5,
+    -114,
+    5.5,
+    -106
    ],
    "spread_abre": -6.5,
    "total": [
@@ -642,8 +613,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    119,
-    -141
+    114,
+    -135
    ],
    "ml_abre": [
     119,
@@ -657,9 +628,9 @@
    ],
    "spread_abre": 2.5,
    "total": [
-    219.5,
-    -111,
-    -109
+    221.5,
+    -112,
+    -108
    ],
    "total_abre": 219.5
   }
@@ -723,8 +694,8 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    186,
-    -224
+    220,
+    -269
    ],
    "ml_abre": [
     182,
@@ -732,15 +703,15 @@
    ],
    "spread": [
     6.5,
-    -114,
+    -112,
     -6.5,
-    -106
+    -108
    ],
    "spread_abre": 6.5,
    "total": [
-    229.5,
-    -111,
-    -109
+    228.5,
+    -108,
+    -112
    ],
    "total_abre": 229.5
   }
@@ -825,9 +796,9 @@
     "4-2"
    ],
    "away": [
-    "7-6",
+    "8-6",
     "4-3",
-    "3-3"
+    "4-3"
    ]
   },
   "momios": null
@@ -970,8 +941,8 @@
     "5-2"
    ],
    "away": [
-    "5-8",
-    "2-4",
+    "5-9",
+    "2-5",
     "3-4"
    ]
   },
@@ -1168,9 +1139,9 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "7-6",
+    "8-6",
     "4-3",
-    "3-3"
+    "4-3"
    ],
    "away": [
     "9-4",
@@ -1458,9 +1429,9 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "7-6",
+    "8-6",
     "4-3",
-    "3-3"
+    "4-3"
    ],
    "away": [
     "5-9",
@@ -1603,8 +1574,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-8",
-    "2-4",
+    "5-9",
+    "2-5",
     "3-4"
    ],
    "away": [
@@ -1951,9 +1922,9 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "7-6",
+    "8-6",
     "4-3",
-    "3-3"
+    "4-3"
    ],
    "away": [
     "8-7",
@@ -2154,9 +2125,9 @@
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
-    "7-6",
+    "8-6",
     "4-3",
-    "3-3"
+    "4-3"
    ],
    "away": [
     "8-6",
@@ -2241,8 +2212,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "5-8",
-    "2-4",
+    "5-9",
+    "2-5",
     "3-4"
    ],
    "away": [
