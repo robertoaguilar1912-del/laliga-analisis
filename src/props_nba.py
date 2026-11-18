@@ -225,27 +225,30 @@ def minutos_rol(J, X, R=None):
     return pd.Series(np.clip(mod.predict(E), 1, 48), index=X.index)
 
 
-# Titular nuevo (17 nov 2026): titular en sus últimos 3+ juegos seguidos sin serlo de costumbre (titularidad de vida media H
-# < 0.6), y en esa racha jugó 5+ minutos más de lo que espera la página: todavía le cuenta minutos de suplente (juegan 8.5 min
-# más de lo esperado). En la prueba sus PICK de "menos" ganaron +15.0% (308; 2023-24 +12%, 2024-25 +18%, 2025-26 +12%, 2026-27
-# +22%) contra ~+25% del resto. Siguen siendo PICK (positivos las 4 temporadas); la página lo avisa. Caso Sidy Cissoko, 16 y 17 nov: 3 y 4 juegos
-# de titular (26 a 33 min), la página esperaba 19 y perdió las dos noches. (Con titularidad de vida media 3 ≥ 0.8 no salía:
-# hacen falta ~7 juegos seguidos.)
-RACHA_NUEVO = 3
+# Rol nuevo (17 nov 2026, casos Cissoko y Mo Bamba): titular en su último juego sin serlo de costumbre (titularidad de vida
+# media H < 0.6) y con 8+ minutos más de los que espera la página, que todavía le cuenta minutos de suplente. La casa ya lo
+# sabe y sube la línea. En la prueba, eligiendo y pagando al cierre como en vivo (DraftKings 2023-24 y 2026-27), esos "menos"
+# ganaron +11.9% (307) contra +7.4% del resto; a la apertura +18% contra +24%. Pero todo depende de sus minutos: cuando volvió
+# a jugar tanto como en su último juego (57% de las veces), −11.4%; cuando jugó menos, +43%. Siguen siendo PICK; la página lo
+# avisa para que Roberto mire si vuelve a ser titular (las alineaciones salen ~30 min antes). Mo Bamba, 17 nov: titular el
+# 15 nov con 36 min, la página esperaba 18; sus 3 "menos" perdieron. (La primera versión pedía 3 juegos seguidos de titular:
+# no detectaba a Mo Bamba.)
+ROL_NUEVO_MIN = 8
 
 
-def titular_nuevo(racha, h_tit, m_racha, m_esp):
-    return bool(racha >= RACHA_NUEVO and pd.notna(h_tit) and h_tit < 0.6 and m_racha is not None and m_racha >= m_esp + 5)
+def rol_nuevo(racha, h_tit, m_ult, m_esp):
+    return bool(racha >= 1 and pd.notna(h_tit) and h_tit < 0.6 and m_ult is not None and m_ult >= m_esp + ROL_NUEVO_MIN)
 
 
 def racha_titular(J, jugadores):
-    """{jugador: (juegos seguidos de titular hasta el último, minutos medios en los últimos 5 de esa racha)}."""
+    """{jugador: (juegos seguidos de titular hasta el último, minutos medios en los últimos 5 de esa racha, minutos del último)}."""
     P = J[J.jugo & J['min'].notna() & J.jugador.isin(set(jugadores))].sort_values('utc')
     out = {}
     for j, z in P.groupby('jugador'):
         t = z.titular.astype(bool).to_numpy()[::-1][:15]
+        mins = z['min'].to_numpy()[::-1]
         n = int(np.argmin(t)) if not t.all() else len(t)
-        out[j] = (n, round(float(z['min'].to_numpy()[::-1][:min(n, 5)].mean()), 1) if n else None)
+        out[j] = (n, round(float(mins[:min(n, 5)].mean()), 1) if n else None, float(mins[0]))
     return out
 
 
@@ -526,9 +529,9 @@ def para_juegos(partidos):
             m_rol = float(fila.m_rol) if pd.notna(fila.m_rol) else None
             extra = {'lados': lados, 'falta': round(falta), 'rol': rol_ok, 'mr': round(m_rol, 1) if m_rol is not None else None,
                      'conf': confianza(lado, float(fila.m_esp), m_rol)}
-            ts, mt = racha.get(x['j'], (0, None))
-            if titular_nuevo(ts, fila.h_tit, mt, float(fila.m_esp)):   # titular nuevo: el aviso sale con el PICK de "menos"
-                extra.update({'nt': True, 'ts': ts, 'mt': mt})
+            ts, mt, m1 = racha.get(x['j'], (0, None, None))
+            if rol_nuevo(ts, fila.h_tit, m1, float(fila.m_esp)):   # rol nuevo: el aviso sale con el PICK de "menos"
+                extra.update({'nt': True, 'ts': ts, 'mt': mt, 'm1': round(m1)})
             if fuente == 'casa':      # la calculadora usa el precio justo de la casa, con su propia curva
                 m2 = mu_para(x['p_o'], r, x['linea'])
                 extra['qc'] = round(x['p_o'], 4)
