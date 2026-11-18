@@ -1,7 +1,7 @@
 {
 "401843486": {
 "fotmob": 5105051,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401843483": {
 "fotmob": 5105052,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +156,7 @@
 },
 "401843489": {
 "fotmob": 5105049,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -211,7 +211,7 @@
 },
 "401843485": {
 "fotmob": 5105050,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -284,7 +284,7 @@
 },
 "401843490": {
 "fotmob": 5105055,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -348,8 +348,8 @@
 },
 "401843488": {
 "fotmob": 5105053,
-"visto": "2026-11-18T04:03+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T05:34+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -371,7 +371,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 4977514.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -384,7 +384,7 @@
 "duda": false,
 "valor": 1762460.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Eggert Guðmundsson",
@@ -393,7 +393,7 @@
 "duda": false,
 "valor": 1440446.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jacob Lungi Sørensen",
@@ -402,7 +402,7 @@
 "duda": false,
 "valor": 1101856.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sondre Tronstad",
@@ -411,7 +411,34 @@
 "duda": false,
 "valor": 987350.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Niklas Castro",
+"tipo": "Sanción",
+"regreso": "hasta el 22 de noviembre",
+"duda": false,
+"valor": 655802.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Kristian Eriksen",
+"tipo": "Sanción",
+"regreso": "hasta el 22 de noviembre",
+"duda": false,
+"valor": 497297.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Kristall Ingason",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1990256.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Kjartan Kjartansson",
@@ -423,24 +450,6 @@
 "importante": false
 },
 {
-"nombre": "Niklas Castro",
-"tipo": "Sanción",
-"regreso": "hasta el 22 de noviembre",
-"duda": false,
-"valor": 655802.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Kristian Eriksen",
-"tipo": "Sanción",
-"regreso": "hasta el 22 de noviembre",
-"duda": false,
-"valor": 497297.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Sakarias Opsahl",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
@@ -448,26 +457,17 @@
 "valor": 321221.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Kristall Ingason",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1990256.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 12266433.0,
+"perdida": 0.5254348187447809,
+"perdida_duda": 0.16225222116323465
 }
 },
 "401843487": {
 "fotmob": 5105054,
-"visto": "2026-11-18T04:03+00:00",
-"xi": "unavailable",
+"visto": "2026-11-18T05:34+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -477,12 +477,12 @@
 "duda": true,
 "valor": 610838.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 7671217.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.07962726122856387
 },
 "visita": {
 "faltan": [
@@ -493,7 +493,7 @@
 "duda": false,
 "valor": 911203.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Devon Koswal",
@@ -502,7 +502,7 @@
 "duda": false,
 "valor": 665664.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Nikolaj Möller",
@@ -523,14 +523,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 8100093.0,
+"perdida": 0.1946727031405689,
 "perdida_duda": 0.0
 }
 },
 "401843484": {
 "fotmob": 5105056,
-"visto": "2026-11-18T04:03+00:00",
+"visto": "2026-11-18T05:34+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

@@ -38,10 +38,10 @@
   "visita": "CHA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Charlotte Hornets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "1-5"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -289,
-    236
-   ],
-   "ml_abre": [
-    -391,
-    309
-   ],
-   "spread": [
-    -7.5,
-    -102,
-    7.5,
-    -119
-   ],
-   "spread_abre": -10.5,
-   "total": [
-    221.5,
-    -110,
-    -110
-   ],
-   "total_abre": 218.5
-  }
+  "momios": null
  },
  {
   "id": "401910007",
@@ -379,15 +356,15 @@
    ],
    "spread": [
     -7.5,
-    -114,
+    -106,
     7.5,
-    -106
+    -115
    ],
    "spread_abre": -7.5,
    "total": [
-    227.5,
-    -110,
-    -110
+    226.5,
+    -113,
+    -107
    ],
    "total_abre": 227.5
   }
@@ -419,7 +396,30 @@
     "6-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    227,
+    -277
+   ],
+   "ml_abre": [
+    247,
+    -305
+   ],
+   "spread": [
+    7.5,
+    -107,
+    -7.5,
+    -113
+   ],
+   "spread_abre": 8.5,
+   "total": [
+    229.5,
+    -111,
+    -109
+   ],
+   "total_abre": 229.5
+  }
  },
  {
   "id": "401910014",
@@ -571,8 +571,8 @@
    "spread_abre": 2.5,
    "total": [
     221.5,
-    -112,
-    -108
+    -115,
+    -106
    ],
    "total_abre": 219.5
   }

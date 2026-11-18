@@ -646,9 +646,9 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
   // (últimos juegos, si fue titular) y el tipo de juego (paliza o parejo, total, descanso). "Alta": no espera más minutos que la
   // página (en un "menos"). En la prueba: +45% contra +15% de los demás, que también ganaron.
   const confDe = (x, lado) => x.mr == null || x.min == null ? null : (lado === 'o' ? x.mr >= x.min : x.mr <= x.min) ? 'alta' : 'normal';
-  // titular nuevo (props_nba.titular_nuevo, 17 nov): en un "menos", aviso claro. En la prueba ganaron +15% contra +25% del resto
+  // rol nuevo (props_nba.rol_nuevo, 17 nov; Cissoko y Mo Bamba): en un "menos", aviso claro con qué hacer
   const ntTxt = (x, lado) => x.nt && lado === 'u'
-    ? `. <b>Ojo: titular nuevo.</b> Fue titular sus últimos ${x.ts} juegos${x.mt ? ` (${x.mt} min de promedio)` : ''}, pero el modelo todavía le cuenta minutos de suplente (${x.min}). En la prueba estos "menos" ganaron menos que los demás (+15% contra +25%): mejor elige otro o apuesta menos`
+    ? `. <b>Ojo: rol nuevo.</b> ${x.ts > 1 ? `Fue titular sus últimos ${x.ts} juegos (${x.mt} min de promedio)` : `Fue titular en su último juego (${x.m1 ?? x.mt} min)`}, y el modelo todavía le cuenta minutos de suplente (${x.min}); la casa ya lo sabe y subió la línea. Todo depende de sus minutos: en la prueba, cuando volvió a jugar tanto, estos "menos" perdieron (−11%); cuando jugó menos, ganaron mucho (+43%). <b>Mira la alineación (sale ~30 min antes): si vuelve a ser titular, no lo tomes</b>`
     : '';
   const confTxt = (x, lado) => {
     const c = confDe(x, lado);
@@ -657,6 +657,12 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       : `<b>puede jugar ${lado === 'o' ? 'menos' : 'más'}</b>: por rol y tipo de juego ${x.mr} min, no ${x.min} (confianza normal)`) + ntTxt(x, lado);
   };
   const confHTML = (x, lado) => confDe(x, lado) ? ' · ' + confTxt(x, lado) : '';
+  // varios PICK del mismo jugador en un juego dependen de lo mismo (sus minutos): pierden o ganan juntos
+  const mismoJugador = xs => {
+    const c = {}; xs.forEach(x => { c[x.n] = (c[x.n] || 0) + 1; });
+    const v = Object.entries(c).filter(([, n]) => n > 1);
+    return v.length ? `<p class="note"><b>Mismo jugador:</b> ${v.map(([n, k]) => `${esc(n)} tiene ${k} PICK`).join('; ')}. Dependen de lo mismo (sus minutos): si juega mucho, pierden juntos. En la prueba apostando tarde, quedarse con el de más EV de cada jugador dio las mismas unidades con menos apuestas.</p>` : '';
+  };
   function propsHTML(g) {
     const P = g.props || [];
     if (!P.length) return `<div class="card"><h3>Props de jugadores</h3><p class="empty">Todavía no hay props para este juego. DraftKings los publica el mismo día del juego; la página los busca cada hora desde 14 horas antes.</p>${propsNota()}</div>`;
@@ -674,7 +680,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     return `<div class="card"><h3>PICK de props</h3>
         ${picks.length ? picks.map(x => `<div class="mrow pick"><span class="mname">${esc(x.n)} · ${esc(PN[x.s])} ${x.lado === 'o' ? 'más' : 'menos'} de ${x.l}</span><span class="pill PICK">PICK</span><span class="mline">${esc(g.props_casa || 'DraftKings')} ${(x.lado === 'o' ? x.o : x.u).toFixed(2)} · mezcla ${pct(x.lado === 'o' ? x.q : 1 - x.q, 1)} · justo ${(1 / (x.lado === 'o' ? x.q : 1 - x.q)).toFixed(2)} · EV ${spct(x.lado === 'o' ? x.ev_o : x.ev_u, 1)} · modelo espera ${x.mu}${confHTML(x, x.lado)}</span></div>`).join('')
           : `<p class="empty">Ningún prop con PICK por ahora (${[...CON_PICK].map(k => PN[k].toLowerCase()).join(', ')}).</p>`}
-        <p class="note">Momios de ${esc(g.props_casa || 'DraftKings')} vistos ${g.props_t ? fdt(g.props_t).toLowerCase() : ''}. <b>Apuesta temprano:</b> en la prueba la ventaja era contra la línea de apertura; contra la de cierre casi desaparece. <b>Confianza:</b> la página calcula los minutos de dos formas; si la segunda (rol reciente y tipo de juego: paliza o parejo, total, descanso) no espera más minutos, el "menos" es de confianza alta. En la prueba con temporadas pasadas, los de confianza alta dieron +45% y los demás +15% (también ganaron, por eso siguen siendo PICK). Si tomas pocos, empieza por los de confianza alta.</p>
+        ${mismoJugador(picks)}
+        <p class="note">Momios de ${esc(g.props_casa || 'DraftKings')} vistos ${g.props_t ? fdt(g.props_t).toLowerCase() : ''}. <b>Apuesta temprano:</b> en la prueba la ventaja era contra la línea de apertura; contra la de cierre casi desaparece. <b>Confianza:</b> la página calcula los minutos de dos formas; si la segunda (rol reciente y tipo de juego: paliza o parejo, total, descanso) no espera más minutos, el "menos" es de confianza alta. En la prueba apostando tarde como tú (al cierre), los de confianza alta dieron +15% y los demás +7% (esta temporada +19% contra 0%). Si tomas pocos, empieza por los de confianza alta.</p>
       </div>
       <div class="card"><h3>Historial y tu casa</h3>
         <div class="calc" id="pcalc">
@@ -885,7 +892,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       });
     });
     const casa = G.find(g => g.props_casa) ? G.find(g => g.props_casa).props_casa : 'DraftKings';
-    box.innerHTML = (fuera.length ? `<p class="note"><b>No salen en la lista:</b> ${fuera.join('; ')}. Con tantas bajas el modelo no sabe repartir bien los minutos, y en la prueba esos props perdieron; por eso no hay PICK. Los ves en la ficha del juego, pestaña Jugadores.</p>` : '')
+    const varios = mismoJugador(todos.filter(r => r.pickDK && (ppFiltro.g === 'todos' || String(r.gi) === String(ppFiltro.g))).map(r => r.x));
+    box.innerHTML = varios + (fuera.length ? `<p class="note"><b>No salen en la lista:</b> ${fuera.join('; ')}. Con tantas bajas el modelo no sabe repartir bien los minutos, y en la prueba esos props perdieron; por eso no hay PICK. Los ves en la ficha del juego, pestaña Jugadores.</p>` : '')
       + (filas.length ? filas.map((r, k) => {
       const x = r.x, g = r.g, rival = x.eq === g.local_fd ? 'vs ' + g.visita_fd : '@' + g.local_fd;
       return `<div class="pp${r.pickDK ? ' pick' : ''}" data-k="${k}">
@@ -895,7 +903,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <div class="act"><input inputmode="decimal" autocomplete="off" placeholder="Tu momio" aria-label="Tu momio para ${esc(x.n)}"><span class="res" aria-live="polite">${r.pickDK ? `En ${esc(casa)} ya es PICK (EV ${spct(r.ev, 1)})${confHTML(x, r.l)}.` : `En ${esc(casa)}: EV ${spct(r.ev, 1)}.`}</span><button class="linkbtn" type="button">Ver gráfica y calculadora →</button></div>
       </div>`;
     }).join('') : '<p class="empty">Ninguno con este filtro.</p>')
-      + `<p class="note">Cuando es PICK (en ${esc(casa)} o con tu momio) sale su confianza: "alta" si el segundo cálculo de minutos (rol reciente y tipo de juego) no espera que juegue más de lo que usa el modelo; "puede jugar más" si sí lo espera. En la prueba los dos ganaron, pero los de confianza alta mucho más (+45% contra +15%). "Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
+      + `<p class="note">Cuando es PICK (en ${esc(casa)} o con tu momio) sale su confianza: "alta" si el segundo cálculo de minutos (rol reciente y tipo de juego) no espera que juegue más de lo que usa el modelo; "puede jugar más" si sí lo espera. En la prueba apostando tarde como tú, los de confianza alta dieron +15% y los demás +7% (esta temporada +19% contra 0%). "Necesitas" es el momio mínimo para que sea PICK (EV +5%) con la misma línea. Solo salen los mercados que ganaron en la prueba: rebotes, asistencias, combinados y triples comparando con otra casa, y en puntos solo el "menos". Si tu casa tiene otra línea, toca "Ver". La ventaja era más grande temprano, cuando la casa recién publica.</p>`;
     box.querySelectorAll('.pp').forEach(el => {
       const r = filas[+el.dataset.k], inp = $('input', el), res = $('.res', el), kk = `${r.gi}:${r.x.j}:${r.x.s}:${r.l}`;
       inp.addEventListener('input', () => {
