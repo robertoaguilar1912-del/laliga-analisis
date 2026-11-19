@@ -9,7 +9,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -67,7 +67,7 @@
   "visita": "MIL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Miami Heat",
   "visita_espn": "Milwaukee Bucks",
   "revisado": false,
@@ -183,10 +183,10 @@
   "visita": "DET",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Detroit Pistons",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -200,30 +200,7 @@
     "6-2"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    137,
-    -163
-   ],
-   "ml_abre": [
-    247,
-    -305
-   ],
-   "spread": [
-    3.5,
-    -106,
-    -3.5,
-    -114
-   ],
-   "spread_abre": 8.5,
-   "total": [
-    224.5,
-    -110,
-    -110
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401910014",
@@ -235,10 +212,10 @@
   "visita": "ATL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "Atlanta Hawks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Paycom Center",
   "records": {
    "home": [
@@ -252,30 +229,7 @@
     "5-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -264,
-    217
-   ],
-   "ml_abre": [
-    -270,
-    221
-   ],
-   "spread": [
-    -6.5,
-    -110,
-    6.5,
-    -110
-   ],
-   "spread_abre": -7.5,
-   "total": [
-    228.5,
-    -115,
-    -106
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401910016",
@@ -287,10 +241,10 @@
   "visita": "GS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -304,30 +258,7 @@
     "2-5"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -197,
-    164
-   ],
-   "ml_abre": [
-    -208,
-    173
-   ],
-   "spread": [
-    -4.5,
-    -116,
-    4.5,
-    -104
-   ],
-   "spread_abre": -6.5,
-   "total": [
-    223.5,
-    -107,
-    -113
-   ],
-   "total_abre": 221.5
-  }
+  "momios": null
  },
  {
   "id": "401910015",
@@ -357,7 +288,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     115,
     -136
@@ -394,7 +325,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Utah Jazz",
-  "revisado": false,
+  "revisado": true,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -409,7 +340,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -567,
     424
@@ -446,7 +377,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Phoenix Suns",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -461,7 +392,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     221,
     -269
@@ -478,9 +409,9 @@
    ],
    "spread_abre": 6.5,
    "total": [
-    227.5,
-    -105,
-    -115
+    226.5,
+    -113,
+    -107
    ],
    "total_abre": 229.5
   }
