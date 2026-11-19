@@ -9,7 +9,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -38,7 +38,7 @@
   "visita": "HOU",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Indiana Pacers",
   "visita_espn": "Houston Rockets",
   "revisado": false,
@@ -143,7 +143,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -124,
     105
@@ -195,7 +195,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -176,
     147
@@ -212,9 +212,9 @@
    ],
    "spread_abre": -7.5,
    "total": [
-    223.5,
-    -115,
-    -105
+    224.5,
+    -105,
+    -115
    ],
    "total_abre": 227.5
   }
@@ -246,7 +246,30 @@
     "6-2"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    180,
+    -217
+   ],
+   "ml_abre": [
+    247,
+    -305
+   ],
+   "spread": [
+    5.5,
+    -108,
+    -5.5,
+    -112
+   ],
+   "spread_abre": 8.5,
+   "total": [
+    226.5,
+    -110,
+    -110
+   ],
+   "total_abre": 229.5
+  }
  },
  {
   "id": "401910014",
@@ -276,7 +299,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -264,
     217
@@ -328,7 +351,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -197,
     164
@@ -380,7 +403,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     120,
     -142
@@ -432,7 +455,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -545,
     411
@@ -484,7 +507,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     221,
     -269
