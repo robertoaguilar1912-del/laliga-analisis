@@ -8225,6 +8225,25 @@
   "casa": "Draft Kings",
   "visto": "2026-11-19T17:09+00:00",
   "ultimo": "2026-11-19T17:09+00:00",
+  "revisar": "bajas",
+  "retirado": "2026-11-19T19:32+00:00",
+  "motivo": "línea",
+  "reemplazado": "Portland Trail Blazers -11.5"
+ },
+ {
+  "id": "401910020",
+  "liga": "nba",
+  "utc": "2026-11-20T01:00Z",
+  "local": "Milwaukee Bucks",
+  "visita": "Portland Trail Blazers",
+  "k": "H2:-11.5",
+  "mercado": "Portland Trail Blazers -11.5",
+  "p": 0.5541,
+  "momio": "1.93",
+  "ev": 0.0672,
+  "casa": "Draft Kings",
+  "visto": "2026-11-19T19:32+00:00",
+  "ultimo": "2026-11-19T19:32+00:00",
   "revisar": "bajas"
  },
  {
@@ -8242,7 +8261,7 @@
   "visto": "2026-11-19T05:00+00:00",
   "ultimo": "2026-11-19T05:40+00:00",
   "revisar": "bajas",
-  "reemplazado": "Portland Trail Blazers -10.5",
+  "reemplazado": "Portland Trail Blazers -11.5",
   "retirado": "2026-11-19T17:09+00:00",
   "motivo": "línea"
  },
@@ -8265,7 +8284,7 @@
   "p_fin": 0.8624,
   "momio_fin": "1.21",
   "motivo": "momio",
-  "reemplazado": "Portland Trail Blazers -10.5"
+  "reemplazado": "Portland Trail Blazers -11.5"
  },
  {
   "id": "401892138",
@@ -8591,6 +8610,21 @@
   "motivo": "regla"
  },
  {
+  "id": "401841322",
+  "liga": "brasil",
+  "utc": "2026-11-21T19:30Z",
+  "local": "Palmeiras",
+  "visita": "Flamengo",
+  "k": "H1:+0.5",
+  "mercado": "Hándicap Palmeiras +0.5",
+  "p": 0.6701,
+  "momio": "1.77",
+  "ev": 0.1862,
+  "casa": "DraftKings",
+  "visto": "2026-11-19T19:32+00:00",
+  "ultimo": "2026-11-19T19:32+00:00"
+ },
+ {
   "id": "401892134",
   "liga": "australia",
   "utc": "2026-11-22T02:00Z",
@@ -8641,7 +8675,11 @@
   "ev": 0.0502,
   "casa": "Bet365 (API-Football; DraftKings no publicó)",
   "visto": "2026-11-17T05:17+00:00",
-  "ultimo": "2026-11-19T17:09+00:00"
+  "ultimo": "2026-11-19T17:09+00:00",
+  "retirado": "2026-11-19T19:32+00:00",
+  "p_fin": 0.594,
+  "momio_fin": "1.75",
+  "motivo": "momio"
  },
  {
   "id": "401912682",
@@ -8656,7 +8694,7 @@
   "ev": 0.1186,
   "casa": "DraftKings",
   "visto": "2026-11-17T19:49+00:00",
-  "ultimo": "2026-11-19T17:09+00:00"
+  "ultimo": "2026-11-19T19:32+00:00"
  },
  {
   "id": "401882803",
@@ -8745,7 +8783,9 @@
   "ev": 0.0851,
   "casa": "DraftKings",
   "visto": "2026-11-16T15:40+00:00",
-  "ultimo": "2026-11-19T17:09+00:00"
+  "ultimo": "2026-11-19T17:09+00:00",
+  "retirado": "2026-11-19T19:32+00:00",
+  "motivo": "línea"
  },
  {
   "id": "401876392",
@@ -8760,7 +8800,7 @@
   "ev": 0.0624,
   "casa": "DraftKings",
   "visto": "2026-11-17T05:17+00:00",
-  "ultimo": "2026-11-19T17:09+00:00"
+  "ultimo": "2026-11-19T19:32+00:00"
  },
  {
   "id": "401882791",
@@ -8775,7 +8815,7 @@
   "ev": 0.058,
   "casa": "DraftKings",
   "visto": "2026-11-17T05:17+00:00",
-  "ultimo": "2026-11-19T17:09+00:00"
+  "ultimo": "2026-11-19T19:32+00:00"
  },
  {
   "id": "401882796",
@@ -8795,5 +8835,35 @@
   "p_fin": 0.6716,
   "momio_fin": "1.56",
   "motivo": "momio"
+ },
+ {
+  "id": "401882794",
+  "liga": "laliga",
+  "utc": "2026-11-29T15:15Z",
+  "local": "Deportivo",
+  "visita": "Barcelona",
+  "k": "U:3.5",
+  "mercado": "Menos de 3.5 goles",
+  "p": 0.5192,
+  "momio": "2.10",
+  "ev": 0.0903,
+  "casa": "DraftKings",
+  "visto": "2026-11-19T19:32+00:00",
+  "ultimo": "2026-11-19T19:32+00:00"
+ },
+ {
+  "id": "401873093",
+  "liga": "nfl",
+  "utc": "2026-11-29T21:05Z",
+  "local": "Los Angeles Chargers",
+  "visita": "New England Patriots",
+  "k": "ML2",
+  "mercado": "Gana New England Patriots",
+  "p": 0.3777,
+  "momio": "2.89",
+  "ev": 0.0911,
+  "casa": "Draft Kings",
+  "visto": "2026-11-19T19:32+00:00",
+  "ultimo": "2026-11-19T19:32+00:00"
  }
 ]

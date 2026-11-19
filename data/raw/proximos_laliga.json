@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -210,
-    350,
-    600
+    -205,
+    340,
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-1.5",
-     125
+     130
     ],
     [
      "+1.5",
-     -175
+     -185
     ]
    ]
   }
@@ -110,14 +110,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    190,
-    255,
+    195,
+    245,
     140
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
-    105
+    -120,
+    -105
    ],
    "spread": [
     [
@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -550,
-    600,
-    1300
+    -575,
+    650,
+    1400
    ],
    "ou_linea": 3.5,
    "ou": [
     -105,
-    -125
+    -115
    ],
    "spread": [
     [
      "-2.5",
-     120
+     115
     ],
     [
      "+2.5",
-     -175
+     -165
     ]
    ]
   }
@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -500,
-    600,
-    1000
+    -475,
+    650,
+    1100
    ],
    "ou_linea": 4.5,
    "ou": [
@@ -188,11 +188,11 @@
    "spread": [
     [
      "-2.5",
-     105
+     115
     ],
     [
      "+2.5",
-     -155
+     -160
     ]
    ]
   }
@@ -215,8 +215,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
-    -110
+    -120,
+    -105
    ],
    "spread": [
     [
@@ -243,18 +243,18 @@
    "casa": "DraftKings",
    "ml": [
     -125,
-    260,
-    340
+    265,
+    350
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
+    100,
     -125
    ],
    "spread": [
     [
      "-0.5",
-     -140
+     -135
     ],
     [
      "+0.5",
@@ -275,8 +275,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    475,
-    295,
+    500,
+    300,
     -175
    ],
    "ou_linea": 2.5,
@@ -291,7 +291,7 @@
     ],
     [
      "-0.5",
-     -190
+     -195
     ]
    ]
   }
@@ -314,7 +314,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     115
    ],
    "spread": [
@@ -324,7 +324,7 @@
     ],
     [
      "+0.5",
-     -155
+     -150
     ]
    ]
   }
@@ -490,6 +490,138 @@
     [
      "+2.5",
      -160
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882787",
+  "utc": "2026-11-29T13:00Z",
+  "estadio": "Mestalla Stadium",
+  "local_espn": "Valencia",
+  "visita_espn": "Osasuna",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    225,
+    245
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     100
+    ],
+    [
+     "+0.5",
+     -155
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882794",
+  "utc": "2026-11-29T15:15Z",
+  "estadio": "Riazor",
+  "local_espn": "Deportivo",
+  "visita_espn": "Barcelona",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    700,
+    475,
+    -330
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -150,
+    110
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -105
+    ],
+    [
+     "-1.5",
+     -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882795",
+  "utc": "2026-11-29T17:30Z",
+  "estadio": "Balaidos",
+  "local_espn": "Celta Vigo",
+  "visita_espn": "Villarreal",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    240,
+    155
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -210
+    ],
+    [
+     "-0.5",
+     135
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882788",
+  "utc": "2026-11-29T20:00Z",
+  "estadio": "Reale Arena",
+  "local_espn": "Real Sociedad",
+  "visita_espn": "Sevilla",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    110,
+    260,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -150
     ]
    ]
   }

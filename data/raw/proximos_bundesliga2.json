@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    250,
-    195
+    120,
+    260,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
+    -145,
     110
    ],
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
-     -165
+     -155
     ]
    ]
   }
@@ -44,14 +44,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    235,
-    280,
-    -105
+    230,
+    285,
+    100
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -175
+    130,
+    -170
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -115
+     -105
     ]
    ]
   }
@@ -89,11 +89,11 @@
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     110
+     105
     ]
    ]
   }
@@ -110,14 +110,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -140,
+    -135,
     310,
     310
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -165
+    -170
    ],
    "spread": [
     [
@@ -177,22 +177,22 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    260,
-    225
+    265,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
+    -155,
     110
    ],
    "spread": [
     [
      "-0.5",
-     -110
+     100
     ],
     [
      "+0.5",
-     -140
+     -145
     ]
    ]
   }
@@ -209,19 +209,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    340,
-    340,
-    -165
+    360,
+    350,
+    -170
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -135
+    -105,
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     120
+     125
     ],
     [
      "-0.5",
@@ -244,11 +244,11 @@
    "ml": [
     115,
     250,
-    200
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
+    -145,
     105
    ],
    "spread": [
@@ -258,7 +258,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -277,17 +277,17 @@
    "ml": [
     125,
     260,
-    180
+    185
    ],
    "ou_linea": 2.5,
    "ou": [
-    -180,
+    -175,
     125
    ],
    "spread": [
     [
      "-0.5",
-     110
+     120
     ],
     [
      "+0.5",
@@ -357,6 +357,39 @@
   "estadio": "Stadion an der Bremer Brücke'",
   "local_espn": "VfL Osnabruck",
   "visita_espn": "Hannover 96",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885042",
+  "utc": "2026-11-29T12:30Z",
+  "estadio": "MDCC-Arena",
+  "local_espn": "1. FC Magdeburg",
+  "visita_espn": "Energie Cottbus",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885040",
+  "utc": "2026-11-29T12:30Z",
+  "estadio": "Sportpark Ronhof - Thomas Sommer",
+  "local_espn": "SpVgg Greuther Fürth",
+  "visita_espn": "Arminia Bielefeld",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-german-2-bundesliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885041",
+  "utc": "2026-11-29T12:30Z",
+  "estadio": "Eintracht-Stadion",
+  "local_espn": "TSV Eintracht Braunschweig",
+  "visita_espn": "VfL Wolfsburg",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-german-2-bundesliga",
   "neutral": false,

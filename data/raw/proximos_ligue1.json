@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    250,
-    235
+    120,
+    245,
+    230
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -110
    ],
    "spread": [
     [
      "-0.5",
-     105
+     110
     ],
     [
      "+0.5",
-     -145
+     -155
     ]
    ]
   }
@@ -46,7 +46,7 @@
    "ml": [
     500,
     400,
-    -225
+    -220
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -77,13 +77,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -245,
+    -240,
     400,
     600
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    130,
     -160
    ],
    "spread": [
@@ -110,23 +110,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -125,
+    -115,
     300,
-    295
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -155,
     125
    ],
    "spread": [
     [
      "-0.5",
-     -135
+     -125
     ],
     [
      "+0.5",
-     -105
+     -110
     ]
    ]
   }
@@ -143,9 +143,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    225,
-    210
+    130,
+    230,
+    225
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -155,11 +155,11 @@
    "spread": [
     [
      "-0.5",
-     120
+     115
     ],
     [
      "+0.5",
-     -175
+     -165
     ]
    ]
   }
@@ -176,14 +176,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    265,
-    200
+    125,
+    270,
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    115
+    -150,
+    120
    ],
    "spread": [
     [
@@ -192,7 +192,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -209,13 +209,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -295,
-    425,
-    750
+    -310,
+    450,
+    800
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
+    -165,
     130
    ],
    "spread": [
@@ -225,7 +225,7 @@
     ],
     [
      "+1.5",
-     -125
+     -120
     ]
    ]
   }
@@ -243,18 +243,18 @@
    "casa": "DraftKings",
    "ml": [
     185,
-    245,
-    140
+    250,
+    145
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -110
    ],
    "spread": [
     [
      "+0.5",
-     -190
+     -180
     ],
     [
      "-0.5",
@@ -281,7 +281,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -165
    ],
    "spread": [
@@ -291,7 +291,7 @@
     ],
     [
      "+1.5",
-     -160
+     -165
     ]
    ]
   }
@@ -386,11 +386,11 @@
    "spread": [
     [
      "+0.5",
-     -170
+     -175
     ],
     [
      "-0.5",
-     110
+     115
     ]
    ]
   }
@@ -490,6 +490,89 @@
     [
      "+1.5",
      110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876393",
+  "utc": "2026-11-29T14:00Z",
+  "estadio": "Stade de l'Abbé-Deschamps",
+  "local_espn": "AJ Auxerre",
+  "visita_espn": "Marseille",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    280,
+    295,
+    -125
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -180,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -110
+    ],
+    [
+     "-0.5",
+     -140
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401876386",
+  "utc": "2026-11-29T16:15Z",
+  "estadio": "Stadium Municipal de Toulouse",
+  "local_espn": "Toulouse",
+  "visita_espn": "Stade Rennais",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  }
+ },
+ {
+  "id": "401876389",
+  "utc": "2026-11-29T19:45Z",
+  "estadio": "Groupama Stadium",
+  "local_espn": "Lyon",
+  "visita_espn": "AS Monaco",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-ligue-1",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    130,
+    240,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
     ]
    ]
   }

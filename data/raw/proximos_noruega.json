@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    350,
+    240,
+    370,
     -120
    ],
    "ou_linea": 3.5,
    "ou": [
-    -160,
-    115
+    -165,
+    125
    ],
    "spread": [
     [
      "+0.5",
-     -110
+     -105
     ],
     [
      "-0.5",
@@ -44,9 +44,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    270,
-    300,
-    -125
+    290,
+    310,
+    -135
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -56,11 +56,11 @@
    "spread": [
     [
      "+0.5",
-     -110
+     100
     ],
     [
      "-0.5",
-     -135
+     -145
     ]
    ]
   }
@@ -143,8 +143,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    320,
-    340,
+    330,
+    350,
     -160
    ],
    "ou_linea": 3.5,
@@ -155,11 +155,11 @@
    "spread": [
     [
      "+0.5",
-     110
+     115
     ],
     [
      "-0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -177,18 +177,18 @@
    "casa": "DraftKings",
    "ml": [
     165,
-    275,
+    280,
     130
    ],
    "ou_linea": 3.5,
    "ou": [
     105,
-    -155
+    -150
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -175
     ],
     [
      "-0.5",
@@ -210,18 +210,18 @@
    "casa": "DraftKings",
    "ml": [
     160,
-    265,
+    270,
     140
    ],
    "ou_linea": 3.5,
    "ou": [
-    -105,
+    100,
     -140
    ],
    "spread": [
     [
      "+0.5",
-     -190
+     -185
     ],
     [
      "-0.5",
@@ -243,12 +243,12 @@
    "casa": "DraftKings",
    "ml": [
     115,
-    290,
-    175
+    295,
+    180
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
+    -110,
     -125
    ],
    "spread": [
@@ -258,7 +258,7 @@
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   }
@@ -280,6 +280,61 @@
   "estadio": "Lerkendal Stadion",
   "local_espn": "Rosenborg",
   "visita_espn": "Molde",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401843495",
+  "utc": "2026-11-29T13:30Z",
+  "estadio": "Fredrikstad Stadion",
+  "local_espn": "Fredrikstad",
+  "visita_espn": "Aalesund",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401843491",
+  "utc": "2026-11-29T16:00Z",
+  "estadio": "Sparebanken Sor Arena",
+  "local_espn": "IK Start",
+  "visita_espn": "Sarpsborg FK",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401843498",
+  "utc": "2026-11-29T16:00Z",
+  "estadio": "Jotun Arena",
+  "local_espn": "Sandefjord",
+  "visita_espn": "Tromso",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401843494",
+  "utc": "2026-11-29T16:00Z",
+  "estadio": "Brann Stadium",
+  "local_espn": "SK Brann",
+  "visita_espn": "Kristiansund BK",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401843493",
+  "utc": "2026-11-29T18:15Z",
+  "estadio": "Viking Stadion",
+  "local_espn": "Viking FK",
+  "visita_espn": "Vålerenga",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,

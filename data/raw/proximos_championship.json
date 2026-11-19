@@ -22,12 +22,12 @@
    ],
    "spread": [
     [
-     "-0.5",
-     140
+     "+0.5",
+     -205
     ],
     [
-     "+0.5",
-     -200
+     "-0.5",
+     145
     ]
    ]
   }
@@ -50,7 +50,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -115,
+    -110,
     -115
    ],
    "spread": [
@@ -77,9 +77,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -245,
-    400,
-    600
+    -260,
+    425,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -89,11 +89,11 @@
    "spread": [
     [
      "-1.5",
-     105
+     -105
     ],
     [
      "+1.5",
-     -145
+     -135
     ]
    ]
   }
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     140
+     135
     ]
    ]
   }
@@ -209,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -160,
-    310,
-    425
+    -170,
+    320,
+    450
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -221,11 +221,11 @@
    "spread": [
     [
      "-0.5",
-     -175
+     -185
     ],
     [
      "+0.5",
-     125
+     135
     ]
    ]
   }
@@ -248,13 +248,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
+    100,
     -130
    ],
    "spread": [
     [
      "+0.5",
-     -180
+     -185
     ],
     [
      "-0.5",
@@ -347,7 +347,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
+    -170,
     130
    ],
    "spread": [
@@ -375,12 +375,12 @@
    "casa": "DraftKings",
    "ml": [
     -110,
-    280,
-    275
+    285,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     110
    ],
    "spread": [
@@ -390,7 +390,7 @@
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
@@ -643,6 +643,17 @@
   "estadio": "STōK Cae Ras",
   "local_espn": "Wrexham",
   "visita_espn": "Portsmouth",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880128",
+  "utc": "2026-11-29T12:00Z",
+  "estadio": "Swansea.com Stadium",
+  "local_espn": "Swansea City",
+  "visita_espn": "Cardiff City",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
