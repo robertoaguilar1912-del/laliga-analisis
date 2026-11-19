@@ -5,7 +5,7 @@
   "estadio": "Couto Pereira",
   "local_espn": "Coritiba",
   "visita_espn": "Santos",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -614,16 +614,16 @@
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -110
+    -115
    ],
    "spread": [
     [
      "-0.5",
-     -160
+     -155
     ],
     [
      "+0.5",
-     115
+     110
     ]
    ]
   },
@@ -1141,6 +1141,72 @@
   "estadio": "Joao Havelange Stadium",
   "local_espn": "Botafogo",
   "visita_espn": "Bahia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841333",
+  "utc": "2026-11-29T19:00Z",
+  "estadio": "Couto Pereira",
+  "local_espn": "Coritiba",
+  "visita_espn": "Flamengo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841332",
+  "utc": "2026-11-29T19:00Z",
+  "estadio": "Estadio Manoel Barradas",
+  "local_espn": "Vitória",
+  "visita_espn": "Santos",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841334",
+  "utc": "2026-11-29T21:30Z",
+  "estadio": "Neo Química Arena",
+  "local_espn": "Corinthians",
+  "visita_espn": "Grêmio",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841331",
+  "utc": "2026-11-29T21:30Z",
+  "estadio": "Estadio Beira-Rio",
+  "local_espn": "Internacional",
+  "visita_espn": "Red Bull Bragantino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841330",
+  "utc": "2026-11-29T21:30Z",
+  "estadio": "Estadio Municipal José Maria de Campos Maia",
+  "local_espn": "Mirassol",
+  "visita_espn": "Athletico-PR",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-brasileiro-serie-a",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401841328",
+  "utc": "2026-11-29T22:30Z",
+  "estadio": "Arena MRV",
+  "local_espn": "Atlético-MG",
+  "visita_espn": "Vasco da Gama",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
