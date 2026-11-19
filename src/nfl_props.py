@@ -5,7 +5,9 @@ SIN momio de apertura (solo el último que guardó):
 - 2021: nada. 2022-2023: casi solo anotadores de touchdown.
 - 2024: ESPN BET completa (yardas por pase, por tierra, por recepción, recepciones, pases completos, intentos, TD, tacleadas...).
 - 2025: ESPN BET hasta ~la semana 13 (después ESPN dejó de guardarlos).
-- 2026: DraftKings (ESPN no dice cuál fila es "más": se guarda el orden, 'pos').
+- 2026: DraftKings, pero SOLO la línea (apertura y última), sin momios.
+Forma: el momio va en current/open.over|under.decimal y la línea en current/open.target. ESPN BET trae momio en pocas líneas
+por juego; el resto (y todo DraftKings 2026) solo la línea: se guardan con lado '' y momio vacío.
 Hondubet (19 nov) tiene: TD de pase, yardas de pase, de recepción, por tierra, pases completos, recepciones, intentos de pase,
 pase+carrera, carrera+recepción, recepción/pase/carrera más larga, TD por tierra y recepción, tacleadas, sacks, intentos de
 carrera, puntos de patada, intercepciones.
@@ -60,19 +62,27 @@ def _props(eid):
             if pag >= (j.get('pageCount') or 1):
                 break
             pag += 1
-        crudas = []
         for k, x in enumerate(items):
             atl = (x.get('athlete') or {}).get('$ref', '')
             if not atl:                       # props de equipo
                 continue
-            cur, ab, od_ = x.get('current') or {}, x.get('open') or {}, x.get('odds') or {}
-            lado = 'o' if 'over' in cur or 'over' in ab else 'u' if 'under' in cur or 'under' in ab else ''
-            dec, tot = od_.get('decimal') or {}, od_.get('total') or {}
-            crudas.append({'id': str(eid), 'casa': pid, 'casa_nombre': nombre, 'tipo': (x.get('type') or {}).get('name'),
-                           'jugador': atl.split('/athletes/')[-1].split('?')[0], 'lado': lado, 'pos': k,
-                           'linea': _f(tot.get('value')), 'momio': _f(dec.get('value')),
-                           'linea_abre': _f(tot.get('open')), 'momio_abre': _f(dec.get('open')), 'act': x.get('lastUpdated')})
-        filas += [c for c in crudas if c['momio'] or c['momio_abre']]
+            cur, ab = x.get('current') or {}, x.get('open') or {}
+            base = {'id': str(eid), 'casa': pid, 'casa_nombre': nombre, 'tipo': (x.get('type') or {}).get('name'),
+                    'jugador': atl.split('/athletes/')[-1].split('?')[0], 'pos': k,
+                    'linea': _f((cur.get('target') or {}).get('value')), 'linea_abre': _f((ab.get('target') or {}).get('value')),
+                    'act': x.get('lastUpdated')}
+            lados = [l for l in ('over', 'under') if l in cur or l in ab]
+            for l in lados:                   # NFL en ESPN: el momio va en current/open.over|under, la línea en target
+                filas.append({**base, 'lado': l[0] if l == 'over' else 'u', 'momio': _f((cur.get(l) or {}).get('decimal')),
+                              'momio_abre': _f((ab.get(l) or {}).get('decimal'))})
+            if not lados:
+                od_ = x.get('odds') or {}
+                dec, tot = od_.get('decimal') or {}, od_.get('total') or {}
+                if dec:                       # forma de la NBA (por si acaso)
+                    filas.append({**base, 'lado': '', 'linea': _f(tot.get('value')), 'linea_abre': _f(tot.get('open')),
+                                  'momio': _f(dec.get('value')), 'momio_abre': _f(dec.get('open'))})
+                elif base['linea'] is not None or base['linea_abre'] is not None:
+                    filas.append({**base, 'lado': '', 'momio': None, 'momio_abre': None})   # solo la línea (DraftKings 2026)
     return filas
 
 
