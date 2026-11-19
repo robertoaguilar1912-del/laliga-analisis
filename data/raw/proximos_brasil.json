@@ -601,15 +601,31 @@
   "estadio": "Neo Química Arena",
   "local_espn": "Corinthians",
   "visita_espn": "Botafogo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -150,
+    280,
+    400
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -115
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -165
+    ],
+    [
+     "+0.5",
+     120
+    ]
+   ]
   },
   "alineaciones": {
    "Corinthians": [
@@ -734,7 +750,7 @@
   "estadio": "Arena do Grêmio",
   "local_espn": "Grêmio",
   "visita_espn": "Bahia",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -744,9 +760,21 @@
     255,
     185
    ],
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
   },
   "alineaciones": {
    "Grêmio": [
@@ -945,21 +973,21 @@
    "ml": [
     135,
     225,
-    200
+    205
    ],
    "ou_linea": 2.5,
    "ou": [
     105,
-    -145
+    -140
    ],
    "spread": [
     [
      "-0.5",
-     125
+     130
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
