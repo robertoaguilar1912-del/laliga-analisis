@@ -17,7 +17,7 @@ def get(url, **params):
         return None
 
 
-for temp, semana in ((2021, 8), (2022, 8), (2023, 8), (2024, 8), (2025, 8), (2026, 11), (2026, 12)):
+for temp, semana in ((2024, 15), (2025, 15), (2026, 3), (2026, 9)):
     sb = get(f'{SITE}/scoreboard', dates=temp, seasontype=2, week=semana) or {}
     evs = sb.get('events') or []
     print(f'\n=== {temp} semana {semana}: {len(evs)} juegos')
