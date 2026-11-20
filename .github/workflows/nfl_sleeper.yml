@@ -1,0 +1,29 @@
+name: Proyecciones de la NFL (Sleeper)
+# Solo a mano: proyecciones semanales de Sleeper para la prueba de props de la NFL (ver src/nfl_sleeper.py).
+on:
+  workflow_dispatch:
+    inputs:
+      temporadas: {description: 'Temporadas (año en que empiezan)', default: '2024 2025'}
+permissions:
+  contents: write
+jobs:
+  bajar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pandas requests
+      - run: cd src && python nfl_sleeper.py ${{ github.event.inputs.temporadas }}
+      - name: Guardar
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/nfl_sleeper_*.csv.gz
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Proyecciones de la NFL (Sleeper) $(date -u +'%Y-%m-%d %H:%M') UTC"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash && git push -q && exit 0; sleep 15; done
+          exit 1
