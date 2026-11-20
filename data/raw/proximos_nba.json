@@ -27,7 +27,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -217,
     180
@@ -44,9 +44,9 @@
    ],
    "spread_abre": -8.5,
    "total": [
-    225.5,
-    -105,
-    -115
+    224.5,
+    -115,
+    -105
    ],
    "total_abre": 225.5
   }
@@ -79,7 +79,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     394,
     -518
@@ -131,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -104,
     -113
@@ -183,7 +183,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -1020,
     660
@@ -235,7 +235,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -212,
     177
@@ -286,7 +286,30 @@
     "5-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    168,
+    -201
+   ],
+   "ml_abre": [
+    168,
+    -201
+   ],
+   "spread": [
+    5.5,
+    -106,
+    -5.5,
+    -114
+   ],
+   "spread_abre": 5.5,
+   "total": [
+    222.5,
+    -114,
+    -106
+   ],
+   "total_abre": 222.5
+  }
  },
  {
   "id": "401909307",
@@ -316,7 +339,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -246,
     203
@@ -368,7 +391,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -291,
     237
@@ -2302,6 +2325,209 @@
     "11-4",
     "7-2",
     "4-2"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910061",
+  "utc": "2026-12-01T00:00Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "CHA",
+  "visita": "WSH",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Charlotte Hornets",
+  "visita_espn": "Washington Wizards",
+  "revisado": false,
+  "estadio": "Spectrum Center",
+  "records": {
+   "home": [
+    "4-10",
+    "3-4",
+    "1-6"
+   ],
+   "away": [
+    "5-11",
+    "2-5",
+    "3-6"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910062",
+  "utc": "2026-12-01T00:00Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DET",
+  "visita": "DEN",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Detroit Pistons",
+  "visita_espn": "Denver Nuggets",
+  "revisado": false,
+  "estadio": "Little Caesars Arena",
+  "records": {
+   "home": [
+    "10-4",
+    "3-2",
+    "7-2"
+   ],
+   "away": [
+    "8-5",
+    "3-3",
+    "4-2"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910063",
+  "utc": "2026-12-01T00:30Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "BKN",
+  "visita": "OKC",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Brooklyn Nets",
+  "visita_espn": "Oklahoma City Thunder",
+  "revisado": false,
+  "estadio": "Barclays Center",
+  "records": {
+   "home": [
+    "3-11",
+    "1-5",
+    "2-6"
+   ],
+   "away": [
+    "9-6",
+    "5-1",
+    "4-5"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910064",
+  "utc": "2026-12-01T00:30Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "HOU",
+  "visita": "LAL",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Houston Rockets",
+  "visita_espn": "Los Angeles Lakers",
+  "revisado": false,
+  "estadio": "Toyota Center (Houston)",
+  "records": {
+   "home": [
+    "12-4",
+    "7-1",
+    "5-3"
+   ],
+   "away": [
+    "13-3",
+    "6-2",
+    "7-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910065",
+  "utc": "2026-12-01T01:00Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DAL",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Dallas Mavericks",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "American Airlines Center",
+  "records": {
+   "home": [
+    "8-7",
+    "6-2",
+    "2-5"
+   ],
+   "away": [
+    "11-4",
+    "6-1",
+    "5-3"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910066",
+  "utc": "2026-12-01T01:00Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIL",
+  "visita": "SA",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Milwaukee Bucks",
+  "visita_espn": "San Antonio Spurs",
+  "revisado": false,
+  "estadio": "Fiserv Forum",
+  "records": {
+   "home": [
+    "1-14",
+    "1-7",
+    "0-7"
+   ],
+   "away": [
+    "12-3",
+    "5-3",
+    "7-0"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910067",
+  "utc": "2026-12-01T03:00Z",
+  "fecha": "2026-11-30",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SAC",
+  "visita": "NO",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Sacramento Kings",
+  "visita_espn": "New Orleans Pelicans",
+  "revisado": false,
+  "estadio": "Golden 1 Center",
+  "records": {
+   "home": [
+    "1-13",
+    "0-9",
+    "1-4"
+   ],
+   "away": [
+    "5-11",
+    "4-7",
+    "1-4"
    ]
   },
   "momios": null
