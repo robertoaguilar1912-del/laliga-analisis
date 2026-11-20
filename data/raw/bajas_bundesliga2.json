@@ -1,26 +1,44 @@
 {
 "401885049": {
 "fotmob": 5881726,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T16:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
 "nombre": "David Min",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de noviembre",
+"duda": false,
 "valor": 1138874.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Joel Felix",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 161373.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 8481916.0,
-"perdida": 0.0,
-"perdida_duda": 0.13427084163530975
+"perdida": 0.13427084163530975,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Anselmo MacNulty",
+"tipo": "Sanción",
+"regreso": "hasta el 20 de noviembre",
+"duda": false,
+"valor": 1098616.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Moritz-Broni Kwarteng",
 "tipo": "Lesión",
@@ -41,22 +59,31 @@
 }
 ],
 "valor_xi": 12832355.0,
-"perdida": 0.04283625258185267,
+"perdida": 0.12844922073929532,
 "perdida_duda": 0.0
 }
 },
 "401885053": {
 "fotmob": 5881728,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T16:25+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
-"nombre": "Fabian Nürnberger",
+"nombre": "Patric Pfeiffer",
 "tipo": "Lesión",
-"regreso": "finales de noviembre",
+"regreso": "mediados de diciembre",
 "duda": false,
-"valor": 794454.0,
+"valor": 738047.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolas Verkooijen",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 715245.0,
 "titular": false,
 "importante": false
 },
@@ -79,11 +106,29 @@
 "importante": false
 },
 {
+"nombre": "Marcel Schuhen",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 193365.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Carlo Sickinger",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 168151.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Fabian Nürnberger",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 794454.0,
 "titular": false,
 "importante": false
 }
@@ -102,10 +147,28 @@
 "valor": 1019656.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Jonas Föhrenbach",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 599585.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Thomas Dähne",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 219900.0,
+"titular": true,
+"importante": true
 }
 ],
 "valor_xi": 11434896.0,
-"perdida": 0.08917055301596097,
+"perdida": 0.16083583095115164,
 "perdida_duda": 0.0
 }
 },
