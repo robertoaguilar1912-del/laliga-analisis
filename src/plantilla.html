@@ -329,6 +329,8 @@ table.data.tiempos th, table.data.tiempos td { padding: 8px 6px; }
 .pa-ligas label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; cursor: pointer; background: var(--surface); }
 .pa-ligas label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
 .pa-ligas input { margin: 0; accent-color: var(--accent); }
+.tag-conf { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--ink); vertical-align: 1px; border: 1px solid var(--line); background: var(--surface); white-space: nowrap; }
+.tag-conf.alta { background: var(--accent-soft); border-color: transparent; }
 .tag-pa { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--accent-soft); color: var(--ink); vertical-align: 1px; }
 
 /* El modelo */
@@ -1614,6 +1616,14 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       <div><span>ROI</span><b class="${pl > 0 ? 'up' : pl < 0 ? 'down' : ''}">${apostado ? spct(pl / apostado, 1) : '—'}</b></div>
     </div>`;
   }
+  // props de la NBA: confianza que tenía el PICK al guardarlo (alta: el 2º cálculo de minutos no espera que juegue más de lo que dice la página)
+  const confTag = b => b.conf ? `<span class="tag-conf ${b.conf === 'alta' ? 'alta' : ''}">Confianza ${b.conf === 'alta' ? 'alta' : 'normal'}</span>` : '';
+  const confDet = b => {
+    if (!b.conf) return '';
+    const mas = (b.k || '').split(':')[3] === 'o' ? 'menos' : 'más';
+    const min = b.mr != null && b.mesp != null ? `: por rol y tipo de juego ${(+b.mr).toFixed(1)} min, no ${(+b.mesp).toFixed(1)}` : '';
+    return (b.conf === 'normal' ? `puede jugar ${mas}${min}` : '') + (b.nt ? `${b.conf === 'normal' ? ' · ' : ''}rol nuevo: fue titular y jugó mucho más de lo esperado en su último juego` : '');
+  };
   function filaHTML(x, mia) {
     const b = x.bet, e = x.e, r = e.r, cie = cierreDe(b), empezo = new Date(b.utc) <= new Date();
     const clv = cie ? b.momio / cie - 1 : null;
@@ -1623,12 +1633,13 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
     const cl = cie ? `${empezo ? 'DraftKings al cierre' : 'DraftKings ahora'} ${cie.toFixed(2)}${empezo && Math.abs(clv) >= 0.005 ? (clv > 0 ? ` · le ganaste al cierre (${spct(clv, 0)})` : ` · el cierre fue mejor (${spct(clv, 0)})`) : ''}` : '';
     const vpin = !mia && b.pin_c != null ? b.momio * b.pin_c - 1 : null;
     const pinc = vpin != null ? `Pinnacle al cierre ${pct(b.pin_c, 1)}: ${vpin > 0.005 ? `le ganó (${spct(vpin, 0)})` : vpin < -0.005 ? `no le ganó (${spct(vpin, 0)})` : 'igual'}` : '';
-    const linea2 = [res, cl, pinc].filter(Boolean).join(' · ');
+    const linea2 = [res, cl, pinc].filter(Boolean).join(' · '), cd = mia ? confDet(b) : '';
     return `<div class="bet" data-uid="${esc(b.uid || '')}">
       <div class="b-main">
         <span class="b-meta">${b.liga && LIGAS[b.liga] ? esc(corto(LIGAS[b.liga])) + ' · ' : ''}${fdt(b.utc)} · ${esc(b.local)} – ${esc(b.visita)}</span>
-        <span class="b-name">${esc(b.mercado)}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${e.pa ? '<span class="tag-pa">Pago anticipado</span>' : ''}</span>
+        <span class="b-name">${esc(b.mercado)}${mia ? confTag(b) : ''}${!mia && b.ev >= 0.2 ? '<span class="far">Lejos del mercado</span>' : ''}${e.pa ? '<span class="tag-pa">Pago anticipado</span>' : ''}</span>
         <span class="b-line">${det}</span>
+        ${cd ? `<span class="b-line">${esc(cd)}</span>` : ''}
         ${linea2 ? `<span class="b-line">${linea2}</span>` : ''}
       </div>
       <div class="b-side"><span class="pill ${e.cls}">${esc(e.label.toUpperCase())}</span>${e.fin ? `<span class="b-pl ${e.pl > 0 ? 'up' : e.pl < 0 ? 'down' : ''}">${sM(e.pl)}</span>` : ''}</div>
@@ -1679,6 +1690,16 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         return `<tr><td class="nm l">${esc(Mayus(nomMes(m)))}</td><td>${num(sub.length)}</td><td>${num(fin.length)}</td><td class="${c}">${fin.length ? sM(pl) + u : '—'}</td><td class="${c}">${ap ? spct(pl / ap, 1) : '—'}</td></tr>`; }).join('')}
       </tbody></table></div></div>`;
   }
+  function porConfHTML(lista) {
+    const props = lista.filter(x => x.bet.conf);
+    if (!props.length) return '';
+    const fila = (t, sub) => { const fin = sub.filter(x => x.e.fin), g = fin.filter(x => x.e.cls === 'WIN').length, p = fin.filter(x => x.e.cls === 'LOSS').length,
+      pl = fin.reduce((a, x) => a + x.e.pl, 0), ap = fin.reduce((a, x) => a + x.stake, 0), c = pl < 0 ? 'neg' : pl > 0 ? 'posv' : '';
+      return `<tr><td class="nm l">${t}</td><td>${num(sub.length)}</td><td>${g} · ${p}</td><td class="${c}">${fin.length ? sM(pl) : '—'}</td><td class="${c}">${ap ? spct(pl / ap, 1) : '—'}</td></tr>`; };
+    return `<h4>Props de la NBA por confianza</h4><div class="tbl-wrap"><table class="data"><thead><tr><th class="l">Confianza</th><th>Apuestas</th><th>G · P</th><th>Ganancia</th><th>ROI</th></tr></thead><tbody>
+      ${fila('Alta', props.filter(x => x.bet.conf === 'alta'))}${fila('Normal', props.filter(x => x.bet.conf !== 'alta'))}
+      </tbody></table></div><p class="note">Solo las de props guardadas desde la calculadora de jugadores; las guardadas antes del 17 nov no tienen la confianza.</p>`;
+  }
   let mesMias = MES_HOY;
 
   function renderMias() {
@@ -1696,6 +1717,7 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
         <h3>Resumen · ${esc(nomMes(mesMias))}</h3>
         ${resumen(lista, '')}
         ${notaPA(lista, '')}
+        ${porConfHTML(lista)}
         ${pts.length >= 2 ? '<h4>Ganancia acumulada</h4><div class="chart" id="chart-mias"></div><p class="note">Cada punto es una apuesta ya liquidada, en orden de fecha.</p>' : ''}
         ${mesMias !== 'todo' ? `<p class="note">Cada mes empieza de cero, por la fecha del partido.${otros ? ` Tus ${num(otros)} apuestas de otros meses siguen guardadas: elige el mes arriba, o "Todo" para verlas juntas.` : ''}</p>` : ''}
       </div>

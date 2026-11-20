@@ -466,7 +466,8 @@
       const nombre = `${r.x.n}: ${PN[r.x.s]} ${lado.value === 'o' ? 'más' : 'menos'} de ${r.L}`;
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: g.id, liga: 'nba', utc: g.utc, local: g.local_es, visita: g.visita_es,
                   mercado: nombre, k: `PJ:${r.x.j}:${r.x.s}:${lado.value}:${r.L}`, p: r.p, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null,
-                  conf: confDe(r.x, lado.value) || undefined });
+                  conf: confDe(r.x, lado.value) || undefined, mr: r.x.mr ?? undefined, mesp: r.x.min ?? undefined,
+                  nt: r.x.nt && lado.value === 'u' ? 1 : undefined });
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)}. Márcala a mano cuando termine el juego. <a class="linkbtn" href="./?liga=nba#registro">Ver mi registro →</a>` : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       mom.value = ''; monto.value = ''; calc();
