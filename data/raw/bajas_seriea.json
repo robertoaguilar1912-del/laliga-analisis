@@ -1,7 +1,7 @@
 {
 "401875056": {
 "fotmob": 5749753,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -110,7 +110,7 @@
 },
 "401874981": {
 "fotmob": 5749755,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -210,7 +210,7 @@
 },
 "401874967": {
 "fotmob": 5749758,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -301,7 +301,7 @@
 },
 "401875067": {
 "fotmob": 5749757,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -383,7 +383,7 @@
 },
 "401875008": {
 "fotmob": 5749754,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -492,7 +492,7 @@
 },
 "401875047": {
 "fotmob": 5749752,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -574,7 +574,7 @@
 },
 "401874960": {
 "fotmob": 5749759,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -646,7 +646,7 @@
 },
 "401874989": {
 "fotmob": 5749750,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -755,7 +755,7 @@
 },
 "401875001": {
 "fotmob": 5749751,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -828,8 +828,8 @@
 },
 "401875009": {
 "fotmob": 5749756,
-"visto": "2026-11-20T19:06+00:00",
-"xi": "unavailable",
+"visto": "2026-11-20T23:51+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -847,15 +847,6 @@
 "regreso": "hasta el 23 de noviembre",
 "duda": false,
 "valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Jay Robinson",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 11421453.0,
 "titular": false,
 "importante": false
 },
@@ -878,12 +869,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 60511744.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Arthur Atta",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 26061282.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Fabiano Parisi",
 "tipo": "Lesión",
@@ -910,22 +910,86 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+}
+],
+"valor_xi": 234000350.0,
+"perdida": 0.0,
+"perdida_duda": 0.11137283341670215
+}
 },
+"401875004": {
+"fotmob": 5749769,
+"visto": "2026-11-20T23:51+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
 {
-"nombre": "Arthur Atta",
+"nombre": "Andrea Adorante",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 26061282.0,
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 2755899.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Alieu Njie",
+"nombre": "Marin Šverko",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 1197028.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Bartol Franjić",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 18030492.0,
+"valor": 660652.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Emil Holm",
+"tipo": "Lesión",
+"regreso": "finales de febrero de 2027",
+"duda": false,
+"valor": 10486688.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Oussama El Azzouzi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 1027658.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Juan Miranda",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 14393410.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jay Enem",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 7456381.0,
 "titular": false,
 "importante": false
 }

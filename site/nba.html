@@ -329,6 +329,8 @@ table.data.tiempos th, table.data.tiempos td { padding: 8px 6px; }
 .pa-ligas label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; cursor: pointer; background: var(--surface); }
 .pa-ligas label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
 .pa-ligas input { margin: 0; accent-color: var(--accent); }
+.tag-conf { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--ink); vertical-align: 1px; border: 1px solid var(--line); background: var(--surface); white-space: nowrap; }
+.tag-conf.alta { background: var(--accent-soft); border-color: transparent; }
 .tag-pa { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--accent-soft); color: var(--ink); vertical-align: 1px; }
 
 /* El modelo */
@@ -824,7 +826,8 @@ footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
       const nombre = `${r.x.n}: ${PN[r.x.s]} ${lado.value === 'o' ? 'más' : 'menos'} de ${r.L}`;
       mias.push({ uid: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), id: g.id, liga: 'nba', utc: g.utc, local: g.local_es, visita: g.visita_es,
                   mercado: nombre, k: `PJ:${r.x.j}:${r.x.s}:${lado.value}:${r.L}`, p: r.p, momio: +r.dec.toFixed(3), monto: amt, creado: new Date().toISOString(), manual: null,
-                  conf: confDe(r.x, lado.value) || undefined });
+                  conf: confDe(r.x, lado.value) || undefined, mr: r.x.mr ?? undefined, mesp: r.x.min ?? undefined,
+                  nt: r.x.nt && lado.value === 'u' ? 1 : undefined });
       guardarMias();
       msg.innerHTML = lsOK ? `Guardada: ${esc(nombre)} a ${r.dec.toFixed(2)}. Márcala a mano cuando termine el juego. <a class="linkbtn" href="./?liga=nba#registro">Ver mi registro →</a>` : 'No se pudo guardar: este navegador no permite guardar datos (¿modo privado?).';
       mom.value = ''; monto.value = ''; calc();

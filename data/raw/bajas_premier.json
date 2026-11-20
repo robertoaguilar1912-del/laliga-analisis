@@ -1,7 +1,7 @@
 {
 "401879233": {
 "fotmob": 5795522,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -38,7 +38,7 @@
 },
 "401879238": {
 "fotmob": 5795515,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -129,7 +129,7 @@
 },
 "401878756": {
 "fotmob": 5795516,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -220,7 +220,7 @@
 },
 "401879236": {
 "fotmob": 5795518,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -293,7 +293,7 @@
 },
 "401879235": {
 "fotmob": 5795519,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -411,7 +411,7 @@
 },
 "401878754": {
 "fotmob": 5795524,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -492,7 +492,7 @@
 },
 "401879232": {
 "fotmob": 5795523,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -556,7 +556,7 @@
 },
 "401879234": {
 "fotmob": 5795520,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -683,7 +683,7 @@
 },
 "401878755": {
 "fotmob": 5795521,
-"visto": "2026-11-20T19:06+00:00",
+"visto": "2026-11-20T23:51+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -810,8 +810,8 @@
 },
 "401879237": {
 "fotmob": 5795517,
-"visto": "2026-11-20T19:06+00:00",
-"xi": "unavailable",
+"visto": "2026-11-20T23:51+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -821,7 +821,7 @@
 "duda": false,
 "valor": 68630610.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Antoni Milambo",
@@ -860,12 +860,121 @@
 "importante": false
 }
 ],
+"valor_xi": 425209102.0,
+"perdida": 0.16140437652249504,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [],
+"valor_xi": 366344645.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401879225": {
+"fotmob": 5795533,
+"visto": "2026-11-20T23:51+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Callum Hudson-Odoi",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 23053301.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolás Domínguez",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 13479700.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Neco Williams",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 41523047.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolò Savona",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 19933993.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Xaver Schlager",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 14460205.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 0.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "João Pedro",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 102739034.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Reece James",
+"tipo": "Lesión",
+"regreso": "mediados de enero de 2027",
+"duda": false,
+"valor": 58778081.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Maxence Lacroix",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 58671218.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jorrel Hato",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 58230692.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jamie Gittens",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 34472363.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 0.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
