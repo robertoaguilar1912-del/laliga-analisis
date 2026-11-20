@@ -1,7 +1,7 @@
 {
 "401884736": {
 "fotmob": 5881226,
-"visto": "2026-11-20T19:00+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -110,10 +110,19 @@
 },
 "401884732": {
 "fotmob": 5881231,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
+{
+"nombre": "Josip Juranović",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Robert Skov",
 "tipo": "Lesión",
@@ -183,7 +192,7 @@
 },
 "401884735": {
 "fotmob": 5881225,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -249,6 +258,15 @@
 "visita": {
 "faltan": [
 {
+"nombre": "Tom Baack",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 304381.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Oliver Batista Meier",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
@@ -305,12 +323,12 @@
 ],
 "valor_xi": 19569499.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.015553847341722953
 }
 },
 "401884731": {
 "fotmob": 5881227,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -394,15 +412,6 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Moritz Nicolas",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
 "valor_xi": 0.0,
@@ -473,7 +482,7 @@
 },
 "401884734": {
 "fotmob": 5881228,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -573,19 +582,10 @@
 },
 "401884728": {
 "fotmob": 5881229,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Lukas Pinckert",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1860133.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Noah Darvich",
 "tipo": "Lesión",
@@ -596,11 +596,29 @@
 "importante": true
 },
 {
+"nombre": "Lukas Pinckert",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1860133.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Tom Zimmerschied",
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
 "valor": 1251934.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicholas Mickelson",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 623685.0,
 "titular": false,
 "importante": false
 },
@@ -615,8 +633,8 @@
 }
 ],
 "valor_xi": 55661819.0,
-"perdida": 0.03341847308295835,
-"perdida_duda": 0.1328999327168952
+"perdida": 0.0,
+"perdida_duda": 0.16631840579985357
 },
 "visita": {
 "faltan": [
@@ -646,24 +664,15 @@
 },
 "401884729": {
 "fotmob": 5881230,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
 {
-"nombre": "Moussa Sylla",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 4543319.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Robin Gosens",
 "tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 2506293.0,
 "titular": true,
 "importante": true
@@ -696,15 +705,6 @@
 "importante": false
 },
 {
-"nombre": "Janik Bachmann",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 282610.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Ayman Gülasi",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
@@ -715,8 +715,8 @@
 }
 ],
 "valor_xi": 47974347.0,
-"perdida": 0.14694544982550778,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.052242357775083424
 },
 "visita": {
 "faltan": [
@@ -782,7 +782,7 @@
 },
 "401884733": {
 "fotmob": 5881224,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -900,7 +900,7 @@
 },
 "401884730": {
 "fotmob": 5881232,
-"visto": "2026-11-20T03:42+00:00",
+"visto": "2026-11-20T19:06+00:00",
 "xi": "standard",
 "local": {
 "faltan": [

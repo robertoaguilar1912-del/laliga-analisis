@@ -15,10 +15,10 @@
     255,
     115
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -180,
-    140
+    140,
+    -180
    ],
    "spread": [
     [
@@ -108,11 +108,27 @@
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "casa": "DraftKings",
+   "ml": [
+    -215,
+    360,
+    450
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     115
+    ],
+    [
+     "+1.5",
+     -155
+    ]
+   ]
   }
  },
  {
@@ -153,11 +169,33 @@
   "utc": "2026-11-23T01:30Z",
   "estadio": "BC Place",
   "local_espn": "Vancouver Whitecaps",
-  "visita_espn": "TBD Away",
+  "visita_espn": "Real Salt Lake",
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -210,
+    370,
+    425
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -130
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401933728",
@@ -187,7 +225,7 @@
     ],
     [
      "+0.5",
-     -180
+     -175
     ]
    ]
   }
@@ -239,8 +277,8 @@
  {
   "id": "401933725",
   "utc": "2026-11-28T03:00Z",
-  "estadio": "",
-  "local_espn": "TBD Home",
+  "estadio": "America First Field",
+  "local_espn": "Real Salt Lake",
   "visita_espn": "Vancouver Whitecaps",
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
@@ -283,7 +321,7 @@
  {
   "id": "401933722",
   "utc": "2026-11-28T23:30Z",
-  "estadio": "",
+  "estadio": "TQL Stadium",
   "local_espn": "FC Cincinnati",
   "visita_espn": "Nashville SC",
   "estado": "STATUS_SCHEDULED",
