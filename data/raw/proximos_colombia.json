@@ -5,10 +5,32 @@
   "estadio": "Atanasio Girardot",
   "local_espn": "Independiente Medellín",
   "visita_espn": "Independiente Santa Fe",
-  "estado": "STATUS_SUSPENDED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "playoffs---semifinals",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    225,
+    260
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -110,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -130
+    ]
+   ]
+  },
   "alineaciones": {
    "Independiente Medellín": [
     [
