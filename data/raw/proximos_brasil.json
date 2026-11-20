@@ -154,15 +154,31 @@
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "São Paulo",
   "visita_espn": "Fluminense",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    150,
+    215,
+    190
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     140
+    ],
+    [
+     "+0.5",
+     -195
+    ]
+   ]
   },
   "alineaciones": {
    "São Paulo": [
