@@ -1,0 +1,22 @@
+name: Revisar fuentes de la NFL
+# Solo a mano (o al cambiar los scripts): qué fuentes de props y proyecciones de la NFL responden. Sale en el registro.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/diag_fuentes_nfl.py', 'src/diag_oddsapi_props.py']
+permissions:
+  contents: read
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: cd src && python diag_fuentes_nfl.py
+      - run: cd src && python diag_oddsapi_props.py
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
