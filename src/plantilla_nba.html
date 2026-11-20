@@ -476,18 +476,19 @@
   // ---------------- pestaña Props: todos los props de los próximos juegos en una lista
   // Por cada prop, el lado con más valor según la regla de la calculadora (CALC: puntos solo "menos" y con el precio justo de
   // la casa; triples con el precio justo; lo demás con la mezcla) y el momio mínimo para PICK en tu casa (EV +5%, misma línea).
-  const ppFiltro = { s: 'todos', g: 'todos' };
+  const ppFiltro = { s: 'todos', g: 'todos', l: 'ambos' };   // l: 'ambos' (el lado con más valor), 'o' (solo el más) o 'u' (solo el menos)
   const ppMomios = {};          // "Tu momio" escrito en cada fila de Props: se conserva al volver de la gráfica
   let desdeProps = false;       // la ficha del juego se abrió desde Props: "atrás" vuelve a Props donde estabas
-  function propsTodos() {
+  function propsTodos(lado) {
     const out = [];
     G.forEach((g, gi) => (g.props || []).forEach(x => {
       if (!CALC_PICK.has(x.s) || x.rol === false) return;     // rol incierto: pocos minutos esperados o muchas bajas en su equipo
       const q = x.qc != null ? x.qc : x.q;
       const cands = [...(x.lados || 'ou')].map(l => { const p = l === 'o' ? q : 1 - q, dk = l === 'o' ? x.o : x.u; return { l, p, dk, ev: p * dk - 1 }; })
         .filter(c => c.p >= 0.30 && c.p <= 0.70);
-      if (!cands.length) return;
-      const c = cands.sort((a, b) => b.ev - a.ev)[0];
+      const eleg = lado === 'o' || lado === 'u' ? cands.filter(c => c.l === lado) : cands;
+      if (!eleg.length) return;
+      const c = eleg.sort((a, b) => b.ev - a.ev)[0];
       out.push({ g, gi, x, ...c, nec: 1.05 / c.p, pickDK: c.ev >= 0.05 && c.dk >= 1.5 && c.dk <= 2.6 });
     }));
     return out.sort((a, b) => b.ev - a.ev);
@@ -511,15 +512,17 @@
       <details><summary class="linkbtn">Ver los ${R.filas.length} últimos</summary>${R.filas.map(fila).join('')}</details></div>`;
   }
   function renderProps() {
-    const todos = propsTodos(), box = $('#pp-list'), fil = $('#pp-fil');
+    const todos = propsTodos(ppFiltro.l), box = $('#pp-list'), fil = $('#pp-fil');
     $('#pp-reg').innerHTML = propsRegistroHTML();
     const juegos = [...new Map(todos.map(r => [r.gi, r.g])).entries()];
     $('#pp-eyebrow').textContent = todos.length ? `${num(todos.length)} props de ${juegos.length} juego${juegos.length > 1 ? 's' : ''}` : '';
     if (!todos.length) { fil.innerHTML = ''; box.innerHTML = '<p class="empty">Todavía no hay props. DraftKings los publica el mismo día del juego; la página los busca cada hora desde 14 horas antes.</p>'; return; }
     const stats = ['todos', ...['reb', 'ast', 'ra', 'pr', 'pra', 'tres', 'pts'].filter(s => todos.some(r => r.x.s === s))];
     fil.innerHTML = `<span class="hist-n" role="group" aria-label="Mercado">${stats.map(s => `<button type="button" data-s="${s}" aria-pressed="${ppFiltro.s === s}">${s === 'todos' ? 'Todos' : s === 'pts' ? 'Puntos (menos)' : PN[s]}</button>`).join('')}</span>
+      <span class="hist-n" role="group" aria-label="Lado">${[['ambos', 'Los dos lados'], ['o', 'Solo más'], ['u', 'Solo menos']].map(([l, t]) => `<button type="button" data-l="${l}" aria-pressed="${ppFiltro.l === l}">${t}</button>`).join('')}</span>
       <select id="pp-g" aria-label="Juego"><option value="todos">Todos los juegos</option>${juegos.map(([gi, g]) => `<option value="${gi}" ${String(ppFiltro.g) === String(gi) ? 'selected' : ''}>${esc(g.visita_fd)} @ ${esc(g.local_fd)} · ${esc(fhora(g.utc))}</option>`).join('')}</select>`;
     fil.querySelectorAll('button[data-s]').forEach(b => b.addEventListener('click', () => { ppFiltro.s = b.dataset.s; renderProps(); }));
+    fil.querySelectorAll('button[data-l]').forEach(b => b.addEventListener('click', () => { ppFiltro.l = b.dataset.l; renderProps(); }));
     $('#pp-g').addEventListener('change', e => { ppFiltro.g = e.target.value; renderProps(); });
     const filas = todos.filter(r => (ppFiltro.s === 'todos' || r.x.s === ppFiltro.s) && (ppFiltro.g === 'todos' || String(r.gi) === String(ppFiltro.g)));
     // equipos que no salen en la lista porque les faltan muchos minutos de habituales (regla de rol incierto)
@@ -535,7 +538,8 @@
     });
     const casa = G.find(g => g.props_casa) ? G.find(g => g.props_casa).props_casa : 'DraftKings';
     const varios = mismoJugador(todos.filter(r => r.pickDK && (ppFiltro.g === 'todos' || String(r.gi) === String(ppFiltro.g))).map(r => r.x));
-    box.innerHTML = varios + (fuera.length ? `<p class="note"><b>No salen en la lista:</b> ${fuera.join('; ')}. Con tantas bajas el modelo no sabe repartir bien los minutos, y en la prueba esos props perdieron; por eso no hay PICK. Los ves en la ficha del juego, pestaña Jugadores.</p>` : '')
+    const notaMas = ppFiltro.l === 'o' ? `<p class="note"><b>El "más" se gana en TU casa, no en ${esc(casa)}.</b> ${esc(casa)} cobra caro el más: en 5 temporadas, apostar todos los "más" perdió −9.5% y casi nunca llegan a PICK ahí. El valor aparece cuando tu casa paga "necesitas" o más con la misma línea: en la prueba con otras casas (2022-24), así ganaron rebotes +15.7% (815 apuestas), asistencias +10.6% (1,334) y triples +20.8% (396); en puntos el más perdió, por eso no sale. Que el jugador haya cumplido casi siempre no es señal: los "más" que cumplieron 13 de los últimos 15 juegos cumplieron 57% el siguiente, lo mismo que ya decía la casa (56%), y perdieron −5.8%.</p>` : '';
+    box.innerHTML = notaMas + varios + (fuera.length ? `<p class="note"><b>No salen en la lista:</b> ${fuera.join('; ')}. Con tantas bajas el modelo no sabe repartir bien los minutos, y en la prueba esos props perdieron; por eso no hay PICK. Los ves en la ficha del juego, pestaña Jugadores.</p>` : '')
       + (filas.length ? filas.map((r, k) => {
       const x = r.x, g = r.g, rival = x.eq === g.local_fd ? 'vs ' + g.visita_fd : '@' + g.local_fd;
       return `<div class="pp${r.pickDK ? ' pick' : ''}" data-k="${k}">
