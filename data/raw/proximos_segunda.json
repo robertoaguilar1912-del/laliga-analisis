@@ -5,15 +5,31 @@
   "estadio": "Estadi de la FAF d'Encamp",
   "local_espn": "FC Andorra",
   "visita_espn": "Leganés",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -125,
+    275,
+    310
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -130,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -130
+    ],
+    [
+     "+0.5",
+     -105
+    ]
+   ]
   },
   "alineaciones": {
    "FC Andorra": [
@@ -419,23 +435,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    225,
-    285,
+    230,
+    290,
     -105
    ],
    "ou_linea": 2.5,
    "ou": [
-    -165,
-    110
+    -160,
+    115
    ],
    "spread": [
     [
      "+0.5",
-     -130
+     -125
     ],
     [
      "-0.5",
-     -120
+     -115
     ]
    ]
   }
