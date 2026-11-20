@@ -1,19 +1,5 @@
 [
  {
-  "id": "401873066",
-  "utc": "2026-11-20T01:15Z",
-  "estadio": "Reliant Stadium",
-  "local_espn": "Houston Texans",
-  "visita_espn": "Indianapolis Colts",
-  "local_abbr": "HOU",
-  "visita_abbr": "IND",
-  "neutral": false,
-  "estado": "STATUS_IN_PROGRESS",
-  "semana": 11,
-  "tipo": "regular-season",
-  "momios": null
- },
- {
   "id": "401873070",
   "utc": "2026-11-22T18:00Z",
   "estadio": "Highmark Stadium",
@@ -28,8 +14,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -1440,
-    850
+    -1700,
+    940
    ],
    "ml_abre": [
     -600,
@@ -117,9 +103,9 @@
    ],
    "spread_abre": -6.5,
    "total": [
-    55.5,
-    -104,
-    -115
+    54.5,
+    -115,
+    -104
    ],
    "total_abre": 48.5
   }
@@ -398,7 +384,7 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -174,
+    -175,
     147
    ],
    "ml_abre": [
@@ -691,7 +677,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 12,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    207,
+    -251
+   ],
+   "ml_abre": [
+    -135,
+    114
+   ],
+   "spread": [
+    5.5,
+    -106,
+    -5.5,
+    -113
+   ],
+   "spread_abre": -2.5,
+   "total": [
+    43.5,
+    -110,
+    -110
+   ],
+   "total_abre": 47.5
+  }
  },
  {
   "id": "401873089",
@@ -816,7 +825,30 @@
   "estado": "STATUS_SCHEDULED",
   "semana": 12,
   "tipo": "regular-season",
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -277,
+    227
+   ],
+   "ml_abre": [
+    -118,
+    -102
+   ],
+   "spread": [
+    -6.5,
+    -110,
+    6.5,
+    -110
+   ],
+   "spread_abre": -1.5,
+   "total": [
+    44.5,
+    -110,
+    -110
+   ],
+   "total_abre": 45.5
+  }
  },
  {
   "id": "401873093",
