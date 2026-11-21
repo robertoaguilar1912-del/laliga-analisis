@@ -1,7 +1,7 @@
 {
 "401933758": {
 "fotmob": 1000023196,
-"visto": "2026-11-21T19:28+00:00",
+"visto": "2026-11-21T19:33+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -64,40 +64,40 @@
 },
 "401933755": {
 "fotmob": 1000023199,
-"visto": "2026-11-21T19:28+00:00",
+"visto": "2026-11-21T19:33+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Franco Paredes",
-"tipo": "Sanción",
-"regreso": "",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Franco Vázquez",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 1549980.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Matías Giménez",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 0.0,
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1217062.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Franco Paredes",
+"tipo": "Sanción",
+"regreso": "hasta el 21 de noviembre",
+"duda": false,
+"valor": 463997.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 17566467.0,
+"perdida": 0.1575184127804413,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -107,12 +107,12 @@
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
-"valor": 0.0,
+"valor": 630771.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 12354617.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
