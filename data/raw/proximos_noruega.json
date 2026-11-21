@@ -5,7 +5,7 @@
   "estadio": "Briskeby Stadion",
   "local_espn": "Hamarkameratene",
   "visita_espn": "Fredrikstad",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-eliteserien",
   "neutral": false,
   "momios": {
@@ -160,9 +160,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    390,
-    425
+    -185,
+    380,
+    400
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +172,127 @@
    "spread": [
     [
      "-1.5",
-     115
+     125
     ],
     [
      "+1.5",
-     -160
+     -175
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Vålerenga": [
+    [
+     "239168",
+     "Oscar Hedvall",
+     "G"
+    ],
+    [
+     "251451",
+     "Ivan Näsberg",
+     "CD-L"
+    ],
+    [
+     "285943",
+     "Sebastian Jarl",
+     "CD-R"
+    ],
+    [
+     "336755",
+     "Dennis Gjengaar",
+     "LB"
+    ],
+    [
+     "379439",
+     "Håkon Sjåtil",
+     "RB"
+    ],
+    [
+     "398287",
+     "Carl Lange",
+     "CM-L"
+    ],
+    [
+     "272715",
+     "Magnus Westergaard",
+     "CM-R"
+    ],
+    [
+     "253450",
+     "Lucas Haren",
+     "LM"
+    ],
+    [
+     "177115",
+     "Ghayas Zahid",
+     "RM"
+    ],
+    [
+     "312949",
+     "Ole Saeter",
+     "CF-L"
+    ],
+    [
+     "407626",
+     "Mathias Grundetjern",
+     "CF-R"
+    ]
+   ],
+   "IK Start": [
+    [
+     "323784",
+     "Magnus Smelhus Sjøeng",
+     "G"
+    ],
+    [
+     "332599",
+     "John Olav Norheim",
+     "CD"
+    ],
+    [
+     "3112357",
+     "Sander Aske Granheim",
+     "CD-L"
+    ],
+    [
+     "362769",
+     "Johan Meyer",
+     "CD-R"
+    ],
+    [
+     "416557",
+     "Deni Dasjajev",
+     "LB"
+    ],
+    [
+     "225862",
+     "Erlend Dahl Reitan",
+     "RB"
+    ],
+    [
+     "218856",
+     "Erlend Segberg",
+     "CM"
+    ],
+    [
+     "167336",
+     "Eirik Schulze",
+     "CM-L"
+    ],
+    [
+     "289070",
+     "Steve Regis Mvoue",
+     "CM-R"
+    ],
+    [
+     "416563",
+     "Marius Nordal",
+     "CF-L"
+    ],
+    [
+     "400335",
+     "Jesper Cornelius",
+     "CF-R"
     ]
    ]
   }
@@ -193,9 +309,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
-    350,
-    -160
+    340,
+    360,
+    -155
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -209,7 +325,7 @@
     ],
     [
      "-0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -226,9 +342,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    280,
-    130
+    170,
+    285,
+    135
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -238,11 +354,11 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -170
     ],
     [
      "-0.5",
-     120
+     125
     ]
    ]
   }
@@ -259,9 +375,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
-    275,
-    140
+    160,
+    280,
+    145
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -271,7 +387,7 @@
    "spread": [
     [
      "+0.5",
-     -190
+     -185
     ],
     [
      "-0.5",
