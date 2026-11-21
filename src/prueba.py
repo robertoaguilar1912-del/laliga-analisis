@@ -17,7 +17,7 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, PICK_P_MIN, PIN_MIN, ALIAS_FD, temporada_actual
+from config import RAW, DATOS, LIGAS, PICK_P_MIN, PIN_MIN, PIN_MIN_GOLES, ALIAS_FD, temporada_actual
 from datos import ascendidos, previos_nuevos, RENAME_OLD
 from liga import cargar_extra, codigo_extra
 from model import DixonColes, markets_from_matrix, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
@@ -183,7 +183,8 @@ def apuestas(df, book, thr, mercados, con_clv, reglas=False, gana_max=GANA_MAX, 
             m &= False
         if pin_min is not None and f'f{outcome}' in df:   # precio contra el justo de Pinnacle del mismo momento (PIN_MIN)
             f = df[f'f{outcome}']
-            m &= ~(f.notna() & (odds * f - 1 < pin_min))
+            tope = max(pin_min, PIN_MIN_GOLES) if outcome in 'OU' else pin_min      # en goles, igual o más que el justo (PIN_MIN_GOLES)
+            m &= ~(f.notna() & (odds * f - 1 < tope - 1e-9))
         sub = df[m]
         won = (sub.res == outcome) if outcome in 'HDA' else (sub.over if outcome == 'O' else ~sub.over)
         out.append(pd.DataFrame({'Date': sub.Date, 'Season': sub.Season, 'sel': outcome, 'odds': odds[m], 'p': p[m], 'ev': ev[m],
@@ -254,6 +255,8 @@ def evaluar(liga, df):
     if sm:
         ref += '; sin PICK en "Menos de" (regla de esta liga)'
     ref += f'; sin PICK si el momio está más de {-PIN_MIN:.0%} por debajo del precio justo de Pinnacle del mismo momento (o del promedio del mercado, sin Pinnacle)'
+    if 'ou' in mercados:
+        ref += ' (en más/menos goles, si paga menos que ese precio justo)'
     r = df.res.map({'H': 0, 'D': 1, 'A': 2}).values
     i = np.arange(len(df))
     ll = {'1x2': {'modelo': float(-np.mean(np.log(np.c_[df.pH, df.pD, df.pA][i, r]))),

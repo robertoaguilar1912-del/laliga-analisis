@@ -14,7 +14,7 @@ import unicodedata
 import numpy as np
 import pandas as pd
 
-from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, PIN_MIN, ahora, inicio_torneo
+from config import RAW, DATOS, LIGAS, ZONAS, PICK_P_MIN, PIN_MIN, PIN_MIN_GOLES, ES_GOLES, ahora, inicio_torneo
 from datos import ascendidos, previos_nuevos, PREVIO_DESCENDIDO
 from liga import cargar_liga, codigo_temporada, nombres_mostrar
 from model import DixonColes, RECAL_1X2, PESO_MERCADO, HALF_LIFE, HALF_LIFE_MERCADO, XG_PESO, FORMA_XG, XG_LIGAS
@@ -893,10 +893,11 @@ def analizar_liga(liga):
                 continue
             hay = True
             r['v_pin'] = round(float(r['momio']) * pp - 1, 4)
-            if r['veredicto'] == 'PICK' and r['v_pin'] < PIN_MIN:
+            tope = PIN_MIN_GOLES if ES_GOLES.match(r['k']) else PIN_MIN      # en goles, igual o más que el justo (21 nov 2026)
+            if r['veredicto'] == 'PICK' and r['v_pin'] < tope - 1e-9:
                 r['veredicto'], r['regla'] = 'MAYBE', 'pinnacle'
         if hay:
-            p['reglas'] = {**(p.get('reglas') or {}), 'pin_min': PIN_MIN}
+            p['reglas'] = {**(p.get('reglas') or {}), 'pin_min': PIN_MIN, 'pin_min_goles': PIN_MIN_GOLES}
     for p in partidos:                  # un solo PICK de resultado y uno de goles por partido (ver picks.py)
         un_pick_por_familia(p['con_momio'])
     bt = DATOS / 'modelo' / liga / 'backtest.json'

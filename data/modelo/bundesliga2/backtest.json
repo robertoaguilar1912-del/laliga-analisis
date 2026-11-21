@@ -1,55 +1,55 @@
 {
- "partidos": 1923,
+ "partidos": 1932,
  "desde": "2020-09-18",
- "hasta": "2026-11-01",
+ "hasta": "2026-11-08",
  "logloss": {
   "1x2": {
-   "modelo": 1.0408310183823404,
-   "cierre_justo": 1.0349056890410284
+   "modelo": 1.0405588144874796,
+   "cierre_justo": 1.0345820476396668
   }
  },
  "estrategias": {
   "modelo|B365|1x2+ou|0.0": {
-   "n": 35,
-   "aciertos": 0.2857142857142857,
-   "cuota_media": 2.841142857142857,
-   "ganancia_u": -10.320000000000002,
-   "roi": -0.29485714285714293,
-   "clv_medio": 0.0003732812763320207,
-   "pct_gana_cierre": 0.4857142857142857,
+   "n": 30,
+   "aciertos": 0.26666666666666666,
+   "cuota_media": 3.0099999999999993,
+   "ganancia_u": -9.15,
+   "roi": -0.305,
+   "clv_medio": 0.0005446097914870755,
+   "pct_gana_cierre": 0.4666666666666667,
    "roi_ic95": [
-    -0.6586071428571428,
-    0.14429285714285717
+    -0.7116666666666667,
+    0.1833750000000002
    ],
-   "prob_roi_pos": 0.08575
+   "prob_roi_pos": 0.09625
   },
   "modelo|B365|1x2+ou|0.03": {
-   "n": 23,
-   "aciertos": 0.17391304347826086,
-   "cuota_media": 3.207826086956522,
-   "ganancia_u": -10.469999999999999,
-   "roi": -0.4552173913043478,
-   "clv_medio": -0.0010035809303971931,
-   "pct_gana_cierre": 0.43478260869565216,
+   "n": 21,
+   "aciertos": 0.14285714285714285,
+   "cuota_media": 3.338095238095238,
+   "ganancia_u": -10.35,
+   "roi": -0.4928571428571428,
+   "clv_medio": -0.0022385067819338613,
+   "pct_gana_cierre": 0.42857142857142855,
    "roi_ic95": [
-    -0.8521739130434783,
-    0.08521739130434779
+    -1.0,
+    0.05517857142857296
    ],
-   "prob_roi_pos": 0.049
+   "prob_roi_pos": 0.06025
   },
   "modelo|B365|1x2+ou|0.05": {
-   "n": 20,
-   "aciertos": 0.2,
-   "cuota_media": 3.3314999999999997,
-   "ganancia_u": -7.469999999999999,
-   "roi": -0.37349999999999994,
-   "clv_medio": -0.003290417277247998,
-   "pct_gana_cierre": 0.4,
+   "n": 18,
+   "aciertos": 0.16666666666666666,
+   "cuota_media": 3.4972222222222222,
+   "ganancia_u": -7.35,
+   "roi": -0.4083333333333333,
+   "clv_medio": -0.004985257031468644,
+   "pct_gana_cierre": 0.3888888888888889,
    "roi_ic95": [
-    -0.906,
-    0.25055000000000016
+    -1.0,
+    0.2222222222222222
    ],
-   "prob_roi_pos": 0.102
+   "prob_roi_pos": 0.09275
   },
   "modelo|B365|1x2+ou|0.1": {
    "n": 7,
@@ -67,7 +67,7 @@
   }
  },
  "principal": "modelo|B365|1x2+ou|0.05",
- "referencia": "la cuota de apertura de Bet365, con las reglas de la p\u00e1gina: sin \"Gana\" con momio de 2.00 o m\u00e1s ni \"Menos de\" en las primeras 13 semanas de cada temporada; sin PICK en \"Menos de\" (regla de esta liga); sin PICK si el momio est\u00e1 m\u00e1s de 2% por debajo del precio justo de Pinnacle del mismo momento (o del promedio del mercado, sin Pinnacle)",
+ "referencia": "la cuota de apertura de Bet365, con las reglas de la p\u00e1gina: sin \"Gana\" con momio de 2.00 o m\u00e1s ni \"Menos de\" en las primeras 13 semanas de cada temporada; sin PICK en \"Menos de\" (regla de esta liga); sin PICK si el momio est\u00e1 m\u00e1s de 2% por debajo del precio justo de Pinnacle del mismo momento (o del promedio del mercado, sin Pinnacle) (en m\u00e1s/menos goles, si paga menos que ese precio justo)",
  "mercados": "1X2 y m\u00e1s/menos 2.5 goles",
  "mensual": [
   {
@@ -106,11 +106,6 @@
    "ganancia": -1.0
   },
   {
-   "mes": "2022-02",
-   "n": 2,
-   "ganancia": -0.1200000000000001
-  },
-  {
    "mes": "2022-04",
    "n": 1,
    "ganancia": -1.0
@@ -137,7 +132,7 @@
   }
  ],
  "meses_positivos": 3,
- "meses_total": 13,
+ "meses_total": 12,
  "por_temporada": [
   {
    "Season": "2021",
@@ -147,9 +142,9 @@
   },
   {
    "Season": "2122",
-   "n": 12,
-   "roi": -0.8433333333333334,
-   "ganancia": -10.120000000000001
+   "n": 10,
+   "roi": -1.0,
+   "ganancia": -10.0
   },
   {
    "Season": "2223",
@@ -169,11 +164,6 @@
    "sel": "D",
    "n": 18,
    "roi": -0.4083333333333333
-  },
-  {
-   "sel": "O",
-   "n": 2,
-   "roi": -0.06000000000000005
   }
  ],
  "curva": [
@@ -226,36 +216,28 @@
    "u": -8.6
   },
   {
-   "d": "2022-02-19",
+   "d": "2022-04-03",
    "u": -9.6
   },
   {
-   "d": "2022-02-20",
-   "u": -8.719999999999999
-  },
-  {
-   "d": "2022-04-03",
-   "u": -9.719999999999999
-  },
-  {
    "d": "2022-07-17",
-   "u": -10.719999999999999
+   "u": -10.6
   },
   {
    "d": "2022-07-23",
-   "u": -7.969999999999999
+   "u": -7.85
   },
   {
    "d": "2022-08-05",
-   "u": -8.969999999999999
+   "u": -8.85
   },
   {
    "d": "2022-10-07",
-   "u": -6.469999999999999
+   "u": -6.35
   },
   {
    "d": "2026-02-27",
-   "u": -7.469999999999999
+   "u": -7.35
   }
  ],
  "calibracion": [
@@ -265,24 +247,24 @@
    "n": 403
   },
   {
-   "pred": 0.2575098635092258,
-   "real": 0.2572096648480125,
-   "n": 2566
+   "pred": 0.2574275482837279,
+   "real": 0.2565891472868217,
+   "n": 2580
   },
   {
-   "pred": 0.3425316978670579,
-   "real": 0.3532110091743119,
-   "n": 1308
+   "pred": 0.3425884192424328,
+   "real": 0.3538812785388128,
+   "n": 1314
   },
   {
-   "pred": 0.4447236257210488,
-   "real": 0.4448441247002398,
-   "n": 834
+   "pred": 0.444684099280993,
+   "real": 0.4444444444444444,
+   "n": 837
   },
   {
-   "pred": 0.5445248384114382,
-   "real": 0.5344827586206896,
-   "n": 464
+   "pred": 0.5445212625946184,
+   "real": 0.5363247863247863,
+   "n": 468
   },
   {
    "pred": 0.6405043285744632,
@@ -293,9 +275,9 @@
  "por_ev": [
   {
    "tramo": "0\u20135 %",
-   "n": 568,
-   "roi": -0.011373239436619727,
-   "clv": -0.04651389480484286
+   "n": 572,
+   "roi": -0.009440559440559448,
+   "clv": -0.04652063836473658
   },
   {
    "tramo": "5\u201310 %",

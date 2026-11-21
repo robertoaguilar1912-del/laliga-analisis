@@ -1,4 +1,5 @@
 """Configuración general del proyecto."""
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,6 +25,13 @@ PICK_P_MIN = 0.30
 #   valor ≥ 0                      299   +9.1%
 # En vivo (1-8 nov, Pinnacle de API-Football): 132 PICK −8.9%; con valor ≥ −2%, 24 PICK +20.6%. Quedan ~1 de cada 5 PICK.
 PIN_MIN = -0.02
+# Goles (más/menos, 21 nov 2026, "Pinnacle como base"): ahí el momio tiene que pagar IGUAL O MÁS que el precio justo de
+# Pinnacle (o del promedio). Misma prueba (predicciones de prueba.predecir, Bet365 de apertura, 9 ligas de Europa, más/menos 2.5):
+#   EV ≥ 5% y precio ≥ −2% (antes)    256 PICK   +3.8%   +9.6 u   (2020-23 +3%, 2023-26 +6%)
+#   EV ≥ 5% y precio ≥ 0 (el elegido)   66 PICK  +36.7%  +24.2 u   (2020-23 +31%, 2023-26 +49%; más +10 u, menos +14 u)
+# En el 1X2 no: ahí con precio ≥ 0 empeoraba (624 PICK +6.3% → 292 +3.0%), así que sigue PIN_MIN.
+PIN_MIN_GOLES = 0.0
+ES_GOLES = re.compile(r'^[OU]:')     # claves de más/menos goles del partido ('O:2.5', 'U:3.5'); no córners ni por equipo
 DIAS_PROXIMOS = 10          # cuántos días hacia adelante mostrar partidos
 N_SIMS = 10_000
 TEMPORADAS_HISTORIA = 3     # temporadas anteriores que usa el modelo
