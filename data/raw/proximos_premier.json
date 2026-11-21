@@ -5,15 +5,15 @@
   "estadio": "Vitality Stadium",
   "local_espn": "AFC Bournemouth",
   "visita_espn": "Nottingham Forest",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    240,
-    275
+    115,
+    235,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -135
+     -140
     ]
    ]
   },
@@ -154,29 +154,29 @@
   "estadio": "Villa Park",
   "local_espn": "Aston Villa",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -135,
-    290,
-    360
+    -145,
+    295,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
-    120
+    -140,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -155
     ],
     [
      "+0.5",
-     105
+     110
     ]
    ]
   },
@@ -303,7 +303,7 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Chelsea",
   "visita_espn": "Leeds United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -311,12 +311,12 @@
    "ml": [
     -105,
     260,
-    285
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -105
+    -130,
+    105
    ],
    "spread": [
     [
@@ -452,15 +452,15 @@
   "estadio": "Coventry Building Society Arena",
   "local_espn": "Coventry City",
   "visita_espn": "Crystal Palace",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
-    245,
-    175
+    155,
+    250,
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -470,11 +470,11 @@
    "spread": [
     [
      "-0.5",
-     135
+     140
     ],
     [
      "+0.5",
-     -190
+     -200
     ]
    ]
   },
@@ -601,29 +601,29 @@
   "estadio": "Tottenham Hotspur Stadium",
   "local_espn": "Tottenham Hotspur",
   "visita_espn": "Ipswich Town",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -180,
-    340,
-    450
+    -205,
+    370,
+    500
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 3.5,
    "ou": [
-    -175,
-    140
+    135,
+    -170
    ],
    "spread": [
     [
      "-1.5",
-     125
+     115
     ],
     [
      "+1.5",
-     -180
+     -160
     ]
    ]
   },
@@ -762,8 +762,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -115,
+    -110
    ],
    "spread": [
     [
@@ -772,7 +772,7 @@
     ],
     [
      "-0.5",
-     -200
+     -195
     ]
    ]
   }

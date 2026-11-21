@@ -5,7 +5,7 @@
   "estadio": "Stadion An der Alten Försterei",
   "local_espn": "1. FC Union Berlin",
   "visita_espn": "RB Leipzig",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -18,7 +18,7 @@
    "ou_linea": 3.5,
    "ou": [
     105,
-    -135
+    -130
    ],
    "spread": [
     [
@@ -154,15 +154,15 @@
   "estadio": "BayArena",
   "local_espn": "Bayer Leverkusen",
   "visita_espn": "SC Paderborn 07",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -340,
-    500,
-    600
+    -350,
+    475,
+    650
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -172,11 +172,11 @@
    "spread": [
     [
      "-1.5",
-     -135
+     -145
     ],
     [
      "+1.5",
-     -105
+     105
     ]
    ]
   },
@@ -303,29 +303,29 @@
   "estadio": "BORUSSIA-PARK",
   "local_espn": "Borussia Mönchengladbach",
   "visita_espn": "Borussia Dortmund",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    350,
-    310,
-    -160
+    300,
+    295,
+    -135
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -160
+    120,
+    -155
    ],
    "spread": [
     [
      "+0.5",
-     120
+     105
     ],
     [
      "-0.5",
-     -165
+     -145
     ]
    ]
   },
@@ -452,29 +452,29 @@
   "estadio": "Deutsche Bank Park",
   "local_espn": "Eintracht Frankfurt",
   "visita_espn": "TSG Hoffenheim",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    280,
-    150
+    145,
+    285,
+    140
    ],
    "ou_linea": 3.5,
    "ou": [
     -125,
-    -105
+    100
    ],
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -180
+     -195
     ]
    ]
   },
@@ -601,20 +601,20 @@
   "estadio": "URSAPHARM-Arena an der Kaiserlinde",
   "local_espn": "SV Elversberg",
   "visita_espn": "SC Freiburg",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
+    240,
     245,
-    250,
-    -105
+    100
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    120
+    -145,
+    115
    ],
    "spread": [
     [
@@ -1021,23 +1021,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    265,
+    150,
+    270,
     135
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
+    105,
     -140
    ],
    "spread": [
     [
      "+0.5",
-     -195
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
