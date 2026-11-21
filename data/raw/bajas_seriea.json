@@ -1,8 +1,8 @@
 {
 "401875067": {
 "fotmob": 5749757,
-"visto": "2026-11-21T18:52+00:00",
-"xi": "predicted",
+"visto": "2026-11-21T18:57+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -15,15 +15,6 @@
 "importante": true
 },
 {
-"nombre": "Benoît Badiashile",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 16775464.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Alessandro Buongiorno",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -31,6 +22,15 @@
 "valor": 25373864.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Benoît Badiashile",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 16775464.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Giovanni Di Lorenzo",
@@ -60,23 +60,13 @@
 "importante": false
 }
 ],
-"valor_xi": 193316811.0,
-"perdida": 0.25554569074698835,
-"perdida_duda": 0.13125534126465596
+"valor_xi": 213461498.0,
+"perdida": 0.1528416801422428,
+"perdida_duda": 0.11886857460355685
 },
 "visita": {
-"faltan": [
-{
-"nombre": "Nikola Vlašić",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5474563.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 108195308.0,
+"faltan": [],
+"valor_xi": 97078815.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
