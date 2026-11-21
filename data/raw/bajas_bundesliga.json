@@ -1,16 +1,34 @@
 {
 "401884732": {
 "fotmob": 5881231,
-"visto": "2026-11-21T13:23+00:00",
+"visto": "2026-11-21T13:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
+{
+"nombre": "Livan Burcu",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2315292.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Stanley N'Soki",
+"tipo": "Lesión",
+"regreso": "mediados de noviembre",
+"duda": false,
+"valor": 1214547.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Josip Juranović",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 1154872.0,
 "titular": false,
 "importante": false
 },
@@ -19,16 +37,7 @@
 "tipo": "Lesión",
 "regreso": "mediados de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Stanley N'Soki",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 0.0,
+"valor": 825225.0,
 "titular": false,
 "importante": false
 },
@@ -37,53 +46,44 @@
 "tipo": "Lesión",
 "regreso": "principios de marzo de 2027",
 "duda": false,
-"valor": 0.0,
+"valor": 634715.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 27774538.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.08336023447086681
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Max Finkgräfe",
+"nombre": "Assan Ouédraogo",
 "tipo": "Lesión",
-"regreso": "finales de noviembre",
+"regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 33493797.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Marc Guiu",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Assan Ouédraogo",
-"tipo": "Lesión",
-"regreso": "finales de diciembre",
-"duda": false,
-"valor": 0.0,
+"valor": 15889266.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 308156329.0,
+"perdida": 0.10869092680553058,
 "perdida_duda": 0.0
 }
 },
 "401884735": {
 "fotmob": 5881225,
-"visto": "2026-11-21T13:23+00:00",
+"visto": "2026-11-21T13:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -219,7 +219,7 @@
 },
 "401884731": {
 "fotmob": 5881227,
-"visto": "2026-11-21T13:23+00:00",
+"visto": "2026-11-21T13:29+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -382,7 +382,7 @@
 },
 "401884734": {
 "fotmob": 5881228,
-"visto": "2026-11-21T13:23+00:00",
+"visto": "2026-11-21T13:29+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -482,8 +482,8 @@
 },
 "401884728": {
 "fotmob": 5881229,
-"visto": "2026-11-21T13:23+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-21T13:29+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -496,24 +496,6 @@
 "importante": true
 },
 {
-"nombre": "Lukas Pinckert",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1860133.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Tom Zimmerschied",
-"tipo": "Lesión",
-"regreso": "mediados de noviembre",
-"duda": false,
-"valor": 1251934.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Nicholas Mickelson",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
@@ -521,20 +503,11 @@
 "valor": 623685.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Jan Gyamerah",
-"tipo": "Lesión",
-"regreso": "unas semanas",
-"duda": false,
-"valor": 482084.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 55661819.0,
+"valor_xi": 56110368.0,
 "perdida": 0.0,
-"perdida_duda": 0.16631840579985357
+"perdida_duda": 0.13183752421655834
 },
 "visita": {
 "faltan": [
@@ -557,7 +530,7 @@
 "importante": false
 }
 ],
-"valor_xi": 143653995.0,
+"valor_xi": 120530913.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
