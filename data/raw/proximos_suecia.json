@@ -5,15 +5,31 @@
   "estadio": "Gamla Ullevi",
   "local_espn": "GAIS",
   "visita_espn": "Västerås SK",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-allsvenskan",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    140,
+    245,
+    185
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -180
+    ]
+   ]
   },
   "alineaciones": {
    "GAIS": [
