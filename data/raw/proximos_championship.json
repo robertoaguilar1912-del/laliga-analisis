@@ -154,7 +154,7 @@
   "estadio": "Carrow Road",
   "local_espn": "Norwich City",
   "visita_espn": "Cardiff City",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -841,6 +841,122 @@
      145
     ]
    ]
+  },
+  "alineaciones": {
+   "Stoke City": [
+    [
+     "258902",
+     "Viktor Johansson",
+     "SUB"
+    ],
+    [
+     "241325",
+     "George Hirst",
+     "SUB"
+    ],
+    [
+     "381072",
+     "Luca Bombino",
+     "SUB"
+    ],
+    [
+     "291468",
+     "Justin Devenny",
+     "SUB"
+    ],
+    [
+     "366358",
+     "Djibril Soumaré",
+     "SUB"
+    ],
+    [
+     "246945",
+     "Ben Wilmot",
+     "SUB"
+    ],
+    [
+     "362208",
+     "Bae Jun-Ho",
+     "SUB"
+    ],
+    [
+     "40299",
+     "Luke Graham",
+     "SUB"
+    ],
+    [
+     "323201",
+     "Bosun Lawal",
+     "SUB"
+    ],
+    [
+     "303512",
+     "Jack McGlynn",
+     "SUB"
+    ],
+    [
+     "9426",
+     "Ben Johnson",
+     "SUB"
+    ]
+   ],
+   "Birmingham City": [
+    [
+     "329170",
+     "James Beadle",
+     "G"
+    ],
+    [
+     "263133",
+     "Christoph Klarer",
+     "D"
+    ],
+    [
+     "251627",
+     "Alex Cochrane",
+     "D"
+    ],
+    [
+     "291434",
+     "Ethan Laird",
+     "D"
+    ],
+    [
+     "238884",
+     "Phil Neumann",
+     "D"
+    ],
+    [
+     "286056",
+     "Tomoki Iwata",
+     "M"
+    ],
+    [
+     "194118",
+     "Patrick Roberts",
+     "M"
+    ],
+    [
+     "301248",
+     "Jay Stansfield",
+     "M"
+    ],
+    [
+     "256598",
+     "Paik Seung-Ho",
+     "M"
+    ],
+    [
+     "271879",
+     "Liam Millar",
+     "M"
+    ],
+    [
+     "330460",
+     "August Priske",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -888,23 +1004,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -380,
+    -400,
     550,
-    900
+    950
    ],
    "ou_linea": 3.5,
    "ou": [
     110,
-    -140
+    -135
    ],
    "spread": [
     [
      "-1.5",
-     -145
+     -150
     ],
     [
      "+1.5",
-     105
+     110
     ]
    ]
   }
