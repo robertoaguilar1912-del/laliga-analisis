@@ -5,20 +5,20 @@
    "nombre": "Kingston Flemings",
    "pos": "G",
    "estado": "Out",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": "Back",
    "regreso": "2026-11-22",
-   "nota": "Flemings (back) is out for Friday's game against the Hornets, Brad Rowland of the Locked On Podcast Network reports."
+   "nota": "Flemings (back) is questionable to play Sunday against the Pistons."
   },
   {
    "id": "3146557",
    "nombre": "Jock Landale",
    "pos": "C",
    "estado": "Out",
-   "fecha": "2026-11-19",
+   "fecha": "2026-11-21",
    "tipo": "Hip",
-   "regreso": "2026-11-22",
-   "nota": "Landale (hip) won't play in Friday's game against the Hornets, Brad Rowland of the Locked On Podcast Network reports."
+   "regreso": "2026-11-27",
+   "nota": "Landale (hip) won't play Sunday against the Pistons."
   },
   {
    "id": "4873201",
@@ -300,11 +300,21 @@
    "id": "5258459",
    "nombre": "Ebuka Okorie",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-21",
    "tipo": "Oblique",
+   "regreso": "2026-11-24",
+   "nota": "Okorie (oblique) is out for Sunday's game in Atlanta."
+  },
+  {
+   "id": "4432166",
+   "nombre": "Cade Cunningham",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-21",
+   "tipo": "Knee",
    "regreso": "2026-11-22",
-   "nota": "Okorie (oblique) has been ruled out for Friday's game against Toronto."
+   "nota": "Cunningham (knee) is probable to play Sunday in Atlanta."
   },
   {
    "id": "4683771",
@@ -436,11 +446,21 @@
    "id": "2530530",
    "nombre": "T.J. McConnell",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-21",
    "tipo": "Hamstring",
+   "regreso": "2026-11-23",
+   "nota": "McConnell (hamstring) is listed as out for Sunday's game in New York."
+  },
+  {
+   "id": "3149673",
+   "nombre": "Pascal Siakam",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-21",
+   "tipo": "Hip",
    "regreso": "2026-11-22",
-   "nota": "Rick Carlisle revealed during his postgame interview that McConnell exited Friday's 128-119 loss with a left hamstring issue, Tony East of Forbes.com reports."
+   "nota": "Siakam (hip) is listed as questionable for Sunday's game against New York."
   },
   {
    "id": "4396993",
@@ -699,6 +719,16 @@
  ],
  "New York Knicks": [
   {
+   "id": "3136195",
+   "nombre": "Karl-Anthony Towns",
+   "pos": "C",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Illness",
+   "regreso": "2026-11-22",
+   "nota": "Towns (illness) won't play in Saturday's game versus the Trail Blazers."
+  },
+  {
    "id": "3934719",
    "nombre": "OG Anunoby",
    "pos": "F",
@@ -707,16 +737,6 @@
    "tipo": "Calf",
    "regreso": "2026-11-22",
    "nota": "Anunoby (calf) has been ruled out for Saturday's game against the Trail Blazers."
-  },
-  {
-   "id": "3136195",
-   "nombre": "Karl-Anthony Towns",
-   "pos": "C",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-21",
-   "tipo": "Illness",
-   "regreso": "2026-11-21",
-   "nota": "Towns is questionable for Saturday's game against the Trail Blazers due to an illness."
   },
   {
    "id": "2528426",
@@ -731,24 +751,44 @@
  ],
  "Oklahoma City Thunder": [
   {
-   "id": "5159925",
-   "nombre": "Nikola Topic",
+   "id": "4278073",
+   "nombre": "Shai Gilgeous-Alexander",
    "pos": "G",
    "estado": "Day-To-Day",
    "fecha": "2026-11-21",
-   "tipo": "Hip",
+   "tipo": "Back",
    "regreso": "2026-11-22",
-   "nota": "Topic (hip) is out for Friday's game against New Orleans."
+   "nota": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami."
+  },
+  {
+   "id": "5159925",
+   "nombre": "Nikola Topic",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Hip",
+   "regreso": "2026-11-23",
+   "nota": "Topic (hip) is listed as out for Sunday's game versus the Heat."
+  },
+  {
+   "id": "4432823",
+   "nombre": "Jaylin Williams",
+   "pos": "F",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Back",
+   "regreso": "2026-11-23",
+   "nota": "Williams (back) is listed as out for Sunday's game against Miami."
   },
   {
    "id": "2991350",
    "nombre": "Alex Caruso",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-21",
    "tipo": "Hip",
-   "regreso": "2026-11-22",
-   "nota": "Caruso (hip) is listed as out for Friday's game against the Pelicans."
+   "regreso": "2026-11-23",
+   "nota": "Caruso (hip) won't play Sunday against the Heat."
   },
   {
    "id": "5061603",
@@ -907,16 +947,6 @@
    "tipo": "Heel",
    "regreso": "2026-11-27",
    "nota": "Youngblood (heel) has been ruled out for Saturday's game against the Knicks."
-  },
-  {
-   "id": "4683021",
-   "nombre": "Deni Avdija",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-20",
-   "tipo": "Foot",
-   "regreso": "2026-11-21",
-   "nota": "Avdija (foot) is listed as questionable for Saturday's game against the Knicks."
   },
   {
    "id": "4578893",
