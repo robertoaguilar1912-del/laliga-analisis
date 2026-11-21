@@ -5,7 +5,7 @@
   "estadio": "Toughsheet Community Stadium",
   "local_espn": "Bolton Wanderers",
   "visita_espn": "Portsmouth",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -149,310 +149,12 @@
   }
  },
  {
-  "id": "401880158",
-  "utc": "2026-11-21T15:00Z",
-  "estadio": "LNER Stadium",
-  "local_espn": "Lincoln City",
-  "visita_espn": "Wrexham",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    180,
-    220,
-    165
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    120,
-    -155
-   ],
-   "spread": [
-    [
-     "+0.5",
-     -210
-    ],
-    [
-     "-0.5",
-     150
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Lincoln City": [
-    [
-     "279794",
-     "George Wickens",
-     "G"
-    ],
-    [
-     "324580",
-     "Ayodeji Elerewe",
-     "CD"
-    ],
-    [
-     "342108",
-     "Andrei Coubis",
-     "CD-L"
-    ],
-    [
-     "154794",
-     "Sonny Bradley",
-     "CD-R"
-    ],
-    [
-     "260816",
-     "Tom Bayliss",
-     "CM-L"
-    ],
-    [
-     "191425",
-     "Callum Elder",
-     "CM-R"
-    ],
-    [
-     "157747",
-     "Adam Reach",
-     "LM"
-    ],
-    [
-     "296613",
-     "Daniel Oyegoke",
-     "RM"
-    ],
-    [
-     "368547",
-     "Ethan Wheatley",
-     "F"
-    ],
-    [
-     "263120",
-     "Ben House",
-     "CF-L"
-    ],
-    [
-     "312940",
-     "Robert Street",
-     "CF-R"
-    ]
-   ],
-   "Wrexham": [
-    [
-     "281705",
-     "Anthony Patterson",
-     "G"
-    ],
-    [
-     "232291",
-     "Joe Worrall",
-     "CD"
-    ],
-    [
-     "310598",
-     "Callum Doyle",
-     "CD-L"
-    ],
-    [
-     "295012",
-     "Max Cleworth",
-     "CD-R"
-    ],
-    [
-     "223590",
-     "Benjamin Whiteman",
-     "CM-L"
-    ],
-    [
-     "234449",
-     "George Dobson",
-     "CM-R"
-    ],
-    [
-     "301285",
-     "George Thomason",
-     "LM"
-    ],
-    [
-     "294427",
-     "Issa Kaboré",
-     "RM"
-    ],
-    [
-     "189605",
-     "Kieffer Moore",
-     "F"
-    ],
-    [
-     "269288",
-     "Lewis O'Brien",
-     "CF-L"
-    ],
-    [
-     "238486",
-     "Oliver Rathbone",
-     "CF-R"
-    ]
-   ]
-  }
- },
- {
-  "id": "401880157",
-  "utc": "2026-11-21T15:00Z",
-  "estadio": "Riverside Stadium",
-  "local_espn": "Middlesbrough",
-  "visita_espn": "Bristol City",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -260,
-    425,
-    650
-   ],
-   "ou_linea": 3.5,
-   "ou": [
-    120,
-    -155
-   ],
-   "spread": [
-    [
-     "-1.5",
-     -105
-    ],
-    [
-     "+1.5",
-     -130
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Middlesbrough": [
-    [
-     "325556",
-     "Radek Vítek",
-     "G"
-    ],
-    [
-     "359542",
-     "Max Arfsten",
-     "D"
-    ],
-    [
-     "273628",
-     "Ashley Phillips",
-     "D"
-    ],
-    [
-     "312130",
-     "Adilson Malanda",
-     "D"
-    ],
-    [
-     "232311",
-     "Callum Brittain",
-     "D"
-    ],
-    [
-     "235096",
-     "Riley McGree",
-     "M"
-    ],
-    [
-     "314791",
-     "Tommy Conway",
-     "M"
-    ],
-    [
-     "327170",
-     "Amario Cozier-Duberry",
-     "M"
-    ],
-    [
-     "293826",
-     "Aidan Morris",
-     "M"
-    ],
-    [
-     "295771",
-     "Sebastian Berhalter",
-     "M"
-    ],
-    [
-     "289637",
-     "David Strelec",
-     "F"
-    ]
-   ],
-   "Bristol City": [
-    [
-     "243625",
-     "Bradley Collins",
-     "G"
-    ],
-    [
-     "291438",
-     "George Tanner",
-     "D"
-    ],
-    [
-     "229789",
-     "Robert Dickie",
-     "D"
-    ],
-    [
-     "41966",
-     "Robert Atkinson",
-     "D"
-    ],
-    [
-     "267325",
-     "Cameron Pring",
-     "D"
-    ],
-    [
-     "363444",
-     "Rio Cardines",
-     "M"
-    ],
-    [
-     "283189",
-     "Adam Randell",
-     "M"
-    ],
-    [
-     "296614",
-     "Sam Greenwood",
-     "M"
-    ],
-    [
-     "41011",
-     "Jason Knight",
-     "M"
-    ],
-    [
-     "287353",
-     "Brian De Keersmaecker",
-     "M"
-    ],
-    [
-     "277172",
-     "Lorent Tolaj",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401880154",
   "utc": "2026-11-21T15:00Z",
   "estadio": "Bramall Lane",
   "local_espn": "Sheffield United",
   "visita_espn": "Watford",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -465,7 +167,7 @@
    "ou_linea": 2.5,
    "ou": [
     -125,
-    100
+    -105
    ],
    "spread": [
     [
@@ -601,15 +303,15 @@
   "estadio": "bet365 Stadium",
   "local_espn": "Stoke City",
   "visita_espn": "Birmingham City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    220,
-    160
+    190,
+    225,
+    155
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -619,11 +321,11 @@
    "spread": [
     [
      "+0.5",
-     -205
+     -195
     ],
     [
      "-0.5",
-     145
+     140
     ]
    ]
   },
@@ -750,7 +452,7 @@
   "estadio": "Swansea.com Stadium",
   "local_espn": "Swansea City",
   "visita_espn": "West Bromwich Albion",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -763,7 +465,7 @@
    "ou_linea": 2.5,
    "ou": [
     -110,
-    -120
+    -115
    ],
    "spread": [
     [
@@ -899,7 +601,7 @@
   "estadio": "London Stadium",
   "local_espn": "West Ham United",
   "visita_espn": "Preston North End",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1048,7 +750,7 @@
   "estadio": "Molineux Stadium",
   "local_espn": "Wolverhampton Wanderers",
   "visita_espn": "Charlton Athletic",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -1209,7 +911,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -130,
     100
    ],
    "spread": [
