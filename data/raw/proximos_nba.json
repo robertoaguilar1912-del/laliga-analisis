@@ -125,10 +125,10 @@
   "visita": "WSH",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Chicago Bulls",
   "visita_espn": "Washington Wizards",
-  "revisado": true,
+  "revisado": false,
   "estadio": "United Center",
   "records": {
    "home": [
@@ -142,30 +142,7 @@
     "3-6"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -130,
-    110
-   ],
-   "ml_abre": [
-    -138,
-    117
-   ],
-   "spread": [
-    -1.5,
-    -119,
-    1.5,
-    -102
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    237.5,
-    -112,
-    -108
-   ],
-   "total_abre": 240.5
-  }
+  "momios": null
  },
  {
   "id": "401909310",
@@ -177,10 +154,10 @@
   "visita": "NO",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Paycom Center",
   "records": {
    "home": [
@@ -194,30 +171,7 @@
     "1-4"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -479,
-    368
-   ],
-   "ml_abre": [
-    -499,
-    382
-   ],
-   "spread": [
-    -11.5,
-    -105,
-    11.5,
-    -115
-   ],
-   "spread_abre": -11.5,
-   "total": [
-    229.5,
-    -110,
-    -110
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909311",
@@ -284,7 +238,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Denver Nuggets",
   "visita_espn": "Houston Rockets",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Ball Arena",
   "records": {
    "home": [
@@ -336,7 +290,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Sacramento Kings",
-  "revisado": false,
+  "revisado": true,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
