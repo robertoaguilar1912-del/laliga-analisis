@@ -4,12 +4,33 @@
    "nombre": "Jon Gaines II",
    "pos": "G",
    "estado": "Out",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": "Ankle"
+  },
+  {
+   "nombre": "Hjalte Froholdt",
+   "pos": "C",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Zachary Carter",
+   "pos": "DT",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
   },
   {
    "nombre": "Roy Lopez",
    "pos": "DT",
+   "estado": "Active",
+   "fecha": "2026-11-20",
+   "tipo": ""
+  },
+  {
+   "nombre": "Josh Johnson",
+   "pos": "QB",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
@@ -22,22 +43,8 @@
    "tipo": "Back"
   },
   {
-   "nombre": "Josh Johnson",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
    "nombre": "Jayden Williams",
    "pos": "OT",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
-   "nombre": "Hjalte Froholdt",
-   "pos": "C",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
@@ -164,13 +171,6 @@
   {
    "nombre": "Starling Thomas V",
    "pos": "CB",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
-   "nombre": "Tyler Allgeier",
-   "pos": "RB",
    "estado": "Active",
    "fecha": "2026-11-16",
    "tipo": ""
@@ -532,6 +532,20 @@
  ],
  "Buffalo Bills": [
   {
+   "nombre": "Ed Oliver",
+   "pos": "DT",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Oblique"
+  },
+  {
+   "nombre": "Dee Alford",
+   "pos": "CB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
    "nombre": "Dawson Knox",
    "pos": "TE",
    "estado": "Active",
@@ -593,13 +607,6 @@
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "Dee Alford",
-   "pos": "CB",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Concussion"
   },
   {
    "nombre": "T.J. Sanders",
@@ -698,16 +705,16 @@
    "estado": "Active",
    "fecha": "2026-11-15",
    "tipo": ""
-  },
-  {
-   "nombre": "James Cook III",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   }
  ],
  "Carolina Panthers": [
+  {
+   "nombre": "Isaiah Simmons",
+   "pos": "S",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
   {
    "nombre": "Tommy Tremble",
    "pos": "TE",
@@ -730,9 +737,9 @@
    "tipo": "Foot"
   },
   {
-   "nombre": "Isaiah Simmons",
-   "pos": "S",
-   "estado": "Out",
+   "nombre": "Darren Waller",
+   "pos": "TE",
+   "estado": "Questionable",
    "fecha": "2026-11-20",
    "tipo": "Knee"
   },
@@ -742,13 +749,6 @@
    "estado": "Injured Reserve",
    "fecha": "2026-11-20",
    "tipo": "Groin"
-  },
-  {
-   "nombre": "Darren Waller",
-   "pos": "TE",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Knee"
   },
   {
    "nombre": "Will Lee III",
@@ -1063,6 +1063,27 @@
  ],
  "Cincinnati Bengals": [
   {
+   "nombre": "Oren Burks",
+   "pos": "LB",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Groin"
+  },
+  {
+   "nombre": "Dalton Risner",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Kyle Dugger",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
    "nombre": "Joe Burrow",
    "pos": "QB",
    "estado": "Active",
@@ -1077,25 +1098,11 @@
    "tipo": ""
   },
   {
-   "nombre": "Dalton Risner",
-   "pos": "G",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Knee"
-  },
-  {
    "nombre": "Swayze Bozeman",
    "pos": "LB",
    "estado": "Injured Reserve",
    "fecha": "2026-11-20",
    "tipo": "Forearm"
-  },
-  {
-   "nombre": "Oren Burks",
-   "pos": "LB",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Groin"
   },
   {
    "nombre": "Dax Hill",
@@ -1159,13 +1166,6 @@
    "estado": "Active",
    "fecha": "2026-11-18",
    "tipo": ""
-  },
-  {
-   "nombre": "Kyle Dugger",
-   "pos": "S",
-   "estado": "Questionable",
-   "fecha": "2026-11-17",
-   "tipo": "Quadriceps"
   },
   {
    "nombre": "Evan McPherson",
@@ -1417,6 +1417,13 @@
  ],
  "Dallas Cowboys": [
   {
+   "nombre": "P.J. Locke",
+   "pos": "S",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Concussion"
+  },
+  {
    "nombre": "Jalen Thompson",
    "pos": "S",
    "estado": "Injured Reserve",
@@ -1450,13 +1457,6 @@
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "P.J. Locke",
-   "pos": "S",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Concussion"
   },
   {
    "nombre": "Jaishawn Barham",
@@ -1594,15 +1594,36 @@
  ],
  "Denver Broncos": [
   {
-   "nombre": "Jaylen Waddle",
-   "pos": "WR",
+   "nombre": "Talanoa Hufanga",
+   "pos": "S",
    "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
+  },
+  {
+   "nombre": "Caleb Lohner",
+   "pos": "TE",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Foot"
   },
   {
    "nombre": "Riley Moss",
    "pos": "CB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Brandon Jones",
+   "pos": "S",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Hamstring"
+  },
+  {
+   "nombre": "Jaylen Waddle",
+   "pos": "WR",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
@@ -1615,32 +1636,11 @@
    "tipo": ""
   },
   {
-   "nombre": "Brandon Jones",
-   "pos": "S",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Hamstring"
-  },
-  {
    "nombre": "Adam Prentice",
    "pos": "FB",
    "estado": "Active",
    "fecha": "2026-11-19",
    "tipo": ""
-  },
-  {
-   "nombre": "Talanoa Hufanga",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-19",
-   "tipo": ""
-  },
-  {
-   "nombre": "Caleb Lohner",
-   "pos": "TE",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-18",
-   "tipo": "Foot"
   },
   {
    "nombre": "Alex Singleton",
@@ -1948,6 +1948,20 @@
  ],
  "Green Bay Packers": [
   {
+   "nombre": "Micah Parsons",
+   "pos": "DE",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee - ACL"
+  },
+  {
+   "nombre": "Josh Jacobs",
+   "pos": "RB",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Finger"
+  },
+  {
    "nombre": "Evan Williams",
    "pos": "S",
    "estado": "Active",
@@ -1960,13 +1974,6 @@
    "estado": "Active",
    "fecha": "2026-11-19",
    "tipo": ""
-  },
-  {
-   "nombre": "Josh Jacobs",
-   "pos": "RB",
-   "estado": "Out",
-   "fecha": "2026-11-17",
-   "tipo": "Finger"
   },
   {
    "nombre": "Kevin Zeitler",
@@ -2030,13 +2037,6 @@
    "estado": "Questionable",
    "fecha": "2026-11-16",
    "tipo": "Ankle"
-  },
-  {
-   "nombre": "Micah Parsons",
-   "pos": "DE",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Knee - ACL"
   },
   {
    "nombre": "Donovan Jennings",
@@ -2124,6 +2124,41 @@
   }
  ],
  "Houston Texans": [
+  {
+   "nombre": "M.J. Stewart",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Henry To'oTo'o",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Will Anderson Jr.",
+   "pos": "DE",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Foster Moreau",
+   "pos": "TE",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Ka'imi Fairbairn",
+   "pos": "PK",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
   {
    "nombre": "Emari Demercado",
    "pos": "RB",
@@ -2263,44 +2298,65 @@
    "estado": "Out",
    "fecha": "2026-11-19",
    "tipo": "Coach's Decision"
-  },
-  {
-   "nombre": "M.J. Stewart",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-19",
-   "tipo": ""
-  },
-  {
-   "nombre": "Reed Blankenship",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-19",
-   "tipo": ""
-  },
-  {
-   "nombre": "Kamari Lassiter",
-   "pos": "CB",
-   "estado": "Active",
-   "fecha": "2026-11-19",
-   "tipo": ""
-  },
-  {
-   "nombre": "Danielle Hunter",
-   "pos": "DE",
-   "estado": "Out",
-   "fecha": "2026-11-19",
-   "tipo": "Hamstring"
-  },
-  {
-   "nombre": "Brevin Jordan",
-   "pos": "TE",
-   "estado": "Out",
-   "fecha": "2026-11-19",
-   "tipo": "Foot"
   }
  ],
  "Indianapolis Colts": [
+  {
+   "nombre": "Bryce Boettcher",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Adetomiwa Adebawore",
+   "pos": "DT",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "A.J. Haulcy",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "CJ Allen",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Quez Watkins",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Ashton Dulin",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Deion Burks",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Spencer Shrader",
+   "pos": "PK",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
   {
    "nombre": "Riley Leonard",
    "pos": "QB",
@@ -2419,65 +2475,37 @@
    "estado": "Active",
    "fecha": "2026-11-18",
    "tipo": ""
-  },
-  {
-   "nombre": "CJ Allen",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-18",
-   "tipo": ""
-  },
-  {
-   "nombre": "Ashton Dulin",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-18",
-   "tipo": ""
-  },
-  {
-   "nombre": "Deion Burks",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-18",
-   "tipo": ""
-  },
-  {
-   "nombre": "Jaylon Carlies",
-   "pos": "LB",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-18",
-   "tipo": "Neck"
-  },
-  {
-   "nombre": "Quez Watkins",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-18",
-   "tipo": ""
-  },
-  {
-   "nombre": "Spencer Shrader",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-11-17",
-   "tipo": ""
-  },
-  {
-   "nombre": "Akeem Davis-Gaither",
-   "pos": "LB",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-14",
-   "tipo": "Knee"
-  },
-  {
-   "nombre": "Arden Key",
-   "pos": "DE",
-   "estado": "Active",
-   "fecha": "2026-11-14",
-   "tipo": ""
   }
  ],
  "Jacksonville Jaguars": [
+  {
+   "nombre": "B.J. Green II",
+   "pos": "DE",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Forearm"
+  },
+  {
+   "nombre": "Danny Striggow",
+   "pos": "DE",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Concussion"
+  },
+  {
+   "nombre": "Travon Walker",
+   "pos": "DE",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Antonio Johnson",
+   "pos": "S",
+   "estado": "Active",
+   "fecha": "2026-11-20",
+   "tipo": ""
+  },
   {
    "nombre": "LeQuint Allen Jr.",
    "pos": "RB",
@@ -2507,15 +2535,8 @@
    "tipo": ""
   },
   {
-   "nombre": "Travon Walker",
-   "pos": "DE",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
-   "nombre": "Antonio Johnson",
-   "pos": "S",
+   "nombre": "Jakobi Meyers",
+   "pos": "WR",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
@@ -2526,20 +2547,6 @@
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "Jakobi Meyers",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
-   "nombre": "Danny Striggow",
-   "pos": "DE",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Concussion"
   },
   {
    "nombre": "Matt Dickerson",
@@ -2645,16 +2652,30 @@
    "estado": "Active",
    "fecha": "2026-11-16",
    "tipo": ""
-  },
-  {
-   "nombre": "B.J. Green II",
-   "pos": "DE",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-14",
-   "tipo": "Forearm"
   }
  ],
  "Kansas City Chiefs": [
+  {
+   "nombre": "Omarr Norman-Lott",
+   "pos": "DT",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Knee - ACL"
+  },
+  {
+   "nombre": "Jaylon Moore",
+   "pos": "OT",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "Trey Smith",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Concussion"
+  },
   {
    "nombre": "Travis Kelce",
    "pos": "TE",
@@ -2677,20 +2698,6 @@
    "tipo": "Neck"
   },
   {
-   "nombre": "Trey Smith",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Concussion"
-  },
-  {
-   "nombre": "Jaylon Moore",
-   "pos": "OT",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Ankle"
-  },
-  {
    "nombre": "Kenneth Walker III",
    "pos": "RB",
    "estado": "Out",
@@ -2703,13 +2710,6 @@
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "Omarr Norman-Lott",
-   "pos": "DT",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Knee - ACL"
   },
   {
    "nombre": "Jared Wiley",
@@ -2833,6 +2833,20 @@
  ],
  "Las Vegas Raiders": [
   {
+   "nombre": "Folorunso Fatukasi",
+   "pos": "DT",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Toe"
+  },
+  {
+   "nombre": "Tonka Hemingway",
+   "pos": "DT",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Upper Body"
+  },
+  {
    "nombre": "Ian Thomas",
    "pos": "TE",
    "estado": "Active",
@@ -2847,20 +2861,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Matt Gay",
-   "pos": "PK",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Hip"
-  },
-  {
-   "nombre": "Tonka Hemingway",
-   "pos": "DT",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Upper Body"
-  },
-  {
    "nombre": "Brock Bowers",
    "pos": "TE",
    "estado": "Questionable",
@@ -2868,18 +2868,18 @@
    "tipo": "Ankle"
   },
   {
+   "nombre": "Matt Gay",
+   "pos": "PK",
+   "estado": "Questionable",
+   "fecha": "2026-11-20",
+   "tipo": "Hip"
+  },
+  {
    "nombre": "Thomas Booker IV",
    "pos": "DT",
    "estado": "Active",
    "fecha": "2026-11-19",
    "tipo": ""
-  },
-  {
-   "nombre": "Folorunso Fatukasi",
-   "pos": "DT",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Toe"
   },
   {
    "nombre": "Kwity Paye",
@@ -3010,6 +3010,62 @@
  ],
  "Los Angeles Chargers": [
   {
+   "nombre": "Bud Dupree",
+   "pos": "LB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Isas Waxter",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "Rodney Shelley",
+   "pos": "CB",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "Kendall Williamson",
+   "pos": "S",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Calf"
+  },
+  {
+   "nombre": "Justin Eboigbe",
+   "pos": "DT",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Tarheeb Still",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "Daiyan Henley",
+   "pos": "LB",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Brenen Thompson",
+   "pos": "WR",
+   "estado": "Doubtful",
+   "fecha": "2026-11-21",
+   "tipo": "Hamstring"
+  },
+  {
    "nombre": "Omarion Hampton",
    "pos": "RB",
    "estado": "Active",
@@ -3017,39 +3073,11 @@
    "tipo": ""
   },
   {
-   "nombre": "Tarheeb Still",
-   "pos": "CB",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Ankle"
-  },
-  {
    "nombre": "Donte Jackson",
    "pos": "CB",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "Justin Eboigbe",
-   "pos": "DT",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
-   "nombre": "Kendall Williamson",
-   "pos": "S",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Calf"
-  },
-  {
-   "nombre": "Rodney Shelley",
-   "pos": "CB",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Ankle"
   },
   {
    "nombre": "Charlie Kolar",
@@ -3064,20 +3092,6 @@
    "estado": "Questionable",
    "fecha": "2026-11-20",
    "tipo": "Back"
-  },
-  {
-   "nombre": "Daiyan Henley",
-   "pos": "LB",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Knee"
-  },
-  {
-   "nombre": "Brenen Thompson",
-   "pos": "WR",
-   "estado": "Doubtful",
-   "fecha": "2026-11-20",
-   "tipo": "Hamstring"
   },
   {
    "nombre": "Dalvin Tomlinson",
@@ -3126,20 +3140,6 @@
    "pos": "RB",
    "estado": "Active",
    "fecha": "2026-11-18",
-   "tipo": ""
-  },
-  {
-   "nombre": "Isas Waxter",
-   "pos": "CB",
-   "estado": "Questionable",
-   "fecha": "2026-11-17",
-   "tipo": "Ankle"
-  },
-  {
-   "nombre": "Bud Dupree",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-17",
    "tipo": ""
   },
   {
@@ -3364,36 +3364,43 @@
  ],
  "Miami Dolphins": [
   {
-   "nombre": "Chris Bell",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
+   "nombre": "Jaylin Simpson",
+   "pos": "S",
+   "estado": "Doubtful",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
   },
   {
-   "nombre": "JuJu Brents",
-   "pos": "CB",
-   "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
+   "nombre": "Bradley Pinion",
+   "pos": "P",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Groin"
   },
   {
    "nombre": "Andrew Meyer",
    "pos": "C",
    "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
   },
   {
-   "nombre": "Jaylin Simpson",
-   "pos": "S",
-   "estado": "Doubtful",
-   "fecha": "2026-11-20",
-   "tipo": "Knee"
+   "nombre": "Aaron Brewer",
+   "pos": "C",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Concussion"
   },
   {
-   "nombre": "Tucker Addington",
-   "pos": "LS",
+   "nombre": "Marcellas Dial Jr.",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-11-20",
+   "tipo": "Toe"
+  },
+  {
+   "nombre": "JuJu Brents",
+   "pos": "CB",
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
@@ -3404,6 +3411,20 @@
    "estado": "Out",
    "fecha": "2026-11-20",
    "tipo": "Quadriceps"
+  },
+  {
+   "nombre": "Chris Bell",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-20",
+   "tipo": ""
+  },
+  {
+   "nombre": "Tucker Addington",
+   "pos": "LS",
+   "estado": "Active",
+   "fecha": "2026-11-20",
+   "tipo": ""
   },
   {
    "nombre": "Caleb Douglas",
@@ -3420,25 +3441,11 @@
    "tipo": "Shoulder"
   },
   {
-   "nombre": "Bradley Pinion",
-   "pos": "P",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Groin"
-  },
-  {
    "nombre": "Darrell Baker Jr.",
    "pos": "CB",
    "estado": "Out",
    "fecha": "2026-11-19",
    "tipo": "Knee"
-  },
-  {
-   "nombre": "Aaron Brewer",
-   "pos": "C",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Concussion"
   },
   {
    "nombre": "Jordan Phillips",
@@ -3511,13 +3518,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Marcellas Dial Jr.",
-   "pos": "CB",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
    "nombre": "Caedan Wallace",
    "pos": "OT",
    "estado": "Active",
@@ -3540,6 +3540,13 @@
   }
  ],
  "Minnesota Vikings": [
+  {
+   "nombre": "Gavin Bartholomew",
+   "pos": "TE",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
   {
    "nombre": "Jeshaun Jones",
    "pos": "WR",
@@ -3660,13 +3667,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Gavin Bartholomew",
-   "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
    "nombre": "Aaron Jones Sr.",
    "pos": "RB",
    "estado": "Active",
@@ -3717,6 +3717,13 @@
   }
  ],
  "New England Patriots": [
+  {
+   "nombre": "Tommy DeVito",
+   "pos": "QB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
   {
    "nombre": "A.J. Brown",
    "pos": "WR",
@@ -3816,13 +3823,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Tommy DeVito",
-   "pos": "QB",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
    "nombre": "Andy Borregales",
    "pos": "PK",
    "estado": "Active",
@@ -3895,6 +3895,34 @@
  ],
  "New Orleans Saints": [
   {
+   "nombre": "Charlie Smyth",
+   "pos": "PK",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Asim Richards",
+   "pos": "OT",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Erik McCoy",
+   "pos": "C",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Biceps"
+  },
+  {
+   "nombre": "Taliese Fuaga",
+   "pos": "OT",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
    "nombre": "Martin Emerson Jr.",
    "pos": "CB",
    "estado": "Out",
@@ -3914,20 +3942,6 @@
    "estado": "Active",
    "fecha": "2026-11-20",
    "tipo": ""
-  },
-  {
-   "nombre": "Erik McCoy",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Biceps"
-  },
-  {
-   "nombre": "Taliese Fuaga",
-   "pos": "OT",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Knee"
   },
   {
    "nombre": "Tyler Shough",
@@ -3977,20 +3991,6 @@
    "estado": "Active",
    "fecha": "2026-11-17",
    "tipo": ""
-  },
-  {
-   "nombre": "Charlie Smyth",
-   "pos": "PK",
-   "estado": "Active",
-   "fecha": "2026-11-17",
-   "tipo": ""
-  },
-  {
-   "nombre": "Asim Richards",
-   "pos": "OT",
-   "estado": "Out",
-   "fecha": "2026-11-17",
-   "tipo": "Knee"
   },
   {
    "nombre": "Jaylan Ford",
@@ -4249,6 +4249,34 @@
  ],
  "New York Jets": [
   {
+   "nombre": "Breece Hall",
+   "pos": "RB",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Dylan Parham",
+   "pos": "G",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Harrison Phillips",
+   "pos": "DT",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Ankle"
+  },
+  {
+   "nombre": "David Onyemata",
+   "pos": "DT",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Abdomen"
+  },
+  {
    "nombre": "Trevin Wallace",
    "pos": "LB",
    "estado": "Questionable",
@@ -4298,13 +4326,6 @@
    "tipo": "Ankle"
   },
   {
-   "nombre": "Harrison Phillips",
-   "pos": "DT",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Ankle"
-  },
-  {
    "nombre": "Jarvis Brownlee Jr.",
    "pos": "CB",
    "estado": "Active",
@@ -4317,13 +4338,6 @@
    "estado": "Questionable",
    "fecha": "2026-11-18",
    "tipo": "Foot"
-  },
-  {
-   "nombre": "David Onyemata",
-   "pos": "DT",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-18",
-   "tipo": "Abdomen"
   },
   {
    "nombre": "Dane Belton",
@@ -4361,13 +4375,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Dylan Parham",
-   "pos": "G",
-   "estado": "Questionable",
-   "fecha": "2026-11-17",
-   "tipo": "Knee"
-  },
-  {
    "nombre": "Jelani Woods",
    "pos": "TE",
    "estado": "Active",
@@ -4403,13 +4410,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Breece Hall",
-   "pos": "RB",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
-  },
-  {
    "nombre": "Garrett Wilson",
    "pos": "WR",
    "estado": "Active",
@@ -4426,35 +4426,42 @@
  ],
  "Philadelphia Eagles": [
   {
-   "nombre": "Makai Lemon",
-   "pos": "WR",
+   "nombre": "Jonathan Jones",
+   "pos": "CB",
    "estado": "Active",
-   "fecha": "2026-11-20",
-   "tipo": ""
-  },
-  {
-   "nombre": "Nolan Smith Jr.",
-   "pos": "LB",
-   "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
   },
   {
    "nombre": "Michael Carter II",
    "pos": "CB",
    "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
   },
   {
-   "nombre": "Jonathan Jones",
-   "pos": "CB",
+   "nombre": "Nolan Smith Jr.",
+   "pos": "LB",
    "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
+  },
+  {
+   "nombre": "Zack Baun",
+   "pos": "LB",
+   "estado": "Out",
+   "fecha": "2026-11-21",
+   "tipo": "Back"
   },
   {
    "nombre": "Britain Covey",
+   "pos": "WR",
+   "estado": "Active",
+   "fecha": "2026-11-21",
+   "tipo": ""
+  },
+  {
+   "nombre": "Makai Lemon",
    "pos": "WR",
    "estado": "Active",
    "fecha": "2026-11-20",
@@ -4480,13 +4487,6 @@
    "estado": "Doubtful",
    "fecha": "2026-11-20",
    "tipo": "Ankle"
-  },
-  {
-   "nombre": "Zack Baun",
-   "pos": "LB",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Back"
   },
   {
    "nombre": "Dontayvion Wicks",
@@ -4612,7 +4612,7 @@
   {
    "nombre": "Nick Herbig",
    "pos": "LB",
-   "estado": "Questionable",
+   "estado": "Out",
    "fecha": "2026-11-20",
    "tipo": "Hip"
   },
@@ -4628,7 +4628,7 @@
    "pos": "WR",
    "estado": "Injured Reserve",
    "fecha": "2026-11-20",
-   "tipo": "Finger"
+   "tipo": "Hand"
   },
   {
    "nombre": "Michael Pittman Jr.",
@@ -4780,11 +4780,46 @@
  ],
  "San Francisco 49ers": [
   {
+   "nombre": "C.J. West",
+   "pos": "DT",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Nate Hobbs",
+   "pos": "CB",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Groin"
+  },
+  {
    "nombre": "Ji'Ayir Brown",
    "pos": "S",
    "estado": "Active",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": ""
+  },
+  {
+   "nombre": "Dre Greenlaw",
+   "pos": "LB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Neck"
+  },
+  {
+   "nombre": "Jordan James",
+   "pos": "RB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Calf"
+  },
+  {
+   "nombre": "Mac Jones",
+   "pos": "QB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Illness"
   },
   {
    "nombre": "Mike Evans",
@@ -4801,20 +4836,6 @@
    "tipo": ""
   },
   {
-   "nombre": "Dre Greenlaw",
-   "pos": "LB",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Neck"
-  },
-  {
-   "nombre": "Mac Jones",
-   "pos": "QB",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Illness"
-  },
-  {
    "nombre": "Isaac Guerendo",
    "pos": "RB",
    "estado": "Out",
@@ -4827,13 +4848,6 @@
    "estado": "Active",
    "fecha": "2026-11-19",
    "tipo": ""
-  },
-  {
-   "nombre": "Jordan James",
-   "pos": "RB",
-   "estado": "Questionable",
-   "fecha": "2026-11-19",
-   "tipo": "Calf"
   },
   {
    "nombre": "Christian Kirk",
@@ -4935,20 +4949,6 @@
   },
   {
    "nombre": "Keenan Allen",
-   "pos": "WR",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
-   "nombre": "George Kittle",
-   "pos": "TE",
-   "estado": "Active",
-   "fecha": "2026-11-16",
-   "tipo": ""
-  },
-  {
-   "nombre": "Deebo Samuel Sr.",
    "pos": "WR",
    "estado": "Active",
    "fecha": "2026-11-16",
@@ -5134,11 +5134,25 @@
  ],
  "Tampa Bay Buccaneers": [
   {
-   "nombre": "Jalon Daniels",
+   "nombre": "Baker Mayfield",
    "pos": "QB",
-   "estado": "Active",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Foot"
+  },
+  {
+   "nombre": "Josh Hayes",
+   "pos": "CB",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Knee"
+  },
+  {
+   "nombre": "Yaya Diaby",
+   "pos": "LB",
+   "estado": "Questionable",
    "fecha": "2026-11-20",
-   "tipo": ""
+   "tipo": "Knee - MCL"
   },
   {
    "nombre": "Antoine Winfield Jr.",
@@ -5148,25 +5162,11 @@
    "tipo": "Ankle"
   },
   {
-   "nombre": "Baker Mayfield",
+   "nombre": "Jalon Daniels",
    "pos": "QB",
-   "estado": "Questionable",
+   "estado": "Active",
    "fecha": "2026-11-20",
-   "tipo": "Foot"
-  },
-  {
-   "nombre": "Josh Hayes",
-   "pos": "CB",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-19",
-   "tipo": "Knee"
-  },
-  {
-   "nombre": "Yaya Diaby",
-   "pos": "LB",
-   "estado": "Questionable",
-   "fecha": "2026-11-18",
-   "tipo": "Knee - MCL"
+   "tipo": ""
   },
   {
    "nombre": "Easton Stick",
@@ -5311,6 +5311,20 @@
  ],
  "Tennessee Titans": [
   {
+   "nombre": "Carnell Tate",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Shoulder"
+  },
+  {
+   "nombre": "Micah Robinson",
+   "pos": "CB",
+   "estado": "Questionable",
+   "fecha": "2026-11-21",
+   "tipo": "Hip"
+  },
+  {
    "nombre": "Kevin Winston Jr.",
    "pos": "S",
    "estado": "Active",
@@ -5344,13 +5358,6 @@
    "estado": "Questionable",
    "fecha": "2026-11-20",
    "tipo": "Knee"
-  },
-  {
-   "nombre": "Carnell Tate",
-   "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Shoulder"
   },
   {
    "nombre": "John Franklin-Myers",
@@ -5477,36 +5484,36 @@
    "estado": "Active",
    "fecha": "2026-11-16",
    "tipo": ""
-  },
-  {
-   "nombre": "Isaiah Oliver",
-   "pos": "S",
-   "estado": "Active",
-   "fecha": "2026-11-15",
-   "tipo": ""
   }
  ],
  "Washington Commanders": [
   {
-   "nombre": "Treylon Burks",
-   "pos": "WR",
-   "estado": "Questionable",
-   "fecha": "2026-11-20",
-   "tipo": "Foot"
-  },
-  {
    "nombre": "Rachaad White",
    "pos": "RB",
    "estado": "Questionable",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": "Heel"
   },
   {
    "nombre": "Jacory Croskey-Merritt",
    "pos": "RB",
    "estado": "Injured Reserve",
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "tipo": "Groin"
+  },
+  {
+   "nombre": "Laremy Tunsil",
+   "pos": "OT",
+   "estado": "Injured Reserve",
+   "fecha": "2026-11-21",
+   "tipo": "Triceps"
+  },
+  {
+   "nombre": "Treylon Burks",
+   "pos": "WR",
+   "estado": "Questionable",
+   "fecha": "2026-11-20",
+   "tipo": "Foot"
   },
   {
    "nombre": "Lucas Patrick",
@@ -5535,13 +5542,6 @@
    "estado": "Active",
    "fecha": "2026-11-18",
    "tipo": ""
-  },
-  {
-   "nombre": "Laremy Tunsil",
-   "pos": "OT",
-   "estado": "Injured Reserve",
-   "fecha": "2026-11-17",
-   "tipo": "Triceps"
   },
   {
    "nombre": "Isaac Yiadom",

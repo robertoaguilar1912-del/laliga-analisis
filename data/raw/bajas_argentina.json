@@ -1,7 +1,7 @@
 {
 "401933758": {
 "fotmob": 1000023196,
-"visto": "2026-11-21T17:30+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [],
@@ -64,7 +64,7 @@
 },
 "401933755": {
 "fotmob": 1000023199,
-"visto": "2026-11-21T17:30+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -119,7 +119,7 @@
 },
 "401933759": {
 "fotmob": 1000023195,
-"visto": "2026-11-20T23:51+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -237,7 +237,7 @@
 },
 "401933761": {
 "fotmob": 1000023193,
-"visto": "2026-11-20T23:51+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -328,7 +328,7 @@
 },
 "401933762": {
 "fotmob": 1000023192,
-"visto": "2026-11-20T23:51+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -364,7 +364,7 @@
 },
 "401933756": {
 "fotmob": 1000023198,
-"visto": "2026-11-20T23:51+00:00",
+"visto": "2026-11-21T18:01+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -491,10 +491,19 @@
 },
 "401933757": {
 "fotmob": 1000023197,
-"visto": "2026-11-20T23:51+00:00",
-"xi": "standard",
+"visto": "2026-11-21T18:01+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Agustín Marchesín",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 558957.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Matías Satas",
 "tipo": "Lesión",
@@ -503,53 +512,44 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Agustín Marchesín",
-"tipo": "Lesión",
-"regreso": "finales de diciembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 45955290.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
+"nombre": "Maximiliano Salas",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 2498380.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "José Florentín",
 "tipo": "Sanción",
-"regreso": "",
+"regreso": "hasta el 26 de noviembre",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
+"valor": 1588622.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Luciano Gómez",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Maximiliano Salas",
-"tipo": "Lesión",
-"regreso": "el resto de la temporada",
-"duda": false,
-"valor": 0.0,
+"valor": 320409.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 10509479.0,
+"perdida": 0.3888872131530022,
 "perdida_duda": 0.0
 }
 }

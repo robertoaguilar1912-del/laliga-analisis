@@ -11,19 +11,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    170,
+    180,
     210,
     145
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -125
+    -105,
+    -130
    ],
    "spread": [
     [
      "+0.5",
-     -210
+     -200
     ],
     [
      "-0.5",
@@ -41,7 +41,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "playoffs---semifinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -205,
+    275,
+    500
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     130
+    ],
+    [
+     "+1.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401934706",
@@ -52,7 +74,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "playoffs---semifinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    200,
+    275
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -170
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -110
+    ],
+    [
+     "+0.5",
+     -140
+    ]
+   ]
+  }
  },
  {
   "id": "401934687",
