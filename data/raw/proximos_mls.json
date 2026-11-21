@@ -5,15 +5,31 @@
   "estadio": "Toyota Stadium",
   "local_espn": "FC Dallas",
   "visita_espn": "Portland Timbers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -120,
+    290,
+    260
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -145
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
   },
   "alineaciones": {
    "FC Dallas": [
