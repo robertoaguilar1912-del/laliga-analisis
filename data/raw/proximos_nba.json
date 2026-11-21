@@ -38,7 +38,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Brooklyn Nets",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -67,7 +67,7 @@
   "visita": "IND",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Cleveland Cavaliers",
   "visita_espn": "Indiana Pacers",
   "revisado": false,
@@ -96,7 +96,7 @@
   "visita": "TOR",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Detroit Pistons",
   "visita_espn": "Toronto Raptors",
   "revisado": false,
@@ -218,9 +218,9 @@
    ],
    "spread_abre": 4.5,
    "total": [
-    225.5,
-    -110,
-    -110
+    226.5,
+    -105,
+    -115
    ],
    "total_abre": 226.5
   }
@@ -255,24 +255,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -125,
-    105
+    -102,
+    -116
    ],
    "ml_abre": [
     -148,
     124
    ],
    "spread": [
-    -1.5,
-    -115,
     1.5,
-    -105
+    -114,
+    -1.5,
+    -106
    ],
    "spread_abre": -3.5,
    "total": [
     227.5,
-    -110,
-    -110
+    -114,
+    -106
    ],
    "total_abre": 227.5
   }
