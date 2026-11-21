@@ -5,15 +5,31 @@
   "estadio": "Central Coast Stadium",
   "local_espn": "Central Coast Mariners FC",
   "visita_espn": "Perth Glory FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    170,
+    275,
+    135
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -175
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -175
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
   },
   "alineaciones": {
    "Central Coast Mariners FC": [
@@ -144,23 +160,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    260,
-    170
+    135,
+    265,
+    180
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    105
+    -150,
+    110
    ],
    "spread": [
     [
      "-0.5",
-     130
+     120
     ],
     [
      "+0.5",
-     -185
+     -170
     ]
    ]
   }
