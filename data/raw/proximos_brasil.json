@@ -5,7 +5,7 @@
   "estadio": "Allianz Parque",
   "local_espn": "Palmeiras",
   "visita_espn": "Flamengo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Arena Fonte Nova",
   "local_espn": "Bahia",
   "visita_espn": "Coritiba",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -167,7 +167,7 @@
    "ou_linea": 3.5,
    "ou": [
     135,
-    -180
+    -175
    ],
    "spread": [
     [
@@ -310,22 +310,22 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    360,
-    -210
+    350,
+    -200
    ],
    "ou_linea": 2.5,
    "ou": [
-    -175,
+    -170,
     130
    ],
    "spread": [
     [
      "+1.5",
-     -175
+     -180
     ],
     [
      "-1.5",
-     125
+     130
     ]
    ]
   }
@@ -342,13 +342,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -175,
-    300,
+    -170,
+    295,
     475
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -150,
     110
    ],
    "spread": [
@@ -358,7 +358,7 @@
     ],
     [
      "+0.5",
-     135
+     130
     ]
    ]
   }
@@ -408,9 +408,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    135,
-    250,
-    175
+    155,
+    245,
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -419,12 +419,12 @@
    ],
    "spread": [
     [
-     "-0.5",
-     125
+     "+0.5",
+     -205
     ],
     [
-     "+0.5",
-     -185
+     "-0.5",
+     140
     ]
    ]
   }
