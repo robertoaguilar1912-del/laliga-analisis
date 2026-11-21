@@ -5,7 +5,7 @@
   "estadio": "Vitality Stadium",
   "local_espn": "AFC Bournemouth",
   "visita_espn": "Nottingham Forest",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Villa Park",
   "local_espn": "Aston Villa",
   "visita_espn": "Sunderland",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Coventry Building Society Arena",
   "local_espn": "Coventry City",
   "visita_espn": "Crystal Palace",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -601,7 +601,7 @@
   "estadio": "Tottenham Hotspur Stadium",
   "local_espn": "Tottenham Hotspur",
   "visita_espn": "Ipswich Town",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-27-english-premier-league",
   "neutral": false,
   "momios": {
@@ -1119,23 +1119,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    160,
-    255,
-    155
+    170,
+    250,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     110
    ],
    "spread": [
     [
      "+0.5",
-     -205
+     -195
     ],
     [
      "-0.5",
-     140
+     135
     ]
    ]
   }
