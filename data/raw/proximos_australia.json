@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -115,
+    -120,
     290,
-    280
+    290
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -52,6 +52,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    250,
+    255,
+    -105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -160,
+    110
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -130
+    ],
+    [
+     "-0.5",
+     -115
+    ]
+   ]
+  }
  }
 ]
