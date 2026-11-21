@@ -1,14 +1,14 @@
 {
 "401841325": {
 "fotmob": 5103723,
-"visto": "2026-11-21T23:18+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-21T23:22+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
 "nombre": "Maurício Garcez",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
+"regreso": "principios de diciembre",
 "duda": false,
 "valor": 765026.0,
 "titular": false,
@@ -20,7 +20,7 @@
 "regreso": "hasta el 22 de noviembre",
 "duda": false,
 "valor": 482140.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -29,7 +29,7 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 1057161.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -42,9 +42,9 @@
 "importante": false
 }
 ],
-"valor_xi": 6186803.0,
-"perdida": 0.2015848896433263,
-"perdida_duda": 0.17087355133176213
+"valor_xi": 4893755.0,
+"perdida": 0.2548484752506,
+"perdida_duda": 0.21602246127973304
 },
 "visita": {
 "faltan": [
@@ -54,7 +54,7 @@
 "regreso": "hasta el 22 de noviembre",
 "duda": false,
 "valor": 25033982.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -63,7 +63,7 @@
 "regreso": "hasta el 22 de noviembre",
 "duda": false,
 "valor": 18080752.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -85,31 +85,13 @@
 "importante": true
 },
 {
-"nombre": "Lucas Daniel Romero",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 1937720.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "William",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 1354091.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Gabriel Pec",
 "tipo": "Lesión",
-"regreso": "mediados de noviembre",
+"regreso": "principios de diciembre",
 "duda": false,
 "valor": 7106197.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "João Marcelo",
@@ -117,6 +99,24 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 2193591.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Lucas Daniel Romero",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 1937720.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "William",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 1354091.0,
 "titular": false,
 "importante": false
 },
@@ -130,8 +130,8 @@
 "importante": false
 }
 ],
-"valor_xi": 110175982.0,
-"perdida": 0.6646292201870277,
+"valor_xi": 84807833.0,
+"perdida": 0.9084132947955409,
 "perdida_duda": 0.0
 }
 },
