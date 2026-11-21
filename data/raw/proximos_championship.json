@@ -5,7 +5,7 @@
   "estadio": "The Den",
   "local_espn": "Millwall",
   "visita_espn": "Queens Park Rangers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -18,7 +18,7 @@
    "ou_linea": 2.5,
    "ou": [
     -130,
-    100
+    105
    ],
    "spread": [
     [
@@ -154,7 +154,7 @@
   "estadio": "Carrow Road",
   "local_espn": "Norwich City",
   "visita_espn": "Cardiff City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -166,7 +166,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
@@ -303,7 +303,7 @@
   "estadio": "St. Mary's Stadium",
   "local_espn": "Southampton",
   "visita_espn": "Derby County",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -321,11 +321,11 @@
    "spread": [
     [
      "-1.5",
-     130
+     125
     ],
     [
      "+1.5",
-     -180
+     -175
     ]
    ]
   },
@@ -458,9 +458,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
+    160,
     245,
-    165
+    170
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -469,12 +469,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -205
-    ],
-    [
      "-0.5",
      145
+    ],
+    [
+     "+0.5",
+     -205
     ]
    ]
   }
@@ -531,12 +531,12 @@
    "ou_linea": 3.5,
    "ou": [
     130,
-    -165
+    -160
    ],
    "spread": [
     [
      "-1.5",
-     100
+     -105
     ],
     [
      "+1.5",
@@ -597,7 +597,7 @@
    "ou_linea": 2.5,
    "ou": [
     110,
-    -140
+    -135
    ],
    "spread": [
     [
@@ -734,11 +734,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -120
     ],
     [
      "+0.5",
-     -120
+     -115
     ]
    ]
   }
