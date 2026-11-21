@@ -5,13 +5,13 @@
   "estadio": "Estadio Heliodoro Rodríguez López",
   "local_espn": "Tenerife",
   "visita_espn": "Mallorca",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    220,
+    215,
     195,
     145
    ],
@@ -23,7 +23,7 @@
    "spread": [
     [
      "+0.5",
-     -185
+     -190
     ],
     [
      "-0.5",
@@ -271,8 +271,8 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    225,
-    270
+    230,
+    275
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -282,11 +282,11 @@
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -135
+     -130
     ]
    ]
   }
@@ -333,7 +333,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    155,
+    190,
+    195
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    130,
+    -195
+   ],
+   "spread": [
+    [
+     "-0.5",
+     135
+    ],
+    [
+     "+0.5",
+     -210
+    ]
+   ]
+  }
  },
  {
   "id": "401883101",
