@@ -5,15 +5,31 @@
   "estadio": "Norberto Tomaghello",
   "local_espn": "Defensa y Justicia",
   "visita_espn": "Barracas Central",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "clausura---round-of-16",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -115,
+    250,
+    320
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -120
+    ],
+    [
+     "+0.5",
+     -115
+    ]
+   ]
   },
   "alineaciones": {
    "Defensa y Justicia": [
