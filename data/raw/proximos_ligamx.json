@@ -5,15 +5,31 @@
   "estadio": "Estadio Universitario",
   "local_espn": "Tigres UANL",
   "visita_espn": "América",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "torneo-apertura",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    230,
+    270,
+    105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    130
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -135
+    ],
+    [
+     "-0.5",
+     100
+    ]
+   ]
   },
   "alineaciones": {
    "Tigres UANL": [
@@ -145,18 +161,18 @@
    "casa": "DraftKings",
    "ml": [
     120,
-    310,
-    180
+    295,
+    190
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -175
+    -165,
+    125
    ],
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
