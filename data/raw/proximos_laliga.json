@@ -11,14 +11,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -500,
-    650,
+    -525,
+    700,
     1100
    ],
    "ou_linea": 4.5,
    "ou": [
-    100,
-    -125
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "+2.5",
-     -150
+     -145
     ]
    ]
   }
@@ -44,14 +44,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    220,
-    310,
-    100
+    225,
+    300,
+    105
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
-    100
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -60,7 +60,7 @@
     ],
     [
      "-0.5",
-     -110
+     -105
     ]
    ]
   }
@@ -83,8 +83,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    100,
-    -125
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -110,14 +110,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
-    310,
-    -180
+    600,
+    300,
+    -185
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -130
+    115,
+    -140
    ],
    "spread": [
     [
@@ -126,7 +126,7 @@
     ],
     [
      "-0.5",
-     -195
+     -200
     ]
    ]
   }
@@ -215,8 +215,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -165
+    130,
+    -170
    ],
    "spread": [
     [
@@ -341,9 +341,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
-    230,
-    250
+    110,
+    235,
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -353,11 +353,11 @@
    "spread": [
     [
      "-0.5",
-     100
+     -105
     ],
     [
      "+0.5",
-     -150
+     -140
     ]
    ]
   }
@@ -493,5 +493,27 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401882698",
+  "utc": "2026-12-02T18:00Z",
+  "estadio": "Reale Arena",
+  "local_espn": "Real Sociedad",
+  "visita_espn": "Real Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882700",
+  "utc": "2026-12-02T20:30Z",
+  "estadio": "Spotify Camp Nou",
+  "local_espn": "Barcelona",
+  "visita_espn": "Atlético Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
  }
 ]
