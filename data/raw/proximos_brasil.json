@@ -5,15 +5,31 @@
   "estadio": "Arena Condá",
   "local_espn": "Chapecoense",
   "visita_espn": "Cruzeiro",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    500,
+    350,
+    -205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -170,
+    130
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -180
+    ],
+    [
+     "-1.5",
+     125
+    ]
+   ]
   },
   "alineaciones": {
    "Chapecoense": [
