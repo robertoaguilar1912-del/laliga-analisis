@@ -1,7 +1,7 @@
 {
 "401915816": {
 "fotmob": 6112500,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -56,7 +56,7 @@
 },
 "401915815": {
 "fotmob": 6112395,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -79,29 +79,11 @@
 "importante": false
 },
 {
-"nombre": "Julian Brandt",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 11938170.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Kasper Dolberg",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 6555659.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Anton Gaaei",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 5242670.0,
 "titular": false,
 "importante": false
 }
@@ -112,6 +94,24 @@
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Furkan Dursun",
+"tipo": "Lesión",
+"regreso": "sin fecha de regreso",
+"duda": false,
+"valor": 970008.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Mattias Käit",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 768069.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Fabio Saiz",
 "tipo": "Lesión",
@@ -147,7 +147,7 @@
 },
 "401915814": {
 "fotmob": 6112421,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -211,7 +211,7 @@
 },
 "401915810": {
 "fotmob": 6112554,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -248,8 +248,8 @@
 },
 "401915811": {
 "fotmob": 6112495,
-"visto": "2026-11-21T22:04+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T18:29+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -259,7 +259,7 @@
 "duda": false,
 "valor": 1057099.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Calvin Miller",
@@ -268,7 +268,7 @@
 "duda": false,
 "valor": 979300.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Oisin McEntee",
@@ -277,7 +277,7 @@
 "duda": false,
 "valor": 796686.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Tom Renaud",
@@ -286,7 +286,7 @@
 "duda": false,
 "valor": 787838.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Tómas Magnússon",
@@ -295,7 +295,25 @@
 "duda": false,
 "valor": 603262.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Ageu",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1015137.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Christian Dahle Borchgrevink",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 408411.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Craig Halkett",
@@ -334,24 +352,6 @@
 "importante": false
 },
 {
-"nombre": "Ageu",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1015137.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Christian Dahle Borchgrevink",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 408411.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Rogers Mato",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -361,9 +361,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 12685030.0,
+"perdida": 0.3330055191040147,
+"perdida_duda": 0.11222267507447756
 },
 "visita": {
 "faltan": [
@@ -374,7 +374,7 @@
 "duda": false,
 "valor": 18919567.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Aleksandr Golovin",
@@ -383,7 +383,7 @@
 "duda": false,
 "valor": 17030423.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Stanis Idumbo",
@@ -395,14 +395,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 190474494.0,
+"perdida": 0.18873912850504804,
 "perdida_duda": 0.0
 }
 },
 "401915813": {
 "fotmob": 6112551,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -418,6 +418,15 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 11118614.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Sebastián Boselli",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 1578370.0,
 "titular": false,
 "importante": false
 },
@@ -438,8 +447,8 @@
 },
 "401915812": {
 "fotmob": 6112527,
-"visto": "2026-11-21T22:04+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T18:29+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -449,7 +458,7 @@
 "duda": false,
 "valor": 505159.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jan Hanuš",
@@ -461,12 +470,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 3874580.0,
+"perdida": 0.1303777441684002,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "David von Ballmoos",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 347425.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Hannes Delcroix",
 "tipo": "Lesión",
@@ -493,25 +511,16 @@
 "valor": 562536.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "David von Ballmoos",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 347425.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 23088962.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.015047233392302347
 }
 },
 "401915739": {
 "fotmob": 6112546,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -547,7 +556,7 @@
 },
 "401915809": {
 "fotmob": 6112417,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -579,7 +588,7 @@
 {
 "nombre": "David Martínez",
 "tipo": "Lesión",
-"regreso": "unos días",
+"regreso": "Day to day",
 "duda": false,
 "valor": 9575917.0,
 "titular": false,
@@ -647,7 +656,7 @@
 },
 "401915808": {
 "fotmob": 6112494,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -765,7 +774,7 @@
 },
 "401915806": {
 "fotmob": 6112486,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -794,24 +803,6 @@
 "importante": false
 },
 {
-"nombre": "Thomas Kristensen",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 16516085.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Gianluca Gaetano",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 13520437.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Thomas Pompei",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -828,7 +819,7 @@
 },
 "401915802": {
 "fotmob": 6112391,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -855,7 +846,7 @@
 },
 "401915803": {
 "fotmob": 6112542,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -893,15 +884,6 @@
 "importante": false
 },
 {
-"nombre": "Ernest Muçi",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 11056501.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Arseniy Batagov",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -929,15 +911,6 @@
 "importante": false
 },
 {
-"nombre": "Ruslan Malinovsky",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 1638246.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Onuralp Çevikkan",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -954,7 +927,7 @@
 },
 "401915807": {
 "fotmob": 6112529,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1009,8 +982,8 @@
 },
 "401915805": {
 "fotmob": 6112524,
-"visto": "2026-11-21T22:04+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T18:29+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -1020,7 +993,16 @@
 "duda": false,
 "valor": 1351329.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Marin Šotiček",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2071695.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Dennis Hadžikadunić",
@@ -1050,29 +1032,29 @@
 "importante": false
 },
 {
-"nombre": "Mathieu Acapandié",
+"nombre": "Abdoulie Sanyang",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 565895.0,
+"valor": 350440.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 13890528.0,
+"perdida": 0.09728420690703767,
+"perdida_duda": 0.14914443856993773
 },
 "visita": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 15929204.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915738": {
 "fotmob": 6112535,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1118,7 +1100,7 @@
 },
 "401915804": {
 "fotmob": 6112411,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -1173,7 +1155,7 @@
 },
 "401915801": {
 "fotmob": 6112397,
-"visto": "2026-11-21T22:04+00:00",
+"visto": "2026-11-22T18:29+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

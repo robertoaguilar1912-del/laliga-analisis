@@ -8,7 +8,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    220,
+    255,
+    105
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -145
+    ],
+    [
+     "-0.5",
+     -105
+    ]
+   ]
+  }
  },
  {
   "id": "401892132",
