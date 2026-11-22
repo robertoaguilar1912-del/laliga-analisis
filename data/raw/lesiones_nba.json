@@ -53,56 +53,46 @@
  ],
  "Boston Celtics": [
   {
-   "id": "3078576",
-   "nombre": "Derrick White",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-22",
-   "tipo": "Shoulder",
-   "regreso": "2026-11-22",
-   "nota": "White (shoulder) has been ruled out for Saturday's game against Sacramento."
-  },
-  {
    "id": "4351852",
    "nombre": "Mitchell Robinson",
    "pos": "C",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-22",
    "tipo": "Illness",
-   "regreso": "2026-11-22",
-   "nota": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports."
+   "regreso": "2026-11-24",
+   "nota": "Robinson (illness) has been ruled out for Sunday's game against Golden State, Justin Turpin of WEEI.com reports."
   },
   {
-   "id": "4065648",
-   "nombre": "Jayson Tatum",
+   "id": "4251",
+   "nombre": "Paul George",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-22",
    "tipo": "Rest",
-   "regreso": "2026-11-22",
-   "nota": "Tatum (rest) has been ruled out for Saturday's game against the Kings."
+   "regreso": "2026-11-24",
+   "nota": "George (rest) has been ruled out for Sunday's game against Golden State, Justin Turpin of WEEI.com reports."
   }
  ],
  "Brooklyn Nets": [
-  {
-   "id": "5279130",
-   "nombre": "Nolan Traore",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-21",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-23",
-   "nota": "Traore (hamstring) won't return to Friday's game against Orlando, Meghan Triplett of YES Network reports. He finished with four points (2-6 FG, 0-2 3Pt) and two assists over 18 minutes."
-  },
   {
    "id": "4702670",
    "nombre": "Grant Nelson",
    "pos": "F",
    "estado": "Day-To-Day",
-   "fecha": "2026-11-21",
+   "fecha": "2026-11-22",
    "tipo": "Ankle",
    "regreso": "2026-11-23",
-   "nota": "Nelson (ankle) has been ruled out for Friday's game against Orlando."
+   "nota": "Nelson (ankle) is probable for Monday's game against the Timberwolves."
+  },
+  {
+   "id": "5279130",
+   "nombre": "Nolan Traore",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-22",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-25",
+   "nota": "Traore (hamstring) has been ruled out for Monday's game against the Timberwolves."
   }
  ],
  "Charlotte Hornets": [
@@ -152,11 +142,11 @@
    "id": "4278067",
    "nombre": "Nic Claxton",
    "pos": "C",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-22",
    "tipo": "Illness",
-   "regreso": "2026-11-22",
-   "nota": "Claxton (illness) is questionable to play in Sunday's game against the Nuggets."
+   "regreso": "2026-11-23",
+   "nota": "Claxton (illness) won't play in Sunday's game against the Nuggets."
   },
   {
    "id": "4397189",
@@ -501,10 +491,10 @@
    "nombre": "Austin Reaves",
    "pos": "G",
    "estado": "Out",
-   "fecha": "2026-11-21",
+   "fecha": "2026-11-22",
    "tipo": "Heel",
    "regreso": "2026-11-23",
-   "nota": "Head coach JJ Redick said he expects Reaves (heel) to return for Monday's matchup with Utah or Friday's game in San Antonio, Mark Medina of TheSportingTribune.com reports."
+   "nota": "Reaves (heel) was a full participant in Sunday's practice, Thuc Nhi Nguyen of the Los Angeles Times reports."
   }
  ],
  "Memphis Grizzlies": [
@@ -637,16 +627,6 @@
  ],
  "New Orleans Pelicans": [
   {
-   "id": "4395628",
-   "nombre": "Zion Williamson",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-22",
-   "tipo": "Thigh",
-   "regreso": "2026-11-23",
-   "nota": "Williamson is out for Saturday's game against the Spurs due to a left thigh contusion."
-  },
-  {
    "id": "4397688",
    "nombre": "Trey Murphy III",
    "pos": "F",
@@ -654,7 +634,27 @@
    "fecha": "2026-11-22",
    "tipo": "Knee",
    "regreso": "2026-11-23",
-   "nota": "Murphy (knee) has been ruled out for Saturday's game against the Spurs."
+   "nota": "Murphy (knees) is listed as probable for Monday's game against the Suns."
+  },
+  {
+   "id": "4576086",
+   "nombre": "Bryce McGowens",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-22",
+   "tipo": "Elbow",
+   "regreso": "2026-11-23",
+   "nota": "McGowens (elbow) is listed as probable for Monday's game against Phoenix."
+  },
+  {
+   "id": "4395628",
+   "nombre": "Zion Williamson",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
+   "tipo": "Thigh",
+   "regreso": "2026-11-23",
+   "nota": "Williamson (thigh) is probable for Monday's game against Phoenix."
   },
   {
    "id": "4431675",
@@ -665,16 +665,6 @@
    "tipo": "Ankle",
    "regreso": "2026-11-27",
    "nota": "Watford (ankle) is out for Saturday's game against the Spurs."
-  },
-  {
-   "id": "4576086",
-   "nombre": "Bryce McGowens",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-19",
-   "tipo": "Elbow",
-   "regreso": "2026-11-27",
-   "nota": "McGowens (elbow) has been ruled out for Friday's game against the Thunder."
   },
   {
    "id": "4683634",
