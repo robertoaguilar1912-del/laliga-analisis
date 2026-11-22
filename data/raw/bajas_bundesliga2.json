@@ -1,8 +1,8 @@
 {
 "401885048": {
 "fotmob": 5881727,
-"visto": "2026-11-22T11:35+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T11:40+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -12,16 +12,7 @@
 "duda": false,
 "valor": 468821.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Axel Borgmann",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 223233.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Julian Guttau",
@@ -33,21 +24,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 10426196.0,
+"perdida": 0.04496568067586683,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 11071066.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401885052": {
 "fotmob": 5881730,
-"visto": "2026-11-22T11:35+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T11:40+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -87,7 +78,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 14289306.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -100,7 +91,7 @@
 "duda": false,
 "valor": 788115.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kenneth Schmidt",
@@ -109,16 +100,7 @@
 "duda": false,
 "valor": 747273.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Tobias Raschl",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 202517.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Brooklyn Ezeh",
@@ -148,35 +130,17 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 9162263.0,
+"perdida": 0.16757737689913507,
 "perdida_duda": 0.0
 }
 },
 "401885050": {
 "fotmob": 5881731,
-"visto": "2026-11-22T11:35+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T11:40+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Moritz Broschinski",
-"tipo": "Lesión",
-"regreso": "finales de diciembre",
-"duda": false,
-"valor": 550076.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Sebastian Jung",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 101333.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Louey Ben Farhat",
 "tipo": "Lesión",
@@ -184,7 +148,7 @@
 "duda": true,
 "valor": 13158908.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Lilian Egloff",
@@ -193,26 +157,25 @@
 "duda": true,
 "valor": 1023404.0,
 "titular": false,
-"importante": false
-}
-],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"importante": true
 },
-"visita": {
-"faltan": [
 {
-"nombre": "Ismail Badjie",
+"nombre": "Moritz Broschinski",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1053066.0,
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 550076.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 16001854.0,
+"perdida": 0.0,
+"perdida_duda": 0.8862918009375663
+},
+"visita": {
+"faltan": [],
+"valor_xi": 5130168.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
