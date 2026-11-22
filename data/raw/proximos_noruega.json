@@ -5,7 +5,7 @@
   "estadio": "KFUM Arena",
   "local_espn": "KFUM Oslo",
   "visita_espn": "SK Brann",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-eliteserien",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Sarpsborg Stadion",
   "local_espn": "Sarpsborg FK",
   "visita_espn": "Lillestrom",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-eliteserien",
   "neutral": false,
   "momios": {
@@ -452,9 +452,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
+    -205,
     390,
-    380
+    390
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -468,7 +468,7 @@
     ],
     [
      "+1.5",
-     -170
+     -165
     ]
    ]
   }
