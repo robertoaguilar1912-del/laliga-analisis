@@ -504,7 +504,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    180,
+    250,
+    125
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -170
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401933726",
