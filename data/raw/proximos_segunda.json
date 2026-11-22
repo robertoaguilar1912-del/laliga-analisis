@@ -5,15 +5,31 @@
   "estadio": "Estadio El Molinón-Enrique Castro \"Quini\"",
   "local_espn": "Sporting Gijón",
   "visita_espn": "Las Palmas",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    125,
+    230,
+    220
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -105,
+    -125
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -160
+    ]
+   ]
   },
   "alineaciones": {
    "Sporting Gijón": [
