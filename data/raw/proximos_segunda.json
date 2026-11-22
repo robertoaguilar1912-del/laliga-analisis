@@ -389,7 +389,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    225,
+    185
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    -110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -190
+    ]
+   ]
+  }
  },
  {
   "id": "401882297",
@@ -455,7 +477,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    125,
+    225,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     110
+    ],
+    [
+     "+0.5",
+     -170
+    ]
+   ]
+  }
  },
  {
   "id": "401883105",
