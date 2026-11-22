@@ -63,31 +63,31 @@
  ],
  "Boston Celtics": [
   {
-   "id": "4351852",
-   "nombre": "Mitchell Robinson",
-   "pos": "C",
-   "estado": "Out",
-   "fecha": "2026-11-21",
-   "tipo": "Illness",
-   "regreso": "2026-11-22",
-   "nota": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports."
-  },
-  {
    "id": "3078576",
    "nombre": "Derrick White",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-21",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Shoulder",
    "regreso": "2026-11-22",
    "nota": "White (shoulder) has been ruled out for Saturday's game against Sacramento."
   },
   {
+   "id": "4351852",
+   "nombre": "Mitchell Robinson",
+   "pos": "C",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
+   "tipo": "Illness",
+   "regreso": "2026-11-22",
+   "nota": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports."
+  },
+  {
    "id": "4065648",
    "nombre": "Jayson Tatum",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-21",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Rest",
    "regreso": "2026-11-22",
    "nota": "Tatum (rest) has been ruled out for Saturday's game against the Kings."
@@ -159,6 +159,16 @@
  ],
  "Chicago Bulls": [
   {
+   "id": "2595516",
+   "nombre": "Norman Powell",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-22",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-28",
+   "nota": "Powell has been diagnosed with a mild right hamstring strain and will be re-evaluated later this week."
+  },
+  {
    "id": "4431687",
    "nombre": "Patrick Williams",
    "pos": "F",
@@ -167,16 +177,6 @@
    "tipo": "Thumb",
    "regreso": "2026-11-22",
    "nota": "Williams is probable for Sunday's game against the Nuggets due to a left thumb sprain."
-  },
-  {
-   "id": "2595516",
-   "nombre": "Norman Powell",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-22",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-22",
-   "nota": "Powell is questionable for Sunday's game against the Nuggets due to a right hamstring strain."
   },
   {
    "id": "4397189",
@@ -246,8 +246,8 @@
    "id": "4278078",
    "nombre": "P.J. Washington",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-21",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Illness",
    "regreso": "2026-11-22",
    "nota": "Washington (illness/shoulder) is listed as out for Saturday's game against the Clippers."
@@ -256,8 +256,8 @@
    "id": "5106040",
    "nombre": "Tobi Lawal",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-21",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Groin",
    "regreso": "2026-11-22",
    "nota": "Lawal (groin) is out for Saturday's game against the Clippers."
@@ -539,21 +539,11 @@
  ],
  "Memphis Grizzlies": [
   {
-   "id": "2991070",
-   "nombre": "Jerami Grant",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-21",
-   "tipo": "Calf",
-   "regreso": "2026-11-23",
-   "nota": "Grant (calf) is out for Saturday's game against the Timberwolves."
-  },
-  {
    "id": "4781746",
    "nombre": "Javon Small",
    "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-20",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Personal",
    "regreso": "2026-11-23",
    "nota": "Small won't play Saturday against the Timberwolves due to personal reasons."
@@ -562,11 +552,21 @@
    "id": "5041935",
    "nombre": "Cameron Boozer",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-20",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Ankle",
    "regreso": "2026-11-23",
    "nota": "Boozer is out for Saturday's game against Minnesota due to a right ankle sprain."
+  },
+  {
+   "id": "2991070",
+   "nombre": "Jerami Grant",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
+   "tipo": "Calf",
+   "regreso": "2026-11-23",
+   "nota": "Grant (calf) is out for Saturday's game against the Timberwolves."
   },
   {
    "id": "5105550",
@@ -670,7 +670,7 @@
    "id": "4395628",
    "nombre": "Zion Williamson",
    "pos": "F",
-   "estado": "Out",
+   "estado": "Day-To-Day",
    "fecha": "2026-11-22",
    "tipo": "Thigh",
    "regreso": "2026-11-23",
@@ -680,8 +680,8 @@
    "id": "4397688",
    "nombre": "Trey Murphy III",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-21",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Knee",
    "regreso": "2026-11-23",
    "nota": "Murphy (knee) has been ruled out for Saturday's game against the Spurs."
@@ -888,11 +888,21 @@
    "id": "3912848",
    "nombre": "Dean Wade",
    "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-20",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
    "tipo": "Hamstring",
    "regreso": "2026-11-23",
    "nota": "Wade (hamstring) won't play Saturday against the Bucks."
+  },
+  {
+   "id": "3917376",
+   "nombre": "Jaylen Brown",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
+   "tipo": "Hamstring",
+   "regreso": "2026-11-23",
+   "nota": "Brown (hamstring) went through individual work during Friday's practice, Tony Jones of The Athletic reports."
   },
   {
    "id": "5105637",
@@ -903,16 +913,6 @@
    "tipo": "Back",
    "regreso": "2026-11-23",
    "nota": "Bona (back) participated in Friday's practice, though he still needs to go through a full practice with contact before being cleared to return to game action, Adam Aaronson of PhillyVoice.com reports."
-  },
-  {
-   "id": "3917376",
-   "nombre": "Jaylen Brown",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-20",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-23",
-   "nota": "Brown (hamstring) went through individual work during Friday's practice, Tony Jones of The Athletic reports."
   },
   {
    "id": "4871141",
