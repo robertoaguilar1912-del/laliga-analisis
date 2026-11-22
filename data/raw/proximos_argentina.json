@@ -5,15 +5,31 @@
   "estadio": "Gigante de Arroyito",
   "local_espn": "Rosario Central",
   "visita_espn": "Gimnasia (Mendoza)",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "clausura---round-of-16",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -265,
+    390,
+    700
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-1.5",
+     105
+    ],
+    [
+     "+1.5",
+     -145
+    ]
+   ]
   },
   "alineaciones": {
    "Rosario Central": [
@@ -178,13 +194,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    205,
-    295
+    195,
+    310
    ],
    "ou_linea": 1.5,
    "ou": [
-    -175,
-    130
+    -185,
+    135
    ],
    "spread": [
     [
@@ -193,7 +209,7 @@
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -263,5 +279,16 @@
     ]
    ]
   }
+ },
+ {
+  "id": "401936353",
+  "utc": "2026-11-29T20:00Z",
+  "estadio": "",
+  "local_espn": "Vélez Sarsfield",
+  "visita_espn": "Independiente",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura---quarterfinals",
+  "neutral": false,
+  "momios": null
  }
 ]
