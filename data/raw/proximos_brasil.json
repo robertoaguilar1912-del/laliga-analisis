@@ -5,7 +5,7 @@
   "estadio": "Estadio do Maracana",
   "local_espn": "Fluminense",
   "visita_espn": "Mirassol",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Estádio Municipal Cicero de Souza Marques",
   "local_espn": "Red Bull Bragantino",
   "visita_espn": "Vasco da Gama",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -309,13 +309,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    285,
-    390
+    -150,
+    295,
+    400
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -125,
     -105
    ],
    "spread": [
@@ -342,19 +342,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
-    235,
-    210
+    125,
+    240,
+    215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
+    -110,
     -120
    ],
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
@@ -391,7 +391,7 @@
     ],
     [
      "+0.5",
-     115
+     120
     ]
    ]
   }
@@ -408,9 +408,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    285,
+    270,
     340,
-    -140
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -420,11 +420,11 @@
    "spread": [
     [
      "+0.5",
-     105
+     100
     ],
     [
      "-0.5",
-     -150
+     -145
     ]
    ]
   }
@@ -441,9 +441,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    230,
-    185
+    135,
+    235,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -457,7 +457,7 @@
     ],
     [
      "+0.5",
-     -185
+     -180
     ]
    ]
   }
@@ -482,7 +482,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    250,
+    225
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -150,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401841336",
@@ -504,7 +526,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    310,
+    320,
+    -150
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -155,
+    105
+   ],
+   "spread": [
+    [
+     "+0.5",
+     105
+    ],
+    [
+     "-0.5",
+     -165
+    ]
+   ]
+  }
  },
  {
   "id": "401841332",
@@ -548,7 +592,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    240,
+    225
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    -105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -150
+    ]
+   ]
+  }
  },
  {
   "id": "401841328",

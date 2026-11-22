@@ -5,25 +5,25 @@
   "estadio": "Estádio Antônio Accioly",
   "local_espn": "Atlético Goianiense",
   "visita_espn": "Vila Nova",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     105,
-    220,
-    295
+    210,
+    300
    ],
-   "ou_linea": 2.5,
+   "ou_linea": 1.5,
    "ou": [
-    145,
-    -195
+    -190,
+    145
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
@@ -157,7 +157,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    145,
+    195,
+    200
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    105,
+    -155
+   ],
+   "spread": [
+    [
+     "-0.5",
+     130
+    ],
+    [
+     "+0.5",
+     -205
+    ]
+   ]
+  }
  },
  {
   "id": "401932611",
@@ -179,6 +201,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-brasileiro-serie-b",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    115,
+    200,
+    250
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     105
+    ],
+    [
+     "+0.5",
+     -165
+    ]
+   ]
+  }
  }
 ]
