@@ -38,10 +38,10 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Dallas Mavericks",
   "visita_espn": "LA Clippers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "American Airlines Center",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "0-6"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -191,
-    160
-   ],
-   "ml_abre": [
-    -201,
-    168
-   ],
-   "spread": [
-    -4.5,
-    -113,
-    4.5,
-    -107
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    230.5,
-    -108,
-    -112
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401910026",
@@ -90,10 +67,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Minnesota Timberwolves",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Target Center",
   "records": {
    "home": [
@@ -107,30 +84,7 @@
     "8-0"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -218,
-    181
-   ],
-   "ml_abre": [
-    -191,
-    160
-   ],
-   "spread": [
-    -5.5,
-    -108,
-    5.5,
-    -112
-   ],
-   "spread_abre": -5.5,
-   "total": [
-    227.5,
-    -110,
-    -110
-   ],
-   "total_abre": 227.5
-  }
+  "momios": null
  },
  {
   "id": "401910027",
@@ -142,10 +96,10 @@
   "visita": "NO",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
@@ -159,30 +113,7 @@
     "1-5"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -1840,
-    980
-   ],
-   "ml_abre": [
-    -1440,
-    850
-   ],
-   "spread": [
-    -19.5,
-    -114,
-    19.5,
-    -106
-   ],
-   "spread_abre": -16.5,
-   "total": [
-    227.5,
-    -110,
-    -110
-   ],
-   "total_abre": 226.5
-  }
+  "momios": null
  },
  {
   "id": "401910028",
@@ -197,7 +128,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "Boston Celtics",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -222,10 +153,10 @@
     -465
    ],
    "spread": [
-    12.5,
-    -116,
-    -12.5,
-    -104
+    11.5,
+    -104,
+    -11.5,
+    -116
    ],
    "spread_abre": 12.5,
    "total": [
