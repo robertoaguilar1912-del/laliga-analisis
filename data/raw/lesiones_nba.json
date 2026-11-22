@@ -97,16 +97,6 @@
  ],
  "Charlotte Hornets": [
   {
-   "id": "3135045",
-   "nombre": "Grayson Allen",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-22",
-   "tipo": "Concussion",
-   "regreso": "2026-11-25",
-   "nota": "Allen (concussion) has been ruled out for Monday's game against the Grizzlies."
-  },
-  {
    "id": "4433287",
    "nombre": "Brandon Miller",
    "pos": "F",
@@ -115,6 +105,16 @@
    "tipo": "Knee",
    "regreso": "2026-11-23",
    "nota": "Miller is probable for Monday's game against the Grizzlies due to a right knee contusion."
+  },
+  {
+   "id": "3135045",
+   "nombre": "Grayson Allen",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-22",
+   "tipo": "Concussion",
+   "regreso": "2026-11-25",
+   "nota": "Allen (concussion) has been ruled out for Friday's game against Atlanta."
   },
   {
    "id": "4066218",
@@ -477,24 +477,24 @@
  ],
  "Memphis Grizzlies": [
   {
-   "id": "5041935",
-   "nombre": "Cameron Boozer",
-   "pos": "F",
-   "estado": "Out",
-   "fecha": "2026-11-22",
-   "tipo": "Ankle",
-   "regreso": "2026-11-25",
-   "nota": "Boozer is out for Saturday's game against Minnesota due to a right ankle sprain."
-  },
-  {
    "id": "4781746",
    "nombre": "Javon Small",
    "pos": "G",
    "estado": "Day-To-Day",
    "fecha": "2026-11-22",
-   "tipo": "Personal",
-   "regreso": "2026-11-23",
+   "tipo": "",
+   "regreso": "",
    "nota": "Small won't play Saturday against the Timberwolves due to personal reasons."
+  },
+  {
+   "id": "5041935",
+   "nombre": "Cameron Boozer",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-22",
+   "tipo": "Ankle",
+   "regreso": "2026-11-25",
+   "nota": "Boozer is out for Saturday's game against Minnesota due to a right ankle sprain."
   },
   {
    "id": "2991070",
@@ -542,11 +542,11 @@
    "id": "3032977",
    "nombre": "Giannis Antetokounmpo",
    "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-21",
+   "estado": "Out",
+   "fecha": "2026-11-22",
    "tipo": "Groin",
    "regreso": "2026-11-25",
-   "nota": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports."
+   "nota": "Antetokounmpo (groin) won't play in Sunday's game against Oklahoma City, Clemente Almanza of USA Today reports."
   }
  ],
  "Milwaukee Bucks": [
@@ -820,7 +820,7 @@
    "fecha": "2026-11-22",
    "tipo": "Hamstring",
    "regreso": "2026-11-23",
-   "nota": "Wade (hamstring) won't play Saturday against the Bucks."
+   "nota": "Wade (hamstring) is listed as probable for Monday's game against Portland."
   },
   {
    "id": "3917376",
