@@ -1,8 +1,8 @@
 {
 "401880159": {
 "fotmob": 5836935,
-"visto": "2026-11-22T11:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-22T11:26+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -12,7 +12,7 @@
 "duda": false,
 "valor": 16247709.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Dastan Satpaev",
@@ -21,16 +21,7 @@
 "duda": false,
 "valor": 10158241.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Connor Roberts",
-"tipo": "Sanción",
-"regreso": "hasta el 28 de noviembre",
-"duda": false,
-"valor": 827457.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Bashir Humphreys",
@@ -38,6 +29,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 12928014.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Connor Roberts",
+"tipo": "Sanción",
+"regreso": "hasta el 28 de noviembre",
+"duda": false,
+"valor": 827457.0,
 "titular": false,
 "importante": false
 },
@@ -69,12 +69,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 53627939.0,
+"perdida": 0.49239166174183946,
+"perdida_duda": 0.24106863401929357
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Ryan Alebiosu",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 2273612.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Lewis Miller",
 "tipo": "Lesión",
@@ -101,20 +110,11 @@
 "valor": 252612.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Ryan Alebiosu",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2273612.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 16783906.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.13546381873206392
 }
 },
 "401880148": {
