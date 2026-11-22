@@ -5,15 +5,31 @@
   "estadio": "SeatGeek Stadium",
   "local_espn": "Chicago Fire FC",
   "visita_espn": "Charlotte FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -190,
+    340,
+    400
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -120
+   ],
+   "spread": [
+    [
+     "-1.5",
+     125
+    ],
+    [
+     "+1.5",
+     -175
+    ]
+   ]
   },
   "alineaciones": {
    "Chicago Fire FC": [
