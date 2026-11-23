@@ -56,7 +56,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     164,
     -196
@@ -73,9 +73,9 @@
    ],
    "spread_abre": 5.5,
    "total": [
-    219.5,
-    -115,
-    -105
+    220.5,
+    -108,
+    -112
    ],
    "total_abre": 222.5
   }
@@ -108,7 +108,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     328,
     -419
@@ -126,8 +126,8 @@
    "spread_abre": 8.5,
    "total": [
     237.5,
-    -107,
-    -113
+    -112,
+    -108
    ],
    "total_abre": 237.5
   }
@@ -160,7 +160,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     114,
     -135
@@ -212,7 +212,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -296,
     240
@@ -249,7 +249,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Golden State Warriors",
   "visita_espn": "Boston Celtics",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Chase Center",
   "records": {
    "home": [
@@ -264,7 +264,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     261,
     -324
@@ -344,7 +344,30 @@
     "7-4"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -144,
+    121
+   ],
+   "ml_abre": [
+    -144,
+    121
+   ],
+   "spread": [
+    -2.5,
+    -110,
+    2.5,
+    -110
+   ],
+   "spread_abre": -2.5,
+   "total": [
+    228.5,
+    -110,
+    -110
+   ],
+   "total_abre": 228.5
+  }
  },
  {
   "id": "401910038",
@@ -518,7 +541,30 @@
     "0-7"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -610,
+    448
+   ],
+   "ml_abre": [
+    -610,
+    448
+   ],
+   "spread": [
+    -13.5,
+    -110,
+    13.5,
+    -110
+   ],
+   "spread_abre": -13.5,
+   "total": [
+    225.5,
+    -110,
+    -110
+   ],
+   "total_abre": 225.5
+  }
  },
  {
   "id": "401910044",
@@ -2372,6 +2418,151 @@
     "12-5",
     "8-3",
     "4-2"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910085",
+  "utc": "2026-12-04T00:00Z",
+  "fecha": "2026-12-03",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ATL",
+  "visita": "IND",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Atlanta Hawks",
+  "visita_espn": "Indiana Pacers",
+  "revisado": false,
+  "estadio": "State Farm Arena",
+  "records": {
+   "home": [
+    "11-6",
+    "5-3",
+    "6-3"
+   ],
+   "away": [
+    "5-11",
+    "2-5",
+    "3-5"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910086",
+  "utc": "2026-12-04T00:30Z",
+  "fecha": "2026-12-03",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "MIA",
+  "visita": "WSH",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Miami Heat",
+  "visita_espn": "Washington Wizards",
+  "revisado": false,
+  "estadio": "Kaseya Center",
+  "records": {
+   "home": [
+    "9-6",
+    "5-3",
+    "4-3"
+   ],
+   "away": [
+    "6-11",
+    "2-5",
+    "4-6"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910087",
+  "utc": "2026-12-04T01:00Z",
+  "fecha": "2026-12-03",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "CHI",
+  "visita": "CLE",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Chicago Bulls",
+  "visita_espn": "Cleveland Cavaliers",
+  "revisado": false,
+  "estadio": "United Center",
+  "records": {
+   "home": [
+    "4-11",
+    "1-5",
+    "3-6"
+   ],
+   "away": [
+    "9-8",
+    "7-3",
+    "2-5"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910088",
+  "utc": "2026-12-04T01:00Z",
+  "fecha": "2026-12-03",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SA",
+  "visita": "TOR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "San Antonio Spurs",
+  "visita_espn": "Toronto Raptors",
+  "revisado": false,
+  "estadio": "Frost Bank Center",
+  "records": {
+   "home": [
+    "14-3",
+    "7-3",
+    "7-0"
+   ],
+   "away": [
+    "6-10",
+    "2-6",
+    "4-4"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910089",
+  "utc": "2026-12-04T03:00Z",
+  "fecha": "2026-12-03",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "POR",
+  "visita": "UTAH",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Portland Trail Blazers",
+  "visita_espn": "Utah Jazz",
+  "revisado": false,
+  "estadio": "Moda Center",
+  "records": {
+   "home": [
+    "10-6",
+    "3-2",
+    "7-4"
+   ],
+   "away": [
+    "3-14",
+    "1-8",
+    "2-6"
    ]
   },
   "momios": null
