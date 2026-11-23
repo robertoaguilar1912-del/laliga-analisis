@@ -1,7 +1,7 @@
 {
 "401915506": {
 "fotmob": 6112357,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -46,7 +46,7 @@
 },
 "401915519": {
 "fotmob": 6112348,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -119,8 +119,8 @@
 },
 "401915517": {
 "fotmob": 6112290,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -142,7 +142,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 54186297.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -155,7 +155,7 @@
 "duda": false,
 "valor": 34960784.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kennet Eichhorn",
@@ -164,7 +164,7 @@
 "duda": false,
 "valor": 27823734.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Martin Terrier",
@@ -176,15 +176,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 300813633.0,
+"perdida": 0.20871566681952874,
 "perdida_duda": 0.0
 }
 },
 "401915507": {
 "fotmob": 6112277,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -206,7 +206,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 134030511.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -231,15 +231,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 13038108.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915521": {
 "fotmob": 6112266,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -249,7 +249,7 @@
 "duda": false,
 "valor": 19747138.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Santiago Hezze",
@@ -258,7 +258,7 @@
 "duda": false,
 "valor": 13192502.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Chiquinho",
@@ -288,12 +288,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 53200111.0,
+"perdida": 0.6191648735469744,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Gonçalo Ramos",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 56878760.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Alexis Saelemaekers",
 "tipo": "Lesión",
@@ -358,14 +367,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 268874299.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.21154405687543978
 }
 },
 "401915520": {
 "fotmob": 6112297,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -456,8 +465,8 @@
 },
 "401915508": {
 "fotmob": 6112288,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -467,7 +476,7 @@
 "duda": false,
 "valor": 12930746.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mateo Biondic",
@@ -476,11 +485,11 @@
 "duda": false,
 "valor": 9028854.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 56948438.0,
+"perdida": 0.3856049572421986,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -492,7 +501,16 @@
 "duda": false,
 "valor": 4394448.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Pablo Rodríguez",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 2445923.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Ali Gholizadeh",
@@ -529,26 +547,17 @@
 "valor": 133581.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Pablo Rodríguez",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 2445923.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 24374871.0,
+"perdida": 0.18028600028283226,
+"perdida_duda": 0.10034609003674316
 }
 },
 "401915518": {
 "fotmob": 6112282,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -561,7 +570,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 23538645.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -574,18 +583,18 @@
 "duda": false,
 "valor": 22180128.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 234954543.0,
+"perdida": 0.09440178392294377,
 "perdida_duda": 0.0
 }
 },
 "401915504": {
 "fotmob": 6112322,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -595,7 +604,7 @@
 "duda": false,
 "valor": 48798216.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jean-Philippe Mateta",
@@ -625,8 +634,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 349200743.0,
+"perdida": 0.13974258926476568,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -638,7 +647,7 @@
 "duda": false,
 "valor": 19247675.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jon Aramburu",
@@ -668,14 +677,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 169100690.0,
+"perdida": 0.11382375199060395,
 "perdida_duda": 0.0
 }
 },
 "401915516": {
 "fotmob": 6112280,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -721,7 +730,7 @@
 },
 "401915502": {
 "fotmob": 6112252,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -821,8 +830,8 @@
 },
 "401915501": {
 "fotmob": 6112261,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -832,7 +841,7 @@
 "duda": false,
 "valor": 34355962.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Loïs Openda",
@@ -841,7 +850,7 @@
 "duda": false,
 "valor": 25442744.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Pavel Šulc",
@@ -850,7 +859,7 @@
 "duda": false,
 "valor": 22331351.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mohamed Ouédraogo",
@@ -871,12 +880,21 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 143019748.0,
+"perdida": 0.5742567592833404,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Daniel Bassi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 1295779.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Espen Garnås",
 "tipo": "Lesión",
@@ -887,15 +905,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 6977564.0,
+"perdida": 0.18570650158135418,
 "perdida_duda": 0.0
 }
 },
 "401915505": {
 "fotmob": 6112367,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -926,12 +944,30 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 34637924.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
+{
+"nombre": "Eliezer Mayenda",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 18220268.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Valentin Rongier",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5633308.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Przemysław Frankowski",
 "tipo": "Lesión",
@@ -942,15 +978,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 114221872.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.20883544965888845
 }
 },
 "401915503": {
 "fotmob": 6112371,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -960,7 +996,7 @@
 "duda": false,
 "valor": 785304.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kenan Kodro",
@@ -1008,8 +1044,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 6657468.0,
+"perdida": 0.11795835894367047,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1033,15 +1069,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 54420873.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915514": {
 "fotmob": 6112302,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -1051,7 +1087,7 @@
 "duda": false,
 "valor": 9606675.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Emmanuel Uchenna",
@@ -1090,8 +1126,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 35664419.0,
+"perdida": 0.269363002941391,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1133,14 +1169,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 104419360.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401915513": {
 "fotmob": 6112332,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1213,8 +1249,8 @@
 },
 "401915512": {
 "fotmob": 6112359,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -1224,7 +1260,7 @@
 "duda": false,
 "valor": 539606.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jorge Aguirre",
@@ -1233,11 +1269,11 @@
 "duda": false,
 "valor": 479517.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 5816065.0,
+"perdida": 0.1752255175965193,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1249,7 +1285,7 @@
 "duda": false,
 "valor": 9880817.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Alistair Johnston",
@@ -1258,18 +1294,18 @@
 "duda": false,
 "valor": 8286756.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 34873721.0,
+"perdida": 0.5209530981795719,
 "perdida_duda": 0.0
 }
 },
 "401915515": {
 "fotmob": 6112352,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -1279,7 +1315,7 @@
 "duda": false,
 "valor": 27176929.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Albian Hajdari",
@@ -1288,7 +1324,7 @@
 "duda": false,
 "valor": 26236572.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Robin Hranác",
@@ -1297,7 +1333,7 @@
 "duda": false,
 "valor": 10258742.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Valentin Gendrey",
@@ -1309,8 +1345,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 143613827.0,
+"perdida": 0.4433573307673223,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -1322,7 +1358,7 @@
 "duda": false,
 "valor": 4233283.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Daniil Khudyakov",
@@ -1331,7 +1367,7 @@
 "duda": false,
 "valor": 2526731.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Leon Grgić",
@@ -1340,7 +1376,7 @@
 "duda": false,
 "valor": 2163279.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Otar Kiteishvili",
@@ -1349,11 +1385,20 @@
 "duda": false,
 "valor": 1684074.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Paul-Friedrich Koller",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 947106.0,
+"titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 29911555.0,
+"perdida": 0.3546243918111245,
 "perdida_duda": 0.0
 }
 }

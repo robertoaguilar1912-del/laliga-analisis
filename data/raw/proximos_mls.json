@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    130,
-    250,
-    170
+    150,
+    245,
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    130
+    -155,
+    120
    ],
    "spread": [
     [
      "-0.5",
-     125
+     140
     ],
     [
      "+0.5",
-     -170
+     -195
     ]
    ]
   }
@@ -51,7 +51,7 @@
    "ou_linea": 2.5,
    "ou": [
     -145,
-    115
+    110
    ],
    "spread": [
     [
@@ -107,7 +107,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    165,
+    255,
+    130
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    115,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -180
+    ],
+    [
+     "-0.5",
+     120
+    ]
+   ]
+  }
  },
  {
   "id": "401933737",
@@ -118,7 +140,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    170,
+    265,
+    125
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -115,
+    -115
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -170
+    ],
+    [
+     "-0.5",
+     115
+    ]
+   ]
+  }
  },
  {
   "id": "401933724",

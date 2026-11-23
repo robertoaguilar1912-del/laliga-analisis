@@ -1,7 +1,7 @@
 {
 "401875009": {
 "fotmob": 5749756,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -74,8 +74,8 @@
 },
 "401875004": {
 "fotmob": 5749769,
-"visto": "2026-11-23T04:48+00:00",
-"xi": "unavailable",
+"visto": "2026-11-23T13:44+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -124,7 +124,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 68849416.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -137,16 +137,7 @@
 "duda": false,
 "valor": 10486688.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Oussama El Azzouzi",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 1027658.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Juan Miranda",
@@ -154,6 +145,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 14393410.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Oussama El Azzouzi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 1027658.0,
 "titular": false,
 "importante": false
 },
@@ -167,14 +167,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 95036737.0,
+"perdida": 0.11034351905411062,
+"perdida_duda": 0.15145101204390046
 }
 },
 "401875081": {
 "fotmob": 5749763,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -238,7 +238,7 @@
 },
 "401874826": {
 "fotmob": 5749767,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -311,7 +311,7 @@
 },
 "401874977": {
 "fotmob": 5749764,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -352,8 +352,8 @@
 {
 "nombre": "Lorenzo Colombo",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "sin fecha de regreso",
+"duda": false,
 "valor": 11696530.0,
 "titular": false,
 "importante": false
@@ -366,7 +366,7 @@
 },
 "401875031": {
 "fotmob": 5749768,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -380,20 +380,20 @@
 "importante": false
 },
 {
+"nombre": "Keinan Davis",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 10449109.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Nicolò Bertola",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 9290438.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Keinan Davis",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 10449109.0,
 "titular": false,
 "importante": false
 }
@@ -439,7 +439,7 @@
 },
 "401874992": {
 "fotmob": 5749766,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -575,10 +575,19 @@
 },
 "401874769": {
 "fotmob": 5749760,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
+{
+"nombre": "Leonardo Balerdi",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 15513039.0,
+"titular": false,
+"importante": false
+},
 {
 "nombre": "Devyne Rensch",
 "tipo": "Lesión",
@@ -594,15 +603,6 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 3804044.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Leonardo Balerdi",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 15513039.0,
 "titular": false,
 "importante": false
 }
@@ -639,7 +639,7 @@
 },
 "401874994": {
 "fotmob": 5749762,
-"visto": "2026-11-23T04:48+00:00",
+"visto": "2026-11-23T13:44+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
