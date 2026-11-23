@@ -139,6 +139,16 @@
  ],
  "Chicago Bulls": [
   {
+   "id": "4397189",
+   "nombre": "Jalen Smith",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-23",
+   "tipo": "Illness",
+   "regreso": "2026-11-23",
+   "nota": "Smith (illness) is probable for Monday's game against Cleveland."
+  },
+  {
    "id": "4278067",
    "nombre": "Nic Claxton",
    "pos": "C",
@@ -146,7 +156,7 @@
    "fecha": "2026-11-23",
    "tipo": "Illness",
    "regreso": "2026-11-23",
-   "nota": "Claxton (illness) won't play in Sunday's game against the Nuggets."
+   "nota": "Claxton (illness) is questionable for Monday's game against Cleveland."
   },
   {
    "id": "2595516",
@@ -364,11 +374,31 @@
    "id": "2530530",
    "nombre": "T.J. McConnell",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-23",
    "tipo": "Hamstring",
    "regreso": "2026-11-27",
-   "nota": "McConnell (hamstring) is listed as out for Sunday's game in New York."
+   "nota": "McConnell is out for Monday's game against the Thunder due to left hamstring soreness."
+  },
+  {
+   "id": "4396909",
+   "nombre": "Aaron Nesmith",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-23",
+   "tipo": "Foot",
+   "regreso": "2026-11-27",
+   "nota": "Nesmith is out for Monday's game against the Thunder due to right foot soreness."
+  },
+  {
+   "id": "3149673",
+   "nombre": "Pascal Siakam",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-23",
+   "tipo": "Hip",
+   "regreso": "2026-11-23",
+   "nota": "Siakam is questionable for Monday's game against Oklahoma City due to left hip injury management, according to the NBA's injury report."
   },
   {
    "id": "4396993",
@@ -533,26 +563,6 @@
  ],
  "New Orleans Pelicans": [
   {
-   "id": "4397688",
-   "nombre": "Trey Murphy III",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-22",
-   "tipo": "Knee",
-   "regreso": "2026-11-23",
-   "nota": "Murphy (knees) is listed as probable for Monday's game against the Suns."
-  },
-  {
-   "id": "4576086",
-   "nombre": "Bryce McGowens",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-22",
-   "tipo": "Elbow",
-   "regreso": "2026-11-23",
-   "nota": "McGowens (elbow) is listed as probable for Monday's game against Phoenix."
-  },
-  {
    "id": "4395628",
    "nombre": "Zion Williamson",
    "pos": "F",
@@ -627,54 +637,54 @@
  ],
  "Oklahoma City Thunder": [
   {
-   "id": "5174983",
-   "nombre": "Aday Mara",
-   "pos": "C",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-23",
-   "tipo": "Lower Leg",
-   "regreso": "2026-11-23",
-   "nota": "Mara (shin) is listed as out for Sunday's game versus Miami."
-  },
-  {
    "id": "4432823",
    "nombre": "Jaylin Williams",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-23",
    "tipo": "Back",
-   "regreso": "2026-11-23",
-   "nota": "Williams (back) is listed as out for Sunday's game against Miami."
+   "regreso": "2026-11-25",
+   "nota": "Williams (back) has been ruled out for Monday's game against the Pacers"
   },
   {
    "id": "5159925",
    "nombre": "Nikola Topic",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-23",
    "tipo": "Hip",
-   "regreso": "2026-11-23",
-   "nota": "Topic (hip) is listed as out for Sunday's game versus the Heat."
+   "regreso": "2026-11-25",
+   "nota": "Topic (hip) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
   },
   {
-   "id": "4278073",
-   "nombre": "Shai Gilgeous-Alexander",
-   "pos": "G",
-   "estado": "Day-To-Day",
+   "id": "5174983",
+   "nombre": "Aday Mara",
+   "pos": "C",
+   "estado": "Out",
    "fecha": "2026-11-23",
-   "tipo": "Back",
-   "regreso": "2026-11-23",
-   "nota": "Gilgeous-Alexander (back/neck) is listed as out for Sunday's game against the Heat."
+   "tipo": "Lower Leg",
+   "regreso": "2026-11-25",
+   "nota": "Mara (shin) has been ruled out for Monday's game against the Pacers."
+  },
+  {
+   "id": "4593803",
+   "nombre": "Jalen Williams",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-23",
+   "tipo": "Leg",
+   "regreso": "2027-03-02",
+   "nota": "Williams (ankle) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
   },
   {
    "id": "2991350",
    "nombre": "Alex Caruso",
    "pos": "G",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-23",
    "tipo": "Hip",
-   "regreso": "2026-11-23",
-   "nota": "Caruso (hip) won't play Sunday against the Heat."
+   "regreso": "2026-11-25",
+   "nota": "Caruso (hip) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
   },
   {
    "id": "5061603",
@@ -705,16 +715,6 @@
    "tipo": "Knee",
    "regreso": "2027-01-02",
    "nota": "Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports."
-  },
-  {
-   "id": "4593803",
-   "nombre": "Jalen Williams",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-10-28",
-   "tipo": "Leg",
-   "regreso": "2027-03-02",
-   "nota": "Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports."
   }
  ],
  "Orlando Magic": [
@@ -812,16 +812,6 @@
   }
  ],
  "Phoenix Suns": [
-  {
-   "id": "4888725",
-   "nombre": "Ryan Dunn",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-22",
-   "tipo": "Quadriceps",
-   "regreso": "2026-11-23",
-   "nota": "Dunn (quadriceps) is listed as questionable for Monday's game against the Pelicans."
-  },
   {
    "id": "4701232",
    "nombre": "Mark Williams",
