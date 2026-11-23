@@ -1,71 +1,7 @@
 {
-"401875001": {
-"fotmob": 5749751,
-"visto": "2026-11-22T19:16+00:00",
-"xi": "standard",
-"local": {
-"faltan": [
-{
-"nombre": "Odilon Kossounou",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 17524973.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Isak Hien",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 17486961.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Thomas Pompei",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 781429.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 256515175.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Ange-Yoan Bonny",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 41568599.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Piotr Zieliński",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 7504341.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 347931898.0,
-"perdida": 0.119473377517114,
-"perdida_duda": 0.0
-}
-},
 "401875009": {
 "fotmob": 5749756,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -138,7 +74,7 @@
 },
 "401875004": {
 "fotmob": 5749769,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -238,7 +174,7 @@
 },
 "401875081": {
 "fotmob": 5749763,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -248,6 +184,15 @@
 "regreso": "finales de enero de 2027",
 "duda": false,
 "valor": 5386256.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Daniel Bîrligea",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 4118202.0,
 "titular": false,
 "importante": false
 },
@@ -293,7 +238,7 @@
 },
 "401874826": {
 "fotmob": 5749767,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -366,7 +311,7 @@
 },
 "401874977": {
 "fotmob": 5749764,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -376,6 +321,15 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 41568599.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Hakan Çalhanoğlu",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 7405656.0,
 "titular": false,
 "importante": false
 },
@@ -394,7 +348,17 @@
 "perdida_duda": 0.0
 },
 "visita": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Lorenzo Colombo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 11696530.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 0.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
@@ -402,7 +366,7 @@
 },
 "401875031": {
 "fotmob": 5749768,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -475,7 +439,7 @@
 },
 "401874992": {
 "fotmob": 5749766,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -512,6 +476,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 25749741.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Darryl Bakola",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 19370679.0,
 "titular": false,
 "importante": false
 },
@@ -602,7 +575,7 @@
 },
 "401874769": {
 "fotmob": 5749760,
-"visto": "2026-11-22T18:29+00:00",
+"visto": "2026-11-23T04:48+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -650,20 +623,147 @@
 "importante": false
 },
 {
-"nombre": "Jay Robinson",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 11421453.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Yvan Kouadio Maye",
 "tipo": "Lesión",
 "regreso": "ya entrena",
 "duda": true,
 "valor": 1772369.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401874994": {
+"fotmob": 5749762,
+"visto": "2026-11-23T04:48+00:00",
+"xi": "unavailable",
+"local": {
+"faltan": [
+{
+"nombre": "Jesús Rodríguez",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 38026168.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Assane Diao",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 37252771.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Moise Kean",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 36095131.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jayden Addai",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 24758025.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Riccardo Cassano",
+"tipo": "Internationalduty",
+"regreso": "hasta el 13 de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Maxence Caqueret",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 15216620.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Kenan Yıldız",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 76995516.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kerim Alajbegović",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 42839424.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Khéphren Thuram-Ulien",
+"tipo": "Lesión",
+"regreso": "mediados de enero de 2027",
+"duda": false,
+"valor": 39965969.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pierre Kalulu",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 37751672.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Manuel Locatelli",
+"tipo": "Lesión",
+"regreso": "finales de marzo de 2027",
+"duda": false,
+"valor": 23378696.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolás González",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 22712118.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kamil Grabara",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 11631902.0,
 "titular": false,
 "importante": false
 }
