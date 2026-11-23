@@ -1,34 +1,5 @@
 [
  {
-  "id": "401910030",
-  "utc": "2026-11-22T23:00Z",
-  "fecha": "2026-11-22",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIA",
-  "visita": "OKC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Miami Heat",
-  "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
-  "estadio": "Kaseya Center",
-  "records": {
-   "home": [
-    "9-6",
-    "5-3",
-    "4-3"
-   ],
-   "away": [
-    "10-6",
-    "6-1",
-    "4-5"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910031",
   "utc": "2026-11-23T00:00Z",
   "fecha": "2026-11-22",
@@ -38,7 +9,7 @@
   "visita": "ORL",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Washington Wizards",
   "visita_espn": "Orlando Magic",
   "revisado": false,
@@ -67,7 +38,7 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Chicago Bulls",
   "visita_espn": "Denver Nuggets",
   "revisado": false,
@@ -322,9 +293,9 @@
     "3-5"
    ],
    "away": [
-    "10-6",
+    "10-7",
     "6-1",
-    "4-5"
+    "4-6"
    ]
   },
   "momios": null
@@ -356,7 +327,30 @@
     "0-8"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -479,
+    368
+   ],
+   "ml_abre": [
+    -479,
+    368
+   ],
+   "spread": [
+    -11.5,
+    -110,
+    11.5,
+    -110
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    225.5,
+    -105,
+    -115
+   ],
+   "total_abre": 224.5
+  }
  },
  {
   "id": "401910040",
@@ -385,7 +379,30 @@
     "2-6"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -578,
+    431
+   ],
+   "ml_abre": [
+    -578,
+    431
+   ],
+   "spread": [
+    -11.5,
+    -110,
+    11.5,
+    -110
+   ],
+   "spread_abre": -11.5,
+   "total": [
+    225.5,
+    -110,
+    -110
+   ],
+   "total_abre": 225.5
+  }
  },
  {
   "id": "401910041",
@@ -664,8 +681,8 @@
     "7-1"
    ],
    "away": [
-    "9-6",
-    "5-3",
+    "10-6",
+    "6-3",
     "4-3"
    ]
   },
@@ -746,9 +763,9 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "10-6",
+    "10-7",
     "6-1",
-    "4-5"
+    "4-6"
    ],
    "away": [
     "12-5",
@@ -925,8 +942,8 @@
     "5-3"
    ],
    "away": [
-    "9-6",
-    "5-3",
+    "10-6",
+    "6-3",
     "4-3"
    ]
   },
@@ -1331,9 +1348,9 @@
     "0-8"
    ],
    "away": [
-    "10-6",
+    "10-7",
     "6-1",
-    "4-5"
+    "4-6"
    ]
   },
   "momios": null
@@ -1389,8 +1406,8 @@
     "2-5"
    ],
    "away": [
-    "9-6",
-    "5-3",
+    "10-6",
+    "6-3",
     "4-3"
    ]
   },
@@ -1737,9 +1754,9 @@
     "2-6"
    ],
    "away": [
-    "10-6",
+    "10-7",
     "6-1",
-    "4-5"
+    "4-6"
    ]
   },
   "momios": null
@@ -1935,8 +1952,8 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "9-6",
-    "5-3",
+    "10-6",
+    "6-3",
     "4-3"
    ],
    "away": [
@@ -2283,9 +2300,9 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "10-6",
+    "10-7",
     "6-1",
-    "4-5"
+    "4-6"
    ],
    "away": [
     "3-12",
