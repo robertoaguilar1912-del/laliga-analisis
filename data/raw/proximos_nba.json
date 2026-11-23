@@ -1,92 +1,5 @@
 [
  {
-  "id": "401910031",
-  "utc": "2026-11-23T00:00Z",
-  "fecha": "2026-11-22",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "WSH",
-  "visita": "ORL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Washington Wizards",
-  "visita_espn": "Orlando Magic",
-  "revisado": false,
-  "estadio": "Capital One Arena",
-  "records": {
-   "home": [
-    "6-11",
-    "2-5",
-    "4-6"
-   ],
-   "away": [
-    "7-8",
-    "1-5",
-    "6-3"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401910032",
-  "utc": "2026-11-23T00:00Z",
-  "fecha": "2026-11-22",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "DEN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "Denver Nuggets",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "4-11",
-    "1-5",
-    "3-6"
-   ],
-   "away": [
-    "9-5",
-    "4-3",
-    "4-2"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401910033",
-  "utc": "2026-11-23T00:00Z",
-  "fecha": "2026-11-22",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "UTAH",
-  "visita": "DAL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Utah Jazz",
-  "visita_espn": "Dallas Mavericks",
-  "revisado": false,
-  "estadio": "Delta Center",
-  "records": {
-   "home": [
-    "3-14",
-    "1-8",
-    "2-6"
-   ],
-   "away": [
-    "9-7",
-    "7-2",
-    "2-5"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910034",
   "utc": "2026-11-23T01:00Z",
   "fecha": "2026-11-22",
@@ -125,10 +38,10 @@
   "visita": "BOS",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Golden State Warriors",
   "visita_espn": "Boston Celtics",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Chase Center",
   "records": {
    "home": [
@@ -142,30 +55,7 @@
     "5-4"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    270,
-    -336
-   ],
-   "ml_abre": [
-    299,
-    -378
-   ],
-   "spread": [
-    8.5,
-    -114,
-    -8.5,
-    -106
-   ],
-   "spread_abre": 8.5,
-   "total": [
-    211.5,
-    -115,
-    -106
-   ],
-   "total_abre": 212.5
-  }
+  "momios": null
  },
  {
   "id": "401910036",
@@ -195,10 +85,10 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    132,
-    -157
+    136,
+    -162
    ],
    "ml_abre": [
     132,
@@ -206,13 +96,13 @@
    ],
    "spread": [
     3.5,
-    -110,
+    -109,
     -3.5,
-    -110
+    -111
    ],
    "spread_abre": 3.5,
    "total": [
-    218.5,
+    217.5,
     -110,
     -110
    ],
@@ -247,24 +137,24 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -144,
-    121
+    -155,
+    130
    ],
    "ml_abre": [
     -144,
     121
    ],
    "spread": [
-    -2.5,
-    -110,
-    2.5,
-    -110
+    -3.5,
+    -104,
+    3.5,
+    -116
    ],
    "spread_abre": -2.5,
    "total": [
-    228.5,
+    229.5,
     -110,
     -110
    ],
@@ -328,26 +218,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -479,
-    368
+    -537,
+    406
    ],
    "ml_abre": [
     -479,
     368
    ],
    "spread": [
-    -11.5,
-    -110,
-    11.5,
-    -110
+    -10.5,
+    -113,
+    10.5,
+    -107
    ],
    "spread_abre": -11.5,
    "total": [
-    225.5,
-    -105,
-    -115
+    223.5,
+    -110,
+    -110
    ],
    "total_abre": 224.5
   }
@@ -380,26 +270,26 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -578,
-    431
+    -670,
+    487
    ],
    "ml_abre": [
     -578,
     431
    ],
    "spread": [
-    -11.5,
+    -12.5,
     -110,
-    11.5,
+    12.5,
     -110
    ],
    "spread_abre": -11.5,
    "total": [
-    225.5,
-    -110,
-    -110
+    224.5,
+    -105,
+    -115
    ],
    "total_abre": 225.5
   }
@@ -460,7 +350,30 @@
     "3-3"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    126,
+    -150
+   ],
+   "ml_abre": [
+    125,
+    -149
+   ],
+   "spread": [
+    3.5,
+    -110,
+    -3.5,
+    -110
+   ],
+   "spread_abre": 3.5,
+   "total": [
+    234.5,
+    -106,
+    -114
+   ],
+   "total_abre": 232.5
+  }
  },
  {
   "id": "401910043",
@@ -490,24 +403,24 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
-    -610,
-    448
+    -700,
+    501
    ],
    "ml_abre": [
     -610,
     448
    ],
    "spread": [
-    -13.5,
-    -110,
-    13.5,
-    -110
+    -12.5,
+    -112,
+    12.5,
+    -108
    ],
    "spread_abre": -13.5,
    "total": [
-    225.5,
+    224.5,
     -110,
     -110
    ],
@@ -536,12 +449,35 @@
     "7-1"
    ],
    "away": [
-    "3-14",
-    "1-8",
+    "3-15",
+    "1-9",
     "2-6"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -800,
+    558
+   ],
+   "ml_abre": [
+    -700,
+    501
+   ],
+   "spread": [
+    -13.5,
+    -115,
+    13.5,
+    -105
+   ],
+   "spread_abre": -12.5,
+   "total": [
+    230.5,
+    -110,
+    -110
+   ],
+   "total_abre": 230.5
+  }
  },
  {
   "id": "401910045",
@@ -570,7 +506,30 @@
     "7-0"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    -467
+   ],
+   "ml_abre": [
+    348,
+    -448
+   ],
+   "spread": [
+    10.5,
+    -110,
+    -10.5,
+    -110
+   ],
+   "spread_abre": 10.5,
+   "total": [
+    224.5,
+    -110,
+    -110
+   ],
+   "total_abre": 224.5
+  }
  },
  {
   "id": "401909314",
@@ -589,9 +548,9 @@
   "estadio": "Kia Center",
   "records": {
    "home": [
-    "7-8",
+    "7-9",
     "1-5",
-    "6-3"
+    "6-4"
    ],
    "away": [
     "10-6",
@@ -618,8 +577,8 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "6-11",
-    "2-5",
+    "7-11",
+    "3-5",
     "4-6"
    ],
    "away": [
@@ -652,9 +611,9 @@
     "4-2"
    ],
    "away": [
-    "9-7",
+    "10-7",
     "7-2",
-    "2-5"
+    "3-5"
    ]
   },
   "momios": null
@@ -1116,9 +1075,9 @@
     "3-3"
    ],
    "away": [
-    "9-7",
+    "10-7",
     "7-2",
-    "2-5"
+    "3-5"
    ]
   },
   "momios": null
@@ -1169,8 +1128,8 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
-    "3-14",
-    "1-8",
+    "3-15",
+    "1-9",
     "2-6"
    ],
    "away": [
@@ -1256,14 +1215,14 @@
   "estadio": "Capital One Arena",
   "records": {
    "home": [
-    "6-11",
-    "2-5",
+    "7-11",
+    "3-5",
     "4-6"
    ],
    "away": [
-    "7-8",
+    "7-9",
     "1-5",
-    "6-3"
+    "6-4"
    ]
   },
   "momios": null
@@ -1488,8 +1447,8 @@
   "estadio": "Delta Center",
   "records": {
    "home": [
-    "3-14",
-    "1-8",
+    "3-15",
+    "1-9",
     "2-6"
    ],
    "away": [
@@ -1522,9 +1481,9 @@
     "7-3"
    ],
    "away": [
-    "7-8",
+    "7-9",
     "1-5",
-    "6-3"
+    "6-4"
    ]
   },
   "momios": null
@@ -1696,8 +1655,8 @@
     "1-7"
    ],
    "away": [
-    "6-11",
-    "2-5",
+    "7-11",
+    "3-5",
     "4-6"
    ]
   },
@@ -1807,9 +1766,9 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "9-7",
+    "10-7",
     "7-2",
-    "2-5"
+    "3-5"
    ],
    "away": [
     "11-5",
@@ -2073,8 +2032,8 @@
     "2-7"
    ],
    "away": [
-    "3-14",
-    "1-8",
+    "3-15",
+    "1-9",
     "2-6"
    ]
   },
@@ -2213,14 +2172,14 @@
   "estadio": "American Airlines Center",
   "records": {
    "home": [
-    "9-7",
+    "10-7",
     "7-2",
-    "2-5"
+    "3-5"
    ],
    "away": [
-    "7-8",
+    "7-9",
     "1-5",
-    "6-3"
+    "6-4"
    ]
   },
   "momios": null
@@ -2416,13 +2375,13 @@
   "estadio": "Kaseya Center",
   "records": {
    "home": [
-    "9-6",
-    "5-3",
+    "10-6",
+    "6-3",
     "4-3"
    ],
    "away": [
-    "6-11",
-    "2-5",
+    "7-11",
+    "3-5",
     "4-6"
    ]
   },
@@ -2508,8 +2467,8 @@
     "7-4"
    ],
    "away": [
-    "3-14",
-    "1-8",
+    "3-15",
+    "1-9",
     "2-6"
    ]
   },
