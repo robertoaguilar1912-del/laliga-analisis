@@ -1,7 +1,7 @@
 {
 "401841323": {
 "fotmob": 5103720,
-"visto": "2026-11-23T23:14+00:00",
+"visto": "2026-11-23T23:18+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -128,7 +128,7 @@
 },
 "401841326": {
 "fotmob": 5103715,
-"visto": "2026-11-23T23:14+00:00",
+"visto": "2026-11-23T23:18+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -219,8 +219,8 @@
 },
 "401841320": {
 "fotmob": 5103716,
-"visto": "2026-11-23T23:14+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-23T23:18+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -256,8 +256,8 @@
 "regreso": "hasta el 24 de noviembre",
 "duda": false,
 "valor": 0.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Vinicius Lira",
@@ -269,8 +269,8 @@
 "importante": false
 }
 ],
-"valor_xi": 15162584.0,
-"perdida": 1.5187603907091298,
+"valor_xi": 30368746.0,
+"perdida": 0.7582905135431012,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -285,15 +285,6 @@
 "importante": true
 },
 {
-"nombre": "João Pedro",
-"tipo": "Sanción",
-"regreso": "hasta el 24 de noviembre",
-"duda": false,
-"valor": 897039.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "José Enamorado",
 "tipo": "Sanción",
 "regreso": "hasta el 24 de noviembre",
@@ -301,10 +292,19 @@
 "valor": 1726400.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "João Pedro",
+"tipo": "Sanción",
+"regreso": "hasta el 24 de noviembre",
+"duda": false,
+"valor": 897039.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 29032041.0,
-"perdida": 0.3372046078331179,
+"valor_xi": 25353950.0,
+"perdida": 0.3507421526034405,
 "perdida_duda": 0.0
 }
 },
