@@ -122,6 +122,8 @@ def main(modo):
         _paso('análisis NBA', nba.analizar)
     print('- registro'); registro.actualizar()
     print('- página'); construir.main()
+    if modo == 'completo':      # el flujo mira esta hora: si pasan más de HORAS_COMPLETA sin completa, la próxima rápida va completa
+        (RAW.parent / 'ultima_completa.txt').write_text(ahora().strftime('%Y-%m-%dT%H:%MZ') + '\n')
     salida('si')
 
 

@@ -44,7 +44,13 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ "${{ github.event.schedule }}" = "*/15 * * * *" ] || [ "${{ github.event.inputs.modo }}" = "rapido" ]; then
+          # GitHub atrasa o se salta la corrida completa programada (22 nov 2026: la de las 5:07 a. m. salió a las 12:24 p. m.)
+          # y entonces las ligas sin partidos cerca quedaban con momios de medio día. Si la última completa tiene más de
+          # 6 horas, esta corrida (aunque sea rápida) se vuelve completa. La hora la escribe ejecutar.py.
+          ult=$(cat data/ultima_completa.txt 2>/dev/null || echo "1970-01-01T00:00Z")
+          edad=$(( $(date -u +%s) - $(date -u -d "$ult" +%s 2>/dev/null || echo 0) ))
+          echo "Última completa: $ult (hace $((edad / 3600)) h)"
+          if { [ "${{ github.event.schedule }}" = "*/15 * * * *" ] || [ "${{ github.event.inputs.modo }}" = "rapido" ]; } && [ "$edad" -le 21600 ]; then
             echo "modo=rapido" >> "$GITHUB_OUTPUT"
             python src/revisar.py
           else
