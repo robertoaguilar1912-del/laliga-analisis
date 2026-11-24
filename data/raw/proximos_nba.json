@@ -1,92 +1,5 @@
 [
  {
-  "id": "401910038",
-  "utc": "2026-11-24T00:30Z",
-  "fecha": "2026-11-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "IND",
-  "visita": "OKC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Indiana Pacers",
-  "visita_espn": "Oklahoma City Thunder",
-  "revisado": false,
-  "estadio": "Gainbridge Fieldhouse",
-  "records": {
-   "home": [
-    "5-12",
-    "2-5",
-    "3-6"
-   ],
-   "away": [
-    "10-7",
-    "6-1",
-    "4-6"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401910039",
-  "utc": "2026-11-24T00:30Z",
-  "fecha": "2026-11-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "TOR",
-  "visita": "MIL",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Toronto Raptors",
-  "visita_espn": "Milwaukee Bucks",
-  "revisado": false,
-  "estadio": "Scotiabank Arena",
-  "records": {
-   "home": [
-    "6-10",
-    "2-6",
-    "4-4"
-   ],
-   "away": [
-    "1-16",
-    "1-8",
-    "0-8"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401910040",
-  "utc": "2026-11-24T00:30Z",
-  "fecha": "2026-11-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "MIN",
-  "visita": "BKN",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Minnesota Timberwolves",
-  "visita_espn": "Brooklyn Nets",
-  "revisado": false,
-  "estadio": "Target Center",
-  "records": {
-   "home": [
-    "12-5",
-    "8-3",
-    "4-2"
-   ],
-   "away": [
-    "3-12",
-    "1-6",
-    "2-6"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910041",
   "utc": "2026-11-24T01:00Z",
   "fecha": "2026-11-23",
@@ -154,7 +67,7 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "LA Clippers",
   "revisado": false,
@@ -201,7 +114,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -750,
     530
@@ -211,16 +124,16 @@
     501
    ],
    "spread": [
-    -12.5,
-    -117,
-    12.5,
-    -103
+    -13.5,
+    -103,
+    13.5,
+    -117
    ],
    "spread_abre": -12.5,
    "total": [
-    225.5,
-    -106,
-    -115
+    224.5,
+    -113,
+    -107
    ],
    "total_abre": 230.5
   }
@@ -253,7 +166,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     249,
     -308
@@ -270,9 +183,9 @@
    ],
    "spread_abre": 10.5,
    "total": [
-    223.5,
-    -108,
-    -112
+    222.5,
+    -115,
+    -105
    ],
    "total_abre": 224.5
   }
@@ -305,7 +218,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     106,
     -125
@@ -357,7 +270,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     351,
     -453
@@ -409,7 +322,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -322,
     260
@@ -537,13 +450,13 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "10-7",
+    "10-8",
     "6-1",
-    "4-6"
+    "4-7"
    ],
    "away": [
-    "12-5",
-    "8-3",
+    "13-5",
+    "9-3",
     "4-2"
    ]
   },
@@ -595,14 +508,14 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-16",
+    "2-16",
     "1-8",
-    "0-8"
+    "1-8"
    ],
    "away": [
-    "3-12",
+    "3-13",
     "1-6",
-    "2-6"
+    "2-7"
    ]
   },
   "momios": null
@@ -745,9 +658,9 @@
     "7-3"
    ],
    "away": [
-    "1-16",
+    "2-16",
     "1-8",
-    "0-8"
+    "1-8"
    ]
   },
   "momios": null
@@ -769,8 +682,8 @@
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
-    "5-12",
-    "2-5",
+    "6-12",
+    "3-5",
     "3-6"
    ],
    "away": [
@@ -803,9 +716,9 @@
     "4-4"
    ],
    "away": [
-    "3-12",
+    "3-13",
     "1-6",
-    "2-6"
+    "2-7"
    ]
   },
   "momios": null
@@ -856,8 +769,8 @@
   "estadio": "Target Center",
   "records": {
    "home": [
-    "12-5",
-    "8-3",
+    "13-5",
+    "9-3",
     "4-2"
    ],
    "away": [
@@ -1064,9 +977,9 @@
     "1-7"
    ],
    "away": [
-    "3-12",
+    "3-13",
     "1-6",
-    "2-6"
+    "2-7"
    ]
   },
   "momios": null
@@ -1093,8 +1006,8 @@
     "3-6"
    ],
    "away": [
-    "5-12",
-    "2-5",
+    "6-12",
+    "3-5",
     "3-6"
    ]
   },
@@ -1117,14 +1030,14 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-16",
+    "2-16",
     "1-8",
-    "0-8"
+    "1-8"
    ],
    "away": [
-    "10-7",
+    "10-8",
     "6-1",
-    "4-6"
+    "4-7"
    ]
   },
   "momios": null
@@ -1441,8 +1354,8 @@
     "1-5"
    ],
    "away": [
-    "12-5",
-    "8-3",
+    "13-5",
+    "9-3",
     "4-2"
    ]
   },
@@ -1523,14 +1436,14 @@
   "estadio": "Barclays Center",
   "records": {
    "home": [
-    "3-12",
+    "3-13",
     "1-6",
-    "2-6"
+    "2-7"
    ],
    "away": [
-    "10-7",
+    "10-8",
     "6-1",
-    "4-6"
+    "4-7"
    ]
   },
   "momios": null
@@ -1610,9 +1523,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-16",
+    "2-16",
     "1-8",
-    "0-8"
+    "1-8"
    ],
    "away": [
     "14-3",
@@ -1673,8 +1586,8 @@
     "2-5"
    ],
    "away": [
-    "5-12",
-    "2-5",
+    "6-12",
+    "3-5",
     "3-6"
    ]
   },
@@ -1876,8 +1789,8 @@
     "8-4"
    ],
    "away": [
-    "12-5",
-    "8-3",
+    "13-5",
+    "9-3",
     "4-2"
    ]
   },
@@ -2016,9 +1929,9 @@
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
-    "1-16",
+    "2-16",
     "1-8",
-    "0-8"
+    "1-8"
    ],
    "away": [
     "11-6",
@@ -2074,14 +1987,14 @@
   "estadio": "Paycom Center",
   "records": {
    "home": [
-    "10-7",
+    "10-8",
     "6-1",
-    "4-6"
+    "4-7"
    ],
    "away": [
-    "3-12",
+    "3-13",
     "1-6",
-    "2-6"
+    "2-7"
    ]
   },
   "momios": null
@@ -2137,8 +2050,8 @@
     "0-7"
    ],
    "away": [
-    "12-5",
-    "8-3",
+    "13-5",
+    "9-3",
     "4-2"
    ]
   },
@@ -2166,8 +2079,8 @@
     "6-3"
    ],
    "away": [
-    "5-12",
-    "2-5",
+    "6-12",
+    "3-5",
     "3-6"
    ]
   },
