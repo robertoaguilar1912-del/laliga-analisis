@@ -9,10 +9,10 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Memphis Grizzlies",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Spectrum Center",
   "records": {
    "home": [
@@ -26,30 +26,7 @@
     "8-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    125,
-    -148
-   ],
-   "ml_abre": [
-    132,
-    -157
-   ],
-   "spread": [
-    2.5,
-    -105,
-    -2.5,
-    -116
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    213.5,
-    -107,
-    -113
-   ],
-   "total_abre": 218.5
-  }
+  "momios": null
  },
  {
   "id": "401910037",
@@ -61,10 +38,10 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Portland Trail Blazers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Xfinity Mobile Arena",
   "records": {
    "home": [
@@ -78,30 +55,7 @@
     "7-4"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -108,
-    -110
-   ],
-   "ml_abre": [
-    -144,
-    121
-   ],
-   "spread": [
-    1.5,
-    -120,
-    -1.5,
-    -101
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    230.5,
-    -115,
-    -105
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401910038",
@@ -575,7 +529,30 @@
     "5-5"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    351,
+    -453
+   ],
+   "ml_abre": [
+    164,
+    -198
+   ],
+   "spread": [
+    10.5,
+    -110,
+    -10.5,
+    -110
+   ],
+   "spread_abre": 5.5,
+   "total": [
+    216.5,
+    -110,
+    -110
+   ],
+   "total_abre": 230.5
+  }
  },
  {
   "id": "401909316",
