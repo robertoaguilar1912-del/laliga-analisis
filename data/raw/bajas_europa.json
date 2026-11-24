@@ -1,7 +1,7 @@
 {
 "401915506": {
 "fotmob": 6112357,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [],
@@ -64,7 +64,7 @@
 },
 "401915519": {
 "fotmob": 6112348,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -137,7 +137,7 @@
 },
 "401915517": {
 "fotmob": 6112290,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -201,7 +201,7 @@
 },
 "401915507": {
 "fotmob": 6112277,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -247,7 +247,7 @@
 },
 "401915521": {
 "fotmob": 6112266,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -310,6 +310,15 @@
 "duda": true,
 "valor": 56878760.0,
 "titular": true,
+"importante": true
+},
+{
+"nombre": "Strahinja Pavlović",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 42008094.0,
+"titular": false,
 "importante": true
 },
 {
@@ -378,12 +387,12 @@
 ],
 "valor_xi": 268874299.0,
 "perdida": 0.0,
-"perdida_duda": 0.21154405687543978
+"perdida_duda": 0.36778098303847184
 }
 },
 "401915520": {
 "fotmob": 6112297,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -474,7 +483,7 @@
 },
 "401915508": {
 "fotmob": 6112288,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -540,6 +549,15 @@
 "importante": false
 },
 {
+"nombre": "Mateusz Pruchniewski",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 811360.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Alex Douglas",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -574,7 +592,7 @@
 },
 "401915518": {
 "fotmob": 6112282,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -611,7 +629,7 @@
 },
 "401915504": {
 "fotmob": 6112322,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -702,7 +720,7 @@
 },
 "401915516": {
 "fotmob": 6112280,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -748,7 +766,7 @@
 },
 "401915502": {
 "fotmob": 6112252,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -762,29 +780,11 @@
 "importante": false
 },
 {
-"nombre": "Kerim Alajbegović",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 42839424.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Khéphren Thuram-Ulien",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
 "duda": false,
 "valor": 39965969.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Pierre Kalulu",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 37751672.0,
 "titular": false,
 "importante": false
 },
@@ -798,20 +798,38 @@
 "importante": false
 },
 {
-"nombre": "Nicolás González",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 22712118.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Kamil Grabara",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 11631902.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Kerim Alajbegović",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 42839424.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Pierre Kalulu",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 37751672.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Nicolás González",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 22712118.0,
 "titular": false,
 "importante": false
 }
@@ -839,7 +857,7 @@
 },
 "401915501": {
 "fotmob": 6112261,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -921,7 +939,7 @@
 },
 "401915505": {
 "fotmob": 6112367,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -994,7 +1012,7 @@
 },
 "401915503": {
 "fotmob": 6112371,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1085,7 +1103,7 @@
 },
 "401915514": {
 "fotmob": 6112302,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1185,7 +1203,7 @@
 },
 "401915513": {
 "fotmob": 6112332,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1258,7 +1276,7 @@
 },
 "401915512": {
 "fotmob": 6112359,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1313,7 +1331,7 @@
 },
 "401915515": {
 "fotmob": 6112352,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [

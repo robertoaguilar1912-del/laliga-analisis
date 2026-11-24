@@ -1,12 +1,22 @@
 {
 "401882791": {
 "fotmob": 5868146,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Manuel Sánchez",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 5934655.0,
+"titular": true,
+"importante": true
+}
+],
 "valor_xi": 33414828.0,
-"perdida": 0.0,
+"perdida": 0.17760543313285945,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -46,7 +56,7 @@
 },
 "401882796": {
 "fotmob": 5868141,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -110,7 +120,7 @@
 },
 "401882790": {
 "fotmob": 5868147,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +202,7 @@
 },
 "401882793": {
 "fotmob": 5868144,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -204,6 +214,24 @@
 "valor": 2133467.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Rubén Sánchez",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 1368194.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Thomas Lemar",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 1294438.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Ali Houary",
@@ -231,11 +259,11 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Marc Pubill",
+"nombre": "Cristian Romero",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
+"regreso": "principios de diciembre",
 "duda": false,
-"valor": 65375026.0,
+"valor": 40445981.0,
 "titular": false,
 "importante": true
 },
@@ -249,11 +277,11 @@
 "importante": true
 },
 {
-"nombre": "Cristian Romero",
+"nombre": "Marc Pubill",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 40445981.0,
+"valor": 65375026.0,
 "titular": false,
 "importante": true
 },
@@ -268,13 +296,13 @@
 }
 ],
 "valor_xi": 386335280.0,
-"perdida": 0.27337095643970183,
-"perdida_duda": 0.10469139913911046
+"perdida": 0.20884398649794553,
+"perdida_duda": 0.16921836908086677
 }
 },
 "401882789": {
 "fotmob": 5868148,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -356,7 +384,7 @@
 },
 "401882787": {
 "fotmob": 5868150,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -447,7 +475,7 @@
 },
 "401882794": {
 "fotmob": 5868143,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -495,15 +523,6 @@
 "importante": false
 },
 {
-"nombre": "Rodri",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 53364886.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Xavi Espart",
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
@@ -538,6 +557,15 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Rodri",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 53364886.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 0.0,
@@ -547,7 +575,7 @@
 },
 "401882795": {
 "fotmob": 5868142,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -604,20 +632,20 @@
 "importante": false
 },
 {
+"nombre": "Nathan Saliba",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 18089620.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Alassane Diatta",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 1066843.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Nathan Saliba",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 18089620.0,
 "titular": false,
 "importante": false
 },
@@ -656,7 +684,7 @@
 },
 "401882788": {
 "fotmob": 5868149,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -747,7 +775,7 @@
 },
 "401882792": {
 "fotmob": 5868145,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    245,
-    215
+    -120,
+    270,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     105
+     -125
     ],
     [
      "+0.5",
-     -145
+     -115
     ]
    ]
   }
@@ -44,23 +44,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    150,
+    145,
     280,
-    135
+    140
    ],
    "ou_linea": 3.5,
    "ou": [
     -125,
-    -110
+    -105
    ],
    "spread": [
     [
      "+0.5",
-     -185
+     -190
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
@@ -89,11 +89,11 @@
    "spread": [
     [
      "+0.5",
-     -180
+     -185
     ],
     [
      "-0.5",
-     120
+     125
     ]
    ]
   }
@@ -117,16 +117,16 @@
    "ou_linea": 3.5,
    "ou": [
     -115,
-    -115
+    -120
    ],
    "spread": [
     [
      "+0.5",
-     -170
+     -180
     ],
     [
      "-0.5",
-     115
+     120
     ]
    ]
   }
@@ -187,9 +187,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    180,
-    250,
-    125
+    210,
+    265,
+    105
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -199,11 +199,11 @@
    "spread": [
     [
      "+0.5",
-     -170
+     -140
     ],
     [
      "-0.5",
-     115
+     -105
     ]
    ]
   }
@@ -217,7 +217,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -145,
+    300,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -150
+    ],
+    [
+     "+0.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401933721",
@@ -251,17 +273,6 @@
     ]
    ]
   }
- },
- {
-  "id": "401933717",
-  "utc": "2026-12-02T20:00Z",
-  "estadio": "BC Place",
-  "local_espn": "Vancouver Whitecaps",
-  "visita_espn": "Real Salt Lake",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "western-conference-playoffs---round-one",
-  "neutral": false,
-  "momios": null
  },
  {
   "id": "401933719",
@@ -324,6 +335,17 @@
   "estadio": "Energizer Park",
   "local_espn": "St. Louis CITY SC",
   "visita_espn": "LAFC",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "western-conference-playoffs---round-one",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401933717",
+  "utc": "2026-12-03T02:00Z",
+  "estadio": "BC Place",
+  "local_espn": "Vancouver Whitecaps",
+  "visita_espn": "Real Salt Lake",
   "estado": "STATUS_SCHEDULED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,

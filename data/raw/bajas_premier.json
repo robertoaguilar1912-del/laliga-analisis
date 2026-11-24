@@ -1,7 +1,7 @@
 {
 "401879225": {
 "fotmob": 5795533,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -101,7 +101,7 @@
 },
 "401879227": {
 "fotmob": 5795531,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401879226": {
 "fotmob": 5795532,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -215,13 +215,13 @@
 "importante": true
 },
 {
-"nombre": "Leny Yoro",
-"tipo": "Sanción",
-"regreso": "hasta el 5 de diciembre",
+"nombre": "Marcus Rashford",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
 "duda": false,
-"valor": 58299854.0,
-"titular": true,
-"importante": true
+"valor": 36736997.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Manuel Ugarte",
@@ -233,15 +233,6 @@
 "importante": false
 },
 {
-"nombre": "Marcus Rashford",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 36736997.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Luke Shaw",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -249,10 +240,19 @@
 "valor": 5791720.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Karl Darlow",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 888336.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 533677856.0,
-"perdida": 0.3821754579226911,
+"perdida": 0.27293379959913494,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -319,7 +319,7 @@
 },
 "401878752": {
 "fotmob": 5795530,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -383,10 +383,20 @@
 },
 "401879229": {
 "fotmob": 5795528,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "James Tarkowski",
+"tipo": "Sanción",
+"regreso": "hasta el 6 de diciembre",
+"duda": false,
+"valor": 5000354.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 0.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
@@ -399,6 +409,15 @@
 "regreso": "principios de enero de 2027",
 "duda": false,
 "valor": 70875948.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Cody Gakpo",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 74912371.0,
 "titular": false,
 "importante": false
 },
@@ -437,7 +456,7 @@
 },
 "401879231": {
 "fotmob": 5795526,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -528,7 +547,7 @@
 },
 "401879230": {
 "fotmob": 5795527,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -646,7 +665,7 @@
 },
 "401879228": {
 "fotmob": 5795529,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -710,7 +729,7 @@
 },
 "401879224": {
 "fotmob": 5795534,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -828,7 +847,7 @@
 },
 "401878753": {
 "fotmob": 5795525,
-"visto": "2026-11-24T06:21+00:00",
+"visto": "2026-11-24T16:41+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -853,8 +872,8 @@
 {
 "nombre": "David Raya",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "una semana",
+"duda": false,
 "valor": 23534518.0,
 "titular": false,
 "importante": false
