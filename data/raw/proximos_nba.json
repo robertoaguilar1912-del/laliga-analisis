@@ -1,34 +1,5 @@
 [
  {
-  "id": "401910043",
-  "utc": "2026-11-24T01:30Z",
-  "fecha": "2026-11-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "HOU",
-  "visita": "LAC",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Houston Rockets",
-  "visita_espn": "LA Clippers",
-  "revisado": false,
-  "estadio": "Toyota Center (Houston)",
-  "records": {
-   "home": [
-    "12-5",
-    "7-1",
-    "5-4"
-   ],
-   "away": [
-    "4-11",
-    "4-4",
-    "0-7"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910044",
   "utc": "2026-11-24T03:00Z",
   "fecha": "2026-11-23",
@@ -67,7 +38,7 @@
   "visita": "SA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Sacramento Kings",
   "visita_espn": "San Antonio Spurs",
   "revisado": false,
@@ -116,18 +87,18 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    106,
-    -125
+    110,
+    -130
    ],
    "ml_abre": [
     106,
     -125
    ],
    "spread": [
-    1.5,
-    -106,
-    -1.5,
-    -114
+    2.5,
+    -116,
+    -2.5,
+    -104
    ],
    "spread_abre": 1.5,
    "total": [
@@ -380,9 +351,9 @@
     "9-1"
    ],
    "away": [
-    "4-11",
+    "4-12",
     "4-4",
-    "0-7"
+    "0-8"
    ]
   },
   "momios": null
@@ -433,8 +404,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "12-5",
-    "7-1",
+    "13-5",
+    "8-1",
     "5-4"
    ],
    "away": [
@@ -781,9 +752,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "4-11",
+    "4-12",
     "4-4",
-    "0-7"
+    "0-8"
    ],
    "away": [
     "5-14",
@@ -955,8 +926,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "12-5",
-    "7-1",
+    "13-5",
+    "8-1",
     "5-4"
    ],
    "away": [
@@ -1076,9 +1047,9 @@
     "2-6"
    ],
    "away": [
-    "8-7",
+    "9-7",
     "5-4",
-    "3-3"
+    "4-3"
    ]
   },
   "momios": null
@@ -1192,8 +1163,8 @@
     "8-4"
    ],
    "away": [
-    "5-13",
-    "4-7",
+    "5-14",
+    "4-8",
     "1-6"
    ]
   },
@@ -1221,9 +1192,9 @@
     "2-7"
    ],
    "away": [
-    "4-11",
+    "4-12",
     "4-4",
-    "0-7"
+    "0-8"
    ]
   },
   "momios": null
@@ -1361,8 +1332,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "12-5",
-    "7-1",
+    "13-5",
+    "8-1",
     "5-4"
    ],
    "away": [
@@ -1453,8 +1424,8 @@
     "1-5"
    ],
    "away": [
-    "5-13",
-    "4-7",
+    "5-14",
+    "4-8",
     "1-6"
    ]
   },
@@ -1593,8 +1564,8 @@
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
-    "12-5",
-    "7-1",
+    "13-5",
+    "8-1",
     "5-4"
    ],
    "away": [
@@ -1622,14 +1593,14 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "8-7",
+    "9-7",
     "5-4",
-    "3-3"
+    "4-3"
    ],
    "away": [
-    "4-11",
+    "4-12",
     "4-4",
-    "0-7"
+    "0-8"
    ]
   },
   "momios": null
@@ -1854,8 +1825,8 @@
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
-    "5-13",
-    "4-7",
+    "5-14",
+    "4-8",
     "1-6"
    ],
    "away": [
@@ -1912,9 +1883,9 @@
   "estadio": "Mortgage Matchup Center",
   "records": {
    "home": [
-    "8-7",
+    "9-7",
     "5-4",
-    "3-3"
+    "4-3"
    ],
    "away": [
     "2-14",
@@ -1941,9 +1912,9 @@
   "estadio": "Intuit Dome",
   "records": {
    "home": [
-    "4-11",
+    "4-12",
     "4-4",
-    "0-7"
+    "0-8"
    ],
    "away": [
     "13-5",
