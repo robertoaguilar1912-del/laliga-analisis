@@ -1,34 +1,5 @@
 [
  {
-  "id": "401910041",
-  "utc": "2026-11-24T01:00Z",
-  "fecha": "2026-11-23",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "CHI",
-  "visita": "CLE",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Chicago Bulls",
-  "visita_espn": "Cleveland Cavaliers",
-  "revisado": false,
-  "estadio": "United Center",
-  "records": {
-   "home": [
-    "4-12",
-    "1-6",
-    "3-6"
-   ],
-   "away": [
-    "9-8",
-    "7-3",
-    "2-5"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910042",
   "utc": "2026-11-24T01:00Z",
   "fecha": "2026-11-23",
@@ -38,7 +9,7 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Phoenix Suns",
   "revisado": false,
@@ -96,10 +67,10 @@
   "visita": "UTAH",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Utah Jazz",
-  "revisado": true,
+  "revisado": false,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -113,30 +84,7 @@
     "2-6"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -750,
-    530
-   ],
-   "ml_abre": [
-    -700,
-    501
-   ],
-   "spread": [
-    -13.5,
-    -103,
-    13.5,
-    -117
-   ],
-   "spread_abre": -12.5,
-   "total": [
-    224.5,
-    -113,
-    -107
-   ],
-   "total_abre": 230.5
-  }
+  "momios": null
  },
  {
   "id": "401910045",
@@ -148,10 +96,10 @@
   "visita": "SA",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Sacramento Kings",
   "visita_espn": "San Antonio Spurs",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -165,30 +113,7 @@
     "7-0"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    249,
-    -308
-   ],
-   "ml_abre": [
-    348,
-    -448
-   ],
-   "spread": [
-    8.5,
-    -115,
-    -8.5,
-    -105
-   ],
-   "spread_abre": 10.5,
-   "total": [
-    222.5,
-    -115,
-    -105
-   ],
-   "total_abre": 224.5
-  }
+  "momios": null
  },
  {
   "id": "401909314",
@@ -397,8 +322,8 @@
     "1-7"
    ],
    "away": [
-    "4-12",
-    "1-6",
+    "5-12",
+    "2-6",
     "3-6"
    ]
   },
@@ -426,9 +351,9 @@
     "5-3"
    ],
    "away": [
-    "9-8",
+    "9-9",
     "7-3",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -711,8 +636,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "6-10",
-    "2-6",
+    "6-11",
+    "2-7",
     "4-4"
    ],
    "away": [
@@ -1001,8 +926,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "4-12",
-    "1-6",
+    "5-12",
+    "2-6",
     "3-6"
    ],
    "away": [
@@ -1088,9 +1013,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "9-8",
+    "9-9",
     "7-3",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "10-6",
@@ -1262,8 +1187,8 @@
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
-    "6-10",
-    "2-6",
+    "6-11",
+    "2-7",
     "4-4"
    ],
    "away": [
@@ -1581,9 +1506,9 @@
   "estadio": "Rocket Arena",
   "records": {
    "home": [
-    "9-8",
+    "9-9",
     "7-3",
-    "2-5"
+    "2-6"
    ],
    "away": [
     "6-12",
@@ -1668,8 +1593,8 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "4-12",
-    "1-6",
+    "5-12",
+    "2-6",
     "3-6"
    ],
    "away": [
@@ -1702,8 +1627,8 @@
     "5-4"
    ],
    "away": [
-    "6-10",
-    "2-6",
+    "6-11",
+    "2-7",
     "4-4"
    ]
   },
@@ -2132,14 +2057,14 @@
   "estadio": "United Center",
   "records": {
    "home": [
-    "4-12",
-    "1-6",
+    "5-12",
+    "2-6",
     "3-6"
    ],
    "away": [
-    "9-8",
+    "9-9",
     "7-3",
-    "2-5"
+    "2-6"
    ]
   },
   "momios": null
@@ -2166,8 +2091,8 @@
     "7-0"
    ],
    "away": [
-    "6-10",
-    "2-6",
+    "6-11",
+    "2-7",
     "4-4"
    ]
   },
