@@ -9,7 +9,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -38,7 +38,7 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Portland Trail Blazers",
   "revisado": false,
@@ -154,10 +154,10 @@
   "visita": "CLE",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Chicago Bulls",
   "visita_espn": "Cleveland Cavaliers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "United Center",
   "records": {
    "home": [
@@ -171,30 +171,7 @@
     "2-5"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    282,
-    -352
-   ],
-   "ml_abre": [
-    284,
-    -356
-   ],
-   "spread": [
-    8.5,
-    -105,
-    -8.5,
-    -115
-   ],
-   "spread_abre": 9.5,
-   "total": [
-    240.5,
-    -108,
-    -112
-   ],
-   "total_abre": 241.5
-  }
+  "momios": null
  },
  {
   "id": "401910042",
@@ -206,10 +183,10 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New Orleans Pelicans",
   "visita_espn": "Phoenix Suns",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Smoothie King Center",
   "records": {
    "home": [
@@ -223,30 +200,7 @@
     "3-3"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    131,
-    -155
-   ],
-   "ml_abre": [
-    125,
-    -149
-   ],
-   "spread": [
-    3.5,
-    -115,
-    -3.5,
-    -105
-   ],
-   "spread_abre": 3.5,
-   "total": [
-    232.5,
-    -108,
-    -112
-   ],
-   "total_abre": 232.5
-  }
+  "momios": null
  },
  {
   "id": "401910043",
