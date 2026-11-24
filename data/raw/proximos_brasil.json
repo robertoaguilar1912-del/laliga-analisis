@@ -5,7 +5,7 @@
   "estadio": "Estadio Beira-Rio",
   "local_espn": "Internacional",
   "visita_espn": "Vitória",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Joao Havelange Stadium",
   "local_espn": "Botafogo",
   "visita_espn": "São Paulo",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
@@ -303,20 +303,20 @@
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "Santos",
   "visita_espn": "Grêmio",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -155,
-    320,
+    -150,
+    310,
     370
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    135,
-    -180
+    -175,
+    130
    ],
    "spread": [
     [
@@ -458,9 +458,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    195,
+    190,
     235,
-    135
+    140
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -470,11 +470,11 @@
    "spread": [
     [
      "+0.5",
-     -175
+     -180
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }
