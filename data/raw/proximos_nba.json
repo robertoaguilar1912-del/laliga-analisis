@@ -9,7 +9,7 @@
   "visita": "MEM",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Charlotte Hornets",
   "visita_espn": "Memphis Grizzlies",
   "revisado": false,
@@ -38,7 +38,7 @@
   "visita": "POR",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Philadelphia 76ers",
   "visita_espn": "Portland Trail Blazers",
   "revisado": false,
@@ -212,10 +212,10 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "LA Clippers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -229,30 +229,7 @@
     "0-7"
    ]
   },
-  "momios": {
-   "casa": "Draft Kings",
-   "ml": [
-    -700,
-    504
-   ],
-   "ml_abre": [
-    -610,
-    448
-   ],
-   "spread": [
-    -13.5,
-    -105,
-    13.5,
-    -115
-   ],
-   "spread_abre": -13.5,
-   "total": [
-    223.5,
-    -107,
-    -113
-   ],
-   "total_abre": 225.5
-  }
+  "momios": null
  },
  {
   "id": "401910044",
@@ -267,7 +244,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Los Angeles Lakers",
   "visita_espn": "Utah Jazz",
-  "revisado": false,
+  "revisado": true,
   "estadio": "crypto.com Arena",
   "records": {
    "home": [
@@ -284,24 +261,24 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    -800,
-    558
+    -750,
+    530
    ],
    "ml_abre": [
     -700,
     501
    ],
    "spread": [
-    -13.5,
-    -114,
-    13.5,
-    -106
+    -12.5,
+    -116,
+    12.5,
+    -104
    ],
    "spread_abre": -12.5,
    "total": [
-    225.5,
-    -107,
-    -113
+    224.5,
+    -113,
+    -107
    ],
    "total_abre": 230.5
   }
@@ -319,7 +296,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Sacramento Kings",
   "visita_espn": "San Antonio Spurs",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Golden 1 Center",
   "records": {
    "home": [
@@ -336,17 +313,17 @@
   "momios": {
    "casa": "Draft Kings",
    "ml": [
-    467,
-    -640
+    249,
+    -308
    ],
    "ml_abre": [
     348,
     -448
    ],
    "spread": [
-    12.5,
+    8.5,
     -115,
-    -12.5,
+    -8.5,
     -105
    ],
    "spread_abre": 10.5,
