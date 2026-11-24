@@ -1,11 +1,11 @@
 {
 "401882791": {
 "fotmob": 5868146,
-"visto": "2026-11-24T04:47+00:00",
-"xi": "unavailable",
+"visto": "2026-11-24T06:21+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [],
-"valor_xi": 0.0,
+"valor_xi": 33414828.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -18,7 +18,7 @@
 "duda": false,
 "valor": 7498070.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Maguette Gueye",
@@ -39,15 +39,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 79845261.0,
+"perdida": 0.09390751443595381,
 "perdida_duda": 0.0
 }
 },
 "401882796": {
 "fotmob": 5868141,
-"visto": "2026-11-24T04:47+00:00",
-"xi": "unavailable",
+"visto": "2026-11-24T06:21+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -69,7 +69,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 151132033.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -82,7 +82,7 @@
 "duda": false,
 "valor": 4980184.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Óscar Valentín",
@@ -103,15 +103,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 57593867.0,
+"perdida": 0.08647073480931572,
 "perdida_duda": 0.0
 }
 },
 "401882790": {
 "fotmob": 5868147,
-"visto": "2026-11-24T04:47+00:00",
-"xi": "unavailable",
+"visto": "2026-11-24T06:21+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -121,7 +121,16 @@
 "duda": false,
 "valor": 1403686.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Aarón Ochoa",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1303214.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Fernando Calero",
@@ -131,20 +140,11 @@
 "valor": 1151057.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Aarón Ochoa",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1303214.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 16992101.0,
+"perdida": 0.08260814833904295,
+"perdida_duda": 0.07669528329663294
 },
 "visita": {
 "faltan": [
@@ -155,7 +155,7 @@
 "duda": false,
 "valor": 22712914.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Gorka Guruzeta",
@@ -185,32 +185,32 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 159816888.0,
+"perdida": 0.14211835985693827,
 "perdida_duda": 0.0
 }
 },
 "401882793": {
 "fotmob": 5868144,
-"visto": "2026-11-24T04:47+00:00",
-"xi": "unavailable",
+"visto": "2026-11-24T06:21+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Ali Houary",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 929336.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Marc Aguado",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 2133467.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Ali Houary",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 929336.0,
 "titular": false,
 "importante": false
 },
@@ -224,9 +224,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 22830231.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.0934492077631628
 },
 "visita": {
 "faltan": [
@@ -237,7 +237,7 @@
 "duda": false,
 "valor": 65375026.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ademola Lookman",
@@ -246,7 +246,16 @@
 "duda": false,
 "valor": 40237819.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Cristian Romero",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 40445981.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Jorge Domínguez",
@@ -256,26 +265,17 @@
 "valor": 9145335.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Cristian Romero",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 40445981.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 386335280.0,
+"perdida": 0.27337095643970183,
+"perdida_duda": 0.10469139913911046
 }
 },
 "401882789": {
 "fotmob": 5868148,
-"visto": "2026-11-24T04:47+00:00",
-"xi": "unavailable",
+"visto": "2026-11-24T06:21+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -315,7 +315,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 785424222.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -349,14 +349,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 46135487.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882787": {
 "fotmob": 5868150,
-"visto": "2026-11-24T04:47+00:00",
+"visto": "2026-11-24T06:21+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -447,7 +447,7 @@
 },
 "401882794": {
 "fotmob": 5868143,
-"visto": "2026-11-24T04:47+00:00",
+"visto": "2026-11-24T06:21+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -547,7 +547,7 @@
 },
 "401882795": {
 "fotmob": 5868142,
-"visto": "2026-11-24T04:47+00:00",
+"visto": "2026-11-24T06:21+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -656,7 +656,7 @@
 },
 "401882788": {
 "fotmob": 5868149,
-"visto": "2026-11-24T04:47+00:00",
+"visto": "2026-11-24T06:21+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -747,7 +747,7 @@
 },
 "401882792": {
 "fotmob": 5868145,
-"visto": "2026-11-24T04:47+00:00",
+"visto": "2026-11-24T06:21+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
