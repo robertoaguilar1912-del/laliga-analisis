@@ -28,14 +28,15 @@ import oddsapi
 import xg
 import alineacion
 from alineacion import peso_rotacion, peso_once, peso_bajas_hab
-from ancla import anclar, ANCLA_COPAS
+from ancla import anclar, ANCLA_COPAS, ancla_copa
 
 
 def peso_ancla(liga):
-    """Peso del modelo frente al mercado (ancla.anclar): ANCLA_COPAS en las copas, 'ancla' de config.py en las ligas que lo
-    tienen (MLS y Eliteserien, 11 nov 2026); None = el modelo tal cual."""
+    """Peso del modelo frente al mercado (ancla.anclar): ancla_copa en las copas (0.25; Europa League y Conference 0.10
+    desde el 24 nov 2026), 'ancla' de config.py en las ligas que lo tienen (MLS y Eliteserien, 11 nov 2026); None = el
+    modelo tal cual."""
     L = LIGAS.get(liga) or {}
-    return ANCLA_COPAS if L.get('region') else L.get('ancla')
+    return ancla_copa(liga) if L.get('region') else L.get('ancla')
 
 PICK_EV, MAYBE_EV = 0.05, 0.0
 TRAMOS = ['0-15', '16-30', '31-45', '46-60', '61-75', '76-90']
@@ -298,7 +299,8 @@ def analizar_partidos(liga, prox, mapa, nombre, nuevos, modelo, corners_model, e
                     f"{abs(fg - 1) * 100:.0f}% {'más' if fg > 1 else 'menos'} goles que con la fuerza de los equipos sola.")
         if anclado and LIGAS[liga].get('region'):
             txt += (f" En las copas la probabilidad es {kA:.0%} lo que calcula el modelo y {1 - kA:.0%} lo que dice el"
-                    " mercado: en las copas lo que el modelo se separaba de la casa no se cumplía (prueba del 4 nov 2026).")
+                    " mercado: en las copas lo que el modelo se separaba de la casa no se cumplía (prueba del "
+                    f"{'24' if kA < ANCLA_COPAS else '4'} nov 2026).")
         elif anclado:
             txt += (f" En esta liga la probabilidad es {kA:.0%} lo que calcula el modelo y {1 - kA:.0%} lo que dice el mercado: aquí"
                     " lo que el modelo se separaba de la casa no se cumplía (prueba del 11 nov 2026).")

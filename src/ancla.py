@@ -25,6 +25,24 @@ from scipy.optimize import least_squares
 
 ANCLA_COPAS = 0.25
 
+# Peso del modelo por copa (24 nov 2026; claude/copas-champions-europa-nov-2026.md). Prueba sin mirar al futuro de
+# prueba_europa (el modelo se ajusta cada semana con lo anterior) contra el cierre de ESPN (ESPN BET o DraftKings) sin
+# margen, temporadas 2022-23 a 2026-27. Log loss del 1X2 contra k = 0.25, en diezmilésimas (95%):
+#
+#                                 k = 0.35       k = 0.15       k = 0.10       k = 0 (solo mercado)
+#   Europa + Conference (1223)    +18.5 ± 11.6   −13.8 ± 11.5   −19.0 ± 17.3   −25.9 ± 28.7
+#   Champions (700)               +0.3 ± 12.8    +2.7 ± 12.8    +5.3 ± 19.2    +12.6 ± 32.0
+#
+# Europa + Conference con 0.10 mejora en las 5 temporadas (2022-23 −20, 2023-24 −24, 2024-25 −6, 2025-26 −21, 2026-27
+# −37); en la página (lo publicado 13 oct – 3 nov contra DraftKings sin margen) también: Europa −50, Conference −52 con
+# 0.15. Más/menos 2.5 goles no empeora (−3.7 ± 17.8). En la Champions el modelo está cerca del cierre (0.8848 vs 0.8782;
+# en Europa 0.9428 vs 0.9190 y Conference 0.9573 vs 0.9238): 0.25 ya es lo mejor y se queda.
+ANCLA_POR_COPA = {'europa': 0.10, 'conference': 0.10}
+
+
+def ancla_copa(liga):
+    return ANCLA_POR_COPA.get(liga, ANCLA_COPAS)
+
 
 def _r3(X, i, j):
     return np.array([X[i > j].sum(), X[i == j].sum(), X[i < j].sum()])
