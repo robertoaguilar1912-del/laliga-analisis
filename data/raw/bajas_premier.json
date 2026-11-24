@@ -1,8 +1,8 @@
 {
 "401879225": {
 "fotmob": 5795533,
-"visto": "2026-11-24T16:41+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-24T21:10+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -45,7 +45,7 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 104764533.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -91,17 +91,17 @@
 "duda": true,
 "valor": 34472363.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 630249739.0,
-"perdida": 0.6079868570957075,
-"perdida_duda": 0.0
+"valor_xi": 527117706.0,
+"perdida": 0.7269411625493757,
+"perdida_duda": 0.06539784683309424
 }
 },
 "401879227": {
 "fotmob": 5795531,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401879226": {
 "fotmob": 5795532,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -319,7 +319,7 @@
 },
 "401878752": {
 "fotmob": 5795530,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -383,7 +383,7 @@
 },
 "401879229": {
 "fotmob": 5795528,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -404,19 +404,10 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Hugo Ekitiké",
-"tipo": "Lesión",
-"regreso": "principios de enero de 2027",
-"duda": false,
-"valor": 70875948.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Cody Gakpo",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "unos días",
+"duda": false,
 "valor": 74912371.0,
 "titular": false,
 "importante": false
@@ -424,9 +415,18 @@
 {
 "nombre": "Ryan Gravenberch",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "unos días",
+"duda": false,
 "valor": 74389120.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Hugo Ekitiké",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 70875948.0,
 "titular": false,
 "importante": false
 },
@@ -456,7 +456,7 @@
 },
 "401879231": {
 "fotmob": 5795526,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -547,7 +547,7 @@
 },
 "401879230": {
 "fotmob": 5795527,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -665,7 +665,7 @@
 },
 "401879228": {
 "fotmob": 5795529,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -729,7 +729,7 @@
 },
 "401879224": {
 "fotmob": 5795534,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -847,7 +847,7 @@
 },
 "401878753": {
 "fotmob": 5795525,
-"visto": "2026-11-24T16:41+00:00",
+"visto": "2026-11-24T21:10+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -900,6 +900,97 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 44029028.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+}
+},
+"401879221": {
+"fotmob": 5795539,
+"visto": "2026-11-24T21:10+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Taiwo Awoniyi",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Aurèle Amenda",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Josh Eccles",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Luke Woolfenden",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Caleb Yirenkyi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ephron Mason-Clark",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Haji Wright",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Leif Davis",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 0.0,
 "titular": false,
 "importante": false
 }
