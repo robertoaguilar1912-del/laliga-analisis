@@ -79,12 +79,12 @@
    "ml": [
     -105,
     275,
-    235
+    225
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -170
+    120,
+    -175
    ],
    "spread": [
     [
@@ -93,7 +93,7 @@
     ],
     [
      "+0.5",
-     -130
+     -135
     ]
    ]
   }
@@ -236,6 +236,39 @@
   "estadio": "Arasen Stadion",
   "local_espn": "Lillestrom",
   "visita_espn": "Hamarkameratene",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-eliteserien",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -155,
+    330,
+    320
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    110,
+    -160
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -170
+    ],
+    [
+     "+0.5",
+     110
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401843502",
+  "utc": "2026-12-04T18:00Z",
+  "estadio": "Aker Stadion",
+  "local_espn": "Molde",
+  "visita_espn": "Viking FK",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-eliteserien",
   "neutral": false,

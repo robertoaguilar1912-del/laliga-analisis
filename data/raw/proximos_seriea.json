@@ -209,9 +209,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -550,
+    -525,
     550,
-    950
+    900
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -221,11 +221,11 @@
    "spread": [
     [
      "-2.5",
-     115
+     120
     ],
     [
      "+2.5",
-     -170
+     -180
     ]
    ]
   }
@@ -327,6 +327,23 @@
      -155
     ]
    ]
+  }
+ },
+ {
+  "id": "401874984",
+  "utc": "2026-12-04T19:45Z",
+  "estadio": "Renato Dall'Ara",
+  "local_espn": "Bologna",
+  "visita_espn": "AS Roma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   }
  }
 ]
