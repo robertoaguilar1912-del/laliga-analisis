@@ -5,31 +5,15 @@
   "estadio": "PayPal Park",
   "local_espn": "San Jose Earthquakes",
   "visita_espn": "Houston Dynamo FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_DELAYED",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": [
-    -115,
-    260,
-    270
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -145,
-    115
-   ],
-   "spread": [
-    [
-     "-0.5",
-     -115
-    ],
-    [
-     "+0.5",
-     -120
-    ]
-   ]
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
   },
   "alineaciones": {
    "San Jose Earthquakes": [
@@ -193,8 +177,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    255,
+    170,
+    260,
     130
    ],
    "ou_linea": 3.5,
@@ -205,11 +189,11 @@
    "spread": [
     [
      "+0.5",
-     -185
+     -180
     ],
     [
      "-0.5",
-     125
+     130
     ]
    ]
   }

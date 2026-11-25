@@ -143,23 +143,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -650,
-    750,
-    1300
+    -700,
+    800,
+    1400
    ],
    "ou_linea": 3.5,
    "ou": [
     -115,
-    -115
+    -110
    ],
    "spread": [
     [
      "-2.5",
-     110
+     105
     ],
     [
      "+2.5",
-     -160
+     -155
     ]
    ]
   }
@@ -357,6 +357,50 @@
   "estadio": "Mendizorrotza",
   "local_espn": "Alavés",
   "visita_espn": "Espanyol",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882780",
+  "utc": "2026-12-05T13:00Z",
+  "estadio": "El Sardineros",
+  "local_espn": "Racing Santander",
+  "visita_espn": "Deportivo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882779",
+  "utc": "2026-12-05T15:15Z",
+  "estadio": "Estadio de Vallecas",
+  "local_espn": "Rayo Vallecano",
+  "visita_espn": "Levante",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882777",
+  "utc": "2026-12-05T17:30Z",
+  "estadio": "Estadio de la Cerámica",
+  "local_espn": "Villarreal",
+  "visita_espn": "Real Sociedad",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882783",
+  "utc": "2026-12-05T20:00Z",
+  "estadio": "Spotify Camp Nou",
+  "local_espn": "Barcelona",
+  "visita_espn": "Celta Vigo",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
