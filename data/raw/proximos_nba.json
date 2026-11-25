@@ -75,7 +75,7 @@
    "total": [
     218.5,
     -110,
-    -109
+    -110
    ],
    "total_abre": 222.5
   }
@@ -93,7 +93,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "New York Knicks",
   "visita_espn": "Cleveland Cavaliers",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Madison Square Garden",
   "records": {
    "home": [
@@ -145,7 +145,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "Minnesota Timberwolves",
-  "revisado": false,
+  "revisado": true,
   "estadio": "Paycom Center",
   "records": {
    "home": [
@@ -367,7 +367,30 @@
     "1-5"
    ]
   },
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -324,
+    261
+   ],
+   "ml_abre": [
+    -241,
+    199
+   ],
+   "spread": [
+    -7.5,
+    -110,
+    7.5,
+    -110
+   ],
+   "spread_abre": -5.5,
+   "total": [
+    215.5,
+    -105,
+    -115
+   ],
+   "total_abre": 218.5
+  }
  },
  {
   "id": "401909325",
