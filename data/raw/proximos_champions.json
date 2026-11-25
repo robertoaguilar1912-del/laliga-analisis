@@ -5,29 +5,29 @@
   "estadio": "Riyadh Air Metropolitano",
   "local_espn": "Atlético Madrid",
   "visita_espn": "Viking FK",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -1000,
-    1000,
+    -900,
+    900,
     2000
    ],
-   "ou_linea": 4.5,
+   "ou_linea": 3.5,
    "ou": [
-    130,
-    -160
+    -160,
+    125
    ],
    "spread": [
     [
      "-2.5",
-     -135
+     -130
     ],
     [
      "+2.5",
-     -105
+     -110
     ]
    ]
   },
@@ -154,29 +154,29 @@
   "estadio": "Jan Breydel Stadium",
   "local_espn": "Club Brugge",
   "visita_espn": "Liverpool",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    330,
-    350,
-    -145
+    310,
+    340,
+    -135
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
     [
      "+0.5",
-     115
+     105
     ],
     [
      "-0.5",
-     -160
+     -150
     ]
    ]
   },
@@ -303,7 +303,7 @@
   "estadio": "San Siro",
   "local_espn": "Internazionale",
   "visita_espn": "VfB Stuttgart",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -315,17 +315,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -130,
-    105
+    -125,
+    100
    ],
    "spread": [
     [
      "-1.5",
-     -115
+     -105
     ],
     [
      "+1.5",
-     -120
+     -130
     ]
    ]
   },
@@ -452,7 +452,7 @@
   "estadio": "Decathlon Arena - Stade Pierre-Mauroy",
   "local_espn": "Lille",
   "visita_espn": "Bayern Munich",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -464,8 +464,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    115
+    -135,
+    105
    ],
    "spread": [
     [
@@ -601,7 +601,7 @@
   "estadio": "Parc des Princes",
   "local_espn": "Paris Saint-Germain",
   "visita_espn": "AS Roma",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -613,17 +613,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    100,
-    -125
+    105,
+    -130
    ],
    "spread": [
     [
      "-1.5",
-     115
+     120
     ],
     [
      "+1.5",
-     -165
+     -170
     ]
    ]
   },
@@ -750,29 +750,29 @@
   "estadio": "Stamford Bridge",
   "local_espn": "Shakhtar Donetsk",
   "visita_espn": "Fenerbahce",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    155,
+    170,
     245,
-    175
+    160
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
+    -120,
     100
    ],
    "spread": [
     [
-     "-0.5",
-     140
+     "+0.5",
+     -200
     ],
     [
-     "+0.5",
-     -195
+     "-0.5",
+     140
     ]
    ]
   },
@@ -899,7 +899,7 @@
   "estadio": "Estádio José Alvalade",
   "local_espn": "Sporting CP",
   "visita_espn": "Manchester United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -907,12 +907,12 @@
    "ml": [
     175,
     270,
-    140
+    145
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
-    -150
+    125,
+    -155
    ],
    "spread": [
     [
