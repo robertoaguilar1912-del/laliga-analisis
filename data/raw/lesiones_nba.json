@@ -77,16 +77,6 @@
  ],
  "Charlotte Hornets": [
   {
-   "id": "4066218",
-   "nombre": "Grant Williams",
-   "pos": "F",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-24",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-25",
-   "nota": "Williams (hamstring) won't play Monday's game against the Grizzlies."
-  },
-  {
    "id": "4576060",
    "nombre": "Ryan Kalkbrenner",
    "pos": "C",
@@ -94,17 +84,37 @@
    "fecha": "2026-11-24",
    "tipo": "Hip",
    "regreso": "2026-11-25",
-   "nota": "Kalkbrenner has been ruled out for the rest of Monday's game against Memphis due to left hip soreness. He'll end with two rebounds in nine minutes."
+   "nota": "Kalkbrenner (hip) is doubtful to play Wednesday against the Bulls."
+  },
+  {
+   "id": "3032979",
+   "nombre": "Dennis Schroder",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-24",
+   "tipo": "Hamstring",
+   "regreso": "2026-12-12",
+   "nota": "Schroder (hamstring) is out for Wednesday's game the Bulls."
+  },
+  {
+   "id": "4602025",
+   "nombre": "Sion James",
+   "pos": "G",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-24",
+   "tipo": "Undisclosed",
+   "regreso": "2026-11-25",
+   "nota": "James is probable for Wednesday's game against the Bulls due to general soreness."
   },
   {
    "id": "3135045",
    "nombre": "Grayson Allen",
    "pos": "G",
    "estado": "Out",
-   "fecha": "2026-11-22",
+   "fecha": "2026-11-24",
    "tipo": "Concussion",
    "regreso": "2026-11-25",
-   "nota": "Allen (concussion) has been ruled out for Monday's game against the Grizzlies."
+   "nota": "Allen (concussion) is listed as questionable for Wednesday's game versus Chicago."
   },
   {
    "id": "5061575",
@@ -115,16 +125,6 @@
    "tipo": "Hamstring",
    "regreso": "2026-12-12",
    "nota": "Knueppel (hamstring) was diagnosed with a left hamstring strain Sunday and will be re-evaluated in four weeks."
-  },
-  {
-   "id": "3032979",
-   "nombre": "Dennis Schroder",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-08",
-   "tipo": "Hamstring",
-   "regreso": "2026-11-25",
-   "nota": "Schroder has been diagnosed with a left hamstring strain and will be reevaluated in two weeks, Michael Scotto of HoopsHype.com reports."
   }
  ],
  "Chicago Bulls": [
@@ -235,6 +235,16 @@
  ],
  "Detroit Pistons": [
   {
+   "id": "4432166",
+   "nombre": "Cade Cunningham",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-24",
+   "tipo": "Knee",
+   "regreso": "2026-11-27",
+   "nota": "Cunningham (knee) is listed as out for Tuesday's game against Orlando."
+  },
+  {
    "id": "5258459",
    "nombre": "Ebuka Okorie",
    "pos": "G",
@@ -273,19 +283,19 @@
    "tipo": "Hamstring",
    "regreso": "2026-11-30",
    "nota": "Duren (hamstring) is being assigned to the Motor City Cruise on Wednesday for practice as he ramps up for a return, Eric Vincent of ClutchPoints.com reports."
-  },
-  {
-   "id": "4432166",
-   "nombre": "Cade Cunningham",
-   "pos": "G",
-   "estado": "Day-To-Day",
-   "fecha": "2026-11-23",
-   "tipo": "Knee",
-   "regreso": "2026-11-24",
-   "nota": "Cunningham (knee) is probable for Tuesday's game against the Orlando."
   }
  ],
  "Golden State Warriors": [
+  {
+   "id": "5175737",
+   "nombre": "Yaxel Lendeborg",
+   "pos": "F",
+   "estado": "Day-To-Day",
+   "fecha": "2026-11-24",
+   "tipo": "Illness",
+   "regreso": "2026-11-25",
+   "nota": "Lendeborg is questionable for Wednesday's game against the Kings with an illness."
+  },
   {
    "id": "4397040",
    "nombre": "Brandon Williams",
@@ -425,6 +435,16 @@
  ],
  "Memphis Grizzlies": [
   {
+   "id": "4431785",
+   "nombre": "Scotty Pippen Jr.",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-24",
+   "tipo": "Back",
+   "regreso": "2026-12-12",
+   "nota": "Pippen (back) is out for Wednesday's game against the Clippers."
+  },
+  {
    "id": "5041935",
    "nombre": "Cameron Boozer",
    "pos": "F",
@@ -453,16 +473,6 @@
    "tipo": "Foot",
    "regreso": "2027-01-18",
    "nota": "Jackson underwent a procedure Wednesday to repair a broken fifth metatarsal in his left foot. He is expected to recover fully and will be re-evaluated in approximately three months."
-  },
-  {
-   "id": "4431785",
-   "nombre": "Scotty Pippen Jr.",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-16",
-   "tipo": "Back",
-   "regreso": "2026-11-25",
-   "nota": "Pippen (back) is progressing in his recovery but is still considered week-to-week."
   },
   {
    "id": "5105462",
@@ -605,34 +615,34 @@
  ],
  "Oklahoma City Thunder": [
   {
+   "id": "5159925",
+   "nombre": "Nikola Topic",
+   "pos": "G",
+   "estado": "Out",
+   "fecha": "2026-11-24",
+   "tipo": "Hip",
+   "regreso": "2026-11-28",
+   "nota": "Topic (hip) is listed as out for Wednesday's game versus Minnesota."
+  },
+  {
    "id": "4432823",
    "nombre": "Jaylin Williams",
    "pos": "F",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-24",
    "tipo": "Back",
-   "regreso": "2026-11-25",
-   "nota": "Williams (back) has been ruled out for Monday's game against the Pacers"
+   "regreso": "2026-11-28",
+   "nota": "Williams (back) is listed as out for Wednesday's game against Minnesota."
   },
   {
    "id": "5174983",
    "nombre": "Aday Mara",
    "pos": "C",
-   "estado": "Day-To-Day",
+   "estado": "Out",
    "fecha": "2026-11-24",
    "tipo": "Lower Leg",
-   "regreso": "2026-11-25",
-   "nota": "Mara (shin) has been ruled out for Monday's game against the Pacers."
-  },
-  {
-   "id": "5159925",
-   "nombre": "Nikola Topic",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-23",
-   "tipo": "Hip",
-   "regreso": "2026-11-25",
-   "nota": "Topic (hip) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
+   "regreso": "2026-11-28",
+   "nota": "Mara (leg) is out for Wednesday's game versus the Timberwolves."
   },
   {
    "id": "4593803",
@@ -643,16 +653,6 @@
    "tipo": "Leg",
    "regreso": "2027-03-02",
    "nota": "Williams (ankle) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
-  },
-  {
-   "id": "2991350",
-   "nombre": "Alex Caruso",
-   "pos": "G",
-   "estado": "Out",
-   "fecha": "2026-11-23",
-   "tipo": "Hip",
-   "regreso": "2026-11-25",
-   "nota": "Caruso (hip) has been ruled out for Monday's game against the Pacers, according to the NBA's official injury report."
   },
   {
    "id": "5061603",
