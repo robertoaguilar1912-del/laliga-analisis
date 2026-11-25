@@ -5,15 +5,31 @@
   "estadio": "Baku Olympic Stadium",
   "local_espn": "Sabah FK",
   "visita_espn": "Barcelona",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    2800,
+    1300,
+    -1600
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    -125,
+    100
+   ],
+   "spread": [
+    [
+     "+3.5",
+     -135
+    ],
+    [
+     "-3.5",
+     100
+    ]
+   ]
   },
   "alineaciones": {
    "Sabah FK": [
@@ -138,7 +154,7 @@
   "estadio": "Fortuna Arena",
   "local_espn": "Slavia Prague",
   "visita_espn": "Villarreal",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -398,8 +414,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    110
+    -140,
+    115
    ],
    "spread": [
     [
