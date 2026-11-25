@@ -1,8 +1,8 @@
 {
 "401841319": {
 "fotmob": 5103719,
-"visto": "2026-11-25T22:10+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-25T22:14+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -24,15 +24,6 @@
 "importante": true
 },
 {
-"nombre": "Fred",
-"tipo": "Sanción",
-"regreso": "hasta el 26 de noviembre",
-"duda": false,
-"valor": 2636994.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Alan Franco",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -40,10 +31,28 @@
 "valor": 2659355.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Fred",
+"tipo": "Sanción",
+"regreso": "hasta el 26 de noviembre",
+"duda": false,
+"valor": 2636994.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Vitão",
+"tipo": "Sanción",
+"regreso": "hasta el 26 de noviembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 45198607.0,
-"perdida": 0.3251084485855947,
+"valor_xi": 47458284.0,
+"perdida": 0.2540642851730585,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -54,24 +63,6 @@
 "regreso": "hasta el 26 de noviembre",
 "duda": false,
 "valor": 22557003.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "André Carrillo",
-"tipo": "Sanción",
-"regreso": "hasta el 26 de noviembre",
-"duda": false,
-"valor": 376641.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Rodrigo Garro",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 12762334.0,
 "titular": false,
 "importante": true
 },
@@ -92,11 +83,20 @@
 "valor": 502438.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "André Carrillo",
+"tipo": "Sanción",
+"regreso": "hasta el 26 de noviembre",
+"duda": false,
+"valor": 376641.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 67596983.0,
-"perdida": 0.3392702304480068,
-"perdida_duda": 0.18880034927002584
+"valor_xi": 69672684.0,
+"perdida": 0.32375676814747084,
+"perdida_duda": 0.0
 }
 },
 "401841329": {
