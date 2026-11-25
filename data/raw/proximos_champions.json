@@ -5,7 +5,7 @@
   "estadio": "Baku Olympic Stadium",
   "local_espn": "Sabah FK",
   "visita_espn": "Barcelona",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -154,7 +154,7 @@
   "estadio": "Fortuna Arena",
   "local_espn": "Slavia Prague",
   "visita_espn": "Villarreal",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -342,23 +342,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
+    350,
     360,
-    370,
-    -160
+    -155
    ],
    "ou_linea": 3.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
      "+0.5",
-     125
+     120
     ],
     [
      "-0.5",
-     -175
+     -170
     ]
    ]
   }
@@ -441,23 +441,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -185,
-    360,
-    450
+    -195,
+    370,
+    475
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
+    -115,
     -110
    ],
    "spread": [
     [
      "-1.5",
-     130
+     120
     ],
     [
      "+1.5",
-     -180
+     -165
     ]
    ]
   }
@@ -507,9 +507,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    165,
-    270,
-    155
+    155,
+    275,
+    160
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -518,12 +518,12 @@
    ],
    "spread": [
     [
-     "+0.5",
-     -195
-    ],
-    [
      "-0.5",
      140
+    ],
+    [
+     "+0.5",
+     -195
     ]
    ]
   }
