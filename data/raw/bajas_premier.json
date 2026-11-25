@@ -1,7 +1,7 @@
 {
 "401879225": {
 "fotmob": 5795533,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -101,7 +101,7 @@
 },
 "401879227": {
 "fotmob": 5795531,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401879226": {
 "fotmob": 5795532,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -319,7 +319,7 @@
 },
 "401878752": {
 "fotmob": 5795530,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -355,7 +355,7 @@
 "duda": false,
 "valor": 36811941.0,
 "titular": false,
-"importante": true
+"importante": false
 },
 {
 "nombre": "Matty Cash",
@@ -367,15 +367,15 @@
 "importante": false
 }
 ],
-"valor_xi": 368960105.0,
-"perdida": 0.23267387946997684,
+"valor_xi": 372434064.0,
+"perdida": 0.13166206515416914,
 "perdida_duda": 0.0
 }
 },
 "401879229": {
 "fotmob": 5795528,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -384,12 +384,12 @@
 "regreso": "hasta el 6 de diciembre",
 "duda": false,
 "valor": 5000354.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 363898915.0,
+"perdida": 0.013741052236992792,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -401,7 +401,7 @@
 "duda": false,
 "valor": 74912371.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ryan Gravenberch",
@@ -410,7 +410,7 @@
 "duda": false,
 "valor": 74389120.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Hugo Ekitiké",
@@ -440,17 +440,26 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 717015483.0,
+"perdida": 0.20822631385213755,
 "perdida_duda": 0.0
 }
 },
 "401879231": {
 "fotmob": 5795526,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Costinha",
+"tipo": "Sanción",
+"regreso": "hasta el 29 de noviembre",
+"duda": false,
+"valor": 13114407.0,
+"titular": true,
+"importante": true
+},
 {
 "nombre": "Zadok Yohanna",
 "tipo": "Lesión",
@@ -486,19 +495,10 @@
 "valor": 16823328.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Costinha",
-"tipo": "Sanción",
-"regreso": "hasta el 29 de noviembre",
-"duda": false,
-"valor": 13114407.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 348341985.0,
+"perdida": 0.03764808023356702,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -509,8 +509,8 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 62981262.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Ewen Jaouen",
@@ -531,15 +531,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 350841404.0,
+"perdida": 0.17951490696918998,
 "perdida_duda": 0.0
 }
 },
 "401879230": {
 "fotmob": 5795527,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -549,7 +549,7 @@
 "duda": false,
 "valor": 48798216.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Yéremi Pino",
@@ -557,8 +557,8 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 38935546.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Jean-Philippe Mateta",
@@ -586,10 +586,19 @@
 "valor": 2534929.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Óscar Mingueza",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 18516120.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 349200743.0,
+"perdida": 0.25124162464912053,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -601,7 +610,7 @@
 "duda": false,
 "valor": 20457698.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Tim Iroegbunam",
@@ -609,8 +618,8 @@
 "regreso": "finales de diciembre",
 "duda": false,
 "valor": 19461895.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Charlie Hughes",
@@ -619,7 +628,7 @@
 "duda": false,
 "valor": 14086245.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Hidemasa Morita",
@@ -649,15 +658,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 151185654.0,
+"perdida": 0.35721536118764285,
 "perdida_duda": 0.0
 }
 },
 "401879228": {
 "fotmob": 5795529,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -679,7 +688,7 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 265232226.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -713,15 +722,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 372709099.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401879224": {
 "fotmob": 5795534,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -731,7 +740,7 @@
 "duda": false,
 "valor": 61390538.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Habib Diarra",
@@ -740,7 +749,7 @@
 "duda": false,
 "valor": 45896674.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Daniel Ballard",
@@ -749,7 +758,7 @@
 "duda": false,
 "valor": 26819424.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Granit Xhaka",
@@ -770,8 +779,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 221705162.0,
+"perdida": 0.6048872962191111,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -783,7 +792,7 @@
 "duda": false,
 "valor": 69083388.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Xavi Simons",
@@ -792,7 +801,7 @@
 "duda": false,
 "valor": 52895654.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Mathys Tel",
@@ -831,15 +840,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 368922251.0,
+"perdida": 0.330636175154423,
 "perdida_duda": 0.0
 }
 },
 "401878753": {
 "fotmob": 5795525,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -849,7 +858,7 @@
 "duda": false,
 "valor": 97092702.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Martín Zubimendi",
@@ -858,20 +867,20 @@
 "duda": false,
 "valor": 69508062.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "David Raya",
 "tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 23534518.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 651694118.0,
+"perdida": 0.25564257739702356,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -886,14 +895,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 962286170.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401879221": {
 "fotmob": 5795539,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

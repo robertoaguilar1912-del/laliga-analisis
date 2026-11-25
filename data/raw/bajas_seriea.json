@@ -1,7 +1,7 @@
 {
 "401875004": {
 "fotmob": 5749769,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -119,7 +119,7 @@
 },
 "401875081": {
 "fotmob": 5749763,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401874826": {
 "fotmob": 5749767,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -265,7 +265,7 @@
 },
 "401874977": {
 "fotmob": 5749764,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -320,8 +320,8 @@
 },
 "401875031": {
 "fotmob": 5749768,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -331,7 +331,7 @@
 "duda": false,
 "valor": 11275509.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Keinan Davis",
@@ -340,7 +340,7 @@
 "duda": false,
 "valor": 10449109.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Nicolò Bertola",
@@ -352,8 +352,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 88725515.0,
+"perdida": 0.24485197972646314,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -364,8 +364,8 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 15474987.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Fabiano Parisi",
@@ -395,15 +395,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 232780478.0,
+"perdida": 0.06647888660147867,
 "perdida_duda": 0.0
 }
 },
 "401874992": {
 "fotmob": 5749766,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -413,7 +413,7 @@
 "duda": false,
 "valor": 15748892.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Cristian Volpato",
@@ -422,7 +422,7 @@
 "duda": false,
 "valor": 13394700.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Fedde Leysen",
@@ -431,7 +431,7 @@
 "duda": false,
 "valor": 9290438.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ismaël Koné",
@@ -440,7 +440,7 @@
 "duda": true,
 "valor": 25749741.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Darryl Bakola",
@@ -449,7 +449,7 @@
 "duda": true,
 "valor": 19370679.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Daniel Boloca",
@@ -461,9 +461,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 84926710.0,
+"perdida": 0.45255526794809314,
+"perdida_duda": 0.5312865646155374
 },
 "visita": {
 "faltan": [
@@ -474,7 +474,7 @@
 "duda": false,
 "valor": 32625814.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Antonio Vergara",
@@ -483,7 +483,7 @@
 "duda": false,
 "valor": 24196932.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Benoît Badiashile",
@@ -492,7 +492,16 @@
 "duda": false,
 "valor": 16775464.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Alessandro Buongiorno",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 25373864.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Giovanni Di Lorenzo",
@@ -520,26 +529,17 @@
 "valor": 3997389.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Alessandro Buongiorno",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 25373864.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 202564827.0,
+"perdida": 0.36333163604952995,
+"perdida_duda": 0.12526293125903837
 }
 },
 "401874769": {
 "fotmob": 5749760,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -561,27 +561,27 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 257010267.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Michael Folorunsho",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 4113066.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Cyril Ngonge",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 6382379.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Michael Folorunsho",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 4113066.0,
 "titular": false,
 "importante": false
 },
@@ -595,15 +595,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 58249854.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.10956901282533686
 }
 },
 "401874994": {
 "fotmob": 5749762,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -613,7 +613,7 @@
 "duda": false,
 "valor": 38026168.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Assane Diao",
@@ -622,7 +622,7 @@
 "duda": false,
 "valor": 37252771.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Moise Kean",
@@ -631,7 +631,7 @@
 "duda": false,
 "valor": 36095131.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jayden Addai",
@@ -661,8 +661,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 374612316.0,
+"perdida": 0.2973048809212135,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -674,7 +674,7 @@
 "duda": false,
 "valor": 76995516.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Khéphren Thuram-Ulien",
@@ -683,7 +683,7 @@
 "duda": false,
 "valor": 39965969.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Manuel Locatelli",
@@ -692,7 +692,34 @@
 "duda": false,
 "valor": 23378696.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Kerim Alajbegović",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 42839424.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Pierre Kalulu",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 37751672.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Nicolás González",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 22712118.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Kamil Grabara",
@@ -702,43 +729,16 @@
 "valor": 11631902.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Kerim Alajbegović",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 42839424.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Pierre Kalulu",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 37751672.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Nicolás González",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 22712118.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 241759696.0,
+"perdida": 0.5804945295761789,
+"perdida_duda": 0.42729708760057344
 }
 },
 "401875095": {
 "fotmob": 5749765,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -811,7 +811,7 @@
 },
 "401875019": {
 "fotmob": 5749761,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

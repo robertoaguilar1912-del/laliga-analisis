@@ -1,7 +1,7 @@
 {
 "401884720": {
 "fotmob": 5881241,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -146,7 +146,7 @@
 },
 "401884721": {
 "fotmob": 5881234,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -174,6 +174,15 @@
 "regreso": "principios de enero de 2027",
 "duda": false,
 "valor": 1876855.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Alessio Castro-Montes",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 1721676.0,
 "titular": false,
 "importante": false
 },
@@ -228,7 +237,7 @@
 },
 "401884722": {
 "fotmob": 5881236,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -294,6 +303,15 @@
 "visita": {
 "faltan": [
 {
+"nombre": "Michael Olise",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 178377437.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Ismael Saibari",
 "tipo": "Lesión",
 "regreso": "principios de febrero de 2027",
@@ -321,24 +339,6 @@
 "importante": true
 },
 {
-"nombre": "Michael Olise",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 178377437.0,
-"titular": true,
-"importante": true
-},
-{
-"nombre": "Luis Díaz",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 76414125.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Serge Gnabry",
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
@@ -358,13 +358,13 @@
 }
 ],
 "valor_xi": 670149526.0,
-"perdida": 0.20425698398539194,
-"perdida_duda": 0.38020106276998245
+"perdida": 0.470432561344526,
+"perdida_duda": 0.0
 }
 },
 "401884723": {
 "fotmob": 5881238,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -464,7 +464,7 @@
 },
 "401884719": {
 "fotmob": 5881239,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -557,6 +557,15 @@
 "importante": false
 },
 {
+"nombre": "Bryan Lasme",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 303324.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Ayman Gülasi",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
@@ -573,19 +582,10 @@
 },
 "401884726": {
 "fotmob": 5881240,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Angelo Stiller",
-"tipo": "Lesión",
-"regreso": "una semana",
-"duda": false,
-"valor": 41820060.0,
-"titular": false,
-"importante": true
-},
 {
 "nombre": "Leo Sauer",
 "tipo": "Lesión",
@@ -594,15 +594,6 @@
 "valor": 19020142.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Luca Jaquez",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 12928014.0,
-"titular": false,
-"importante": false
 },
 {
 "nombre": "Justin Diehl",
@@ -615,7 +606,7 @@
 }
 ],
 "valor_xi": 209828893.0,
-"perdida": 0.28995149871948284,
+"perdida": 0.09064596266063321,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -637,8 +628,8 @@
 },
 "401884724": {
 "fotmob": 5881235,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "standard",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -646,12 +637,12 @@
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 1182180.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 120530913.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -662,125 +653,134 @@
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 58018288.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Marc Guiu",
-"tipo": "Lesión",
-"regreso": "unas semanas",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Assan Ouédraogo",
 "tipo": "Lesión",
 "regreso": "finales de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 33493797.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Marc Guiu",
+"tipo": "Lesión",
+"regreso": "unas semanas",
+"duda": false,
+"valor": 15889266.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 267872200.0,
+"perdida": 0.34162591340198795,
 "perdida_duda": 0.0
 }
 },
 "401884725": {
 "fotmob": 5881237,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "standard",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
-{
-"nombre": "Ozan Kabak",
-"tipo": "Sanción",
-"regreso": "",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Robin Hranác",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Valentin Gendrey",
-"tipo": "Lesión",
-"regreso": "principios de enero de 2027",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "Nathan De Cat",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 27176929.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Albian Hajdari",
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
 "duda": false,
-"valor": 0.0,
+"valor": 26236572.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Ozan Kabak",
+"tipo": "Sanción",
+"regreso": "hasta el 20 de diciembre",
+"duda": false,
+"valor": 16612762.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Robin Hranác",
+"tipo": "Lesión",
+"regreso": "finales de noviembre",
+"duda": false,
+"valor": 10258742.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Valentin Gendrey",
+"tipo": "Lesión",
+"regreso": "principios de enero de 2027",
+"duda": false,
+"valor": 5336558.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 143613827.0,
+"perdida": 0.5590339501223653,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Manuel Baum",
-"tipo": "Sanción",
-"regreso": "",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Han-Noah Massengo",
+"nombre": "Noahkai Banks",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
+"regreso": "principios de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 27122589.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Chrislain Matsima",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 25671329.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Han-Noah Massengo",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 11318271.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Calvin Brackelmann",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 2321809.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Faik Sakar",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 863988.0,
 "titular": false,
 "importante": false
 },
@@ -789,23 +789,14 @@
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
-"valor": 0.0,
+"valor": 747001.0,
 "titular": false,
 "importante": false
 },
 {
-"nombre": "Noahkai Banks",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Faik Sakar",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
+"nombre": "Manuel Baum",
+"tipo": "Sanción",
+"regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 0.0,
 "titular": false,
@@ -816,20 +807,20 @@
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
-"valor": 0.0,
+"valor": 659470.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 78983346.0,
+"perdida": 0.8117178145377635,
 "perdida_duda": 0.0
 }
 },
 "401884727": {
 "fotmob": 5881233,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "standard",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -837,16 +828,7 @@
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
 "duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Justin Lerma",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 0.0,
+"valor": 24543710.0,
 "titular": false,
 "importante": false
 },
@@ -855,7 +837,7 @@
 "tipo": "Lesión",
 "regreso": "finales de mayo de 2027",
 "duda": false,
-"valor": 0.0,
+"valor": 24212890.0,
 "titular": false,
 "importante": false
 },
@@ -864,47 +846,56 @@
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
 "duda": false,
-"valor": 0.0,
+"valor": 1850134.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Justin Lerma",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1276647.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 384323518.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
 {
-"nombre": "Martin Terrier",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 0.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Guéla Doué",
 "tipo": "Lesión",
 "regreso": "unas semanas",
 "duda": false,
-"valor": 0.0,
+"valor": 34960784.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Kennet Eichhorn",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
 "duda": false,
-"valor": 0.0,
+"valor": 27823734.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Martin Terrier",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 7225423.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 300813633.0,
+"perdida": 0.20871566681952874,
 "perdida_duda": 0.0
 }
 }

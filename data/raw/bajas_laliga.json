@@ -1,7 +1,7 @@
 {
 "401882791": {
 "fotmob": 5868146,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [],
@@ -46,8 +46,8 @@
 },
 "401882796": {
 "fotmob": 5868141,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -110,7 +110,7 @@
 },
 "401882790": {
 "fotmob": 5868147,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -192,7 +192,7 @@
 },
 "401882793": {
 "fotmob": 5868144,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -283,7 +283,7 @@
 },
 "401882789": {
 "fotmob": 5868148,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -324,7 +324,7 @@
 "importante": false
 }
 ],
-"valor_xi": 785424222.0,
+"valor_xi": 675210986.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -365,8 +365,8 @@
 },
 "401882787": {
 "fotmob": 5868150,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -376,7 +376,7 @@
 "duda": false,
 "valor": 10873126.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jesús Vázquez",
@@ -385,7 +385,7 @@
 "duda": false,
 "valor": 4173913.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sergi Canós",
@@ -397,8 +397,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 74316462.0,
+"perdida": 0.202472488531545,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -410,7 +410,7 @@
 "duda": false,
 "valor": 4422978.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Abel Bretones",
@@ -419,7 +419,7 @@
 "duda": false,
 "valor": 3624598.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Alejandro Catena",
@@ -427,8 +427,8 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 1935072.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Aitor Fernández",
@@ -449,15 +449,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 45407122.0,
+"perdida": 0.21984762654633783,
 "perdida_duda": 0.0
 }
 },
 "401882794": {
 "fotmob": 5868143,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -467,7 +467,7 @@
 "duda": true,
 "valor": 9809752.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Zakaria Eddahchouri",
@@ -476,12 +476,12 @@
 "duda": true,
 "valor": 1886638.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 69727684.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.16774384762299002
 },
 "visita": {
 "faltan": [
@@ -491,8 +491,8 @@
 "regreso": "unos días",
 "duda": false,
 "valor": 220611934.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Fermín López",
@@ -500,8 +500,17 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 97213156.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Rodri",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 53364886.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Xavi Espart",
@@ -538,26 +547,17 @@
 "valor": 0.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Rodri",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 53364886.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 701689911.0,
+"perdida": 0.4529423681566942,
+"perdida_duda": 0.07605194996169753
 }
 },
 "401882795": {
 "fotmob": 5868142,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -566,8 +566,8 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 9698233.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Miguel Román",
@@ -575,6 +575,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 16247709.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Carl Starfelt",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 2096594.0,
 "titular": false,
 "importante": false
 },
@@ -588,9 +597,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 116893214.0,
+"perdida": 0.08296660403229224,
+"perdida_duda": 0.13899616961511554
 },
 "visita": {
 "faltan": [
@@ -600,8 +609,8 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 20933926.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Nathan Saliba",
@@ -640,15 +649,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 262164187.0,
+"perdida": 0.07985044120461808,
 "perdida_duda": 0.0
 }
 },
 "401882788": {
 "fotmob": 5868149,
-"visto": "2026-11-25T03:21+00:00",
-"xi": "unavailable",
+"visto": "2026-11-25T14:22+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -658,7 +667,7 @@
 "duda": false,
 "valor": 19247675.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jon Aramburu",
@@ -688,8 +697,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 169100690.0,
+"perdida": 0.11382375199060395,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -722,14 +731,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 105372623.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882792": {
 "fotmob": 5868145,
-"visto": "2026-11-25T03:21+00:00",
+"visto": "2026-11-25T14:22+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
