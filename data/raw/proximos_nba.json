@@ -38,7 +38,7 @@
   "visita": "CLE",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "New York Knicks",
   "visita_espn": "Cleveland Cavaliers",
   "revisado": false,
@@ -67,7 +67,7 @@
   "visita": "MIN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Oklahoma City Thunder",
   "visita_espn": "Minnesota Timberwolves",
   "revisado": false,
@@ -96,10 +96,10 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "LA Clippers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "FedExForum",
   "records": {
    "home": [
@@ -113,30 +113,7 @@
     "0-8"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -269,
-    220
-   ],
-   "ml_abre": [
-    -276,
-    226
-   ],
-   "spread": [
-    -7.5,
-    -112,
-    7.5,
-    -108
-   ],
-   "spread_abre": -6.5,
-   "total": [
-    227.5,
-    -110,
-    -110
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401909322",
@@ -148,10 +125,10 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Brooklyn Nets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Fiserv Forum",
   "records": {
    "home": [
@@ -165,30 +142,7 @@
     "2-7"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -117,
-    -101
-   ],
-   "ml_abre": [
-    -119,
-    101
-   ],
-   "spread": [
-    -1.5,
-    -105,
-    1.5,
-    -115
-   ],
-   "spread_abre": -1.5,
-   "total": [
-    233.5,
-    -107,
-    -113
-   ],
-   "total_abre": 229.5
-  }
+  "momios": null
  },
  {
   "id": "401909323",
