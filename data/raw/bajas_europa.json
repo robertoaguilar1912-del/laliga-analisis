@@ -1,7 +1,7 @@
 {
 "401915506": {
 "fotmob": 6112357,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401915519": {
 "fotmob": 6112348,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +156,7 @@
 },
 "401915517": {
 "fotmob": 6112290,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -229,7 +229,7 @@
 },
 "401915507": {
 "fotmob": 6112277,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -275,7 +275,7 @@
 },
 "401915521": {
 "fotmob": 6112266,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -332,15 +332,6 @@
 "visita": {
 "faltan": [
 {
-"nombre": "Davide Bartesaghi",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 27557181.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Luka Modrić",
 "tipo": "Lesión",
 "regreso": "1-2 semanas",
@@ -359,20 +350,20 @@
 "importante": true
 },
 {
+"nombre": "Davide Bartesaghi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 27557181.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Alexis Saelemaekers",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
 "duda": false,
 "valor": 19740345.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Francesco Camarda",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 19293783.0,
 "titular": false,
 "importante": false
 },
@@ -413,6 +404,15 @@
 "importante": false
 },
 {
+"nombre": "Francesco Camarda",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 19293783.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Pietro Terracciano",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -423,13 +423,13 @@
 }
 ],
 "valor_xi": 268874299.0,
-"perdida": 0.1119779097964287,
-"perdida_duda": 0.15623692616303203
+"perdida": 0.009486964761923936,
+"perdida_duda": 0.2587278711975368
 }
 },
 "401915520": {
 "fotmob": 6112297,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -529,7 +529,7 @@
 },
 "401915508": {
 "fotmob": 6112288,
-"visto": "2026-11-26T15:46+00:00",
+"visto": "2026-11-26T16:40+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -647,8 +647,8 @@
 },
 "401915518": {
 "fotmob": 6112282,
-"visto": "2026-11-26T15:46+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T16:40+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -661,7 +661,7 @@
 "importante": false
 }
 ],
-"valor_xi": 23538645.0,
+"valor_xi": 26938469.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -686,8 +686,8 @@
 "importante": false
 }
 ],
-"valor_xi": 234954543.0,
-"perdida": 0.09440178392294377,
+"valor_xi": 193542245.0,
+"perdida": 0.11460096476611605,
 "perdida_duda": 0.0
 }
 },
