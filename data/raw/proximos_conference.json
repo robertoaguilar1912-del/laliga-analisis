@@ -1051,13 +1051,7 @@
   "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
-  "momios": {
-   "casa": "Bet 365",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
-  },
+  "momios": null,
   "alineaciones": {
    "Pafos": [
     [
@@ -1176,155 +1170,6 @@
   }
  },
  {
-  "id": "401915808",
-  "utc": "2026-11-26T17:45Z",
-  "estadio": "Brann Stadium",
-  "local_espn": "SK Brann",
-  "visita_espn": "AGF",
-  "estado": "STATUS_IN_PROGRESS",
-  "tipo": "league-phase",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    115,
-    295,
-    210
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -170,
-    135
-   ],
-   "spread": [
-    [
-     "-0.5",
-     100
-    ],
-    [
-     "+0.5",
-     -140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "SK Brann": [
-    [
-     "234970",
-     "Matias Dyngeland",
-     "G"
-    ],
-    [
-     "205582",
-     "Joachim Soltvedt",
-     "D"
-    ],
-    [
-     "292393",
-     "Neraysho Kasanwirjo",
-     "D"
-    ],
-    [
-     "214177",
-     "Fredrik Knudsen",
-     "D"
-    ],
-    [
-     "282397",
-     "Leo Cornic",
-     "D"
-    ],
-    [
-     "305403",
-     "Kristall Máni Ingason",
-     "M"
-    ],
-    [
-     "314371",
-     "Niklas Jensen",
-     "M"
-    ],
-    [
-     "356390",
-     "Jonas Torsvik",
-     "M"
-    ],
-    [
-     "234989",
-     "Niklas Castro",
-     "F"
-    ],
-    [
-     "274042",
-     "Ulrick Mathisen",
-     "F"
-    ],
-    [
-     "277007",
-     "Noah Holm",
-     "F"
-    ]
-   ],
-   "AGF": [
-    [
-     "257639",
-     "Mads Hedenstad Christiansen",
-     "G"
-    ],
-    [
-     "279135",
-     "Colin Rösler",
-     "D"
-    ],
-    [
-     "238084",
-     "Daniel Grétarsson",
-     "D"
-    ],
-    [
-     "274979",
-     "Tobias Henriksen",
-     "D"
-    ],
-    [
-     "307481",
-     "Kristian Malt Arnstad",
-     "M"
-    ],
-    [
-     "214373",
-     "Jacob Andersen",
-     "M"
-    ],
-    [
-     "265366",
-     "Gift Links",
-     "M"
-    ],
-    [
-     "287274",
-     "Magnus Knudsen",
-     "M"
-    ],
-    [
-     "228279",
-     "Callum McCowatt",
-     "F"
-    ],
-    [
-     "288813",
-     "Tobias Bech",
-     "F"
-    ],
-    [
-     "403062",
-     "Stefen Tchamche",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401915806",
   "utc": "2026-11-26T20:00Z",
   "estadio": "Gradski Stadion Banja Luka",
@@ -1338,17 +1183,17 @@
    "ml": [
     550,
     400,
-    -235
+    -225
    ],
    "ou_linea": 3.5,
    "ou": [
     125,
-    -155
+    -160
    ],
    "spread": [
     [
      "+1.5",
-     -145
+     -150
     ],
     [
      "-1.5",
@@ -1485,9 +1330,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -700,
-    750,
-    1700
+    -750,
+    800,
+    1800
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1497,7 +1342,7 @@
    "spread": [
     [
      "-2.5",
-     115
+     110
     ],
     [
      "+2.5",
@@ -1634,9 +1479,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
     330,
-    -145
+    320,
+    -135
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1646,11 +1491,11 @@
    "spread": [
     [
      "+0.5",
-     120
+     105
     ],
     [
      "-0.5",
-     -165
+     -150
     ]
    ]
   },
@@ -2081,9 +1926,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    900,
+    850,
     400,
-    -300
+    -295
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -2093,11 +1938,11 @@
    "spread": [
     [
      "+1.5",
-     -125
+     -130
     ],
     [
      "-1.5",
-     -110
+     -105
     ]
    ]
   },
@@ -2230,9 +2075,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    245,
-    190
+    135,
+    250,
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -2242,11 +2087,11 @@
    "spread": [
     [
      "-0.5",
-     130
+     125
     ],
     [
      "+0.5",
-     -180
+     -170
     ]
    ]
   },
@@ -2379,9 +2224,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
+    100,
     270,
-    270
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -2391,11 +2236,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -110
     ],
     [
      "+0.5",
-     -120
+     -130
     ]
    ]
   },
