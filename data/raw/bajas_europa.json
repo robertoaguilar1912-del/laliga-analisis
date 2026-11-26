@@ -1,7 +1,7 @@
 {
 "401915506": {
 "fotmob": 6112357,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -74,7 +74,7 @@
 },
 "401915519": {
 "fotmob": 6112348,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -156,7 +156,7 @@
 },
 "401915517": {
 "fotmob": 6112290,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -229,7 +229,7 @@
 },
 "401915507": {
 "fotmob": 6112277,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -275,7 +275,7 @@
 },
 "401915521": {
 "fotmob": 6112266,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "simple",
 "local": {
 "faltan": [
@@ -429,8 +429,8 @@
 },
 "401915520": {
 "fotmob": 6112297,
-"visto": "2026-11-26T16:45+00:00",
-"xi": "unavailable",
+"visto": "2026-11-26T16:50+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -440,7 +440,7 @@
 "duda": false,
 "valor": 9228494.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Sota Kitano",
@@ -449,7 +449,7 @@
 "duda": false,
 "valor": 6350685.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Haris Tabaković",
@@ -495,19 +495,10 @@
 "valor": 2575023.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Leandro Morgalla",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2270984.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 56795460.0,
+"perdida": 0.2743032453650345,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -519,18 +510,18 @@
 "duda": false,
 "valor": 201634.0,
 "titular": false,
-"importante": false
+"importante": true
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 844425.0,
+"perdida": 0.2387826035467922,
 "perdida_duda": 0.0
 }
 },
 "401915508": {
 "fotmob": 6112288,
-"visto": "2026-11-26T16:45+00:00",
-"xi": "standard",
+"visto": "2026-11-26T16:50+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -561,8 +552,8 @@
 "importante": false
 }
 ],
-"valor_xi": 71487148.0,
-"perdida": 0.307182488242502,
+"valor_xi": 56948438.0,
+"perdida": 0.3856049572421986,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -582,6 +573,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 2445923.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Daniel Håkans",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1182136.0,
 "titular": false,
 "importante": true
 },
@@ -622,15 +622,6 @@
 "importante": false
 },
 {
-"nombre": "Daniel Håkans",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 1182136.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Mikael Ishak",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -640,14 +631,14 @@
 "importante": false
 }
 ],
-"valor_xi": 36618443.0,
-"perdida": 0.12000641316180483,
-"perdida_duda": 0.06679483887395213
+"valor_xi": 24374871.0,
+"perdida": 0.18028600028283226,
+"perdida_duda": 0.1488442338833301
 }
 },
 "401915518": {
 "fotmob": 6112282,
-"visto": "2026-11-26T16:45+00:00",
+"visto": "2026-11-26T16:50+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
