@@ -154,7 +154,7 @@
   "estadio": "Selhurst Park",
   "local_espn": "Crystal Palace",
   "visita_espn": "Real Sociedad",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -165,7 +165,10 @@
     275
    ],
    "ou_linea": 3.5,
-   "ou": null,
+   "ou": [
+    130,
+    -160
+   ],
    "spread": [
     [
      "-0.5",
@@ -300,7 +303,7 @@
   "estadio": "Groupama Arena",
   "local_espn": "Ferencvaros",
   "visita_espn": "NK Celje",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -449,7 +452,7 @@
   "estadio": "Allianz Stadium",
   "local_espn": "Juventus",
   "visita_espn": "Omonia Nicosia",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -598,15 +601,31 @@
   "estadio": "Groupama Stadium",
   "local_espn": "Lyon",
   "visita_espn": "Lillestrom",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -425,
+    550,
+    1000
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -155
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -155
+    ],
+    [
+     "+1.5",
+     115
+    ]
+   ]
   },
   "alineaciones": {
    "Lyon": [
@@ -731,7 +750,7 @@
   "estadio": "Goffertstadion",
   "local_espn": "NEC Nijmegen",
   "visita_espn": "Stade Rennais",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -880,7 +899,7 @@
   "estadio": "Pankritio Stadium",
   "local_espn": "OFI Crete",
   "visita_espn": "Anderlecht",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1029,7 +1048,7 @@
   "estadio": "Generali Arena",
   "local_espn": "Sparta Prague",
   "visita_espn": "AZ Alkmaar",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1178,7 +1197,7 @@
   "estadio": "Stadium of Light",
   "local_espn": "Sunderland",
   "visita_espn": "Jagiellonia Bialystok",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1327,7 +1346,7 @@
   "estadio": "Estádio Dr. Magalhaes Pessoa",
   "local_espn": "Torreense",
   "visita_espn": "Celtic",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1338,7 +1357,10 @@
     -135
    ],
    "ou_linea": 3.5,
-   "ou": null,
+   "ou": [
+    125,
+    -155
+   ],
    "spread": [
     [
      "+0.5",
@@ -1473,7 +1495,7 @@
   "estadio": "PreZero Arena",
   "local_espn": "TSG Hoffenheim",
   "visita_espn": "SK Sturm Graz",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
