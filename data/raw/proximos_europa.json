@@ -5,7 +5,7 @@
   "estadio": "Batumi Stadium (Adjarabet Arena)",
   "local_espn": "Besiktas",
   "visita_espn": "Hapoel Be'er",
-  "estado": "STATUS_FIRST_HALF",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1650,9 +1650,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -400,
-    550,
-    1000
+    -380,
+    500,
+    950
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -1948,9 +1948,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    350,
-    280,
-    -130
+    380,
+    285,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1960,11 +1960,127 @@
    "spread": [
     [
      "+0.5",
-     100
+     110
     ],
     [
      "-0.5",
-     -140
+     -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "OFI Crete": [
+    [
+     "369489",
+     "Klidman Lilo",
+     "G"
+    ],
+    [
+     "226179",
+     "Dimitris Nikolaou",
+     "CD"
+    ],
+    [
+     "261078",
+     "Christos Shelis",
+     "CD-L"
+    ],
+    [
+     "387672",
+     "Konstantinos Kostoulas",
+     "CD-R"
+    ],
+    [
+     "187897",
+     "Andreas Bouchalakis",
+     "CM-L"
+    ],
+    [
+     "241991",
+     "Thanasis Androutsos",
+     "CM-R"
+    ],
+    [
+     "312967",
+     "Nicolaos Athanasiou",
+     "LM"
+    ],
+    [
+     "204769",
+     "Lorenzo Dickmann",
+     "RM"
+    ],
+    [
+     "310785",
+     "Thiago Thomas Nuss",
+     "F"
+    ],
+    [
+     "229392",
+     "Aitor Cantalapiedra",
+     "CF-L"
+    ],
+    [
+     "183154",
+     "Taxiarchis Fountas",
+     "CF-R"
+    ]
+   ],
+   "Anderlecht": [
+    [
+     "152749",
+     "Colin Coosemans",
+     "G"
+    ],
+    [
+     "283681",
+     "Giulian Biancone",
+     "D"
+    ],
+    [
+     "395942",
+     "Ali Maamar",
+     "D"
+    ],
+    [
+     "272239",
+     "Oleg Reabciuk",
+     "D"
+    ],
+    [
+     "231780",
+     "Léo Pétrot",
+     "D"
+    ],
+    [
+     "319271",
+     "Marten Winkler",
+     "M"
+    ],
+    [
+     "312187",
+     "Mario Stroeykens",
+     "M"
+    ],
+    [
+     "351860",
+     "Lukás Ambros",
+     "M"
+    ],
+    [
+     "307477",
+     "Thelo Aasgaard",
+     "M"
+    ],
+    [
+     "382432",
+     "Tawfik Bentayeb",
+     "F"
+    ],
+    [
+     "369978",
+     "Mihajlo Cvetkovic",
+     "F"
     ]
    ]
   }
@@ -2033,6 +2149,122 @@
      -105
     ]
    ]
+  },
+  "alineaciones": {
+   "Sunderland": [
+    [
+     "301449",
+     "Robin Roefs",
+     "SUB"
+    ],
+    [
+     "340645",
+     "Malick Fofana",
+     "SUB"
+    ],
+    [
+     "387460",
+     "Tymur Tutierov",
+     "SUB"
+    ],
+    [
+     "356295",
+     "Chris Rigg",
+     "SUB"
+    ],
+    [
+     "290207",
+     "Trai Hume",
+     "SUB"
+    ],
+    [
+     "288340",
+     "Enzo Le Fée",
+     "SUB"
+    ],
+    [
+     "230081",
+     "Reinildo Mandava",
+     "SUB"
+    ],
+    [
+     "340240",
+     "Noah Sadiki",
+     "SUB"
+    ],
+    [
+     "318090",
+     "Nilson Angulo",
+     "SUB"
+    ],
+    [
+     "250543",
+     "Kevin Danso",
+     "SUB"
+    ],
+    [
+     "215401",
+     "Omar Alderete",
+     "SUB"
+    ]
+   ],
+   "Jagiellonia Bialystok": [
+    [
+     "364679",
+     "Slawomir Abramowicz",
+     "G"
+    ],
+    [
+     "382780",
+     "Guilherme Montoia",
+     "D"
+    ],
+    [
+     "323813",
+     "Rodrigo Conceição",
+     "D"
+    ],
+    [
+     "321360",
+     "Bernardo Vital",
+     "D"
+    ],
+    [
+     "346925",
+     "Yuki Kobayashi",
+     "D"
+    ],
+    [
+     "392560",
+     "Eryk Kozlowski",
+     "M"
+    ],
+    [
+     "220849",
+     "Taras Romanczuk",
+     "M"
+    ],
+    [
+     "303934",
+     "Anders Klynge",
+     "M"
+    ],
+    [
+     "370144",
+     "Kajetan Szmyt",
+     "F"
+    ],
+    [
+     "307060",
+     "Nik Prelec",
+     "F"
+    ],
+    [
+     "235672",
+     "Kamil Jozwiak",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -2066,6 +2298,122 @@
      -160
     ]
    ]
+  },
+  "alineaciones": {
+   "Torreense": [
+    [
+     "331396",
+     "Musa Drammeh",
+     "SUB"
+    ],
+    [
+     "297183",
+     "Dany Jean",
+     "SUB"
+    ],
+    [
+     "315681",
+     "Adriel",
+     "SUB"
+    ],
+    [
+     "266780",
+     "Javier Vazquez",
+     "SUB"
+    ],
+    [
+     "347520",
+     "Alejandro Alfaro",
+     "SUB"
+    ],
+    [
+     "148146",
+     "Stopira",
+     "SUB"
+    ],
+    [
+     "359742",
+     "Manuel Pozo",
+     "SUB"
+    ],
+    [
+     "321364",
+     "Volnei Feltes",
+     "SUB"
+    ],
+    [
+     "396750",
+     "Mohamed Diadié",
+     "SUB"
+    ],
+    [
+     "355033",
+     "Jonathan Mutombo",
+     "SUB"
+    ],
+    [
+     "347073",
+     "João Marques",
+     "SUB"
+    ]
+   ],
+   "Celtic": [
+    [
+     "162338",
+     "Sam Johnstone",
+     "G"
+    ],
+    [
+     "214794",
+     "Kieran Tierney",
+     "D"
+    ],
+    [
+     "291504",
+     "Dane Murray",
+     "D"
+    ],
+    [
+     "288959",
+     "Liam Scales",
+     "D"
+    ],
+    [
+     "387200",
+     "Colby Donovan",
+     "D"
+    ],
+    [
+     "84049",
+     "Callum McGregor",
+     "M"
+    ],
+    [
+     "145392",
+     "Alex Oxlade-Chamberlain",
+     "M"
+    ],
+    [
+     "258915",
+     "Jota",
+     "M"
+    ],
+    [
+     "350711",
+     "Yang Hyun-Jun",
+     "M"
+    ],
+    [
+     "259208",
+     "Luke McCowan",
+     "M"
+    ],
+    [
+     "272624",
+     "Kasper Høgh",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -2097,6 +2445,122 @@
     [
      "+1.5",
      105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "TSG Hoffenheim": [
+    [
+     "138213",
+     "Oliver Baumann",
+     "G"
+    ],
+    [
+     "266565",
+     "Ozan Kabak",
+     "D"
+    ],
+    [
+     "238025",
+     "Koki Machida",
+     "D"
+    ],
+    [
+     "359744",
+     "Mats Rots",
+     "D"
+    ],
+    [
+     "191209",
+     "Vladimír Coufal",
+     "D"
+    ],
+    [
+     "320939",
+     "Alexander Prass",
+     "M"
+    ],
+    [
+     "331057",
+     "Fisnik Asllani",
+     "M"
+    ],
+    [
+     "274860",
+     "Wouter Burger",
+     "M"
+    ],
+    [
+     "362590",
+     "Leon Avdullahu",
+     "M"
+    ],
+    [
+     "292169",
+     "Adam Hlozek",
+     "F"
+    ],
+    [
+     "338854",
+     "Adam Daghim",
+     "F"
+    ]
+   ],
+   "SK Sturm Graz": [
+    [
+     "329479",
+     "Adam Stejskal",
+     "G"
+    ],
+    [
+     "354014",
+     "Joshua Quarshie",
+     "D"
+    ],
+    [
+     "362910",
+     "Luís Balbo",
+     "D"
+    ],
+    [
+     "374533",
+     "Arjan Malic",
+     "D"
+    ],
+    [
+     "274923",
+     "Albert Vallci",
+     "D"
+    ],
+    [
+     "370757",
+     "Valmir Matoshi",
+     "M"
+    ],
+    [
+     "388521",
+     "Jacob Peter Hödl",
+     "M"
+    ],
+    [
+     "214012",
+     "Jon Gorenc Stankovic",
+     "M"
+    ],
+    [
+     "411273",
+     "Luca Weinhandl",
+     "M"
+    ],
+    [
+     "303704",
+     "Seedy Jatta",
+     "M"
+    ],
+    [
+     "329483",
+     "Oumar Diakité",
+     "F"
     ]
    ]
   }

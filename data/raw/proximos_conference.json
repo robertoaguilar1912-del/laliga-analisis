@@ -899,7 +899,7 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1388,6 +1388,122 @@
      -160
     ]
    ]
+  },
+  "alineaciones": {
+   "Braga": [
+    [
+     "347459",
+     "Mario Dorgeles",
+     "SUB"
+    ],
+    [
+     "303808",
+     "Pau Víctor",
+     "SUB"
+    ],
+    [
+     "285434",
+     "Fran Navarro",
+     "SUB"
+    ],
+    [
+     "352651",
+     "Diogo Travassos",
+     "SUB"
+    ],
+    [
+     "50959",
+     "João Moutinho",
+     "SUB"
+    ],
+    [
+     "322209",
+     "Adrian Leon Barisic",
+     "SUB"
+    ],
+    [
+     "340560",
+     "Bernardo",
+     "SUB"
+    ],
+    [
+     "98573",
+     "Gabri Martínez",
+     "SUB"
+    ],
+    [
+     "265984",
+     "Víctor Gómez",
+     "SUB"
+    ],
+    [
+     "326029",
+     "Gorby",
+     "SUB"
+    ],
+    [
+     "324930",
+     "Gustaf Lagerbielke",
+     "SUB"
+    ]
+   ],
+   "KuPS Kuopio": [
+    [
+     "219318",
+     "Johannes Kreidl",
+     "G"
+    ],
+    [
+     "360348",
+     "Niilo Kujasalo",
+     "D"
+    ],
+    [
+     "305480",
+     "Taneli Hämäläinen",
+     "D"
+    ],
+    [
+     "363064",
+     "Arttu Lotjonen",
+     "D"
+    ],
+    [
+     "275714",
+     "Saku Savolainen",
+     "D"
+    ],
+    [
+     "346564",
+     "Ayman Aiki",
+     "M"
+    ],
+    [
+     "405631",
+     "Samuel Pasanen",
+     "M"
+    ],
+    [
+     "259165",
+     "Julius Eskesen",
+     "M"
+    ],
+    [
+     "345797",
+     "Valentín Gasc",
+     "M"
+    ],
+    [
+     "137073",
+     "Petteri Pennanen",
+     "M"
+    ],
+    [
+     "199030",
+     "Jaime Moreno",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -1557,7 +1673,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -150,
     115
    ],
    "spread": [
@@ -1584,9 +1700,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
-    275,
-    240
+    120,
+    265,
+    210
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1596,11 +1712,11 @@
    "spread": [
     [
      "-0.5",
-     -105
+     110
     ],
     [
      "+0.5",
-     -135
+     -155
     ]
    ]
   },
@@ -1739,8 +1855,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -105
+    -125,
+    100
    ],
    "spread": [
     [
@@ -1750,6 +1866,122 @@
     [
      "-1.5",
      -110
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Inter D'Escaldes": [
+    [
+     "96595",
+     "Javier Díaz",
+     "SUB"
+    ],
+    [
+     "174200",
+     "Juan Cámara",
+     "SUB"
+    ],
+    [
+     "296885",
+     "Maurizio Pochettino",
+     "SUB"
+    ],
+    [
+     "385442",
+     "Pablo Molina",
+     "SUB"
+    ],
+    [
+     "411685",
+     "Anwar Hernández",
+     "SUB"
+    ],
+    [
+     "196982",
+     "Jilmar Torres",
+     "SUB"
+    ],
+    [
+     "354456",
+     "David López",
+     "SUB"
+    ],
+    [
+     "344576",
+     "Faysal Choaib",
+     "SUB"
+    ],
+    [
+     "112048",
+     "Álex Sánchez",
+     "SUB"
+    ],
+    [
+     "331929",
+     "Soule",
+     "SUB"
+    ],
+    [
+     "75689",
+     "Victor Alonso",
+     "SUB"
+    ]
+   ],
+   "F.C. København": [
+    [
+     "199330",
+     "Rúnar Rúnarsson",
+     "G"
+    ],
+    [
+     "151757",
+     "Thomas Delaney",
+     "D"
+    ],
+    [
+     "385889",
+     "Ákos Markgráf",
+     "D"
+    ],
+    [
+     "333663",
+     "Junnosuke Suzuki",
+     "D"
+    ],
+    [
+     "242850",
+     "Mads Emil Madsen",
+     "M"
+    ],
+    [
+     "257085",
+     "Alex Král",
+     "M"
+    ],
+    [
+     "376476",
+     "Maher Carrizo",
+     "M"
+    ],
+    [
+     "151053",
+     "Marcos López",
+     "M"
+    ],
+    [
+     "162484",
+     "Mohamed Elyounoussi",
+     "M"
+    ],
+    [
+     "397863",
+     "Hunor Németh",
+     "M"
+    ],
+    [
+     "411168",
+     "Viktor Dadason",
+     "F"
     ]
    ]
   }
@@ -1921,8 +2153,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
@@ -1932,6 +2164,122 @@
     [
      "+0.5",
      -125
+    ]
+   ]
+  },
+  "alineaciones": {
+   "SC Freiburg": [
+    [
+     "367557",
+     "Max Rosenfelder",
+     "SUB"
+    ],
+    [
+     "337079",
+     "Yannick Engelhardt",
+     "SUB"
+    ],
+    [
+     "174618",
+     "Christian Günter",
+     "SUB"
+    ],
+    [
+     "390031",
+     "Cyriaque Irié",
+     "SUB"
+    ],
+    [
+     "310883",
+     "Igor Matanovic",
+     "SUB"
+    ],
+    [
+     "171701",
+     "Lukas Kübler",
+     "SUB"
+    ],
+    [
+     "170209",
+     "Matthias Ginter",
+     "SUB"
+    ],
+    [
+     "338852",
+     "Mio Backhaus",
+     "SUB"
+    ],
+    [
+     "303031",
+     "Yuito Suzuki",
+     "SUB"
+    ],
+    [
+     "214203",
+     "Maximilian Eggestein",
+     "SUB"
+    ],
+    [
+     "179571",
+     "Vincenzo Grifo",
+     "SUB"
+    ]
+   ],
+   "FC Twente": [
+    [
+     "207780",
+     "Joel Drommel",
+     "G"
+    ],
+    [
+     "399213",
+     "Ruud Nijstad",
+     "D"
+    ],
+    [
+     "347026",
+     "Aske Adelgaard",
+     "D"
+    ],
+    [
+     "169050",
+     "Robin Pröpper",
+     "D"
+    ],
+    [
+     "277855",
+     "Bart van Rooij",
+     "D"
+    ],
+    [
+     "345579",
+     "Daouda Weidmann",
+     "M"
+    ],
+    [
+     "324583",
+     "Younes Taha",
+     "M"
+    ],
+    [
+     "290517",
+     "Ramiz Zerrouki",
+     "M"
+    ],
+    [
+     "379956",
+     "Sondre Ørjasaeter",
+     "F"
+    ],
+    [
+     "304905",
+     "Daan Rots",
+     "F"
+    ],
+    [
+     "177042",
+     "Wout Weghorst",
+     "F"
     ]
    ]
   }
