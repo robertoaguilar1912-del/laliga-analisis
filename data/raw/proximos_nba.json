@@ -67,7 +67,7 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "LA Clippers",
   "revisado": false,
@@ -96,7 +96,7 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_END_PERIOD",
   "local_espn": "Milwaukee Bucks",
   "visita_espn": "Brooklyn Nets",
   "revisado": false,
@@ -125,7 +125,7 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Houston Rockets",
   "visita_espn": "Phoenix Suns",
   "revisado": false,
@@ -235,15 +235,15 @@
    ],
    "spread": [
     3.5,
-    -105,
+    -110,
     -3.5,
-    -115
+    -110
    ],
    "spread_abre": 4.5,
    "total": [
-    225.5,
-    -105,
-    -115
+    224.5,
+    -110,
+    -110
    ],
    "total_abre": 237.5
   }
