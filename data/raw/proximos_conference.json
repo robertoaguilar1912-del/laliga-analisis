@@ -5,15 +5,15 @@
   "estadio": "Johan Cruijff Arena",
   "local_espn": "Ajax Amsterdam",
   "visita_espn": "FC Thun",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -450,
+    -475,
     650,
-    950
+    1000
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -22,12 +22,12 @@
    ],
    "spread": [
     [
-     "-1.5",
-     -175
+     "-2.5",
+     130
     ],
     [
-     "+1.5",
-     125
+     "+2.5",
+     -180
     ]
    ]
   },
@@ -154,20 +154,20 @@
   "estadio": "American Express Stadium",
   "local_espn": "Brighton & Hove Albion",
   "visita_espn": "CSU Craiova",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -750,
-    800,
+    -700,
+    750,
     1700
    ],
    "ou_linea": 3.5,
    "ou": [
-    115,
-    -145
+    120,
+    -155
    ],
    "spread": [
     [
@@ -303,29 +303,29 @@
   "estadio": "Air Albania Stadium",
   "local_espn": "Egnatia",
   "visita_espn": "Lincoln Red Imps",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -170,
-    350,
-    425
+    -185,
+    360,
+    450
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    125
+    -150,
+    120
    ],
    "spread": [
     [
      "-1.5",
-     135
+     130
     ],
     [
      "+1.5",
-     -190
+     -180
     ]
    ]
   },
@@ -452,20 +452,20 @@
   "estadio": "Tynecastle Park",
   "local_espn": "Heart of Midlothian",
   "visita_espn": "AS Monaco",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     475,
-    340,
-    -185
+    350,
+    -190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    125
+    -155,
+    120
    ],
    "spread": [
     [
@@ -601,7 +601,7 @@
   "estadio": "Mikheil Meskhi Stadioni",
   "local_espn": "Iberia 1999",
   "visita_espn": "Getafe",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -613,8 +613,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    125,
-    -160
+    140,
+    -175
    ],
    "spread": [
     [
@@ -750,15 +750,15 @@
   "estadio": "Stadion Strelnice",
   "local_espn": "Jablonec",
   "visita_espn": "FC Lugano",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    185,
-    255,
-    140
+    175,
+    250,
+    150
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -768,11 +768,11 @@
    "spread": [
     [
      "+0.5",
-     -180
+     -190
     ],
     [
      "-0.5",
-     130
+     135
     ]
    ]
   },
@@ -899,7 +899,7 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_HALFTIME",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1048,10 +1048,16 @@
   "estadio": "Alphamega Stadium",
   "local_espn": "Pafos",
   "visita_espn": "FC Midtjylland",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
-  "momios": null,
+  "momios": {
+   "casa": "Bet 365",
+   "ml": null,
+   "ou_linea": null,
+   "ou": null,
+   "spread": []
+  },
   "alineaciones": {
    "Pafos": [
     [
@@ -1175,29 +1181,29 @@
   "estadio": "Brann Stadium",
   "local_espn": "SK Brann",
   "visita_espn": "AGF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
     115,
-    290,
-    200
+    295,
+    210
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -165
+    -170,
+    135
    ],
    "spread": [
     [
      "-0.5",
-     105
+     100
     ],
     [
      "+0.5",
-     -145
+     -140
     ]
    ]
   },
@@ -1336,17 +1342,17 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
+    120,
     -155
    ],
    "spread": [
     [
      "+1.5",
-     -140
+     -135
     ],
     [
      "-1.5",
-     100
+     -105
     ]
    ]
   }
@@ -1364,22 +1370,22 @@
    "casa": "DraftKings",
    "ml": [
     -650,
-    700,
-    1500
+    750,
+    1600
    ],
    "ou_linea": 3.5,
    "ou": [
-    130,
-    -165
+    135,
+    -170
    ],
    "spread": [
     [
      "-2.5",
-     115
+     120
     ],
     [
      "+2.5",
-     -165
+     -170
     ]
    ]
   }
@@ -1429,19 +1435,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    140,
-    260,
-    185
+    135,
+    265,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -155,
-    125
+    -145,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     125
+     120
     ],
     [
      "+0.5",
@@ -1495,23 +1501,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    1000,
-    475,
-    -370
+    900,
+    400,
+    -300
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    105
+    -115,
+    -110
    ],
    "spread": [
     [
      "+1.5",
-     100
+     -125
     ],
     [
      "-1.5",
-     -135
+     -110
     ]
    ]
   }
@@ -1528,14 +1534,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    145,
-    255,
-    185
+    140,
+    245,
+    190
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -105
+    -115,
+    -110
    ],
    "spread": [
     [
@@ -1561,23 +1567,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -130,
-    300,
-    330
+    -105,
+    265,
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    120
+    -130,
+    105
    ],
    "spread": [
     [
      "-0.5",
-     -145
+     -115
     ],
     [
      "+0.5",
-     105
+     -120
     ]
    ]
   }
