@@ -96,7 +96,7 @@
   "visita": "LAC",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Memphis Grizzlies",
   "visita_espn": "LA Clippers",
   "revisado": false,
@@ -154,10 +154,10 @@
   "visita": "PHX",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Houston Rockets",
   "visita_espn": "Phoenix Suns",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Toyota Center (Houston)",
   "records": {
    "home": [
@@ -171,30 +171,7 @@
     "4-3"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -395,
-    312
-   ],
-   "ml_abre": [
-    -369,
-    294
-   ],
-   "spread": [
-    -9.5,
-    -104,
-    9.5,
-    -116
-   ],
-   "spread_abre": -10.5,
-   "total": [
-    222.5,
-    -111,
-    -109
-   ],
-   "total_abre": 223.5
-  }
+  "momios": null
  },
  {
   "id": "401909324",
@@ -224,26 +201,26 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -304,
-    247
+    -324,
+    261
    ],
    "ml_abre": [
     -241,
     199
    ],
    "spread": [
-    -7.5,
-    -118,
-    7.5,
-    -103
+    -8.5,
+    -115,
+    8.5,
+    -105
    ],
    "spread_abre": -5.5,
    "total": [
-    215.5,
-    -110,
-    -110
+    216.5,
+    -107,
+    -113
    ],
    "total_abre": 218.5
   }
@@ -276,26 +253,26 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    136,
-    -162
+    146,
+    -174
    ],
    "ml_abre": [
     142,
     -170
    ],
    "spread": [
-    3.5,
-    -112,
-    -3.5,
-    -108
+    4.5,
+    -115,
+    -4.5,
+    -105
    ],
    "spread_abre": 4.5,
    "total": [
-    227.5,
-    -108,
-    -112
+    226.5,
+    -110,
+    -110
    ],
    "total_abre": 237.5
   }
