@@ -601,7 +601,7 @@
   "estadio": "Mikheil Meskhi Stadioni",
   "local_espn": "Iberia 1999",
   "visita_espn": "Getafe",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -750,7 +750,7 @@
   "estadio": "Stadion Strelnice",
   "local_espn": "Jablonec",
   "visita_espn": "FC Lugano",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_HALFTIME",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1336,23 +1336,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    600,
-    425,
-    -250
+    550,
+    400,
+    -235
    ],
    "ou_linea": 3.5,
    "ou": [
-    120,
+    125,
     -155
    ],
    "spread": [
     [
      "+1.5",
-     -135
+     -145
     ],
     [
      "-1.5",
-     -105
+     105
     ]
    ]
   }
@@ -1540,8 +1540,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -115,
-    -110
+    -110,
+    -115
    ],
    "spread": [
     [
@@ -1567,9 +1567,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    265,
-    280
+    100,
+    260,
+    270
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -1579,11 +1579,11 @@
    "spread": [
     [
      "-0.5",
-     -115
+     -110
     ],
     [
      "+0.5",
-     -120
+     -125
     ]
    ]
   }
