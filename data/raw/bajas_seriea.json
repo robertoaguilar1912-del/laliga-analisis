@@ -1,7 +1,7 @@
 {
 "401875004": {
 "fotmob": 5749769,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -11,15 +11,6 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 2755899.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Toma Bašić",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 2056392.0,
 "titular": false,
 "importante": false
 },
@@ -42,15 +33,6 @@
 "importante": false
 },
 {
-"nombre": "Pasquale Mazzocchi",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1122078.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Bartol Franjić",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -60,7 +42,7 @@
 "importante": false
 }
 ],
-"valor_xi": 68849416.0,
+"valor_xi": 66489016.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -94,6 +76,15 @@
 "importante": false
 },
 {
+"nombre": "Lorenzo De Silvestri",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 283875.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Ukko Happonen",
 "tipo": "Lesión",
 "regreso": "mediados de diciembre",
@@ -112,14 +103,14 @@
 "importante": false
 }
 ],
-"valor_xi": 95036737.0,
-"perdida": 0.11034351905411062,
-"perdida_duda": 0.15145101204390046
+"valor_xi": 100367880.0,
+"perdida": 0.10448250974315687,
+"perdida_duda": 0.1434065360352336
 }
 },
 "401875081": {
 "fotmob": 5749763,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -192,15 +183,15 @@
 },
 "401874826": {
 "fotmob": 5749767,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
 {
 "nombre": "Rafik Belghali",
 "tipo": "Lesión",
-"regreso": "mediados de diciembre",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 9615462.0,
 "titular": false,
 "importante": true
@@ -216,8 +207,8 @@
 }
 ],
 "valor_xi": 92091038.0,
-"perdida": 0.10441257052613524,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.10441257052613524
 },
 "visita": {
 "faltan": [
@@ -265,7 +256,7 @@
 },
 "401874977": {
 "fotmob": 5749764,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -320,7 +311,7 @@
 },
 "401875031": {
 "fotmob": 5749768,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -402,7 +393,7 @@
 },
 "401874992": {
 "fotmob": 5749766,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -538,8 +529,8 @@
 },
 "401874769": {
 "fotmob": 5749760,
-"visto": "2026-11-26T14:26+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T21:31+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -561,7 +552,7 @@
 "importante": false
 }
 ],
-"valor_xi": 331541213.0,
+"valor_xi": 257010267.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 },
@@ -602,8 +593,8 @@
 },
 "401874994": {
 "fotmob": 5749762,
-"visto": "2026-11-26T14:26+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T21:31+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -640,7 +631,7 @@
 "duda": false,
 "valor": 24758025.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Riccardo Cassano",
@@ -661,8 +652,8 @@
 "importante": false
 }
 ],
-"valor_xi": 374612316.0,
-"perdida": 0.2973048809212135,
+"valor_xi": 249228108.0,
+"perdida": 0.5462148555089942,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -722,17 +713,26 @@
 "importante": false
 }
 ],
-"valor_xi": 241759696.0,
-"perdida": 0.5804945295761789,
-"perdida_duda": 0.2500987178607306
+"valor_xi": 233152783.0,
+"perdida": 0.6019236793755106,
+"perdida_duda": 0.2593311957164157
 }
 },
 "401875095": {
 "fotmob": 5749765,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Ivan Ilić",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 6871942.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Santiago Pierotti",
 "tipo": "Lesión",
@@ -743,18 +743,18 @@
 "importante": true
 },
 {
-"nombre": "Ivan Ilić",
+"nombre": "Mohamed Kaba",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6871942.0,
-"titular": false,
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 1702697.0,
+"titular": true,
 "importante": true
 }
 ],
 "valor_xi": 42777802.0,
-"perdida": 0.0557599710242242,
-"perdida_duda": 0.16064270903867384
+"perdida": 0.25620596401844115,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -802,7 +802,7 @@
 },
 "401875019": {
 "fotmob": 5749761,
-"visto": "2026-11-26T14:26+00:00",
+"visto": "2026-11-26T21:31+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -818,8 +818,8 @@
 {
 "nombre": "Michel Ndary Adopo",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 10188694.0,
 "titular": true,
 "importante": true
@@ -862,20 +862,11 @@
 }
 ],
 "valor_xi": 98151140.0,
-"perdida": 0.2136281860811805,
-"perdida_duda": 0.0
+"perdida": 0.10982201531230304,
+"perdida_duda": 0.10380617076887746
 },
 "visita": {
 "faltan": [
-{
-"nombre": "Davide Bartesaghi",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 27557181.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Luka Modrić",
 "tipo": "Lesión",
@@ -895,20 +886,20 @@
 "importante": true
 },
 {
+"nombre": "Davide Bartesaghi",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 27557181.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Alexis Saelemaekers",
 "tipo": "Lesión",
 "regreso": "mediados de enero de 2027",
 "duda": false,
 "valor": 19740345.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Francesco Camarda",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 19293783.0,
 "titular": false,
 "importante": false
 },
@@ -949,6 +940,15 @@
 "importante": false
 },
 {
+"nombre": "Francesco Camarda",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 19293783.0,
+"titular": false,
+"importante": false
+},
+{
 "nombre": "Pietro Terracciano",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -959,8 +959,8 @@
 }
 ],
 "valor_xi": 268874299.0,
-"perdida": 0.1119779097964287,
-"perdida_duda": 0.15623692616303203
+"perdida": 0.009486964761923936,
+"perdida_duda": 0.2587278711975368
 }
 }
 }

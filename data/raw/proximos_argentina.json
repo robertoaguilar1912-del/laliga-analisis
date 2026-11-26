@@ -55,8 +55,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -200,
-    280,
+    -195,
+    290,
     550
    ],
    "ou_linea": 2.5,
@@ -67,11 +67,11 @@
    "spread": [
     [
      "-0.5",
-     -220
+     -215
     ],
     [
      "+0.5",
-     140
+     145
     ]
    ]
   }
@@ -85,6 +85,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura---quarterfinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -215,
+    310,
+    550
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -125
+   ],
+   "spread": [
+    [
+     "-1.5",
+     115
+    ],
+    [
+     "+1.5",
+     -175
+    ]
+   ]
+  }
  }
 ]
