@@ -1,19 +1,10 @@
 {
 "401931986": {
 "fotmob": 1000022854,
-"visto": "2026-11-26T00:09+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T00:13+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
-{
-"nombre": "Hugo González",
-"tipo": "Sanción",
-"regreso": "hasta el 26 de noviembre",
-"duda": false,
-"valor": 331334.0,
-"titular": true,
-"importante": true
-},
 {
 "nombre": "Marcel Ruíz",
 "tipo": "Lesión",
@@ -22,6 +13,15 @@
 "valor": 6494546.0,
 "titular": false,
 "importante": true
+},
+{
+"nombre": "Hugo González",
+"tipo": "Sanción",
+"regreso": "hasta el 26 de noviembre",
+"duda": false,
+"valor": 331334.0,
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Iván López",
@@ -33,9 +33,9 @@
 "importante": false
 }
 ],
-"valor_xi": 35911105.0,
-"perdida": 0.009226505282975837,
-"perdida_duda": 0.18085063102346755
+"valor_xi": 40877806.0,
+"perdida": 0.0,
+"perdida_duda": 0.1588770688916132
 },
 "visita": {
 "faltan": [
@@ -46,7 +46,16 @@
 "duda": false,
 "valor": 1277915.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Paulo Ramírez",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 1270292.0,
+"titular": false,
+"importante": true
 },
 {
 "nombre": "Edyairth Ortega",
@@ -58,14 +67,14 @@
 "importante": false
 }
 ],
-"valor_xi": 21346712.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 20526474.0,
+"perdida": 0.062256917578732716,
+"perdida_duda": 0.06188554351809278
 }
 },
 "401931998": {
 "fotmob": 1000022853,
-"visto": "2026-11-25T20:27+00:00",
+"visto": "2026-11-26T00:13+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
