@@ -5,7 +5,7 @@
   "estadio": "Estadio Nemesio Díez Riega",
   "local_espn": "Toluca",
   "visita_espn": "Atlas",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "apertura---quarterfinals",
   "neutral": false,
   "momios": {
@@ -160,13 +160,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    230,
+    130,
+    225,
     215
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
+    -105,
     -125
    ],
    "spread": [
@@ -177,6 +177,122 @@
     [
      "+0.5",
      -165
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Monterrey": [
+    [
+     "190907",
+     "Luis Cárdenas",
+     "G"
+    ],
+    [
+     "79608",
+     "Jorge Rodríguez",
+     "CD-L"
+    ],
+    [
+     "290348",
+     "Víctor Guzmán",
+     "CD-R"
+    ],
+    [
+     "245848",
+     "Gerardo Arteaga",
+     "LB"
+    ],
+    [
+     "202106",
+     "Ricardo Chávez",
+     "RB"
+    ],
+    [
+     "159263",
+     "Lucas Ocampos",
+     "AM"
+    ],
+    [
+     "207011",
+     "Orbelín Pineda",
+     "LM"
+    ],
+    [
+     "173233",
+     "Óliver Torres",
+     "RM"
+    ],
+    [
+     "235511",
+     "Hugo Cuypers",
+     "F"
+    ],
+    [
+     "117977",
+     "Jesús Corona",
+     "AM-L"
+    ],
+    [
+     "276305",
+     "Luca Orellano",
+     "AM-R"
+    ]
+   ],
+   "América": [
+    [
+     "103729",
+     "Rodolfo Cota",
+     "G"
+    ],
+    [
+     "82782",
+     "Santiago Ramos",
+     "CD-L"
+    ],
+    [
+     "241225",
+     "Santiago Bueno",
+     "CD-R"
+    ],
+    [
+     "290414",
+     "Israel Reyes",
+     "LB"
+    ],
+    [
+     "195312",
+     "Kevin Álvarez",
+     "RB"
+    ],
+    [
+     "286198",
+     "Edwin Cerrillo",
+     "AM"
+    ],
+    [
+     "228351",
+     "Alan Cervantes",
+     "LM"
+    ],
+    [
+     "129421",
+     "Érick Sánchez",
+     "RM"
+    ],
+    [
+     "167195",
+     "Miguel Borja",
+     "F"
+    ],
+    [
+     "336456",
+     "Óscar Perea",
+     "AM-L"
+    ],
+    [
+     "212824",
+     "Alejandro Zendejas",
+     "AM-R"
     ]
    ]
   }
