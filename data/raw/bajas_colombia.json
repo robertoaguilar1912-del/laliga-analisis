@@ -1,7 +1,7 @@
 {
 "401934687": {
 "fotmob": 1000024434,
-"visto": "2026-11-26T00:47+00:00",
+"visto": "2026-11-26T00:52+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -65,8 +65,8 @@
 },
 "401934705": {
 "fotmob": 1000024435,
-"visto": "2026-11-26T00:47+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T00:52+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -93,12 +93,12 @@
 "regreso": "hasta el 26 de noviembre",
 "duda": false,
 "valor": 0.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 6818271.0,
-"perdida": 0.3463163901816164,
+"valor_xi": 7473706.0,
+"perdida": 0.3159448605551249,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -113,15 +113,6 @@
 "importante": true
 },
 {
-"nombre": "Didier Moreno",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 391514.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Hayen Palacios",
 "tipo": "Lesión",
 "regreso": "finales de noviembre",
@@ -129,11 +120,20 @@
 "valor": 334977.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Didier Moreno",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 391514.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 7560111.0,
-"perdida": 0.0848799706776792,
-"perdida_duda": 0.0517868057757353
+"valor_xi": 5886681.0,
+"perdida": 0.10900913434921987,
+"perdida_duda": 0.0
 }
 }
 }
