@@ -601,7 +601,7 @@
   "estadio": "Georgios Karaiskakis Stadium",
   "local_espn": "Olympiacos",
   "visita_espn": "AC Milan",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1222,6 +1222,122 @@
      -120
     ]
    ]
+  },
+  "alineaciones": {
+   "Crystal Palace": [
+    [
+     "234172",
+     "Dean Henderson",
+     "G"
+    ],
+    [
+     "231718",
+     "Axel Disasi",
+     "D"
+    ],
+    [
+     "386252",
+     "Jaydee Canvot",
+     "D"
+    ],
+    [
+     "272585",
+     "Chris Richards",
+     "D"
+    ],
+    [
+     "282230",
+     "Quinten Timber",
+     "M"
+    ],
+    [
+     "219362",
+     "Daichi Kamada",
+     "M"
+    ],
+    [
+     "225426",
+     "Ben Chilwell",
+     "M"
+    ],
+    [
+     "259486",
+     "Eddie Nketiah",
+     "M"
+    ],
+    [
+     "168421",
+     "Will Hughes",
+     "M"
+    ],
+    [
+     "297370",
+     "Yéremy Pino",
+     "M"
+    ],
+    [
+     "241187",
+     "Jean-Philippe Mateta",
+     "F"
+    ]
+   ],
+   "Real Sociedad": [
+    [
+     "312011",
+     "Unai Marrero",
+     "G"
+    ],
+    [
+     "366885",
+     "Jon Martín",
+     "D"
+    ],
+    [
+     "283891",
+     "Aihen Muñoz",
+     "D"
+    ],
+    [
+     "363039",
+     "Héctor Fort",
+     "D"
+    ],
+    [
+     "355433",
+     "Mamadou Sarr",
+     "D"
+    ],
+    [
+     "213141",
+     "Gonçalo Guedes",
+     "M"
+    ],
+    [
+     "388601",
+     "Jon Gorrotxategi",
+     "M"
+    ],
+    [
+     "297371",
+     "Beñat Turrientes",
+     "M"
+    ],
+    [
+     "406379",
+     "Job Ochieng",
+     "M"
+    ],
+    [
+     "229018",
+     "Mikel Oyarzabal",
+     "F"
+    ],
+    [
+     "307487",
+     "Arsen Zakharyan",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -1236,23 +1352,139 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -265,
-    425,
+    -270,
+    450,
     650
    ],
    "ou_linea": 3.5,
    "ou": [
-    125,
-    -160
+    115,
+    -145
    ],
    "spread": [
     [
      "-1.5",
-     -105
+     -110
     ],
     [
      "+1.5",
      -130
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Ferencvaros": [
+    [
+     "239414",
+     "Ádam Varga",
+     "G"
+    ],
+    [
+     "304752",
+     "Toon Raemaekers",
+     "D"
+    ],
+    [
+     "266937",
+     "Mariano Gómez",
+     "D"
+    ],
+    [
+     "219448",
+     "Attila Osvath",
+     "D"
+    ],
+    [
+     "345270",
+     "Cadu",
+     "D"
+    ],
+    [
+     "191945",
+     "Matús Bero",
+     "M"
+    ],
+    [
+     "219449",
+     "Ádám Nagy",
+     "M"
+    ],
+    [
+     "306354",
+     "Marius Dumitru Corbu",
+     "M"
+    ],
+    [
+     "301093",
+     "Lenny Joseph",
+     "F"
+    ],
+    [
+     "253991",
+     "Kristoffer Zachariassen",
+     "F"
+    ],
+    [
+     "225510",
+     "Daniel Arzani",
+     "F"
+    ]
+   ],
+   "NK Celje": [
+    [
+     "316540",
+     "Zan-Luk Leban",
+     "G"
+    ],
+    [
+     "324201",
+     "Artemijus Tutyskinas",
+     "D"
+    ],
+    [
+     "385608",
+     "Matic Ivansek",
+     "D"
+    ],
+    [
+     "307206",
+     "Lukasz Bejger",
+     "D"
+    ],
+    [
+     "363569",
+     "Milot Avdyli",
+     "D"
+    ],
+    [
+     "206356",
+     "Mario Kvesic",
+     "M"
+    ],
+    [
+     "306199",
+     "Svit Seslar",
+     "M"
+    ],
+    [
+     "326760",
+     "Mark Zabukovnik",
+     "M"
+    ],
+    [
+     "189386",
+     "Benjamin Verbic",
+     "F"
+    ],
+    [
+     "290216",
+     "Blaz Kramer",
+     "F"
+    ],
+    [
+     "312664",
+     "Veton Tusha",
+     "F"
     ]
    ]
   }
@@ -1273,10 +1505,10 @@
     600,
     1300
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    140,
-    -175
+    -180,
+    145
    ],
    "spread": [
     [
@@ -1286,6 +1518,122 @@
     [
      "+1.5",
      120
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Juventus": [
+    [
+     "138398",
+     "Neto",
+     "G"
+    ],
+    [
+     "323147",
+     "Federico Gatti",
+     "D"
+    ],
+    [
+     "24412",
+     "Juan Cabal",
+     "D"
+    ],
+    [
+     "227697",
+     "Jhon Lucumí",
+     "D"
+    ],
+    [
+     "243787",
+     "Lloyd Kelly",
+     "D"
+    ],
+    [
+     "206153",
+     "Jérémie Boga",
+     "M"
+    ],
+    [
+     "312659",
+     "Francisco Conceição",
+     "M"
+    ],
+    [
+     "297337",
+     "Pape Matar Sarr",
+     "M"
+    ],
+    [
+     "320074",
+     "Douglas Luiz",
+     "M"
+    ],
+    [
+     "308029",
+     "Andrea Cambiaso",
+     "M"
+    ],
+    [
+     "388606",
+     "Jeff Ekhator",
+     "F"
+    ]
+   ],
+   "Omonia Nicosia": [
+    [
+     "134909",
+     "Thomas Kaminski",
+     "G"
+    ],
+    [
+     "274954",
+     "Senou Coulibaly",
+     "D"
+    ],
+    [
+     "204701",
+     "Lubomir Satka",
+     "D"
+    ],
+    [
+     "241032",
+     "Jean-Kévin Duverne",
+     "D"
+    ],
+    [
+     "138564",
+     "Loïc Négo",
+     "D"
+    ],
+    [
+     "366462",
+     "Panagiotis Andreou",
+     "M"
+    ],
+    [
+     "366131",
+     "Jaden Montnor",
+     "M"
+    ],
+    [
+     "275269",
+     "Mateo Maric",
+     "M"
+    ],
+    [
+     "162424",
+     "Muamer Tankovic",
+     "M"
+    ],
+    [
+     "205279",
+     "Florin Tanase",
+     "M"
+    ],
+    [
+     "305500",
+     "Andronikos Kakoulis",
+     "F"
     ]
    ]
   }
@@ -1321,6 +1669,122 @@
      105
     ]
    ]
+  },
+  "alineaciones": {
+   "Lyon": [
+    [
+     "408345",
+     "Khalis Merah",
+     "SUB"
+    ],
+    [
+     "301354",
+     "Ruben Kluivert",
+     "SUB"
+    ],
+    [
+     "145190",
+     "Nicolás Tagliafico",
+     "SUB"
+    ],
+    [
+     "403842",
+     "Rémi Himbert",
+     "SUB"
+    ],
+    [
+     "341375",
+     "Julien Duranville",
+     "SUB"
+    ],
+    [
+     "320945",
+     "Felix Bacher",
+     "SUB"
+    ],
+    [
+     "221278",
+     "Dominik Greif",
+     "SUB"
+    ],
+    [
+     "419943",
+     "Steeve Kango",
+     "SUB"
+    ],
+    [
+     "379066",
+     "Kail Boudache",
+     "SUB"
+    ],
+    [
+     "365562",
+     "Noah Nartey",
+     "SUB"
+    ],
+    [
+     "192060",
+     "Corentin Tolisso",
+     "SUB"
+    ]
+   ],
+   "Lillestrom": [
+    [
+     "235504",
+     "Pontus Dahlberg",
+     "G"
+    ],
+    [
+     "267062",
+     "Lars Ranger",
+     "D"
+    ],
+    [
+     "304140",
+     "Frederik Elkaer",
+     "D"
+    ],
+    [
+     "271767",
+     "Sander Moen Foss",
+     "D"
+    ],
+    [
+     "368078",
+     "Stian Kristiansen",
+     "D"
+    ],
+    [
+     "363001",
+     "Gustav Nyheim",
+     "M"
+    ],
+    [
+     "333776",
+     "Henrik Melland",
+     "M"
+    ],
+    [
+     "255219",
+     "Vá",
+     "M"
+    ],
+    [
+     "363494",
+     "Camil Jebara",
+     "M"
+    ],
+    [
+     "357025",
+     "Filip Ottosson",
+     "M"
+    ],
+    [
+     "223137",
+     "Eric Kitolano",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -1352,6 +1816,122 @@
     [
      "-0.5",
      105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "NEC Nijmegen": [
+    [
+     "292223",
+     "Gonzalo Crettaz",
+     "SUB"
+    ],
+    [
+     "285471",
+     "Willum Thór Willumsson",
+     "SUB"
+    ],
+    [
+     "372851",
+     "Clement Bischoff",
+     "SUB"
+    ],
+    [
+     "122954",
+     "Bryan Linssen",
+     "SUB"
+    ],
+    [
+     "335203",
+     "Deveron Fonville",
+     "SUB"
+    ],
+    [
+     "276579",
+     "Darko Nejasmic",
+     "SUB"
+    ],
+    [
+     "306806",
+     "Ahmetcan Kaplan",
+     "SUB"
+    ],
+    [
+     "116893",
+     "Tjaronn Chery",
+     "SUB"
+    ],
+    [
+     "122575",
+     "Dusan Tadic",
+     "SUB"
+    ],
+    [
+     "345556",
+     "Tobias Storm",
+     "SUB"
+    ],
+    [
+     "340685",
+     "Noé Lebreton",
+     "SUB"
+    ]
+   ],
+   "Stade Rennais": [
+    [
+     "164126",
+     "Brice Samba",
+     "G"
+    ],
+    [
+     "401410",
+     "Gonçalo Oliveira",
+     "D"
+    ],
+    [
+     "376339",
+     "Abdelhamid Aït Boudlal",
+     "D"
+    ],
+    [
+     "250758",
+     "Bryan Reynolds",
+     "D"
+    ],
+    [
+     "307713",
+     "Charlie Cresswell",
+     "D"
+    ],
+    [
+     "372260",
+     "Mahamadou Nagida",
+     "D"
+    ],
+    [
+     "355982",
+     "Djaoui Cissé",
+     "M"
+    ],
+    [
+     "173266",
+     "Adrien Thomasson",
+     "M"
+    ],
+    [
+     "243844",
+     "Sebastian Szymanski",
+     "M"
+    ],
+    [
+     "323850",
+     "Esteban Lepaul",
+     "F"
+    ],
+    [
+     "282381",
+     "Boulaye Dia",
+     "F"
     ]
    ]
   }
@@ -1434,14 +2014,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -360,
+    -370,
     475,
-    950
+    1000
    ],
    "ou_linea": 2.5,
    "ou": [
-    -160,
-    130
+    -155,
+    125
    ],
    "spread": [
     [
@@ -1467,23 +2047,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    380,
     350,
-    -160
+    340,
+    -145
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -135
+    115,
+    -140
    ],
    "spread": [
     [
      "+0.5",
-     125
+     115
     ],
     [
      "-0.5",
-     -175
+     -160
     ]
    ]
   }
