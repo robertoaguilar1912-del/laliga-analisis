@@ -381,12 +381,12 @@
    "ou_linea": 3.5,
    "ou": [
     120,
-    -165
+    -170
    ],
    "spread": [
     [
      "+1.5",
-     -185
+     -190
     ],
     [
      "-1.5",
@@ -440,23 +440,155 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -310,
-    380,
-    600
+    -330,
+    390,
+    650
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    120
+    -175,
+    125
    ],
    "spread": [
     [
      "-1.5",
-     -110
+     -115
     ],
     [
      "+1.5",
-     -135
+     -130
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875017",
+  "utc": "2026-12-06T11:30Z",
+  "estadio": "Stadio Luigi Ferraris",
+  "local_espn": "Genoa",
+  "visita_espn": "Torino",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    120,
+    205,
+    205
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -160
+   ],
+   "spread": [
+    [
+     "-0.5",
+     115
+    ],
+    [
+     "+0.5",
+     -175
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875029",
+  "utc": "2026-12-06T14:00Z",
+  "estadio": "Olimpico",
+  "local_espn": "Lazio",
+  "visita_espn": "Atalanta",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -120,
+    265,
+    245
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -120
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401875006",
+  "utc": "2026-12-06T17:00Z",
+  "estadio": "Allianz Stadium",
+  "local_espn": "Juventus",
+  "visita_espn": "Udinese",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -300,
+    360,
+    650
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    100
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -105
+    ],
+    [
+     "+1.5",
+     -145
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401874995",
+  "utc": "2026-12-06T19:45Z",
+  "estadio": "San Siro",
+  "local_espn": "AC Milan",
+  "visita_espn": "Parma",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-italian-serie-a",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -475,
+    475,
+    900
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -165,
+    115
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -150
+    ],
+    [
+     "+1.5",
+     100
     ]
    ]
   }

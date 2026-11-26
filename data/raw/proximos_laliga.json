@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    125,
-    215,
-    235
+    120,
+    220,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -188,11 +188,11 @@
    "spread": [
     [
      "-0.5",
-     110
+     105
     ],
     [
      "+0.5",
-     -165
+     -155
     ]
    ]
   }
@@ -401,6 +401,50 @@
   "estadio": "Spotify Camp Nou",
   "local_espn": "Barcelona",
   "visita_espn": "Celta Vigo",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882781",
+  "utc": "2026-12-06T13:00Z",
+  "estadio": "El Sadar",
+  "local_espn": "Osasuna",
+  "visita_espn": "Elche",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882785",
+  "utc": "2026-12-06T15:15Z",
+  "estadio": "San Mamés",
+  "local_espn": "Athletic Club",
+  "visita_espn": "Real Madrid",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882782",
+  "utc": "2026-12-06T17:30Z",
+  "estadio": "Estadio Coliseum",
+  "local_espn": "Getafe",
+  "visita_espn": "Valencia",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401882784",
+  "utc": "2026-12-06T20:00Z",
+  "estadio": "Riyadh Air Metropolitano",
+  "local_espn": "Atlético Madrid",
+  "visita_espn": "Real Betis",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
