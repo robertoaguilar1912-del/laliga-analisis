@@ -17,8 +17,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -110,
-    -120
+    -105,
+    -125
    ],
    "spread": [
     [
@@ -27,7 +27,7 @@
     ],
     [
      "-0.5",
-     145
+     150
     ]
    ]
   }
@@ -85,7 +85,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "apertura---quarterfinals",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    185,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -125,
+    -110
+   ],
+   "spread": [
+    [
+     "-0.5",
+     125
+    ],
+    [
+     "+0.5",
+     -185
+    ]
+   ]
+  }
  },
  {
   "id": "401931983",

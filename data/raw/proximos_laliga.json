@@ -56,7 +56,7 @@
    "spread": [
     [
      "-0.5",
-     -185
+     -180
     ],
     [
      "+0.5",
@@ -77,19 +77,19 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    360,
-    280,
-    -130
+    370,
+    290,
+    -135
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -105
+    100
    ],
    "spread": [
     [
      "+0.5",
-     105
+     110
     ],
     [
      "-0.5",
@@ -111,8 +111,8 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    370,
-    -200
+    380,
+    -210
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -150,16 +150,16 @@
    "ou_linea": 3.5,
    "ou": [
     -120,
-    -105
+    100
    ],
    "spread": [
     [
      "-2.5",
-     100
+     -105
     ],
     [
      "+2.5",
-     -135
+     -130
     ]
    ]
   }
@@ -176,9 +176,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    120,
+    115,
     220,
-    250
+    260
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -192,7 +192,7 @@
     ],
     [
      "+0.5",
-     -155
+     -145
     ]
    ]
   }
@@ -209,23 +209,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    800,
-    600,
-    -425
+    900,
+    650,
+    -450
    ],
    "ou_linea": 3.5,
    "ou": [
-    -155,
-    120
+    -160,
+    125
    ],
    "spread": [
     [
-     "+1.5",
-     115
+     "+2.5",
+     -180
     ],
     [
-     "-1.5",
-     -170
+     "-2.5",
+     125
     ]
    ]
   }
@@ -291,7 +291,7 @@
     ],
     [
      "+0.5",
-     -150
+     -145
     ]
    ]
   }
@@ -324,7 +324,7 @@
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -338,7 +338,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    500,
+    400,
+    -230
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -130,
+    100
+   ],
+   "spread": [
+    [
+     "+1.5",
+     -145
+    ],
+    [
+     "-1.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401882700",
@@ -349,7 +371,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -265,
+    450,
+    550
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -145,
+    110
+   ],
+   "spread": [
+    [
+     "-1.5",
+     -115
+    ],
+    [
+     "+1.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401882786",
@@ -360,7 +404,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -110,
+    240,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    100,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -125
+    ],
+    [
+     "+0.5",
+     -125
+    ]
+   ]
+  }
  },
  {
   "id": "401882780",
@@ -371,7 +437,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    255,
+    180
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -175,
+    130
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -180
+    ]
+   ]
+  }
  },
  {
   "id": "401882779",
@@ -382,7 +470,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -125,
+    275,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -140,
+    105
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -135
+    ],
+    [
+     "+0.5",
+     -110
+    ]
+   ]
+  }
  },
  {
   "id": "401882777",
@@ -393,7 +503,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -140,
+    330,
+    300
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    100,
+    -135
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -160
+    ],
+    [
+     "+0.5",
+     105
+    ]
+   ]
+  }
  },
  {
   "id": "401882783",
@@ -404,7 +536,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -1100,
+    1000,
+    1500
+   ],
+   "ou_linea": 4.5,
+   "ou": [
+    110,
+    -150
+   ],
+   "spread": [
+    [
+     "-2.5",
+     -150
+    ],
+    [
+     "+2.5",
+     100
+    ]
+   ]
+  }
  },
  {
   "id": "401882781",
@@ -415,7 +569,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    105,
+    255,
+    235
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -115,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -105
+    ],
+    [
+     "+0.5",
+     -145
+    ]
+   ]
+  }
  },
  {
   "id": "401882785",
@@ -426,7 +602,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    360,
+    320,
+    -160
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    130,
+    -180
+   ],
+   "spread": [
+    [
+     "+0.5",
+     115
+    ],
+    [
+     "-0.5",
+     -175
+    ]
+   ]
+  }
  },
  {
   "id": "401882782",
@@ -437,7 +635,29 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    135,
+    195,
+    225
+   ],
+   "ou_linea": 1.5,
+   "ou": [
+    -190,
+    140
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -185
+    ]
+   ]
+  }
  },
  {
   "id": "401882784",
@@ -448,6 +668,28 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-laliga",
   "neutral": false,
-  "momios": null
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -160,
+    320,
+    360
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    125,
+    -175
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -175
+    ],
+    [
+     "+0.5",
+     115
+    ]
+   ]
+  }
  }
 ]

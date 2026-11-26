@@ -1,7 +1,40 @@
 [
  {
+  "id": "401936353",
+  "utc": "2026-11-28T23:00Z",
+  "estadio": "José Amalfitani",
+  "local_espn": "Vélez Sarsfield",
+  "visita_espn": "Independiente",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura---quarterfinals",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    100,
+    210,
+    300
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    120,
+    -165
+   ],
+   "spread": [
+    [
+     "-0.5",
+     -110
+    ],
+    [
+     "+0.5",
+     -135
+    ]
+   ]
+  }
+ },
+ {
   "id": "401936413",
-  "utc": "2026-11-29T20:00Z",
+  "utc": "2026-11-29T01:00Z",
   "estadio": "Monumental Presidente Perón",
   "local_espn": "Instituto (Córdoba)",
   "visita_espn": "River Plate",
@@ -19,39 +52,39 @@
   "estado": "STATUS_SCHEDULED",
   "tipo": "clausura---quarterfinals",
   "neutral": false,
-  "momios": null
- },
- {
-  "id": "401936353",
-  "utc": "2026-11-29T20:00Z",
-  "estadio": "José Amalfitani",
-  "local_espn": "Vélez Sarsfield",
-  "visita_espn": "Independiente",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "clausura---quarterfinals",
-  "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -105,
-    205,
-    310
+    -200,
+    280,
+    550
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
+    120,
     -170
    ],
    "spread": [
     [
      "-0.5",
-     -115
+     -220
     ],
     [
      "+0.5",
-     -135
+     140
     ]
    ]
   }
+ },
+ {
+  "id": "401936657",
+  "utc": "2026-11-29T23:30Z",
+  "estadio": "Alberto José Armando (La Bombonera)",
+  "local_espn": "Boca Juniors",
+  "visita_espn": "Gimnasia La Plata",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "clausura---quarterfinals",
+  "neutral": false,
+  "momios": null
  }
 ]

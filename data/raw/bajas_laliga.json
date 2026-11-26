@@ -1,10 +1,19 @@
 {
 "401882791": {
 "fotmob": 5868146,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
+{
+"nombre": "Petar Ratkov",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 11370104.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Jeremy Toljan",
 "tipo": "Lesión",
@@ -17,7 +26,7 @@
 ],
 "valor_xi": 32944045.0,
 "perdida": 0.0,
-"perdida_duda": 0.0
+"perdida_duda": 0.34513381705252044
 },
 "visita": {
 "faltan": [
@@ -56,25 +65,34 @@
 },
 "401882796": {
 "fotmob": 5868141,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
-{
-"nombre": "Dani Ceballos",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 4710400.0,
-"titular": false,
-"importante": false
-},
 {
 "nombre": "José Antonio Morante",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Giovani Lo Celso",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5248337.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Dani Ceballos",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 4710400.0,
 "titular": false,
 "importante": false
 }
@@ -120,7 +138,7 @@
 },
 "401882790": {
 "fotmob": 5868147,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -148,6 +166,15 @@
 "regreso": "mediados de diciembre",
 "duda": false,
 "valor": 1151057.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Julen Lobete",
+"tipo": "Lesión",
+"regreso": "el resto de la temporada",
+"duda": false,
+"valor": 650099.0,
 "titular": false,
 "importante": false
 }
@@ -202,7 +229,7 @@
 },
 "401882793": {
 "fotmob": 5868144,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -293,7 +320,7 @@
 },
 "401882789": {
 "fotmob": 5868148,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -384,8 +411,8 @@
 },
 "401882787": {
 "fotmob": 5868150,
-"visto": "2026-11-26T02:32+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-26T14:26+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -446,8 +473,8 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 1935072.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 },
 {
 "nombre": "Aitor Fernández",
@@ -468,14 +495,14 @@
 "importante": false
 }
 ],
-"valor_xi": 45407122.0,
-"perdida": 0.21984762654633783,
+"valor_xi": 47414556.0,
+"perdida": 0.1697279628643997,
 "perdida_duda": 0.0
 }
 },
 "401882794": {
 "fotmob": 5868143,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -501,7 +528,7 @@
 "regreso": "unos días",
 "duda": false,
 "valor": 220611934.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -514,6 +541,15 @@
 "importante": true
 },
 {
+"nombre": "Alejandro Balde",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 42869241.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Rodri",
 "tipo": "Lesión",
 "regreso": "ya entrena",
@@ -521,15 +557,6 @@
 "valor": 53364886.0,
 "titular": false,
 "importante": true
-},
-{
-"nombre": "Alejandro Balde",
-"tipo": "Lesión",
-"regreso": "finales de diciembre",
-"duda": false,
-"valor": 42869241.0,
-"titular": false,
-"importante": false
 },
 {
 "nombre": "Xavi Espart",
@@ -568,14 +595,14 @@
 "importante": false
 }
 ],
-"valor_xi": 701689911.0,
-"perdida": 0.4529423681566942,
-"perdida_duda": 0.07605194996169753
+"valor_xi": 554914281.0,
+"perdida": 0.6500000871305743,
+"perdida_duda": 0.09616780073461473
 }
 },
 "401882795": {
 "fotmob": 5868142,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -637,7 +664,7 @@
 "regreso": "hasta el 29 de noviembre",
 "duda": false,
 "valor": 20933926.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -647,16 +674,7 @@
 "duda": false,
 "valor": 18089620.0,
 "titular": false,
-"importante": false
-},
-{
-"nombre": "Alassane Diatta",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 1066843.0,
-"titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Ilias Akhomach",
@@ -664,6 +682,15 @@
 "regreso": "ya entrena",
 "duda": true,
 "valor": 14881043.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Alassane Diatta",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 1066843.0,
 "titular": false,
 "importante": false
 },
@@ -677,14 +704,14 @@
 "importante": false
 }
 ],
-"valor_xi": 262164187.0,
-"perdida": 0.07985044120461808,
-"perdida_duda": 0.0
+"valor_xi": 217921647.0,
+"perdida": 0.17907145314480852,
+"perdida_duda": 0.06828620839122054
 }
 },
 "401882788": {
 "fotmob": 5868149,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -766,8 +793,8 @@
 },
 "401882792": {
 "fotmob": 5868145,
-"visto": "2026-11-26T02:32+00:00",
-"xi": "unavailable",
+"visto": "2026-11-26T14:26+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -777,7 +804,7 @@
 "duda": false,
 "valor": 13520437.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Clemens Riedel",
@@ -785,8 +812,8 @@
 "regreso": "hasta el 30 de noviembre",
 "duda": false,
 "valor": 5116335.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Álex Calatrava",
@@ -795,7 +822,7 @@
 "duda": false,
 "valor": 3487133.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Edu Expósito",
@@ -816,8 +843,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 67492367.0,
+"perdida": 0.3277986235095296,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -829,7 +856,7 @@
 "duda": false,
 "valor": 11118614.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Abdelkabir Abqar",
@@ -838,7 +865,16 @@
 "duda": false,
 "valor": 2471922.0,
 "titular": false,
-"importante": false
+"importante": true
+},
+{
+"nombre": "Djené",
+"tipo": "Sanción",
+"regreso": "hasta el 30 de noviembre",
+"duda": false,
+"valor": 1527261.0,
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Daniel Carvajal",
@@ -859,15 +895,6 @@
 "importante": false
 },
 {
-"nombre": "Djené",
-"tipo": "Sanción",
-"regreso": "hasta el 30 de noviembre",
-"duda": false,
-"valor": 1527261.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Juanmi",
 "tipo": "Lesión",
 "regreso": "sin fecha de regreso",
@@ -877,14 +904,14 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 46230830.0,
+"perdida": 0.3270068263970169,
 "perdida_duda": 0.0
 }
 },
 "401882698": {
 "fotmob": 5868239,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [
@@ -975,7 +1002,7 @@
 },
 "401882700": {
 "fotmob": 5868237,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

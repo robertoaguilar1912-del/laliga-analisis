@@ -1,7 +1,7 @@
 {
 "401876392": {
 "fotmob": 5803002,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401876394": {
 "fotmob": 5803000,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -129,7 +129,7 @@
 },
 "401876391": {
 "fotmob": 5803003,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -229,7 +229,7 @@
 },
 "401876390": {
 "fotmob": 5803004,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -286,15 +286,6 @@
 "importante": true
 },
 {
-"nombre": "Tanguy Nianzou",
-"tipo": "Lesión",
-"regreso": "1-2 semanas",
-"duda": false,
-"valor": 1342770.0,
-"titular": true,
-"importante": true
-},
-{
 "nombre": "Tiago Santos",
 "tipo": "Lesión",
 "regreso": "finales de junio de 2027",
@@ -302,16 +293,25 @@
 "valor": 12544665.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Tanguy Nianzou",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1342770.0,
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 153729924.0,
-"perdida": 0.14490106688662643,
+"valor_xi": 146671067.0,
+"perdida": 0.14271976353727625,
 "perdida_duda": 0.0
 }
 },
 "401876388": {
 "fotmob": 5803006,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -375,7 +375,7 @@
 },
 "401876387": {
 "fotmob": 5803007,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -385,7 +385,7 @@
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 103136743.0,
-"titular": true,
+"titular": false,
 "importante": true
 },
 {
@@ -398,8 +398,8 @@
 "importante": true
 }
 ],
-"valor_xi": 638298991.0,
-"perdida": 0.32298515884697676,
+"valor_xi": 663531374.0,
+"perdida": 0.3107028681359685,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -448,7 +448,7 @@
 },
 "401876393": {
 "fotmob": 5803001,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -521,7 +521,7 @@
 },
 "401876386": {
 "fotmob": 5803008,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -542,21 +542,30 @@
 "visita": {
 "faltan": [
 {
+"nombre": "Mahdi Camara",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 12892437.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Valentin Rongier",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 5633308.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Eliezer Mayenda",
 "tipo": "Lesión",
 "regreso": "en duda",
 "duda": true,
 "valor": 18220268.0,
 "titular": false,
-"importante": true
-},
-{
-"nombre": "Valentin Rongier",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 5633308.0,
-"titular": true,
 "importante": true
 },
 {
@@ -579,13 +588,13 @@
 }
 ],
 "valor_xi": 114221872.0,
-"perdida": 0.0,
-"perdida_duda": 0.20883544965888845
+"perdida": 0.1621908718148132,
+"perdida_duda": 0.15951645408157905
 }
 },
 "401876389": {
 "fotmob": 5803005,
-"visto": "2026-11-26T02:32+00:00",
+"visto": "2026-11-26T14:26+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -599,21 +608,21 @@
 "importante": true
 },
 {
-"nombre": "Loïs Openda",
-"tipo": "Lesión",
-"regreso": "principios de diciembre",
-"duda": false,
-"valor": 25442744.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Pavel Šulc",
 "tipo": "Lesión",
 "regreso": "principios de enero de 2027",
 "duda": false,
 "valor": 22331351.0,
 "titular": false,
+"importante": true
+},
+{
+"nombre": "Mads Bidstrup",
+"tipo": "Lesión",
+"regreso": "una semana",
+"duda": false,
+"valor": 16525420.0,
+"titular": true,
 "importante": true
 },
 {
@@ -636,7 +645,7 @@
 }
 ],
 "valor_xi": 143019748.0,
-"perdida": 0.5742567592833404,
+"perdida": 0.5119064606378694,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -660,6 +669,15 @@
 "importante": true
 },
 {
+"nombre": "Paris Brunner",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 17141247.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Aleksandr Golovin",
 "tipo": "Lesión",
 "regreso": "unas semanas",
@@ -676,10 +694,28 @@
 "valor": 13172794.0,
 "titular": false,
 "importante": false
+},
+{
+"nombre": "Mohammed Salisu",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 10331909.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Philipp Köhn",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 2225534.0,
+"titular": false,
+"importante": false
 }
 ],
 "valor_xi": 190474494.0,
-"perdida": 0.2977223921644858,
+"perdida": 0.38771474043133564,
 "perdida_duda": 0.0
 }
 }
