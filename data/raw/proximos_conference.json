@@ -154,7 +154,7 @@
   "estadio": "American Express Stadium",
   "local_espn": "Brighton & Hove Albion",
   "visita_espn": "CSU Craiova",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -899,7 +899,7 @@
   "estadio": "S. Darius and S. Gireno Stadium",
   "local_espn": "Kauno Zalgiris",
   "visita_espn": "Riga FC",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1181,7 +1181,7 @@
   "estadio": "Brann Stadium",
   "local_espn": "SK Brann",
   "visita_espn": "AGF",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1686,6 +1686,122 @@
      -160
     ]
    ]
+  },
+  "alineaciones": {
+   "FC Nordsjælland": [
+    [
+     "241138",
+     "Victor Nelsson",
+     "SUB"
+    ],
+    [
+     "387494",
+     "Justin Janssen",
+     "SUB"
+    ],
+    [
+     "202681",
+     "Alexander Lind",
+     "SUB"
+    ],
+    [
+     "372632",
+     "Juho Lähteenmäki",
+     "SUB"
+    ],
+    [
+     "335421",
+     "Mamadou Sadio",
+     "SUB"
+    ],
+    [
+     "249171",
+     "Nicklas Rojkjaer",
+     "SUB"
+    ],
+    [
+     "146803",
+     "Peter Ankersen",
+     "SUB"
+    ],
+    [
+     "372633",
+     "Noah Markmann",
+     "SUB"
+    ],
+    [
+     "299619",
+     "Ibrahim Adel",
+     "SUB"
+    ],
+    [
+     "145645",
+     "Andreas Hansen",
+     "SUB"
+    ],
+    [
+     "400779",
+     "Markus Walker",
+     "SUB"
+    ]
+   ],
+   "Panathinaikos": [
+    [
+     "282680",
+     "Iñaki Peña",
+     "G"
+    ],
+    [
+     "346306",
+     "Triantafyllos Tsapras",
+     "D"
+    ],
+    [
+     "194747",
+     "Davide Calabria",
+     "D"
+    ],
+    [
+     "366064",
+     "Georgios Katris",
+     "D"
+    ],
+    [
+     "229562",
+     "Rick Van Drongelen",
+     "D"
+    ],
+    [
+     "365703",
+     "Andrews Tetteh",
+     "M"
+    ],
+    [
+     "289073",
+     "Kings Kangwa",
+     "M"
+    ],
+    [
+     "312550",
+     "Etienne Camara",
+     "M"
+    ],
+    [
+     "402292",
+     "Adriano Jagusic",
+     "M"
+    ],
+    [
+     "290538",
+     "Facundo Pellistri",
+     "M"
+    ],
+    [
+     "320850",
+     "Elmin Rastoder",
+     "F"
+    ]
+   ]
   }
  },
  {
@@ -1706,7 +1822,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
+    -135,
     110
    ],
    "spread": [
@@ -2147,8 +2263,8 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    100,
-    260,
+    -105,
+    270,
     270
    ],
    "ou_linea": 2.5,
@@ -2159,11 +2275,11 @@
    "spread": [
     [
      "-0.5",
-     -110
+     -115
     ],
     [
      "+0.5",
-     -125
+     -120
     ]
    ]
   },
