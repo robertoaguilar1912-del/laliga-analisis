@@ -154,7 +154,7 @@
   "estadio": "American Express Stadium",
   "local_espn": "Brighton & Hove Albion",
   "visita_espn": "CSU Craiova",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -452,7 +452,7 @@
   "estadio": "Tynecastle Park",
   "local_espn": "Heart of Midlothian",
   "visita_espn": "AS Monaco",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1181,7 +1181,7 @@
   "estadio": "Brann Stadium",
   "local_espn": "SK Brann",
   "visita_espn": "AGF",
-  "estado": "STATUS_SECOND_HALF",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "league-phase",
   "neutral": false,
   "momios": {
@@ -1353,6 +1353,122 @@
     [
      "-1.5",
      105
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Borac Banja Luka": [
+    [
+     "401246",
+     "Mladen Jurkas",
+     "G"
+    ],
+    [
+     "289600",
+     "Branimir Cipetic",
+     "SUB"
+    ],
+    [
+     "237364",
+     "Sebastián Herrera",
+     "SUB"
+    ],
+    [
+     "226123",
+     "Bart Meijers",
+     "SUB"
+    ],
+    [
+     "344608",
+     "David Vukovic",
+     "SUB"
+    ],
+    [
+     "178607",
+     "Milos Jojic",
+     "SUB"
+    ],
+    [
+     "420872",
+     "Matej Deket",
+     "SUB"
+    ],
+    [
+     "321249",
+     "Omar Sijaric",
+     "SUB"
+    ],
+    [
+     "224045",
+     "Jurich Carolina",
+     "SUB"
+    ],
+    [
+     "222967",
+     "Amer Hiros",
+     "SUB"
+    ],
+    [
+     "305410",
+     "Luka Juricic",
+     "SUB"
+    ]
+   ],
+   "Atalanta": [
+    [
+     "174915",
+     "Marco Sportiello",
+     "G"
+    ],
+    [
+     "309812",
+     "Giorgio Scalvini",
+     "D"
+    ],
+    [
+     "303988",
+     "Lorenzo Bernasconi",
+     "D"
+    ],
+    [
+     "170553",
+     "Sead Kolasinac",
+     "D"
+    ],
+    [
+     "182627",
+     "Davide Zappacosta",
+     "D"
+    ],
+    [
+     "288488",
+     "Nicola Zalewski",
+     "M"
+    ],
+    [
+     "189668",
+     "Mario Pasalic",
+     "M"
+    ],
+    [
+     "118279",
+     "Jon Rowe",
+     "M"
+    ],
+    [
+     "278210",
+     "Éderson",
+     "M"
+    ],
+    [
+     "271679",
+     "Giacomo Raspadori",
+     "M"
+    ],
+    [
+     "233140",
+     "Gianluca Scamacca",
+     "F"
     ]
    ]
   }
@@ -1679,11 +1795,11 @@
    "spread": [
     [
      "-0.5",
-     115
+     110
     ],
     [
      "+0.5",
-     -160
+     -155
     ]
    ]
   },
@@ -1828,11 +1944,11 @@
    "spread": [
     [
      "-0.5",
-     110
+     115
     ],
     [
      "+0.5",
-     -155
+     -160
     ]
    ]
   },
