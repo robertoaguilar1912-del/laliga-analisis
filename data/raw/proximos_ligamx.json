@@ -5,15 +5,31 @@
   "estadio": "Estadio Hidalgo",
   "local_espn": "Pachuca",
   "visita_espn": "Guadalajara",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "apertura---quarterfinals",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    220,
+    215,
+    135
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    115,
+    -150
+   ],
+   "spread": [
+    [
+     "+0.5",
+     -170
+    ],
+    [
+     "-0.5",
+     125
+    ]
+   ]
   },
   "alineaciones": {
    "Pachuca": [
