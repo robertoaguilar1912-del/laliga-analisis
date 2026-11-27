@@ -5,15 +5,31 @@
   "estadio": "Estádio Cícero Pompeu de Toledo",
   "local_espn": "São Paulo",
   "visita_espn": "Remo",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "2026-brasileiro-serie-a",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    -245,
+    350,
+    700
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -120,
+    -115
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -165
+    ]
+   ]
   },
   "alineaciones": {
    "São Paulo": [
@@ -145,22 +161,22 @@
    "casa": "DraftKings",
    "ml": [
     105,
-    260,
+    265,
     235
    ],
    "ou_linea": 2.5,
    "ou": [
-    -145,
+    -140,
     105
    ],
    "spread": [
     [
      "-0.5",
-     -105
+     100
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   }
@@ -183,7 +199,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -190,
+    -185,
     135
    ],
    "spread": [
