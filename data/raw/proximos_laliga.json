@@ -11,9 +11,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    105,
+    100,
     300,
-    220
+    230
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -110,9 +110,9 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    500,
+    550,
     380,
-    -210
+    -215
    ],
    "ou_linea": 3.5,
    "ou": [
@@ -122,11 +122,11 @@
    "spread": [
     [
      "+1.5",
-     -165
+     -160
     ],
     [
      "-1.5",
-     120
+     115
     ]
    ]
   }
@@ -149,7 +149,7 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -120,
+    -125,
     100
    ],
    "spread": [
@@ -688,6 +688,39 @@
     [
      "+0.5",
      115
+    ]
+   ]
+  }
+ },
+ {
+  "id": "401882778",
+  "utc": "2026-12-07T20:00Z",
+  "estadio": "Ramón Sánchez Pizjuán Stadium",
+  "local_espn": "Sevilla",
+  "visita_espn": "Málaga",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-laliga",
+  "neutral": false,
+  "momios": {
+   "casa": "DraftKings",
+   "ml": [
+    -215,
+    340,
+    550
+   ],
+   "ou_linea": 2.5,
+   "ou": [
+    -135,
+    100
+   ],
+   "spread": [
+    [
+     "-1.5",
+     120
+    ],
+    [
+     "+1.5",
+     -180
     ]
    ]
   }

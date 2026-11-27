@@ -11,23 +11,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    110,
-    235,
-    255
+    120,
+    210,
+    250
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -140
+    140,
+    -185
    ],
    "spread": [
     [
      "-0.5",
-     100
+     110
     ],
     [
      "+0.5",
-     -140
+     -155
     ]
    ]
   }
@@ -379,6 +379,17 @@
   "estadio": "Estádio Municipal 22 de Junho",
   "local_espn": "FC Famalicao",
   "visita_espn": "Académico de Viseu",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "2026-27-portuguese-primeira-liga",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401885384",
+  "utc": "2026-12-07T20:15Z",
+  "estadio": "Complexo Desportivo FC Alverca",
+  "local_espn": "Alverca",
+  "visita_espn": "Moreirense",
   "estado": "STATUS_SCHEDULED",
   "tipo": "2026-27-portuguese-primeira-liga",
   "neutral": false,
