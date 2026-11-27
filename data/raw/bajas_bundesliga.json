@@ -1,8 +1,8 @@
 {
 "401884720": {
 "fotmob": 5881241,
-"visto": "2026-11-27T18:30+00:00",
-"xi": "predicted",
+"visto": "2026-11-27T18:36+00:00",
+"xi": "standard",
 "local": {
 "faltan": [
 {
@@ -24,11 +24,29 @@
 "importante": true
 },
 {
+"nombre": "Justin Njinmah",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 5373251.0,
+"titular": false,
+"importante": true
+},
+{
 "nombre": "Moussa N'Diaye",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 3844089.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Marco Grüll",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 2323478.0,
 "titular": false,
 "importante": false
 },
@@ -51,15 +69,6 @@
 "importante": false
 },
 {
-"nombre": "Mitchell Weiser",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 1611180.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Skelly Alvero",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
@@ -67,20 +76,11 @@
 "valor": 1040707.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Marco Grüll",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2323478.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 67531890.0,
-"perdida": 0.19213108059022188,
-"perdida_duda": 0.0
+"valor_xi": 63889595.0,
+"perdida": 0.20308432069416,
+"perdida_duda": 0.08410212961907178
 },
 "visita": {
 "faltan": [
@@ -103,20 +103,20 @@
 "importante": true
 },
 {
-"nombre": "Tim Kleindienst",
-"tipo": "Lesión",
-"regreso": "finales de noviembre",
-"duda": false,
-"valor": 6499408.0,
-"titular": false,
-"importante": true
-},
-{
 "nombre": "Jan Leszczyński",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 4947291.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Robin Hack",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 4378882.0,
 "titular": false,
 "importante": true
 },
@@ -132,16 +132,16 @@
 {
 "nombre": "Daiki Hashioka",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "unas semanas",
+"duda": false,
 "valor": 1160105.0,
 "titular": false,
 "importante": false
 }
 ],
-"valor_xi": 55351564.0,
-"perdida": 0.5255751942257675,
-"perdida_duda": 0.0
+"valor_xi": 56576299.0,
+"perdida": 0.39931917427119085,
+"perdida_duda": 0.07739781635415918
 }
 },
 "401884721": {
