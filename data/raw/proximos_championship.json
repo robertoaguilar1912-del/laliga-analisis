@@ -5,7 +5,7 @@
   "estadio": "St. Mary's Stadium",
   "local_espn": "Southampton",
   "visita_espn": "Middlesbrough",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -23,7 +23,7 @@
    "spread": [
     [
      "+0.5",
-     -150
+     -155
     ],
     [
      "-0.5",
@@ -194,22 +194,22 @@
    "casa": "DraftKings",
    "ml": [
     500,
-    320,
-    -180
+    330,
+    -185
    ],
    "ou_linea": 2.5,
    "ou": [
     -120,
-    -105
+    -110
    ],
    "spread": [
     [
-     "+0.5",
-     140
+     "+1.5",
+     -205
     ],
     [
-     "-0.5",
-     -195
+     "-1.5",
+     145
     ]
    ]
   }
@@ -259,13 +259,13 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -195,
-    370,
+    -205,
+    380,
     500
    ],
    "ou_linea": 3.5,
    "ou": [
-    140,
+    135,
     -175
    ],
    "spread": [
@@ -275,7 +275,7 @@
     ],
     [
      "+1.5",
-     -175
+     -170
     ]
    ]
   }
@@ -370,11 +370,11 @@
    "spread": [
     [
      "-0.5",
-     -105
+     -110
     ],
     [
      "+0.5",
-     -130
+     -125
     ]
    ]
   }
