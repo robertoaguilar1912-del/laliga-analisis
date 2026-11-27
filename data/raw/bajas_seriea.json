@@ -1,7 +1,7 @@
 {
 "401875004": {
 "fotmob": 5749769,
-"visto": "2026-11-27T19:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "standard",
 "local": {
 "faltan": [
@@ -101,15 +101,15 @@
 },
 "401875081": {
 "fotmob": 5749763,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
 {
 "nombre": "Antonio Raimondo",
 "tipo": "Lesión",
-"regreso": "finales de enero de 2027",
-"duda": false,
+"regreso": "en duda",
+"duda": true,
 "valor": 5386256.0,
 "titular": false,
 "importante": true
@@ -134,8 +134,8 @@
 }
 ],
 "valor_xi": 79914910.0,
-"perdida": 0.0673998882060932,
-"perdida_duda": 0.0
+"perdida": 0.0,
+"perdida_duda": 0.0673998882060932
 },
 "visita": {
 "faltan": [
@@ -174,7 +174,7 @@
 },
 "401874826": {
 "fotmob": 5749767,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -238,14 +238,14 @@
 },
 "401874977": {
 "fotmob": 5749764,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
 {
 "nombre": "Alessandro Bastoni",
 "tipo": "Lesión",
-"regreso": "1-2 semanas",
+"regreso": "mediados de diciembre",
 "duda": false,
 "valor": 57376233.0,
 "titular": false,
@@ -302,7 +302,7 @@
 },
 "401875031": {
 "fotmob": 5749768,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -384,7 +384,7 @@
 },
 "401874992": {
 "fotmob": 5749766,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -520,7 +520,7 @@
 },
 "401874769": {
 "fotmob": 5749760,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -584,7 +584,7 @@
 },
 "401874994": {
 "fotmob": 5749762,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -729,8 +729,8 @@
 },
 "401875095": {
 "fotmob": 5749765,
-"visto": "2026-11-27T16:16+00:00",
-"xi": "lastStarting11",
+"visto": "2026-11-27T19:55+00:00",
+"xi": "predicted",
 "local": {
 "faltan": [
 {
@@ -757,12 +757,12 @@
 "regreso": "mediados de diciembre",
 "duda": false,
 "valor": 1702697.0,
-"titular": true,
-"importante": true
+"titular": false,
+"importante": false
 }
 ],
-"valor_xi": 42777802.0,
-"perdida": 0.25620596401844115,
+"valor_xi": 42080185.0,
+"perdida": 0.21999026382607395,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -783,7 +783,7 @@
 "duda": true,
 "valor": 17524973.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Isak Hien",
@@ -792,7 +792,7 @@
 "duda": true,
 "valor": 17486961.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Thomas Pompei",
@@ -804,14 +804,14 @@
 "importante": false
 }
 ],
-"valor_xi": 228105989.0,
-"perdida": 0.12976613691629113,
-"perdida_duda": 0.0
+"valor_xi": 227584103.0,
+"perdida": 0.13006371099654532,
+"perdida_duda": 0.1538417382342386
 }
 },
 "401875019": {
 "fotmob": 5749761,
-"visto": "2026-11-27T16:16+00:00",
+"visto": "2026-11-27T19:55+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -970,6 +970,97 @@
 "valor_xi": 294640575.0,
 "perdida": 0.0,
 "perdida_duda": 0.2865726860599563
+}
+},
+"401874984": {
+"fotmob": 5749771,
+"visto": "2026-11-27T19:55+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Lorenzo De Silvestri",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ukko Happonen",
+"tipo": "Lesión",
+"regreso": "mediados de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Oussama El Azzouzi",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Emil Holm",
+"tipo": "Lesión",
+"regreso": "finales de febrero de 2027",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Juan Miranda",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Jay Enem",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Devyne Rensch",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Lorenzo Pellegrini",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 }
 }
 }
