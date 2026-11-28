@@ -1,34 +1,5 @@
 [
  {
-  "id": "401909330",
-  "utc": "2026-11-28T01:00Z",
-  "fecha": "2026-11-27",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "BOS",
-  "visita": "ATL",
-  "neutral": false,
-  "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
-  "local_espn": "Boston Celtics",
-  "visita_espn": "Atlanta Hawks",
-  "revisado": false,
-  "estadio": "TD Garden",
-  "records": {
-   "home": [
-    "12-6",
-    "6-1",
-    "6-5"
-   ],
-   "away": [
-    "11-6",
-    "5-3",
-    "6-3"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401909331",
   "utc": "2026-11-28T01:30Z",
   "fecha": "2026-11-27",
@@ -125,7 +96,7 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "Utah Jazz",
   "visita_espn": "Denver Nuggets",
   "revisado": false,
@@ -154,7 +125,7 @@
   "visita": "NO",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_HALFTIME",
   "local_espn": "LA Clippers",
   "visita_espn": "New Orleans Pelicans",
   "revisado": false,
@@ -230,7 +201,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     142,
     -169
@@ -282,7 +253,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -224,
     186
@@ -334,7 +305,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     -141,
     119
@@ -386,7 +357,7 @@
    ]
   },
   "momios": {
-   "casa": "Draft Kings",
+   "casa": "DraftKings",
    "ml": [
     420,
     -561
@@ -519,8 +490,8 @@
     "8-1"
    ],
    "away": [
-    "12-6",
-    "6-1",
+    "12-7",
+    "6-2",
     "6-5"
    ]
   },
@@ -606,9 +577,9 @@
     "5-3"
    ],
    "away": [
-    "11-6",
+    "12-6",
     "5-3",
-    "6-3"
+    "7-3"
    ]
   },
   "momios": null
@@ -867,8 +838,8 @@
     "4-5"
    ],
    "away": [
-    "12-6",
-    "6-1",
+    "12-7",
+    "6-2",
     "6-5"
    ]
   },
@@ -1012,9 +983,9 @@
     "5-4"
    ],
    "away": [
-    "11-6",
+    "12-6",
     "5-3",
-    "6-3"
+    "7-3"
    ]
   },
   "momios": null
@@ -1239,8 +1210,8 @@
   "estadio": "TD Garden",
   "records": {
    "home": [
-    "12-6",
-    "6-1",
+    "12-7",
+    "6-2",
     "6-5"
    ],
    "away": [
@@ -1442,9 +1413,9 @@
   "estadio": "State Farm Arena",
   "records": {
    "home": [
-    "11-6",
+    "12-6",
     "5-3",
-    "6-3"
+    "7-3"
    ],
    "away": [
     "6-13",
@@ -1566,6 +1537,64 @@
     "3-16",
     "1-9",
     "2-7"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909450",
+  "utc": "2026-12-04T05:00Z",
+  "fecha": "2026-12-04",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ATL",
+  "visita": "PHI",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Atlanta Hawks",
+  "visita_espn": "Philadelphia 76ers",
+  "revisado": false,
+  "estadio": "State Farm Arena",
+  "records": {
+   "home": [
+    "12-6",
+    "5-3",
+    "7-3"
+   ],
+   "away": [
+    "16-4",
+    "8-3",
+    "8-1"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401909452",
+  "utc": "2026-12-05T05:00Z",
+  "fecha": "2026-12-05",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DET",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Detroit Pistons",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Little Caesars Arena",
+  "records": {
+   "home": [
+    "12-6",
+    "4-3",
+    "8-3"
+   ],
+   "away": [
+    "12-7",
+    "6-2",
+    "6-5"
    ]
   },
   "momios": null
