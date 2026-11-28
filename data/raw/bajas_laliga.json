@@ -1,7 +1,7 @@
 {
 "401882796": {
 "fotmob": 5868141,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -65,7 +65,7 @@
 },
 "401882790": {
 "fotmob": 5868147,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -147,7 +147,7 @@
 },
 "401882793": {
 "fotmob": 5868144,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -238,7 +238,7 @@
 },
 "401882789": {
 "fotmob": 5868148,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -338,7 +338,7 @@
 },
 "401882787": {
 "fotmob": 5868150,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -438,7 +438,7 @@
 },
 "401882794": {
 "fotmob": 5868143,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -538,7 +538,7 @@
 },
 "401882795": {
 "fotmob": 5868142,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -629,7 +629,7 @@
 },
 "401882788": {
 "fotmob": 5868149,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -720,7 +720,7 @@
 },
 "401882792": {
 "fotmob": 5868145,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "predicted",
 "local": {
 "faltan": [
@@ -829,8 +829,8 @@
 },
 "401882698": {
 "fotmob": 5868239,
-"visto": "2026-11-28T02:01+00:00",
-"xi": "unavailable",
+"visto": "2026-11-28T05:43+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -840,7 +840,7 @@
 "duda": false,
 "valor": 19247675.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jon Aramburu",
@@ -849,7 +849,7 @@
 "duda": false,
 "valor": 18179262.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Yangel Herrera",
@@ -870,8 +870,8 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
+"valor_xi": 151149528.0,
+"perdida": 0.24761530846460864,
 "perdida_duda": 0.0
 },
 "visita": {
@@ -913,15 +913,15 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
+"valor_xi": 675210986.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
 }
 },
 "401882700": {
 "fotmob": 5868237,
-"visto": "2026-11-28T02:01+00:00",
-"xi": "unavailable",
+"visto": "2026-11-28T05:43+00:00",
+"xi": "lastStarting11",
 "local": {
 "faltan": [
 {
@@ -930,8 +930,8 @@
 "regreso": "hasta el 2 de diciembre",
 "duda": false,
 "valor": 97213156.0,
-"titular": false,
-"importante": false
+"titular": true,
+"importante": true
 },
 {
 "nombre": "Alejandro Balde",
@@ -939,8 +939,17 @@
 "regreso": "mediados de diciembre",
 "duda": false,
 "valor": 42869241.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Marc Bernal",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 46646311.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Xavi Espart",
@@ -970,15 +979,6 @@
 "importante": false
 },
 {
-"nombre": "Marc Bernal",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 46646311.0,
-"titular": false,
-"importante": false
-},
-{
 "nombre": "Andreas Christensen",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -997,9 +997,9 @@
 "importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 554914281.0,
+"perdida": 0.25243970428650764,
+"perdida_duda": 0.0840603902208817
 },
 "visita": {
 "faltan": [
@@ -1010,7 +1010,7 @@
 "duda": false,
 "valor": 40237819.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Alexander Sørloth",
@@ -1018,8 +1018,17 @@
 "regreso": "1-2 semanas",
 "duda": false,
 "valor": 11685177.0,
+"titular": true,
+"importante": true
+},
+{
+"nombre": "Cristian Romero",
+"tipo": "Lesión",
+"regreso": "ya entrena",
+"duda": true,
+"valor": 40445981.0,
 "titular": false,
-"importante": false
+"importante": true
 },
 {
 "nombre": "Jorge Domínguez",
@@ -1029,25 +1038,16 @@
 "valor": 9145335.0,
 "titular": false,
 "importante": false
-},
-{
-"nombre": "Cristian Romero",
-"tipo": "Lesión",
-"regreso": "ya entrena",
-"duda": true,
-"valor": 40445981.0,
-"titular": false,
-"importante": false
 }
 ],
-"valor_xi": 0.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
+"valor_xi": 321812315.0,
+"perdida": 0.16134558430431725,
+"perdida_duda": 0.1256818931867166
 }
 },
 "401882786": {
 "fotmob": 5868151,
-"visto": "2026-11-28T02:01+00:00",
+"visto": "2026-11-28T05:43+00:00",
 "xi": "unavailable",
 "local": {
 "faltan": [

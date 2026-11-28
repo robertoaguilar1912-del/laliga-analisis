@@ -27,7 +27,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     142,
     -169
@@ -79,7 +79,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -224,
     186
@@ -131,7 +131,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -141,
     119
@@ -183,7 +183,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     420,
     -561
@@ -235,24 +235,24 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
-    -473,
-    365
+    -521,
+    395
    ],
    "ml_abre": [
     -486,
     373
    ],
    "spread": [
-    -10.5,
-    -113,
-    10.5,
-    -107
+    -12.5,
+    -110,
+    12.5,
+    -110
    ],
    "spread_abre": -11.5,
    "total": [
-    221.5,
+    219.5,
     -110,
     -110
    ],
@@ -1188,6 +1188,64 @@
   "momios": null
  },
  {
+  "id": "401910085",
+  "utc": "2026-12-03T01:00Z",
+  "fecha": "2026-12-02",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ATL",
+  "visita": "IND",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Atlanta Hawks",
+  "visita_espn": "Indiana Pacers",
+  "revisado": false,
+  "estadio": "State Farm Arena",
+  "records": {
+   "home": [
+    "12-6",
+    "5-3",
+    "7-3"
+   ],
+   "away": [
+    "6-13",
+    "3-6",
+    "3-6"
+   ]
+  },
+  "momios": null
+ },
+ {
+  "id": "401910088",
+  "utc": "2026-12-03T01:00Z",
+  "fecha": "2026-12-02",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "SA",
+  "visita": "TOR",
+  "neutral": false,
+  "nota": "",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "San Antonio Spurs",
+  "visita_espn": "Toronto Raptors",
+  "revisado": false,
+  "estadio": "Frost Bank Center",
+  "records": {
+   "home": [
+    "16-4",
+    "8-3",
+    "8-1"
+   ],
+   "away": [
+    "7-11",
+    "3-7",
+    "4-4"
+   ]
+  },
+  "momios": null
+ },
+ {
   "id": "401910083",
   "utc": "2026-12-03T02:00Z",
   "fecha": "2026-12-02",
@@ -1241,35 +1299,6 @@
     "14-6",
     "9-4",
     "5-2"
-   ]
-  },
-  "momios": null
- },
- {
-  "id": "401910085",
-  "utc": "2026-12-04T00:00Z",
-  "fecha": "2026-12-03",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "ATL",
-  "visita": "IND",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_SCHEDULED",
-  "local_espn": "Atlanta Hawks",
-  "visita_espn": "Indiana Pacers",
-  "revisado": false,
-  "estadio": "State Farm Arena",
-  "records": {
-   "home": [
-    "12-6",
-    "5-3",
-    "7-3"
-   ],
-   "away": [
-    "6-13",
-    "3-6",
-    "3-6"
    ]
   },
   "momios": null
@@ -1333,35 +1362,6 @@
   "momios": null
  },
  {
-  "id": "401910088",
-  "utc": "2026-12-04T01:00Z",
-  "fecha": "2026-12-03",
-  "temporada": 2027,
-  "tipo": 2,
-  "local": "SA",
-  "visita": "TOR",
-  "neutral": false,
-  "nota": "",
-  "estado": "STATUS_SCHEDULED",
-  "local_espn": "San Antonio Spurs",
-  "visita_espn": "Toronto Raptors",
-  "revisado": false,
-  "estadio": "Frost Bank Center",
-  "records": {
-   "home": [
-    "15-4",
-    "7-3",
-    "8-1"
-   ],
-   "away": [
-    "7-11",
-    "3-7",
-    "4-4"
-   ]
-  },
-  "momios": null
- },
- {
   "id": "401910089",
   "utc": "2026-12-04T03:00Z",
   "fecha": "2026-12-03",
@@ -1389,5 +1389,213 @@
    ]
   },
   "momios": null
+ },
+ {
+  "id": "401909450",
+  "utc": "2026-12-05T00:00Z",
+  "fecha": "2026-12-04",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "ATL",
+  "visita": "PHI",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Atlanta Hawks",
+  "visita_espn": "Philadelphia 76ers",
+  "revisado": false,
+  "estadio": "State Farm Arena",
+  "records": {
+   "home": [
+    "12-6",
+    "5-3",
+    "7-3"
+   ],
+   "away": [
+    "16-4",
+    "8-3",
+    "8-1"
+   ]
+  },
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    130,
+    -155
+   ],
+   "ml_abre": [
+    133,
+    -158
+   ],
+   "spread": [
+    3.5,
+    -106,
+    -3.5,
+    -114
+   ],
+   "spread_abre": 3.5,
+   "total": [
+    227.5,
+    -110,
+    -110
+   ],
+   "total_abre": 227.5
+  }
+ },
+ {
+  "id": "401909451",
+  "utc": "2026-12-05T02:30Z",
+  "fecha": "2026-12-04",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DAL",
+  "visita": "SA",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Dallas Mavericks",
+  "visita_espn": "San Antonio Spurs",
+  "revisado": false,
+  "estadio": "American Airlines Center",
+  "records": {
+   "home": [
+    "12-7",
+    "7-2",
+    "5-5"
+   ],
+   "away": [
+    "16-4",
+    "8-3",
+    "8-1"
+   ]
+  },
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    288,
+    -361
+   ],
+   "ml_abre": [
+    288,
+    -361
+   ],
+   "spread": [
+    9.5,
+    -110,
+    -9.5,
+    -110
+   ],
+   "spread_abre": 9.5,
+   "total": [
+    221.5,
+    -110,
+    -110
+   ],
+   "total_abre": 221.5
+  }
+ },
+ {
+  "id": "401909452",
+  "utc": "2026-12-06T00:30Z",
+  "fecha": "2026-12-05",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "DET",
+  "visita": "BOS",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Detroit Pistons",
+  "visita_espn": "Boston Celtics",
+  "revisado": false,
+  "estadio": "Little Caesars Arena",
+  "records": {
+   "home": [
+    "12-6",
+    "4-3",
+    "8-3"
+   ],
+   "away": [
+    "12-7",
+    "6-2",
+    "6-5"
+   ]
+  },
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    101,
+    -120
+   ],
+   "ml_abre": [
+    101,
+    -120
+   ],
+   "spread": [
+    1.5,
+    -110,
+    -1.5,
+    -110
+   ],
+   "spread_abre": 1.5,
+   "total": [
+    212.5,
+    -110,
+    -110
+   ],
+   "total_abre": 212.5
+  }
+ },
+ {
+  "id": "401909453",
+  "utc": "2026-12-06T03:00Z",
+  "fecha": "2026-12-05",
+  "temporada": 2027,
+  "tipo": 2,
+  "local": "POR",
+  "visita": "MEM",
+  "neutral": false,
+  "nota": "NBA Cup - Quarterfinals",
+  "estado": "STATUS_SCHEDULED",
+  "local_espn": "Portland Trail Blazers",
+  "visita_espn": "Memphis Grizzlies",
+  "revisado": false,
+  "estadio": "Moda Center",
+  "records": {
+   "home": [
+    "13-6",
+    "5-2",
+    "8-4"
+   ],
+   "away": [
+    "15-5",
+    "5-4",
+    "10-1"
+   ]
+  },
+  "momios": {
+   "casa": "Draft Kings",
+   "ml": [
+    -134,
+    113
+   ],
+   "ml_abre": [
+    -134,
+    113
+   ],
+   "spread": [
+    -2.5,
+    -110,
+    2.5,
+    -110
+   ],
+   "spread_abre": -2.5,
+   "total": [
+    226.5,
+    -110,
+    -110
+   ],
+   "total_abre": 226.5
+  }
  }
 ]
