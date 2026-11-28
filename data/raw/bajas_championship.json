@@ -1,43 +1,7 @@
 {
-"401880129": {
-"fotmob": 5836965,
-"visto": "2026-11-27T19:55+00:00",
-"xi": "standard",
-"local": {
-"faltan": [],
-"valor_xi": 70628138.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-},
-"visita": {
-"faltan": [
-{
-"nombre": "Rokas Pukštas",
-"tipo": "Lesión",
-"regreso": "sin fecha de regreso",
-"duda": false,
-"valor": 7546940.0,
-"titular": false,
-"importante": false
-},
-{
-"nombre": "Alfie Jones",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 4393643.0,
-"titular": false,
-"importante": false
-}
-],
-"valor_xi": 103970597.0,
-"perdida": 0.0,
-"perdida_duda": 0.0
-}
-},
 "401880135": {
 "fotmob": 5836959,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -105,8 +69,8 @@
 {
 "nombre": "Joe Rankin-Costello",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "1-2 semanas",
+"duda": false,
 "valor": 888528.0,
 "titular": true,
 "importante": true
@@ -122,13 +86,13 @@
 }
 ],
 "valor_xi": 22475436.0,
-"perdida": 0.07915726306711024,
-"perdida_duda": 0.039533293147238614
+"perdida": 0.11869055621434886,
+"perdida_duda": 0.0
 }
 },
 "401880133": {
 "fotmob": 5836961,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -147,6 +111,15 @@
 "regreso": "en duda",
 "duda": true,
 "valor": 470153.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Conor McGrandles",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 460181.0,
 "titular": false,
 "importante": false
 }
@@ -183,7 +156,7 @@
 },
 "401880131": {
 "fotmob": 5836963,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -283,10 +256,20 @@
 },
 "401880136": {
 "fotmob": 5836958,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
-"faltan": [],
+"faltan": [
+{
+"nombre": "Ethan Laird",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 1824712.0,
+"titular": false,
+"importante": false
+}
+],
 "valor_xi": 63809580.0,
 "perdida": 0.0,
 "perdida_duda": 0.0
@@ -346,7 +329,7 @@
 },
 "401880134": {
 "fotmob": 5836960,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -421,6 +404,15 @@
 "importante": true
 },
 {
+"nombre": "Matthew Pollock",
+"tipo": "Sanción",
+"regreso": "hasta el 28 de noviembre",
+"duda": false,
+"valor": 1714329.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Edoardo Bove",
 "tipo": "Lesión",
 "regreso": "en duda",
@@ -458,13 +450,13 @@
 }
 ],
 "valor_xi": 38792201.0,
-"perdida": 0.056729779266713944,
+"perdida": 0.10092239932454464,
 "perdida_duda": 0.110726328727777
 }
 },
 "401880132": {
 "fotmob": 5836962,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -483,6 +475,15 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 4762192.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Zak Sturge",
+"tipo": "Sanción",
+"regreso": "hasta el 28 de noviembre",
+"duda": false,
+"valor": 4373491.0,
 "titular": false,
 "importante": true
 },
@@ -515,7 +516,7 @@
 }
 ],
 "valor_xi": 27273736.0,
-"perdida": 0.6251375682451425,
+"perdida": 0.785492973899872,
 "perdida_duda": 0.3121959162470444
 },
 "visita": {
@@ -591,7 +592,7 @@
 },
 "401880130": {
 "fotmob": 5836964,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -655,10 +656,19 @@
 },
 "401880127": {
 "fotmob": 5836967,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Isaac Price",
+"tipo": "Lesión",
+"regreso": "finales de diciembre",
+"duda": false,
+"valor": 18120351.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Toby Collyer",
 "tipo": "Lesión",
@@ -669,20 +679,20 @@
 "importante": true
 },
 {
+"nombre": "Rabby Nzingoula",
+"tipo": "Sanción",
+"regreso": "hasta el 28 de noviembre",
+"duda": false,
+"valor": 5239972.0,
+"titular": true,
+"importante": true
+},
+{
 "nombre": "Nolan Galves",
 "tipo": "Lesión",
 "regreso": "el resto de la temporada",
 "duda": false,
 "valor": 3585720.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Isaac Price",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 18120351.0,
 "titular": false,
 "importante": true
 },
@@ -706,8 +716,8 @@
 }
 ],
 "valor_xi": 37193900.0,
-"perdida": 0.2388013625890267,
-"perdida_duda": 0.4871860977203251
+"perdida": 0.8668700243857191,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -723,21 +733,21 @@
 {
 "nombre": "Luke McNally",
 "tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
+"regreso": "finales de diciembre",
+"duda": false,
 "valor": 1434251.0,
 "titular": true,
 "importante": true
 }
 ],
 "valor_xi": 44800405.0,
-"perdida": 0.08696731647850059,
-"perdida_duda": 0.03201424183553698
+"perdida": 0.11898155831403756,
+"perdida_duda": 0.0
 }
 },
 "401880126": {
 "fotmob": 5836968,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -810,25 +820,25 @@
 },
 "401880125": {
 "fotmob": 5836969,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
+{
+"nombre": "Callum O'Hare",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 6072141.0,
+"titular": false,
+"importante": true
+},
 {
 "nombre": "Nathan Broadhead",
 "tipo": "Lesión",
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 5811690.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Callum O'Hare",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 6072141.0,
 "titular": false,
 "importante": true
 },
@@ -844,7 +854,7 @@
 {
 "nombre": "Sam Smith",
 "tipo": "Lesión",
-"regreso": "principios de enero de 2027",
+"regreso": "el resto de la temporada",
 "duda": false,
 "valor": 1054913.0,
 "titular": false,
@@ -870,8 +880,8 @@
 }
 ],
 "valor_xi": 65264501.0,
-"perdida": 0.08904825611092927,
-"perdida_duda": 0.09303895543459376
+"perdida": 0.18208721154552304,
+"perdida_duda": 0.0
 },
 "visita": {
 "faltan": [
@@ -881,6 +891,15 @@
 "regreso": "principios de diciembre",
 "duda": false,
 "valor": 4969038.0,
+"titular": false,
+"importante": true
+},
+{
+"nombre": "Jayden Meghoma",
+"tipo": "Lesión",
+"regreso": "finales de diciembre de 2027",
+"duda": false,
+"valor": 2292858.0,
 "titular": false,
 "importante": true
 },
@@ -908,15 +927,6 @@
 "regreso": "sin fecha de regreso",
 "duda": false,
 "valor": 970638.0,
-"titular": false,
-"importante": true
-},
-{
-"nombre": "Jayden Meghoma",
-"tipo": "Lesión",
-"regreso": "en duda",
-"duda": true,
-"valor": 2292858.0,
 "titular": false,
 "importante": true
 },
@@ -958,13 +968,13 @@
 }
 ],
 "valor_xi": 11966840.0,
-"perdida": 0.6861747127896755,
-"perdida_duda": 0.3228883314224975
+"perdida": 0.8777756701017144,
+"perdida_duda": 0.13128737411045857
 }
 },
 "401880128": {
 "fotmob": 5836966,
-"visto": "2026-11-27T19:55+00:00",
+"visto": "2026-11-28T02:01+00:00",
 "xi": "lastStarting11",
 "local": {
 "faltan": [
@@ -1051,6 +1061,88 @@
 "valor_xi": 18892729.0,
 "perdida": 0.0,
 "perdida_duda": 0.09931333900994399
+}
+},
+"401880116": {
+"fotmob": 5836978,
+"visto": "2026-11-28T02:01+00:00",
+"xi": "standard",
+"local": {
+"faltan": [
+{
+"nombre": "Matt Doherty",
+"tipo": "Lesión",
+"regreso": "1-2 semanas",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Femi Seriki",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Joe Rothwell",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Ryan Oné",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
+},
+"visita": {
+"faltan": [
+{
+"nombre": "Kyle Walker-Peters",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Keiber Lamadrid",
+"tipo": "Lesión",
+"regreso": "principios de diciembre",
+"duda": false,
+"valor": 0.0,
+"titular": false,
+"importante": false
+},
+{
+"nombre": "Alphonse Areola",
+"tipo": "Lesión",
+"regreso": "en duda",
+"duda": true,
+"valor": 0.0,
+"titular": false,
+"importante": false
+}
+],
+"valor_xi": 0.0,
+"perdida": 0.0,
+"perdida_duda": 0.0
 }
 }
 }

@@ -50,17 +50,17 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
+    -115,
     -110
    ],
    "spread": [
     [
-     "+1.5",
-     -205
+     "+0.5",
+     140
     ],
     [
-     "-1.5",
-     145
+     "-0.5",
+     -195
     ]
    ]
   }
@@ -77,23 +77,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    350,
     320,
-    -140
+    300,
+    -125
    ],
    "ou_linea": 2.5,
    "ou": [
-    -170,
-    135
+    -165,
+    130
    ],
    "spread": [
     [
      "+0.5",
-     110
+     100
     ],
     [
      "-0.5",
-     -155
+     -140
     ]
    ]
   }
@@ -149,8 +149,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -105,
-    -120
+    100,
+    -125
    ],
    "spread": [
     [
@@ -275,14 +275,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -150,
-    330,
-    370
+    -155,
+    320,
+    380
    ],
    "ou_linea": 2.5,
    "ou": [
     -135,
-    110
+    105
    ],
    "spread": [
     [
@@ -489,6 +489,94 @@
   "estadio": "Turf Moor",
   "local_espn": "Burnley",
   "visita_espn": "Preston North End",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880111",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "Ewood Park",
+  "local_espn": "Blackburn Rovers",
+  "visita_espn": "Norwich City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880110",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "The Den",
+  "local_espn": "Millwall",
+  "visita_espn": "Sheffield United",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880109",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "MATRADE Loftus Road",
+  "local_espn": "Queens Park Rangers",
+  "visita_espn": "Wolverhampton Wanderers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880108",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "Swansea.com Stadium",
+  "local_espn": "Swansea City",
+  "visita_espn": "Bolton Wanderers",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880107",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "The Hawthorns",
+  "local_espn": "West Bromwich Albion",
+  "visita_espn": "Cardiff City",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880105",
+  "utc": "2026-12-08T19:45Z",
+  "estadio": "STōK Cae Ras",
+  "local_espn": "Wrexham",
+  "visita_espn": "Charlton Athletic",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880112",
+  "utc": "2026-12-08T20:00Z",
+  "estadio": "St. Andrew's Stadium",
+  "local_espn": "Birmingham City",
+  "visita_espn": "Watford",
+  "estado": "STATUS_SCHEDULED",
+  "tipo": "regular-season",
+  "neutral": false,
+  "momios": null
+ },
+ {
+  "id": "401880106",
+  "utc": "2026-12-08T20:00Z",
+  "estadio": "London Stadium",
+  "local_espn": "West Ham United",
+  "visita_espn": "Middlesbrough",
   "estado": "STATUS_SCHEDULED",
   "tipo": "regular-season",
   "neutral": false,
