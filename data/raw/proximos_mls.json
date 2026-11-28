@@ -5,15 +5,31 @@
   "estadio": "ScottsMiracle-Gro Field",
   "local_espn": "Columbus Crew",
   "visita_espn": "Inter Miami CF",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
-   "ml": null,
-   "ou_linea": null,
-   "ou": null,
-   "spread": []
+   "ml": [
+    125,
+    300,
+    155
+   ],
+   "ou_linea": 3.5,
+   "ou": [
+    -105,
+    -120
+   ],
+   "spread": [
+    [
+     "-0.5",
+     120
+    ],
+    [
+     "+0.5",
+     -170
+    ]
+   ]
   },
   "alineaciones": {
    "Columbus Crew": [
