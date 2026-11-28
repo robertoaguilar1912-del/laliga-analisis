@@ -5,7 +5,7 @@
   "estadio": "America First Field",
   "local_espn": "Real Salt Lake",
   "visita_espn": "Vancouver Whitecaps",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "western-conference-playoffs---round-one",
   "neutral": false,
   "momios": {
@@ -166,8 +166,8 @@
    ],
    "ou_linea": 3.5,
    "ou": [
-    -110,
-    -115
+    -105,
+    -120
    ],
    "spread": [
     [
@@ -199,8 +199,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -150,
-    115
+    -140,
+    110
    ],
    "spread": [
     [
@@ -226,23 +226,23 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -190,
-    350,
+    -185,
+    340,
     400
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    125,
+    -155
    ],
    "spread": [
     [
-     "-1.5",
-     130
+     "-0.5",
+     -190
     ],
     [
-     "+1.5",
-     -180
+     "+0.5",
+     135
     ]
    ]
   }
@@ -259,14 +259,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    215,
+    225,
     265,
-    105
+    100
    ],
    "ou_linea": 3.5,
    "ou": [
     120,
-    -150
+    -155
    ],
    "spread": [
     [
@@ -275,7 +275,7 @@
     ],
     [
      "-0.5",
-     100
+     -105
     ]
    ]
   }
@@ -296,10 +296,10 @@
     330,
     370
    ],
-   "ou_linea": 3.5,
+   "ou_linea": 2.5,
    "ou": [
-    130,
-    -170
+    -180,
+    140
    ],
    "spread": [
     [
@@ -326,13 +326,13 @@
    "casa": "DraftKings",
    "ml": [
     110,
-    285,
+    275,
     190
    ],
    "ou_linea": 3.5,
    "ou": [
-    110,
-    -140
+    115,
+    -145
    ],
    "spread": [
     [
@@ -363,7 +363,7 @@
   "estadio": "Nu Stadium",
   "local_espn": "Inter Miami CF",
   "visita_espn": "Columbus Crew",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_CANCELED",
   "tipo": "eastern-conference-playoffs---round-one",
   "neutral": false,
   "momios": null
