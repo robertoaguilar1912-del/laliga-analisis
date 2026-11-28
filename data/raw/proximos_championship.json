@@ -303,7 +303,7 @@
   "estadio": "Deepdale",
   "local_espn": "Preston North End",
   "visita_espn": "Norwich City",
-  "estado": "STATUS_IN_PROGRESS",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -907,7 +907,7 @@
    "ml": [
     100,
     265,
-    265
+    255
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -917,11 +917,11 @@
    "spread": [
     [
      "-0.5",
-     -110
+     -105
     ],
     [
      "+0.5",
-     -125
+     -130
     ]
    ]
   },
@@ -1060,8 +1060,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -105
+    -125,
+    100
    ],
    "spread": [
     [
@@ -1203,14 +1203,14 @@
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -145,
-    310,
-    380
+    -150,
+    320,
+    390
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -130,
+    105
    ],
    "spread": [
     [
