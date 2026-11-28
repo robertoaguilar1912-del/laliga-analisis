@@ -5,7 +5,7 @@
   "estadio": "Carlos Belmonte",
   "local_espn": "Albacete",
   "visita_espn": "Tenerife",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -13,12 +13,12 @@
    "ml": [
     110,
     220,
-    270
+    280
    ],
    "ou_linea": 2.5,
    "ou": [
-    115,
-    -150
+    120,
+    -160
    ],
    "spread": [
     [
@@ -154,29 +154,29 @@
   "estadio": "Estadio Municipal Nuevo Pepico Amat",
   "local_espn": "Eldense",
   "visita_espn": "Girona",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    260,
-    230,
-    110
+    255,
+    225,
+    115
    ],
    "ou_linea": 2.5,
    "ou": [
-    110,
-    -145
+    120,
+    -160
    ],
    "spread": [
     [
      "+0.5",
-     -140
+     -145
     ],
     [
      "-0.5",
-     100
+     105
     ]
    ]
   },
@@ -315,8 +315,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    105,
-    -135
+    115,
+    -150
    ],
    "spread": [
     [
@@ -343,13 +343,13 @@
    "casa": "DraftKings",
    "ml": [
     -130,
-    290,
+    280,
     330
    ],
    "ou_linea": 2.5,
    "ou": [
-    -135,
-    105
+    -130,
+    -105
    ],
    "spread": [
     [
@@ -409,8 +409,8 @@
    "casa": "DraftKings",
    "ml": [
     140,
-    225,
-    190
+    230,
+    195
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -420,11 +420,11 @@
    "spread": [
     [
      "-0.5",
-     130
+     135
     ],
     [
      "+0.5",
-     -190
+     -185
     ]
    ]
   }
