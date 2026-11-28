@@ -183,7 +183,7 @@
   "visita": "DAL",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Phoenix Suns",
   "visita_espn": "Dallas Mavericks",
   "revisado": false,
@@ -215,7 +215,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "San Antonio Spurs",
   "visita_espn": "Los Angeles Lakers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Frost Bank Center",
   "records": {
    "home": [
@@ -230,7 +230,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -237,
     196
@@ -264,10 +264,10 @@
   "visita": "DEN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Utah Jazz",
   "visita_espn": "Denver Nuggets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Delta Center",
   "records": {
    "home": [
@@ -281,30 +281,7 @@
     "5-2"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    322,
-    -410
-   ],
-   "ml_abre": [
-    270,
-    -336
-   ],
-   "spread": [
-    9.5,
-    -108,
-    -9.5,
-    -112
-   ],
-   "spread_abre": 9.5,
-   "total": [
-    231.5,
-    -110,
-    -110
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909335",
@@ -316,10 +293,10 @@
   "visita": "NO",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "LA Clippers",
   "visita_espn": "New Orleans Pelicans",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Intuit Dome",
   "records": {
    "home": [
@@ -333,30 +310,7 @@
     "1-6"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -135,
-    114
-   ],
-   "ml_abre": [
-    -147,
-    124
-   ],
-   "spread": [
-    -2.5,
-    -104,
-    2.5,
-    -116
-   ],
-   "spread_abre": -2.5,
-   "total": [
-    230.5,
-    -105,
-    -115
-   ],
-   "total_abre": 228.5
-  }
+  "momios": null
  },
  {
   "id": "401909336",
@@ -371,7 +325,7 @@
   "estado": "STATUS_SCHEDULED",
   "local_espn": "Portland Trail Blazers",
   "visita_espn": "Golden State Warriors",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Moda Center",
   "records": {
    "home": [
@@ -386,7 +340,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -324,
     261
@@ -403,9 +357,9 @@
    ],
    "spread_abre": -9.5,
    "total": [
-    216.5,
-    -108,
-    -112
+    215.5,
+    -111,
+    -109
    ],
    "total_abre": 221.5
   }
@@ -438,7 +392,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     142,
     -169
@@ -490,7 +444,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -224,
     186
@@ -542,7 +496,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     -141,
     119
@@ -594,7 +548,7 @@
    ]
   },
   "momios": {
-   "casa": "DraftKings",
+   "casa": "Draft Kings",
    "ml": [
     420,
     -561
