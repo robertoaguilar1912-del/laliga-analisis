@@ -9,7 +9,7 @@
   "visita": "MIA",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_END_PERIOD",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "New York Knicks",
   "visita_espn": "Miami Heat",
   "revisado": false,
@@ -38,10 +38,10 @@
   "visita": "MIL",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Detroit Pistons",
   "visita_espn": "Milwaukee Bucks",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Little Caesars Arena",
   "records": {
    "home": [
@@ -55,30 +55,7 @@
     "1-8"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -424,
-    331
-   ],
-   "ml_abre": [
-    -561,
-    420
-   ],
-   "spread": [
-    -9.5,
-    -112,
-    9.5,
-    -108
-   ],
-   "spread_abre": -11.5,
-   "total": [
-    218.5,
-    -113,
-    -107
-   ],
-   "total_abre": 221.5
-  }
+  "momios": null
  },
  {
   "id": "401909328",
@@ -90,10 +67,10 @@
   "visita": "PHI",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Indiana Pacers",
   "visita_espn": "Philadelphia 76ers",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Gainbridge Fieldhouse",
   "records": {
    "home": [
@@ -107,30 +84,7 @@
     "7-1"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    154,
-    -184
-   ],
-   "ml_abre": [
-    155,
-    -185
-   ],
-   "spread": [
-    3.5,
-    -105,
-    -3.5,
-    -115
-   ],
-   "spread_abre": 4.5,
-   "total": [
-    230.5,
-    -108,
-    -112
-   ],
-   "total_abre": 234.5
-  }
+  "momios": null
  },
  {
   "id": "401909329",
@@ -142,10 +96,10 @@
   "visita": "BKN",
   "neutral": false,
   "nota": "NBA Cup - Group Play",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "local_espn": "Toronto Raptors",
   "visita_espn": "Brooklyn Nets",
-  "revisado": true,
+  "revisado": false,
   "estadio": "Scotiabank Arena",
   "records": {
    "home": [
@@ -159,30 +113,7 @@
     "3-7"
    ]
   },
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    -374,
-    297
-   ],
-   "ml_abre": [
-    -333,
-    268
-   ],
-   "spread": [
-    -9.5,
-    -108,
-    9.5,
-    -112
-   ],
-   "spread_abre": -7.5,
-   "total": [
-    218.5,
-    -113,
-    -107
-   ],
-   "total_abre": 221.5
-  }
+  "momios": null
  },
  {
   "id": "401909330",
@@ -281,9 +212,9 @@
    ],
    "spread_abre": -2.5,
    "total": [
-    220.5,
-    -107,
-    -113
+    219.5,
+    -115,
+    -105
    ],
    "total_abre": 223.5
   }
@@ -329,7 +260,7 @@
     -4.5,
     -104,
     4.5,
-    -116
+    -117
    ],
    "spread_abre": -3.5,
    "total": [
@@ -379,13 +310,13 @@
    ],
    "spread": [
     -6.5,
-    -103,
+    -105,
     6.5,
-    -118
+    -115
    ],
    "spread_abre": 7.5,
    "total": [
-    225.5,
+    226.5,
     -112,
     -108
    ],
