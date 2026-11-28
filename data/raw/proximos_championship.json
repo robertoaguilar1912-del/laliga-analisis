@@ -149,155 +149,6 @@
   }
  },
  {
-  "id": "401880133",
-  "utc": "2026-11-28T12:30Z",
-  "estadio": "LNER Stadium",
-  "local_espn": "Lincoln City",
-  "visita_espn": "Wolverhampton Wanderers",
-  "estado": "STATUS_SECOND_HALF",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    500,
-    330,
-    -190
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -120,
-    -105
-   ],
-   "spread": [
-    [
-     "+1.5",
-     -195
-    ],
-    [
-     "-1.5",
-     140
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Lincoln City": [
-    [
-     "342108",
-     "Andrei Coubis",
-     "SUB"
-    ],
-    [
-     "376823",
-     "Ivan Varfolomeev",
-     "SUB"
-    ],
-    [
-     "324580",
-     "Ayodeji Elerewe",
-     "SUB"
-    ],
-    [
-     "245522",
-     "Recco Hackett-Fairchild",
-     "SUB"
-    ],
-    [
-     "157747",
-     "Adam Reach",
-     "SUB"
-    ],
-    [
-     "154794",
-     "Sonny Bradley",
-     "SUB"
-    ],
-    [
-     "263120",
-     "Ben House",
-     "SUB"
-    ],
-    [
-     "386347",
-     "Mikkel Ladefoged",
-     "SUB"
-    ],
-    [
-     "238192",
-     "Chiedozie Ogbene",
-     "SUB"
-    ],
-    [
-     "366990",
-     "Yunus Konak",
-     "SUB"
-    ],
-    [
-     "279794",
-     "George Wickens",
-     "SUB"
-    ]
-   ],
-   "Wolverhampton Wanderers": [
-    [
-     "181278",
-     "José Sá",
-     "G"
-    ],
-    [
-     "151714",
-     "Ladislav Krejcí",
-     "D"
-    ],
-    [
-     "319987",
-     "Nasser Djiga",
-     "D"
-    ],
-    [
-     "143637",
-     "Kieran Trippier",
-     "D"
-    ],
-    [
-     "320848",
-     "Toti Gomes",
-     "D"
-    ],
-    [
-     "308456",
-     "Rodrigo Gomes",
-     "M"
-    ],
-    [
-     "304216",
-     "André",
-     "M"
-    ],
-    [
-     "266096",
-     "Marshall Munetsi",
-     "M"
-    ],
-    [
-     "380196",
-     "Mateus Mané",
-     "M"
-    ],
-    [
-     "395625",
-     "Fernando López",
-     "M"
-    ],
-    [
-     "194116",
-     "Adam Armstrong",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401880131",
   "utc": "2026-11-28T12:30Z",
   "estadio": "Deepdale",
@@ -1060,8 +911,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -125,
-    100
+    -120,
+    -105
    ],
    "spread": [
     [
@@ -1209,7 +1060,7 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -130,
+    -135,
     105
    ],
    "spread": [
@@ -1369,6 +1220,122 @@
     [
      "+0.5",
      -150
+    ]
+   ]
+  },
+  "alineaciones": {
+   "Wrexham": [
+    [
+     "281705",
+     "Anthony Patterson",
+     "G"
+    ],
+    [
+     "232291",
+     "Joe Worrall",
+     "CD"
+    ],
+    [
+     "310598",
+     "Callum Doyle",
+     "CD-L"
+    ],
+    [
+     "295012",
+     "Max Cleworth",
+     "CD-R"
+    ],
+    [
+     "223590",
+     "Benjamin Whiteman",
+     "CM-L"
+    ],
+    [
+     "229106",
+     "Ben Sheaf",
+     "CM-R"
+    ],
+    [
+     "301285",
+     "George Thomason",
+     "LM"
+    ],
+    [
+     "326250",
+     "Danny Imray",
+     "RM"
+    ],
+    [
+     "189605",
+     "Kieffer Moore",
+     "F"
+    ],
+    [
+     "269288",
+     "Lewis O'Brien",
+     "CF-L"
+    ],
+    [
+     "238486",
+     "Oliver Rathbone",
+     "CF-R"
+    ]
+   ],
+   "Portsmouth": [
+    [
+     "258885",
+     "Nicolas Schmid",
+     "G"
+    ],
+    [
+     "369506",
+     "Madiodio Dia",
+     "CD-L"
+    ],
+    [
+     "212275",
+     "Regan Poole",
+     "CD-R"
+    ],
+    [
+     "293335",
+     "Zak Swanson",
+     "LB"
+    ],
+    [
+     "338292",
+     "Terry Devlin",
+     "RB"
+    ],
+    [
+     "272343",
+     "Odin Bailey",
+     "AM"
+    ],
+    [
+     "199193",
+     "Ebrima Adams",
+     "LM"
+    ],
+    [
+     "324002",
+     "Iyad Mohamed",
+     "RM"
+    ],
+    [
+     "255481",
+     "Tyrese Shade",
+     "F"
+    ],
+    [
+     "399895",
+     "Ryan Kavuma-Mcqueen",
+     "AM-L"
+    ],
+    [
+     "275674",
+     "Abu Kamara",
+     "AM-R"
     ]
    ]
   }
