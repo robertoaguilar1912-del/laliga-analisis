@@ -210,26 +210,35 @@ def descargar_detalle_temporada(liga, hasta=None):
         fechas = sorted(json.load(open(f)).get('date', '')[:10] for f in carpeta.glob('*.json'))
         if fechas:
             desde = (datetime.fromisoformat(fechas[-1]) - timedelta(days=7)).strftime('%Y%m%d')
+    eventos = {}
     for y in range(inicio.year, ahora().year + 1):
         for e in _eventos_anio(L, y, desde):
-            comp = e['competitions'][0]
-            if not comp['status']['type'].get('completed') or e['date'] < inicio.strftime('%Y-%m-%d'):
-                continue
-            p = carpeta / f"{e['id']}.json"
-            if p.exists():
-                continue
-            if hasta and time.time() > hasta:
-                faltan += 1
-                continue
-            s_ = _resumen(e['id'], L['espn'])
-            if not s_:
-                continue
-            try:
-                tipo = ((e.get('season') or {}).get('slug') or '')
-                json.dump(_detalle_partido(s_, e['id'], tipo), open(p, 'w'), ensure_ascii=False, separators=(',', ':'))
-                nuevos += 1
-            except (KeyError, IndexError, TypeError) as err:
-                print(f"  aviso: partido {e['id']} sin detalle ({err})")
+            eventos[e['id']] = e
+    # El calendario del año llega con atraso: el 28 nov 2026 Real Salt Lake vs Vancouver ya estaba terminado en el del día
+    # (y por eso salió de los próximos) pero no en el del año, y se quedó sin resultado hasta la corrida completa. Se piden
+    # también ayer y hoy, día por día, que pisan lo del año.
+    for k in (1, 0):
+        for e in _scoreboard(L['espn'], (ahora() - timedelta(days=k)).strftime('%Y%m%d')):
+            eventos[e['id']] = e
+    for e in eventos.values():
+        comp = e['competitions'][0]
+        if not comp['status']['type'].get('completed') or e['date'] < inicio.strftime('%Y-%m-%d'):
+            continue
+        p = carpeta / f"{e['id']}.json"
+        if p.exists():
+            continue
+        if hasta and time.time() > hasta:
+            faltan += 1
+            continue
+        s_ = _resumen(e['id'], L['espn'])
+        if not s_:
+            continue
+        try:
+            tipo = ((e.get('season') or {}).get('slug') or '')
+            json.dump(_detalle_partido(s_, e['id'], tipo), open(p, 'w'), ensure_ascii=False, separators=(',', ':'))
+            nuevos += 1
+        except (KeyError, IndexError, TypeError) as err:
+            print(f"  aviso: partido {e['id']} sin detalle ({err})")
     print(f"  ESPN {L['nombre']}: {nuevos} partidos nuevos con detalle" + (f', {faltan} quedan para la próxima corrida' if faltan else ''))
 
 

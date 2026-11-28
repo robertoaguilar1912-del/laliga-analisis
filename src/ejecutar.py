@@ -76,9 +76,11 @@ def main(modo):
         for d in cierres:        # momios de cierre de varias casas para los juegos por empezar
             _paso(f'momios de cierre {d} (The Odds API)', oddsapi.descargar, d)
         for liga in ligas:
+            # primero los próximos y después los resultados: si un partido termina entre los dos pasos, los próximos ya no
+            # lo traen (terminado) y nadie lo volvía a buscar hasta la corrida completa (28 nov 2026, Real Salt Lake)
+            _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
             if tareas[liga]['resultados']:
                 _paso(f'resultados {liga}', fuentes.descargar_detalle_temporada, liga, hasta=t0 + 8 * 60)
-            _paso(f'próximos {liga}', fuentes.descargar_proximos, liga)
         con_xi = [l for l in ligas if tareas[l]['alineaciones']]
         if con_xi:      # bajas de última hora de los partidos por empezar
             _paso('bajas FotMob', fuentes.descargar_bajas, con_xi, dentro_de_h=3)
