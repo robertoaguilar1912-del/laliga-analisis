@@ -5,15 +5,15 @@
   "estadio": "St. Andrew's Stadium",
   "local_espn": "Birmingham City",
   "visita_espn": "Bolton Wanderers",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    -195,
+    -185,
     360,
-    475
+    450
    ],
    "ou_linea": 2.5,
    "ou": [
@@ -23,11 +23,11 @@
    "spread": [
     [
      "-1.5",
-     125
+     135
     ],
     [
      "+1.5",
-     -180
+     -190
     ]
    ]
   },
@@ -154,7 +154,7 @@
   "estadio": "Pride Park",
   "local_espn": "Derby County",
   "visita_espn": "Watford",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -176,7 +176,7 @@
     ],
     [
      "+0.5",
-     -140
+     -135
     ]
    ]
   },
@@ -298,161 +298,12 @@
   }
  },
  {
-  "id": "401880132",
-  "utc": "2026-11-28T15:00Z",
-  "estadio": "The Den",
-  "local_espn": "Millwall",
-  "visita_espn": "Burnley",
-  "estado": "STATUS_SCHEDULED",
-  "tipo": "regular-season",
-  "neutral": false,
-  "momios": {
-   "casa": "DraftKings",
-   "ml": [
-    120,
-    270,
-    210
-   ],
-   "ou_linea": 2.5,
-   "ou": [
-    -155,
-    125
-   ],
-   "spread": [
-    [
-     "-0.5",
-     110
-    ],
-    [
-     "+0.5",
-     -155
-    ]
-   ]
-  },
-  "alineaciones": {
-   "Millwall": [
-    [
-     "272911",
-     "Lukas Jensen",
-     "SUB"
-    ],
-    [
-     "374682",
-     "Kyrell Lisbie",
-     "SUB"
-    ],
-    [
-     "190963",
-     "Jake Cooper",
-     "SUB"
-    ],
-    [
-     "308572",
-     "Caleb Taylor",
-     "SUB"
-    ],
-    [
-     "328014",
-     "Zak Sturge",
-     "SUB"
-    ],
-    [
-     "281730",
-     "Luke Cundle",
-     "SUB"
-    ],
-    [
-     "207538",
-     "Lyndon Dykes",
-     "SUB"
-    ],
-    [
-     "225522",
-     "Casper de Norre",
-     "SUB"
-    ],
-    [
-     "227438",
-     "Daniel Kelly",
-     "SUB"
-    ],
-    [
-     "310173",
-     "Camiel Neghli",
-     "SUB"
-    ],
-    [
-     "205701",
-     "Mark Sykes",
-     "SUB"
-    ]
-   ],
-   "Burnley": [
-    [
-     "329987",
-     "Max Weiß",
-     "G"
-    ],
-    [
-     "129358",
-     "Kyle Walker",
-     "D"
-    ],
-    [
-     "234143",
-     "Igor Julio",
-     "D"
-    ],
-    [
-     "285790",
-     "Lucas Pires",
-     "D"
-    ],
-    [
-     "245857",
-     "Anel Ahmedhodzic",
-     "D"
-    ],
-    [
-     "291435",
-     "Largie Ramazani",
-     "M"
-    ],
-    [
-     "190936",
-     "Josh Laurent",
-     "M"
-    ],
-    [
-     "288891",
-     "Reo Hatate",
-     "M"
-    ],
-    [
-     "317322",
-     "Andreas Hountondji",
-     "M"
-    ],
-    [
-     "207146",
-     "Josh Cullen",
-     "M"
-    ],
-    [
-     "320757",
-     "Zeki Amdouni",
-     "F"
-    ]
-   ]
-  }
- },
- {
   "id": "401880130",
   "utc": "2026-11-28T15:00Z",
   "estadio": "MATRADE Loftus Road",
   "local_espn": "Queens Park Rangers",
   "visita_espn": "Sheffield United",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -464,8 +315,8 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -120,
-    -105
+    -115,
+    -110
    ],
    "spread": [
     [
@@ -601,7 +452,7 @@
   "estadio": "The Hawthorns",
   "local_espn": "West Bromwich Albion",
   "visita_espn": "Bristol City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -750,7 +601,7 @@
   "estadio": "London Stadium",
   "local_espn": "West Ham United",
   "visita_espn": "Stoke City",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
@@ -762,13 +613,13 @@
    ],
    "ou_linea": 2.5,
    "ou": [
-    -140,
-    110
+    -145,
+    115
    ],
    "spread": [
     [
      "-0.5",
-     -165
+     -170
     ],
     [
      "+0.5",
@@ -899,29 +750,29 @@
   "estadio": "STōK Cae Ras",
   "local_espn": "Wrexham",
   "visita_espn": "Portsmouth",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_SECOND_HALF",
   "tipo": "regular-season",
   "neutral": false,
   "momios": {
    "casa": "DraftKings",
    "ml": [
-    115,
+    110,
     230,
-    265
+    275
    ],
    "ou_linea": 2.5,
    "ou": [
     130,
-    -165
+    -160
    ],
    "spread": [
     [
      "-0.5",
-     105
+     100
     ],
     [
      "+0.5",
-     -145
+     -135
     ]
    ]
   },
