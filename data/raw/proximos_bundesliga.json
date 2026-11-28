@@ -5,7 +5,7 @@
   "estadio": "RheinEnergieStadion",
   "local_espn": "FC Cologne",
   "visita_espn": "SV Elversberg",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -154,12 +154,16 @@
   "estadio": "Volksparkstadion",
   "local_espn": "Hamburg SV",
   "visita_espn": "Bayern Munich",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_IN_PROGRESS",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
-   "casa": "Bet 365",
-   "ml": null,
+   "casa": "DraftKings",
+   "ml": [
+    550,
+    400,
+    -270
+   ],
    "ou_linea": null,
    "ou": null,
    "spread": []
@@ -287,7 +291,7 @@
   "estadio": "MEWA ARENA",
   "local_espn": "Mainz",
   "visita_espn": "1. FC Union Berlin",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
@@ -436,7 +440,7 @@
   "estadio": "Home Deluxe Arena",
   "local_espn": "SC Paderborn 07",
   "visita_espn": "Schalke 04",
-  "estado": "STATUS_SCHEDULED",
+  "estado": "STATUS_FIRST_HALF",
   "tipo": "2026-27-german-bundesliga",
   "neutral": false,
   "momios": {
